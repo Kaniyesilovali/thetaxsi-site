@@ -1,0 +1,8 @@
+{"type":"server-started","port":58290,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:58290","screen_dir":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content","state_dir":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/state"}
+{"type":"screen-added","file":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content/admin-style.html"}
+{"type":"screen-updated","file":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content/admin-style.html"}
+{"type":"screen-added","file":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content/waiting-1.html"}
+{"type":"screen-updated","file":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content/waiting-1.html"}
+{"type":"screen-added","file":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content/admin-layout.html"}
+{"type":"screen-updated","file":"/Users/mac14/Desktop/taxsi/.superpowers/brainstorm/30540-1777567450/content/admin-layout.html"}
+{"type":"server-stopped","reason":"idle timeout"}

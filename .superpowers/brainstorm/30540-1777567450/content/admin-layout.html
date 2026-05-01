@@ -1,0 +1,177 @@
+<h2>Admin Panel — Layout & Dashboard</h2>
+<p class="subtitle">Luxury Dark tema, sidebar nav, TanStack Query. Onaylıyorsan tasarım dokümanını yazıyoruz.</p>
+
+<div class="mockup">
+  <div class="mockup-header">Admin Panel — Full Layout Preview</div>
+  <div class="mockup-body" style="padding:0; overflow:hidden; border-radius:0 0 8px 8px;">
+
+    <div style="display:flex; height:520px; font-family:system-ui,sans-serif; background:#0c1a2e;">
+
+      <!-- Sidebar -->
+      <div style="width:220px; background:#091424; border-right:1px solid #1e3a5f; display:flex; flex-direction:column; flex-shrink:0;">
+        <!-- Logo -->
+        <div style="padding:20px 16px 16px; border-bottom:1px solid #1e3a5f20;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <div style="width:28px; height:28px; background:linear-gradient(135deg,#c8922a,#a37120); border-radius:6px; display:flex; align-items:center; justify-content:center;">
+              <span style="color:#fff; font-size:12px; font-weight:800;">T</span>
+            </div>
+            <div>
+              <div style="color:#fff; font-size:13px; font-weight:700; letter-spacing:.5px;">TAXSI</div>
+              <div style="color:#c8922a; font-size:9px; letter-spacing:1.5px; text-transform:uppercase;">Admin</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nav items -->
+        <nav style="flex:1; padding:12px 8px; display:flex; flex-direction:column; gap:2px;">
+          <!-- Active item -->
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 10px; background:linear-gradient(90deg,#c8922a15,transparent); border-left:2px solid #c8922a; border-radius:0 6px 6px 0; cursor:pointer;">
+            <svg width="15" height="15" fill="none" stroke="#c8922a" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span style="color:#c8922a; font-size:12px; font-weight:600;">Dashboard</span>
+          </div>
+          <!-- Bookings with badge -->
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:6px; cursor:pointer; border-left:2px solid transparent;">
+            <svg width="15" height="15" fill="none" stroke="#6b8db3" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            <span style="color:#6b8db3; font-size:12px; flex:1;">Bookings</span>
+            <span style="background:#c8922a; color:#fff; font-size:9px; font-weight:700; padding:2px 6px; border-radius:10px;">12</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:6px; cursor:pointer; border-left:2px solid transparent;">
+            <svg width="15" height="15" fill="none" stroke="#6b8db3" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            <span style="color:#6b8db3; font-size:12px;">Routes</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:6px; cursor:pointer; border-left:2px solid transparent;">
+            <svg width="15" height="15" fill="none" stroke="#6b8db3" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"/></svg>
+            <span style="color:#6b8db3; font-size:12px;">Extras</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:6px; cursor:pointer; border-left:2px solid transparent;">
+            <svg width="15" height="15" fill="none" stroke="#6b8db3" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span style="color:#6b8db3; font-size:12px;">Drivers</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:6px; cursor:pointer; border-left:2px solid transparent;">
+            <svg width="15" height="15" fill="none" stroke="#6b8db3" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span style="color:#6b8db3; font-size:12px;">Revenue</span>
+          </div>
+        </nav>
+
+        <!-- Bottom: logout -->
+        <div style="padding:12px 8px; border-top:1px solid #1e3a5f20;">
+          <div style="display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:6px; cursor:pointer;">
+            <svg width="14" height="14" fill="none" stroke="#4a6580" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+            <span style="color:#4a6580; font-size:11px;">Log out</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div style="flex:1; display:flex; flex-direction:column; overflow:hidden;">
+
+        <!-- Top bar -->
+        <div style="height:52px; border-bottom:1px solid #1e3a5f; display:flex; align-items:center; padding:0 24px; justify-content:space-between; flex-shrink:0;">
+          <div>
+            <h1 style="color:#fff; font-size:16px; font-weight:600; margin:0;">Dashboard</h1>
+            <p style="color:#4a6580; font-size:11px; margin:0;">Wednesday, 30 April 2026</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:8px; height:8px; background:#22c55e; border-radius:50%;"></div>
+            <span style="color:#6b8db3; font-size:11px;">Admin</span>
+          </div>
+        </div>
+
+        <!-- Page content -->
+        <div style="flex:1; overflow-y:auto; padding:20px 24px; display:flex; flex-direction:column; gap:16px;">
+
+          <!-- Stat cards -->
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+            <div style="background:#0a1628; border:1px solid #1e3a5f; border-radius:8px; padding:14px;">
+              <div style="font-size:9px; color:#4a6580; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Pending</div>
+              <div style="font-size:24px; font-weight:700; color:#fff;">12</div>
+              <div style="font-size:10px; color:#f59e0b; margin-top:4px;">● Awaiting assignment</div>
+            </div>
+            <div style="background:#0a1628; border:1px solid #1e3a5f; border-radius:8px; padding:14px;">
+              <div style="font-size:9px; color:#4a6580; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Today</div>
+              <div style="font-size:24px; font-weight:700; color:#fff;">24</div>
+              <div style="font-size:10px; color:#6b8db3; margin-top:4px;">↑ 8 from yesterday</div>
+            </div>
+            <div style="background:#0a1628; border:1px solid #1e3a5f; border-radius:8px; padding:14px;">
+              <div style="font-size:9px; color:#4a6580; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Completed</div>
+              <div style="font-size:24px; font-weight:700; color:#22c55e;">142</div>
+              <div style="font-size:10px; color:#6b8db3; margin-top:4px;">This month</div>
+            </div>
+            <div style="background:#0a1628; border:1px solid #c8922a30; border-radius:8px; padding:14px;">
+              <div style="font-size:9px; color:#4a6580; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Revenue</div>
+              <div style="font-size:24px; font-weight:700; color:#c8922a;">€8,420</div>
+              <div style="font-size:10px; color:#6b8db3; margin-top:4px;">April 2026</div>
+            </div>
+          </div>
+
+          <!-- Recent bookings table -->
+          <div style="background:#0a1628; border:1px solid #1e3a5f; border-radius:8px; overflow:hidden;">
+            <div style="padding:14px 16px; border-bottom:1px solid #1e3a5f; display:flex; justify-content:space-between; align-items:center;">
+              <span style="color:#fff; font-size:13px; font-weight:600;">Recent Bookings</span>
+              <span style="color:#c8922a; font-size:11px; cursor:pointer;">View all →</span>
+            </div>
+            <table style="width:100%; border-collapse:collapse; font-size:11px;">
+              <thead>
+                <tr style="background:#091424;">
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Ref</th>
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Customer</th>
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Route</th>
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Date</th>
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Amount</th>
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Status</th>
+                  <th style="color:#4a6580; text-align:left; padding:8px 16px; font-weight:500; letter-spacing:.5px; text-transform:uppercase; font-size:10px;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-top:1px solid #1e3a5f20;">
+                  <td style="padding:10px 16px; color:#6b8db3; font-family:monospace;">TAX-20260001</td>
+                  <td style="padding:10px 16px; color:#fff;">John Smith</td>
+                  <td style="padding:10px 16px; color:#6b8db3;">LCA → Limassol</td>
+                  <td style="padding:10px 16px; color:#6b8db3;">30 Apr 14:00</td>
+                  <td style="padding:10px 16px; color:#c8922a; font-weight:600;">€65</td>
+                  <td style="padding:10px 16px;"><span style="background:#f59e0b20; color:#f59e0b; padding:2px 8px; border-radius:10px; font-size:10px; font-weight:600;">PENDING</span></td>
+                  <td style="padding:10px 16px;"><button style="background:#c8922a; color:#fff; border:none; padding:4px 10px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:600;">Assign</button></td>
+                </tr>
+                <tr style="border-top:1px solid #1e3a5f20; background:#091424;">
+                  <td style="padding:10px 16px; color:#6b8db3; font-family:monospace;">TAX-20260002</td>
+                  <td style="padding:10px 16px; color:#fff;">Maria Papadopoulos</td>
+                  <td style="padding:10px 16px; color:#6b8db3;">PFO → Nicosia</td>
+                  <td style="padding:10px 16px; color:#6b8db3;">30 Apr 16:30</td>
+                  <td style="padding:10px 16px; color:#c8922a; font-weight:600;">€85</td>
+                  <td style="padding:10px 16px;"><span style="background:#3b82f620; color:#3b82f6; padding:2px 8px; border-radius:10px; font-size:10px; font-weight:600;">ASSIGNED</span></td>
+                  <td style="padding:10px 16px;"><button style="background:transparent; color:#6b8db3; border:1px solid #1e3a5f; padding:4px 10px; border-radius:4px; font-size:10px; cursor:pointer;">View</button></td>
+                </tr>
+                <tr style="border-top:1px solid #1e3a5f20;">
+                  <td style="padding:10px 16px; color:#6b8db3; font-family:monospace;">TAX-20260003</td>
+                  <td style="padding:10px 16px; color:#fff;">Elena Georgiou</td>
+                  <td style="padding:10px 16px; color:#6b8db3;">LCA → Ayia Napa</td>
+                  <td style="padding:10px 16px; color:#6b8db3;">30 Apr 18:00</td>
+                  <td style="padding:10px 16px; color:#c8922a; font-weight:600;">€120</td>
+                  <td style="padding:10px 16px;"><span style="background:#22c55e20; color:#22c55e; padding:2px 8px; border-radius:10px; font-size:10px; font-weight:600;">COMPLETED</span></td>
+                  <td style="padding:10px 16px;"><button style="background:transparent; color:#6b8db3; border:1px solid #1e3a5f; padding:4px 10px; border-radius:4px; font-size:10px; cursor:pointer;">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px;">
+  <h3>Mimari Özeti</h3>
+  <p class="subtitle">Tasarım kararları — onaylıyorsan spec yazılıyor</p>
+  <ul style="color:#6b7280; font-size:14px; line-height:1.8; margin:12px 0;">
+    <li><strong style="color:#e5e7eb;">Stack:</strong> shadcn/ui (themed: night/gold) + TanStack Query + JWT httpOnly cookie</li>
+    <li><strong style="color:#e5e7eb;">File structure:</strong> <code>app/(admin)/admin/</code> route group, middleware ile korunan</li>
+    <li><strong style="color:#e5e7eb;">API layer:</strong> <code>lib/api/*.ts</code> — typed fetch fonksiyonları, şimdilik mock data</li>
+    <li><strong style="color:#e5e7eb;">Components:</strong> <code>components/admin/</code> — shared (sidebar, topbar) + sayfa-specific</li>
+    <li><strong style="color:#e5e7eb;">Bookings assign:</strong> shadcn Dialog modal, driver dropdown + vehicle input</li>
+    <li><strong style="color:#e5e7eb;">Revenue sayfası:</strong> Recharts ile bar chart, date range filter</li>
+    <li><strong style="color:#e5e7eb;">Auth:</strong> middleware.ts → /admin/login redirect, cookie-based JWT</li>
+  </ul>
+</div>
+
+<p class="subtitle" style="margin-top:8px;">Bu tasarım doğru görünüyor mu? Onaylarsan spec dokümanını yazıp implementation planına geçiyoruz.</p>
