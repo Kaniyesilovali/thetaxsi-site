@@ -134,13 +134,10 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
         ${section.items
           .map(
             (item) => `
-        <details class="group border-b border-ink/10">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-sm font-medium [&::-webkit-details-marker]:hidden">
-            ${esc(item.q)}
-            <span class="text-gold-dark transition-transform group-open:rotate-45">+</span>
-          </summary>
-          <p class="pb-5 text-sm leading-relaxed text-clay">${esc(item.a)}</p>
-        </details>`,
+        <div class="border-b border-ink/10 py-6">
+          <h3 class="text-sm font-medium">${esc(item.q)}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-clay">${esc(item.a)}</p>
+        </div>`,
           )
           .join('')}
       </div>

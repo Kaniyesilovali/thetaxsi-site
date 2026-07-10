@@ -33,28 +33,74 @@
     },
     "trust": {
       "items": [
-        { "no": "01", "title": "Meet & greet at arrivals", "desc": "Your chauffeur waits with your name at the terminal — no calls, no searching." },
-        { "no": "02", "title": "Flight tracking included", "desc": "We monitor every flight. Delays do not change your fare." },
-        { "no": "03", "title": "Fixed price, no meters", "desc": "The figure quoted is the figure paid. Tolls and waiting are already in." }
+        {
+          "no": "01",
+          "title": "Meet & greet at arrivals",
+          "desc": "Your chauffeur waits with your name at the terminal — no calls, no searching."
+        },
+        {
+          "no": "02",
+          "title": "Flight tracking included",
+          "desc": "We monitor every flight. Delays do not change your fare."
+        },
+        {
+          "no": "03",
+          "title": "Fixed price, no meters",
+          "desc": "The figure quoted is the figure paid. Tolls and waiting are already in."
+        }
       ]
     },
     "why": {
       "eyebrow": "Why Taxsi",
       "title": "A different kind of transfer.",
       "items": [
-        { "phrase": "Fixed Prices", "desc": "No meters, no surprises. The price you see is the price you pay." },
-        { "phrase": "Professional drivers.", "desc": "Licensed, vetted chauffeurs with years on Cyprus roads — quiet, careful, and on time." },
-        { "phrase": "Available around the clock.", "desc": "Early-morning departures, late-night arrivals — we keep your hours, not the other way around." },
-        { "phrase": "Confirmed instantly.", "desc": "Reservation and confirmation arrive by email and SMS within seconds of booking." }
+        {
+          "phrase": "Fixed Prices",
+          "desc": "No meters, no surprises. The price you see is the price you pay."
+        },
+        {
+          "phrase": "Professional drivers.",
+          "desc": "Licensed, vetted chauffeurs with years on Cyprus roads — quiet, careful, and on time."
+        },
+        {
+          "phrase": "Available around the clock.",
+          "desc": "Early-morning departures, late-night arrivals — we keep your hours, not the other way around."
+        },
+        {
+          "phrase": "Confirmed instantly.",
+          "desc": "Reservation and confirmation arrive by email and SMS within seconds of booking."
+        }
       ]
     },
     "fleet": {
       "eyebrow": "The Fleet",
       "title": "Composed transport, considered details.",
       "items": [
-        { "name": "Executive Sedan", "capacity": "Up to 3 guests · 3 cases", "desc": "Mercedes E-Class or equivalent. The everyday standard for individual and pair travel." },
-        { "name": "Executive Van", "capacity": "Up to 7 guests · 7 cases", "desc": "Mercedes V-Class or equivalent. Group travel without compromise on space or quiet." },
-        { "name": "VIP", "capacity": "Up to 3 guests · 3 cases", "desc": "Premium sedan, complimentary water, priority dispatch. For the moments that matter." }
+        {
+          "name": "E200 / E220",
+          "capacity": "Saloon · up to 3 guests · 3 cases",
+          "desc": "The standard airport car. Cooled cabin, bottled water, unhurried driving at the fixed fare."
+        },
+        {
+          "name": "E220d / E300",
+          "capacity": "Business saloon · up to 3 guests · 3 cases",
+          "desc": "The newer-generation E-Class for arrivals that go straight into a meeting. Quiet, composed, punctual."
+        },
+        {
+          "name": "Vito",
+          "capacity": "Group van · up to 8 guests · 8 cases",
+          "desc": "Families and groups travel together, luggage and all — one van, one fare, one conversation."
+        },
+        {
+          "name": "V-Class VIP",
+          "capacity": "VIP van · up to 6 guests · 6 cases",
+          "desc": "Captain chairs in white leather, a lounge on wheels. For arrivals that double as first impressions."
+        },
+        {
+          "name": "Sprinter",
+          "capacity": "Minibus · up to 16 guests · 16 cases",
+          "desc": "The whole villa in one vehicle — weddings, retreats and tour groups arrive together."
+        }
       ]
     },
     "routes": {
@@ -67,9 +113,18 @@
       "eyebrow": "How it works",
       "title": "Three steps from runway to room.",
       "steps": [
-        { "title": "Reserve", "desc": "Choose your route, date, and party size. The fare is fixed before you confirm." },
-        { "title": "Receive details", "desc": "Your chauffeur is confirmed by SMS — name, vehicle, and direct contact." },
-        { "title": "Arrive", "desc": "You are met at the terminal and driven to your destination. Nothing further required." }
+        {
+          "title": "Reserve",
+          "desc": "Choose your route, date, and party size. The fare is fixed before you confirm."
+        },
+        {
+          "title": "Receive details",
+          "desc": "Your chauffeur is confirmed by SMS — name, vehicle, and direct contact."
+        },
+        {
+          "title": "Arrive",
+          "desc": "You are met at the terminal and driven to your destination. Nothing further required."
+        }
       ]
     },
     "reviews": {
@@ -105,10 +160,22 @@
     "trustedBy": {
       "eyebrow": "Quietly proven",
       "items": [
-        { "value": "1,400+", "label": "Transfers completed" },
-        { "value": "4.9 / 5", "label": "Average satisfaction" },
-        { "value": "24 / 7", "label": "Multilingual dispatch" },
-        { "value": "10+", "label": "Hotel concierge partners" }
+        {
+          "value": "1,400+",
+          "label": "Transfers completed"
+        },
+        {
+          "value": "4.9 / 5",
+          "label": "Average satisfaction"
+        },
+        {
+          "value": "24 / 7",
+          "label": "Multilingual dispatch"
+        },
+        {
+          "value": "10+",
+          "label": "Hotel concierge partners"
+        }
       ]
     },
     "corporate": {
@@ -135,9 +202,18 @@
     },
     "steps": {
       "labels": [
-        { "no": "01", "title": "Route" },
-        { "no": "02", "title": "Vehicle" },
-        { "no": "03", "title": "Details" }
+        {
+          "no": "01",
+          "title": "Route"
+        },
+        {
+          "no": "02",
+          "title": "Vehicle"
+        },
+        {
+          "no": "03",
+          "title": "Details"
+        }
       ],
       "of": "of",
       "back": "Back",
@@ -184,7 +260,7 @@
     },
     "summary": {
       "title": "Reservation",
-      "selectRoute": "Select a route to see your fare.",
+      "selectRoute": "Select pickup and destination to see your summary.",
       "oneWay": "One way",
       "return": "Return",
       "vip": "VIP service",
@@ -228,9 +304,18 @@
     "values": {
       "title": "What We Stand For",
       "items": [
-        { "title": "Transparency", "desc": "The price you see is the price you pay. Always." },
-        { "title": "Reliability", "desc": "We monitor your flight. If it's late, your driver waits." },
-        { "title": "Professionalism", "desc": "Every driver is licensed, vetted, and experienced on Cyprus roads." }
+        {
+          "title": "Transparency",
+          "desc": "The price you see is the price you pay. Always."
+        },
+        {
+          "title": "Reliability",
+          "desc": "We monitor your flight. If it's late, your driver waits."
+        },
+        {
+          "title": "Professionalism",
+          "desc": "Every driver is licensed, vetted, and experienced on Cyprus roads."
+        }
       ]
     },
     "cta": "Book a Transfer"
@@ -270,33 +355,69 @@
       {
         "title": "Booking",
         "items": [
-          { "q": "How do I book a transfer?", "a": "Fill in the booking form on our website with your route, date, time, and passenger details. You'll receive a confirmation by email and SMS immediately." },
-          { "q": "Can I cancel or modify my booking?", "a": "Contact us by phone or email as soon as possible. Cancellations made more than 24 hours before the transfer are fully refunded. Modifications are accepted subject to availability." },
-          { "q": "How far in advance should I book?", "a": "We recommend booking at least 24 hours in advance. For peak season (July–September) and early morning flights, earlier is better." }
+          {
+            "q": "How do I book a transfer?",
+            "a": "Fill in the booking form on our website with your route, date, time, and passenger details. You'll receive a confirmation by email and SMS immediately."
+          },
+          {
+            "q": "Can I cancel or modify my booking?",
+            "a": "Contact us by phone or email as soon as possible. Cancellations made more than 24 hours before the transfer are fully refunded. Modifications are accepted subject to availability."
+          },
+          {
+            "q": "How far in advance should I book?",
+            "a": "We recommend booking at least 24 hours in advance. For peak season (July–September) and early morning flights, earlier is better."
+          }
         ]
       },
       {
         "title": "Payment",
         "items": [
-          { "q": "What payment methods do you accept?", "a": "We accept cash (paid to the driver on arrival) and online payments via credit or debit card (processed securely through Stripe)." },
-          { "q": "What is included in the price?", "a": "The price includes the transfer, tolls, parking, and up to 45 minutes waiting at the airport. Extras such as child seats are listed separately." },
-          { "q": "Is online payment secure?", "a": "Yes. Online payments are processed by Stripe, a PCI-DSS Level 1 certified provider. We never store your card details." }
+          {
+            "q": "What payment methods do you accept?",
+            "a": "We accept cash (paid to the driver on arrival) and online payments via credit or debit card (processed securely through Stripe)."
+          },
+          {
+            "q": "What is included in the price?",
+            "a": "The price includes the transfer, tolls, parking, and up to 45 minutes waiting at the airport. Extras such as child seats are listed separately."
+          },
+          {
+            "q": "Is online payment secure?",
+            "a": "Yes. Online payments are processed by Stripe, a PCI-DSS Level 1 certified provider. We never store your card details."
+          }
         ]
       },
       {
         "title": "On the Day",
         "items": [
-          { "q": "How will I recognise my driver?", "a": "Your driver will be waiting at the arrivals hall with a sign showing your name. You will receive their name, phone, and vehicle details by SMS." },
-          { "q": "What if my flight is delayed?", "a": "We monitor flight arrivals. If your flight is delayed, your driver adjusts at no extra charge." },
-          { "q": "Can I track my booking?", "a": "Yes. Use the Track Booking page with your booking reference to see your current status and driver details." }
+          {
+            "q": "How will I recognise my driver?",
+            "a": "Your driver will be waiting at the arrivals hall with a sign showing your name. You will receive their name, phone, and vehicle details by SMS."
+          },
+          {
+            "q": "What if my flight is delayed?",
+            "a": "We monitor flight arrivals. If your flight is delayed, your driver adjusts at no extra charge."
+          },
+          {
+            "q": "Can I track my booking?",
+            "a": "Yes. Use the Track Booking page with your booking reference to see your current status and driver details."
+          }
         ]
       },
       {
         "title": "Vehicles",
         "items": [
-          { "q": "How many passengers can each vehicle accommodate?", "a": "Standard vehicles accommodate up to 4 passengers with standard luggage. Indicate your passenger count when booking and we'll assign the right vehicle." },
-          { "q": "Do you offer VIP transfers?", "a": "Yes. Select the VIP option when booking for a premium vehicle, complimentary water, and priority service." },
-          { "q": "Can I request a child seat?", "a": "Yes. Select the Child Seat extra when booking. Please specify the child's age in the notes field." }
+          {
+            "q": "How many passengers can each vehicle accommodate?",
+            "a": "Standard vehicles accommodate up to 4 passengers with standard luggage. Indicate your passenger count when booking and we'll assign the right vehicle."
+          },
+          {
+            "q": "Do you offer VIP transfers?",
+            "a": "Yes. Select the VIP option when booking for a premium vehicle, complimentary water, and priority service."
+          },
+          {
+            "q": "Can I request a child seat?",
+            "a": "Yes. Select the Child Seat extra when booking. Please specify the child's age in the notes field."
+          }
         ]
       }
     ]
@@ -327,7 +448,10 @@
   },
   "footer": {
     "tagline": "Cyprus Chauffeur Service",
-    "addressLines": ["Larnaca · Paphos · Limassol", "Cyprus"],
+    "addressLines": [
+      "Larnaca · Paphos · Limassol",
+      "Cyprus"
+    ],
     "hours": "24 / 7 multilingual dispatch",
     "directHeading": "Direct lines",
     "serviceHeading": "Service",

@@ -1,19 +1,14 @@
 import { esc, page } from './layout.mjs'
 import { config } from '../site.config.mjs'
-import { routes } from '../data/routes.mjs'
-import { routeLabel } from './home.mjs'
+import { locationOptionsHtml } from './home.mjs'
 
 export function renderBook(ctx) {
   const { lang, dict, xtra } = ctx
   const t = dict.book
   const f = xtra.bookForm
+  const picker = dict.homepage.hero.picker
 
-  const routeOptions = routes
-    .map(
-      (r) =>
-        `<option value="${r.slug}" data-label="${esc(routeLabel(r, lang))}" data-price="${r.price}" data-roundtrip="${r.roundTrip}">${esc(routeLabel(r, lang))} — €${r.price}</option>`,
-    )
-    .join('\n          ')
+  const locationOptions = locationOptionsHtml(lang)
 
   const field = (inner) => `<div class="flex flex-col gap-2">${inner}</div>`
   const label = (forId, text) => `<label for="${forId}" class="text-[11px] font-medium uppercase tracking-[0.18em] text-clay">${esc(text)}</label>`
@@ -33,17 +28,42 @@ export function renderBook(ctx) {
   <div class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[1fr_380px]">
     <form id="booking-form" class="grid gap-6" novalidate>
       <h2 class="font-display text-3xl font-light italic">${esc(t.route.heading)}</h2>
-      ${field(`${label('bf-route', f.routeLabel)}
-        <select id="bf-route" name="route" required class="${inputCls}">
-          <option value="">${esc(f.selectRoute)}</option>
-          ${routeOptions}
-        </select>`)}
+      <div class="grid gap-6 sm:grid-cols-2">
+        ${field(`${label('bf-from', picker.from)}
+          <select id="bf-from" name="from" required class="${inputCls}">
+            <option value="">${esc(picker.selectFrom)}</option>
+            ${locationOptions}
+          </select>`)}
+        ${field(`${label('bf-to', picker.to)}
+          <select id="bf-to" name="to" required class="${inputCls}">
+            <option value="">${esc(picker.selectTo)}</option>
+            ${locationOptions}
+          </select>`)}
+      </div>
+      <div id="bf-flight-wrap" class="hidden flex-col gap-2">
+        ${label('bf-flight', f.flightLabel)}
+        <input id="bf-flight" name="flight" type="text" placeholder="${esc(f.flightPlaceholder)}" autocapitalize="characters" class="${inputCls}">
+        <p class="text-xs leading-relaxed text-clay">${esc(f.flightNote)}</p>
+        <p id="bf-flight-error" class="hidden text-sm text-red-700">${esc(f.flightValidation)}</p>
+      </div>
       <div class="grid gap-6 sm:grid-cols-3">
         ${field(`${label('bf-date', f.dateLabel)}<input id="bf-date" name="date" type="date" required class="${inputCls}">`)}
         ${field(`${label('bf-time', f.timeLabel)}<input id="bf-time" name="time" type="time" class="${inputCls}">`)}
         ${field(`${label('bf-pax', f.passengersLabel)}
           <select id="bf-pax" name="pax" class="${inputCls}">
             ${[1, 2, 3, 4, 5, 6, 7].map((n) => `<option value="${n}">${n}</option>`).join('')}
+          </select>`)}
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2">
+        ${field(`${label('bf-lugbig', f.luggageBigLabel)}
+          <select id="bf-lugbig" name="luggageBig" required class="${inputCls}">
+            <option value="">${esc(f.selectCount)}</option>
+            ${[0, 1, 2, 3, 4, 5, 6, 7, 8].map((n) => `<option value="${n}">${n}</option>`).join('')}
+          </select>`)}
+        ${field(`${label('bf-lugsmall', f.luggageSmallLabel)}
+          <select id="bf-lugsmall" name="luggageSmall" required class="${inputCls}">
+            <option value="">${esc(f.selectCount)}</option>
+            ${[0, 1, 2, 3, 4, 5, 6, 7, 8].map((n) => `<option value="${n}">${n}</option>`).join('')}
           </select>`)}
       </div>
       <div class="grid gap-4 sm:grid-cols-2">
@@ -54,9 +74,11 @@ export function renderBook(ctx) {
           </span>
           <input type="checkbox" id="bf-roundtrip" name="roundtrip" class="size-4 accent-gold-dark">
         </label>
-        <label class="flex cursor-pointer items-center justify-between gap-4 border border-ink/15 bg-white px-4 py-3">
+        <label class="flex items-center justify-between gap-4 border border-ink/15 bg-white px-4 py-3">
           <span class="block text-sm font-medium">${esc(f.childSeatLabel)}</span>
-          <input type="checkbox" id="bf-childseat" name="childseat" class="size-4 accent-gold-dark">
+          <select id="bf-childseat" name="childseat" class="h-9 border border-ink/15 bg-white px-2 text-sm outline-none transition-colors focus:border-gold-dark">
+            ${[0, 1, 2, 3, 4].map((n) => `<option value="${n}">${n}</option>`).join('')}
+          </select>
         </label>
       </div>
 
@@ -84,7 +106,6 @@ export function renderBook(ctx) {
           <p id="bf-summary-route" class="font-medium text-ink"></p>
           <div class="flex items-center justify-between border-t border-ink/10 pt-3">
             <span id="bf-summary-trip-label"></span>
-            <span id="bf-summary-price" class="kicker text-3xl text-gold-dark"></span>
           </div>
           <p class="text-xs">${esc(t.summary.confirmationNote)}</p>
         </div>
@@ -103,6 +124,8 @@ window.__TAXSI_BOOK = {
   oneWayLabel: ${JSON.stringify(dict.book.summary.oneWay)},
   returnLabel: ${JSON.stringify(dict.book.summary.return)},
   waMessage: ${JSON.stringify(xtra.bookForm.waMessage)},
+  waFlight: ${JSON.stringify(xtra.bookForm.waFlight)},
+  waLuggage: ${JSON.stringify(xtra.bookForm.waLuggage)},
   waRoundTrip: ${JSON.stringify(xtra.bookForm.waRoundTrip)},
   waChildSeat: ${JSON.stringify(xtra.bookForm.waChildSeat)},
   waNotes: ${JSON.stringify(xtra.bookForm.waNotes)},

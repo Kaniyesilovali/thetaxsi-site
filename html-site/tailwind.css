@@ -4,7 +4,7 @@
 @source "./public/js";
 
 @theme {
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
   --color-night: #0a0a0a;

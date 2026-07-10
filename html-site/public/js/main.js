@@ -44,10 +44,16 @@
   var bookForm = document.getElementById('booking-form')
   if (bookForm && window.__TAXSI_BOOK) {
     var cfg = window.__TAXSI_BOOK
-    var route = document.getElementById('bf-route')
+    var from = document.getElementById('bf-from')
+    var to = document.getElementById('bf-to')
+    var flight = document.getElementById('bf-flight')
+    var flightWrap = document.getElementById('bf-flight-wrap')
+    var flightError = document.getElementById('bf-flight-error')
     var date = document.getElementById('bf-date')
     var time = document.getElementById('bf-time')
     var pax = document.getElementById('bf-pax')
+    var lugBig = document.getElementById('bf-lugbig')
+    var lugSmall = document.getElementById('bf-lugsmall')
     var roundtrip = document.getElementById('bf-roundtrip')
     var childseat = document.getElementById('bf-childseat')
     var name = document.getElementById('bf-name')
@@ -56,22 +62,42 @@
 
     // URL parametrelerinden ön doldurma (ana sayfa hero picker'ı buraya yönlendirir)
     var params = new URLSearchParams(location.search)
-    if (params.get('route')) route.value = params.get('route')
+    if (params.get('from')) from.value = params.get('from')
+    if (params.get('to')) to.value = params.get('to')
     if (params.get('date')) date.value = params.get('date')
     if (params.get('pax')) pax.value = params.get('pax')
 
     // Geçmiş tarih seçilmesin
     date.min = new Date().toISOString().slice(0, 10)
 
-    function selectedOption() {
-      return route.options[route.selectedIndex]
+    function selectedLabel(sel) {
+      var opt = sel.options[sel.selectedIndex]
+      return opt ? opt.textContent.trim() : ''
+    }
+
+    function routeText() {
+      return selectedLabel(from) + ' → ' + selectedLabel(to)
+    }
+
+    // Havalimanından kalkışta uçuş kodu zorunlu — şoför uçuşu takip eder
+    function fromIsAirport() {
+      var opt = from.options[from.selectedIndex]
+      var group = opt && opt.parentNode
+      return Boolean(group && group.tagName === 'OPTGROUP' && group.dataset.group === 'airports')
+    }
+
+    function toggleFlight() {
+      var need = fromIsAirport()
+      flightWrap.classList.toggle('hidden', !need)
+      flightWrap.classList.toggle('flex', need)
+      flight.required = need
+      if (!need) flightError.classList.add('hidden')
     }
 
     function updateSummary() {
       var empty = document.getElementById('bf-summary-empty')
       var body = document.getElementById('bf-summary-body')
-      var opt = selectedOption()
-      if (!route.value || !opt || !opt.dataset.label) {
+      if (!from.value || !to.value) {
         empty.classList.remove('hidden')
         body.classList.add('hidden')
         body.classList.remove('flex')
@@ -80,39 +106,46 @@
       empty.classList.add('hidden')
       body.classList.remove('hidden')
       body.classList.add('flex')
-      document.getElementById('bf-summary-route').textContent = opt.dataset.label
-      var isReturn = roundtrip.checked
-      document.getElementById('bf-summary-trip-label').textContent = isReturn ? cfg.returnLabel : cfg.oneWayLabel
-      document.getElementById('bf-summary-price').textContent = '€' + (isReturn ? opt.dataset.roundtrip : opt.dataset.price)
+      document.getElementById('bf-summary-route').textContent = routeText()
+      document.getElementById('bf-summary-trip-label').textContent = roundtrip.checked ? cfg.returnLabel : cfg.oneWayLabel
     }
 
-    route.addEventListener('change', updateSummary)
+    from.addEventListener('change', function () {
+      updateSummary()
+      toggleFlight()
+    })
+    to.addEventListener('change', updateSummary)
     roundtrip.addEventListener('change', updateSummary)
     updateSummary()
+    toggleFlight()
 
     bookForm.addEventListener('submit', function (e) {
       e.preventDefault()
       var error = document.getElementById('bf-error')
-      var opt = selectedOption()
-      var valid = route.value && date.value && name.value.trim() && phone.value.trim()
+      var flightMissing = fromIsAirport() && !flight.value.trim()
+      flightError.classList.toggle('hidden', !flightMissing)
+      var valid = from.value && to.value && date.value && lugBig.value !== '' && lugSmall.value !== '' && name.value.trim() && phone.value.trim() && !flightMissing
       error.classList.toggle('hidden', Boolean(valid))
       if (!valid) return
 
       var ref = 'TX-' + Date.now().toString(36).toUpperCase().slice(-6)
       var isReturn = roundtrip.checked
-      var price = isReturn ? opt.dataset.roundtrip : opt.dataset.price
 
       recordToSheets({
         type: 'booking',
         ref: ref,
         lang: cfg.lang,
-        route: opt.dataset.label,
+        route: routeText(),
+        from: from.value,
+        to: to.value,
+        flight: flight.value.trim(),
         date: date.value,
         time: time.value,
         passengers: pax.value,
+        luggageBig: lugBig.value,
+        luggageSmall: lugSmall.value,
         roundTrip: isReturn ? 'yes' : 'no',
-        childSeat: childseat.checked ? 'yes' : 'no',
-        price: '€' + price,
+        childSeat: childseat.value,
         name: name.value.trim(),
         phone: phone.value.trim(),
         notes: notes.value.trim(),
@@ -120,12 +153,14 @@
       })
 
       var message = tmpl(cfg.waMessage, {
-        route: opt.dataset.label,
+        route: routeText(),
+        flight: flight.value.trim() ? tmpl(cfg.waFlight, { flight: flight.value.trim() }) : '',
+        luggage: tmpl(cfg.waLuggage, { big: lugBig.value, small: lugSmall.value }),
         date: date.value,
         time: time.value || '',
         passengers: pax.value,
         roundTrip: isReturn ? cfg.waRoundTrip : '',
-        childSeat: childseat.checked ? cfg.waChildSeat : '',
+        childSeat: Number(childseat.value) > 0 ? tmpl(cfg.waChildSeat, { count: childseat.value }) : '',
         name: name.value.trim(),
         phone: phone.value.trim(),
         notes: notes.value.trim() ? tmpl(cfg.waNotes, { notes: notes.value.trim() }) : '',

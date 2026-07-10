@@ -1,17 +1,38 @@
 import { esc, icons, page } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { routes } from '../data/routes.mjs'
+import { locationGroups } from '../data/locations.mjs'
 
 const photo = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`
-export const heroPhoto = photo('1503376780353-7e6692767b70', 2400)
-const fleetPhotos = {
-  sedan: photo('1492144534655-ae79c964c9d7', 1400),
-  van: photo('1546614042-7df3c24c9e5d', 1400),
-  vip: photo('1568605114967-8130f3a36994', 1400),
-}
+const pexels = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
+// Kapısı açık bekleyen siyah V-Class — Pexels, ücretsiz ticari lisans
+export const heroPhoto = pexels(17455633, 1920)
+// Sırayla: E200/E220, E220d/E300, Vito, V-Class VIP, Sprinter — dict fleet.items ile aynı sıra
+const fleetPhotos = [
+  pexels(26690693, 900),
+  pexels(19758544, 900),
+  pexels(17455625, 900),
+  pexels(17455632, 900),
+  pexels(19871521, 900),
+]
+const fleetPax = [3, 3, 8, 6, 16]
+const corpPhoto = photo('1436491865332-7a61a109cc05', 1200)
 
 export function routeLabel(r, lang) {
   return `${r.from[lang]} → ${r.to[lang]}`
+}
+
+// Nereden/Nereye select'lerinin gruplu <optgroup> içeriği — hero ve book formu paylaşır.
+export function locationOptionsHtml(lang) {
+  return locationGroups
+    .map(
+      (g) => `<optgroup label="${esc(g.label[lang])}" data-group="${g.id}">
+            ${g.locations
+              .map((l) => `<option value="${esc(l.value)}">${esc(l.label[lang])}</option>`)
+              .join('\n            ')}
+          </optgroup>`,
+    )
+    .join('\n          ')
 }
 
 export function renderHome(ctx) {
@@ -19,9 +40,7 @@ export function renderHome(ctx) {
   const t = dict.homepage
   const base = `/${lang}`
 
-  const routeOptions = routes
-    .map((r) => `<option value="${r.slug}">${esc(routeLabel(r, lang))}</option>`)
-    .join('\n            ')
+  const locationOptions = locationOptionsHtml(lang)
 
   const body = `
 <!-- HERO -->
@@ -41,12 +60,19 @@ export function renderHome(ctx) {
     </div>
     <div class="relative opacity-0" style="animation:reveal 1100ms 480ms cubic-bezier(.16,1,.3,1) forwards">
       <div class="mb-8 h-px w-24 origin-left bg-gold" style="animation:scale-x 800ms 760ms ease-out both"></div>
-      <form action="${base}/book/" method="get" class="grid gap-px border border-white/15 bg-white/10 backdrop-blur sm:grid-cols-[2fr_1fr_1fr_auto]">
+      <form action="${base}/book/" method="get" class="grid gap-px border border-white/15 bg-white/10 backdrop-blur sm:grid-cols-2 lg:grid-cols-[1.4fr_1.4fr_1fr_1fr_auto]">
+        <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
+          <span class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.from)}</span>
+          <select name="from" class="bg-transparent text-sm text-white outline-none [&>option]:text-ink [&>optgroup]:text-ink">
+            <option value="">${esc(t.hero.picker.selectFrom)}</option>
+            ${locationOptions}
+          </select>
+        </label>
         <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
           <span class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.to)}</span>
-          <select name="route" class="bg-transparent text-sm text-white outline-none [&>option]:text-ink">
+          <select name="to" class="bg-transparent text-sm text-white outline-none [&>option]:text-ink [&>optgroup]:text-ink">
             <option value="">${esc(t.hero.picker.selectTo)}</option>
-            ${routeOptions}
+            ${locationOptions}
           </select>
         </label>
         <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
@@ -111,8 +137,9 @@ export function renderHome(ctx) {
         .map(
           (item, i) => `
       <article class="group border border-ink/10 bg-white">
-        <div class="aspect-[4/3] overflow-hidden bg-night">
-          <img src="${Object.values(fleetPhotos)[i]}" alt="${esc(item.name)}" loading="lazy" class="size-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105">
+        <div class="relative aspect-[4/3] overflow-hidden bg-night">
+          <img src="${fleetPhotos[i]}" alt="${esc(item.name)}" loading="lazy" class="size-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105">
+          <p class="pointer-events-none absolute bottom-3 left-5 flex items-baseline gap-2 font-display text-5xl font-light italic text-gold-pale" style="text-shadow:0 2px 16px rgba(0,0,0,.65)">${fleetPax[i]}<span class="font-sans text-[10px] not-italic uppercase tracking-[0.24em] text-white/85">${esc(t.hero.picker.passengerPlural)}</span></p>
         </div>
         <div class="p-6">
           <h3 class="font-display text-2xl font-light italic">${esc(item.name)}</h3>
@@ -206,13 +233,16 @@ export function renderHome(ctx) {
 
 <!-- CORPORATE -->
 <section class="border-b border-ink/10 bg-sand py-20 lg:py-28">
-  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-10 px-4 sm:px-6">
-    <div class="max-w-xl">
-      <p class="eyebrow text-gold-dark">${esc(t.corporate.eyebrow)}</p>
-      <h2 class="mt-4 font-display text-3xl font-light italic sm:text-4xl">${esc(t.corporate.title)}</h2>
-      <p class="mt-4 text-sm leading-relaxed text-clay">${esc(t.corporate.body)}</p>
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[2fr_3fr] lg:gap-16">
+    <img src="${corpPhoto}" alt="" loading="lazy" class="aspect-[4/3] w-full border border-ink/10 object-cover">
+    <div class="flex flex-wrap items-center justify-between gap-10">
+      <div class="max-w-xl">
+        <p class="eyebrow text-gold-dark">${esc(t.corporate.eyebrow)}</p>
+        <h2 class="mt-4 font-display text-3xl font-light italic sm:text-4xl">${esc(t.corporate.title)}</h2>
+        <p class="mt-4 text-sm leading-relaxed text-clay">${esc(t.corporate.body)}</p>
+      </div>
+      <a href="${base}/contact/" class="inline-flex h-12 items-center border border-ink px-7 text-xs font-medium uppercase tracking-[0.24em] transition-colors hover:bg-ink hover:text-cream">${esc(t.corporate.cta)}</a>
     </div>
-    <a href="${base}/contact/" class="inline-flex h-12 items-center border border-ink px-7 text-xs font-medium uppercase tracking-[0.24em] transition-colors hover:bg-ink hover:text-cream">${esc(t.corporate.cta)}</a>
   </div>
 </section>
 
