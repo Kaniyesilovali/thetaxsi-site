@@ -1,0 +1,340 @@
+{
+  "nav": {
+    "book": "Transfer Rezervasyonu",
+    "reserve": "Rezerve Et",
+    "routes": "Güzergahlar & Fiyatlar",
+    "track": "Rezervasyonu Takip Et",
+    "blog": "Blog",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "whatsappAria": "WhatsApp ile bize ulaşın"
+  },
+  "homepage": {
+    "meta": {
+      "title": "Kıbrıs Şoförlü Transfer — Premium Havalimanı Hizmeti",
+      "description": "Kıbrıs genelinde önceden rezervasyonlu özel transferler. Sabit fiyatlar, profesyonel şoförler, terminalde isimli karşılama."
+    },
+    "hero": {
+      "eyebrow": "Kıbrıs · Şoförlü Transfer",
+      "title": "Sakin varın.",
+      "subtitle": "Kıbrıs'ta önceden rezervasyonlu transferler. Sabit fiyatlar, profesyonel şoförler ve uçaktan iner inmez sizi karşılayan bir şoför.",
+      "cta": "Rezerve Et",
+      "picker": {
+        "from": "Nereden",
+        "to": "Nereye",
+        "date": "Tarih",
+        "passengers": "Yolcu",
+        "passengerSingle": "yolcu",
+        "passengerPlural": "yolcu",
+        "submit": "Rezerve Et",
+        "selectFrom": "Kalkış noktası",
+        "selectTo": "Varış noktası"
+      }
+    },
+    "trust": {
+      "items": [
+        { "no": "01", "title": "Terminalde isimli karşılama", "desc": "Şoförünüz adınızın yazılı olduğu tabelayla sizi terminalde bekler — arama da, aranma da yok." },
+        { "no": "02", "title": "Uçuş takibi dahil", "desc": "Her uçuşu takip ediyoruz. Gecikmeler ücretinizi değiştirmez." },
+        { "no": "03", "title": "Sabit fiyat, sayaç yok", "desc": "Size sunulan fiyat ödediğiniz fiyattır. Otoyol ve bekleme zaten dahildir." }
+      ]
+    },
+    "why": {
+      "eyebrow": "Neden Taxsi",
+      "title": "Farklı bir transfer anlayışı.",
+      "items": [
+        { "phrase": "Sabit Fiyatlar", "desc": "Sayaç yok, sürpriz yok. Gördüğünüz fiyat ödediğiniz fiyattır." },
+        { "phrase": "Profesyonel şoförler.", "desc": "Lisanslı, deneyimli şoförler — Kıbrıs yollarında yıllarca deneyim, sessiz ve özenli hizmet." },
+        { "phrase": "Gece gündüz hizmet.", "desc": "Sabahın erken saati ya da gecenin geç saati — biz sizin programınıza uyarız." },
+        { "phrase": "Anında onay.", "desc": "Rezervasyon ve onay e-posta ve SMS ile saniyeler içinde gelir." }
+      ]
+    },
+    "fleet": {
+      "eyebrow": "Filo",
+      "title": "Sakin yolculuk, özenli detaylar.",
+      "items": [
+        { "name": "Executive Sedan", "capacity": "3 yolcuya kadar · 3 bagaj", "desc": "Mercedes E-Class veya muadili. Bireysel ve çift yolculuğun günlük standardı." },
+        { "name": "Executive Van", "capacity": "7 yolcuya kadar · 7 bagaj", "desc": "Mercedes V-Class veya muadili. Alandan ve sessizlikten ödün vermeyen grup yolculuğu." },
+        { "name": "VIP", "capacity": "3 yolcuya kadar · 3 bagaj", "desc": "Premium sedan, ikramlık su, öncelikli atama. Özel anlar için." }
+      ]
+    },
+    "routes": {
+      "eyebrow": "Kıbrıs, noktadan noktaya",
+      "title": "Güzergahlar.",
+      "viewAll": "Tüm güzergahlar →",
+      "from": "şu fiyattan"
+    },
+    "howItWorks": {
+      "eyebrow": "Nasıl çalışır",
+      "title": "Pistten odanıza üç adım.",
+      "steps": [
+        { "title": "Rezerve edin", "desc": "Güzergah, tarih ve yolcu sayısını seçin. Onaylamadan önce fiyat sabitlenir." },
+        { "title": "Bilgileri alın", "desc": "Şoförünüz SMS ile onaylanır — isim, araç ve doğrudan iletişim." },
+        { "title": "Varışınızı yapın", "desc": "Terminalde karşılanır ve hedefinize götürülürsünüz. Başka hiçbir şey gerekmez." }
+      ]
+    },
+    "reviews": {
+      "eyebrow": "Yolcular ne diyor",
+      "title": "Kendi sözleriyle.",
+      "items": [
+        {
+          "quote": "Kabin kapımız açılmadan araç bizi bekliyordu. Şoför sormadan bagajları aldı. Kırk dakikada evdeydik.",
+          "author": "Anneke V.",
+          "origin": "Münih",
+          "context": "Sık seyahat eden"
+        },
+        {
+          "quote": "Sabah 1'de Londra'dan rezerve ettim, sabah 8'de Larnaca'da karşılandım. Uçak gecikmesinde fiyat hiç değişmedi. Karşılığını ödediğim şey budur.",
+          "author": "James P.",
+          "origin": "Londra",
+          "context": "Kurumsal misafir"
+        },
+        {
+          "quote": "Akdeniz'de dört farklı şoförlü hizmet kullandım. İkinci kez kullandığım tek hizmet bu.",
+          "author": "Sofia L.",
+          "origin": "Stockholm",
+          "context": "Aile yolculuğu"
+        }
+      ]
+    },
+    "partners": {
+      "eyebrow": "Otel concierge ortakları"
+    },
+    "trustpilot": {
+      "eyebrow": "Doğrulanmış yorumlar"
+    },
+    "trustedBy": {
+      "eyebrow": "Sessizce kanıtlandı",
+      "items": [
+        { "value": "1.400+", "label": "Tamamlanmış transfer" },
+        { "value": "4,9 / 5", "label": "Ortalama memnuniyet" },
+        { "value": "24 / 7", "label": "Çok dilli operasyon" },
+        { "value": "10+", "label": "Otel concierge ortağı" }
+      ]
+    },
+    "corporate": {
+      "eyebrow": "Kurumsal",
+      "title": "İş seyahatleri, halledilmiş.",
+      "body": "Konsolide faturalama, KDV makbuzları, yöneticiler, roadshow'lar ve ziyaretçi misafirler için hesap yönetimli rezervasyon. Kurumsal anlaşma için bizimle konuşun.",
+      "cta": "Concierge ile konuşun →"
+    },
+    "cta": {
+      "title": "Nereye gidiyorsanız. Biz çoktan vardık.",
+      "subtitle": "İki dakikadan kısa sürede transfer rezerve edin.",
+      "button": "Transfer rezerve et"
+    }
+  },
+  "book": {
+    "meta": {
+      "title": "Transfer Rezervasyonu · Kıbrıs",
+      "description": "Kıbrıs şoförlü transferinizi üç adımda rezerve edin. Sabit fiyatlar, profesyonel şoförler, anında onay."
+    },
+    "hero": {
+      "eyebrow": "Rezervasyon",
+      "title": "Birkaç sakin adım.",
+      "subtitle": "Nereye gittiğinizi söyleyin, nasıl seyahat etmek istediğinizi seçin — gerisini biz halledelim."
+    },
+    "steps": {
+      "labels": [
+        { "no": "01", "title": "Güzergah" },
+        { "no": "02", "title": "Araç" },
+        { "no": "03", "title": "Bilgiler" }
+      ],
+      "of": "/",
+      "back": "Geri",
+      "continue": "Devam",
+      "confirm": "Rezervasyonu onayla",
+      "confirming": "Rezerve ediliyor..."
+    },
+    "route": {
+      "heading": "Güzergah & program.",
+      "pickup": "Kalkış",
+      "dropoff": "Varış",
+      "selectPickup": "Kalkış noktası seçin",
+      "selectDropoff": "Varış noktası seçin",
+      "selectPickupFirst": "Önce kalkış noktası seçin",
+      "date": "Tarih",
+      "time": "Saat",
+      "passengers": "Yolcu",
+      "luggage": "Bagaj",
+      "roundTripLabel": "Dönüş yolculuğu",
+      "roundTripDesc": "İndirimli oranla dönüş ekleyin."
+    },
+    "vehicle": {
+      "heading": "Araç & ekstralar.",
+      "vipLabel": "VIP hizmet",
+      "vipDesc": "Premium sedan, ikramlık su, öncelikli atama.",
+      "extrasHeading": "Ekstralar",
+      "extrasNone": "Bu güzergah için ekstra mevcut değil.",
+      "paymentHeading": "Ödeme",
+      "paymentCash": "Varışta nakit",
+      "paymentCashDesc": "Doğrudan şoförünüzle ödeyin.",
+      "paymentOnline": "Online ödeme",
+      "paymentOnlineDesc": "Stripe ile güvenli ödeme."
+    },
+    "details": {
+      "heading": "Bilgileriniz.",
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "phonePlaceholder": "+90 555 000 0000",
+      "idPassport": "Kimlik veya pasaport numarası",
+      "notes": "Notlar",
+      "notesPlaceholder": "Uçuş numarası, özel istekler..."
+    },
+    "summary": {
+      "title": "Rezervasyon",
+      "selectRoute": "Ücretinizi görmek için güzergah seçin.",
+      "oneWay": "Tek yön",
+      "return": "Dönüşlü",
+      "vip": "VIP hizmet",
+      "included": "Dahil",
+      "totalLabel": "Toplam",
+      "confirmationNote": "Onay e-posta ve SMS ile gelir"
+    },
+    "validation": {
+      "routeRequired": "Varış noktası seçin",
+      "dateRequired": "Tarih seçin",
+      "timeRequired": "Saat seçin",
+      "firstNameRequired": "Ad gerekli",
+      "lastNameRequired": "Soyad gerekli",
+      "emailRequired": "Geçerli e-posta gerekli",
+      "phoneRequired": "Geçerli telefon gerekli",
+      "submitFailed": "Rezervasyon tamamlanamadı. Lütfen tekrar deneyin."
+    },
+    "optional": "(opsiyonel)"
+  },
+  "routes": {
+    "eyebrow": "Kıbrıs, noktadan noktaya",
+    "title": "Güzergahlar & Fiyatlar",
+    "subtitle": "Adada her transfer güzergahında sabit fiyatlar.",
+    "oneWay": "Tek Yön",
+    "roundTrip": "Gidiş-Dönüş",
+    "bookRoute": "Bu güzergahı rezerve et",
+    "tableHeading": "Güzergah"
+  },
+  "about": {
+    "eyebrow": "Hakkımızda",
+    "title": "Özenle Kıbrıs.",
+    "subtitle": "Yolcunun gerçek varış biçimini düşünerek kurulmuş bir şoförlü transfer servisi.",
+    "story": {
+      "title": "Hikayemiz",
+      "body": "Taxsi, basit bir sorunu çözmek için kuruldu: Kıbrıs'ta havalimanı transferleri güvensiz ve stresli oluyordu. Durmayan taksimetreler, yolları bilmeyen sürücüler, sürekli değişen fiyatlar. Bunları düzeltmek için Taxsi'yi inşa ettik — sabit fiyatlar, profesyonel sürücüler ve çalışan bir rezervasyon sistemi."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "body": "Her Kıbrıs havalimanı transferini kolay hale getirmek. Siz rezervasyon yapın, biz geliriz. Stres yok, sürpriz yok."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "items": [
+        { "title": "Şeffaflık", "desc": "Gördüğünüz fiyat, ödediğiniz fiyattır. Her zaman." },
+        { "title": "Güvenilirlik", "desc": "Uçuşunuzu takip ederiz. Gecikirseniz, sürücünüz bekler." },
+        { "title": "Profesyonellik", "desc": "Her sürücü lisanslı, deneyimli ve Kıbrıs yollarını biliyor." }
+      ]
+    },
+    "cta": "Transfer Rezervasyonu Yap"
+  },
+  "contact": {
+    "eyebrow": "Bize ulaşın",
+    "title": "Yanıt insan tarafından gelir.",
+    "subtitle": "Rezervasyon, kurumsal talep veya başka bir konu için doğrudan bize ulaşın.",
+    "directHeading": "Doğrudan hatlar",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-posta",
+    "whatsappLabel": "WhatsApp",
+    "form": {
+      "title": "Mesaj Gönderin",
+      "name": "Adınız",
+      "emailField": "E-posta adresiniz",
+      "message": "Mesajınız",
+      "submit": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.",
+      "error": "Bir hata oluştu. Lütfen tekrar deneyin veya bizi arayın."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Kıbrıs'ta seyahat hakkında ipuçları, rehberler ve haberler.",
+    "readMore": "Devamını oku →",
+    "backToBlog": "← Bloga Dön",
+    "bookCta": "Transfer rezervasyonu yapmak ister misiniz? →",
+    "noPosts": "Bu dilde henüz yazı bulunmuyor."
+  },
+  "faq": {
+    "eyebrow": "Sık sorulan",
+    "title": "Sorular, yanıtlar.",
+    "subtitle": "Taxsi transferi rezerve etmeden önce bilmeniz gereken her şey.",
+    "sections": [
+      {
+        "title": "Rezervasyon",
+        "items": [
+          { "q": "Transfer nasıl rezerve edilir?", "a": "Web sitemizde güzergah, tarih, saat ve yolcu bilgilerinizi doldurun. Onayınızı e-posta ve SMS ile hemen alacaksınız." },
+          { "q": "Rezervasyonumu iptal veya değiştirebilir miyim?", "a": "Mümkün olan en kısa sürede telefon veya e-posta ile iletişime geçin. Transferden 24 saat önce yapılan iptallerde tam iade yapılır." },
+          { "q": "Ne kadar önceden rezervasyon yapmalıyım?", "a": "En az 24 saat önceden rezervasyon yapmanızı öneririz. Yoğun sezonda (Temmuz–Eylül) ve sabah erken uçuşlar için daha erken tercih edilmelidir." }
+        ]
+      },
+      {
+        "title": "Ödeme",
+        "items": [
+          { "q": "Hangi ödeme yöntemlerini kabul ediyorsunuz?", "a": "Nakit (varışta sürücüye) ve online ödeme (Stripe ile güvenli kart ödemesi) kabul ediyoruz." },
+          { "q": "Fiyata neler dahil?", "a": "Transfer, otoyol ücretleri, park ve havalimanında 45 dakikaya kadar bekleme süresi fiyata dahildir." },
+          { "q": "Online ödeme güvenli mi?", "a": "Evet. Ödemeler PCI-DSS Seviye 1 sertifikalı Stripe tarafından işlenir. Kart bilgilerinizi asla saklamıyoruz." }
+        ]
+      },
+      {
+        "title": "Transfer Günü",
+        "items": [
+          { "q": "Sürücümü nasıl tanıyacağım?", "a": "Sürücünüz geliş salonunda adınızın yazılı olduğu bir tabelayla sizi bekleyecek. Adını, telefonunu ve araç bilgilerini SMS ile alacaksınız." },
+          { "q": "Uçuşum gecikirse ne olur?", "a": "Uçuş varışlarını takip ederiz. Uçuşunuz gecikirse sürücünüz ek ücret ödemeden bekler." },
+          { "q": "Rezervasyonumu takip edebilir miyim?", "a": "Evet. Rezervasyon kodunuzla Rezervasyon Takip sayfasını kullanabilirsiniz." }
+        ]
+      },
+      {
+        "title": "Araçlar",
+        "items": [
+          { "q": "Araçlar kaç yolcu alır?", "a": "Standart araçlar standart bagajlı 4 yolcuya kadar uygundur. Rezervasyonda yolcu sayınızı belirtin." },
+          { "q": "VIP transfer var mı?", "a": "Evet. Rezervasyon sırasında VIP seçeneğini işaretleyin; premium araç, ikramlık su ve öncelikli hizmet içerir." },
+          { "q": "Çocuk kolluğu isteyebilir miyim?", "a": "Evet. Rezervasyonda Çocuk Koltuğu ekstrası seçin ve notlar alanında çocuğun yaşını belirtin." }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: 1 Mayıs 2026"
+  },
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "lastUpdated": "Son güncelleme: 1 Mayıs 2026"
+  },
+  "errors": {
+    "notFound": {
+      "eyebrow": "Sayfa bulunamadı",
+      "title": "Bunu bulamadık.",
+      "body": "Takip ettiğiniz adres taşınmış veya hiç var olmamış. Aşağıdaki kapılardan birini deneyin.",
+      "home": "Ana sayfaya dön",
+      "book": "Transfer rezerve et"
+    },
+    "generic": {
+      "eyebrow": "Beklenmeyen hata",
+      "title": "Bir şeyler ters gitti.",
+      "body": "Beklenmeyen bir hata bu sayfayı kesintiye uğrattı. Tekrar deneyin veya devam ederse bize ulaşın.",
+      "retry": "Tekrar dene",
+      "home": "Ana sayfaya dön"
+    }
+  },
+  "footer": {
+    "tagline": "Kıbrıs Şoförlü Transfer",
+    "addressLines": ["Larnaca · Paphos · Limassol", "Kıbrıs"],
+    "hours": "24 / 7 çok dilli operasyon",
+    "directHeading": "Doğrudan hatlar",
+    "serviceHeading": "Hizmet",
+    "companyHeading": "Kurumsal",
+    "legalHeading": "Yasal",
+    "followHeading": "Takip Et",
+    "paymentsLine": "Stripe ile güvenli ödeme · Kartlar kabul edilir · Varışta nakit",
+    "copyright": "© {year} Taxsi · Kıbrıs Şoförlü Transfer"
+  }
+}

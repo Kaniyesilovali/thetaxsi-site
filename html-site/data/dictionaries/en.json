@@ -1,0 +1,340 @@
+{
+  "nav": {
+    "book": "Book Transfer",
+    "reserve": "Reserve",
+    "routes": "Routes & Prices",
+    "track": "Track Booking",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "whatsappAria": "Contact us on WhatsApp"
+  },
+  "homepage": {
+    "meta": {
+      "title": "Cyprus Chauffeur Transfers — Premium Airport Service",
+      "description": "Pre-booked private transfers across Cyprus. Fixed prices, professional chauffeurs, meet & greet at the terminal."
+    },
+    "hero": {
+      "eyebrow": "Cyprus · Chauffeur Service",
+      "title": "Arrive composed.",
+      "subtitle": "Pre-booked transfers across Cyprus. Fixed prices, professional drivers, and a chauffeur waiting the moment you land.",
+      "cta": "Reserve",
+      "picker": {
+        "from": "From",
+        "to": "To",
+        "date": "Date",
+        "passengers": "Guests",
+        "passengerSingle": "guest",
+        "passengerPlural": "guests",
+        "submit": "Reserve",
+        "selectFrom": "Select pickup",
+        "selectTo": "Select destination"
+      }
+    },
+    "trust": {
+      "items": [
+        { "no": "01", "title": "Meet & greet at arrivals", "desc": "Your chauffeur waits with your name at the terminal — no calls, no searching." },
+        { "no": "02", "title": "Flight tracking included", "desc": "We monitor every flight. Delays do not change your fare." },
+        { "no": "03", "title": "Fixed price, no meters", "desc": "The figure quoted is the figure paid. Tolls and waiting are already in." }
+      ]
+    },
+    "why": {
+      "eyebrow": "Why Taxsi",
+      "title": "A different kind of transfer.",
+      "items": [
+        { "phrase": "Fixed Prices", "desc": "No meters, no surprises. The price you see is the price you pay." },
+        { "phrase": "Professional drivers.", "desc": "Licensed, vetted chauffeurs with years on Cyprus roads — quiet, careful, and on time." },
+        { "phrase": "Available around the clock.", "desc": "Early-morning departures, late-night arrivals — we keep your hours, not the other way around." },
+        { "phrase": "Confirmed instantly.", "desc": "Reservation and confirmation arrive by email and SMS within seconds of booking." }
+      ]
+    },
+    "fleet": {
+      "eyebrow": "The Fleet",
+      "title": "Composed transport, considered details.",
+      "items": [
+        { "name": "Executive Sedan", "capacity": "Up to 3 guests · 3 cases", "desc": "Mercedes E-Class or equivalent. The everyday standard for individual and pair travel." },
+        { "name": "Executive Van", "capacity": "Up to 7 guests · 7 cases", "desc": "Mercedes V-Class or equivalent. Group travel without compromise on space or quiet." },
+        { "name": "VIP", "capacity": "Up to 3 guests · 3 cases", "desc": "Premium sedan, complimentary water, priority dispatch. For the moments that matter." }
+      ]
+    },
+    "routes": {
+      "eyebrow": "Cyprus, point to point",
+      "title": "Routes.",
+      "viewAll": "All routes →",
+      "from": "from"
+    },
+    "howItWorks": {
+      "eyebrow": "How it works",
+      "title": "Three steps from runway to room.",
+      "steps": [
+        { "title": "Reserve", "desc": "Choose your route, date, and party size. The fare is fixed before you confirm." },
+        { "title": "Receive details", "desc": "Your chauffeur is confirmed by SMS — name, vehicle, and direct contact." },
+        { "title": "Arrive", "desc": "You are met at the terminal and driven to your destination. Nothing further required." }
+      ]
+    },
+    "reviews": {
+      "eyebrow": "What travellers say",
+      "title": "In their words.",
+      "items": [
+        {
+          "quote": "The car was waiting before our cabin door opened. The chauffeur took our bags without asking. We were home in forty minutes.",
+          "author": "Anneke V.",
+          "origin": "Munich",
+          "context": "Frequent traveller"
+        },
+        {
+          "quote": "Booked in London at 1 AM, met in Larnaca by 8. The fare did not move during a delayed flight. That is what I pay for.",
+          "author": "James P.",
+          "origin": "London",
+          "context": "Corporate guest"
+        },
+        {
+          "quote": "I have used four chauffeur services in the Mediterranean. This is the first one I used twice.",
+          "author": "Sofia L.",
+          "origin": "Stockholm",
+          "context": "Family travel"
+        }
+      ]
+    },
+    "partners": {
+      "eyebrow": "Hotel concierge partners"
+    },
+    "trustpilot": {
+      "eyebrow": "Verified reviews"
+    },
+    "trustedBy": {
+      "eyebrow": "Quietly proven",
+      "items": [
+        { "value": "1,400+", "label": "Transfers completed" },
+        { "value": "4.9 / 5", "label": "Average satisfaction" },
+        { "value": "24 / 7", "label": "Multilingual dispatch" },
+        { "value": "10+", "label": "Hotel concierge partners" }
+      ]
+    },
+    "corporate": {
+      "eyebrow": "For Business",
+      "title": "Corporate travel, handled.",
+      "body": "Consolidated invoicing, VAT receipts, and account-managed booking for executives, roadshows, and visiting clients. Speak with us about a corporate arrangement.",
+      "cta": "Speak with our concierge →"
+    },
+    "cta": {
+      "title": "Wherever you're heading. We've already arrived.",
+      "subtitle": "Reserve a transfer in under two minutes.",
+      "button": "Reserve a transfer"
+    }
+  },
+  "book": {
+    "meta": {
+      "title": "Reserve a Transfer · Cyprus",
+      "description": "Reserve your Cyprus chauffeur transfer in three steps. Fixed prices, professional drivers, instant confirmation."
+    },
+    "hero": {
+      "eyebrow": "Reserve",
+      "title": "A few quiet steps.",
+      "subtitle": "Tell us where you're going, choose how you'd like to travel, and we'll take it from there."
+    },
+    "steps": {
+      "labels": [
+        { "no": "01", "title": "Route" },
+        { "no": "02", "title": "Vehicle" },
+        { "no": "03", "title": "Details" }
+      ],
+      "of": "of",
+      "back": "Back",
+      "continue": "Continue",
+      "confirm": "Confirm reservation",
+      "confirming": "Reserving..."
+    },
+    "route": {
+      "heading": "Route & schedule.",
+      "pickup": "Pickup",
+      "dropoff": "Destination",
+      "selectPickup": "Select pickup",
+      "selectDropoff": "Select destination",
+      "selectPickupFirst": "Select pickup first",
+      "date": "Date",
+      "time": "Time",
+      "passengers": "Passengers",
+      "luggage": "Luggage",
+      "roundTripLabel": "Return journey",
+      "roundTripDesc": "Add a return at a discounted rate."
+    },
+    "vehicle": {
+      "heading": "Vehicle & extras.",
+      "vipLabel": "VIP service",
+      "vipDesc": "Premium sedan, complimentary water, priority dispatch.",
+      "extrasHeading": "Extras",
+      "extrasNone": "No extras available for this route.",
+      "paymentHeading": "Payment",
+      "paymentCash": "Cash on arrival",
+      "paymentCashDesc": "Settle directly with your chauffeur.",
+      "paymentOnline": "Pay online",
+      "paymentOnlineDesc": "Secure payment via Stripe."
+    },
+    "details": {
+      "heading": "Your details.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "phonePlaceholder": "+357 99 000000",
+      "idPassport": "ID or passport number",
+      "notes": "Notes",
+      "notesPlaceholder": "Flight number, special requests..."
+    },
+    "summary": {
+      "title": "Reservation",
+      "selectRoute": "Select a route to see your fare.",
+      "oneWay": "One way",
+      "return": "Return",
+      "vip": "VIP service",
+      "included": "Included",
+      "totalLabel": "Total",
+      "confirmationNote": "Confirmation by email and SMS"
+    },
+    "validation": {
+      "routeRequired": "Select a destination",
+      "dateRequired": "Select a date",
+      "timeRequired": "Select a time",
+      "firstNameRequired": "First name required",
+      "lastNameRequired": "Last name required",
+      "emailRequired": "Valid email required",
+      "phoneRequired": "Valid phone required",
+      "submitFailed": "Reservation could not be completed. Please try again."
+    },
+    "optional": "(optional)"
+  },
+  "routes": {
+    "eyebrow": "Cyprus, point to point",
+    "title": "Routes & Prices",
+    "subtitle": "Fixed prices on every transfer route across the island.",
+    "oneWay": "One Way",
+    "roundTrip": "Round Trip",
+    "bookRoute": "Reserve this route",
+    "tableHeading": "Route"
+  },
+  "about": {
+    "eyebrow": "About Taxsi",
+    "title": "Cyprus, considered.",
+    "subtitle": "A chauffeur service built for the way travellers actually arrive.",
+    "story": {
+      "title": "Our Story",
+      "body": "Taxsi was founded to solve a simple problem: airport transfers in Cyprus were unpredictable and stressful. Meters that kept running, drivers who didn't know the routes, prices that varied wildly. We built Taxsi to fix that — fixed prices, professional drivers, and a booking system that works."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "body": "To make every Cyprus airport transfer straightforward. You book, we show up, you arrive. No stress, no surprises."
+    },
+    "values": {
+      "title": "What We Stand For",
+      "items": [
+        { "title": "Transparency", "desc": "The price you see is the price you pay. Always." },
+        { "title": "Reliability", "desc": "We monitor your flight. If it's late, your driver waits." },
+        { "title": "Professionalism", "desc": "Every driver is licensed, vetted, and experienced on Cyprus roads." }
+      ]
+    },
+    "cta": "Book a Transfer"
+  },
+  "contact": {
+    "eyebrow": "Speak with us",
+    "title": "We answer in person.",
+    "subtitle": "For reservations, corporate enquiries, or anything in between — reach us directly.",
+    "directHeading": "Direct lines",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "whatsappLabel": "WhatsApp",
+    "form": {
+      "title": "Send a Message",
+      "name": "Your name",
+      "emailField": "Email address",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent! We'll get back to you shortly.",
+      "error": "Something went wrong. Please try again or call us directly."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips, guides, and news about travelling in Cyprus.",
+    "readMore": "Read more →",
+    "backToBlog": "← Back to Blog",
+    "bookCta": "Need a transfer? Book now →",
+    "noPosts": "No posts available in this language yet."
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "title": "Questions, answered.",
+    "subtitle": "Everything you need to know before reserving a Taxsi transfer.",
+    "sections": [
+      {
+        "title": "Booking",
+        "items": [
+          { "q": "How do I book a transfer?", "a": "Fill in the booking form on our website with your route, date, time, and passenger details. You'll receive a confirmation by email and SMS immediately." },
+          { "q": "Can I cancel or modify my booking?", "a": "Contact us by phone or email as soon as possible. Cancellations made more than 24 hours before the transfer are fully refunded. Modifications are accepted subject to availability." },
+          { "q": "How far in advance should I book?", "a": "We recommend booking at least 24 hours in advance. For peak season (July–September) and early morning flights, earlier is better." }
+        ]
+      },
+      {
+        "title": "Payment",
+        "items": [
+          { "q": "What payment methods do you accept?", "a": "We accept cash (paid to the driver on arrival) and online payments via credit or debit card (processed securely through Stripe)." },
+          { "q": "What is included in the price?", "a": "The price includes the transfer, tolls, parking, and up to 45 minutes waiting at the airport. Extras such as child seats are listed separately." },
+          { "q": "Is online payment secure?", "a": "Yes. Online payments are processed by Stripe, a PCI-DSS Level 1 certified provider. We never store your card details." }
+        ]
+      },
+      {
+        "title": "On the Day",
+        "items": [
+          { "q": "How will I recognise my driver?", "a": "Your driver will be waiting at the arrivals hall with a sign showing your name. You will receive their name, phone, and vehicle details by SMS." },
+          { "q": "What if my flight is delayed?", "a": "We monitor flight arrivals. If your flight is delayed, your driver adjusts at no extra charge." },
+          { "q": "Can I track my booking?", "a": "Yes. Use the Track Booking page with your booking reference to see your current status and driver details." }
+        ]
+      },
+      {
+        "title": "Vehicles",
+        "items": [
+          { "q": "How many passengers can each vehicle accommodate?", "a": "Standard vehicles accommodate up to 4 passengers with standard luggage. Indicate your passenger count when booking and we'll assign the right vehicle." },
+          { "q": "Do you offer VIP transfers?", "a": "Yes. Select the VIP option when booking for a premium vehicle, complimentary water, and priority service." },
+          { "q": "Can I request a child seat?", "a": "Yes. Select the Child Seat extra when booking. Please specify the child's age in the notes field." }
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: 1 May 2026"
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: 1 May 2026"
+  },
+  "errors": {
+    "notFound": {
+      "eyebrow": "Page not found",
+      "title": "We couldn't find that.",
+      "body": "The address you followed has moved, or never existed. Try one of the doors below.",
+      "home": "Return home",
+      "book": "Reserve a transfer"
+    },
+    "generic": {
+      "eyebrow": "Unexpected error",
+      "title": "Something went wrong.",
+      "body": "An unexpected error interrupted this page. Try again, or contact us if it continues.",
+      "retry": "Try again",
+      "home": "Return home"
+    }
+  },
+  "footer": {
+    "tagline": "Cyprus Chauffeur Service",
+    "addressLines": ["Larnaca · Paphos · Limassol", "Cyprus"],
+    "hours": "24 / 7 multilingual dispatch",
+    "directHeading": "Direct lines",
+    "serviceHeading": "Service",
+    "companyHeading": "Company",
+    "legalHeading": "Legal",
+    "followHeading": "Follow",
+    "paymentsLine": "Secure payments via Stripe · Cards accepted · Cash on arrival",
+    "copyright": "© {year} Taxsi · Cyprus Chauffeur Service"
+  }
+}
