@@ -35,7 +35,7 @@ function header(ctx) {
   return `
 <header class="sticky top-0 z-50 border-b border-white/10 bg-night/95 backdrop-blur supports-[backdrop-filter]:bg-night/80">
   <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-20">
-    <a href="${base}/" class="font-display text-2xl font-light italic tracking-wide text-white transition-opacity hover:opacity-75 lg:text-[1.7rem]">Taxsi</a>
+    <a href="${base}/" class="font-display text-2xl font-light italic tracking-wide text-white transition-opacity hover:opacity-75 lg:text-[1.7rem]">TheTaxsi</a>
     <nav class="hidden items-center gap-7 lg:flex">
       ${links.map((l) => `<a href="${l.href}" class="text-xs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-white">${esc(l.label)}</a>`).join('\n      ')}
     </nav>
@@ -80,7 +80,7 @@ function footer(ctx) {
   <div class="relative mx-auto max-w-7xl px-4 pt-20 pb-10 sm:px-6">
     <div class="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-12">
       <div class="col-span-2 lg:col-span-4">
-        <p class="font-display text-3xl font-light italic text-white">Taxsi</p>
+        <p class="font-display text-3xl font-light italic text-white">TheTaxsi</p>
         <p class="mt-3 text-sm text-white/45">${esc(t.tagline)}</p>
         <span class="mt-6 block h-px w-12 bg-gold"></span>
         <div class="mt-6 space-y-1 text-xs uppercase tracking-[0.18em] text-white/45">
