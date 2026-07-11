@@ -22,11 +22,11 @@ export function renderBlogIndex(ctx) {
   const base = `/${lang}`
 
   const body = `
-<section class="relative bg-navy py-24 text-white lg:py-32">
+<section class="relative bg-navy py-16 text-white lg:py-20">
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
     <p class="eyebrow text-sea">${esc(t.eyebrow)}</p>
-    <h1 class="mt-4 font-display text-5xl font-medium sm:text-6xl">${esc(t.title)}</h1>
-    <p class="mt-6 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(t.subtitle)}</p>
+    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(t.title)}</h1>
+    <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(t.subtitle)}</p>
   </div>
 </section>
 <section class="bg-mist py-20 lg:py-28">
@@ -65,15 +65,15 @@ export function renderBlogPost(ctx, post) {
   const others = sortedPosts().filter((p) => p.slug !== post.slug).slice(0, 3)
 
   const body = `
-<section class="relative bg-navy py-24 text-white lg:py-32">
+<section class="relative bg-navy py-16 text-white lg:py-20">
   <div class="relative mx-auto max-w-3xl px-4 sm:px-6">
     <nav class="text-[11px] uppercase tracking-[0.2em] text-white/40" aria-label="Breadcrumb">
       <a href="${base}/blog/" class="transition-colors hover:text-white">${esc(t.title)}</a>
       <span class="mx-2 text-white/25">/</span>
       <span class="text-sea">${esc(formatDate(post.date, lang))}</span>
     </nav>
-    <h1 class="mt-10 font-display text-4xl font-medium leading-tight sm:text-5xl">${esc(title)}</h1>
-    <p class="mt-6 text-sm leading-relaxed text-white/60 sm:text-base">${esc(description)}</p>
+    <h1 class="mt-8 font-display text-4xl font-medium leading-tight sm:text-5xl">${esc(title)}</h1>
+    <p class="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">${esc(description)}</p>
   </div>
 </section>
 <section class="bg-mist py-20 lg:py-28">
