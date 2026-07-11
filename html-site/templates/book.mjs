@@ -104,6 +104,11 @@ export function renderBook(ctx) {
         <div id="bf-return-wrap" class="hidden gap-4 sm:grid-cols-2 sm:col-span-2">
           ${field(`${label('bf-return-date', f.returnDateLabel)}<input id="bf-return-date" name="returnDate" type="date" class="${inputCls}">`)}
           ${field(`${label('bf-return-time', f.returnTimeLabel)}<input id="bf-return-time" name="returnTime" type="time" class="${inputCls}">`)}
+          <div class="flex flex-col gap-2 sm:col-span-2">
+            ${label('bf-return-pickup', f.returnPickupLabel)}
+            <input id="bf-return-pickup" name="returnPickup" type="text" placeholder="${esc(f.returnPickupPlaceholder)}" class="${inputCls}">
+            <p class="text-xs leading-relaxed text-slate">${esc(f.returnPickupNote)}</p>
+          </div>
         </div>
         <label class="flex items-center justify-between gap-4 border border-ink/15 bg-white px-4 py-3">
           <span class="block text-sm font-medium">${esc(f.childSeatLabel)}</span>
@@ -160,6 +165,7 @@ window.__TAXSI_BOOK = {
   waAddress: ${JSON.stringify(xtra.bookForm.waAddress)},
   waLuggage: ${JSON.stringify(xtra.bookForm.waLuggage)},
   waRoundTrip: ${JSON.stringify(xtra.bookForm.waRoundTrip)},
+  waReturnPickup: ${JSON.stringify(xtra.bookForm.waReturnPickup)},
   waChildSeat: ${JSON.stringify(xtra.bookForm.waChildSeat)},
   waNotes: ${JSON.stringify(xtra.bookForm.waNotes)},
   lang: ${JSON.stringify(lang)},

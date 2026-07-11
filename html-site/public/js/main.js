@@ -300,6 +300,7 @@
     var returnWrap = document.getElementById('bf-return-wrap')
     var returnDate = document.getElementById('bf-return-date')
     var returnTime = document.getElementById('bf-return-time')
+    var returnPickup = document.getElementById('bf-return-pickup')
     var childseat = document.getElementById('bf-childseat')
     var name = document.getElementById('bf-name')
     var phone = document.getElementById('bf-phone')
@@ -466,6 +467,7 @@
         roundTrip: isReturn ? 'yes' : 'no',
         returnDate: isReturn ? returnDate.value : '',
         returnTime: isReturn ? returnTime.value : '',
+        returnPickup: isReturn ? returnPickup.value.trim() : '',
         childSeat: childseat.value,
         name: name.value.trim(),
         phone: phone.value.trim(),
@@ -482,7 +484,13 @@
         date: date.value,
         time: time.value || '',
         passengers: pax.value,
-        roundTrip: isReturn ? tmpl(cfg.waRoundTrip, { returnDate: returnDate.value, returnTime: returnTime.value || '' }) : '',
+        roundTrip: isReturn
+          ? tmpl(cfg.waRoundTrip, {
+              returnDate: returnDate.value,
+              returnTime: returnTime.value || '',
+              returnPickup: returnPickup.value.trim() ? tmpl(cfg.waReturnPickup, { pickup: returnPickup.value.trim() }) : '',
+            })
+          : '',
         childSeat: Number(childseat.value) > 0 ? tmpl(cfg.waChildSeat, { count: childseat.value }) : '',
         name: name.value.trim(),
         phone: phone.value.trim(),
