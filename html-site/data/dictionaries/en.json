@@ -28,7 +28,14 @@
         "passengerPlural": "guests",
         "submit": "Reserve",
         "selectFrom": "Select pickup",
-        "selectTo": "Select destination"
+        "selectTo": "Select destination",
+        "noResults": "No matches found",
+        "modes": {
+          "aria": "Journey type",
+          "airportToHotel": "Airport → Hotel",
+          "airportToCenter": "Airport → City Centre",
+          "toAirport": "To Airport"
+        }
       }
     },
     "trust": {

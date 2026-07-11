@@ -22,17 +22,83 @@ export function routeLabel(r, lang) {
   return `${r.from[lang]} → ${r.to[lang]}`
 }
 
-// Nereden/Nereye select'lerinin gruplu <optgroup> içeriği — hero ve book formu paylaşır.
-export function locationOptionsHtml(lang) {
-  return locationGroups
+// Filtrelenen combobox kabuğu — main.js'teki [data-loc-combo] init'i ile çalışır.
+// Gizli input canonical değeri taşır; görünen input sadece arama/etiket içindir.
+// `groups`: [{ id, label, options: [{ value, label }] }]
+function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults }) {
+  const groupsHtml = groups
     .map(
-      (g) => `<optgroup label="${esc(g.label[lang])}" data-group="${g.id}">
-            ${g.locations
-              .map((l) => `<option value="${esc(l.value)}">${esc(l.label[lang])}</option>`)
-              .join('\n            ')}
-          </optgroup>`,
+      (g) => `<div data-combo-group="${esc(g.id)}">
+        <p class="px-4 pt-3 pb-1 text-[10px] font-medium uppercase tracking-[0.18em] text-gold">${esc(g.label)}</p>
+        ${g.options
+          .map(
+            (o) =>
+              `<button type="button" data-combo-option data-value="${esc(o.value)}" data-group="${esc(g.id)}" class="block w-full px-4 py-2 text-left text-sm text-white/90 transition-colors hover:bg-gold/15 hover:text-gold-pale">${esc(o.label)}</button>`,
+          )
+          .join('\n        ')}
+      </div>`,
     )
-    .join('\n          ')
+    .join('\n      ')
+
+  return `<div class="relative" data-loc-combo>
+      <input type="hidden" name="${name}">
+      <input id="${id}" type="text" role="combobox" aria-expanded="false" aria-autocomplete="list" autocomplete="off" placeholder="${esc(placeholder)}" class="${inputCls}">
+      <div data-combo-list class="absolute inset-x-0 top-full z-30 mt-2 hidden max-h-56 min-w-full overflow-y-auto border border-white/10 bg-night-soft pb-2 shadow-xl shadow-black/40 [color-scheme:dark]" role="listbox">
+      ${groupsHtml}
+      <p data-combo-empty class="hidden px-4 py-3 text-sm text-white/50">${esc(noResults)}</p>
+      </div>
+    </div>`
+}
+
+// Nereden/Nereye combobox'ı — hero ve book formu paylaşır.
+export function locationComboboxHtml(lang, opts) {
+  const groups = locationGroups.map((g) => ({
+    id: g.id,
+    label: g.label[lang],
+    options: g.locations.map((l) => ({ value: l.value, label: l.label[lang] })),
+  }))
+  return comboboxHtml(groups, opts)
+}
+
+// Otel combobox'ı — sadece book formunda. Grup kimliği = otel bölgesinin canonical
+// değeri; bölge seçilince main.js setGroups ile listeyi o bölgenin otellerine daraltır.
+export function hotelComboboxHtml(lang, opts) {
+  const groups = locationGroups
+    .filter((g) => g.id === 'hotels')
+    .flatMap((g) =>
+      g.locations
+        .filter((l) => l.hotels && l.hotels.length)
+        .map((l) => ({
+          id: l.value,
+          label: l.label[lang],
+          options: l.hotels.map((h) => ({ value: h, label: h })),
+        })),
+    )
+  return comboboxHtml(groups, opts)
+}
+
+// Yolculuk türü sekmeleri — hero ve book formu paylaşır. Seçilen moda göre
+// Nereden/Nereye listeleri main.js'teki [data-mode-tabs] init'i ile filtrelenir.
+// Gizli "mode" input'u seçimi /book/ sayfasına GET ile taşır.
+export function modeSelectorHtml(picker, { variant }) {
+  const btnCls =
+    variant === 'dark'
+      ? 'border-b-2 border-transparent pb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-white/50 transition-colors hover:text-white aria-pressed:border-gold aria-pressed:text-gold'
+      : 'border-b-2 border-transparent pb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-clay transition-colors hover:text-ink aria-pressed:border-gold-dark aria-pressed:text-ink'
+  const modes = [
+    ['airport-hotel', picker.modes.airportToHotel],
+    ['airport-center', picker.modes.airportToCenter],
+    ['to-airport', picker.modes.toAirport],
+  ]
+  return `<div data-mode-tabs role="group" aria-label="${esc(picker.modes.aria)}" class="flex flex-wrap gap-x-6 gap-y-2">
+      ${modes
+        .map(
+          ([id, label], i) =>
+            `<button type="button" data-mode="${id}" aria-pressed="${i === 0}" class="${btnCls}">${esc(label)}</button>`,
+        )
+        .join('\n      ')}
+    </div>
+    <input type="hidden" name="mode" value="airport-hotel">`
 }
 
 export function renderHome(ctx) {
@@ -40,12 +106,26 @@ export function renderHome(ctx) {
   const t = dict.homepage
   const base = `/${lang}`
 
-  const locationOptions = locationOptionsHtml(lang)
+  const heroComboCls = 'w-full bg-transparent text-sm text-white outline-none placeholder:text-white/40'
+  const fromCombo = locationComboboxHtml(lang, {
+    id: 'hp-from',
+    name: 'from',
+    placeholder: t.hero.picker.selectFrom,
+    inputCls: heroComboCls,
+    noResults: t.hero.picker.noResults,
+  })
+  const toCombo = locationComboboxHtml(lang, {
+    id: 'hp-to',
+    name: 'to',
+    placeholder: t.hero.picker.selectTo,
+    inputCls: heroComboCls,
+    noResults: t.hero.picker.noResults,
+  })
 
   const body = `
 <!-- HERO -->
-<section class="relative isolate overflow-hidden bg-night text-white">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+<section class="relative isolate bg-night text-white">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
     <img src="${heroPhoto}" alt="" fetchpriority="high" class="size-full object-cover object-center opacity-55">
     <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.4) 35%,rgba(10,10,10,.85) 75%,rgba(10,10,10,1) 100%)"></div>
     <div class="absolute inset-0 mix-blend-screen" style="background:radial-gradient(60% 50% at 82% 18%,rgba(201,169,97,.28),rgba(201,169,97,0) 60%);animation:glow-drift 14s ease-in-out infinite"></div>
@@ -60,32 +140,31 @@ export function renderHome(ctx) {
     </div>
     <div class="relative opacity-0" style="animation:reveal 1100ms 480ms cubic-bezier(.16,1,.3,1) forwards">
       <div class="mb-8 h-px w-24 origin-left bg-gold" style="animation:scale-x 800ms 760ms ease-out both"></div>
-      <form action="${base}/book/" method="get" class="grid gap-px border border-white/15 bg-white/10 backdrop-blur sm:grid-cols-2 lg:grid-cols-[1.4fr_1.4fr_1fr_1fr_auto]">
-        <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
-          <span class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.from)}</span>
-          <select name="from" class="bg-transparent text-sm text-white outline-none [&>option]:text-ink [&>optgroup]:text-ink">
-            <option value="">${esc(t.hero.picker.selectFrom)}</option>
-            ${locationOptions}
-          </select>
-        </label>
-        <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
-          <span class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.to)}</span>
-          <select name="to" class="bg-transparent text-sm text-white outline-none [&>option]:text-ink [&>optgroup]:text-ink">
-            <option value="">${esc(t.hero.picker.selectTo)}</option>
-            ${locationOptions}
-          </select>
-        </label>
+      <form action="${base}/book/" method="get">
+        <div class="mb-6">
+          ${modeSelectorHtml(t.hero.picker, { variant: 'dark' })}
+        </div>
+        <div class="grid gap-px border border-white/15 bg-white/10 backdrop-blur sm:grid-cols-2 lg:grid-cols-[1.4fr_1.4fr_1fr_1fr_auto]">
+        <div class="flex flex-col gap-1 bg-night/80 px-5 py-4">
+          <label for="hp-from" class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.from)}</label>
+          ${fromCombo}
+        </div>
+        <div class="flex flex-col gap-1 bg-night/80 px-5 py-4">
+          <label for="hp-to" class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.to)}</label>
+          ${toCombo}
+        </div>
         <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
           <span class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.date)}</span>
           <input type="date" name="date" class="bg-transparent text-sm text-white outline-none [color-scheme:dark]">
         </label>
         <label class="flex flex-col gap-1 bg-night/80 px-5 py-4">
           <span class="eyebrow text-[9px] text-gold">${esc(t.hero.picker.passengers)}</span>
-          <select name="pax" class="bg-transparent text-sm text-white outline-none [&>option]:text-ink">
+          <select name="pax" class="bg-transparent text-sm text-white outline-none [color-scheme:dark] [&>option]:bg-night-soft [&>option]:text-white">
             ${[1, 2, 3, 4, 5, 6, 7].map((n) => `<option value="${n}">${n} ${n === 1 ? esc(t.hero.picker.passengerSingle) : esc(t.hero.picker.passengerPlural)}</option>`).join('')}
           </select>
         </label>
         <button type="submit" class="flex items-center justify-center bg-gold px-8 py-4 text-xs font-medium uppercase tracking-[0.28em] text-night transition-colors hover:bg-gold-dark">${esc(t.hero.picker.submit)}</button>
+        </div>
       </form>
     </div>
   </div>

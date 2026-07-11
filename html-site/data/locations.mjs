@@ -24,14 +24,65 @@ export const locationGroups = [
   {
     id: 'hotels',
     label: { tr: 'Otel Bölgeleri', en: 'Hotel Areas', ru: 'Отельные зоны' },
+    // `hotels`: bölge seçilince rezervasyon formunda çıkan otel listesi — şoförün
+    // gideceği kapıyı netleştirir. Otel adları dilden bağımsızdır (marka adı).
+    // Listede olmayan oteli müşteri elle yazabilir; yeni otel eklemek için diziye ekle.
     locations: [
-      loc('Bafra Oteller Bölgesi', 'Bafra Hotels Area', 'Отельная зона Бафра'),
-      loc('Girne Oteller Bölgesi', 'Kyrenia Hotels Area', 'Отельная зона Кирения'),
-      loc('İskele Long Beach', 'Iskele Long Beach', 'Искеле Лонг-Бич'),
-      loc('Esentepe Oteller Bölgesi', 'Esentepe Hotels Area', 'Отельная зона Эсентепе'),
-      loc('Çatalköy Oteller Bölgesi', 'Catalkoy Hotels Area', 'Отельная зона Чаталкёй'),
-      loc('Alsancak Oteller Bölgesi', 'Alsancak Hotels Area', 'Отельная зона Алсанджак'),
-      loc('Karpaz Otelleri', 'Karpaz Hotels', 'Отели Карпаза'),
+      {
+        ...loc('Bafra Oteller Bölgesi', 'Bafra Hotels Area', 'Отельная зона Бафра'),
+        hotels: [
+          'Kaya Artemis Resort & Casino',
+          "Noah's Ark Deluxe Hotel & Spa",
+          'Concorde Luxury Resort',
+          'Limak Cyprus Deluxe Hotel',
+        ],
+      },
+      {
+        ...loc('Girne Oteller Bölgesi', 'Kyrenia Hotels Area', 'Отельная зона Кирения'),
+        hotels: [
+          "Lord's Palace Hotel",
+          'Rocks Hotel & Casino',
+          'Dome Hotel',
+          'Savoy Ottoman Palace',
+          'Grand Pasha Hotel',
+          'Pia Bella Hotel',
+          'Colony Hotel',
+        ],
+      },
+      {
+        ...loc('İskele Long Beach', 'Iskele Long Beach', 'Искеле Лонг-Бич'),
+        hotels: ['Grand Sapphire Resort', 'Caesar Resort & Spa', 'Courtyard Long Beach'],
+      },
+      {
+        ...loc('Esentepe Oteller Bölgesi', 'Esentepe Hotels Area', 'Отельная зона Эсентепе'),
+        hotels: ['Korineum Golf & Beach Resort'],
+      },
+      {
+        ...loc('Çatalköy Oteller Bölgesi', 'Catalkoy Hotels Area', 'Отельная зона Чаталкёй'),
+        hotels: [
+          'Elexus Hotel & Resort',
+          'Cratos Premium Hotel',
+          'Acapulco Resort & Convention',
+          'Malpas Hotel',
+          'Chamada Prestige Hotel',
+        ],
+      },
+      {
+        ...loc('Alsancak Oteller Bölgesi', 'Alsancak Hotels Area', 'Отельная зона Алсанджак'),
+        hotels: [
+          'Merit Royal Premium',
+          'Merit Royal Hotel',
+          'Merit Park Hotel',
+          'Merit Crystal Cove Hotel',
+          'Riverside Garden Resort',
+          'Denizkızı Hotel',
+          'Camelot Beach Hotel',
+        ],
+      },
+      {
+        ...loc('Karpaz Otelleri', 'Karpaz Hotels', 'Отели Карпаза'),
+        hotels: ['Karpaz Gate Marina', 'Theresa Hotel'],
+      },
     ],
   },
   {

@@ -28,7 +28,14 @@
         "passengerPlural": "гостей",
         "submit": "Забронировать",
         "selectFrom": "Место подачи",
-        "selectTo": "Место назначения"
+        "selectTo": "Место назначения",
+        "noResults": "Ничего не найдено",
+        "modes": {
+          "aria": "Тип поездки",
+          "airportToHotel": "Аэропорт → Отель",
+          "airportToCenter": "Аэропорт → Центр города",
+          "toAirport": "В аэропорт"
+        }
       }
     },
     "trust": {

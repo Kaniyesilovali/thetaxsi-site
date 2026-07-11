@@ -92,7 +92,7 @@ export function renderRouteDetail(ctx, route) {
         )
         .join('')}
     </div>
-    <a href="${base}/book/?route=${route.slug}" class="mt-10 inline-flex h-13 items-center bg-gold px-10 text-xs font-medium uppercase tracking-[0.28em] text-night transition-colors hover:bg-gold-dark">${esc(rd.reserveCta)}</a>
+    <a href="${base}/book/?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-13 items-center bg-gold px-10 text-xs font-medium uppercase tracking-[0.28em] text-night transition-colors hover:bg-gold-dark">${esc(rd.reserveCta)}</a>
   </div>
 </section>
 

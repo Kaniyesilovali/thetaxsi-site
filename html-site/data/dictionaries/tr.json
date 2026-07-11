@@ -28,7 +28,14 @@
         "passengerPlural": "yolcu",
         "submit": "Rezerve Et",
         "selectFrom": "Kalkış noktası",
-        "selectTo": "Varış noktası"
+        "selectTo": "Varış noktası",
+        "noResults": "Sonuç bulunamadı",
+        "modes": {
+          "aria": "Yolculuk türü",
+          "airportToHotel": "Havalimanı → Otel",
+          "airportToCenter": "Havalimanı → Şehir Merkezi",
+          "toAirport": "Havalimanına Dönüş"
+        }
       }
     },
     "trust": {
