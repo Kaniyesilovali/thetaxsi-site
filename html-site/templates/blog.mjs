@@ -30,16 +30,16 @@ export function renderBlogIndex(ctx) {
   </div>
 </section>
 <section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6">
-    <div class="flex flex-col gap-px overflow-hidden border border-ink/10 bg-ink/10">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="grid gap-6 sm:grid-cols-2">
       ${sortedPosts()
         .map(
           (p) => `
-      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-3 bg-mist p-8 transition-colors hover:bg-white">
+      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-3 border border-ink/10 bg-white p-7 transition-colors hover:border-sea-deep/40">
         <p class="text-[11px] uppercase tracking-[0.2em] text-slate">${esc(formatDate(p.date, lang))}</p>
-        <h2 class="font-display text-3xl font-medium leading-snug">${esc(p.title[lang])}</h2>
-        <p class="text-sm leading-relaxed text-slate">${esc(p.description[lang])}</p>
-        <span class="mt-2 text-xs uppercase tracking-[0.2em] text-sea-deep opacity-70 transition-opacity group-hover:opacity-100">${esc(t.readMore)} →</span>
+        <h2 class="font-display text-2xl font-medium leading-snug transition-colors group-hover:text-sea-deep">${esc(p.title[lang])}</h2>
+        <p class="line-clamp-3 text-sm leading-relaxed text-slate">${esc(p.description[lang])}</p>
+        <span class="mt-auto pt-3 text-xs uppercase tracking-[0.2em] text-sea-deep opacity-70 transition-opacity group-hover:opacity-100">${esc(t.readMore)} →</span>
       </a>`,
         )
         .join('')}
