@@ -48,8 +48,8 @@ export function renderBlogIndex(ctx) {
 </section>`
 
   return page(ctx, {
-    title: `${t.title} — ${config.brand}`,
-    description: t.subtitle,
+    title: t.meta?.title ?? `${t.title} — ${config.brand}`,
+    description: t.meta?.description ?? t.subtitle,
     path: '/blog/',
     body,
   })
@@ -72,8 +72,8 @@ export function renderBlogPost(ctx, post) {
       <span class="mx-2 text-white/25">/</span>
       <span class="text-sea">${esc(formatDate(post.date, lang))}</span>
     </nav>
-    <h1 class="mt-8 font-display text-4xl font-medium leading-tight sm:text-5xl">${esc(title)}</h1>
-    <p class="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">${esc(description)}</p>
+    <h1 class="mt-8 max-w-3xl font-display text-3xl font-medium leading-tight sm:text-4xl">${esc(title)}</h1>
+    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(description)}</p>
   </div>
 </section>
 <section class="bg-mist py-20 lg:py-28">
