@@ -3,11 +3,10 @@ import { config } from '../site.config.mjs'
 
 function pageHero({ eyebrow, title, subtitle }) {
   return `
-<section class="relative bg-night py-24 text-white lg:py-32">
-  <div class="grain"></div>
+<section class="relative bg-navy py-24 text-white lg:py-32">
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-gold">${esc(eyebrow)}</p>
-    <h1 class="mt-4 font-display text-5xl font-light italic sm:text-6xl">${esc(title)}</h1>
+    <p class="eyebrow text-sea">${esc(eyebrow)}</p>
+    <h1 class="mt-4 font-display text-5xl font-medium sm:text-6xl">${esc(title)}</h1>
     ${subtitle ? `<p class="mt-6 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
   </div>
 </section>`
@@ -20,34 +19,34 @@ export function renderAbout(ctx) {
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-cream py-20 lg:py-28">
+<section class="bg-mist py-20 lg:py-28">
   <div class="mx-auto grid max-w-5xl gap-16 px-4 sm:px-6">
     <div class="grid gap-12 md:grid-cols-2">
       <div>
-        <h2 class="font-display text-3xl font-light italic">${esc(t.story.title)}</h2>
-        <p class="mt-5 text-sm leading-relaxed text-clay">${esc(t.story.body)}</p>
+        <h2 class="font-display text-3xl font-medium">${esc(t.story.title)}</h2>
+        <p class="mt-5 text-sm leading-relaxed text-slate">${esc(t.story.body)}</p>
       </div>
       <div>
-        <h2 class="font-display text-3xl font-light italic">${esc(t.mission.title)}</h2>
-        <p class="mt-5 text-sm leading-relaxed text-clay">${esc(t.mission.body)}</p>
+        <h2 class="font-display text-3xl font-medium">${esc(t.mission.title)}</h2>
+        <p class="mt-5 text-sm leading-relaxed text-slate">${esc(t.mission.body)}</p>
       </div>
     </div>
     <div>
-      <h2 class="font-display text-3xl font-light italic">${esc(t.values.title)}</h2>
+      <h2 class="font-display text-3xl font-medium">${esc(t.values.title)}</h2>
       <div class="mt-10 grid gap-10 md:grid-cols-3">
         ${t.values.items
           .map(
             (v, i) => `
         <div class="border-t border-ink/15 pt-6">
-          <p class="kicker text-2xl text-gold-dark">0${i + 1}</p>
+          <p class="kicker text-2xl text-sea-deep">0${i + 1}</p>
           <h3 class="mt-3 text-sm font-medium uppercase tracking-[0.14em]">${esc(v.title)}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-clay">${esc(v.desc)}</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate">${esc(v.desc)}</p>
         </div>`,
           )
           .join('')}
       </div>
     </div>
-    <a href="${base}/book/" class="inline-flex h-13 w-fit items-center bg-gold px-10 text-xs font-medium uppercase tracking-[0.28em] text-night transition-colors hover:bg-gold-dark">${esc(t.cta)}</a>
+    <a href="${base}/book/" class="inline-flex h-13 w-fit items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
   </div>
 </section>`
 
@@ -62,49 +61,49 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 export function renderContact(ctx) {
   const { lang, dict, xtra } = ctx
   const t = dict.contact
-  const inputCls = 'h-12 border border-ink/15 bg-white px-4 text-sm outline-none transition-colors focus:border-gold-dark'
+  const inputCls = 'h-12 border border-ink/15 bg-white px-4 text-sm outline-none transition-colors focus:border-sea-deep'
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-cream py-20 lg:py-28">
+<section class="bg-mist py-20 lg:py-28">
   <div class="mx-auto grid max-w-6xl gap-16 px-4 sm:px-6 lg:grid-cols-[380px_1fr]">
     <div>
-      <p class="eyebrow text-gold-dark">${esc(t.directHeading)}</p>
+      <p class="eyebrow text-sea-deep">${esc(t.directHeading)}</p>
       <ul class="mt-8 flex flex-col gap-6 text-sm">
         <li>
-          <p class="text-[11px] uppercase tracking-[0.18em] text-clay">${esc(t.phoneLabel)}</p>
-          <a href="tel:${config.phoneHref}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-gold-dark"><span class="text-gold-dark">${icons.phone}</span>${config.phoneDisplay}</a>
+          <p class="text-[11px] uppercase tracking-[0.18em] text-slate">${esc(t.phoneLabel)}</p>
+          <a href="tel:${config.phoneHref}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.phone}</span>${config.phoneDisplay}</a>
         </li>
         <li>
-          <p class="text-[11px] uppercase tracking-[0.18em] text-clay">${esc(t.emailLabel)}</p>
-          <a href="mailto:${config.email}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-gold-dark"><span class="text-gold-dark">${icons.mail}</span>${config.email}</a>
+          <p class="text-[11px] uppercase tracking-[0.18em] text-slate">${esc(t.emailLabel)}</p>
+          <a href="mailto:${config.email}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.mail}</span>${config.email}</a>
         </li>
         <li>
-          <p class="text-[11px] uppercase tracking-[0.18em] text-clay">${esc(t.whatsappLabel)}</p>
-          <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-gold-dark"><span class="text-gold-dark">${icons.whatsapp}</span>+${config.whatsapp}</a>
+          <p class="text-[11px] uppercase tracking-[0.18em] text-slate">${esc(t.whatsappLabel)}</p>
+          <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.whatsapp}</span>+${config.whatsapp}</a>
         </li>
       </ul>
     </div>
     <form id="contact-form" class="grid gap-6" novalidate>
-      <h2 class="font-display text-3xl font-light italic">${esc(t.form.title)}</h2>
+      <h2 class="font-display text-3xl font-medium">${esc(t.form.title)}</h2>
       <div class="grid gap-6 sm:grid-cols-2">
         <div class="flex flex-col gap-2">
-          <label for="cf-name" class="text-[11px] font-medium uppercase tracking-[0.18em] text-clay">${esc(t.form.name)}</label>
+          <label for="cf-name" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(t.form.name)}</label>
           <input id="cf-name" name="name" type="text" required autocomplete="name" class="${inputCls}">
         </div>
         <div class="flex flex-col gap-2">
-          <label for="cf-email" class="text-[11px] font-medium uppercase tracking-[0.18em] text-clay">${esc(t.form.emailField)}</label>
+          <label for="cf-email" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(t.form.emailField)}</label>
           <input id="cf-email" name="email" type="email" required autocomplete="email" class="${inputCls}">
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <label for="cf-message" class="text-[11px] font-medium uppercase tracking-[0.18em] text-clay">${esc(t.form.message)}</label>
-        <textarea id="cf-message" name="message" rows="6" required class="border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-gold-dark"></textarea>
+        <label for="cf-message" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(t.form.message)}</label>
+        <textarea id="cf-message" name="message" rows="6" required class="border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-sea-deep"></textarea>
       </div>
       <p id="cf-error" class="hidden text-sm text-red-700">${esc(t.form.error)}</p>
-      <p id="cf-success" class="hidden border border-gold-dark/40 bg-gold-pale/40 p-5 text-sm text-ink">${esc(xtra.contactForm.success)}</p>
-      <button type="submit" class="inline-flex h-13 w-fit items-center bg-ink px-10 text-xs font-medium uppercase tracking-[0.24em] text-cream transition-colors hover:bg-gold-dark" data-sending-label="${esc(t.form.sending)}">${esc(t.form.submit)}</button>
-      <p class="text-xs text-clay">${esc(xtra.contactForm.fallback)} <a href="mailto:${config.email}" class="text-gold-dark underline">${config.email}</a></p>
+      <p id="cf-success" class="hidden border border-sea-deep/40 bg-sea-pale/40 p-5 text-sm text-ink">${esc(xtra.contactForm.success)}</p>
+      <button type="submit" class="inline-flex h-13 w-fit items-center bg-ink px-10 text-xs font-medium uppercase tracking-[0.24em] text-mist transition-colors hover:bg-sea-deep" data-sending-label="${esc(t.form.sending)}">${esc(t.form.submit)}</button>
+      <p class="text-xs text-slate">${esc(xtra.contactForm.fallback)} <a href="mailto:${config.email}" class="text-sea-deep underline">${config.email}</a></p>
     </form>
   </div>
 </section>`
@@ -123,20 +122,20 @@ export function renderFaq(ctx) {
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-cream py-20 lg:py-28">
+<section class="bg-mist py-20 lg:py-28">
   <div class="mx-auto flex max-w-3xl flex-col gap-14 px-4 sm:px-6">
     ${t.sections
       .map(
         (section) => `
     <div>
-      <h2 class="font-display text-3xl font-light italic">${esc(section.title)}</h2>
+      <h2 class="font-display text-3xl font-medium">${esc(section.title)}</h2>
       <div class="mt-6 border-t border-ink/10">
         ${section.items
           .map(
             (item) => `
         <div class="border-b border-ink/10 py-6">
           <h3 class="text-sm font-medium">${esc(item.q)}</h3>
-          <p class="mt-3 text-sm leading-relaxed text-clay">${esc(item.a)}</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate">${esc(item.a)}</p>
         </div>`,
           )
           .join('')}
@@ -226,14 +225,14 @@ export function renderLegal(ctx, kind) {
 
   const body = `
 ${pageHero({ eyebrow: config.brand, title: t.title, subtitle: t.lastUpdated })}
-<section class="bg-cream py-20 lg:py-28">
+<section class="bg-mist py-20 lg:py-28">
   <div class="mx-auto flex max-w-3xl flex-col gap-10 px-4 sm:px-6">
     ${sections
       .map(
         ([h, p], i) => `
     <div class="border-t border-ink/10 pt-8">
-      <h2 class="font-display text-2xl font-light italic">${i + 1}. ${esc(h)}</h2>
-      <p class="mt-3 text-sm leading-relaxed text-clay">${esc(p)}</p>
+      <h2 class="font-display text-2xl font-medium">${i + 1}. ${esc(h)}</h2>
+      <p class="mt-3 text-sm leading-relaxed text-slate">${esc(p)}</p>
     </div>`,
       )
       .join('')}
@@ -254,15 +253,14 @@ export function render404(ctx) {
   const base = `/${lang}`
 
   const body = `
-<section class="relative flex min-h-[70vh] items-center bg-night text-white">
-  <div class="grain"></div>
+<section class="relative flex min-h-[70vh] items-center bg-navy text-white">
   <div class="relative mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
-    <p class="eyebrow text-gold">${esc(t.eyebrow)}</p>
-    <h1 class="mt-6 font-display text-5xl font-light italic sm:text-6xl">${esc(t.title)}</h1>
+    <p class="eyebrow text-sea">${esc(t.eyebrow)}</p>
+    <h1 class="mt-6 font-display text-5xl font-medium sm:text-6xl">${esc(t.title)}</h1>
     <p class="mt-6 text-sm leading-relaxed text-white/60">${esc(t.body)}</p>
     <div class="mt-10 flex flex-wrap justify-center gap-4">
       <a href="${base}/" class="inline-flex h-12 items-center border border-white/30 px-8 text-xs uppercase tracking-[0.24em] transition-colors hover:border-white">${esc(t.home)}</a>
-      <a href="${base}/book/" class="inline-flex h-12 items-center bg-gold px-8 text-xs uppercase tracking-[0.24em] text-night transition-colors hover:bg-gold-dark">${esc(t.book)}</a>
+      <a href="${base}/book/" class="inline-flex h-12 items-center bg-sea px-8 text-xs uppercase tracking-[0.24em] text-navy transition-colors hover:bg-sea-deep">${esc(t.book)}</a>
     </div>
   </div>
 </section>`

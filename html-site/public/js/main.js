@@ -44,7 +44,7 @@
   // Yazılan harflere göre listeyi filtreler; aksan/Türkçe karakter duyarsız eşleşir
   // ("catalkoy" → "Çatalköy"). Gizli input canonical değeri taşır, seçim değişince
   // wrapper üzerinden 'change' event'i yükselir.
-  var ACTIVE_CLS = 'bg-gold/15'
+  var ACTIVE_CLS = 'bg-sea/15'
 
   function normText(s) {
     return s
@@ -321,6 +321,8 @@
     var hotel = hotelRoot.locCombo
     var hotelWrap = document.getElementById('bf-hotel-wrap')
     var hotelError = document.getElementById('bf-hotel-error')
+    var address = document.getElementById('bf-address')
+    var addressWrap = document.getElementById('bf-address-wrap')
     var date = document.getElementById('bf-date')
     var time = document.getElementById('bf-time')
     var pax = document.getElementById('bf-pax')
@@ -399,6 +401,22 @@
       else hotelError.classList.add('hidden')
     }
 
+    // Şehir/bölge merkezi seçilince açık adres alanı açılır — şoför tam noktayı bilsin.
+    // Adres serbest metindir ve zorunlu değildir.
+    function regionSelected() {
+      return from.getGroup() === 'regions' || to.getGroup() === 'regions'
+    }
+
+    function addressValue() {
+      return regionSelected() ? address.value.trim() : ''
+    }
+
+    function toggleAddress() {
+      var need = regionSelected()
+      addressWrap.classList.toggle('hidden', !need)
+      addressWrap.classList.toggle('flex', need)
+    }
+
     function updateSummary() {
       var empty = document.getElementById('bf-summary-empty')
       var body = document.getElementById('bf-summary-body')
@@ -419,15 +437,18 @@
       updateSummary()
       toggleFlight()
       toggleHotel()
+      toggleAddress()
     })
     toRoot.addEventListener('change', function () {
       updateSummary()
       toggleHotel()
+      toggleAddress()
     })
     roundtrip.addEventListener('change', updateSummary)
     updateSummary()
     toggleFlight()
     toggleHotel()
+    toggleAddress()
 
     bookForm.addEventListener('submit', function (e) {
       e.preventDefault()
@@ -452,6 +473,7 @@
         from: from.getValue(),
         to: to.getValue(),
         hotel: hotelArea() ? hotelValue() : '',
+        address: addressValue(),
         flight: flight.value.trim(),
         date: date.value,
         time: time.value,
@@ -469,6 +491,7 @@
       var message = tmpl(cfg.waMessage, {
         route: routeText(),
         hotel: hotelArea() && hotelValue() ? tmpl(cfg.waHotel, { hotel: hotelValue() }) : '',
+        address: addressValue() ? tmpl(cfg.waAddress, { address: addressValue() }) : '',
         flight: flight.value.trim() ? tmpl(cfg.waFlight, { flight: flight.value.trim() }) : '',
         luggage: tmpl(cfg.waLuggage, { big: lugBig.value, small: lugSmall.value }),
         date: date.value,

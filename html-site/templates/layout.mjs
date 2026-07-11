@@ -28,35 +28,35 @@ function header(ctx) {
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="/${l}${path}" class="px-1.5 text-[11px] uppercase tracking-[0.18em] ${active ? 'text-gold' : 'text-white/45 hover:text-white'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
+      return `<a href="/${l}${path}" class="px-1.5 text-[11px] uppercase tracking-[0.18em] ${active ? 'text-sea' : 'text-white/45 hover:text-white'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
     })
     .join('<span class="text-white/20">·</span>')
 
   return `
-<header class="sticky top-0 z-50 border-b border-white/10 bg-night/95 backdrop-blur supports-[backdrop-filter]:bg-night/80">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80">
   <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-20">
-    <a href="${base}/" class="font-display text-2xl font-light italic tracking-wide text-white transition-opacity hover:opacity-75 lg:text-[1.7rem]">TheTaxsi</a>
+    <a href="${base}/" class="font-display text-2xl font-semibold tracking-tight text-white transition-opacity hover:opacity-75 lg:text-[1.7rem]">TheTaxsi</a>
     <nav class="hidden items-center gap-7 lg:flex">
       ${links.map((l) => `<a href="${l.href}" class="text-xs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-white">${esc(l.label)}</a>`).join('\n      ')}
     </nav>
     <div class="flex items-center gap-3 sm:gap-4">
-      <a href="tel:${config.phoneHref}" class="hidden items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-gold xl:flex">
+      <a href="tel:${config.phoneHref}" class="hidden items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-sea xl:flex">
         ${icons.phone}
         ${config.phoneDisplay}
       </a>
       <div class="flex items-center">${langLinks}</div>
-      <a href="${base}/book/" class="hidden h-11 items-center border border-gold px-5 text-[10px] font-medium uppercase tracking-[0.28em] text-gold transition-colors hover:bg-gold hover:text-night sm:inline-flex">${esc(dict.nav.reserve)}</a>
+      <a href="${base}/book/" class="hidden h-11 items-center border border-sea px-5 text-[10px] font-medium uppercase tracking-[0.28em] text-sea transition-colors hover:bg-sea hover:text-navy sm:inline-flex">${esc(dict.nav.reserve)}</a>
       <button type="button" data-menu-toggle class="text-white/60 transition-colors hover:text-white lg:hidden" aria-label="Toggle menu" aria-expanded="false">
         <span data-menu-icon-open>${icons.menu}</span>
         <span data-menu-icon-close class="hidden">${icons.x}</span>
       </button>
     </div>
   </div>
-  <div data-menu-panel class="hidden border-t border-white/10 bg-night/95 backdrop-blur lg:hidden">
+  <div data-menu-panel class="hidden border-t border-white/10 bg-navy/95 backdrop-blur lg:hidden">
     <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
       ${links.map((l) => `<a href="${l.href}" class="border-b border-white/5 py-4 text-sm uppercase tracking-[0.18em] text-white/65 transition-colors hover:text-white">${esc(l.label)}</a>`).join('\n      ')}
-      <a href="tel:${config.phoneHref}" class="mt-2 flex items-center gap-2 py-4 text-sm uppercase tracking-[0.18em] text-gold">${icons.phone} ${config.phoneDisplay}</a>
-      <a href="${base}/book/" class="mt-3 inline-flex h-12 items-center justify-center border border-gold px-6 text-xs font-medium uppercase tracking-[0.28em] text-gold transition-colors hover:bg-gold hover:text-night sm:hidden">${esc(dict.nav.reserve)}</a>
+      <a href="tel:${config.phoneHref}" class="mt-2 flex items-center gap-2 py-4 text-sm uppercase tracking-[0.18em] text-sea">${icons.phone} ${config.phoneDisplay}</a>
+      <a href="${base}/book/" class="mt-3 inline-flex h-12 items-center justify-center border border-sea px-6 text-xs font-medium uppercase tracking-[0.28em] text-sea transition-colors hover:bg-sea hover:text-navy sm:hidden">${esc(dict.nav.reserve)}</a>
     </nav>
   </div>
 </header>`
@@ -68,35 +68,34 @@ function footer(ctx) {
   const t = dict.footer
   const col = (heading, items) => `
       <div class="lg:col-span-2">
-        <p class="eyebrow text-gold">${esc(heading)}</p>
+        <p class="eyebrow text-sea">${esc(heading)}</p>
         <ul class="mt-6 flex flex-col gap-3">
           ${items.map((l) => `<li><a href="${l.href}" class="text-sm text-white/65 transition-colors hover:text-white">${esc(l.label)}</a></li>`).join('\n          ')}
         </ul>
       </div>`
 
   return `
-<footer class="relative border-t border-white/10 bg-night text-white">
-  <div class="grain opacity-[0.03]" aria-hidden="true"></div>
+<footer class="relative border-t border-white/10 bg-navy text-white">
   <div class="relative mx-auto max-w-7xl px-4 pt-20 pb-10 sm:px-6">
     <div class="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-12">
       <div class="col-span-2 lg:col-span-4">
-        <p class="font-display text-3xl font-light italic text-white">TheTaxsi</p>
+        <p class="font-display text-3xl font-semibold tracking-tight text-white">TheTaxsi</p>
         <p class="mt-3 text-sm text-white/45">${esc(t.tagline)}</p>
-        <span class="mt-6 block h-px w-12 bg-gold"></span>
+        <span class="mt-6 block h-px w-12 bg-sea"></span>
         <div class="mt-6 space-y-1 text-xs uppercase tracking-[0.18em] text-white/45">
           ${t.addressLines.map((line) => `<p>${esc(line)}</p>`).join('\n          ')}
         </div>
-        <p class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-gold/80">
-          <span class="size-1.5 rounded-full bg-gold"></span>
+        <p class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-sea/80">
+          <span class="size-1.5 rounded-full bg-sea"></span>
           ${esc(t.hours)}
         </p>
       </div>
       <div class="col-span-2 lg:col-span-3">
-        <p class="eyebrow text-gold">${esc(t.directHeading)}</p>
+        <p class="eyebrow text-sea">${esc(t.directHeading)}</p>
         <ul class="mt-6 flex flex-col gap-4">
-          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-gold/70 transition-colors group-hover:text-gold">${icons.phone}</span>${config.phoneDisplay}</a></li>
-          <li><a href="mailto:${config.email}" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-gold/70 transition-colors group-hover:text-gold">${icons.mail}</span>${config.email}</a></li>
-          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-gold/70 transition-colors group-hover:text-gold">${icons.whatsapp}</span>WhatsApp</a></li>
+          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>
+          <li><a href="mailto:${config.email}" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.mail}</span>${config.email}</a></li>
+          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.whatsapp}</span>WhatsApp</a></li>
         </ul>
       </div>
       ${col(t.serviceHeading, [
@@ -128,7 +127,7 @@ function footer(ctx) {
 }
 
 // path: dile göre değişmeyen sayfa yolu, örn. "/routes/larnaca-airport-to-nicosia/"
-export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-cream text-ink' }) {
+export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-mist text-ink' }) {
   const { lang } = ctx
   const url = `${config.siteUrl}/${lang}${path}`
   const alternates = config.languages
@@ -153,7 +152,7 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   ${jsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n  ')}
 </head>
