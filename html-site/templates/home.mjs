@@ -22,18 +22,43 @@ export function routeLabel(r, lang) {
   return `${r.from[lang]} → ${r.to[lang]}`
 }
 
+// Paylaşılan form-kontrol jetonları — sitedeki her filtre/alan aynı görünsün diye
+// tek kaynak. Açık zeminli formlar (book, contact) bunları kullanır; hero kendi
+// koyu bar stilini korur ama liste teması buradan gelir.
+export const lightInputCls =
+  'h-12 w-full border border-ink/15 bg-white px-4 text-sm text-ink outline-none transition-colors focus:border-sea-deep [color-scheme:light]'
+export const lightSelectCls = `${lightInputCls} [&>option]:bg-white [&>option]:text-ink`
+export const fieldLabelCls = 'text-[11px] font-medium uppercase tracking-[0.18em] text-slate'
+
+// Combobox'ın liste teması — açık zeminli formda açık, hero'da koyu görünür.
+const comboTheme = {
+  dark: {
+    list: 'border border-white/10 bg-navy-soft shadow-xl shadow-black/40 [color-scheme:dark]',
+    group: 'text-sea',
+    option: 'text-white/90 hover:bg-sea/15 hover:text-sea-pale',
+    empty: 'text-white/50',
+  },
+  light: {
+    list: 'border border-ink/10 bg-white shadow-xl shadow-ink/10 [color-scheme:light]',
+    group: 'text-sea-deep',
+    option: 'text-ink hover:bg-sea/10 hover:text-sea-deep',
+    empty: 'text-slate',
+  },
+}
+
 // Filtrelenen combobox kabuğu — main.js'teki [data-loc-combo] init'i ile çalışır.
 // Gizli input canonical değeri taşır; görünen input sadece arama/etiket içindir.
 // `groups`: [{ id, label, options: [{ value, label }] }]
-function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults }) {
+function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults, theme = 'dark' }) {
+  const th = comboTheme[theme] || comboTheme.dark
   const groupsHtml = groups
     .map(
       (g) => `<div data-combo-group="${esc(g.id)}">
-        <p class="px-4 pt-3 pb-1 text-[10px] font-medium uppercase tracking-[0.18em] text-sea">${esc(g.label)}</p>
+        <p class="px-4 pt-3 pb-1 text-[10px] font-medium uppercase tracking-[0.18em] ${th.group}">${esc(g.label)}</p>
         ${g.options
           .map(
             (o) =>
-              `<button type="button" data-combo-option data-value="${esc(o.value)}" data-group="${esc(g.id)}" class="block w-full px-4 py-2 text-left text-sm text-white/90 transition-colors hover:bg-sea/15 hover:text-sea-pale">${esc(o.label)}</button>`,
+              `<button type="button" data-combo-option data-value="${esc(o.value)}" data-group="${esc(g.id)}" class="block w-full px-4 py-2 text-left text-sm transition-colors ${th.option}">${esc(o.label)}</button>`,
           )
           .join('\n        ')}
       </div>`,
@@ -43,9 +68,9 @@ function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults }) {
   return `<div class="relative" data-loc-combo>
       <input type="hidden" name="${name}">
       <input id="${id}" type="text" role="combobox" aria-expanded="false" aria-autocomplete="list" autocomplete="off" placeholder="${esc(placeholder)}" class="${inputCls}">
-      <div data-combo-list class="absolute inset-x-0 top-full z-30 mt-2 hidden max-h-56 min-w-full overflow-y-auto border border-white/10 bg-navy-soft pb-2 shadow-xl shadow-black/40 [color-scheme:dark]" role="listbox">
+      <div data-combo-list class="absolute inset-x-0 top-full z-30 mt-2 hidden max-h-56 min-w-full overflow-y-auto pb-2 ${th.list}" role="listbox">
       ${groupsHtml}
-      <p data-combo-empty class="hidden px-4 py-3 text-sm text-white/50">${esc(noResults)}</p>
+      <p data-combo-empty class="hidden px-4 py-3 text-sm ${th.empty}">${esc(noResults)}</p>
       </div>
     </div>`
 }

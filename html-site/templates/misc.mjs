@@ -1,13 +1,14 @@
 import { esc, icons, page } from './layout.mjs'
 import { config } from '../site.config.mjs'
+import { fieldLabelCls, lightInputCls } from './home.mjs'
 
 function pageHero({ eyebrow, title, subtitle }) {
   return `
-<section class="relative bg-navy py-24 text-white lg:py-32">
+<section class="relative bg-navy py-16 text-white lg:py-20">
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
     <p class="eyebrow text-sea">${esc(eyebrow)}</p>
-    <h1 class="mt-4 font-display text-5xl font-medium sm:text-6xl">${esc(title)}</h1>
-    ${subtitle ? `<p class="mt-6 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
+    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(title)}</h1>
+    ${subtitle ? `<p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
   </div>
 </section>`
 }
@@ -17,27 +18,31 @@ export function renderAbout(ctx) {
   const t = dict.about
   const base = `/${lang}`
 
+  const chapters = [t.story, t.mission]
+
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 <section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto grid max-w-5xl gap-16 px-4 sm:px-6">
-    <div class="grid gap-12 md:grid-cols-2">
-      <div>
-        <h2 class="font-display text-3xl font-medium">${esc(t.story.title)}</h2>
-        <p class="mt-5 text-sm leading-relaxed text-slate">${esc(t.story.body)}</p>
+  <div class="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6">
+    ${chapters
+      .map(
+        (c, i) => `
+    <div class="grid gap-4 border-t border-ink/15 pt-8 lg:grid-cols-[minmax(0,240px)_1fr] lg:gap-16">
+      <div class="flex items-baseline gap-4">
+        <span class="kicker text-2xl text-sea-deep">0${i + 1}</span>
+        <h2 class="font-display text-3xl font-medium">${esc(c.title)}</h2>
       </div>
-      <div>
-        <h2 class="font-display text-3xl font-medium">${esc(t.mission.title)}</h2>
-        <p class="mt-5 text-sm leading-relaxed text-slate">${esc(t.mission.body)}</p>
-      </div>
-    </div>
-    <div>
+      <p class="max-w-2xl text-base leading-relaxed text-slate">${esc(c.body)}</p>
+    </div>`,
+      )
+      .join('')}
+    <div class="border-t border-ink/15 pt-8">
       <h2 class="font-display text-3xl font-medium">${esc(t.values.title)}</h2>
-      <div class="mt-10 grid gap-10 md:grid-cols-3">
+      <div class="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-3">
         ${t.values.items
           .map(
             (v, i) => `
-        <div class="border-t border-ink/15 pt-6">
+        <div class="border-t border-sea-deep/30 pt-6">
           <p class="kicker text-2xl text-sea-deep">0${i + 1}</p>
           <h3 class="mt-3 text-sm font-medium uppercase tracking-[0.14em]">${esc(v.title)}</h3>
           <p class="mt-2 text-sm leading-relaxed text-slate">${esc(v.desc)}</p>
@@ -46,7 +51,10 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
           .join('')}
       </div>
     </div>
-    <a href="${base}/book/" class="inline-flex h-13 w-fit items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
+    <div class="flex flex-wrap items-center justify-between gap-6 border-t border-ink/15 pt-10">
+      <p class="eyebrow text-sea-deep">${esc(config.brand)}</p>
+      <a href="${base}/book/" class="inline-flex h-13 items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
+    </div>
   </div>
 </section>`
 
@@ -61,44 +69,53 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 export function renderContact(ctx) {
   const { lang, dict, xtra } = ctx
   const t = dict.contact
-  const inputCls = 'h-12 border border-ink/15 bg-white px-4 text-sm outline-none transition-colors focus:border-sea-deep'
+  const ft = dict.footer
+  const inputCls = lightInputCls
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 <section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto grid max-w-6xl gap-16 px-4 sm:px-6 lg:grid-cols-[380px_1fr]">
-    <div>
-      <p class="eyebrow text-sea-deep">${esc(t.directHeading)}</p>
-      <ul class="mt-8 flex flex-col gap-6 text-sm">
-        <li>
-          <p class="text-[11px] uppercase tracking-[0.18em] text-slate">${esc(t.phoneLabel)}</p>
-          <a href="tel:${config.phoneHref}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.phone}</span>${config.phoneDisplay}</a>
-        </li>
-        <li>
-          <p class="text-[11px] uppercase tracking-[0.18em] text-slate">${esc(t.emailLabel)}</p>
-          <a href="mailto:${config.email}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.mail}</span>${config.email}</a>
-        </li>
-        <li>
-          <p class="text-[11px] uppercase tracking-[0.18em] text-slate">${esc(t.whatsappLabel)}</p>
-          <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.whatsapp}</span>+${config.whatsapp}</a>
-        </li>
-      </ul>
+  <div class="mx-auto grid max-w-6xl gap-16 px-4 sm:px-6 lg:grid-cols-[minmax(0,340px)_1fr]">
+    <div class="flex flex-col gap-10">
+      <div>
+        <p class="eyebrow text-sea-deep">${esc(t.directHeading)}</p>
+        <ul class="mt-8 flex flex-col gap-6 text-sm">
+          <li>
+            <p class="${fieldLabelCls}">${esc(t.phoneLabel)}</p>
+            <a href="tel:${config.phoneHref}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.phone}</span>${config.phoneDisplay}</a>
+          </li>
+          <li>
+            <p class="${fieldLabelCls}">${esc(t.emailLabel)}</p>
+            <a href="mailto:${config.email}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.mail}</span>${config.email}</a>
+          </li>
+          <li>
+            <p class="${fieldLabelCls}">${esc(t.whatsappLabel)}</p>
+            <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.whatsapp}</span>+${config.whatsapp}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="border-t border-ink/10 pt-8">
+        <p class="${fieldLabelCls} text-sea-deep">${esc(ft.hours)}</p>
+        <div class="mt-4 space-y-1 text-sm text-slate">
+          ${ft.addressLines.map((line) => `<p>${esc(line)}</p>`).join('\n          ')}
+        </div>
+      </div>
     </div>
-    <form id="contact-form" class="grid gap-6" novalidate>
+    <form id="contact-form" class="flex flex-col gap-6" novalidate>
       <h2 class="font-display text-3xl font-medium">${esc(t.form.title)}</h2>
       <div class="grid gap-6 sm:grid-cols-2">
         <div class="flex flex-col gap-2">
-          <label for="cf-name" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(t.form.name)}</label>
+          <label for="cf-name" class="${fieldLabelCls}">${esc(t.form.name)}</label>
           <input id="cf-name" name="name" type="text" required autocomplete="name" class="${inputCls}">
         </div>
         <div class="flex flex-col gap-2">
-          <label for="cf-email" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(t.form.emailField)}</label>
+          <label for="cf-email" class="${fieldLabelCls}">${esc(t.form.emailField)}</label>
           <input id="cf-email" name="email" type="email" required autocomplete="email" class="${inputCls}">
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <label for="cf-message" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(t.form.message)}</label>
-        <textarea id="cf-message" name="message" rows="6" required class="border border-ink/15 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-sea-deep"></textarea>
+        <label for="cf-message" class="${fieldLabelCls}">${esc(t.form.message)}</label>
+        <textarea id="cf-message" name="message" rows="8" required class="w-full border border-ink/15 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sea-deep [color-scheme:light]"></textarea>
       </div>
       <p id="cf-error" class="hidden text-sm text-red-700">${esc(t.form.error)}</p>
       <p id="cf-success" class="hidden border border-sea-deep/40 bg-sea-pale/40 p-5 text-sm text-ink">${esc(xtra.contactForm.success)}</p>

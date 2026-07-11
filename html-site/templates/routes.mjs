@@ -5,11 +5,11 @@ import { routeLabel } from './home.mjs'
 
 function pageHero({ eyebrow, title, subtitle }) {
   return `
-<section class="relative bg-navy py-24 text-white lg:py-32">
+<section class="relative bg-navy py-16 text-white lg:py-20">
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
     <p class="eyebrow text-sea">${esc(eyebrow)}</p>
-    <h1 class="mt-4 font-display text-5xl font-medium sm:text-6xl">${esc(title)}</h1>
-    ${subtitle ? `<p class="mt-6 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
+    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(title)}</h1>
+    ${subtitle ? `<p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
   </div>
 </section>`
 }
@@ -31,7 +31,7 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
         <p class="text-sm font-medium leading-snug">${esc(routeLabel(r, lang))}</p>
         <p class="text-sm"><span class="mr-2 text-[10px] uppercase tracking-[0.18em] text-slate">${esc(t.oneWay)}</span><span class="kicker text-2xl text-sea-deep">€${r.price}</span></p>
         <p class="text-sm"><span class="mr-2 text-[10px] uppercase tracking-[0.18em] text-slate">${esc(t.roundTrip)}</span><span class="kicker text-2xl text-sea-deep">€${r.roundTrip}</span></p>
-        <span class="text-xs uppercase tracking-[0.2em] text-sea-deep opacity-0 transition-opacity group-hover:opacity-100">${esc(t.bookRoute)} →</span>
+        <span class="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap bg-sea px-6 text-xs font-medium uppercase tracking-[0.2em] text-navy transition-colors group-hover:bg-sea-deep group-hover:text-white">${esc(t.bookRoute)} →</span>
       </a>`,
         )
         .join('')}

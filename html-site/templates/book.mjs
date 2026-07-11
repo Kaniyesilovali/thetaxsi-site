@@ -1,47 +1,59 @@
-import { esc, page } from './layout.mjs'
+import { esc, icons, page } from './layout.mjs'
 import { config } from '../site.config.mjs'
-import { hotelComboboxHtml, journeyHintHtml, locationComboboxHtml } from './home.mjs'
+import {
+  fieldLabelCls,
+  hotelComboboxHtml,
+  journeyHintHtml,
+  lightInputCls,
+  lightSelectCls,
+  locationComboboxHtml,
+} from './home.mjs'
 
 export function renderBook(ctx) {
   const { lang, dict, xtra } = ctx
   const t = dict.book
   const f = xtra.bookForm
+  const rd = xtra.routeDetail
   const picker = dict.homepage.hero.picker
 
   const field = (inner) => `<div class="flex flex-col gap-2">${inner}</div>`
-  const label = (forId, text) => `<label for="${forId}" class="text-[11px] font-medium uppercase tracking-[0.18em] text-slate">${esc(text)}</label>`
-  const inputCls = 'h-12 border border-ink/15 bg-white px-4 text-sm outline-none transition-colors focus:border-sea-deep'
-  // Açılır listeler markanın gece/altın panelini kullanır (guests menüsüyle aynı görünüm)
-  const selectCls = `${inputCls} [&>option]:bg-navy-soft [&>option]:text-white`
+  const label = (forId, text) => `<label for="${forId}" class="${fieldLabelCls}">${esc(text)}</label>`
+  // Tüm alanlar tek kontrol sistemini paylaşır: beyaz kutu, ince çizgi, deniz odağı,
+  // açık liste/seçici. Hero'daki koyu barla değil, kendi açık zeminiyle uyumlu.
+  const inputCls = lightInputCls
+  const selectCls = lightSelectCls
 
   const fromCombo = locationComboboxHtml(lang, {
     id: 'bf-from',
     name: 'from',
     placeholder: picker.selectFrom,
-    inputCls: `w-full ${inputCls}`,
+    inputCls,
     noResults: picker.noResults,
+    theme: 'light',
   })
   const toCombo = locationComboboxHtml(lang, {
     id: 'bf-to',
     name: 'to',
     placeholder: picker.selectTo,
-    inputCls: `w-full ${inputCls}`,
+    inputCls,
     noResults: picker.noResults,
+    theme: 'light',
   })
   const hotelCombo = hotelComboboxHtml(lang, {
     id: 'bf-hotel',
     name: 'hotel',
     placeholder: f.hotelPlaceholder,
-    inputCls: `w-full ${inputCls}`,
+    inputCls,
     noResults: picker.noResults,
+    theme: 'light',
   })
 
   const body = `
-<section class="relative bg-navy py-20 text-white lg:py-24">
+<section class="relative bg-navy py-16 text-white lg:py-20">
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
     <p class="eyebrow text-sea">${esc(t.hero.eyebrow)}</p>
-    <h1 class="mt-4 font-display text-5xl font-medium sm:text-6xl">${esc(t.hero.title)}</h1>
-    <p class="mt-6 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(t.hero.subtitle)}</p>
+    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(t.hero.title)}</h1>
+    <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(t.hero.subtitle)}</p>
   </div>
 </section>
 
@@ -112,7 +124,7 @@ export function renderBook(ctx) {
         </div>
         <label class="flex items-center justify-between gap-4 border border-ink/15 bg-white px-4 py-3">
           <span class="block text-sm font-medium">${esc(f.childSeatLabel)}</span>
-          <select id="bf-childseat" name="childseat" class="h-9 border border-ink/15 bg-white px-2 text-sm outline-none transition-colors focus:border-sea-deep [&>option]:bg-navy-soft [&>option]:text-white">
+          <select id="bf-childseat" name="childseat" class="h-10 w-16 border border-ink/15 bg-white px-2 text-sm text-ink outline-none transition-colors focus:border-sea-deep [color-scheme:light] [&>option]:bg-white [&>option]:text-ink">
             ${[0, 1, 2, 3, 4].map((n) => `<option value="${n}">${n}</option>`).join('')}
           </select>
         </label>
@@ -145,6 +157,20 @@ export function renderBook(ctx) {
           </div>
           <p class="text-xs">${esc(t.summary.confirmationNote)}</p>
         </div>
+      </div>
+      <div class="mt-8 border-t border-ink/10 pt-6">
+        <p class="text-xs uppercase tracking-[0.18em] text-slate">${esc(rd.includedTitle)}</p>
+        <ul class="mt-4 flex flex-col gap-3 text-sm text-slate">
+          ${rd.included
+            .map(
+              (item) => `
+          <li class="flex items-start gap-2.5">
+            <span class="mt-0.5 text-sea-deep">${icons.check}</span>
+            <span>${esc(item)}</span>
+          </li>`,
+            )
+            .join('')}
+        </ul>
       </div>
       <div class="mt-8 border-t border-ink/10 pt-6 text-sm">
         <p class="text-xs uppercase tracking-[0.18em] text-slate">${esc(f.orCall)}</p>
