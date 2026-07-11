@@ -31,15 +31,15 @@ export function renderBlogIndex(ctx) {
 </section>
 <section class="bg-mist py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="grid gap-6 sm:grid-cols-2">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       ${sortedPosts()
         .map(
           (p) => `
-      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-3 border border-ink/10 bg-white p-7 transition-colors hover:border-sea-deep/40">
-        <p class="text-[11px] uppercase tracking-[0.2em] text-slate">${esc(formatDate(p.date, lang))}</p>
-        <h2 class="font-display text-2xl font-medium leading-snug transition-colors group-hover:text-sea-deep">${esc(p.title[lang])}</h2>
-        <p class="line-clamp-3 text-sm leading-relaxed text-slate">${esc(p.description[lang])}</p>
-        <span class="mt-auto pt-3 text-xs uppercase tracking-[0.2em] text-sea-deep opacity-70 transition-opacity group-hover:opacity-100">${esc(t.readMore)} →</span>
+      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-2.5 border border-ink/10 bg-white p-5 transition-colors hover:border-sea-deep/40">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-slate">${esc(formatDate(p.date, lang))}</p>
+        <h2 class="font-display text-lg font-medium leading-snug transition-colors group-hover:text-sea-deep">${esc(p.title[lang])}</h2>
+        <p class="line-clamp-3 text-[13px] leading-relaxed text-slate">${esc(p.description[lang])}</p>
+        <span class="mt-auto pt-3 text-[10px] uppercase tracking-[0.2em] text-sea-deep opacity-70 transition-opacity group-hover:opacity-100">${esc(t.readMore)} →</span>
       </a>`,
         )
         .join('')}
