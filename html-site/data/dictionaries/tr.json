@@ -30,12 +30,12 @@
         "selectFrom": "Kalkış noktası",
         "selectTo": "Varış noktası",
         "noResults": "Sonuç bulunamadı",
-        "modes": {
+        "trip": {
           "aria": "Yolculuk türü",
-          "airportToHotel": "Havalimanı → Otel",
-          "airportToCenter": "Havalimanı → Şehir Merkezi",
-          "toAirport": "Havalimanına Dönüş"
-        }
+          "oneWay": "Tek yön",
+          "roundTrip": "Gidiş-dönüş"
+        },
+        "hint": "Havalimanı, otel ya da herhangi bir şehir merkezi — Kıbrıs'ın her noktasından her noktasına."
       }
     },
     "trust": {

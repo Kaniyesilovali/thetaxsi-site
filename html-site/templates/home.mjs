@@ -5,8 +5,8 @@ import { locationGroups } from '../data/locations.mjs'
 
 const photo = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`
 const pexels = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
-// Kapısı açık bekleyen siyah V-Class — Pexels, ücretsiz ticari lisans
-export const heroPhoto = pexels(17455633, 1920)
+// Girne (Kyrenia) limanı — tarihi kale surları ve derin Akdeniz. Pexels, ücretsiz ticari lisans.
+export const heroPhoto = pexels(16531858, 1920)
 // Sırayla: E200/E220, E220d/E300, Vito, V-Class VIP, Sprinter — dict fleet.items ile aynı sıra
 const fleetPhotos = [
   pexels(26690693, 900),
@@ -77,28 +77,37 @@ export function hotelComboboxHtml(lang, opts) {
   return comboboxHtml(groups, opts)
 }
 
-// Yolculuk türü sekmeleri — hero ve book formu paylaşır. Seçilen moda göre
-// Nereden/Nereye listeleri main.js'teki [data-mode-tabs] init'i ile filtrelenir.
-// Gizli "mode" input'u seçimi /book/ sayfasına GET ile taşır.
-export function modeSelectorHtml(picker, { variant }) {
-  const btnCls =
-    variant === 'dark'
-      ? 'border-b-2 border-transparent pb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-white/50 transition-colors hover:text-white aria-pressed:border-sea aria-pressed:text-sea'
-      : 'border-b-2 border-transparent pb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-slate transition-colors hover:text-ink aria-pressed:border-sea-deep aria-pressed:text-ink'
-  const modes = [
-    ['airport-hotel', picker.modes.airportToHotel],
-    ['airport-center', picker.modes.airportToCenter],
-    ['to-airport', picker.modes.toAirport],
+// Noktadan noktaya ipucu satırı — Nereden/Nereye alanlarının her Kıbrıs noktasını
+// (havalimanı, otel, şehir merkezi) kabul ettiğini anlatır. Hero ve book formu paylaşır.
+export function journeyHintHtml(picker, { tone } = {}) {
+  const cls = tone === 'light' ? 'text-slate' : 'text-white/45'
+  return `<p class="text-[11px] leading-relaxed ${cls}">${esc(picker.hint)}</p>`
+}
+
+// Tek yön / gidiş-dönüş radyo satırı — hero search kartında. Seçim GET ile /book/
+// sayfasına "roundtrip" olarak taşınır; tek yön boş değer, gidiş-dönüş "yes".
+// Boş değer book formundaki checkbox'ı işaretsiz, "yes" işaretli bırakır.
+export function tripTypeHtml(picker) {
+  const t = picker.trip
+  const opts = [
+    ['', t.oneWay, true],
+    ['yes', t.roundTrip, false],
   ]
-  return `<div data-mode-tabs role="group" aria-label="${esc(picker.modes.aria)}" class="flex flex-wrap gap-x-6 gap-y-2">
-      ${modes
+  return `<fieldset data-trip-type class="flex flex-wrap items-center gap-x-6 gap-y-2">
+      <legend class="sr-only">${esc(t.aria)}</legend>
+      ${opts
         .map(
-          ([id, label], i) =>
-            `<button type="button" data-mode="${id}" aria-pressed="${i === 0}" class="${btnCls}">${esc(label)}</button>`,
+          ([value, label, checked]) =>
+            `<label class="inline-flex cursor-pointer items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-white/55">
+        <input type="radio" name="roundtrip" value="${value}"${checked ? ' checked' : ''} class="peer sr-only">
+        <span class="grid size-4 place-items-center rounded-full border border-white/30 transition-colors peer-checked:border-sea peer-checked:bg-sea peer-focus-visible:ring-2 peer-focus-visible:ring-sea/60">
+          <span class="size-1.5 rounded-full bg-white opacity-0 transition-opacity peer-checked:opacity-100"></span>
+        </span>
+        <span class="transition-colors peer-checked:text-white">${esc(label)}</span>
+      </label>`,
         )
         .join('\n      ')}
-    </div>
-    <input type="hidden" name="mode" value="airport-hotel">`
+    </fieldset>`
 }
 
 export function renderHome(ctx) {
@@ -139,30 +148,33 @@ export function renderHome(ctx) {
     </div>
     <div class="relative opacity-0" style="animation:reveal 1100ms 480ms cubic-bezier(.16,1,.3,1) forwards">
       <div class="mb-8 h-px w-24 origin-left bg-sea" style="animation:scale-x 800ms 760ms ease-out both"></div>
-      <form action="${base}/book/" method="get">
-        <div class="mb-6">
-          ${modeSelectorHtml(t.hero.picker, { variant: 'dark' })}
-        </div>
-        <div class="grid gap-px border border-white/15 bg-white/10 backdrop-blur sm:grid-cols-2 lg:grid-cols-[1.4fr_1.4fr_1fr_1fr_auto]">
-        <div class="flex flex-col gap-1 bg-navy/80 px-5 py-4">
-          <label for="hp-from" class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.from)}</label>
-          ${fromCombo}
-        </div>
-        <div class="flex flex-col gap-1 bg-navy/80 px-5 py-4">
-          <label for="hp-to" class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.to)}</label>
-          ${toCombo}
-        </div>
-        <label class="flex flex-col gap-1 bg-navy/80 px-5 py-4">
-          <span class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.date)}</span>
-          <input type="date" name="date" class="bg-transparent text-sm text-white outline-none [color-scheme:dark]">
-        </label>
-        <label class="flex flex-col gap-1 bg-navy/80 px-5 py-4">
-          <span class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.passengers)}</span>
-          <select name="pax" class="bg-transparent text-sm text-white outline-none [color-scheme:dark] [&>option]:bg-navy-soft [&>option]:text-white">
-            ${[1, 2, 3, 4, 5, 6, 7].map((n) => `<option value="${n}">${n} ${n === 1 ? esc(t.hero.picker.passengerSingle) : esc(t.hero.picker.passengerPlural)}</option>`).join('')}
-          </select>
-        </label>
-        <button type="submit" class="flex items-center justify-center bg-sea px-8 py-4 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.hero.picker.submit)}</button>
+      <form action="${base}/book/" method="get" class="max-w-4xl">
+        <div class="border border-white/15 bg-navy/85 backdrop-blur">
+          <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-b border-white/10 px-5 py-4">
+            ${tripTypeHtml(t.hero.picker)}
+            ${journeyHintHtml(t.hero.picker)}
+          </div>
+          <div class="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1.4fr_1fr_1fr_auto]">
+          <div class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
+            <label for="hp-from" class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.from)}</label>
+            ${fromCombo}
+          </div>
+          <div class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
+            <label for="hp-to" class="flex items-center gap-1.5 eyebrow text-[9px] text-sea"><span aria-hidden="true">→</span>${esc(t.hero.picker.to)}</label>
+            ${toCombo}
+          </div>
+          <label class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
+            <span class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.date)}</span>
+            <input type="date" name="date" class="bg-transparent text-sm text-white outline-none [color-scheme:dark]">
+          </label>
+          <label class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
+            <span class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.passengers)}</span>
+            <select name="pax" class="bg-transparent text-sm text-white outline-none [color-scheme:dark] [&>option]:bg-navy-soft [&>option]:text-white">
+              ${[1, 2, 3, 4, 5, 6, 7].map((n) => `<option value="${n}">${n} ${n === 1 ? esc(t.hero.picker.passengerSingle) : esc(t.hero.picker.passengerPlural)}</option>`).join('')}
+            </select>
+          </label>
+          <button type="submit" class="flex items-center justify-center bg-sea px-8 py-4 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.hero.picker.submit)}</button>
+          </div>
         </div>
       </form>
     </div>

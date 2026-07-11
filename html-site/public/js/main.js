@@ -248,63 +248,31 @@
   var comboRoots = [].slice.call(document.querySelectorAll('[data-loc-combo]'))
   comboRoots.forEach(initLocCombo)
 
-  /* ---------- Yolculuk türü sekmeleri ---------- */
-  // Seçilen moda göre Nereden/Nereye combobox'larının grupları daraltılır.
-  var MODE_GROUPS = {
-    'airport-hotel': { from: ['airports'], to: ['hotels'] },
-    'airport-center': { from: ['airports'], to: ['regions'] },
-    'to-airport': { from: ['hotels', 'regions'], to: ['airports'] },
-  }
+  /* ---------- Noktadan noktaya form akışı ---------- */
+  // Nereden/Nereye artık serbesttir: her iki alan da tüm grupları (havalimanı, otel,
+  // şehir merkezi) listeler, böylece merkezden merkeze dahil her rota kurulabilir.
+  // Tek yardım: kalkış seçilince varış listesi kendiliğinden açılır.
+  function initJourneyForm(form) {
+    var fromField = form.querySelector('input[name="from"]')
+    var toField = form.querySelector('input[name="to"]')
+    if (!fromField || !toField) return
+    var fromCombo = fromField.closest('[data-loc-combo]')
+    var toCombo = toField.closest('[data-loc-combo]')
+    if (!fromCombo || !toCombo) return
 
-  function initModeTabs(tabs) {
-    var form = tabs.closest('form')
-    var modeInput = form.querySelector('input[name="mode"]')
-    var fromCombo = form.querySelector('input[name="from"]').closest('[data-loc-combo]')
-    var toCombo = form.querySelector('input[name="to"]').closest('[data-loc-combo]')
-    var buttons = [].slice.call(tabs.querySelectorAll('[data-mode]'))
-
-    function apply(mode) {
-      var conf = MODE_GROUPS[mode]
-      if (!conf) return
-      modeInput.value = mode
-      buttons.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.getAttribute('data-mode') === mode))
-      })
-      fromCombo.locCombo.setGroups(conf.from)
-      toCombo.locCombo.setGroups(conf.to)
-    }
-
-    function focusCombo(combo) {
-      // Ertelenir: aynı tıklamanın document'a ulaşan "dışarı tıklama" dinleyicisi
-      // yeni açılan listeyi kapatmasın
-      setTimeout(function () {
-        combo.querySelector('input[type="text"]').focus()
-      }, 0)
-    }
-
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () {
-        apply(b.getAttribute('data-mode'))
-        // Sekme seçilince sıradaki boş alanın seçenekleri aşağı açılsın
-        if (!fromCombo.locCombo.getValue()) focusCombo(fromCombo)
-        else if (!toCombo.locCombo.getValue()) focusCombo(toCombo)
-      })
-    })
-
-    // Kalkış seçilince varış listesi kendiliğinden açılsın (sadece kullanıcı
-    // etkileşiminde — URL prefill'inde odak combobox'ta olmaz)
     fromCombo.addEventListener('change', function () {
+      // Kalkış seçilince ve varış boşken varış listesini aç (yalnızca kullanıcı
+      // etkileşiminde — URL prefill'inde odak combobox'ta olmaz)
       if (fromCombo.locCombo.getValue() && !toCombo.locCombo.getValue() && fromCombo.contains(document.activeElement)) {
-        focusCombo(toCombo)
+        // Ertelenir: aynı tıklamanın "dışarı tıklama" dinleyicisi listeyi kapatmasın
+        setTimeout(function () {
+          toCombo.querySelector('input[type="text"]').focus()
+        }, 0)
       }
     })
-
-    apply(modeInput.value)
-    tabs.modeTabs = { apply: apply }
   }
 
-  var modeTabRoots = [].slice.call(document.querySelectorAll('[data-mode-tabs]'))
-  modeTabRoots.forEach(initModeTabs)
+  ;[].slice.call(document.querySelectorAll('form')).forEach(initJourneyForm)
 
   /* ---------- Rezervasyon formu ---------- */
   var bookForm = document.getElementById('booking-form')
@@ -329,40 +297,43 @@
     var lugBig = document.getElementById('bf-lugbig')
     var lugSmall = document.getElementById('bf-lugsmall')
     var roundtrip = document.getElementById('bf-roundtrip')
+    var returnWrap = document.getElementById('bf-return-wrap')
+    var returnDate = document.getElementById('bf-return-date')
+    var returnTime = document.getElementById('bf-return-time')
     var childseat = document.getElementById('bf-childseat')
     var name = document.getElementById('bf-name')
     var phone = document.getElementById('bf-phone')
     var notes = document.getElementById('bf-notes')
 
-    var modeTabs = bookForm.querySelector('[data-mode-tabs]')
-    var modeInput = bookForm.querySelector('input[name="mode"]')
-
-    // Bir değerin ait olduğu grubu combobox seçeneklerinden bul (izinli grup filtresinden bağımsız)
-    function valueGroup(root, value) {
-      var opts = root.querySelectorAll('[data-combo-option]')
-      for (var i = 0; i < opts.length; i++) {
-        if (opts[i].getAttribute('data-value') === value) return opts[i].getAttribute('data-group')
-      }
-      return ''
+    // Kaydedilen "mode" artık seçilen uçların gruplarından türetilir (havalimanı/otel/
+    // bölge) — sabit bir sekme değil. Ops ekibi rota türünü yine görebilsin diye tutulur.
+    function journeyMode() {
+      return (from.getGroup() || 'other') + '>' + (to.getGroup() || 'other')
     }
 
-    // URL parametrelerinden ön doldurma (hero picker ve rota landing CTA'ları buraya yönlendirir).
-    // Önce mod uygulanır ki from/to değerleri izinli gruplara göre yerleşsin; mod parametresi
-    // yoksa varış noktasının grubundan çıkarılır (rota linkleri yalnızca from/to taşır).
+    // URL parametrelerinden ön doldurma (hero picker ve rota landing CTA'ları buraya
+    // yönlendirir). Nereden/Nereye serbest olduğundan mod uygulamaya gerek yok.
     var params = new URLSearchParams(location.search)
-    var pMode = params.get('mode')
-    if (!MODE_GROUPS[pMode]) {
-      var toGroup = valueGroup(toRoot, params.get('to') || '')
-      pMode = toGroup === 'airports' ? 'to-airport' : toGroup === 'regions' ? 'airport-center' : 'airport-hotel'
-    }
-    if (modeTabs) modeTabs.modeTabs.apply(pMode)
     if (params.get('from')) from.setValue(params.get('from'))
     if (params.get('to')) to.setValue(params.get('to'))
     if (params.get('date')) date.value = params.get('date')
     if (params.get('pax')) pax.value = params.get('pax')
+    // Hero search kartındaki tek yön/gidiş-dönüş seçimi (tek yön boş değer taşır)
+    if (params.get('roundtrip')) roundtrip.checked = true
 
     // Geçmiş tarih seçilmesin
     date.min = new Date().toISOString().slice(0, 10)
+    returnDate.min = date.min
+
+    // Gidiş-dönüş seçilince dönüş tarih/saat alanları açılır ve dönüş tarihi zorunlu olur
+    function toggleReturn() {
+      var need = roundtrip.checked
+      returnWrap.classList.toggle('hidden', !need)
+      returnWrap.classList.toggle('grid', need)
+      returnDate.required = need
+      // Dönüş, gidişten önce olamaz
+      if (need && date.value) returnDate.min = date.value
+    }
 
     function routeText() {
       return from.getLabel() + ' → ' + to.getLabel()
@@ -430,7 +401,9 @@
       body.classList.remove('hidden')
       body.classList.add('flex')
       document.getElementById('bf-summary-route').textContent = routeText()
-      document.getElementById('bf-summary-trip-label').textContent = roundtrip.checked ? cfg.returnLabel : cfg.oneWayLabel
+      var tripLabel = roundtrip.checked ? cfg.returnLabel : cfg.oneWayLabel
+      if (roundtrip.checked && returnDate.value) tripLabel += ' · ' + returnDate.value + (returnTime.value ? ' ' + returnTime.value : '')
+      document.getElementById('bf-summary-trip-label').textContent = tripLabel
     }
 
     fromRoot.addEventListener('change', function () {
@@ -444,8 +417,17 @@
       toggleHotel()
       toggleAddress()
     })
-    roundtrip.addEventListener('change', updateSummary)
+    roundtrip.addEventListener('change', function () {
+      toggleReturn()
+      updateSummary()
+    })
+    date.addEventListener('change', function () {
+      if (roundtrip.checked && date.value) returnDate.min = date.value
+    })
+    returnDate.addEventListener('change', updateSummary)
+    returnTime.addEventListener('change', updateSummary)
     updateSummary()
+    toggleReturn()
     toggleFlight()
     toggleHotel()
     toggleAddress()
@@ -457,7 +439,8 @@
       flightError.classList.toggle('hidden', !flightMissing)
       var hotelMissing = Boolean(hotelArea()) && !hotelValue()
       hotelError.classList.toggle('hidden', !hotelMissing)
-      var valid = from.getValue() && to.getValue() && date.value && lugBig.value !== '' && lugSmall.value !== '' && name.value.trim() && phone.value.trim() && !flightMissing && !hotelMissing
+      var returnMissing = roundtrip.checked && !returnDate.value
+      var valid = from.getValue() && to.getValue() && date.value && lugBig.value !== '' && lugSmall.value !== '' && name.value.trim() && phone.value.trim() && !flightMissing && !hotelMissing && !returnMissing
       error.classList.toggle('hidden', Boolean(valid))
       if (!valid) return
 
@@ -468,7 +451,7 @@
         type: 'booking',
         ref: ref,
         lang: cfg.lang,
-        mode: modeInput ? modeInput.value : '',
+        mode: journeyMode(),
         route: routeText(),
         from: from.getValue(),
         to: to.getValue(),
@@ -481,6 +464,8 @@
         luggageBig: lugBig.value,
         luggageSmall: lugSmall.value,
         roundTrip: isReturn ? 'yes' : 'no',
+        returnDate: isReturn ? returnDate.value : '',
+        returnTime: isReturn ? returnTime.value : '',
         childSeat: childseat.value,
         name: name.value.trim(),
         phone: phone.value.trim(),
@@ -497,7 +482,7 @@
         date: date.value,
         time: time.value || '',
         passengers: pax.value,
-        roundTrip: isReturn ? cfg.waRoundTrip : '',
+        roundTrip: isReturn ? tmpl(cfg.waRoundTrip, { returnDate: returnDate.value, returnTime: returnTime.value || '' }) : '',
         childSeat: Number(childseat.value) > 0 ? tmpl(cfg.waChildSeat, { count: childseat.value }) : '',
         name: name.value.trim(),
         phone: phone.value.trim(),

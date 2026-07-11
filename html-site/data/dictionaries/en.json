@@ -30,12 +30,12 @@
         "selectFrom": "Select pickup",
         "selectTo": "Select destination",
         "noResults": "No matches found",
-        "modes": {
-          "aria": "Journey type",
-          "airportToHotel": "Airport → Hotel",
-          "airportToCenter": "Airport → City Centre",
-          "toAirport": "To Airport"
-        }
+        "trip": {
+          "aria": "Trip type",
+          "oneWay": "One way",
+          "roundTrip": "Round trip"
+        },
+        "hint": "Airport, hotel or any town centre — point to point, anywhere in Cyprus."
       }
     },
     "trust": {

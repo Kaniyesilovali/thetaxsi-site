@@ -1,6 +1,6 @@
 import { esc, page } from './layout.mjs'
 import { config } from '../site.config.mjs'
-import { hotelComboboxHtml, locationComboboxHtml, modeSelectorHtml } from './home.mjs'
+import { hotelComboboxHtml, journeyHintHtml, locationComboboxHtml } from './home.mjs'
 
 export function renderBook(ctx) {
   const { lang, dict, xtra } = ctx
@@ -49,7 +49,7 @@ export function renderBook(ctx) {
   <div class="mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-[1fr_380px]">
     <form id="booking-form" class="grid gap-6" novalidate>
       <h2 class="font-display text-3xl font-medium">${esc(t.route.heading)}</h2>
-      ${modeSelectorHtml(picker, { variant: 'light' })}
+      ${journeyHintHtml(picker, { tone: 'light' })}
       <div class="grid gap-6 sm:grid-cols-2">
         ${field(`${label('bf-from', picker.from)}
           ${fromCombo}`)}
@@ -101,6 +101,10 @@ export function renderBook(ctx) {
           </span>
           <input type="checkbox" id="bf-roundtrip" name="roundtrip" class="size-4 accent-sea-deep">
         </label>
+        <div id="bf-return-wrap" class="hidden gap-4 sm:grid-cols-2 sm:col-span-2">
+          ${field(`${label('bf-return-date', f.returnDateLabel)}<input id="bf-return-date" name="returnDate" type="date" class="${inputCls}">`)}
+          ${field(`${label('bf-return-time', f.returnTimeLabel)}<input id="bf-return-time" name="returnTime" type="time" class="${inputCls}">`)}
+        </div>
         <label class="flex items-center justify-between gap-4 border border-ink/15 bg-white px-4 py-3">
           <span class="block text-sm font-medium">${esc(f.childSeatLabel)}</span>
           <select id="bf-childseat" name="childseat" class="h-9 border border-ink/15 bg-white px-2 text-sm outline-none transition-colors focus:border-sea-deep [&>option]:bg-navy-soft [&>option]:text-white">
