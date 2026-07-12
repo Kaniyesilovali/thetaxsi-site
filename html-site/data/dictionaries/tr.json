@@ -16,7 +16,7 @@
     },
     "hero": {
       "eyebrow": "Kıbrıs · Şoförlü Transfer",
-      "title": "Sakin varın.",
+      "title": "Sakin bir varışın ayrıcalığı.",
       "subtitle": "Kıbrıs'ta önceden rezervasyonlu transferler. Sabit fiyatlar, profesyonel şoförler ve uçaktan iner inmez sizi karşılayan bir şoför.",
       "cta": "Rezerve Et",
       "picker": {
@@ -58,11 +58,11 @@
       ]
     },
     "why": {
-      "eyebrow": "Neden Taxsi",
+      "eyebrow": "Neden TheTaxsi",
       "title": "Farklı bir transfer anlayışı.",
       "items": [
         {
-          "phrase": "Sabit Fiyatlar",
+          "phrase": "Sabit fiyatlar.",
           "desc": "Sayaç yok, sürpriz yok. Gördüğünüz fiyat ödediğiniz fiyattır."
         },
         {
@@ -101,7 +101,7 @@
         {
           "name": "V-Class VIP",
           "capacity": "VIP minivan · 6 yolcuya kadar · 6 bagaj",
-          "desc": "Beyaz deri kaptan koltukları, tekerlekler üzerinde bir lounge. İlk izlenim sayılan varışlar için."
+          "desc": "Beyaz deri kaptan koltukları, adeta tekerlekli bir lounge. İlk izlenim sayılan varışlar için."
         },
         {
           "name": "Sprinter",
@@ -129,7 +129,7 @@
           "desc": "Şoförünüz SMS ile onaylanır — isim, araç ve doğrudan iletişim."
         },
         {
-          "title": "Varışınızı yapın",
+          "title": "Varın",
           "desc": "Terminalde karşılanır ve hedefinize götürülürsünüz. Başka hiçbir şey gerekmez."
         }
       ]
@@ -145,7 +145,7 @@
           "context": "Sık seyahat eden"
         },
         {
-          "quote": "Sabah 1'de Londra'dan rezerve ettim, sabah 8'de Larnaca'da karşılandım. Uçak gecikmesinde fiyat hiç değişmedi. Karşılığını ödediğim şey budur.",
+          "quote": "Sabah 1'de Londra'dan rezerve ettim, sabah 8'de Larnaca'da karşılandım. Uçak gecikmesinde fiyat hiç değişmedi. İşte parasını ödediğim şey bu.",
           "author": "James P.",
           "origin": "Londra",
           "context": "Kurumsal misafir"
@@ -192,7 +192,7 @@
       "cta": "Concierge ile konuşun →"
     },
     "cta": {
-      "title": "Nereye gidiyorsanız. Biz çoktan vardık.",
+      "title": "Nereye gidiyorsanız, biz çoktan oradayız.",
       "subtitle": "İki dakikadan kısa sürede transfer rezerve edin.",
       "button": "Transfer rezerve et"
     }
@@ -204,7 +204,7 @@
     },
     "hero": {
       "eyebrow": "Rezervasyon",
-      "title": "Birkaç sakin adım.",
+      "title": "Zahmetsiz birkaç adım.",
       "subtitle": "Nereye gittiğinizi söyleyin, nasıl seyahat etmek istediğinizi seçin — gerisini biz halledelim."
     },
     "steps": {
@@ -288,6 +288,10 @@
     "optional": "(opsiyonel)"
   },
   "routes": {
+    "meta": {
+      "title": "Kıbrıs Transfer Güzergahları & Sabit Fiyatları | TheTaxsi",
+      "description": "Ercan, Larnaca ve Baf havalimanlarından tüm Kıbrıs güzergahlarında sabit fiyatlı şoförlü transfer. Otel ve şehir merkezleri dahil, noktadan noktaya."
+    },
     "eyebrow": "Kıbrıs, noktadan noktaya",
     "title": "Güzergahlar & Fiyatlar",
     "subtitle": "Adada her transfer güzergahında sabit fiyatlar.",
@@ -297,12 +301,16 @@
     "tableHeading": "Güzergah"
   },
   "about": {
+    "meta": {
+      "title": "Hakkımızda — Kıbrıs Şoförlü Transfer | TheTaxsi",
+      "description": "TheTaxsi, Kıbrıs havalimanı transferlerini sabit fiyat, profesyonel şoför ve isimli karşılama ile yeniden tanımlar. Hikayemizi ve değerlerimizi keşfedin."
+    },
     "eyebrow": "Hakkımızda",
-    "title": "Özenle Kıbrıs.",
+    "title": "Kıbrıs'a yakışır bir hizmet.",
     "subtitle": "Yolcunun gerçek varış biçimini düşünerek kurulmuş bir şoförlü transfer servisi.",
     "story": {
       "title": "Hikayemiz",
-      "body": "Taxsi, basit bir sorunu çözmek için kuruldu: Kıbrıs'ta havalimanı transferleri güvensiz ve stresli oluyordu. Durmayan taksimetreler, yolları bilmeyen sürücüler, sürekli değişen fiyatlar. Bunları düzeltmek için Taxsi'yi inşa ettik — sabit fiyatlar, profesyonel sürücüler ve çalışan bir rezervasyon sistemi."
+      "body": "TheTaxsi, basit bir sorunu çözmek için kuruldu: Kıbrıs'ta havalimanı transferleri güvensiz ve stresli oluyordu. Durmayan taksimetreler, yolları bilmeyen sürücüler, sürekli değişen fiyatlar. Bunları düzeltmek için TheTaxsi'yi inşa ettik — sabit fiyatlar, profesyonel sürücüler ve çalışan bir rezervasyon sistemi."
     },
     "mission": {
       "title": "Misyonumuz",
@@ -313,7 +321,7 @@
       "items": [
         {
           "title": "Şeffaflık",
-          "desc": "Gördüğünüz fiyat, ödediğiniz fiyattır. Her zaman."
+          "desc": "Sayaç yok, güzergah şişirme yok, kapıda 'havalimanı ek ücreti' yok."
         },
         {
           "title": "Güvenilirlik",
@@ -328,8 +336,12 @@
     "cta": "Transfer Rezervasyonu Yap"
   },
   "contact": {
+    "meta": {
+      "title": "İletişim — Kıbrıs Havalimanı Transferi | TheTaxsi",
+      "description": "Kıbrıs şoförlü transfer rezervasyonu ve kurumsal talepler için 7/24 bize ulaşın. Telefon, e-posta veya WhatsApp ile doğrudan yanıt."
+    },
     "eyebrow": "Bize ulaşın",
-    "title": "Yanıt insan tarafından gelir.",
+    "title": "Her zaman gerçek bir insan yanıtlar.",
     "subtitle": "Rezervasyon, kurumsal talep veya başka bir konu için doğrudan bize ulaşın.",
     "directHeading": "Doğrudan hatlar",
     "phoneLabel": "Telefon",
@@ -355,9 +367,13 @@
     "noPosts": "Bu dilde henüz yazı bulunmuyor."
   },
   "faq": {
+    "meta": {
+      "title": "Sıkça Sorulan Sorular — Kıbrıs Transfer | TheTaxsi",
+      "description": "Kıbrıs havalimanı transferi hakkında merak edilenler: rezervasyon, ödeme, uçuş takibi, araçlar ve isimli karşılama. Rezervasyondan önce bilmeniz gereken her şey."
+    },
     "eyebrow": "Sık sorulan",
     "title": "Sorular, yanıtlar.",
-    "subtitle": "Taxsi transferi rezerve etmeden önce bilmeniz gereken her şey.",
+    "subtitle": "TheTaxsi transferi rezerve etmeden önce bilmeniz gereken her şey.",
     "sections": [
       {
         "title": "Rezervasyon",
@@ -415,7 +431,7 @@
         "items": [
           {
             "q": "Araçlar kaç yolcu alır?",
-            "a": "Standart araçlar standart bagajlı 4 yolcuya kadar uygundur. Rezervasyonda yolcu sayınızı belirtin."
+            "a": "Sedan araçlarımız bagajla birlikte 3 yolcuya kadar taşır; Vito ve V-Class 6 ila 8 kişilik gruplar, Sprinter ise 16 kişiye kadar alır. Rezervasyonda yolcu sayınızı belirtin, doğru aracı ayarlayalım."
           },
           {
             "q": "VIP transfer var mı?",
@@ -456,7 +472,7 @@
   "footer": {
     "tagline": "Kıbrıs Şoförlü Transfer",
     "addressLines": [
-      "Larnaca · Paphos · Limassol",
+      "Ercan · Larnaka · Baf",
       "Kıbrıs"
     ],
     "hours": "24 / 7 çok dilli operasyon",
@@ -466,6 +482,6 @@
     "legalHeading": "Yasal",
     "followHeading": "Takip Et",
     "paymentsLine": "Stripe ile güvenli ödeme · Kartlar kabul edilir · Varışta nakit",
-    "copyright": "© {year} Taxsi · Kıbrıs Şoförlü Transfer"
+    "copyright": "© {year} TheTaxsi · Kıbrıs Şoförlü Transfer"
   }
 }

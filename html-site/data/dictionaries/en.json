@@ -58,11 +58,11 @@
       ]
     },
     "why": {
-      "eyebrow": "Why Taxsi",
+      "eyebrow": "Why TheTaxsi",
       "title": "A different kind of transfer.",
       "items": [
         {
-          "phrase": "Fixed Prices",
+          "phrase": "Fixed prices.",
           "desc": "No meters, no surprises. The price you see is the price you pay."
         },
         {
@@ -237,7 +237,7 @@
       "selectPickupFirst": "Select pickup first",
       "date": "Date",
       "time": "Time",
-      "passengers": "Passengers",
+      "passengers": "Guests",
       "luggage": "Luggage",
       "roundTripLabel": "Return journey",
       "roundTripDesc": "Add a return at a discounted rate."
@@ -288,6 +288,10 @@
     "optional": "(optional)"
   },
   "routes": {
+    "meta": {
+      "title": "Cyprus Transfer Routes & Fixed Prices | TheTaxsi",
+      "description": "Fixed-price chauffeur transfers on every route across Cyprus — from Ercan, Larnaca and Paphos airports to hotels and town centres, point to point."
+    },
     "eyebrow": "Cyprus, point to point",
     "title": "Routes & Prices",
     "subtitle": "Fixed prices on every transfer route across the island.",
@@ -297,12 +301,16 @@
     "tableHeading": "Route"
   },
   "about": {
-    "eyebrow": "About Taxsi",
+    "meta": {
+      "title": "About — Cyprus Chauffeur Transfers | TheTaxsi",
+      "description": "TheTaxsi redefines Cyprus airport transfers with fixed prices, professional chauffeurs and meet & greet. Discover our story and what we stand for."
+    },
+    "eyebrow": "About TheTaxsi",
     "title": "Cyprus, considered.",
     "subtitle": "A chauffeur service built for the way travellers actually arrive.",
     "story": {
       "title": "Our Story",
-      "body": "Taxsi was founded to solve a simple problem: airport transfers in Cyprus were unpredictable and stressful. Meters that kept running, drivers who didn't know the routes, prices that varied wildly. We built Taxsi to fix that — fixed prices, professional drivers, and a booking system that works."
+      "body": "TheTaxsi was founded to solve a simple problem: airport transfers in Cyprus were unpredictable and stressful. Meters that kept running, drivers who didn't know the routes, prices that varied wildly. We built TheTaxsi to fix that — fixed prices, professional drivers, and a booking system that works."
     },
     "mission": {
       "title": "Our Mission",
@@ -313,7 +321,7 @@
       "items": [
         {
           "title": "Transparency",
-          "desc": "The price you see is the price you pay. Always."
+          "desc": "No meter, no route padding, no 'airport surcharge' at the door."
         },
         {
           "title": "Reliability",
@@ -328,6 +336,10 @@
     "cta": "Book a Transfer"
   },
   "contact": {
+    "meta": {
+      "title": "Contact — Cyprus Airport Transfers | TheTaxsi",
+      "description": "Reach us 24/7 for Cyprus chauffeur transfer reservations and corporate enquiries. Direct answers by phone, email or WhatsApp."
+    },
     "eyebrow": "Speak with us",
     "title": "We answer in person.",
     "subtitle": "For reservations, corporate enquiries, or anything in between — reach us directly.",
@@ -355,9 +367,13 @@
     "noPosts": "No posts available in this language yet."
   },
   "faq": {
+    "meta": {
+      "title": "FAQ — Cyprus Airport Transfers | TheTaxsi",
+      "description": "Everything about Cyprus airport transfers: booking, payment, flight tracking, vehicles and meet & greet. All you need to know before you reserve."
+    },
     "eyebrow": "Frequently asked",
     "title": "Questions, answered.",
-    "subtitle": "Everything you need to know before reserving a Taxsi transfer.",
+    "subtitle": "Everything you need to know before reserving a TheTaxsi transfer.",
     "sections": [
       {
         "title": "Booking",
@@ -414,8 +430,8 @@
         "title": "Vehicles",
         "items": [
           {
-            "q": "How many passengers can each vehicle accommodate?",
-            "a": "Standard vehicles accommodate up to 4 passengers with standard luggage. Indicate your passenger count when booking and we'll assign the right vehicle."
+            "q": "How many guests can each vehicle carry?",
+            "a": "Our saloon cars carry up to 3 guests with cases; the Vito and V-Class take groups of 6 to 8, and the Sprinter up to 16. Tell us your party size when booking and we'll assign the right vehicle."
           },
           {
             "q": "Do you offer VIP transfers?",
@@ -456,7 +472,7 @@
   "footer": {
     "tagline": "Cyprus Chauffeur Service",
     "addressLines": [
-      "Larnaca · Paphos · Limassol",
+      "Ercan · Larnaca · Paphos",
       "Cyprus"
     ],
     "hours": "24 / 7 multilingual dispatch",
@@ -466,6 +482,6 @@
     "legalHeading": "Legal",
     "followHeading": "Follow",
     "paymentsLine": "Secure payments via Stripe · Cards accepted · Cash on arrival",
-    "copyright": "© {year} Taxsi · Cyprus Chauffeur Service"
+    "copyright": "© {year} TheTaxsi · Cyprus Chauffeur Service"
   }
 }
