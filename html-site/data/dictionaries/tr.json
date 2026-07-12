@@ -85,12 +85,12 @@
       "items": [
         {
           "name": "E200 / E220",
-          "capacity": "Sedan · 3 yolcuya kadar · 3 bagaj",
+          "capacity": "Sedan · 4 yolcuya kadar · 3 bagaj",
           "desc": "Standart havalimanı aracı. Serin kabin, ikram su, sabit ücretle sakin bir sürüş."
         },
         {
           "name": "E220d / E300",
-          "capacity": "Business sedan · 3 yolcuya kadar · 3 bagaj",
+          "capacity": "Business sedan · 4 yolcuya kadar · 3 bagaj",
           "desc": "Uçaktan toplantıya gidenler için yeni nesil E-Serisi. Sessiz, özenli, dakik."
         },
         {
@@ -431,7 +431,7 @@
         "items": [
           {
             "q": "Araçlar kaç yolcu alır?",
-            "a": "Sedan araçlarımız bagajla birlikte 3 yolcuya kadar taşır; Vito ve V-Class 6 ila 8 kişilik gruplar, Sprinter ise 16 kişiye kadar alır. Rezervasyonda yolcu sayınızı belirtin, doğru aracı ayarlayalım."
+            "a": "Sedan araçlarımız bagajla birlikte 4 yolcuya kadar taşır; Vito ve V-Class 6 ila 8 kişilik gruplar, Sprinter ise 16 kişiye kadar alır. Rezervasyonda yolcu sayınızı belirtin, doğru aracı ayarlayalım."
           },
           {
             "q": "VIP transfer var mı?",

@@ -85,12 +85,12 @@
       "items": [
         {
           "name": "E200 / E220",
-          "capacity": "Saloon · up to 3 guests · 3 cases",
+          "capacity": "Saloon · up to 4 guests · 3 cases",
           "desc": "The standard airport car. Cooled cabin, bottled water, unhurried driving at the fixed fare."
         },
         {
           "name": "E220d / E300",
-          "capacity": "Business saloon · up to 3 guests · 3 cases",
+          "capacity": "Business saloon · up to 4 guests · 3 cases",
           "desc": "The newer-generation E-Class for arrivals that go straight into a meeting. Quiet, composed, punctual."
         },
         {
@@ -431,7 +431,7 @@
         "items": [
           {
             "q": "How many guests can each vehicle carry?",
-            "a": "Our saloon cars carry up to 3 guests with cases; the Vito and V-Class take groups of 6 to 8, and the Sprinter up to 16. Tell us your party size when booking and we'll assign the right vehicle."
+            "a": "Our saloon cars carry up to 4 guests with cases; the Vito and V-Class take groups of 6 to 8, and the Sprinter up to 16. Tell us your party size when booking and we'll assign the right vehicle."
           },
           {
             "q": "Do you offer VIP transfers?",

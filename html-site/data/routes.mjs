@@ -120,6 +120,26 @@ export const routes = [
     durationMin: 60,
     distanceKm: 80,
   },
+  // Güzelyurt (Morphou) rotaları — fiyat/süre TAHMİNİ, canlıya çıkmadan onayla.
+  {
+    slug: 'ercan-airport-to-guzelyurt',
+    from: {
+      en: 'Ercan Airport',
+      tr: 'Ercan Havalimanı',
+      ru: 'Аэропорт Эрджан',
+    },
+    fromValue: 'Ercan Havalimanı',
+    to: {
+      en: 'Guzelyurt (Morphou)',
+      tr: 'Güzelyurt',
+      ru: 'Гюзельюрт (Морфу)',
+    },
+    toValue: 'Güzelyurt Merkez',
+    price: 40,
+    roundTrip: 70,
+    durationMin: 50,
+    distanceKm: 52,
+  },
   // --- Larnaka Havalimanı ---
   {
     slug: 'larnaca-airport-to-nicosia',
@@ -197,6 +217,25 @@ export const routes = [
     durationMin: 90,
     distanceKm: 110,
   },
+  {
+    slug: 'larnaca-airport-to-guzelyurt',
+    from: {
+      en: 'Larnaca Airport',
+      tr: 'Larnaka Havalimanı',
+      ru: 'Аэропорт Ларнака',
+    },
+    fromValue: 'Larnaka Havalimanı',
+    to: {
+      en: 'Guzelyurt (Morphou)',
+      tr: 'Güzelyurt',
+      ru: 'Гюзельюрт (Морфу)',
+    },
+    toValue: 'Güzelyurt Merkez',
+    price: 70,
+    roundTrip: 130,
+    durationMin: 105,
+    distanceKm: 100,
+  },
   // --- Baf Havalimanı ---
   {
     slug: 'paphos-airport-to-nicosia',
@@ -235,5 +274,24 @@ export const routes = [
     roundTrip: 180,
     durationMin: 120,
     distanceKm: 165,
+  },
+  {
+    slug: 'paphos-airport-to-guzelyurt',
+    from: {
+      en: 'Paphos Airport',
+      tr: 'Baf Havalimanı',
+      ru: 'Аэропорт Пафос',
+    },
+    fromValue: 'Baf Havalimanı',
+    to: {
+      en: 'Guzelyurt (Morphou)',
+      tr: 'Güzelyurt',
+      ru: 'Гюзельюрт (Морфу)',
+    },
+    toValue: 'Güzelyurt Merkez',
+    price: 80,
+    roundTrip: 150,
+    durationMin: 110,
+    distanceKm: 115,
   },
 ]

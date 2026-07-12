@@ -40,8 +40,8 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 </section>`
 
   return page(ctx, {
-    title: `${t.title} — ${config.brand}`,
-    description: t.subtitle,
+    title: t.meta?.title ?? `${t.title} — ${config.brand}`,
+    description: t.meta?.description ?? t.subtitle,
     path: '/routes/',
     body,
   })

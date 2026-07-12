@@ -3,7 +3,7 @@ export const config = {
   // Canlı domain (hreflang, canonical, sitemap için). Sonunda / olmasın.
   siteUrl: 'https://taxsi.cy',
 
-  brand: 'Taxsi',
+  brand: 'TheTaxsi',
 
   // İletişim — TODO: gerçek numarayla değiştir
   phoneDisplay: '+357 99 000 000',
