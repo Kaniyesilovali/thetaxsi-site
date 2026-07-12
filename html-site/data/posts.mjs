@@ -202,23 +202,45 @@ export const posts = [
 <p>Yes — it's one of our most common routes. The same car crosses the checkpoint; there's no passenger fee and the fare is fixed.</p>
 <p>Travelling onwards to Kyrenia, Famagusta or Güzelyurt — or crossing to the north? Fixed prices for every route are on our <a href="/en/routes/">routes page</a> — no meters, no surprises — or <a href="/en/book/">book your transfer</a>.</p>`,
       tr: `
-<p>Larnaka Uluslararası Havalimanı Avrupa standartlarına göre kompakt bir havalimanı — tekerlekler piste değdiği andan itibaren varış salonuna nadiren yirmi dakikadan uzun sürer. İşte tipik bir varış nasıl ilerler ve şoförünüz sizi nerede bekler.</p>
+<p>Larnaka Uluslararası Havalimanı (LCA) Avrupa standartlarına göre kompakt bir havalimanı — tekerlekler piste değdiği andan itibaren varış salonuna nadiren yirmi dakikadan uzun sürer. Adanın en yoğun havalimanıdır ve Kıbrıs'ın her iki yakasına gidenler için çoğu zaman tatilin ilk tadıdır. İşte tipik bir varış nasıl ilerler, şoförünüz sizi nerede bekler ve sonrasında ne olur.</p>
 <h2>Pasaport kontrolü ve bagaj</h2>
-<p>AB pasaportu sahipleri genellikle on dakikadan kısa sürede pasaport kontrolünden geçer. AB dışı yolcular yoğun saatlerde (yazın kabaca 10:00–14:00 ve 20:00–23:00) on beş ila yirmi beş dakika ayırmalı. Bagaj alımı pasaport kontrolünün hemen ardındadır — arabalar ücretsizdir.</p>
+<p>AB pasaportu sahipleri genellikle on dakikadan kısa sürede pasaport kontrolünden geçer. AB dışı yolcular yoğun saatlerde — yazın kabaca 10:00–14:00 ve 20:00–23:00, birkaç uçuşun birlikte indiği saatler — on beş ila yirmi beş dakika ayırmalı. Bagaj alımı pasaport kontrolünün hemen ardındadır ve arabalar ücretsizdir. Yola çıkmadan önce ihtiyacınız olursa salonda ATM, döviz bürosu ve SIM kart bankosu bulunur.</p>
 <h2>Sizi nerede karşılıyoruz</h2>
-<p>Şoförünüz varış salonunda, çıkış kapılarının tam karşısında, adınızın yazılı olduğu tabelayla bekler. Aramanıza ya da etrafa bakınmanıza gerek yok — dışarı çıkın, karşıya bakın, bizi göreceksiniz. Uçuşunuzu takip ederiz; rötarlı bir iniş, dahil olan bekleme sürenizi asla kısaltmaz.</p>
+<p>Şoförünüz varış salonunda, çıkış kapılarının tam karşısında, adınızın yazılı olduğu tabelayla bekler. Aramanıza ya da etrafa bakınmanıza gerek yok — dışarı çıkın, karşıya bakın, bizi göreceksiniz. Uçuşunuzu kalkıştan itibaren takip ederiz; rötarlı bir iniş dahil olan bekleme sürenizi asla kısaltmaz, erken bir iniş de sorun değildir.</p>
 <h2>Transferinizin ilk dakikaları</h2>
-<p>Şoförünüz bagajlarınızı alır, sizi birkaç dakika mesafede park etmiş araca — Mercedes E-Serisi veya muadili — götürür ve yola çıkmadan önce varış noktanızı teyit eder. Kabinde su hazırdır. Kapıdan otoyola çıkış yaklaşık beş dakika sürer.</p>
-<p>Girne, Gazimağusa veya Güzelyurt'a mı devam ediyorsunuz — ya da kuzeye mi geçiyorsunuz? Tüm güzergahların sabit fiyatları güzergahlar sayfamızda — taksimetre yok, sürpriz yok.</p>`,
+<p>Şoförünüz bagajlarınızı alır, sizi birkaç dakika mesafede park etmiş araca — Mercedes E-Serisi veya muadili — götürür ve yola çıkmadan önce varış noktanızı teyit eder. Kabinde su hazırdır. Kapıdan otoyola çıkış yaklaşık beş dakika sürer ve ücret yola çıkmadan sabitlendiğinden yol kenarında anlaşılacak bir şey yoktur.</p>
+<h2>Ada genelinde devam — kuzey dahil</h2>
+<p>Larnaka merkezîdir; bu da onu tüm ada için pratik bir varış noktası yapar. Lefkoşa yaklaşık 50 dakikadır; kuzeye — Girne, Gazimağusa, İskele, Bafra ya da Güzelyurt — Yeşil Hat'tı geçerek ulaşılır; bu, yolculuğun yalnızca 20–30 dakika ekleyen rutin bir parçasıdır. Araçta kalırsınız, pasaportlar hazır, yolcu ücreti yok. Güzelyurt ve Lefke gibi batı noktaları için, Lefkoşa üzerinden gitmek yerine daha hızlı olan Bostancı (Astromeritis) geçişini kullanırız.</p>
+<h2>Yalnızca havalimanı değil — şehir içi de</h2>
+<p>Vardıktan sonra, aynı sabit fiyatlı hizmet ulaşımınızı da kapsar. <strong>Şehir içi ve şehirler arası yolculukları</strong> da yaparız — şehrin öbür ucundaki bir restoran, günübirlik gezi, hastane ya da eczane yolculuğu veya havalimanına dönüş — böylece yalnızca inişte değil tüm tatil boyunca yanınızdayız.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>İnişten havalimanından çıkışa kadar ne kadar sürer?</h3>
+<p>Genellikle 20–30 dakika: pasaport kontrolü, bagaj ve araca kısa bir yürüyüş. Yoğun saatlerde AB dışı pasaportlar biraz ekleyebilir.</p>
+<h3>Uçuşum rötar yaparsa ne olur?</h3>
+<p>Takip eder ve ayarlarız. Şoförünüz siz gerçekten indiğinizde oradadır ve dahil olan bekleme süreniz kısalmaz.</p>
+<h3>Beni sınırdan kuzeye geçirebilir misiniz?</h3>
+<p>Evet — bu en sık güzergahlarımızdan biridir. Aynı araç kontrol noktasını geçer; yolcu ücreti yoktur ve fiyat sabittir.</p>
+<p>Girne, Gazimağusa veya Güzelyurt'a mı devam ediyorsunuz — ya da kuzeye mi geçiyorsunuz? Tüm güzergahların sabit fiyatları <a href="/tr/routes/">güzergahlar sayfamızda</a> — taksimetre yok, sürpriz yok — ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>`,
       ru: `
-<p>Международный аэропорт Ларнаки компактен по европейским меркам — с момента касания полосы до зала прилёта редко проходит больше двадцати минут. Вот как обычно проходит прибытие и где вас будет ждать водитель.</p>
+<p>Международный аэропорт Ларнаки (LCA) компактен по европейским меркам — с момента касания полосы до зала прилёта редко проходит больше двадцати минут. Это самый загруженный аэропорт острова и для многих, кто едет в любую из частей Кипра, первое ощущение отпуска. Вот как обычно проходит прибытие, где вас будет ждать водитель и что происходит дальше.</p>
 <h2>Паспортный контроль и багаж</h2>
-<p>Владельцы паспортов ЕС обычно проходят контроль менее чем за десять минут. Путешественникам не из ЕС в часы пик (летом примерно 10:00–14:00 и 20:00–23:00) стоит заложить пятнадцать–двадцать пять минут. Выдача багажа находится сразу за паспортным контролем, тележки бесплатны.</p>
+<p>Владельцы паспортов ЕС обычно проходят контроль менее чем за десять минут. Путешественникам не из ЕС в часы пик — летом примерно 10:00–14:00 и 20:00–23:00, когда садится сразу несколько рейсов — стоит заложить пятнадцать–двадцать пять минут. Выдача багажа находится сразу за паспортным контролем, тележки бесплатны. В зале есть банкомат, обмен валюты и стойка SIM-карт, если они нужны вам до выезда.</p>
 <h2>Где мы вас встречаем</h2>
-<p>Ваш водитель ждёт в зале прилёта, прямо напротив выходных дверей, с табличкой с вашим именем. Не нужно звонить или искать — выходите, смотрите прямо перед собой, и вы нас увидите. Мы отслеживаем ваш рейс, поэтому задержка посадки никогда не сокращает включённое время ожидания.</p>
+<p>Ваш водитель ждёт в зале прилёта, прямо напротив выходных дверей, с табличкой с вашим именем. Не нужно звонить или искать — выходите, смотрите прямо перед собой, и вы нас увидите. Мы отслеживаем ваш рейс с момента вылета, поэтому задержка посадки никогда не сокращает включённое время ожидания, а ранняя посадка тоже не проблема.</p>
 <h2>Первые минуты трансфера</h2>
-<p>Водитель возьмёт багаж, проводит вас к автомобилю — Mercedes E-Class или аналогу, припаркованному в паре минут — и подтвердит пункт назначения перед выездом. В салоне вас ждёт вода. От выхода до шоссе — около пяти минут.</p>
-<p>Едете дальше в Кирению, Фамагусту или Гюзельюрт — или пересекаете границу на север? Фиксированные цены на все маршруты — на странице маршрутов. Без счётчиков и сюрпризов.</p>`,
+<p>Водитель возьмёт багаж, проводит вас к автомобилю — Mercedes E-Class или аналогу, припаркованному в паре минут — и подтвердит пункт назначения перед выездом. В салоне вас ждёт вода. От выхода до шоссе — около пяти минут, а цена была зафиксирована до поездки, так что на обочине ни о чём договариваться не нужно.</p>
+<h2>Дальше по острову — включая север</h2>
+<p>Ларнака расположена центрально, что делает её удобной точкой прибытия для всего острова. Никосия — около 50 минут; на север — Кирения, Фамагуста, Искеле, Бафра или Гюзельюрт — добираются, пересекая «зелёную линию»; это обычная часть дороги, добавляющая лишь 20–30 минут. Вы остаётесь в машине, паспорта наготове, платы с пассажиров нет. Для западных направлений вроде Гюзельюрта и Лефке мы используем более быстрый переход Бостанджи (Астромеритис), а не едем через Никосию.</p>
+<h2>Не только аэропорт — поездки по городу тоже</h2>
+<p>После приезда та же услуга по фиксированной цене покрывает и передвижение. Мы возим и <strong>по городу (şehir içi), и между городами</strong> — ресторан на другом конце города, поездка на день, дорога в больницу или аптеку или обратный путь в аэропорт — так что вы под опекой всю поездку, а не только при посадке.</p>
+<h2>Частые вопросы</h2>
+<h3>Сколько времени от посадки до выхода из аэропорта?</h3>
+<p>Обычно 20–30 минут: паспортный контроль, багаж и короткий путь к машине. Паспорта не из ЕС в часы пик могут добавить немного.</p>
+<h3>Что если рейс задержится?</h3>
+<p>Мы отслеживаем и подстраиваемся. Водитель на месте, когда вы действительно приземлитесь, а включённое время ожидания не сокращается.</p>
+<h3>Можете ли вы отвезти меня через границу на север?</h3>
+<p>Да — это один из самых частых наших маршрутов. Та же машина пересекает пункт; платы с пассажиров нет, а цена фиксированная.</p>
+<p>Едете дальше в Кирению, Фамагусту или Гюзельюрт — или пересекаете границу на север? Фиксированные цены на все маршруты — на <a href="/ru/routes/">странице маршрутов</a>, без счётчиков и сюрпризов — или <a href="/ru/book/">забронируйте трансфер</a>.</p>`,
     },
   },
   {
