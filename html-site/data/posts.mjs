@@ -68,9 +68,9 @@ export const posts = [
 <p>No. We also run local and inter-town trips at fixed prices, so you're covered for the whole stay, not just the airport.</p>
 <p>Ready to book your transfer? <a href="/en/book/">Book now</a> or see <a href="/en/routes/">fixed prices for every route</a>.</p>`,
       tr: `
-<p>Kıbrıs'a üç havalimanı hizmet verir; doğru olanı seçmek — ve yolculuğunuzun adayı bölen hattı geçip geçmeyeceğini bilmek — sorunsuz bir transferin anahtarıdır. İşte karşılaştırması ve sizi bekleyenler.</p>
+<p>Kıbrıs'a üç havalimanı hizmet verir; doğru olanı seçmek — ve yolculuğunuzun adayı bölen hattı geçip geçmeyeceğini bilmek — sorunsuz bir transferin anahtarıdır. Bu rehber, üç havalimanını, ana hedeflere sürelerini, sınır geçişinin nasıl işlediğini ve özel bir transferin hem havalimanı yolculuğunu hem de vardıktan sonra ulaşımı nasıl hallettiğini anlatır.</p>
 <h2>Üç havalimanı</h2>
-<p><strong>Ercan Havalimanı (ECN)</strong> kuzeyde, Lefkoşa yakınındadır ve Girne, Gazimağusa, İskele ile Güzelyurt'a en yakın havalimanıdır. <strong>Larnaka (LCA)</strong> ve <strong>Baf (PFO)</strong> güneydedir ve Avrupa seferlerinin çoğunu taşır — bu yüzden kuzeye gelen birçok ziyaretçi aslında Larnaka'ya inip sınırı karayoluyla geçer.</p>
+<p><strong>Ercan Havalimanı (ECN)</strong> kuzeyde, Lefkoşa yakınındadır ve Girne, Gazimağusa, İskele ile Güzelyurt'a en yakın havalimanıdır. Neredeyse tamamen Türkiye üzerinden aktarmalı uçuşlarla hizmet verir. <strong>Larnaka (LCA)</strong> ve <strong>Baf (PFO)</strong> güneydedir ve direkt Avrupa seferlerinin çoğunu taşır — bu yüzden kuzeye gelen birçok ziyaretçi aslında Larnaka'ya inip sınırı karayoluyla geçer. Larnaka en yoğun ve en merkezî olanıdır; Baf ise batı kapısıdır, batı kıyısı için ve Bostancı geçişi üzerinden Güzelyurt ile Lefke için elverişlidir.</p>
 <h2>Tipik transfer süreleri</h2>
 <p><strong>Ercan'dan:</strong></p>
 <ul>
@@ -86,8 +86,11 @@ export const posts = [
   <li>Gazimağusa: yaklaşık 60 dakika</li>
   <li>Güzelyurt: batı geçişiyle yaklaşık 1 saat 45 dakika</li>
 </ul>
+<p>Baf, kuzeye en uzun yolculuktur; bu yüzden kuzey otelleri için genellikle yalnızca uçuş diğerlerinden çok daha ucuz veya uygun olduğunda tercih edilir.</p>
+<h2>Hangi havalimanını seçmeli?</h2>
+<p>Direkt uçuş bulabiliyorsanız, dürüst cevap çoğu zaman "kapıdan kapıya hangisi en ucuzsa" olur. Ercan, kuzey otelleri için mesafe ve basitlikte kazanır ama neredeyse her zaman Türkiye üzerinden aktarma demektir. Larnaka ve Baf direkt Avrupa uçuşları ve daha çok saat seçeneği sunar; sınır geçişi 20–30 dakika ekler ama tamamen rutindir. Her transfer ücreti önceden sabit olarak verildiğinden, tahmin yürütmek yerine her seçeneğin gerçek toplam maliyetini önceden karşılaştırabilirsiniz.</p>
 <h2>Kuzey Kıbrıs'a geçiş</h2>
-<p>Larnaka veya Baf'a inip oteliniz kuzeydeyse — Girne, İskele, Güzelyurt ya da Lefke — transferiniz Yeşil Hat'tı bir kontrol noktasında geçer. Bu rutin bir işlemdir: pasaportunuzu yanınıza alın, arabada kalın, gerisini şoförünüz halleder. Güzelyurt ve Lefke gibi batıdaki noktalar için, Lefkoşa üzerinden gitmekten daha hızlı olan Bostancı (Astromeritis) geçişini kullanırız.</p>
+<p>Larnaka veya Baf'a inip oteliniz kuzeydeyse — Girne, İskele, Güzelyurt ya da Lefke — transferiniz Yeşil Hat'tı bir kontrol noktasında geçer. Bu rutin bir işlemdir: pasaportunuzu yanınıza alın, arabada kalın, gerisini şoförünüz halleder. Yolculardan ücret alınmaz ve görevliler genellikle pasaportunuza değil ayrı bir kağıda mühür basar. Güzelyurt ve Lefke gibi batıdaki noktalar için, Lefkoşa üzerinden gitmekten daha hızlı olan Bostancı (Astromeritis) geçişini kullanırız.</p>
 <h2>Neden özel transfer?</h2>
 <p>Kıbrıs'ta toplu taşıma, özellikle şehir dışında ve hattın iki yakası arasında sınırlıdır. Özel transfer size şunları sunar:</p>
 <ul>
@@ -96,6 +99,8 @@ export const posts = [
   <li><strong>Uçuş takibi</strong> — sürücünüz gecikmeler için ayarlama yapar</li>
   <li><strong>Sınır tecrübesi</strong> — kontrol noktasını her gün geçiyoruz</li>
 </ul>
+<h2>Yalnızca havalimanı değil — şehir içi de</h2>
+<p>Aynı sabit fiyatlı hizmet, vardıktan sonra da geçerlidir. Havalimanı yolculuklarının ötesinde <strong>şehir içi ve şehirler arası yolculukları</strong> sabit yerel fiyatlarla düzenliyoruz — Girne limanında akşam yemeği, Gazimağusa'nın eski şehrine ya da Karpaz yarımadasına günübirlik gezi, hastane ya da eczane yolculuğu, casino oteli akşamı ya da yerel taksilerin az olduğu saatlerde tesisinizle şehir merkezi arasında gidip gelme. Rezervasyon sırasında ayarlayın ya da konaklamanız sırasında bize yazın.</p>
 <h2>Rezervasyon İpuçları</h2>
 <ol>
   <li>En az 24 saat önceden rezervasyon yapın</li>
@@ -103,11 +108,18 @@ export const posts = [
   <li>Dönüş yolculuğu gerekiyorsa gidiş-dönüş seçeneğini seçin</li>
   <li>Çocuk koltuğu gibi ekstraları rezervasyon sırasında seçin</li>
 </ol>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Kuzey Kıbrıs için hangi havalimanı en ucuz?</h3>
+<p>Uçuşunuza bağlıdır. Ercan en yakınıdır ama genellikle Türkiye aktarması gerektirir; Larnaka'ya ucuz bir direkt uçuş, geçişle bile kapıdan kapıya daha uygun çıkabilir. Rezervasyondan önce sabit transfer ücretlerini karşılaştırın.</p>
+<h3>Tek bir transfer beni sınırın öbür tarafına götürebilir mi?</h3>
+<p>Evet — yol boyunca aynı araçta kalırsınız. Geçiş yaklaşık 20–30 dakika ekler ve yolcu ücreti yoktur.</p>
+<h3>Sadece havalimanı transferi mi yapıyorsunuz?</h3>
+<p>Hayır. Yerel ve şehirler arası yolculukları da sabit fiyatlarla yaparız, böylece yalnızca havalimanı için değil tüm tatiliniz boyunca yanınızdayız.</p>
 <p>Transferinizi rezerve etmeye hazır mısınız? <a href="/tr/book/">Rezervasyon yap</a> veya <a href="/tr/routes/">tüm güzergahların sabit fiyatlarına</a> göz atın.</p>`,
       ru: `
-<p>Кипр обслуживают три аэропорта, и выбрать правильный — а также понять, пересекает ли ваша поездка разделительную линию острова, — ключ к спокойному трансферу. Вот их сравнение и чего ожидать.</p>
+<p>Кипр обслуживают три аэропорта, и выбрать правильный — а также понять, пересекает ли ваша поездка разделительную линию острова, — ключ к спокойному трансферу. Этот гид проходит по всем трём: сколько ехать до основных мест, как работает переход границы и как частный трансфер берёт на себя и дорогу из аэропорта, и передвижение на месте.</p>
 <h2>Три аэропорта</h2>
-<p><strong>Аэропорт Эрджан (ECN)</strong> расположен на севере, рядом с Никосией, и ближе всего к Кирении, Фамагусте, Искеле и Гюзельюрту. <strong>Ларнака (LCA)</strong> и <strong>Пафос (PFO)</strong> находятся на юге и принимают большинство европейских рейсов — поэтому многие гости севера прилетают именно в Ларнаку и пересекают границу по дороге.</p>
+<p><strong>Аэропорт Эрджан (ECN)</strong> расположен на севере, рядом с Никосией, и ближе всего к Кирении, Фамагусте, Искеле и Гюзельюрту. Его обслуживают почти исключительно рейсы со стыковкой через Турцию. <strong>Ларнака (LCA)</strong> и <strong>Пафос (PFO)</strong> находятся на юге и принимают большинство прямых европейских рейсов — поэтому многие гости севера прилетают именно в Ларнаку и пересекают границу по дороге. Ларнака — самый загруженный и центральный; Пафос — западные ворота, удобные для западного побережья и, через переход Бостанджи, для Гюзельюрта и Лефке.</p>
 <h2>Типичное время трансфера</h2>
 <p><strong>Из Эрджана:</strong></p>
 <ul>
@@ -123,8 +135,11 @@ export const posts = [
   <li>Фамагуста: около 60 минут</li>
   <li>Гюзельюрт: около 1 ч 45 мин через западный переход</li>
 </ul>
+<p>Пафос — самая долгая дорога на север, поэтому для северных отелей его выбирают обычно только тогда, когда рейс заметно дешевле или удобнее остальных.</p>
+<h2>Какой аэропорт выбрать?</h2>
+<p>Если удаётся найти прямой рейс, честный ответ часто — «тот, что дешевле от двери до двери». Эрджан выигрывает в расстоянии и простоте для северных отелей, но почти всегда означает стыковку через Турцию. Ларнака и Пафос дают прямые европейские рейсы и больше выбора по времени; переход добавляет 20–30 минут, но это совершенно обычное дело. Поскольку цена каждого трансфера фиксируется и называется до бронирования, вы можете заранее сравнить реальную итоговую стоимость каждого варианта, а не гадать.</p>
 <h2>Пересечение в Северный Кипр</h2>
-<p>Если вы приземляетесь в Ларнаке или Пафосе, а отель на севере — Кирения, Искеле, Гюзельюрт или Лефке — трансфер пересекает «зелёную линию» на контрольно-пропускном пункте. Это обычная процедура: возьмите паспорт, оставайтесь в машине, остальное сделает водитель. Для западных направлений, таких как Гюзельюрт и Лефке, мы используем переход Бостанджи (Астромеритис) — это быстрее, чем ехать через Никосию.</p>
+<p>Если вы приземляетесь в Ларнаке или Пафосе, а отель на севере — Кирения, Искеле, Гюзельюрт или Лефке — трансфер пересекает «зелёную линию» на контрольно-пропускном пункте. Это обычная процедура: возьмите паспорт, оставайтесь в машине, остальное сделает водитель. С пассажиров плата не берётся, а штамп обычно ставят на отдельный листок, а не в паспорт. Для западных направлений, таких как Гюзельюрт и Лефке, мы используем переход Бостанджи (Астромеритис) — это быстрее, чем ехать через Никосию.</p>
 <h2>Почему стоит выбрать частный трансфер?</h2>
 <p>На Кипре ограниченный общественный транспорт, особенно за пределами городов и между двумя частями острова. Частный трансфер даёт:</p>
 <ul>
@@ -133,13 +148,22 @@ export const posts = [
   <li><strong>Отслеживание рейса</strong> — водитель скорректирует время при задержке</li>
   <li><strong>Опыт на границе</strong> — мы пересекаем пункт каждый день</li>
 </ul>
+<h2>Не только аэропорт — поездки по городу тоже</h2>
+<p>Та же услуга по фиксированной цене работает и после приезда. Помимо трансферов из аэропорта мы организуем <strong>поездки по городу (şehir içi) и между городами</strong> по фиксированным местным ценам — ужин в гавани Кирении, поездку на день в старый город Фамагусты или на полуостров Карпаз, дорогу в больницу или аптеку, вечер в казино-отеле или просто путь между вашим курортом и центром города, когда местных такси мало. Договоритесь при бронировании или напишите нам во время поездки.</p>
 <h2>Советы по бронированию</h2>
 <ol>
   <li>Бронируйте минимум за 24 часа</li>
-  <li>Укажите номер рейса в примечаниях</li>
+  <li>Укажите номер рейса в примечаниях — мы отследим прибытие</li>
   <li>Выбирайте «туда и обратно», если нужна обратная поездка</li>
   <li>Заказывайте детское кресло при бронировании</li>
 </ol>
+<h2>Частые вопросы</h2>
+<h3>Какой аэропорт дешевле для Северного Кипра?</h3>
+<p>Зависит от рейса. Эрджан ближе всего, но обычно требует стыковки через Турцию; дешёвый прямой рейс в Ларнаку может выйти дешевле от двери до двери даже с переходом. Сравните фиксированные цены трансфера до бронирования.</p>
+<h3>Может ли один трансфер провезти меня через границу?</h3>
+<p>Да — вы остаётесь в той же машине всю дорогу. Переход добавляет около 20–30 минут, и платы с пассажиров нет.</p>
+<h3>Вы делаете только трансферы из аэропорта?</h3>
+<p>Нет. Мы также возим по городу и между городами по фиксированным ценам, так что вы под опекой всю поездку, а не только в аэропорту.</p>
 <p>Готовы забронировать трансфер? <a href="/ru/book/">Забронировать</a> или посмотрите <a href="/ru/routes/">фиксированные цены на все маршруты</a>.</p>`,
     },
   },
@@ -158,14 +182,25 @@ export const posts = [
     },
     body: {
       en: `
-<p>Larnaca International Airport is compact by European standards — from the moment your wheels touch the runway, you are rarely more than twenty minutes from the arrivals hall. Here is how a typical arrival unfolds, and where your chauffeur will be waiting.</p>
+<p>Larnaca International Airport (LCA) is compact by European standards — from the moment your wheels touch the runway, you are rarely more than twenty minutes from the arrivals hall. It's the island's busiest airport and, for many travellers heading to either side of Cyprus, the first taste of the holiday. Here is how a typical arrival unfolds, where your chauffeur will be waiting, and what happens next.</p>
 <h2>Passport control and luggage</h2>
-<p>EU passport holders usually clear immigration in under ten minutes. Non-EU travellers should allow fifteen to twenty-five minutes at peak hours (roughly 10:00–14:00 and 20:00–23:00 in summer). Baggage reclaim is directly after passport control — trolleys are free.</p>
+<p>EU passport holders usually clear immigration in under ten minutes. Non-EU travellers should allow fifteen to twenty-five minutes at peak hours — roughly 10:00–14:00 and 20:00–23:00 in summer, when several flights land together. Baggage reclaim is directly after passport control, and trolleys are free. There's an ATM, a currency exchange and a SIM-card desk in the hall if you need them before you set off.</p>
 <h2>Where we meet you</h2>
-<p>Your chauffeur waits in the arrivals hall, directly opposite the exit doors, holding a sign with your name. There is no need to call or search — walk out, look ahead, and you will see us. We track your flight, so a delayed landing never shortens your included waiting time.</p>
+<p>Your chauffeur waits in the arrivals hall, directly opposite the exit doors, holding a sign with your name. There is no need to call or search — walk out, look ahead, and you will see us. We track your flight from departure, so a delayed landing never shortens your included waiting time, and an early one is no problem either.</p>
 <h2>The first minutes of your transfer</h2>
-<p>Your chauffeur handles the luggage, walks you to the car — a Mercedes E-Class or equivalent, parked minutes away — and confirms your destination before setting off. Bottled water is waiting in the cabin. From kerb to highway takes about five minutes.</p>
-<p>Travelling onwards to Kyrenia, Famagusta or Güzelyurt — or crossing to the north? Fixed prices for every route are on our routes page — no meters, no surprises.</p>`,
+<p>Your chauffeur handles the luggage, walks you to the car — a Mercedes E-Class or equivalent, parked minutes away — and confirms your destination before setting off. Bottled water is waiting in the cabin. From kerb to highway takes about five minutes, and the fare was fixed before you travelled, so there's nothing to agree at the roadside.</p>
+<h2>Onward across the island — including the north</h2>
+<p>Larnaca is central, which makes it a practical arrival point for the whole island. Nicosia is about 50 minutes; the north — Kyrenia, Famagusta, İskele, Bafra or Güzelyurt — is reached by crossing the Green Line, a routine part of the drive that adds only 20–30 minutes. You stay in the car, passports ready, no passenger fee. For western destinations like Güzelyurt and Lefke we use the faster Bostancı (Astromeritis) crossing rather than routing through Nicosia.</p>
+<h2>Not just the airport — local rides too</h2>
+<p>Once you've arrived, the same fixed-price service covers getting around. We run <strong>şehir içi (in-town) and inter-town journeys</strong> too — a restaurant across town, a day trip, a hospital or pharmacy run, or the return leg to the airport — so you're looked after for the whole stay, not just the landing.</p>
+<h2>Frequently asked questions</h2>
+<h3>How long from landing to leaving the airport?</h3>
+<p>Usually 20–30 minutes: passport control, baggage, and a short walk to the car. Non-EU passports at peak times can add a little.</p>
+<h3>What if my flight is delayed?</h3>
+<p>We track it and adjust. Your driver is there when you actually land, and your included waiting time isn't shortened.</p>
+<h3>Can you take me across the border to the north?</h3>
+<p>Yes — it's one of our most common routes. The same car crosses the checkpoint; there's no passenger fee and the fare is fixed.</p>
+<p>Travelling onwards to Kyrenia, Famagusta or Güzelyurt — or crossing to the north? Fixed prices for every route are on our <a href="/en/routes/">routes page</a> — no meters, no surprises — or <a href="/en/book/">book your transfer</a>.</p>`,
       tr: `
 <p>Larnaka Uluslararası Havalimanı Avrupa standartlarına göre kompakt bir havalimanı — tekerlekler piste değdiği andan itibaren varış salonuna nadiren yirmi dakikadan uzun sürer. İşte tipik bir varış nasıl ilerler ve şoförünüz sizi nerede bekler.</p>
 <h2>Pasaport kontrolü ve bagaj</h2>

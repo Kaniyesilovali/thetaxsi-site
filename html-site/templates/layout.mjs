@@ -142,8 +142,8 @@ export function faqSection(ctx) {
     <div class="mt-10 border-t border-ink/10">
       ${t.items
         .map(
-          (item, i) => `
-      <details class="group border-b border-ink/10"${i === 0 ? ' open' : ''}>
+          (item) => `
+      <details class="group border-b border-ink/10" open>
         <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-sm font-medium [&::-webkit-details-marker]:hidden">
           <span>${esc(item.q)}</span>
           <span class="shrink-0 text-lg leading-none text-sea-deep transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
