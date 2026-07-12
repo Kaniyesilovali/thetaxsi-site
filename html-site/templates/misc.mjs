@@ -59,8 +59,8 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 </section>`
 
   return page(ctx, {
-    title: `${t.title} — ${config.brand}`,
-    description: t.subtitle,
+    title: t.meta?.title ?? `${t.title} — ${config.brand}`,
+    description: t.meta?.description ?? t.subtitle,
     path: '/about/',
     body,
   })
@@ -126,8 +126,8 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 </section>`
 
   return page(ctx, {
-    title: `${t.title} — ${config.brand}`,
-    description: t.subtitle,
+    title: t.meta?.title ?? `${t.title} — ${config.brand}`,
+    description: t.meta?.description ?? t.subtitle,
     path: '/contact/',
     body,
   })
@@ -178,11 +178,12 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
   ]
 
   return page(ctx, {
-    title: `${t.title} — ${config.brand}`,
-    description: t.subtitle,
+    title: t.meta?.title ?? `${t.title} — ${config.brand}`,
+    description: t.meta?.description ?? t.subtitle,
     path: '/faq/',
     body,
     jsonld,
+    faq: false,
   })
 }
 
@@ -287,5 +288,6 @@ export function render404(ctx) {
     description: t.title,
     path: '/404.html',
     body,
+    faq: false,
   })
 }

@@ -3,6 +3,10 @@ export const extra = {
   en: {
     nav: { faq: 'FAQ', home: 'Home', blog: 'Journal' },
     blog: {
+      meta: {
+        title: 'Cyprus Travel Guides & Transfer Tips | TheTaxsi',
+        description: 'Arrival guides, route notes and travel tips for Cyprus airport transfers — from the team that drives these roads every day.',
+      },
       eyebrow: 'The journal',
       title: 'Journal',
       subtitle: 'Arrival guides, route notes and travel tips for Cyprus — written by the team that drives these roads every day.',
@@ -89,11 +93,46 @@ export const extra = {
       success: 'Message received — we will get back to you shortly.',
       fallback: 'Or write to us directly:',
     },
+    commonFaq: {
+      eyebrow: 'Frequently asked',
+      title: 'Good to know before you book',
+      allCta: 'See all questions',
+      items: [
+        {
+          q: 'How do I book a transfer?',
+          a: "Choose your route, date, time and party size on the booking form, or message us on WhatsApp. We reply within minutes to confirm — no account or upfront payment is required.",
+        },
+        {
+          q: 'What is included in the price?',
+          a: 'Every fixed fare covers the private transfer, all tolls and parking, live flight tracking and up to 45 minutes of airport waiting. Extras such as child seats are shown separately before you book.',
+        },
+        {
+          q: 'How do I pay?',
+          a: 'Pay cash to your chauffeur on arrival, or securely by card online. The price is fixed and agreed before the trip — there are no surprises at the end.',
+        },
+        {
+          q: 'What happens if my flight is delayed?',
+          a: 'We track your flight automatically and adjust the pickup time. Your chauffeur waits at no extra charge, so a delay never changes your fare.',
+        },
+        {
+          q: 'How will I recognise my driver?',
+          a: 'Your chauffeur meets you in the arrivals hall with a name sign, and you receive their name, phone number and vehicle details in advance.',
+        },
+        {
+          q: 'Which routes and vehicles do you cover?',
+          a: 'We drive every major route across Cyprus, from airport transfers to point-to-point trips. Vehicles range from saloon cars for up to 3 guests to vans and a 16-seat Sprinter for larger groups.',
+        },
+      ],
+    },
     blogNote: '',
   },
   tr: {
     nav: { faq: 'SSS', home: 'Ana Sayfa', blog: 'Blog' },
     blog: {
+      meta: {
+        title: 'Kıbrıs Seyahat Rehberi & Transfer İpuçları | TheTaxsi',
+        description: 'Kıbrıs havalimanı transferi için varış rehberleri, güzergah notları ve seyahat ipuçları — bu yolları her gün süren ekipten.',
+      },
       eyebrow: 'Blog',
       title: 'Blog',
       subtitle: 'Kıbrıs için varış rehberleri, güzergah notları ve seyahat ipuçları — bu yolları her gün süren ekipten.',
@@ -180,11 +219,46 @@ export const extra = {
       success: 'Mesajınız alındı — kısa süre içinde döneceğiz.',
       fallback: 'Ya da doğrudan yazın:',
     },
+    commonFaq: {
+      eyebrow: 'Sıkça sorulanlar',
+      title: 'Rezervasyondan önce bilmeniz gerekenler',
+      allCta: 'Tüm soruları gör',
+      items: [
+        {
+          q: 'Transferi nasıl rezerve ederim?',
+          a: "Güzergahınızı, tarihi, saati ve yolcu sayısını rezervasyon formundan seçin ya da bize WhatsApp'tan yazın. Dakikalar içinde onaylıyoruz — üyelik veya ön ödeme gerekmez.",
+        },
+        {
+          q: 'Fiyata neler dahil?',
+          a: 'Sabit fiyata özel transfer, tüm geçiş ve otopark ücretleri, canlı uçuş takibi ve havalimanında 45 dakikaya kadar bekleme dahildir. Çocuk koltuğu gibi ekstralar rezervasyondan önce ayrıca gösterilir.',
+        },
+        {
+          q: 'Ödemeyi nasıl yaparım?',
+          a: 'Varışta şoförünüze nakit ödeyebilir ya da online olarak güvenle kartla ödeyebilirsiniz. Fiyat sabittir ve yolculuktan önce bellidir — sonunda sürpriz yoktur.',
+        },
+        {
+          q: 'Uçuşum rötar yaparsa ne olur?',
+          a: 'Uçuşunuzu otomatik takip eder, alış saatini buna göre ayarlarız. Şoförünüz ek ücret almadan bekler; rötar fiyatınızı asla değiştirmez.',
+        },
+        {
+          q: 'Şoförümü nasıl tanırım?',
+          a: 'Şoförünüz sizi varış salonunda isim tabelasıyla karşılar; adı, telefon numarası ve araç bilgileri önceden size iletilir.',
+        },
+        {
+          q: 'Hangi güzergah ve araçlar var?',
+          a: "Kıbrıs'taki tüm başlıca güzergahlarda hizmet veriyoruz — havalimanı transferlerinden noktadan noktaya yolculuklara. Araçlarımız 3 kişiye kadar binek otomobillerden, daha kalabalık gruplar için minivan ve 16 kişilik Sprinter'a kadar uzanır.",
+        },
+      ],
+    },
     blogNote: '',
   },
   ru: {
     nav: { faq: 'Вопросы', home: 'Главная', blog: 'Журнал' },
     blog: {
+      meta: {
+        title: 'Путеводители по Кипру и советы по трансферам | TheTaxsi',
+        description: 'Гиды по прибытию, заметки о маршрутах и советы путешественникам по Кипру — от команды, которая ездит по этим дорогам каждый день.',
+      },
       eyebrow: 'Журнал',
       title: 'Журнал',
       subtitle: 'Гиды по прибытию, заметки о маршрутах и советы путешественникам по Кипру — от команды, которая ездит по этим дорогам каждый день.',
@@ -270,6 +344,37 @@ export const extra = {
     contactForm: {
       success: 'Сообщение получено — мы скоро свяжемся с вами.',
       fallback: 'Или напишите нам напрямую:',
+    },
+    commonFaq: {
+      eyebrow: 'Частые вопросы',
+      title: 'Что полезно знать перед бронированием',
+      allCta: 'Все вопросы',
+      items: [
+        {
+          q: 'Как забронировать трансфер?',
+          a: 'Выберите маршрут, дату, время и число пассажиров в форме бронирования или напишите нам в WhatsApp. Мы подтверждаем за считанные минуты — без регистрации и предоплаты.',
+        },
+        {
+          q: 'Что входит в стоимость?',
+          a: 'В фиксированную цену входят индивидуальный трансфер, все платные дороги и парковка, отслеживание рейса и до 45 минут ожидания в аэропорту. Дополнения, например детское кресло, показываются отдельно до бронирования.',
+        },
+        {
+          q: 'Как происходит оплата?',
+          a: 'Оплатите наличными водителю по прибытии или онлайн картой. Цена фиксированная и известна заранее — никаких сюрпризов в конце.',
+        },
+        {
+          q: 'Что если мой рейс задержится?',
+          a: 'Мы автоматически отслеживаем рейс и корректируем время подачи. Водитель ждёт без доплаты, поэтому задержка не меняет цену.',
+        },
+        {
+          q: 'Как я узнаю своего водителя?',
+          a: 'Водитель встретит вас в зале прилёта с табличкой с вашим именем, а его имя, телефон и данные автомобиля вы получите заранее.',
+        },
+        {
+          q: 'Какие маршруты и автомобили доступны?',
+          a: 'Мы работаем по всем основным маршрутам Кипра — от трансферов из аэропорта до поездок из точки в точку. Автомобили: от седанов на 3 пассажиров до минивэнов и 16-местного Sprinter для больших групп.',
+        },
+      ],
     },
     blogNote: '',
   },

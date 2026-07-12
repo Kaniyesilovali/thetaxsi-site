@@ -126,9 +126,56 @@ function footer(ctx) {
 </a>`
 }
 
+// Her sayfanın sonuna eklenen ortak SSS bloğu. Hem görünür içerik (details/summary)
+// hem de FAQPage JSON-LD üretir; böylece arama motorları ve yapay zeka okuyabilir.
+export function faqSection(ctx) {
+  const { lang, xtra } = ctx
+  const t = xtra.commonFaq
+  if (!t || !Array.isArray(t.items) || t.items.length === 0) return { html: '', jsonld: null }
+  const base = `/${lang}`
+
+  const html = `
+<section class="border-t border-ink/10 bg-white py-20 lg:py-24" aria-labelledby="page-faq">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <p class="eyebrow text-sea-deep">${esc(t.eyebrow)}</p>
+    <h2 id="page-faq" class="mt-4 font-display text-3xl font-medium sm:text-4xl">${esc(t.title)}</h2>
+    <div class="mt-10 border-t border-ink/10">
+      ${t.items
+        .map(
+          (item, i) => `
+      <details class="group border-b border-ink/10"${i === 0 ? ' open' : ''}>
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-sm font-medium [&::-webkit-details-marker]:hidden">
+          <span>${esc(item.q)}</span>
+          <span class="shrink-0 text-lg leading-none text-sea-deep transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+        </summary>
+        <p class="-mt-1 pb-6 text-sm leading-relaxed text-slate">${esc(item.a)}</p>
+      </details>`,
+        )
+        .join('')}
+    </div>
+    <a href="${base}/faq/" class="mt-10 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-sea-deep transition-colors hover:text-navy">${esc(t.allCta)} <span aria-hidden="true">→</span></a>
+  </div>
+</section>`
+
+  const jsonld = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }
+
+  return { html, jsonld }
+}
+
 // path: dile göre değişmeyen sayfa yolu, örn. "/routes/larnaca-airport-to-nicosia/"
-export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-mist text-ink' }) {
+// faq: false verilirse sayfa sonuna ortak SSS bloğu eklenmez (örn. /faq/ ve 404).
+export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-mist text-ink', faq = true }) {
   const { lang } = ctx
+  const faqBlock = faq ? faqSection(ctx) : { html: '', jsonld: null }
+  const allJsonld = faqBlock.jsonld ? [...jsonld, faqBlock.jsonld] : jsonld
   const url = `${config.siteUrl}/${lang}${path}`
   const alternates = config.languages
     .map((l) => `<link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}">`)
@@ -154,12 +201,13 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
-  ${jsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n  ')}
+  ${allJsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n  ')}
 </head>
 <body class="min-h-full flex flex-col font-sans ${bodyClass}">
 ${header(ctx)}
 <main class="flex-1">
 ${body}
+${faqBlock.html}
 </main>
 ${footer(ctx)}
 <script src="/assets/main.js" defer></script>
