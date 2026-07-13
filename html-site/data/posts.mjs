@@ -4,6 +4,178 @@
 // Yazılar tarihe göre yeniden eskiye sıralanır (date alanı ISO formatında: YYYY-MM-DD).
 export const posts = [
   {
+    slug: 'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci',
+    date: '2026-07-13',
+    title: {
+      en: 'Güzelyurt Taxi: In-Town, Out-of-Town and Student Rides',
+      tr: 'Güzelyurt Taksi: Şehir İçi, Şehir Dışı ve Öğrenci Ulaşım Rehberi',
+      ru: 'Такси в Гюзельюрте: по городу, за город и для студентов',
+    },
+    description: {
+      en: 'A practical Güzelyurt taxi guide: fixed-price in-town rides, out-of-town trips to Nicosia, Kyrenia and Ercan Airport, and rides built around student life around the campuses.',
+      tr: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, Lefkoşa, Girne ve Ercan Havalimanı'na şehir dışı transferler ve kampüs çevresindeki öğrencilere göre kurgulanmış ulaşım.",
+      ru: 'Практичный гид по такси в Гюзельюрте: поездки по городу по фиксированной цене, за город — в Никосию, Кирению и аэропорт Эрджан, и поездки под студенческую жизнь у кампусов.',
+    },
+    body: {
+      en: `
+<p>Güzelyurt is a spread-out, unhurried town, and that shapes how a taxi works here. Cars rarely wait on the street, evenings can be quiet, and the places people actually need — the town centre, the campuses, the coast at Lefke, the airport across the island — are all a little apart. A fixed-price Güzelyurt taxi solves that in one call: you know the fare before you leave, the car comes to your door, and the same service covers a five-minute hop and a cross-island run alike. Here's how in-town, out-of-town and student rides work.</p>
+<h2>Why a taxi in Güzelyurt works differently</h2>
+<p>Unlike the resort towns on the coast, Güzelyurt has few taxis circling for fares, and almost none waiting late at night. The town is also low and wide, so walking between the centre, the residential edges and the campuses isn't always practical — especially with shopping, luggage or after dark. Booking ahead with a fixed price removes the two usual worries: whether a car will actually turn up, and what it will cost when it does.</p>
+<h2>In-town rides — around Güzelyurt</h2>
+<p>Short, everyday journeys at a fixed local price, so a quick trip never turns into a haggle:</p>
+<ul>
+  <li>Into the <strong>town centre</strong> for the market, a bank or a meal</li>
+  <li>To the <strong>hospital, a clinic or the pharmacy</strong></li>
+  <li>Between your <strong>home or dorm and the campus</strong></li>
+  <li>To the surrounding <strong>villages and the citrus groves</strong></li>
+  <li>A safe ride <strong>home in the evening</strong> when nothing is on the street</li>
+</ul>
+<h2>Out-of-town and intercity rides</h2>
+<p>The same fixed-price service takes you across the island without a meter running. Typical drive times from Güzelyurt:</p>
+<ul>
+  <li><strong>Nicosia (Lefkoşa):</strong> about 30–35 minutes</li>
+  <li><strong>Ercan Airport:</strong> about 50 minutes</li>
+  <li><strong>Kyrenia (Girne):</strong> about 45 minutes</li>
+  <li><strong>Lefke &amp; Gemikonağı coast:</strong> about 20 minutes</li>
+  <li><strong>Famagusta (Gazimağusa):</strong> about 1 hour 15 minutes</li>
+</ul>
+<p>Every out-of-town fare is agreed before you travel, and airport runs include flight tracking, so a delayed landing never costs you the car or the price.</p>
+<h2>Rides built around student life</h2>
+<p>Güzelyurt and the area around it are university country — the <strong>METU Northern Cyprus Campus</strong> at Kalkanlı, the <strong>European University of Lefke</strong>, and the <strong>Cyprus University of Health and Social Sciences (KSTÜ)</strong> — and a lot of what we do is student-shaped:</p>
+<ul>
+  <li><strong>Term-start and term-end airport runs</strong> — Ercan, or Larnaca/Paphos across the border — with luggage and a fixed price you can plan for</li>
+  <li><strong>Campus and dorm trips</strong>, day or night — Kalkanlı (METU), Lefke and the KSTÜ area</li>
+  <li><strong>Late, safe rides home</strong> when there's nothing waiting outside</li>
+  <li><strong>Share the fare</strong> — split one car between friends heading the same way and the per-person cost drops</li>
+  <li><strong>Regular runs</strong> — a weekly shop, a repeated campus route, or a monthly arrangement we quote up front</li>
+</ul>
+<p>Tell us it's a student trip when you book and we'll match the car to the group and the bags.</p>
+<h2>Why a fixed-price taxi</h2>
+<ul>
+  <li><strong>Price agreed first</strong> — no meter, no surprise at the door</li>
+  <li><strong>Comes to you</strong> — home, dorm, campus or hotel</li>
+  <li><strong>Reliable after dark</strong> — booked ahead, not hoped for</li>
+  <li><strong>One service for everything</strong> — a short hop or a cross-island run</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<h3>Can I get a taxi in Güzelyurt at night?</h3>
+<p>Yes — book ahead and the car comes to your door at the agreed time. Because few taxis wait on the street late, an evening or late-night ride is exactly where booking a fixed-price car pays off.</p>
+<h3>How long is a taxi from Güzelyurt to Ercan Airport?</h3>
+<p>About 50 minutes, straight across the middle of the island with no border. The fare is fixed in advance and we track your flight for the return.</p>
+<h3>Is there anything cheaper for students?</h3>
+<p>Share the fare. Split one car between friends travelling the same way — to the airport at term-start, or a regular campus route — and the per-person cost drops. We also quote monthly or repeated runs up front.</p>
+<h3>Do you do short in-town trips too, not just long ones?</h3>
+<p>Yes. Short local rides around Güzelyurt run at a fixed local price — the centre, the campus, the hospital or an evening out.</p>
+<h3>Can I set up a regular or monthly ride?</h3>
+<p>Yes. If you have a repeated route — a weekly shop, a campus commute — tell us and we'll agree a fixed arrangement so the same car is there each time.</p>
+<p>Need a ride now or on a schedule? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book in two minutes</a>.</p>`,
+      tr: `
+<p>Güzelyurt geniş yayılan, telaşsız bir kasabadır ve bu, taksinin burada nasıl çalıştığını doğrudan belirler. Araçlar sokakta pek beklemez, akşamlar sessiz olabilir ve insanların gerçekten gitmesi gereken yerler — şehir merkezi, kampüsler, Lefke sahili, adanın öbür ucundaki havalimanı — hep birbirinden biraz uzaktır. Sabit fiyatlı bir <strong>Güzelyurt taksi</strong> hizmeti bunu tek aramayla çözer: ücreti yola çıkmadan bilirsiniz, araç kapınıza gelir ve aynı hizmet hem beş dakikalık kısa bir yolu hem de ada boyu bir yolculuğu kapsar. İşte şehir içi, şehir dışı ve öğrenciye özel yolculukların nasıl işlediği.</p>
+<h2>Güzelyurt'ta taksi neden farklı çalışır?</h2>
+<p>Sahildeki tatil kasabalarının aksine Güzelyurt'ta müşteri için tur atan çok az taksi vardır, gece geç saatte ise neredeyse hiç bulunmaz. Kasaba alçak ve geniştir; merkez, konut kenarları ve kampüsler arasında yürümek — özellikle alışverişle, bagajla ya da hava karardıktan sonra — her zaman pratik değildir. Önceden ve sabit fiyatla rezervasyon, iki klasik endişeyi ortadan kaldırır: araç gerçekten gelecek mi ve geldiğinde ne kadar tutacak.</p>
+<h2>Şehir içi yolculuklar — Güzelyurt ve çevresi</h2>
+<p>Sabit yerel fiyatla kısa, günlük yolculuklar; kısacık bir yol asla pazarlığa dönüşmez:</p>
+<ul>
+  <li>Pazar, banka ya da yemek için <strong>şehir merkezine</strong></li>
+  <li><strong>Hastane, klinik ya da eczaneye</strong></li>
+  <li><strong>Ev ya da yurt ile kampüs arasına</strong></li>
+  <li>Çevre <strong>köylere ve narenciye bahçelerine</strong></li>
+  <li>Sokakta hiçbir şey olmadığında <strong>akşam güvenle eve dönüş</strong></li>
+</ul>
+<h2>Şehir dışı ve şehirler arası yolculuklar</h2>
+<p>Aynı sabit fiyatlı hizmet, taksimetre olmadan sizi adanın öbür ucuna götürür. Güzelyurt'tan tipik yolculuk süreleri:</p>
+<ul>
+  <li><strong>Lefkoşa:</strong> yaklaşık 30–35 dakika</li>
+  <li><strong>Ercan Havalimanı:</strong> yaklaşık 50 dakika</li>
+  <li><strong>Girne:</strong> yaklaşık 45 dakika</li>
+  <li><strong>Lefke ve Gemikonağı sahili:</strong> yaklaşık 20 dakika</li>
+  <li><strong>Gazimağusa:</strong> yaklaşık 1 saat 15 dakika</li>
+</ul>
+<p>Her şehir dışı ücret yola çıkmadan kararlaştırılır ve havalimanı yolculukları uçuş takibi içerir; böylece rötarlı bir iniş asla ne aracınıza ne de fiyatınıza mal olur.</p>
+<h2>Öğrenciye özel ulaşım</h2>
+<p>Güzelyurt ve çevresi bir üniversite bölgesidir — <strong>Kalkanlı'daki ODTÜ Kuzey Kıbrıs Kampüsü</strong>, <strong>Lefke Avrupa Üniversitesi</strong> ve <strong>Kıbrıs Sağlık ve Toplum Bilimleri Üniversitesi (KSTÜ)</strong> — ve yaptığımız işin büyük kısmı öğrenciye göre kurgulanır:</p>
+<ul>
+  <li><strong>Dönem başı ve dönem sonu havalimanı yolculukları</strong> — Ercan ya da sınır ötesinde Larnaka/Baf — bagajla ve önceden planlayabileceğiniz sabit fiyatla</li>
+  <li>Gündüz ya da gece <strong>kampüs ve yurt yolculukları</strong> — Kalkanlı (ODTÜ), Lefke Avrupa ve KSTÜ bölgesi</li>
+  <li>Dışarıda bekleyen hiçbir şey olmadığında <strong>geç saatte güvenli eve dönüş</strong></li>
+  <li><strong>Ücreti paylaşın</strong> — aynı yöne giden arkadaşlarla tek aracı bölüşün, kişi başı maliyet düşsün</li>
+  <li><strong>Düzenli yolculuklar</strong> — haftalık alışveriş, tekrar eden bir kampüs güzergahı ya da önceden fiyatladığımız aylık anlaşma</li>
+</ul>
+<p>Rezervasyon sırasında öğrenci yolculuğu olduğunu söyleyin; aracı gruba ve bagaja göre ayarlayalım.</p>
+<h2>Neden sabit fiyatlı taksi?</h2>
+<ul>
+  <li><strong>Fiyat önce kararlaşır</strong> — taksimetre yok, kapıda sürpriz yok</li>
+  <li><strong>Size gelir</strong> — ev, yurt, kampüs ya da otel</li>
+  <li><strong>Hava karardıktan sonra da güvenilir</strong> — umut değil, önceden rezervasyon</li>
+  <li><strong>Her şey için tek hizmet</strong> — kısa bir yol ya da ada boyu yolculuk</li>
+</ul>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Güzelyurt'ta gece taksi bulabilir miyim?</h3>
+<p>Evet — önceden rezervasyon yapın, araç kararlaştırılan saatte kapınıza gelsin. Geç saatte sokakta çok az taksi beklediğinden, akşam ya da gece yolculuğu tam olarak sabit fiyatlı bir aracın işe yaradığı yerdir.</p>
+<h3>Güzelyurt'tan Ercan Havalimanı'na taksi ne kadar sürer?</h3>
+<p>Yaklaşık 50 dakika; adanın tam ortasından, sınır olmadan. Ücret önceden sabittir ve dönüş için uçuşunuzu takip ederiz.</p>
+<h3>Öğrenciler için daha uygun bir seçenek var mı?</h3>
+<p>Ücreti paylaşın. Aynı yöne giden arkadaşlarla tek aracı bölüşün — dönem başında havalimanına ya da düzenli bir kampüs güzergahında — kişi başı maliyet düşer. Aylık ya da tekrar eden yolculukları da önceden fiyatlarız.</p>
+<h3>Sadece uzun yol değil, kısa şehir içi yolculuk da yapıyor musunuz?</h3>
+<p>Evet. Güzelyurt içindeki kısa yerel yolculuklar sabit yerel fiyatla yapılır — merkez, kampüs, hastane ya da akşam gezmesi.</p>
+<h3>Düzenli ya da aylık yolculuk ayarlayabilir miyim?</h3>
+<p>Evet. Tekrar eden bir güzergahınız varsa — haftalık alışveriş, kampüs gidiş-gelişi — bize söyleyin, aynı araç her seferinde orada olacak şekilde sabit bir anlaşma yapalım.</p>
+<p>Şimdi ya da düzenli bir yolculuk mu lazım? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada rezervasyon yapın</a>.</p>`,
+      ru: `
+<p>Гюзельюрт — растянутый, неспешный город, и это определяет, как здесь работает такси. Машины редко стоят на улице, вечера бывают тихими, а места, куда действительно нужно попасть — центр, кампусы, побережье у Лефке, аэропорт на другом конце острова, — все немного в стороне друг от друга. Такси в Гюзельюрте по фиксированной цене решает это одним звонком: цену вы знаете до выезда, машина приезжает к двери, и одна и та же услуга покрывает и пятиминутную поездку, и дорогу через весь остров. Вот как устроены поездки по городу, за город и для студентов.</p>
+<h2>Почему такси в Гюзельюрте работает иначе</h2>
+<p>В отличие от курортных городов на побережье, в Гюзельюрте мало такси, кружащих в поисках пассажиров, и почти нет их поздно вечером. Город низкий и просторный, поэтому идти пешком между центром, жилыми окраинами и кампусами не всегда удобно — особенно с покупками, багажом или после наступления темноты. Бронирование заранее с фиксированной ценой снимает две обычные тревоги: приедет ли машина и сколько это будет стоить.</p>
+<h2>Поездки по городу — по Гюзельюрту</h2>
+<p>Короткие ежедневные поездки по фиксированной местной цене, чтобы короткий путь никогда не превращался в торг:</p>
+<ul>
+  <li>В <strong>центр города</strong> — на рынок, в банк или поесть</li>
+  <li>В <strong>больницу, клинику или аптеку</strong></li>
+  <li>Между <strong>домом или общежитием и кампусом</strong></li>
+  <li>В окрестные <strong>деревни и цитрусовые сады</strong></li>
+  <li>Безопасная поездка <strong>домой вечером</strong>, когда на улице ничего нет</li>
+</ul>
+<h2>Поездки за город и между городами</h2>
+<p>Та же услуга с фиксированной ценой везёт вас через остров без счётчика. Типичное время в пути из Гюзельюрта:</p>
+<ul>
+  <li><strong>Никосия (Лефкоша):</strong> около 30–35 минут</li>
+  <li><strong>Аэропорт Эрджан:</strong> около 50 минут</li>
+  <li><strong>Кирения (Гирне):</strong> около 45 минут</li>
+  <li><strong>Побережье Лефке и Гемиконагы:</strong> около 20 минут</li>
+  <li><strong>Фамагуста (Газимагуса):</strong> около 1 ч 15 мин</li>
+</ul>
+<p>Цена любой загородной поездки согласуется до выезда, а поездки в аэропорт включают отслеживание рейса, так что задержка посадки никогда не стоит вам ни машины, ни цены.</p>
+<h2>Поездки под студенческую жизнь</h2>
+<p>Гюзельюрт и его окрестности — университетский край: <strong>кампус METU (ODTÜ) Северного Кипра</strong> в Калканлы, <strong>Европейский университет Лефке</strong> и <strong>Кипрский университет здоровья и социальных наук (KSTÜ)</strong>, — и многое из того, что мы делаем, устроено под студентов:</p>
+<ul>
+  <li><strong>Поездки в аэропорт в начале и конце семестра</strong> — Эрджан или Ларнака/Пафос через границу — с багажом и фиксированной ценой, которую можно спланировать</li>
+  <li><strong>Поездки к кампусу и общежитию</strong>, днём и ночью — Калканлы (METU/ODTÜ), Лефке и район KSTÜ</li>
+  <li><strong>Поздняя безопасная дорога домой</strong>, когда снаружи ничего не ждёт</li>
+  <li><strong>Разделите цену</strong> — поделите одну машину с друзьями по пути, и цена на человека падает</li>
+  <li><strong>Регулярные поездки</strong> — еженедельные покупки, повторяющийся маршрут к кампусу или месячная договорённость, которую мы оцениваем заранее</li>
+</ul>
+<p>Скажите при бронировании, что это студенческая поездка, и мы подберём машину под группу и багаж.</p>
+<h2>Почему такси с фиксированной ценой</h2>
+<ul>
+  <li><strong>Цена согласована заранее</strong> — без счётчика и без сюрприза у двери</li>
+  <li><strong>Приезжает к вам</strong> — дом, общежитие, кампус или отель</li>
+  <li><strong>Надёжно после темноты</strong> — забронировано, а не наудачу</li>
+  <li><strong>Одна услуга на всё</strong> — короткий путь или дорога через остров</li>
+</ul>
+<h2>Частые вопросы</h2>
+<h3>Можно ли взять такси в Гюзельюрте ночью?</h3>
+<p>Да — забронируйте заранее, и машина приедет к двери в согласованное время. Поскольку поздно вечером такси на улице почти нет, вечерняя или ночная поездка — именно тот случай, когда машина с фиксированной ценой окупается.</p>
+<h3>Сколько ехать на такси из Гюзельюрта до аэропорта Эрджан?</h3>
+<p>Около 50 минут, прямо через центр острова, без границы. Цена фиксируется заранее, а для обратной дороги мы отслеживаем ваш рейс.</p>
+<h3>Есть ли что-то дешевле для студентов?</h3>
+<p>Разделите цену. Поделите одну машину с друзьями по пути — в аэропорт в начале семестра или на регулярном маршруте к кампусу — и цена на человека падает. Месячные и повторяющиеся поездки мы также оцениваем заранее.</p>
+<h3>Вы делаете и короткие поездки по городу, не только дальние?</h3>
+<p>Да. Короткие местные поездки по Гюзельюрту идут по фиксированной местной цене — центр, кампус, больница или вечерний выход.</p>
+<h3>Можно ли договориться о регулярной или месячной поездке?</h3>
+<p>Да. Если у вас есть повторяющийся маршрут — еженедельные покупки, дорога к кампусу — скажите нам, и мы согласуем фиксированную договорённость, чтобы та же машина была на месте каждый раз.</p>
+<p>Нужна поездка сейчас или по расписанию? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте за две минуты</a>.</p>`,
+    },
+  },
+  {
     // frontend/content/blog/*/… MDX yazısından taşındı.
     slug: 'cyprus-airport-transfer-guide',
     date: '2026-05-01',
