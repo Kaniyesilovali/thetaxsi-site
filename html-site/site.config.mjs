@@ -11,6 +11,10 @@ export const config = {
   whatsapp: '35799000000', // wa.me formatı: ülke kodu + numara, boşluksuz, + işaretsiz
   email: 'concierge@taxsi.cy',
 
+  // Sosyal medya — TODO: gerçek hesaplarla değiştir. Boş bırakılırsa footer'da gizlenir.
+  instagram: 'https://instagram.com/',
+  facebook: 'https://facebook.com/',
+
   // Google Apps Script Web App URL'i — apps-script/README-sheets.md'deki
   // kurulumu yaptıktan sonra buraya yapıştır. Boşsa form yalnızca WhatsApp'a yönlendirir.
   sheetsEndpoint: '',

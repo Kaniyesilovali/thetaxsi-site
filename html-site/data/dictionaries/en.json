@@ -479,6 +479,14 @@
     "directHeading": "Direct lines",
     "serviceHeading": "Service",
     "companyHeading": "Company",
+    "guidesHeading": "Travel Guides",
+    "guides": [
+      "Ercan Airport",
+      "Larnaca Airport",
+      "Paphos Airport",
+      "Güzelyurt Transfers",
+      "İskele & Long Beach"
+    ],
     "legalHeading": "Legal",
     "followHeading": "Follow",
     "paymentsLine": "Secure payments via Stripe · Cards accepted · Cash on arrival",

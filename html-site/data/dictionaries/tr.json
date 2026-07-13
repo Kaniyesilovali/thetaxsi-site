@@ -479,6 +479,14 @@
     "directHeading": "Doğrudan hatlar",
     "serviceHeading": "Hizmet",
     "companyHeading": "Kurumsal",
+    "guidesHeading": "Bilgi Merkezi",
+    "guides": [
+      "Ercan Havalimanı",
+      "Larnaka Havalimanı",
+      "Baf Havalimanı",
+      "Güzelyurt Transferi",
+      "İskele & Long Beach"
+    ],
     "legalHeading": "Yasal",
     "followHeading": "Takip Et",
     "paymentsLine": "Stripe ile güvenli ödeme · Kartlar kabul edilir · Varışta nakit",

@@ -13,6 +13,9 @@ export const icons = {
   menu: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="size-5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
   x: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="size-5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>`,
   check: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>`,
+  pin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-4.5" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>`,
+  facebook: `<svg viewBox="0 0 24 24" fill="currentColor" class="size-4.5" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>`,
 }
 
 function header(ctx) {
@@ -62,42 +65,69 @@ function header(ctx) {
 </header>`
 }
 
+const langNames = { en: 'English', tr: 'Türkçe', ru: 'Русский' }
+
 function footer(ctx) {
-  const { lang, dict, xtra } = ctx
+  const { lang, dict, xtra, path = '/' } = ctx
   const base = `/${lang}`
   const t = dict.footer
+
+  // Bilgi Merkezi — kısa etiketler dictionary'deki footer.guides ile aynı sırada olmalı
+  const guideSlugs = [
+    'ercan-airport-arrival-guide',
+    'larnaca-airport-arrival-guide',
+    'paphos-airport-arrival-guide',
+    'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci',
+    'iskele-long-beach-hotels-transfer-guide',
+  ]
+  const guideItems = (t.guides || []).map((label, i) => ({
+    href: `${base}/blog/${guideSlugs[i]}/`,
+    label,
+  }))
+
+  // Link sütunu — başlık + bağlantı listesi (referans görseldeki Hizmetler/Kurumsal düzeni)
   const col = (heading, items) => `
-      <div class="lg:col-span-2">
+      <div>
         <p class="eyebrow text-sea">${esc(heading)}</p>
         <ul class="mt-6 flex flex-col gap-3">
-          ${items.map((l) => `<li><a href="${l.href}" class="text-sm text-white/65 transition-colors hover:text-white">${esc(l.label)}</a></li>`).join('\n          ')}
+          ${items.map((l) => `<li><a href="${l.href}" class="text-sm text-white/60 transition-colors hover:text-white">${esc(l.label)}</a></li>`).join('\n          ')}
         </ul>
       </div>`
+
+  // Marka sütunundaki dil seçici — mevcut sayfanın diğer dillerdeki karşılığına bağlanır
+  const langLinks = config.languages
+    .map((l) => {
+      const active = l === lang
+      return `<a href="/${l}${path}" class="transition-colors ${active ? 'text-sea' : 'text-white/45 hover:text-white'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
+    })
+    .join('<span class="text-white/20">·</span>')
+
+  // Sosyal ikon — config'de bağlantı boşsa gösterilmez
+  const social = (href, icon, label) =>
+    href
+      ? `<a href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${label}" class="inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-white/60 transition-colors hover:border-sea hover:text-sea">${icon}</a>`
+      : ''
 
   return `
 <footer class="relative border-t border-white/10 bg-navy text-white">
   <div class="relative mx-auto max-w-7xl px-4 pt-20 pb-10 sm:px-6">
-    <div class="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-12">
-      <div class="col-span-2 lg:col-span-4">
-        <p class="font-display text-3xl font-semibold tracking-tight text-white">TheTaxsi</p>
-        <p class="mt-3 text-sm text-white/45">${esc(t.tagline)}</p>
-        <span class="mt-6 block h-px w-12 bg-sea"></span>
-        <div class="mt-6 space-y-1 text-xs uppercase tracking-[0.18em] text-white/45">
-          ${t.addressLines.map((line) => `<p>${esc(line)}</p>`).join('\n          ')}
+    <div class="flex flex-col gap-14 lg:flex-row lg:gap-20">
+      <!-- Marka: logo + isim, açıklama, dil seçici, sosyal ikonlar -->
+      <div class="lg:w-64 lg:shrink-0">
+        <a href="${base}/" class="inline-flex items-center gap-3">
+          <span class="inline-flex size-11 items-center justify-center rounded-full bg-sea/12 font-display text-lg font-semibold text-sea">T</span>
+          <span class="font-display text-2xl font-semibold tracking-tight text-white">TheTaxsi</span>
+        </a>
+        <p class="mt-6 max-w-xs text-sm leading-relaxed text-white/50">${esc(t.tagline)}</p>
+        <p class="mt-6 flex items-center gap-2 text-xs text-white/45">${langLinks}</p>
+        <div class="mt-6 flex items-center gap-3">
+          ${social(config.instagram, icons.instagram, 'Instagram')}
+          ${social(config.facebook, icons.facebook, 'Facebook')}
+          ${social(`https://wa.me/${config.whatsapp}`, icons.whatsapp, 'WhatsApp')}
         </div>
-        <p class="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-sea/80">
-          <span class="size-1.5 rounded-full bg-sea"></span>
-          ${esc(t.hours)}
-        </p>
       </div>
-      <div class="col-span-2 lg:col-span-3">
-        <p class="eyebrow text-sea">${esc(t.directHeading)}</p>
-        <ul class="mt-6 flex flex-col gap-4">
-          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>
-          <li><a href="mailto:${config.email}" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.mail}</span>${config.email}</a></li>
-          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.whatsapp}</span>WhatsApp</a></li>
-        </ul>
-      </div>
+      <!-- Link + iletişim sütunları: kalan alana eşit dağılır -->
+      <div class="grid flex-1 grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-4">
       ${col(t.serviceHeading, [
         { href: `${base}/book/`, label: dict.nav.book },
         { href: `${base}/routes/`, label: dict.nav.routes },
@@ -105,18 +135,36 @@ function footer(ctx) {
       ${col(t.companyHeading, [
         { href: `${base}/about/`, label: dict.nav.about },
         { href: `${base}/blog/`, label: xtra.nav.blog },
-        { href: `${base}/contact/`, label: dict.nav.contact },
         { href: `${base}/faq/`, label: xtra.nav.faq },
+        { href: `${base}/contact/`, label: dict.nav.contact },
       ])}
-      ${col(t.legalHeading, [
-        { href: `${base}/privacy/`, label: dict.privacy.title },
-        { href: `${base}/terms/`, label: dict.terms.title },
-      ])}
+      <!-- Bilgi Merkezi: öne çıkan rehber yazıları (referans görseldeki düzen) -->
+      ${col(t.guidesHeading, guideItems)}
+      <!-- İletişim: ikonlu adres, telefon, WhatsApp, e-posta -->
+      <div>
+        <p class="eyebrow text-sea">${esc(t.directHeading)}</p>
+        <ul class="mt-6 flex flex-col gap-4">
+          <li class="flex items-start gap-3 text-sm text-white/60"><span class="mt-0.5 shrink-0 text-sea/70">${icons.pin}</span><span>${t.addressLines.map(esc).join(' · ')}</span></li>
+          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>
+          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.whatsapp}</span>WhatsApp</a></li>
+          <li><a href="mailto:${config.email}" class="group flex items-start gap-3 text-sm text-white/60 transition-colors hover:text-white"><span class="mt-0.5 shrink-0 text-sea/70 transition-colors group-hover:text-sea">${icons.mail}</span><span class="break-all">${config.email}</span></a></li>
+        </ul>
+        <p class="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-sea/80">
+          <span class="size-1.5 shrink-0 rounded-full bg-sea"></span>
+          ${esc(t.hours)}
+        </p>
+      </div>
+      </div>
     </div>
-    <div class="mt-16 border-t border-white/10 pt-8">
-      <p class="text-[11px] uppercase tracking-[0.22em] text-white/30">${esc(t.paymentsLine)}</p>
-      <p class="mt-2 text-xs text-white/25">${esc(t.copyright.replace('{year}', String(new Date().getFullYear())))}</p>
+    <!-- Alt bar: solda telif, sağda yasal bağlantılar (referans düzen) -->
+    <div class="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-xs text-white/30">${esc(t.copyright.replace('{year}', String(new Date().getFullYear())))}</p>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-white/40">
+        <a href="${base}/privacy/" class="transition-colors hover:text-white">${esc(dict.privacy.title)}</a>
+        <a href="${base}/terms/" class="transition-colors hover:text-white">${esc(dict.terms.title)}</a>
+      </div>
     </div>
+    <p class="mt-6 text-[11px] uppercase tracking-[0.22em] text-white/25">${esc(t.paymentsLine)}</p>
   </div>
 </footer>
 
