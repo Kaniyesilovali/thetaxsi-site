@@ -352,43 +352,91 @@ export const posts = [
     },
     body: {
       en: `
-<p>Ercan (ECN) is North Cyprus's own airport — small, calm and only a short drive from Nicosia, Kyrenia and Famagusta. If you're flying in via Istanbul or another Turkish hub, this is where your holiday really begins. Here's how a typical arrival unfolds.</p>
+<p>Ercan (ECN) is North Cyprus's own airport — small, calm and only a short drive from Nicosia, Kyrenia and Famagusta. If you're flying in via Istanbul or another Turkish hub, this is where your holiday really begins. Here's how a typical arrival unfolds, from the runway to your hotel door — and how we help you get around afterwards.</p>
 <h2>Passport control</h2>
-<p>Ercan is rarely crowded. Most visitors clear passport control in ten to fifteen minutes; you'll be asked for your passport and are usually given entry on arrival with no advance visa. Officers can stamp a separate slip rather than your passport if you ask.</p>
+<p>Ercan is rarely crowded, so it's one of the quickest airports on the island to clear. Most visitors are through passport control in ten to fifteen minutes; you'll be asked for your passport and are usually given entry on arrival with no advance visa, for stays of up to 90 days. If you'd rather keep your passport clean, officers will stamp a separate slip instead — just ask, it's routine.</p>
 <h2>Luggage and the terminal</h2>
-<p>A new terminal opened here, and baggage reclaim is quick and clearly signed. Trolleys are free. There are car-rental desks, a currency exchange and a few cafés, but the airport is compact — you won't get lost.</p>
+<p>Ercan's new terminal is bright and easy to navigate, with quick, clearly signed baggage reclaim and free trolleys. You'll find car-rental desks, a currency exchange, a pharmacy and a few cafés, but the building is compact enough that you won't get lost or lose your driver. Step out of the baggage hall and the arrivals meeting point is right in front of you.</p>
 <h2>Money and a SIM card</h2>
-<p>The local currency is the Turkish Lira, though many hotels and drivers also accept euros and sterling. Change a small amount at the airport for incidentals, and pick up a local SIM (Turkcell or KKTCELL) from the arrivals desk if you want data straight away.</p>
+<p>The local currency is the Turkish Lira, though many hotels, restaurants and drivers also accept euros and sterling. It's worth changing a small amount at the airport for incidentals and tips. If you want data the moment you land, pick up a local SIM (Turkcell or KKTCELL) from the desk in arrivals — bring your passport, as registration is required.</p>
 <h2>Where we meet you</h2>
-<p>Your chauffeur waits in the arrivals hall opposite the exit doors, holding a sign with your name. We track your flight, so a delay never shortens your included waiting time. No calls, no searching — walk out and look ahead.</p>
+<p>Your chauffeur waits in the arrivals hall opposite the exit doors, holding a sign with your name. We track your flight from departure, so a delay never shortens your included waiting time and there's no rush on your side. No calls, no searching — walk out, look ahead, and we're there.</p>
 <h2>How far to your hotel</h2>
-<p>Ercan is central. Typical drives: Kyrenia about 35 minutes, Famagusta about 40, İskele/Long Beach about 45, Güzelyurt about 50. Every route has a fixed fare agreed before you travel.</p>
+<p>Ercan is central, so most journeys are short:</p>
+<ul>
+  <li>Kyrenia (Girne): about 35 minutes</li>
+  <li>Famagusta (Gazimağusa): about 40 minutes</li>
+  <li>İskele / Long Beach: about 45 minutes</li>
+  <li>Güzelyurt (Morphou): about 50 minutes</li>
+</ul>
+<p>Every route has a fixed fare agreed before you travel — no meter, and your driver takes you to your exact hotel reception, not the nearest junction.</p>
+<h2>Getting around during your stay — local rides</h2>
+<p>The service doesn't stop at check-in. We also handle <strong>şehir içi (in-town) and around-the-island journeys</strong> at fixed local prices — an evening on Kyrenia harbour, a day at a casino hotel, a university drop-off, a hospital or pharmacy run, or a trip out to Famagusta or the Karpaz. In the quieter towns, where taxis rarely wait around after dark, this is often the handiest part of the service. Arrange it when you book, or message us during your stay.</p>
+<h2>Frequently asked questions</h2>
+<h3>Do I need a visa to land at Ercan?</h3>
+<p>Most nationalities receive entry on arrival with no advance visa, for up to 90 days. Bring a valid passport; a stamp can go on a separate slip if you prefer.</p>
+<h3>Can I pay the driver in euros?</h3>
+<p>Yes. Euros and sterling are widely accepted alongside the Lira, and your transfer fare is fixed in advance either way.</p>
+<h3>Do you do local trips too, or only airport transfers?</h3>
+<p>Both. We run in-town and cross-island rides at fixed local prices throughout your stay.</p>
 <p>Ready for when you land? <a href="/en/routes/">See fixed prices for every route</a> or <a href="/en/book/">book your transfer</a>.</p>`,
       tr: `
-<p>Ercan (ECN), Kuzey Kıbrıs'ın kendi havalimanıdır — küçük, sakin ve Lefkoşa, Girne ile Gazimağusa'ya kısa mesafede. İstanbul veya başka bir Türk aktarma noktası üzerinden geliyorsanız, tatiliniz asıl burada başlar. İşte tipik bir varış nasıl ilerler.</p>
+<p>Ercan (ECN), Kuzey Kıbrıs'ın kendi havalimanıdır — küçük, sakin ve Lefkoşa, Girne ile Gazimağusa'ya kısa mesafede. İstanbul veya başka bir Türk aktarma noktası üzerinden geliyorsanız, tatiliniz asıl burada başlar. İşte pistten otel kapınıza kadar tipik bir varış nasıl ilerler — ve sonrasında sizi nasıl gezdirdiğimiz.</p>
 <h2>Pasaport kontrolü</h2>
-<p>Ercan nadiren kalabalıktır. Çoğu ziyaretçi pasaport kontrolünden on ila on beş dakikada geçer; pasaportunuz istenir ve genellikle önceden vize olmadan varışta giriş verilir. İsterseniz görevliler pasaportunuza değil ayrı bir kağıda mühür basabilir.</p>
+<p>Ercan nadiren kalabalıktır, bu yüzden adanın en hızlı geçilen havalimanlarından biridir. Çoğu ziyaretçi pasaport kontrolünden on ila on beş dakikada geçer; pasaportunuz istenir ve genellikle önceden vize olmadan, 90 güne kadar konaklama için varışta giriş verilir. Pasaportunuzu temiz tutmayı tercih ederseniz görevliler mührü ayrı bir kağıda basar — sadece söyleyin, olağan bir işlemdir.</p>
 <h2>Bagaj ve terminal</h2>
-<p>Burada yeni bir terminal açıldı; bagaj alımı hızlı ve açık şekilde yönlendirilmiştir. Arabalar ücretsizdir. Araç kiralama bankoları, döviz bürosu ve birkaç kafe var, ama havalimanı kompakt — kaybolmazsınız.</p>
+<p>Ercan'ın yeni terminali aydınlık ve kolay yönlendirmelidir; hızlı, açık işaretli bagaj alımı ve ücretsiz arabalar vardır. Araç kiralama bankoları, döviz bürosu, bir eczane ve birkaç kafe bulursunuz, ama bina kaybolmayacağınız ya da şoförünüzü kaçırmayacağınız kadar kompakttır. Bagaj salonundan çıkın, varış buluşma noktası tam karşınızdadır.</p>
 <h2>Para ve SIM kart</h2>
-<p>Yerel para birimi Türk Lirası'dır, yine de birçok otel ve sürücü euro ve sterlin de kabul eder. Ufak masraflar için havalimanında az miktarda bozdurun ve hemen internet isterseniz varış bankosundan yerel bir SIM (Turkcell veya KKTCELL) alın.</p>
+<p>Yerel para birimi Türk Lirası'dır, yine de birçok otel, restoran ve sürücü euro ve sterlin de kabul eder. Ufak masraflar ve bahşişler için havalimanında az miktarda bozdurmakta fayda var. İner inmez internet isterseniz varış salonundaki bankodan yerel bir SIM (Turkcell veya KKTCELL) alın — kayıt gerektiğinden pasaportunuzu yanınıza alın.</p>
 <h2>Sizi nerede karşılıyoruz</h2>
-<p>Şoförünüz varış salonunda, çıkış kapılarının karşısında, adınızın yazılı olduğu tabelayla bekler. Uçuşunuzu takip ederiz; gecikme, dahil olan bekleme sürenizi asla kısaltmaz. Arama yok, aranma yok — dışarı çıkın ve karşıya bakın.</p>
+<p>Şoförünüz varış salonunda, çıkış kapılarının karşısında, adınızın yazılı olduğu tabelayla bekler. Uçuşunuzu kalkıştan itibaren takip ederiz; gecikme dahil olan bekleme sürenizi asla kısaltmaz ve sizin acele etmenize gerek yoktur. Arama yok, aranma yok — dışarı çıkın, karşıya bakın, oradayız.</p>
 <h2>Otelinize ne kadar var</h2>
-<p>Ercan merkezîdir. Tipik süreler: Girne yaklaşık 35 dakika, Gazimağusa yaklaşık 40, İskele/Long Beach yaklaşık 45, Güzelyurt yaklaşık 50. Her güzergahın, yola çıkmadan kararlaştırılan sabit bir ücreti vardır.</p>
+<p>Ercan merkezîdir, bu yüzden çoğu yolculuk kısadır:</p>
+<ul>
+  <li>Girne: yaklaşık 35 dakika</li>
+  <li>Gazimağusa: yaklaşık 40 dakika</li>
+  <li>İskele / Long Beach: yaklaşık 45 dakika</li>
+  <li>Güzelyurt: yaklaşık 50 dakika</li>
+</ul>
+<p>Her güzergahın, yola çıkmadan kararlaştırılan sabit bir ücreti vardır — taksimetre yok ve şoförünüz sizi en yakın kavşağa değil, tam otel resepsiyonunuza götürür.</p>
+<h2>Konaklamanız boyunca ulaşım — şehir içi yolculuklar</h2>
+<p>Hizmet, otele girişte bitmez. <strong>Şehir içi ve ada geneli yolculukları</strong> da sabit yerel fiyatlarla düzenliyoruz — Girne limanında bir akşam, bir casino otelinde bir gün, üniversiteye bırakma, hastane ya da eczane yolculuğu veya Gazimağusa ya da Karpaz'a bir gezi. Taksilerin karanlıktan sonra nadiren beklediği daha sakin kasabalarda bu çoğu zaman hizmetin en kullanışlı kısmıdır. Rezervasyon sırasında ayarlayın ya da konaklamanız sırasında bize yazın.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Ercan'a inmek için vize gerekir mi?</h3>
+<p>Çoğu ülke vatandaşı önceden vize olmadan, 90 güne kadar varışta giriş alır. Geçerli bir pasaport getirin; isterseniz mühür ayrı bir kağıda basılabilir.</p>
+<h3>Sürücüye euro ile ödeyebilir miyim?</h3>
+<p>Evet. Lira'nın yanı sıra euro ve sterlin yaygın olarak kabul edilir ve transfer ücretiniz her hâlükârda önceden sabittir.</p>
+<h3>Sadece havalimanı transferi mi, yoksa yerel yolculuklar da mı yapıyorsunuz?</h3>
+<p>İkisi de. Konaklamanız boyunca şehir içi ve ada geneli yolculukları sabit yerel fiyatlarla yaparız.</p>
 <p>İndiğiniz an için hazır mıyız? <a href="/tr/routes/">Tüm güzergahların sabit fiyatlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>`,
       ru: `
-<p>Эрджан (ECN) — собственный аэропорт Северного Кипра: небольшой, спокойный и всего в нескольких минутах езды от Никосии, Кирении и Фамагусты. Если вы летите через Стамбул или другой турецкий хаб, именно здесь начинается ваш отдых. Вот как обычно проходит прибытие.</p>
+<p>Эрджан (ECN) — собственный аэропорт Северного Кипра: небольшой, спокойный и всего в нескольких минутах езды от Никосии, Кирении и Фамагусты. Если вы летите через Стамбул или другой турецкий хаб, именно здесь начинается ваш отдых. Вот как обычно проходит прибытие — от полосы до дверей отеля — и как мы помогаем передвигаться потом.</p>
 <h2>Паспортный контроль</h2>
-<p>В Эрджане редко бывает людно. Большинство гостей проходят контроль за десять–пятнадцать минут; у вас попросят паспорт и, как правило, дадут въезд по прибытии без предварительной визы. По желанию штамп могут поставить на отдельный листок, а не в паспорт.</p>
+<p>В Эрджане редко бывает людно, поэтому это один из самых быстрых аэропортов острова. Большинство гостей проходят контроль за десять–пятнадцать минут; у вас попросят паспорт и, как правило, дадут въезд по прибытии без предварительной визы, на срок до 90 дней. Если хотите сохранить паспорт «чистым», штамп поставят на отдельный листок — просто попросите, это обычное дело.</p>
 <h2>Багаж и терминал</h2>
-<p>Здесь открылся новый терминал, выдача багажа быстрая и с понятными указателями. Тележки бесплатны. Есть стойки проката авто, обмен валюты и несколько кафе, но аэропорт компактный — вы не заблудитесь.</p>
+<p>Новый терминал Эрджана светлый и удобный, с быстрой выдачей багажа по понятным указателям и бесплатными тележками. Есть стойки проката авто, обмен валюты, аптека и несколько кафе, но здание достаточно компактное, чтобы не заблудиться и не потерять водителя. Выйдите из зоны багажа — точка встречи прилёта прямо перед вами.</p>
 <h2>Деньги и SIM-карта</h2>
-<p>Местная валюта — турецкая лира, хотя многие отели и водители принимают также евро и фунты. Обменяйте небольшую сумму в аэропорту на мелкие расходы и возьмите местную SIM (Turkcell или KKTCELL) на стойке в зоне прилёта, если интернет нужен сразу.</p>
+<p>Местная валюта — турецкая лира, хотя многие отели, рестораны и водители принимают также евро и фунты. Стоит обменять небольшую сумму в аэропорту на мелкие расходы и чаевые. Если интернет нужен сразу после посадки, возьмите местную SIM (Turkcell или KKTCELL) на стойке в зоне прилёта — возьмите паспорт, так как нужна регистрация.</p>
 <h2>Где мы вас встречаем</h2>
-<p>Ваш водитель ждёт в зале прилёта напротив выходных дверей с табличкой с вашим именем. Мы отслеживаем рейс, поэтому задержка никогда не сокращает включённое время ожидания. Не нужно звонить или искать — выходите и смотрите прямо перед собой.</p>
+<p>Ваш водитель ждёт в зале прилёта напротив выходных дверей с табличкой с вашим именем. Мы отслеживаем рейс с момента вылета, поэтому задержка никогда не сокращает включённое время ожидания, и вам некуда спешить. Не нужно звонить или искать — выходите, смотрите вперёд, мы на месте.</p>
 <h2>Сколько ехать до отеля</h2>
-<p>Эрджан расположен центрально. Типичное время: Кирения около 35 минут, Фамагуста около 40, Искеле/Лонг-Бич около 45, Гюзельюрт около 50. У каждого маршрута фиксированная цена, оговорённая до поездки.</p>
+<p>Эрджан расположен центрально, поэтому большинство поездок короткие:</p>
+<ul>
+  <li>Кирения (Гирне): около 35 минут</li>
+  <li>Фамагуста (Газимагуса): около 40 минут</li>
+  <li>Искеле / Лонг-Бич: около 45 минут</li>
+  <li>Гюзельюрт (Морфу): около 50 минут</li>
+</ul>
+<p>У каждого маршрута фиксированная цена, оговорённая до поездки — без счётчика, и водитель довезёт вас к самой стойке отеля, а не к ближайшему перекрёстку.</p>
+<h2>Передвижение во время отдыха — поездки по городу</h2>
+<p>Услуга не заканчивается при заселении. Мы также организуем <strong>поездки по городу (şehir içi) и по всему острову</strong> по фиксированным местным ценам — вечер в гавани Кирении, день в казино-отеле, поездку в университет, дорогу в больницу или аптеку или выезд в Фамагусту или на Карпаз. В более тихих городах, где такси редко дежурят после наступления темноты, это часто самая удобная часть услуги. Договоритесь при бронировании или напишите нам во время поездки.</p>
+<h2>Частые вопросы</h2>
+<h3>Нужна ли виза, чтобы прилететь в Эрджан?</h3>
+<p>Большинству гостей въезд даётся по прибытии без предварительной визы, на срок до 90 дней. Возьмите действующий паспорт; при желании штамп поставят на отдельный листок.</p>
+<h3>Можно ли заплатить водителю в евро?</h3>
+<p>Да. Наряду с лирой широко принимают евро и фунты, а цена трансфера в любом случае фиксируется заранее.</p>
+<h3>Вы делаете и местные поездки, или только трансферы из аэропорта?</h3>
+<p>И то, и другое. В течение всего отдыха мы возим по городу и по острову по фиксированным местным ценам.</p>
 <p>Готовы к моменту посадки? <a href="/ru/routes/">Смотрите фиксированные цены на все маршруты</a> или <a href="/ru/book/">забронируйте трансфер</a>.</p>`,
     },
   },
@@ -407,43 +455,76 @@ export const posts = [
     },
     body: {
       en: `
-<p>It's the most common question we're asked before a transfer, so here's a clear, practical answer. Rules can change, so treat this as guidance and check your own nationality's requirements before you travel.</p>
+<p>It's the most common question we're asked before a transfer: do you need a visa or passport to enter North Cyprus? Here's a clear, practical answer for both routes in — flying into Ercan and crossing from the south. Rules can change, so treat this as guidance and check your own nationality's requirements before you travel.</p>
 <h2>You need a passport</h2>
-<p>A valid passport is required to enter North Cyprus, whether you land at Ercan or cross from the south. Most nationalities do not need a visa in advance — entry is granted on arrival for a stay of up to 90 days.</p>
+<p>A valid passport is required to enter North Cyprus, whether you land at Ercan or cross the Green Line from the south. Most nationalities — including UK, EU, US, Gulf and Turkish citizens — do not need a visa in advance. Entry is granted on arrival, normally for a stay of up to 90 days. Check that your passport has reasonable validity remaining, and if you're unsure about your nationality, confirm with your airline before departure.</p>
 <h2>Will they stamp my passport?</h2>
-<p>Usually not. Border officers routinely stamp a separate piece of paper rather than your passport, so a North Cyprus entry leaves no mark. If you'd prefer this, simply ask — it's the norm, not a special request.</p>
+<p>Usually not. Border officers routinely stamp a separate piece of paper — a small entry slip — rather than your passport, so a North Cyprus entry leaves no mark in the document itself. This is standard practice, useful if you later travel to countries that ask about it. Keep the slip with your passport until you leave. If you'd like the stamp on the slip rather than the page, you rarely even need to ask.</p>
 <h2>Flying into Ercan</h2>
-<p>If you arrive directly at Ercan, you clear passport control at the airport and you're done. Your chauffeur is waiting on the other side of the doors.</p>
+<p>If you arrive directly at Ercan, you clear passport control at the airport and you're done — there's no second checkpoint on the way to your hotel. Your chauffeur is waiting on the other side of the doors, and the drive to Kyrenia, Famagusta or İskele is short.</p>
 <h2>Crossing from Larnaca or Paphos</h2>
-<p>If you land in the south and cross the Green Line by car, you show your passport at the checkpoint. You stay in the vehicle, there is no fee for passengers, and your chauffeur knows the procedure. Having entered through Larnaca or Paphos, you are already legally in Cyprus; the crossing simply moves you north.</p>
+<p>If you land in the south and cross the Green Line by car, you show your passport at a checkpoint along the way. You stay in the vehicle, there is no fee for passengers, and your chauffeur knows the procedure and the quickest lane. Having entered the island through Larnaca or Paphos, you are already legally in Cyprus; the crossing simply moves you between the two administrations. For western destinations such as Güzelyurt and Lefke we use the Bostancı (Astromeritis) crossing.</p>
 <h2>Rental cars are the exception</h2>
-<p>The one thing to know: a hire car picked up in the south often cannot be taken north (and vice versa), and insurance rarely covers the crossing. A private transfer avoids the problem entirely — one car, both sides, no paperwork for you.</p>
+<p>The one thing worth knowing: a hire car picked up in the south often cannot be taken north (and vice versa), and rental insurance rarely covers crossing the line. It's the single most common trip-up for first-time visitors. A private transfer avoids the problem entirely — one car, both sides of the island, and no paperwork or insurance worries for you. It also means you can move freely between north and south without swapping vehicles.</p>
+<h2>Getting around once you're in</h2>
+<p>Beyond the airport run and the crossing, we also handle <strong>şehir içi (in-town) and cross-island journeys</strong> at fixed local prices — including day trips that cross back and forth between north and south, which is exactly where a driver who does the checkpoint daily saves you time and uncertainty.</p>
+<h2>Frequently asked questions</h2>
+<h3>Do I need a visa for North Cyprus?</h3>
+<p>Most nationalities don't — entry is on arrival for up to 90 days with a valid passport. Check your specific nationality before travelling.</p>
+<h3>Will North Cyprus stamp my passport?</h3>
+<p>Normally no. Officers stamp a separate slip by default, leaving your passport unmarked.</p>
+<h3>Can I take a rental car across the border?</h3>
+<p>Usually not, and insurance rarely covers it. A private transfer crosses freely with no paperwork on your side.</p>
+<h3>Do I need anything to cross back to the south?</h3>
+<p>Just your passport again for a brief check. You stay in the car and there's no passenger fee.</p>
 <p>Planning a crossing? <a href="/en/routes/">See fixed transfer prices</a> or <a href="/en/book/">book in two minutes</a>.</p>`,
       tr: `
-<p>Transferden önce bize en sık sorulan soru budur, işte net ve pratik bir yanıt. Kurallar değişebilir; bunu bir rehber olarak görün ve yola çıkmadan kendi vatandaşlığınızın koşullarını kontrol edin.</p>
+<p>Transferden önce bize en sık sorulan soru budur: Kuzey Kıbrıs'a girmek için vize veya pasaport gerekir mi? İşte iki giriş yolu için de net ve pratik bir yanıt — Ercan'a uçmak ve güneyden geçmek. Kurallar değişebilir; bunu bir rehber olarak görün ve yola çıkmadan kendi vatandaşlığınızın koşullarını kontrol edin.</p>
 <h2>Pasaport gerekir</h2>
-<p>Kuzey Kıbrıs'a girmek için geçerli bir pasaport gereklidir — ister Ercan'a inin ister güneyden geçin. Çoğu ülke vatandaşının önceden vizeye ihtiyacı yoktur; giriş, 90 güne kadar konaklama için varışta verilir.</p>
+<p>Kuzey Kıbrıs'a girmek için geçerli bir pasaport gereklidir — ister Ercan'a inin ister güneyden Yeşil Hat'tı geçin. İngiltere, AB, ABD, Körfez ve Türkiye vatandaşları dahil çoğu ülke vatandaşının önceden vizeye ihtiyacı yoktur. Giriş varışta verilir, genellikle 90 güne kadar konaklama için. Pasaportunuzun makul bir geçerlilik süresi kaldığından emin olun ve vatandaşlığınızdan emin değilseniz kalkıştan önce havayolunuza danışın.</p>
 <h2>Pasaportuma mühür basılır mı?</h2>
-<p>Genellikle hayır. Sınır görevlileri çoğunlukla pasaportunuza değil ayrı bir kağıda mühür basar, böylece Kuzey Kıbrıs girişi iz bırakmaz. Bunu tercih ederseniz sadece söyleyin — bu istisna değil, olağan uygulamadır.</p>
+<p>Genellikle hayır. Sınır görevlileri çoğunlukla pasaportunuza değil ayrı bir kağıda — küçük bir giriş fişine — mühür basar, böylece Kuzey Kıbrıs girişi belgede iz bırakmaz. Bu standart bir uygulamadır; ileride bunu soran ülkelere gidecekseniz işinize yarar. Fişi çıkışa kadar pasaportunuzla birlikte saklayın. Mührün sayfaya değil fişe basılmasını istemenize genellikle gerek bile kalmaz.</p>
 <h2>Ercan'a uçarken</h2>
-<p>Doğrudan Ercan'a inerseniz pasaport kontrolünü havalimanında geçer ve işlem tamamlanır. Şoförünüz kapıların diğer tarafında bekler.</p>
+<p>Doğrudan Ercan'a inerseniz pasaport kontrolünü havalimanında geçer ve işlem tamamlanır — otelinize giderken ikinci bir kontrol noktası yoktur. Şoförünüz kapıların diğer tarafında bekler; Girne, Gazimağusa ya da İskele'ye yolculuk kısadır.</p>
 <h2>Larnaka veya Baf'tan geçerken</h2>
-<p>Güneye inip Yeşil Hat'tı arabayla geçerseniz kontrol noktasında pasaportunuzu gösterirsiniz. Araçta kalırsınız, yolculardan ücret alınmaz ve şoförünüz prosedürü bilir. Larnaka veya Baf üzerinden girdiğiniz için zaten yasal olarak Kıbrıs'tasınız; geçiş sizi yalnızca kuzeye taşır.</p>
+<p>Güneye inip Yeşil Hat'tı arabayla geçerseniz yol üzerindeki bir kontrol noktasında pasaportunuzu gösterirsiniz. Araçta kalırsınız, yolculardan ücret alınmaz ve şoförünüz prosedürü ve en hızlı şeridi bilir. Adaya Larnaka veya Baf üzerinden girdiğiniz için zaten yasal olarak Kıbrıs'tasınız; geçiş sizi yalnızca iki yönetim arasında taşır. Güzelyurt ve Lefke gibi batı noktaları için Bostancı (Astromeritis) geçişini kullanırız.</p>
 <h2>Kiralık araçlar istisnadır</h2>
-<p>Bilinmesi gereken tek şey: güneyden alınan kiralık araç çoğu zaman kuzeye geçirilemez (ve tersi), sigorta da geçişi nadiren kapsar. Özel transfer bu sorunu tamamen ortadan kaldırır — tek araç, iki yaka, size hiç evrak işi yok.</p>
+<p>Bilinmesi gereken tek şey: güneyden alınan kiralık araç çoğu zaman kuzeye geçirilemez (ve tersi), kiralama sigortası da hattı geçmeyi nadiren kapsar. İlk kez gelenlerin en sık takıldığı nokta budur. Özel transfer bu sorunu tamamen ortadan kaldırır — tek araç, adanın iki yakası ve size hiç evrak ya da sigorta derdi yok. Ayrıca araç değiştirmeden kuzey ile güney arasında serbestçe hareket edebilirsiniz.</p>
+<h2>İçeri girdikten sonra ulaşım</h2>
+<p>Havalimanı yolculuğu ve geçişin ötesinde, <strong>şehir içi ve ada geneli yolculukları</strong> da sabit yerel fiyatlarla düzenliyoruz — kuzey ile güney arasında gidip gelen günübirlik geziler dahil; kontrol noktasını her gün geçen bir şoförün size zaman ve belirsizlikten tasarruf ettirdiği yer tam da burasıdır.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Kuzey Kıbrıs için vize gerekir mi?</h3>
+<p>Çoğu ülke vatandaşı için gerekmez — giriş, geçerli bir pasaportla 90 güne kadar varışta verilir. Yola çıkmadan kendi vatandaşlığınızı kontrol edin.</p>
+<h3>Kuzey Kıbrıs pasaportuma mühür basar mı?</h3>
+<p>Normalde hayır. Görevliler varsayılan olarak ayrı bir fişe mühür basar, pasaportunuz işaretsiz kalır.</p>
+<h3>Kiralık aracı sınırdan geçirebilir miyim?</h3>
+<p>Genellikle hayır ve sigorta nadiren kapsar. Özel transfer size hiç evrak olmadan serbestçe geçer.</p>
+<h3>Güneye geri geçmek için bir şey gerekir mi?</h3>
+<p>Kısa bir kontrol için yine yalnızca pasaportunuz. Araçta kalırsınız ve yolcu ücreti yoktur.</p>
 <p>Geçiş mi planlıyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına bakın</a> ya da <a href="/tr/book/">iki dakikada rezerve edin</a>.</p>`,
       ru: `
-<p>Это самый частый вопрос перед трансфером, поэтому дадим понятный практический ответ. Правила могут меняться — воспринимайте это как ориентир и проверьте требования для вашего гражданства перед поездкой.</p>
+<p>Это самый частый вопрос перед трансфером: нужны ли виза и паспорт для въезда в Северный Кипр? Вот понятный практический ответ для обоих вариантов въезда — прилёт в Эрджан и переезд с юга. Правила могут меняться — воспринимайте это как ориентир и проверьте требования для вашего гражданства перед поездкой.</p>
 <h2>Паспорт нужен</h2>
-<p>Для въезда в Северный Кипр требуется действующий паспорт — прилетаете ли вы в Эрджан или переезжаете с юга. Большинству гостей виза заранее не нужна: въезд даётся по прибытии на срок до 90 дней.</p>
+<p>Для въезда в Северный Кипр требуется действующий паспорт — прилетаете ли вы в Эрджан или пересекаете «зелёную линию» с юга. Большинству гостей — включая граждан Великобритании, ЕС, США, стран Залива и Турции — виза заранее не нужна. Въезд даётся по прибытии, обычно на срок до 90 дней. Убедитесь, что у паспорта достаточный срок действия, и, если сомневаетесь по своему гражданству, уточните у авиакомпании перед вылетом.</p>
 <h2>Поставят ли штамп в паспорт?</h2>
-<p>Обычно нет. Пограничники, как правило, ставят штамп на отдельный листок, а не в паспорт, поэтому въезд в Северный Кипр не оставляет следа. Если вам так удобнее — просто попросите, это обычная практика.</p>
+<p>Обычно нет. Пограничники, как правило, ставят штамп на отдельный листок — небольшой въездной талон, — а не в паспорт, поэтому въезд в Северный Кипр не оставляет следа в самом документе. Это стандартная практика, полезная, если позже вы поедете в страны, которые об этом спрашивают. Храните талон вместе с паспортом до выезда. Чтобы штамп поставили на талон, а не на страницу, просить обычно даже не нужно.</p>
 <h2>Прилёт в Эрджан</h2>
-<p>Если вы прилетаете прямо в Эрджан, паспортный контроль проходите в аэропорту — и всё. Водитель ждёт вас сразу за дверями.</p>
+<p>Если вы прилетаете прямо в Эрджан, паспортный контроль проходите в аэропорту — и всё; по дороге в отель второго пункта нет. Водитель ждёт вас сразу за дверями, а дорога до Кирении, Фамагусты или Искеле короткая.</p>
 <h2>Переезд из Ларнаки или Пафоса</h2>
-<p>Если вы приземляетесь на юге и пересекаете «зелёную линию» на машине, вы показываете паспорт на пункте пропуска. Вы остаётесь в автомобиле, с пассажиров плата не берётся, а водитель знает процедуру. Въехав через Ларнаку или Пафос, вы уже легально на Кипре; переход лишь перемещает вас на север.</p>
+<p>Если вы приземляетесь на юге и пересекаете «зелёную линию» на машине, вы показываете паспорт на пункте пропуска по пути. Вы остаётесь в автомобиле, с пассажиров плата не берётся, а водитель знает процедуру и самую быструю полосу. Въехав на остров через Ларнаку или Пафос, вы уже легально на Кипре; переход лишь перемещает вас между двумя администрациями. Для западных направлений, таких как Гюзельюрт и Лефке, мы используем переход Бостанджи (Астромеритис).</p>
 <h2>Аренда авто — исключение</h2>
-<p>Единственное, что нужно знать: арендованную на юге машину часто нельзя перегнать на север (и наоборот), а страховка редко покрывает переезд. Частный трансфер полностью снимает проблему — одна машина, обе стороны, никаких бумаг с вашей стороны.</p>
+<p>Единственное, что стоит знать: арендованную на юге машину часто нельзя перегнать на север (и наоборот), а страховка проката редко покрывает пересечение линии. Это самая частая ошибка новичков. Частный трансфер полностью снимает проблему — одна машина, обе части острова и никаких бумаг или забот о страховке. К тому же вы свободно перемещаетесь между севером и югом, не меняя транспорт.</p>
+<h2>Передвижение после въезда</h2>
+<p>Помимо дороги из аэропорта и перехода мы также организуем <strong>поездки по городу (şehir içi) и по всему острову</strong> по фиксированным местным ценам — включая поездки на день туда и обратно между севером и югом; именно здесь водитель, проходящий пункт каждый день, экономит вам время и избавляет от неопределённости.</p>
+<h2>Частые вопросы</h2>
+<h3>Нужна ли виза в Северный Кипр?</h3>
+<p>Большинству гостей — нет: въезд по прибытии на срок до 90 дней с действующим паспортом. Проверьте своё гражданство перед поездкой.</p>
+<h3>Поставят ли в Северном Кипре штамп в паспорт?</h3>
+<p>Обычно нет. По умолчанию штамп ставят на отдельный талон, и паспорт остаётся без отметок.</p>
+<h3>Можно ли перегнать арендованную машину через границу?</h3>
+<p>Обычно нет, и страховка это редко покрывает. Частный трансфер пересекает свободно, без бумаг с вашей стороны.</p>
+<h3>Нужно ли что-то, чтобы вернуться на юг?</h3>
+<p>Снова только паспорт для короткой проверки. Вы остаётесь в машине, и платы с пассажиров нет.</p>
 <p>Планируете переезд? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте за две минуты</a>.</p>`,
     },
   },
@@ -462,52 +543,94 @@ export const posts = [
     },
     body: {
       en: `
-<p>Kyrenia (Girne) is the north's most popular base, and you can reach it from two very different airports. Here's how Ercan and Larnaca compare so you can book the flight that suits you.</p>
+<p>Kyrenia (Girne) is the north's most popular base, and you can reach it from two very different airports: Ercan, the north's own, and Larnaca in the south. One is closer; the other has more flights. Here's how they compare on time, cost and hassle, so you can book the flight that actually suits you — and what happens on the ground once you land.</p>
 <h2>Ercan: closer, simpler</h2>
-<p>Ercan sits just east of Nicosia, about 35 minutes from Kyrenia with no border to cross. Arrival is quick, the transfer is short, and it's usually the cheapest door-to-door option. The trade-off: flights are almost all via Turkey, so you'll likely connect through Istanbul or another Turkish hub.</p>
+<p>Ercan sits just east of Nicosia, about 35 minutes from Kyrenia with no border to cross. Arrival is quick, the terminal is calm, the transfer is short, and it's usually the cheapest option door to door. The trade-off is flights: almost all of them route through Turkey, so from Europe you'll typically connect through Istanbul or another Turkish hub, which adds time and a change of plane.</p>
 <h2>Larnaca: more flights, a border</h2>
-<p>Larnaca is a full international airport with direct flights from across Europe — often cheaper tickets and no connection. The catch is distance and the crossing: Larnaca to Kyrenia is around 75 minutes and passes through a Green Line checkpoint. With a private transfer the crossing is effortless, but it does add time.</p>
+<p>Larnaca is a full international airport with direct flights from across Europe and the UK — often cheaper tickets and no connection at all. The catch is distance and the crossing: Larnaca to Kyrenia is around 75 minutes and passes through a Green Line checkpoint near Nicosia. With a private transfer the crossing is effortless — you stay in the car, show your passport briefly, and there's no passenger fee — but it does add 20–30 minutes to the drive.</p>
 <h2>At a glance</h2>
 <ul>
   <li><strong>Fastest transfer:</strong> Ercan (~35 min) vs Larnaca (~75 min)</li>
   <li><strong>Lower transfer fare:</strong> Ercan</li>
   <li><strong>Widest flight choice / direct from Europe:</strong> Larnaca</li>
   <li><strong>No border crossing:</strong> Ercan</li>
+  <li><strong>Often the cheaper flight:</strong> Larnaca</li>
 </ul>
+<h2>How the crossing works from Larnaca</h2>
+<p>If you fly into Larnaca, the drive to Kyrenia crosses the Green Line at one of Nicosia's vehicle checkpoints (usually Metehan/Ağırdağ). You remain in the same car the whole way, an officer may glance at passports, and there's no charge for passengers. Your chauffeur does this daily and knows the quickest lanes — so what sounds complicated is, in practice, a brief pause in an otherwise ordinary drive.</p>
+<h2>Don't forget the return</h2>
+<p>Weigh the whole trip, not just the arrival. If you fly in and out of Larnaca, you'll cross the border twice — still easy, but factor in the extra time on your departure day so you reach the airport comfortably. We build that into your return pickup time automatically when you book a round trip.</p>
+<h2>Beyond the airport — local rides</h2>
+<p>Whichever airport you choose, the same fixed-price service covers getting around once you're in Kyrenia. We run <strong>şehir içi (in-town) and around-the-island journeys</strong> too — the harbour for dinner, Bellapais, a casino hotel, a hospital run, or a day trip to Famagusta — so you're looked after for the whole stay.</p>
 <h2>Our honest advice</h2>
 <p>If a convenient direct flight into Larnaca is noticeably cheaper, take it — the transfer and crossing are smooth and we handle everything. If flight prices are similar, Ercan wins on time and cost once you're on the ground. Either way, you land to a fixed-price car and a chauffeur who tracks your flight.</p>
+<h2>Frequently asked questions</h2>
+<h3>Which is cheaper overall, Ercan or Larnaca?</h3>
+<p>It depends on the flight. Ercan's transfer is cheaper, but a direct Larnaca flight can beat an Ercan connection on the total cost. Compare the fixed transfer fares alongside the ticket prices.</p>
+<h3>Is the Larnaca border crossing difficult?</h3>
+<p>No. You stay in the car, passports ready, no passenger fee — it adds about 20–30 minutes and your driver handles it.</p>
+<h3>Can I fly into one airport and out of the other?</h3>
+<p>Yes, and it's common. Just tell us both airports when you book and we'll price each leg.</p>
 <p>Compare both routes: <a href="/en/routes/ercan-airport-to-kyrenia/">Ercan to Kyrenia</a> and <a href="/en/routes/larnaca-airport-to-kyrenia/">Larnaca to Kyrenia</a> — or <a href="/en/book/">book now</a>.</p>`,
       tr: `
-<p>Girne, kuzeyin en popüler üssüdür ve buraya birbirinden çok farklı iki havalimanından ulaşabilirsiniz. İşte size uygun uçuşu seçebilmeniz için Ercan ile Larnaka karşılaştırması.</p>
+<p>Girne, kuzeyin en popüler üssüdür ve buraya birbirinden çok farklı iki havalimanından ulaşabilirsiniz: kuzeyin kendi havalimanı Ercan ve güneydeki Larnaka. Biri daha yakın; diğerinin daha çok uçuşu var. İşte zaman, maliyet ve zahmet açısından karşılaştırmaları — size gerçekten uygun uçuşu seçebilmeniz için — ve indiğinizde yerde neler olduğu.</p>
 <h2>Ercan: daha yakın, daha basit</h2>
-<p>Ercan, Lefkoşa'nın hemen doğusundadır; Girne'ye yaklaşık 35 dakika ve geçilecek sınır yoktur. Varış hızlı, transfer kısa ve genellikle kapıdan kapıya en ucuz seçenektir. Bedeli: uçuşların neredeyse tamamı Türkiye üzerinden olduğundan büyük olasılıkla İstanbul veya başka bir Türk aktarma noktasından bağlanırsınız.</p>
+<p>Ercan, Lefkoşa'nın hemen doğusundadır; Girne'ye yaklaşık 35 dakika ve geçilecek sınır yoktur. Varış hızlı, terminal sakin, transfer kısa ve genellikle kapıdan kapıya en ucuz seçenektir. Bedeli uçuşlardır: neredeyse tamamı Türkiye üzerinden gittiğinden, Avrupa'dan genellikle İstanbul veya başka bir Türk aktarma noktasından bağlanırsınız; bu da zaman ve bir uçak değişikliği ekler.</p>
 <h2>Larnaka: daha çok uçuş, bir sınır</h2>
-<p>Larnaka, Avrupa'nın her yerinden direkt uçuşları olan tam bir uluslararası havalimanıdır — çoğu zaman daha ucuz bilet ve aktarmasız. İşin püf noktası mesafe ve geçiştir: Larnaka'dan Girne'ye yaklaşık 75 dakika sürer ve bir Yeşil Hat kontrol noktasından geçer. Özel transferle geçiş zahmetsizdir ama süreye eklenir.</p>
+<p>Larnaka, Avrupa ve İngiltere'nin her yerinden direkt uçuşları olan tam bir uluslararası havalimanıdır — çoğu zaman daha ucuz bilet ve hiç aktarmasız. İşin püf noktası mesafe ve geçiştir: Larnaka'dan Girne'ye yaklaşık 75 dakika sürer ve Lefkoşa yakınında bir Yeşil Hat kontrol noktasından geçer. Özel transferle geçiş zahmetsizdir — araçta kalırsınız, pasaportunuzu kısaca gösterirsiniz ve yolcu ücreti yoktur — ama yolculuğa 20–30 dakika ekler.</p>
 <h2>Bir bakışta</h2>
 <ul>
   <li><strong>En hızlı transfer:</strong> Ercan (~35 dk) — Larnaka (~75 dk)</li>
   <li><strong>Daha düşük transfer ücreti:</strong> Ercan</li>
   <li><strong>En geniş uçuş seçeneği / Avrupa'dan direkt:</strong> Larnaka</li>
   <li><strong>Sınır geçişi yok:</strong> Ercan</li>
+  <li><strong>Çoğu zaman daha ucuz uçuş:</strong> Larnaka</li>
 </ul>
+<h2>Larnaka'dan geçiş nasıl işler</h2>
+<p>Larnaka'ya inerseniz, Girne'ye yolculuk Lefkoşa'nın araç kontrol noktalarından birinde (genellikle Metehan/Ağırdağ) Yeşil Hat'tı geçer. Yol boyunca aynı araçta kalırsınız, bir görevli pasaportlara bakabilir ve yolculardan ücret alınmaz. Şoförünüz bunu her gün yapar ve en hızlı şeritleri bilir — yani kulağa karmaşık gelen şey, pratikte sıradan bir yolculukta kısa bir moladır.</p>
+<h2>Dönüşü unutmayın</h2>
+<p>Yalnızca varışı değil, tüm yolculuğu değerlendirin. Larnaka'ya gidip Larnaka'dan dönerseniz sınırı iki kez geçersiniz — yine kolay, ama kalkış gününüzde havalimanına rahatça ulaşmak için fazladan süreyi hesaba katın. Gidiş-dönüş rezervasyonu yaptığınızda bunu dönüş alış saatinize otomatik olarak ekleriz.</p>
+<h2>Havalimanının ötesinde — şehir içi yolculuklar</h2>
+<p>Hangi havalimanını seçerseniz seçin, Girne'ye vardıktan sonra aynı sabit fiyatlı hizmet ulaşımınızı kapsar. <strong>Şehir içi ve ada geneli yolculukları</strong> da yaparız — akşam yemeği için liman, Bellapais, bir casino oteli, hastane yolculuğu ya da Gazimağusa'ya günübirlik gezi — böylece tüm konaklama boyunca yanınızdayız.</p>
 <h2>Dürüst tavsiyemiz</h2>
 <p>Larnaka'ya uygun bir direkt uçuş belirgin şekilde daha ucuzsa onu tercih edin — transfer ve geçiş sorunsuzdur, her şeyi biz hallederiz. Uçuş fiyatları benzerse, yere indiğinizde Ercan zaman ve maliyette öne geçer. Her iki durumda da sabit fiyatlı bir araca ve uçuşunuzu takip eden bir şoföre inersiniz.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Genel olarak hangisi daha ucuz, Ercan mı Larnaka mı?</h3>
+<p>Uçuşa bağlıdır. Ercan'ın transferi daha ucuzdur, ama direkt bir Larnaka uçuşu toplam maliyette bir Ercan aktarmasını geçebilir. Sabit transfer ücretlerini bilet fiyatlarıyla birlikte karşılaştırın.</p>
+<h3>Larnaka sınır geçişi zor mu?</h3>
+<p>Hayır. Araçta kalırsınız, pasaportlar hazır, yolcu ücreti yok — yaklaşık 20–30 dakika ekler ve şoförünüz halleder.</p>
+<h3>Bir havalimanına inip diğerinden uçabilir miyim?</h3>
+<p>Evet, üstelik yaygındır. Rezervasyon sırasında her iki havalimanını söyleyin, her ayağı ayrı fiyatlandıralım.</p>
 <p>İki güzergahı karşılaştırın: <a href="/tr/routes/ercan-airport-to-kyrenia/">Ercan–Girne</a> ve <a href="/tr/routes/larnaca-airport-to-kyrenia/">Larnaka–Girne</a> — ya da <a href="/tr/book/">hemen rezerve edin</a>.</p>`,
       ru: `
-<p>Кирения (Гирне) — самая популярная база на севере, и добраться до неё можно из двух очень разных аэропортов. Вот сравнение Эрджана и Ларнаки, чтобы вы выбрали подходящий рейс.</p>
+<p>Кирения (Гирне) — самая популярная база на севере, и добраться до неё можно из двух очень разных аэропортов: собственного северного Эрджана и южной Ларнаки. Один ближе, у другого больше рейсов. Вот их сравнение по времени, цене и хлопотам — чтобы вы выбрали рейс, который вам действительно подходит, — и что происходит на земле после посадки.</p>
 <h2>Эрджан: ближе и проще</h2>
-<p>Эрджан находится сразу к востоку от Никосии, около 35 минут до Кирении и без пересечения границы. Прибытие быстрое, трансфер короткий, и это обычно самый недорогой вариант «от двери до двери». Компромисс: почти все рейсы идут через Турцию, так что вы, скорее всего, полетите со стыковкой в Стамбуле или другом турецком хабе.</p>
+<p>Эрджан находится сразу к востоку от Никосии, около 35 минут до Кирении и без пересечения границы. Прибытие быстрое, терминал спокойный, трансфер короткий, и это обычно самый недорогой вариант «от двери до двери». Компромисс — рейсы: почти все идут через Турцию, так что из Европы вы обычно летите со стыковкой в Стамбуле или другом турецком хабе, а это добавляет время и пересадку.</p>
 <h2>Ларнака: больше рейсов, но граница</h2>
-<p>Ларнака — полноценный международный аэропорт с прямыми рейсами со всей Европы: часто билеты дешевле и без стыковок. Нюанс — расстояние и переход: от Ларнаки до Кирении около 75 минут через пункт «зелёной линии». С частным трансфером переход проходит легко, но добавляет время.</p>
+<p>Ларнака — полноценный международный аэропорт с прямыми рейсами со всей Европы и из Великобритании: часто билеты дешевле и вовсе без стыковок. Нюанс — расстояние и переход: от Ларнаки до Кирении около 75 минут через пункт «зелёной линии» у Никосии. С частным трансфером переход проходит легко — вы остаётесь в машине, кратко показываете паспорт, платы с пассажиров нет, — но добавляет к дороге 20–30 минут.</p>
 <h2>Коротко</h2>
 <ul>
   <li><strong>Самый быстрый трансфер:</strong> Эрджан (~35 мин) — Ларнака (~75 мин)</li>
   <li><strong>Ниже цена трансфера:</strong> Эрджан</li>
   <li><strong>Больше выбор рейсов / прямые из Европы:</strong> Ларнака</li>
   <li><strong>Без пересечения границы:</strong> Эрджан</li>
+  <li><strong>Часто более дешёвый рейс:</strong> Ларнака</li>
 </ul>
+<h2>Как проходит переход из Ларнаки</h2>
+<p>Если вы прилетаете в Ларнаку, дорога в Кирению пересекает «зелёную линию» на одном из автомобильных пунктов Никосии (обычно Метехан/Агырдаг). Вы остаётесь в той же машине всю дорогу, сотрудник может взглянуть на паспорта, и платы с пассажиров нет. Ваш водитель делает это ежедневно и знает самые быстрые полосы — так что то, что звучит сложно, на практике лишь короткая пауза в обычной поездке.</p>
+<h2>Не забудьте про обратный путь</h2>
+<p>Оценивайте всю поездку, а не только прилёт. Если вы летите туда и обратно через Ларнаку, границу вы пересечёте дважды — по-прежнему легко, но в день вылета заложите дополнительное время, чтобы спокойно добраться до аэропорта. При бронировании «туда-обратно» мы автоматически учитываем это во времени обратной подачи.</p>
+<h2>За пределами аэропорта — поездки по городу</h2>
+<p>Какой бы аэропорт вы ни выбрали, после приезда в Кирению та же услуга по фиксированной цене покрывает передвижение. Мы также возим <strong>по городу (şehir içi) и по всему острову</strong> — в гавань на ужин, в Беллапаис, в казино-отель, в больницу или на день в Фамагусту — так что вы под опекой всю поездку.</p>
 <h2>Наш честный совет</h2>
 <p>Если удобный прямой рейс в Ларнаку заметно дешевле — берите его: трансфер и переход проходят гладко, всё берём на себя. Если цены на билеты близки, Эрджан выигрывает по времени и стоимости на месте. В любом случае вас встретит машина по фиксированной цене и водитель, отслеживающий ваш рейс.</p>
+<h2>Частые вопросы</h2>
+<h3>Что в итоге дешевле — Эрджан или Ларнака?</h3>
+<p>Зависит от рейса. Трансфер из Эрджана дешевле, но прямой рейс в Ларнаку может выиграть по общей стоимости у стыковки через Эрджан. Сравнивайте фиксированные цены трансфера вместе с ценами билетов.</p>
+<h3>Сложен ли переход границы из Ларнаки?</h3>
+<p>Нет. Вы остаётесь в машине, паспорта наготове, платы с пассажиров нет — добавляет около 20–30 минут, и водитель всё делает сам.</p>
+<h3>Можно ли прилететь в один аэропорт, а улететь из другого?</h3>
+<p>Да, и это обычное дело. Просто укажите оба аэропорта при бронировании, и мы рассчитаем каждый отрезок.</p>
 <p>Сравните оба маршрута: <a href="/ru/routes/ercan-airport-to-kyrenia/">Эрджан–Кирения</a> и <a href="/ru/routes/larnaca-airport-to-kyrenia/">Ларнака–Кирения</a> — или <a href="/ru/book/">забронируйте сейчас</a>.</p>`,
     },
   },
@@ -638,52 +761,79 @@ export const posts = [
     },
     body: {
       en: `
-<p>İskele's Long Beach has become one of North Cyprus's fastest-growing resort strips — a run of golden sand backed by big, self-contained hotels like Grand Sapphire, Caesar Resort and Courtyard Long Beach. Here's how to get there from each airport, and what to expect on arrival.</p>
+<p>İskele's Long Beach has become one of North Cyprus's fastest-growing resort strips — a long run of golden sand backed by big, self-contained hotels like Grand Sapphire, Caesar Resort and Courtyard Long Beach. It's a modern, purpose-built holiday area, which is great for a relaxed beach break but also means the resorts sit some way from the nearest airport. Here's how to get there from each one, what to expect on arrival, and how we help you get around while you're there.</p>
+<h2>Where is Long Beach?</h2>
+<p>Long Beach runs along the east coast just south of Boğaz, in the İskele (Trikomo) district. It's north of Famagusta and well east of Nicosia, so all three airports involve a proper drive rather than a quick hop — which is exactly why a fixed-price transfer, booked ahead, saves the hassle of finding a taxi late at night.</p>
 <h2>Transfer times and airports</h2>
-<p>Long Beach sits on the island's east coast, a little south of Boğaz. Typical drives:</p>
 <ul>
   <li><strong>Ercan:</strong> about 45 minutes — the closest airport and usually the best value</li>
   <li><strong>Larnaca:</strong> around 1h 15m, crossing the Green Line by car</li>
   <li><strong>Paphos:</strong> a longer run from the west, best booked as a fixed-price private transfer</li>
 </ul>
+<p>Every route is quoted as a fixed fare before you travel — no meter, no matter the traffic or the hour, and the crossing from the south adds no surcharge.</p>
 <h2>Big resorts, exact drop-offs</h2>
-<p>The Long Beach hotels are large and spread along the shore, so the entrance you need matters. When you book, tell us the exact hotel — Grand Sapphire, Caesar Resort & Spa, Courtyard Long Beach or another — and your chauffeur takes you to the right reception, not the nearest gate.</p>
+<p>The Long Beach hotels are large and spread along the shore, so the entrance you need genuinely matters — some have more than one gate and a long internal road. When you book, tell us the exact hotel — Grand Sapphire, Caesar Resort & Spa, Courtyard Long Beach or another — and your chauffeur takes you to the right reception, not the nearest barrier. If you're staying in a rental apartment within one of the complexes, share the block name too.</p>
 <h2>Late flights are normal here</h2>
-<p>Many flights into Ercan land late in the evening. We track every arrival, so a midnight touchdown is no problem — your driver is waiting whatever the hour, and your fare doesn't change.</p>
-<h2>Getting out and about</h2>
-<p>Long Beach is self-contained, but if you want to explore — Famagusta's old town, the Karpaz peninsula, or dinner in İskele — we arrange those trips at fixed prices too, so you're never at the mercy of a meter.</p>
+<p>Many flights into Ercan land late in the evening, and Larnaca arrivals from Europe often touch down after dark too. We track every arrival, so a midnight landing is no problem — your driver is waiting whatever the hour, your included waiting time isn't shortened by a delay, and your fare doesn't change.</p>
+<h2>Getting around during your stay — local rides</h2>
+<p>Long Beach is self-contained, but taxis don't wait around outside the resorts, especially in the evening. That's where we come in beyond the airport run. We handle <strong>şehir içi (in-town) and around-the-area journeys</strong> at fixed local prices — into İskele or Boğaz for dinner, a supermarket or pharmacy run, a day trip to Famagusta's old town or the Karpaz peninsula, or a night out — so you're never stuck waiting or haggling over a meter. Arrange it when you book, or message us during your stay.</p>
+<h2>Frequently asked questions</h2>
+<h3>Which airport is best for Long Beach?</h3>
+<p>Ercan is closest at about 45 minutes and usually cheapest. Larnaca works well for direct European flights, with a routine border crossing on the way.</p>
+<h3>Will you drop me at my exact hotel?</h3>
+<p>Yes — tell us the hotel name (and block, if it's an apartment) and we take you to the correct reception, not the nearest gate.</p>
+<h3>Do you do trips once we're there, or only the airport transfer?</h3>
+<p>Both. We run local and day-trip journeys at fixed prices throughout your stay.</p>
 <p>Heading to Long Beach? <a href="/en/routes/">See fixed transfer prices</a> or <a href="/en/book/">book your transfer</a>.</p>`,
       tr: `
-<p>İskele'nin Long Beach'i, Kuzey Kıbrıs'ın en hızlı büyüyen tatil bölgelerinden biri hâline geldi — Grand Sapphire, Caesar Resort ve Courtyard Long Beach gibi büyük, kendi içinde her şeyi barındıran otellerle çevrili altın renkli bir kumsal şeridi. İşte her havalimanından oraya nasıl ulaşacağınız ve varışta sizi neler beklediği.</p>
+<p>İskele'nin Long Beach'i, Kuzey Kıbrıs'ın en hızlı büyüyen tatil bölgelerinden biri hâline geldi — Grand Sapphire, Caesar Resort ve Courtyard Long Beach gibi büyük, kendi içinde her şeyi barındıran otellerle çevrili uzun, altın renkli bir kumsal şeridi. Modern, planlı bir tatil bölgesidir; bu, rahat bir deniz tatili için harikadır ama tatil köylerinin en yakın havalimanına biraz uzak olduğu anlamına da gelir. İşte her havalimanından oraya nasıl ulaşacağınız, varışta sizi neler beklediği ve oradayken sizi nasıl gezdirdiğimiz.</p>
+<h2>Long Beach nerede?</h2>
+<p>Long Beach, doğu kıyısında Boğaz'ın hemen güneyinde, İskele (Trikomo) bölgesinde uzanır. Gazimağusa'nın kuzeyinde ve Lefkoşa'nın epey doğusundadır; bu yüzden üç havalimanı da kısa bir sıçrama değil, düzgün bir yolculuk gerektirir — önceden ayarlanmış sabit fiyatlı bir transferin, gece geç saatte taksi bulma derdinden kurtarmasının nedeni tam da budur.</p>
 <h2>Transfer süreleri ve havalimanları</h2>
-<p>Long Beach, adanın doğu kıyısında, Boğaz'ın biraz güneyinde yer alır. Tipik süreler:</p>
 <ul>
   <li><strong>Ercan:</strong> yaklaşık 45 dakika — en yakın havalimanı ve genellikle en avantajlısı</li>
   <li><strong>Larnaka:</strong> yaklaşık 1 saat 15 dakika, Yeşil Hat'tı arabayla geçerek</li>
   <li><strong>Baf:</strong> batıdan daha uzun bir yolculuk; en iyisi sabit fiyatlı özel transfer olarak rezerve edilir</li>
 </ul>
+<p>Her güzergah, yola çıkmadan sabit bir ücretle verilir — trafik ya da saat ne olursa olsun taksimetre yok ve güneyden geçiş ek ücret getirmez.</p>
 <h2>Büyük tatil köyleri, doğru bırakma noktaları</h2>
-<p>Long Beach otelleri büyüktür ve kıyı boyunca yayılır, bu yüzden gireceğiniz kapı önemlidir. Rezervasyon yaparken tam otel adını bize söyleyin — Grand Sapphire, Caesar Resort & Spa, Courtyard Long Beach ya da bir başkası — şoförünüz sizi en yakın kapıya değil doğru resepsiyona götürür.</p>
+<p>Long Beach otelleri büyüktür ve kıyı boyunca yayılır, bu yüzden gireceğiniz kapı gerçekten önemlidir — bazılarının birden fazla kapısı ve uzun bir iç yolu vardır. Rezervasyon yaparken tam otel adını bize söyleyin — Grand Sapphire, Caesar Resort & Spa, Courtyard Long Beach ya da bir başkası — şoförünüz sizi en yakın bariyere değil doğru resepsiyona götürür. Bir kompleks içindeki kiralık bir dairede kalıyorsanız blok adını da paylaşın.</p>
 <h2>Geç uçuşlar burada normaldir</h2>
-<p>Ercan'a gelen birçok uçuş akşam geç saatlerde iner. Her varışı takip ederiz, bu yüzden gece yarısı bir iniş sorun değildir — saat kaç olursa olsun sürücünüz bekler ve ücretiniz değişmez.</p>
-<h2>Çevreyi keşfetmek</h2>
-<p>Long Beach kendi içinde her şeyi barındırır, ama keşfe çıkmak isterseniz — Gazimağusa'nın eski şehri, Karpaz yarımadası ya da İskele'de bir akşam yemeği — bu gezileri de sabit fiyatlarla düzenleriz, böylece asla bir taksimetrenin insafına kalmazsınız.</p>
+<p>Ercan'a gelen birçok uçuş akşam geç saatlerde iner ve Larnaka'ya Avrupa'dan gelen uçuşlar da çoğu zaman hava karardıktan sonra iner. Her varışı takip ederiz, bu yüzden gece yarısı bir iniş sorun değildir — saat kaç olursa olsun sürücünüz bekler, dahil olan bekleme süreniz gecikmeyle kısalmaz ve ücretiniz değişmez.</p>
+<h2>Konaklamanız boyunca ulaşım — şehir içi yolculuklar</h2>
+<p>Long Beach kendi içinde her şeyi barındırır, ama taksiler tatil köylerinin dışında, özellikle akşamları beklemez. Havalimanı yolculuğunun ötesinde işte burada devreye gireriz. <strong>Şehir içi ve bölge içi yolculukları</strong> sabit yerel fiyatlarla düzenliyoruz — akşam yemeği için İskele ya da Boğaz'a, süpermarket ya da eczane yolculuğu, Gazimağusa'nın eski şehrine ya da Karpaz yarımadasına günübirlik gezi veya bir gece gezmesi — böylece asla beklemek ya da taksimetre pazarlığı yapmak zorunda kalmazsınız. Rezervasyon sırasında ayarlayın ya da konaklamanız sırasında bize yazın.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Long Beach için hangi havalimanı en iyisi?</h3>
+<p>Ercan yaklaşık 45 dakikayla en yakınıdır ve genellikle en ucuzudur. Larnaka, yolda rutin bir sınır geçişiyle direkt Avrupa uçuşları için iyi çalışır.</p>
+<h3>Beni tam otelime bırakır mısınız?</h3>
+<p>Evet — otel adını (daire ise blok adını da) bize söyleyin, sizi en yakın kapıya değil doğru resepsiyona götürelim.</p>
+<h3>Oradayken de gezi yapıyor musunuz, yoksa sadece havalimanı transferi mi?</h3>
+<p>İkisi de. Konaklamanız boyunca yerel ve günübirlik yolculukları sabit fiyatlarla yaparız.</p>
 <p>Long Beach'e mi gidiyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>`,
       ru: `
-<p>Лонг-Бич в Искеле стал одним из самых быстрорастущих курортных участков Северного Кипра — полоса золотого песка с крупными самодостаточными отелями вроде Grand Sapphire, Caesar Resort и Courtyard Long Beach. Вот как добраться сюда из каждого аэропорта и чего ждать по прибытии.</p>
+<p>Лонг-Бич в Искеле стал одним из самых быстрорастущих курортных участков Северного Кипра — длинная полоса золотого песка с крупными самодостаточными отелями вроде Grand Sapphire, Caesar Resort и Courtyard Long Beach. Это современная, специально построенная курортная зона: отлично для спокойного пляжного отдыха, но и означает, что курорты стоят довольно далеко от ближайшего аэропорта. Вот как добраться сюда из каждого, чего ждать по прибытии и как мы помогаем передвигаться на месте.</p>
+<h2>Где находится Лонг-Бич?</h2>
+<p>Лонг-Бич тянется вдоль восточного побережья сразу к югу от Богаза, в районе Искеле (Трикомо). Он севернее Фамагусты и заметно восточнее Никосии, поэтому все три аэропорта — это полноценная поездка, а не короткий переезд; именно поэтому фиксированный трансфер, заказанный заранее, избавляет от поисков такси поздно ночью.</p>
 <h2>Время в пути и аэропорты</h2>
-<p>Лонг-Бич находится на восточном побережье острова, чуть южнее Богаза. Типичное время:</p>
 <ul>
   <li><strong>Эрджан:</strong> около 45 минут — ближайший аэропорт и обычно самый выгодный</li>
   <li><strong>Ларнака:</strong> примерно 1 ч 15 мин, с пересечением «зелёной линии» на машине</li>
   <li><strong>Пафос:</strong> более долгая поездка с запада; лучше бронировать как частный трансфер по фиксированной цене</li>
 </ul>
+<p>Каждый маршрут называется фиксированной ценой до поездки — без счётчика, независимо от трафика и часа, а переход с юга не даёт наценки.</p>
 <h2>Большие курорты, точная высадка</h2>
-<p>Отели Лонг-Бич большие и растянуты вдоль берега, поэтому важно, к какому входу вам нужно. При бронировании укажите точный отель — Grand Sapphire, Caesar Resort & Spa, Courtyard Long Beach или другой — и водитель отвезёт вас к нужной стойке регистрации, а не к ближайшим воротам.</p>
+<p>Отели Лонг-Бич большие и растянуты вдоль берега, поэтому важно, к какому входу вам нужно — у некоторых несколько ворот и длинная внутренняя дорога. При бронировании укажите точный отель — Grand Sapphire, Caesar Resort & Spa, Courtyard Long Beach или другой — и водитель отвезёт вас к нужной стойке регистрации, а не к ближайшему шлагбауму. Если вы живёте в арендованных апартаментах внутри комплекса, укажите и название корпуса.</p>
 <h2>Поздние рейсы здесь — норма</h2>
-<p>Многие рейсы в Эрджан приземляются поздно вечером. Мы отслеживаем каждое прибытие, поэтому посадка в полночь — не проблема: водитель ждёт в любой час, а стоимость не меняется.</p>
-<h2>Поездки по округе</h2>
-<p>Лонг-Бич самодостаточен, но если захотите осмотреться — старый город Фамагусты, полуостров Карпаз или ужин в Искеле — мы организуем эти поездки тоже по фиксированным ценам, так что вы никогда не зависите от счётчика.</p>
+<p>Многие рейсы в Эрджан приземляются поздно вечером, да и рейсы из Европы в Ларнаку часто садятся уже затемно. Мы отслеживаем каждое прибытие, поэтому посадка в полночь — не проблема: водитель ждёт в любой час, включённое время ожидания не сокращается из-за задержки, а стоимость не меняется.</p>
+<h2>Передвижение во время отдыха — поездки по городу</h2>
+<p>Лонг-Бич самодостаточен, но такси не дежурят у курортов, особенно вечером. Здесь мы и пригождаемся помимо дороги из аэропорта. Мы организуем <strong>поездки по городу (şehir içi) и по окрестностям</strong> по фиксированным местным ценам — в Искеле или Богаз на ужин, в супермаркет или аптеку, на день в старый город Фамагусты или на полуостров Карпаз или на вечерний выход — так что вам не придётся ждать или торговаться со счётчиком. Договоритесь при бронировании или напишите нам во время поездки.</p>
+<h2>Частые вопросы</h2>
+<h3>Какой аэропорт лучше для Лонг-Бич?</h3>
+<p>Эрджан ближе всего — около 45 минут и обычно дешевле. Ларнака хорошо подходит для прямых европейских рейсов, с обычным переходом границы по пути.</p>
+<h3>Довезёте ли вы меня до моего отеля?</h3>
+<p>Да — назовите отель (и корпус, если это апартаменты), и мы отвезём к нужной стойке, а не к ближайшим воротам.</p>
+<h3>Вы возите на месте, или только трансфер из аэропорта?</h3>
+<p>И то, и другое. В течение всего отдыха мы делаем местные и дневные поездки по фиксированным ценам.</p>
 <p>Едете на Лонг-Бич? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте трансфер</a>.</p>`,
     },
   },
@@ -702,43 +852,70 @@ export const posts = [
     },
     body: {
       en: `
-<p>North Cyprus runs on the Turkish Lira, but as a visitor you'll find things more flexible than you might expect. Here's what to bring and how paying works — including the question everyone asks about tipping.</p>
+<p>North Cyprus runs on the Turkish Lira, but as a visitor you'll find paying more flexible than you might expect. Here's what to bring, how cards and cash work, and the answer to the question everyone asks — do you tip the driver?</p>
 <h2>The local currency is the Lira</h2>
-<p>Shops, cafés and local taxis price in Turkish Lira (TL). It's worth carrying some cash for small purchases, markets and rural spots where cards aren't taken.</p>
+<p>Shops, cafés, markets and local taxis price in Turkish Lira (TL). It's worth carrying some cash for small purchases, street markets, village shops and rural spots where cards aren't taken. The Lira can move a lot against other currencies, so change smaller amounts more often rather than a big sum at once.</p>
 <h2>But euros and sterling go a long way</h2>
-<p>Hotels, resorts, larger restaurants and most transfer drivers happily accept euros — and often sterling too. If you're arriving from the south or on a short stay, you don't need to rush to change money at the airport; a small amount is plenty to start.</p>
+<p>Hotels, resorts, larger restaurants and most transfer drivers happily accept euros — and often sterling too. If you're arriving from the south or on a short stay, you don't need to rush to change money at the airport; a small amount is plenty to start, and you can top up in town. Keep some small notes for tips and taxis.</p>
+<h2>How much cash to bring</h2>
+<p>For a typical week, a modest amount of cash for meals out, drinks, markets and tips covers most needs, with a card for hotels, supermarkets and bigger restaurants. There's no need to arrive with large sums — ATMs and exchange offices are easy to find once you're there.</p>
 <h2>Cards and ATMs</h2>
-<p>Cards work in hotels, supermarkets and bigger restaurants, and ATMs are easy to find in towns. They typically dispense Lira; some also offer euros. Tell your bank you're travelling so a Cyprus transaction isn't flagged.</p>
+<p>Cards work in hotels, supermarkets and bigger restaurants, and ATMs are easy to find in towns and resort areas. They typically dispense Lira; some also offer euros. Tell your bank you're travelling to Cyprus so a transaction here isn't flagged or blocked, and check your card's foreign-transaction fees before you rely on it.</p>
 <h2>Paying for your transfer</h2>
-<p>With TheTaxsi the fare is fixed and agreed before you travel — no meter. You can pay in cash to the chauffeur on arrival, in euros or Lira, unless you've arranged otherwise in advance. Nothing to work out at the roadside.</p>
+<p>With TheTaxsi the fare is fixed and agreed before you travel — no meter, no border surcharge, no end-of-ride surprises. You can pay in cash to the chauffeur on arrival, in euros or Lira, unless you've arranged otherwise in advance. The same applies to any <strong>şehir içi (in-town) or local rides</strong> you add during your stay — a fixed local price, settled simply, with nothing to work out at the roadside.</p>
 <h2>Do you tip the driver?</h2>
-<p>Tipping is appreciated but never expected. If your chauffeur helped with heavy luggage or waited through a long delay, rounding up or adding 5–10% is a kind gesture — but the price you were quoted is the price you owe. There's no obligation.</p>
+<p>Tipping is appreciated but never expected. If your chauffeur helped with heavy luggage, waited through a long delay, or ran an extra errand, rounding up or adding around 5–10% is a kind gesture — but the price you were quoted is the price you owe, and there's no obligation. In restaurants, a similar 5–10% is normal if service isn't already included; for hotel staff, a small note is a friendly touch.</p>
+<h2>Frequently asked questions</h2>
+<h3>Can I use euros in North Cyprus?</h3>
+<p>Often, yes — hotels, resorts, bigger restaurants and most drivers accept euros, though the local price is in Lira and small local shops may want cash in TL.</p>
+<h3>Do I need cash, or are cards enough?</h3>
+<p>Cards cover hotels and larger venues, but carry some cash for markets, small cafés and tips.</p>
+<h3>Should I tip my transfer driver?</h3>
+<p>It's appreciated but not required. Your fixed fare is the price; a small round-up for good service is a kind extra.</p>
 <p>Ready to travel? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book your transfer</a>.</p>`,
       tr: `
-<p>Kuzey Kıbrıs Türk Lirası ile döner, ama bir ziyaretçi olarak işleri beklediğinizden daha esnek bulacaksınız. İşte yanınıza ne almalı ve ödeme nasıl işler — herkesin sorduğu bahşiş sorusu dahil.</p>
+<p>Kuzey Kıbrıs Türk Lirası ile döner, ama bir ziyaretçi olarak ödemeyi beklediğinizden daha esnek bulacaksınız. İşte yanınıza ne almalı, kart ve nakit nasıl işler ve herkesin sorduğu sorunun yanıtı — sürücüye bahşiş verilir mi?</p>
 <h2>Yerel para birimi Lira'dır</h2>
-<p>Dükkânlar, kafeler ve yerel taksiler Türk Lirası (TL) ile fiyat verir. Küçük alışverişler, pazarlar ve kartın geçmediği kırsal noktalar için biraz nakit taşımakta fayda var.</p>
+<p>Dükkânlar, kafeler, pazarlar ve yerel taksiler Türk Lirası (TL) ile fiyat verir. Küçük alışverişler, sokak pazarları, köy dükkânları ve kartın geçmediği kırsal noktalar için biraz nakit taşımakta fayda var. Lira diğer para birimlerine karşı çok oynayabilir, bu yüzden bir kerede büyük bir miktar yerine daha küçük tutarları daha sık bozdurun.</p>
 <h2>Ama euro ve sterlin de işinizi görür</h2>
-<p>Oteller, tatil köyleri, büyük restoranlar ve çoğu transfer sürücüsü euro'yu seve seve kabul eder — çoğu zaman sterlini de. Güneyden geliyorsanız veya kısa bir konaklamadaysanız havalimanında para bozdurmak için acele etmenize gerek yok; başlangıç için az bir miktar yeterlidir.</p>
+<p>Oteller, tatil köyleri, büyük restoranlar ve çoğu transfer sürücüsü euro'yu seve seve kabul eder — çoğu zaman sterlini de. Güneyden geliyorsanız veya kısa bir konaklamadaysanız havalimanında para bozdurmak için acele etmenize gerek yok; başlangıç için az bir miktar yeterlidir, şehirde tamamlayabilirsiniz. Bahşiş ve taksiler için biraz küçük banknot bulundurun.</p>
+<h2>Ne kadar nakit getirmeli</h2>
+<p>Tipik bir hafta için dışarıda yemek, içecek, pazar ve bahşişlere yetecek ölçülü bir nakit çoğu ihtiyacı karşılar; oteller, süpermarketler ve büyük restoranlar için bir kart yanınızda olsun. Büyük tutarlarla gelmenize gerek yok — vardığınızda ATM ve döviz büroları kolayca bulunur.</p>
 <h2>Kartlar ve ATM'ler</h2>
-<p>Kartlar otellerde, süpermarketlerde ve büyük restoranlarda geçer; ATM'leri şehirlerde kolayca bulursunuz. Genellikle Lira verir, bazıları euro da sunar. Kıbrıs işleminin şüpheli görülmemesi için bankanıza seyahat ettiğinizi bildirin.</p>
+<p>Kartlar otellerde, süpermarketlerde ve büyük restoranlarda geçer; ATM'leri şehirlerde ve tatil bölgelerinde kolayca bulursunuz. Genellikle Lira verir, bazıları euro da sunar. Buradaki bir işlemin şüpheli görülüp engellenmemesi için bankanıza Kıbrıs'a seyahat ettiğinizi bildirin ve güvenmeden önce kartınızın yurt dışı işlem ücretlerini kontrol edin.</p>
 <h2>Transferinizin ödemesi</h2>
-<p>TheTaxsi ile ücret sabittir ve yola çıkmadan kararlaştırılır — taksimetre yok. Önceden aksini ayarlamadıysanız varışta şoföre nakit olarak, euro ya da Lira ile ödeyebilirsiniz. Yol kenarında hesaplanacak bir şey yok.</p>
+<p>TheTaxsi ile ücret sabittir ve yola çıkmadan kararlaştırılır — taksimetre yok, sınır ek ücreti yok, yolculuk sonunda sürpriz yok. Önceden aksini ayarlamadıysanız varışta şoföre nakit olarak, euro ya da Lira ile ödeyebilirsiniz. Aynısı, konaklamanız sırasında eklediğiniz <strong>şehir içi ve yerel yolculuklar</strong> için de geçerlidir — sabit yerel bir fiyat, kolayca ödenir, yol kenarında hesaplanacak bir şey yok.</p>
 <h2>Sürücüye bahşiş verilir mi?</h2>
-<p>Bahşiş takdir edilir ama asla beklenmez. Şoförünüz ağır bagajınıza yardım ettiyse ya da uzun bir gecikmede beklediyse, ödemeyi yukarı yuvarlamak veya %5–10 eklemek nazik bir jesttir — ama size verilen fiyat ödemeniz gereken fiyattır. Hiçbir zorunluluk yok.</p>
+<p>Bahşiş takdir edilir ama asla beklenmez. Şoförünüz ağır bagajınıza yardım ettiyse, uzun bir gecikmede beklediyse ya da ekstra bir iş halletmişse, ödemeyi yukarı yuvarlamak veya yaklaşık %5–10 eklemek nazik bir jesttir — ama size verilen fiyat ödemeniz gereken fiyattır ve hiçbir zorunluluk yoktur. Restoranlarda, servis zaten dahil değilse benzer bir %5–10 olağandır; otel personeli için küçük bir banknot dostça bir dokunuştur.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Kuzey Kıbrıs'ta euro kullanabilir miyim?</h3>
+<p>Çoğu zaman evet — oteller, tatil köyleri, büyük restoranlar ve çoğu sürücü euro kabul eder; yine de yerel fiyat Lira'dır ve küçük yerel dükkânlar TL nakit isteyebilir.</p>
+<h3>Nakit mi gerekli, yoksa kart yeterli mi?</h3>
+<p>Kartlar otelleri ve büyük mekânları karşılar, ama pazarlar, küçük kafeler ve bahşişler için biraz nakit taşıyın.</p>
+<h3>Transfer sürücüme bahşiş vermeli miyim?</h3>
+<p>Takdir edilir ama gerekli değildir. Sabit ücretiniz fiyattır; iyi hizmet için küçük bir yuvarlama nazik bir ekstradır.</p>
 <p>Yola çıkmaya hazır mısınız? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>`,
       ru: `
-<p>Северный Кипр живёт на турецкой лире, но как гость вы найдёте всё гибче, чем ожидаете. Вот что взять с собой и как проходит оплата — включая вопрос о чаевых, который задают все.</p>
+<p>Северный Кипр живёт на турецкой лире, но как гость вы найдёте оплату гибче, чем ожидаете. Вот что взять с собой, как работают карты и наличные и ответ на вопрос, который задают все, — давать ли чаевые водителю?</p>
 <h2>Местная валюта — лира</h2>
-<p>Магазины, кафе и местные такси указывают цены в турецких лирах (TL). Стоит иметь немного наличных для мелких покупок, рынков и сельских мест, где карты не принимают.</p>
+<p>Магазины, кафе, рынки и местные такси указывают цены в турецких лирах (TL). Стоит иметь немного наличных для мелких покупок, уличных рынков, деревенских лавок и сельских мест, где карты не принимают. Лира может сильно колебаться к другим валютам, поэтому меняйте меньшие суммы почаще, а не крупную разом.</p>
 <h2>Но евро и фунты тоже в ходу</h2>
-<p>Отели, курорты, крупные рестораны и большинство водителей трансфера охотно принимают евро — а часто и фунты. Если вы приезжаете с юга или на короткий срок, не нужно спешить менять деньги в аэропорту; для начала достаточно небольшой суммы.</p>
+<p>Отели, курорты, крупные рестораны и большинство водителей трансфера охотно принимают евро — а часто и фунты. Если вы приезжаете с юга или на короткий срок, не нужно спешить менять деньги в аэропорту; для начала достаточно небольшой суммы, а пополнить можно в городе. Держите мелкие купюры для чаевых и такси.</p>
+<h2>Сколько наличных брать</h2>
+<p>На типичную неделю умеренной суммы наличными на еду вне отеля, напитки, рынки и чаевые хватает на большинство нужд, а карта — для отелей, супермаркетов и крупных ресторанов. Приезжать с большими суммами не нужно — банкоматы и обменники легко найти на месте.</p>
 <h2>Карты и банкоматы</h2>
-<p>Карты принимают в отелях, супермаркетах и больших ресторанах, а банкоматы легко найти в городах. Обычно они выдают лиры, некоторые — и евро. Предупредите банк о поездке, чтобы операция на Кипре не была заблокирована.</p>
+<p>Карты принимают в отелях, супермаркетах и больших ресторанах, а банкоматы легко найти в городах и курортных зонах. Обычно они выдают лиры, некоторые — и евро. Предупредите банк о поездке на Кипр, чтобы операцию здесь не заблокировали, и заранее проверьте комиссию за зарубежные операции по вашей карте.</p>
 <h2>Оплата трансфера</h2>
-<p>С TheTaxsi цена фиксированная и оговорена до поездки — без счётчика. Если заранее не договорились иначе, вы можете заплатить водителю наличными по прибытии, в евро или лирах. Ничего не нужно высчитывать на обочине.</p>
+<p>С TheTaxsi цена фиксированная и оговорена до поездки — без счётчика, без пограничной наценки, без сюрпризов в конце пути. Если заранее не договорились иначе, вы можете заплатить водителю наличными по прибытии, в евро или лирах. То же касается любых <strong>поездок по городу (şehir içi) и местных поездок</strong>, которые вы добавите во время отдыха, — фиксированная местная цена, оплачивается просто, ничего не нужно высчитывать на обочине.</p>
 <h2>Давать ли чаевые водителю?</h2>
-<p>Чаевые приятны, но никогда не обязательны. Если водитель помог с тяжёлым багажом или ждал во время долгой задержки, округлить сумму вверх или добавить 5–10% — добрый жест, но названная цена и есть то, что вы должны. Никаких обязательств.</p>
+<p>Чаевые приятны, но никогда не обязательны. Если водитель помог с тяжёлым багажом, ждал во время долгой задержки или выполнил дополнительное поручение, округлить сумму вверх или добавить около 5–10% — добрый жест, но названная цена и есть то, что вы должны, и никаких обязательств нет. В ресторанах обычны те же 5–10%, если обслуживание не включено; персоналу отеля небольшая купюра — приятный знак.</p>
+<h2>Частые вопросы</h2>
+<h3>Можно ли расплачиваться евро на Северном Кипре?</h3>
+<p>Часто да — отели, курорты, крупные рестораны и большинство водителей принимают евро, хотя местная цена в лирах, а маленькие лавки могут хотеть наличные в TL.</p>
+<h3>Нужны ли наличные, или хватит карты?</h3>
+<p>Карты покрывают отели и крупные заведения, но держите немного наличных для рынков, небольших кафе и чаевых.</p>
+<h3>Нужно ли давать чаевые водителю трансфера?</h3>
+<p>Приятно, но не обязательно. Ваша фиксированная цена — это и есть цена; небольшое округление за хороший сервис — добрый плюс.</p>
 <p>Готовы в путь? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте трансфер</a>.</p>`,
     },
   },
@@ -757,43 +934,70 @@ export const posts = [
     },
     body: {
       en: `
-<p>Paphos International Airport (PFO) is small, sunny and refreshingly quick to get through — the western gateway to Cyprus. Whether you're staying nearby or crossing north, here's how a smooth arrival unfolds.</p>
+<p>Paphos International Airport (PFO) is small, sunny and refreshingly quick to get through — the western gateway to Cyprus. It handles mostly direct European flights, so for many visitors it's a fuss-free way onto the island. Whether you're staying nearby in the west, or crossing north to Kyrenia or Güzelyurt, here's how a smooth arrival unfolds and how we get you around afterwards.</p>
 <h2>Passport control and luggage</h2>
-<p>Paphos serves mostly European flights, and as an EU entry point it's fast — EU passport holders often clear in minutes, and non-EU travellers rarely wait long outside peak times. Baggage reclaim is a few steps beyond passport control, and trolleys are free.</p>
+<p>Paphos serves mostly European flights, and as an EU entry point it's fast — EU passport holders often clear in minutes, and non-EU travellers rarely wait long outside peak times. Baggage reclaim is a few steps beyond passport control, trolleys are free, and there's a car-rental line, an exchange and a café or two in the compact arrivals area. It's an easy airport to land at, even late in the evening.</p>
 <h2>Where we meet you</h2>
-<p>Your chauffeur waits in the arrivals hall opposite the exit, holding a sign with your name. We track your flight, so an early or delayed landing never shortens your included waiting time. Walk out, look ahead, and you'll see us.</p>
+<p>Your chauffeur waits in the arrivals hall opposite the exit, holding a sign with your name. We track your flight from departure, so an early or delayed landing never shortens your included waiting time and there's no need to call ahead. Walk out, look ahead, and you'll see us.</p>
 <h2>Staying in the west</h2>
-<p>Paphos town and its resort areas are only 15–20 minutes away, and your fare is fixed before you travel — no meter, whatever the traffic.</p>
+<p>Paphos town and its resort areas — Kato Paphos, Coral Bay, Peyia — are only 15–30 minutes away, and your fare is fixed before you travel, no meter whatever the traffic. Coming for Aphrodite's Rock, the harbour or the archaeological park? We drop you at the door, not a rank.</p>
 <h2>Crossing to the north</h2>
-<p>Heading to Kyrenia, Famagusta or Güzelyurt? Paphos is the western gateway to the north. For destinations like Güzelyurt and Lefke we use the Bostancı (Astromeritis) crossing, which is more direct than routing through Nicosia. It's a longer drive than from Ercan, but with a fixed price and a driver who crosses the border daily, it's completely straightforward.</p>
+<p>Heading to Kyrenia, Famagusta or Güzelyurt? Paphos is the western gateway to the north. For destinations like Güzelyurt and Lefke we use the Bostancı (Astromeritis) crossing, which is more direct than routing through Nicosia; for Kyrenia and the east the drive is longer, but with a fixed price and a driver who crosses the border daily, it's completely straightforward. You stay in the car, show your passport briefly at the checkpoint, and there's no fee for passengers.</p>
 <h2>The first minutes</h2>
-<p>Your chauffeur handles the luggage, walks you to the car and confirms your destination before setting off. Water is waiting in the cabin. From kerb to open road takes only a few minutes.</p>
+<p>Your chauffeur handles the luggage, walks you to the car and confirms your destination before setting off. Water is waiting in the cabin. From kerb to open road takes only a few minutes, and there's nothing to agree at the roadside — the fare is already set.</p>
+<h2>Not just the airport — local rides</h2>
+<p>Once you've arrived, the same fixed-price service covers getting around. We run <strong>şehir içi (in-town) and around-the-area journeys</strong> too — dinner at the harbour, a wine-village day in the hills, a supermarket or pharmacy run, or the return leg to the airport — so you're looked after for the whole stay, not just the landing.</p>
+<h2>Frequently asked questions</h2>
+<h3>How long from Paphos Airport to Paphos town?</h3>
+<p>About 15–30 minutes depending on your resort, at a fixed fare set before you travel.</p>
+<h3>Can you take me from Paphos to the north?</h3>
+<p>Yes. We cross the Green Line daily; for Güzelyurt and Lefke we use the quicker western Bostancı crossing. You stay in the car and there's no passenger fee.</p>
+<h3>Is my transfer fixed-price even if my flight is late?</h3>
+<p>Yes. We track the flight and the quoted fare doesn't change; your included waiting time isn't shortened by a delay.</p>
 <p>Arriving at Paphos? <a href="/en/routes/">See fixed prices for every route</a> or <a href="/en/book/">book your transfer</a>.</p>`,
       tr: `
-<p>Baf Uluslararası Havalimanı (PFO) küçük, güneşli ve geçişi ferahlatıcı derecede hızlıdır — Kıbrıs'ın batı kapısı. İster yakında kalın ister kuzeye geçin, işte sorunsuz bir varış nasıl ilerler.</p>
+<p>Baf Uluslararası Havalimanı (PFO) küçük, güneşli ve geçişi ferahlatıcı derecede hızlıdır — Kıbrıs'ın batı kapısı. Çoğunlukla direkt Avrupa uçuşlarına hizmet eder, bu yüzden birçok ziyaretçi için adaya dertsiz bir giriştir. İster batıda yakınlarda kalın, ister kuzeye Girne ya da Güzelyurt'a geçin, işte sorunsuz bir varış nasıl ilerler ve sonrasında sizi nasıl gezdirdiğimiz.</p>
 <h2>Pasaport kontrolü ve bagaj</h2>
-<p>Baf çoğunlukla Avrupa uçuşlarına hizmet eder ve bir AB giriş noktası olarak hızlıdır — AB pasaportu sahipleri çoğu zaman dakikalar içinde geçer, AB dışı yolcular ise yoğun saatler dışında nadiren uzun bekler. Bagaj alımı pasaport kontrolünün birkaç adım ötesindedir ve arabalar ücretsizdir.</p>
+<p>Baf çoğunlukla Avrupa uçuşlarına hizmet eder ve bir AB giriş noktası olarak hızlıdır — AB pasaportu sahipleri çoğu zaman dakikalar içinde geçer, AB dışı yolcular ise yoğun saatler dışında nadiren uzun bekler. Bagaj alımı pasaport kontrolünün birkaç adım ötesindedir, arabalar ücretsizdir ve kompakt varış alanında bir araç kiralama sırası, döviz ve bir iki kafe bulunur. Akşam geç saatte bile inmesi kolay bir havalimanıdır.</p>
 <h2>Sizi nerede karşılıyoruz</h2>
-<p>Şoförünüz varış salonunda, çıkışın karşısında, adınızın yazılı olduğu tabelayla bekler. Uçuşunuzu takip ederiz; erken ya da rötarlı bir iniş, dahil olan bekleme sürenizi asla kısaltmaz. Dışarı çıkın, karşıya bakın, bizi göreceksiniz.</p>
+<p>Şoförünüz varış salonunda, çıkışın karşısında, adınızın yazılı olduğu tabelayla bekler. Uçuşunuzu kalkıştan itibaren takip ederiz; erken ya da rötarlı bir iniş dahil olan bekleme sürenizi asla kısaltmaz ve önceden aramanıza gerek yoktur. Dışarı çıkın, karşıya bakın, bizi göreceksiniz.</p>
 <h2>Batıda kalmak</h2>
-<p>Baf şehri ve tatil bölgeleri yalnızca 15–20 dakika uzaklıktadır ve ücretiniz yola çıkmadan sabitlenir — trafik ne olursa olsun taksimetre yok.</p>
+<p>Baf şehri ve tatil bölgeleri — Kato Baf, Coral Bay, Peyia — yalnızca 15–30 dakika uzaklıktadır ve ücretiniz yola çıkmadan sabitlenir; trafik ne olursa olsun taksimetre yok. Afrodit Kayası, liman ya da arkeoloji parkı için mi geliyorsunuz? Sizi bir durağa değil kapıya bırakırız.</p>
 <h2>Kuzeye geçiş</h2>
-<p>Girne, Gazimağusa veya Güzelyurt'a mı gidiyorsunuz? Baf, kuzeyin batı kapısıdır. Güzelyurt ve Lefke gibi noktalar için Lefkoşa üzerinden gitmekten daha doğrudan olan Bostancı (Astromeritis) geçişini kullanırız. Ercan'dan daha uzun bir yolculuktur, ama sabit bir fiyat ve sınırı her gün geçen bir sürücüyle tamamen zahmetsizdir.</p>
+<p>Girne, Gazimağusa veya Güzelyurt'a mı gidiyorsunuz? Baf, kuzeyin batı kapısıdır. Güzelyurt ve Lefke gibi noktalar için Lefkoşa üzerinden gitmekten daha doğrudan olan Bostancı (Astromeritis) geçişini kullanırız; Girne ve doğu için yolculuk daha uzundur, ama sabit bir fiyat ve sınırı her gün geçen bir sürücüyle tamamen zahmetsizdir. Araçta kalırsınız, kontrol noktasında pasaportunuzu kısaca gösterirsiniz ve yolculardan ücret alınmaz.</p>
 <h2>İlk dakikalar</h2>
-<p>Şoförünüz bagajlarınızı alır, sizi araca götürür ve yola çıkmadan varış noktanızı teyit eder. Kabinde su hazırdır. Kapıdan açık yola çıkış yalnızca birkaç dakika sürer.</p>
+<p>Şoförünüz bagajlarınızı alır, sizi araca götürür ve yola çıkmadan varış noktanızı teyit eder. Kabinde su hazırdır. Kapıdan açık yola çıkış yalnızca birkaç dakika sürer ve yol kenarında anlaşılacak bir şey yoktur — ücret zaten bellidir.</p>
+<h2>Yalnızca havalimanı değil — şehir içi yolculuklar</h2>
+<p>Vardıktan sonra, aynı sabit fiyatlı hizmet ulaşımınızı da kapsar. <strong>Şehir içi ve bölge içi yolculukları</strong> da yaparız — limanda akşam yemeği, tepelerdeki şarap köylerinde bir gün, süpermarket ya da eczane yolculuğu veya havalimanına dönüş — böylece yalnızca inişte değil tüm tatil boyunca yanınızdayız.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Baf Havalimanı'ndan Baf şehrine ne kadar sürer?</h3>
+<p>Tatil bölgenize göre yaklaşık 15–30 dakika, yola çıkmadan belirlenen sabit bir ücretle.</p>
+<h3>Beni Baf'tan kuzeye götürebilir misiniz?</h3>
+<p>Evet. Yeşil Hat'tı her gün geçeriz; Güzelyurt ve Lefke için daha hızlı olan batıdaki Bostancı geçişini kullanırız. Araçta kalırsınız ve yolcu ücreti yoktur.</p>
+<h3>Uçuşum gecikse bile transferim sabit fiyatlı mı?</h3>
+<p>Evet. Uçuşu takip ederiz ve verilen ücret değişmez; dahil olan bekleme süreniz gecikmeyle kısalmaz.</p>
 <p>Baf'a mı iniyorsunuz? <a href="/tr/routes/">Tüm güzergahların sabit fiyatlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>`,
       ru: `
-<p>Международный аэропорт Пафоса (PFO) — небольшой, солнечный и приятно быстрый в прохождении — западные ворота Кипра. Остаётесь ли вы поблизости или едете на север, вот как проходит спокойное прибытие.</p>
+<p>Международный аэропорт Пафоса (PFO) — небольшой, солнечный и приятно быстрый в прохождении — западные ворота Кипра. Он принимает в основном прямые европейские рейсы, так что для многих гостей это беспроблемный въезд на остров. Остаётесь ли вы поблизости на западе или едете на север в Кирению или Гюзельюрт, вот как проходит спокойное прибытие и как мы возим вас потом.</p>
 <h2>Паспортный контроль и багаж</h2>
-<p>Пафос обслуживает в основном европейские рейсы и как пункт въезда в ЕС проходится быстро — владельцы паспортов ЕС часто проходят за минуты, а путешественники не из ЕС редко ждут долго вне часов пик. Выдача багажа — в нескольких шагах за паспортным контролем, тележки бесплатны.</p>
+<p>Пафос обслуживает в основном европейские рейсы и как пункт въезда в ЕС проходится быстро — владельцы паспортов ЕС часто проходят за минуты, а путешественники не из ЕС редко ждут долго вне часов пик. Выдача багажа — в нескольких шагах за паспортным контролем, тележки бесплатны, а в компактной зоне прилёта есть прокат авто, обмен валюты и пара кафе. Сюда легко прилетать даже поздно вечером.</p>
 <h2>Где мы вас встречаем</h2>
-<p>Ваш водитель ждёт в зале прилёта напротив выхода с табличкой с вашим именем. Мы отслеживаем рейс, поэтому ранняя или задержанная посадка никогда не сокращает включённое время ожидания. Выходите, смотрите вперёд — и увидите нас.</p>
+<p>Ваш водитель ждёт в зале прилёта напротив выхода с табличкой с вашим именем. Мы отслеживаем рейс с момента вылета, поэтому ранняя или задержанная посадка никогда не сокращает включённое время ожидания, и звонить заранее не нужно. Выходите, смотрите вперёд — и увидите нас.</p>
 <h2>Если вы остаётесь на западе</h2>
-<p>Город Пафос и его курортные районы всего в 15–20 минутах, а цена фиксируется до поездки — без счётчика, каким бы ни был трафик.</p>
+<p>Город Пафос и его курортные районы — Като-Пафос, Корал-Бэй, Пейя — всего в 15–30 минутах, а цена фиксируется до поездки, без счётчика при любом трафике. Едете к Скале Афродиты, гавани или в археологический парк? Мы высадим вас у входа, а не на стоянке.</p>
 <h2>Переезд на север</h2>
-<p>Едете в Кирению, Фамагусту или Гюзельюрт? Пафос — западные ворота на север. Для таких мест, как Гюзельюрт и Лефке, мы используем переход Бостанджи (Астромеритис), который удобнее, чем ехать через Никосию. Дорога длиннее, чем из Эрджана, но с фиксированной ценой и водителем, который пересекает границу каждый день, всё совершенно просто.</p>
+<p>Едете в Кирению, Фамагусту или Гюзельюрт? Пафос — западные ворота на север. Для таких мест, как Гюзельюрт и Лефке, мы используем переход Бостанджи (Астромеритис), который удобнее, чем ехать через Никосию; до Кирении и востока дорога длиннее, но с фиксированной ценой и водителем, который пересекает границу каждый день, всё совершенно просто. Вы остаётесь в машине, кратко показываете паспорт на пункте, и платы с пассажиров нет.</p>
 <h2>Первые минуты</h2>
-<p>Водитель возьмёт багаж, проводит вас к машине и подтвердит пункт назначения перед выездом. В салоне ждёт вода. От выхода до открытой дороги — всего несколько минут.</p>
+<p>Водитель возьмёт багаж, проводит вас к машине и подтвердит пункт назначения перед выездом. В салоне ждёт вода. От выхода до открытой дороги — всего несколько минут, и на обочине ни о чём договариваться не нужно: цена уже определена.</p>
+<h2>Не только аэропорт — поездки по городу</h2>
+<p>После приезда та же услуга по фиксированной цене покрывает и передвижение. Мы также возим <strong>по городу (şehir içi) и по окрестностям</strong> — ужин в гавани, день в винных деревнях в горах, поездку в супермаркет или аптеку или обратный путь в аэропорт — так что вы под опекой всю поездку, а не только при посадке.</p>
+<h2>Частые вопросы</h2>
+<h3>Сколько ехать от аэропорта Пафоса до города Пафос?</h3>
+<p>Около 15–30 минут в зависимости от курорта, по фиксированной цене, установленной до поездки.</p>
+<h3>Можете ли вы отвезти меня из Пафоса на север?</h3>
+<p>Да. Мы пересекаем «зелёную линию» ежедневно; для Гюзельюрта и Лефке используем более быстрый западный переход Бостанджи. Вы остаётесь в машине, платы с пассажиров нет.</p>
+<h3>Будет ли трансфер по фиксированной цене, даже если рейс задержится?</h3>
+<p>Да. Мы отслеживаем рейс, и названная цена не меняется; включённое время ожидания не сокращается из-за задержки.</p>
 <p>Прилетаете в Пафос? <a href="/ru/routes/">Смотрите фиксированные цены на все маршруты</a> или <a href="/ru/book/">забронируйте трансфер</a>.</p>`,
     },
   },
