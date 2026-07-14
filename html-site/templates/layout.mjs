@@ -192,13 +192,10 @@ export function faqSection(ctx) {
       ${t.items
         .map(
           (item) => `
-      <details class="group border-b border-line last:border-b-0" open>
-        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-[15px] font-medium [&::-webkit-details-marker]:hidden">
-          <span>${esc(item.q)}</span>
-          <span class="shrink-0 text-xl leading-none text-sea transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
-        </summary>
-        <p class="-mt-1 px-6 pb-6 text-[15px] leading-relaxed text-slate">${esc(item.a)}</p>
-      </details>`,
+      <div class="border-b border-line px-6 py-5 last:border-b-0">
+        <h3 class="text-[15px] font-medium text-ink">${esc(item.q)}</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-slate">${esc(item.a)}</p>
+      </div>`,
         )
         .join('')}
     </div>
@@ -219,9 +216,26 @@ export function faqSection(ctx) {
   return { html, jsonld }
 }
 
+// Apple-clean iç sayfa başlığı — beyaz zemin, ince deniz parıltısı, alt hairline.
+// Ana sayfanın diliyle birebir: nötr taban, tek deniz aksanı, sistem yazı tipi.
+// routes/blog/about/contact/faq/legal aynı başlığı paylaşır; böylece sapma olmaz.
+export function pageHero({ eyebrow, title, subtitle }) {
+  return `
+<section class="relative overflow-hidden border-b border-line bg-paper">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -top-40 right-[-15%] h-[520px] w-[520px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
+  </div>
+  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-14 sm:px-8 lg:pt-20 lg:pb-16">
+    ${eyebrow ? `<p class="text-sm font-medium text-sea">${esc(eyebrow)}</p>` : ''}
+    <h1 class="mt-3 max-w-3xl text-[clamp(2.2rem,5vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-balance text-ink">${esc(title)}</h1>
+    ${subtitle ? `<p class="mt-5 max-w-xl text-[17px] leading-relaxed text-slate">${esc(subtitle)}</p>` : ''}
+  </div>
+</section>`
+}
+
 // path: dile göre değişmeyen sayfa yolu, örn. "/routes/larnaca-airport-to-nicosia/"
 // faq: false verilirse sayfa sonuna ortak SSS bloğu eklenmez (örn. /faq/ ve 404).
-export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-mist text-ink', faq = true }) {
+export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-paper text-ink', faq = true }) {
   const { lang } = ctx
   const faqBlock = faq ? faqSection(ctx) : { html: '', jsonld: null }
   const allJsonld = faqBlock.jsonld ? [...jsonld, faqBlock.jsonld] : jsonld

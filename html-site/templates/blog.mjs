@@ -1,4 +1,4 @@
-import { esc, page } from './layout.mjs'
+import { esc, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { posts } from '../data/posts.mjs'
 
@@ -22,24 +22,18 @@ export function renderBlogIndex(ctx) {
   const base = `/${lang}`
 
   const body = `
-<section class="relative bg-navy py-16 text-white lg:py-20">
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea">${esc(t.eyebrow)}</p>
-    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(t.title)}</h1>
-    <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(t.subtitle)}</p>
-  </div>
-</section>
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       ${sortedPosts()
         .map(
           (p) => `
-      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-2.5 border border-ink/10 bg-white p-5 transition-colors hover:border-sea-deep/40">
-        <p class="text-[10px] uppercase tracking-[0.2em] text-slate">${esc(formatDate(p.date, lang))}</p>
-        <h2 class="font-display text-lg font-medium leading-snug transition-colors group-hover:text-sea-deep">${esc(p.title[lang])}</h2>
-        <p class="line-clamp-3 text-[13px] leading-relaxed text-slate">${esc(p.description[lang])}</p>
-        <span class="mt-auto pt-3 text-[10px] uppercase tracking-[0.2em] text-sea-deep opacity-70 transition-opacity group-hover:opacity-100">${esc(t.readMore)} →</span>
+      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-3 rounded-3xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
+        <p class="text-[12px] font-medium text-slate">${esc(formatDate(p.date, lang))}</p>
+        <h2 class="text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-sea">${esc(p.title[lang])}</h2>
+        <p class="line-clamp-3 text-[14px] leading-relaxed text-slate">${esc(p.description[lang])}</p>
+        <span class="mt-auto inline-flex items-center gap-1.5 pt-3 text-[13px] font-medium text-sea">${esc(t.readMore)} <span aria-hidden="true">→</span></span>
       </a>`,
         )
         .join('')}
@@ -65,37 +59,40 @@ export function renderBlogPost(ctx, post) {
   const others = sortedPosts().filter((p) => p.slug !== post.slug).slice(0, 3)
 
   const body = `
-<section class="relative bg-navy py-16 text-white lg:py-20">
-  <div class="relative mx-auto max-w-3xl px-4 sm:px-6">
-    <nav class="text-[11px] uppercase tracking-[0.2em] text-white/40" aria-label="Breadcrumb">
-      <a href="${base}/blog/" class="transition-colors hover:text-white">${esc(t.title)}</a>
-      <span class="mx-2 text-white/25">/</span>
-      <span class="text-sea">${esc(formatDate(post.date, lang))}</span>
+<section class="relative overflow-hidden border-b border-line bg-paper">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -top-40 right-[-15%] h-[520px] w-[520px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
+  </div>
+  <div class="relative mx-auto max-w-3xl px-5 pt-14 pb-14 sm:px-8 lg:pt-16 lg:pb-16">
+    <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
+      <a href="${base}/blog/" class="transition-colors hover:text-ink">${esc(t.title)}</a>
+      <span class="mx-2 text-ink/25">/</span>
+      <span class="text-ink">${esc(formatDate(post.date, lang))}</span>
     </nav>
-    <h1 class="mt-8 max-w-3xl font-display text-3xl font-medium leading-tight sm:text-4xl">${esc(title)}</h1>
-    <p class="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(description)}</p>
+    <h1 class="mt-7 max-w-3xl text-[clamp(2rem,5vw,3rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-balance text-ink">${esc(title)}</h1>
+    <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-slate">${esc(description)}</p>
   </div>
 </section>
-<section class="bg-mist py-20 lg:py-28">
-  <article class="article-body mx-auto max-w-3xl px-4 sm:px-6">
+<section class="bg-paper py-16 lg:py-20">
+  <article class="article-body mx-auto max-w-3xl px-5 sm:px-8">
     ${post.body[lang]}
   </article>
-  <div class="mx-auto mt-16 max-w-3xl px-4 sm:px-6">
-    <div class="border-t border-ink/10 pt-10">
-      <a href="${base}/book/" class="inline-flex h-13 items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
+  <div class="mx-auto mt-16 max-w-3xl px-5 sm:px-8">
+    <div class="border-t border-line pt-10">
+      <a href="${base}/book/" class="inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
     </div>
     ${
       others.length
         ? `
     <div class="mt-16">
-      <h2 class="font-display text-3xl font-medium">${esc(t.otherPosts)}</h2>
-      <div class="mt-8 grid gap-px overflow-hidden border border-ink/10 bg-ink/10">
+      <h2 class="text-2xl font-semibold tracking-tight text-ink">${esc(t.otherPosts)}</h2>
+      <div class="mt-8 grid gap-3">
         ${others
           .map(
             (p) => `
-        <a href="${base}/blog/${p.slug}/" class="group flex items-center justify-between gap-4 bg-mist p-5 transition-colors hover:bg-white">
-          <p class="text-sm leading-snug">${esc(p.title[lang])}</p>
-          <span class="whitespace-nowrap text-[11px] uppercase tracking-[0.18em] text-slate">${esc(formatDate(p.date, lang))}</span>
+        <a href="${base}/blog/${p.slug}/" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-cloud p-5 transition-shadow duration-300 hover:shadow-card">
+          <span class="text-[15px] font-medium leading-snug text-ink transition-colors group-hover:text-sea">${esc(p.title[lang])}</span>
+          <span class="shrink-0 whitespace-nowrap text-[12px] text-slate">${esc(formatDate(p.date, lang))}</span>
         </a>`,
           )
           .join('')}

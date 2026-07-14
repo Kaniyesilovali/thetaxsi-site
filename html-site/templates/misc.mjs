@@ -1,17 +1,10 @@
-import { esc, icons, page } from './layout.mjs'
+import { esc, icons, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { fieldLabelCls, lightInputCls } from './home.mjs'
 
-function pageHero({ eyebrow, title, subtitle }) {
-  return `
-<section class="relative bg-navy py-16 text-white lg:py-20">
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea">${esc(eyebrow)}</p>
-    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(title)}</h1>
-    ${subtitle ? `<p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
-  </div>
-</section>`
-}
+// Açık zeminli metin alanı — lightInputCls ile aynı dilde (yuvarlak, ince çizgi, deniz odağı)
+const lightTextareaCls =
+  'w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm text-ink outline-none transition-all focus:border-sea focus:ring-2 focus:ring-sea/20 [color-scheme:light]'
 
 export function renderAbout(ctx) {
   const { lang, dict } = ctx
@@ -22,38 +15,37 @@ export function renderAbout(ctx) {
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto flex max-w-6xl flex-col gap-16 px-4 sm:px-6">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto flex max-w-6xl flex-col gap-16 px-5 sm:px-8">
     ${chapters
       .map(
         (c, i) => `
-    <div class="grid gap-4 border-t border-ink/15 pt-8 lg:grid-cols-[minmax(0,240px)_1fr] lg:gap-16">
+    <div class="grid gap-4 border-t border-line pt-8 lg:grid-cols-[minmax(0,260px)_1fr] lg:gap-16">
       <div class="flex items-baseline gap-4">
-        <span class="kicker text-2xl text-sea-deep">0${i + 1}</span>
-        <h2 class="font-display text-3xl font-medium">${esc(c.title)}</h2>
+        <span class="text-sm font-medium tabular-nums text-sea">0${i + 1}</span>
+        <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">${esc(c.title)}</h2>
       </div>
-      <p class="max-w-2xl text-base leading-relaxed text-slate">${esc(c.body)}</p>
+      <p class="max-w-2xl text-[16px] leading-relaxed text-slate">${esc(c.body)}</p>
     </div>`,
       )
       .join('')}
-    <div class="border-t border-ink/15 pt-8">
-      <h2 class="font-display text-3xl font-medium">${esc(t.values.title)}</h2>
-      <div class="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-3">
+    <div class="border-t border-line pt-8">
+      <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">${esc(t.values.title)}</h2>
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
         ${t.values.items
           .map(
-            (v, i) => `
-        <div class="border-t border-sea-deep/30 pt-6">
-          <p class="kicker text-2xl text-sea-deep">0${i + 1}</p>
-          <h3 class="mt-3 text-sm font-medium uppercase tracking-[0.14em]">${esc(v.title)}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate">${esc(v.desc)}</p>
+            (v) => `
+        <div class="rounded-3xl border border-line bg-paper p-7">
+          <h3 class="text-lg font-semibold text-ink">${esc(v.title)}</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">${esc(v.desc)}</p>
         </div>`,
           )
           .join('')}
       </div>
     </div>
-    <div class="flex flex-wrap items-center justify-between gap-6 border-t border-ink/15 pt-10">
-      <p class="eyebrow text-sea-deep">${esc(config.brand)}</p>
-      <a href="${base}/book/" class="inline-flex h-13 items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
+    <div class="flex flex-wrap items-center justify-between gap-6 border-t border-line pt-10">
+      <p class="text-sm font-medium text-sea">${esc(config.brand)}</p>
+      <a href="${base}/book/" class="inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
     </div>
   </div>
 </section>`
@@ -74,35 +66,35 @@ export function renderContact(ctx) {
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto grid max-w-6xl gap-16 px-4 sm:px-6 lg:grid-cols-[minmax(0,340px)_1fr]">
-    <div class="flex flex-col gap-10">
-      <div>
-        <p class="eyebrow text-sea-deep">${esc(t.directHeading)}</p>
-        <ul class="mt-8 flex flex-col gap-6 text-sm">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[minmax(0,340px)_1fr] lg:gap-16">
+    <div class="flex flex-col gap-8">
+      <div class="rounded-3xl border border-line bg-paper p-7">
+        <p class="text-sm font-medium text-sea">${esc(t.directHeading)}</p>
+        <ul class="mt-6 flex flex-col gap-6 text-sm">
           <li>
             <p class="${fieldLabelCls}">${esc(t.phoneLabel)}</p>
-            <a href="tel:${config.phoneHref}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.phone}</span>${config.phoneDisplay}</a>
+            <a href="tel:${config.phoneHref}" class="mt-1.5 flex items-center gap-3 font-medium text-ink transition-colors hover:text-sea"><span class="text-sea">${icons.phone}</span>${config.phoneDisplay}</a>
           </li>
           <li>
             <p class="${fieldLabelCls}">${esc(t.emailLabel)}</p>
-            <a href="mailto:${config.email}" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.mail}</span>${config.email}</a>
+            <a href="mailto:${config.email}" class="mt-1.5 flex items-center gap-3 font-medium text-ink transition-colors hover:text-sea"><span class="text-sea">${icons.mail}</span>${config.email}</a>
           </li>
           <li>
             <p class="${fieldLabelCls}">${esc(t.whatsappLabel)}</p>
-            <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 flex items-center gap-3 font-medium transition-colors hover:text-sea-deep"><span class="text-sea-deep">${icons.whatsapp}</span>+${config.whatsapp}</a>
+            <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1.5 flex items-center gap-3 font-medium text-ink transition-colors hover:text-sea"><span class="text-sea">${icons.whatsapp}</span>+${config.whatsapp}</a>
           </li>
         </ul>
       </div>
-      <div class="border-t border-ink/10 pt-8">
-        <p class="${fieldLabelCls} text-sea-deep">${esc(ft.hours)}</p>
+      <div class="rounded-3xl border border-line bg-paper p-7">
+        <p class="flex items-center gap-2 text-sm font-medium text-sea"><span class="size-1.5 shrink-0 rounded-full bg-sea"></span>${esc(ft.hours)}</p>
         <div class="mt-4 space-y-1 text-sm text-slate">
           ${ft.addressLines.map((line) => `<p>${esc(line)}</p>`).join('\n          ')}
         </div>
       </div>
     </div>
-    <form id="contact-form" class="flex flex-col gap-6" novalidate>
-      <h2 class="font-display text-3xl font-medium">${esc(t.form.title)}</h2>
+    <form id="contact-form" class="flex flex-col gap-6 rounded-3xl border border-line bg-paper p-7 sm:p-9" novalidate>
+      <h2 class="text-2xl font-semibold tracking-tight text-ink">${esc(t.form.title)}</h2>
       <div class="grid gap-6 sm:grid-cols-2">
         <div class="flex flex-col gap-2">
           <label for="cf-name" class="${fieldLabelCls}">${esc(t.form.name)}</label>
@@ -115,12 +107,12 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
       </div>
       <div class="flex flex-col gap-2">
         <label for="cf-message" class="${fieldLabelCls}">${esc(t.form.message)}</label>
-        <textarea id="cf-message" name="message" rows="8" required class="w-full border border-ink/15 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sea-deep [color-scheme:light]"></textarea>
+        <textarea id="cf-message" name="message" rows="8" required class="${lightTextareaCls}"></textarea>
       </div>
-      <p id="cf-error" class="hidden text-sm text-red-700">${esc(t.form.error)}</p>
-      <p id="cf-success" class="hidden border border-sea-deep/40 bg-sea-pale/40 p-5 text-sm text-ink">${esc(xtra.contactForm.success)}</p>
-      <button type="submit" class="inline-flex h-13 w-fit items-center bg-ink px-10 text-xs font-medium uppercase tracking-[0.24em] text-mist transition-colors hover:bg-sea-deep" data-sending-label="${esc(t.form.sending)}">${esc(t.form.submit)}</button>
-      <p class="text-xs text-slate">${esc(xtra.contactForm.fallback)} <a href="mailto:${config.email}" class="text-sea-deep underline">${config.email}</a></p>
+      <p id="cf-error" class="hidden text-sm text-red-600">${esc(t.form.error)}</p>
+      <p id="cf-success" class="hidden rounded-2xl border border-sea/30 bg-sea/5 p-5 text-sm text-ink">${esc(xtra.contactForm.success)}</p>
+      <button type="submit" class="inline-flex h-12 w-fit items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep" data-sending-label="${esc(t.form.sending)}">${esc(t.form.submit)}</button>
+      <p class="text-xs leading-relaxed text-slate">${esc(xtra.contactForm.fallback)} <a href="mailto:${config.email}" class="font-medium text-sea underline underline-offset-2">${config.email}</a></p>
     </form>
   </div>
 </section>`
@@ -134,25 +126,25 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 }
 
 export function renderFaq(ctx) {
-  const { dict, lang } = ctx
+  const { dict } = ctx
   const t = dict.faq
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto flex max-w-3xl flex-col gap-14 px-4 sm:px-6">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto flex max-w-3xl flex-col gap-12 px-5 sm:px-8">
     ${t.sections
       .map(
         (section) => `
     <div>
-      <h2 class="font-display text-3xl font-medium">${esc(section.title)}</h2>
-      <div class="mt-6 border-t border-ink/10">
+      <h2 class="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">${esc(section.title)}</h2>
+      <div class="mt-6 overflow-hidden rounded-3xl border border-line bg-paper">
         ${section.items
           .map(
             (item) => `
-        <div class="border-b border-ink/10 py-6">
-          <h3 class="text-sm font-medium">${esc(item.q)}</h3>
-          <p class="mt-3 text-sm leading-relaxed text-slate">${esc(item.a)}</p>
+        <div class="border-b border-line px-6 py-5 last:border-b-0">
+          <h3 class="text-[15px] font-medium text-ink">${esc(item.q)}</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate">${esc(item.a)}</p>
         </div>`,
           )
           .join('')}
@@ -243,14 +235,14 @@ export function renderLegal(ctx, kind) {
 
   const body = `
 ${pageHero({ eyebrow: config.brand, title: t.title, subtitle: t.lastUpdated })}
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto flex max-w-3xl flex-col gap-10 px-4 sm:px-6">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto flex max-w-3xl flex-col gap-8 px-5 sm:px-8">
     ${sections
       .map(
         ([h, p], i) => `
-    <div class="border-t border-ink/10 pt-8">
-      <h2 class="font-display text-2xl font-medium">${i + 1}. ${esc(h)}</h2>
-      <p class="mt-3 text-sm leading-relaxed text-slate">${esc(p)}</p>
+    <div class="rounded-3xl border border-line bg-paper p-7">
+      <h2 class="text-xl font-semibold tracking-tight text-ink"><span class="mr-2 tabular-nums text-sea">${i + 1}.</span>${esc(h)}</h2>
+      <p class="mt-3 text-[15px] leading-relaxed text-slate">${esc(p)}</p>
     </div>`,
       )
       .join('')}
@@ -271,14 +263,17 @@ export function render404(ctx) {
   const base = `/${lang}`
 
   const body = `
-<section class="relative flex min-h-[70vh] items-center bg-navy text-white">
-  <div class="relative mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
-    <p class="eyebrow text-sea">${esc(t.eyebrow)}</p>
-    <h1 class="mt-6 font-display text-5xl font-medium sm:text-6xl">${esc(t.title)}</h1>
-    <p class="mt-6 text-sm leading-relaxed text-white/60">${esc(t.body)}</p>
-    <div class="mt-10 flex flex-wrap justify-center gap-4">
-      <a href="${base}/" class="inline-flex h-12 items-center border border-white/30 px-8 text-xs uppercase tracking-[0.24em] transition-colors hover:border-white">${esc(t.home)}</a>
-      <a href="${base}/book/" class="inline-flex h-12 items-center bg-sea px-8 text-xs uppercase tracking-[0.24em] text-navy transition-colors hover:bg-sea-deep">${esc(t.book)}</a>
+<section class="relative flex min-h-[70vh] items-center overflow-hidden bg-fog">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.07),transparent 70%)"></div>
+  </div>
+  <div class="relative mx-auto max-w-2xl px-5 py-24 text-center sm:px-8">
+    <p class="text-sm font-medium text-sea">${esc(t.eyebrow)}</p>
+    <h1 class="mt-5 text-[clamp(2.6rem,8vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-ink">${esc(t.title)}</h1>
+    <p class="mx-auto mt-6 max-w-md text-[16px] leading-relaxed text-slate">${esc(t.body)}</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a href="${base}/" class="inline-flex h-12 items-center rounded-full border border-ink/15 px-7 text-[14px] font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">${esc(t.home)}</a>
+      <a href="${base}/book/" class="inline-flex h-12 items-center rounded-full bg-sea px-7 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.book)}</a>
     </div>
   </div>
 </section>`

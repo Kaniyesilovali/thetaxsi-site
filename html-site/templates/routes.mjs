@@ -1,18 +1,7 @@
-import { esc, fmt, icons, page } from './layout.mjs'
+import { esc, fmt, icons, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { routes } from '../data/routes.mjs'
 import { routeLabel } from './home.mjs'
-
-function pageHero({ eyebrow, title, subtitle }) {
-  return `
-<section class="relative bg-navy py-16 text-white lg:py-20">
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea">${esc(eyebrow)}</p>
-    <h1 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(title)}</h1>
-    ${subtitle ? `<p class="mt-5 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">${esc(subtitle)}</p>` : ''}
-  </div>
-</section>`
-}
 
 export function renderRoutesIndex(ctx) {
   const { lang, dict } = ctx
@@ -21,17 +10,27 @@ export function renderRoutesIndex(ctx) {
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto max-w-5xl px-4 sm:px-6">
-    <div class="grid gap-px overflow-hidden border border-ink/10 bg-ink/10">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="grid gap-4 sm:grid-cols-2">
       ${routes
         .map(
           (r) => `
-      <a href="${base}/routes/${r.slug}/" class="group grid gap-4 bg-mist p-6 transition-colors hover:bg-white sm:grid-cols-[1fr_auto_auto_auto] sm:items-center">
-        <p class="text-sm font-medium leading-snug">${esc(routeLabel(r, lang))}</p>
-        <p class="text-sm"><span class="mr-2 text-[10px] uppercase tracking-[0.18em] text-slate">${esc(t.oneWay)}</span><span class="kicker text-2xl text-sea-deep">€${r.price}</span></p>
-        <p class="text-sm"><span class="mr-2 text-[10px] uppercase tracking-[0.18em] text-slate">${esc(t.roundTrip)}</span><span class="kicker text-2xl text-sea-deep">€${r.roundTrip}</span></p>
-        <span class="inline-flex h-10 items-center justify-center gap-2 whitespace-nowrap bg-sea px-6 text-xs font-medium uppercase tracking-[0.2em] text-navy transition-colors group-hover:bg-sea-deep group-hover:text-white">${esc(t.bookRoute)} →</span>
+      <a href="${base}/routes/${r.slug}/" class="group flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
+        <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
+        <div class="mt-auto flex items-end justify-between gap-4">
+          <div class="flex gap-6">
+            <span class="block">
+              <span class="block text-[11px] text-slate">${esc(t.oneWay)}</span>
+              <span class="text-2xl font-semibold tabular-nums text-sea">€${r.price}</span>
+            </span>
+            <span class="block">
+              <span class="block text-[11px] text-slate">${esc(t.roundTrip)}</span>
+              <span class="text-2xl font-semibold tabular-nums text-ink">€${r.roundTrip}</span>
+            </span>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-sea transition-colors group-hover:text-sea-deep">${esc(t.bookRoute)} <span aria-hidden="true">→</span></span>
+        </div>
       </a>`,
         )
         .join('')}
@@ -70,55 +69,61 @@ export function renderRouteDetail(ctx, route) {
   const others = routes.filter((r) => r.slug !== route.slug)
 
   const body = `
-<section class="relative bg-navy py-24 text-white lg:py-32">
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <nav class="text-[11px] uppercase tracking-[0.2em] text-white/40" aria-label="Breadcrumb">
-      <a href="${base}/routes/" class="transition-colors hover:text-white">${esc(rd.breadcrumbRoutes)}</a>
-      <span class="mx-2 text-white/25">/</span>
-      <span class="text-sea">${esc(to)}</span>
+<section class="relative overflow-hidden border-b border-line bg-paper">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -top-40 right-[-15%] h-[560px] w-[560px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
+  </div>
+  <div class="relative mx-auto max-w-6xl px-5 pt-14 pb-16 sm:px-8 lg:pt-16 lg:pb-20">
+    <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
+      <a href="${base}/routes/" class="transition-colors hover:text-ink">${esc(rd.breadcrumbRoutes)}</a>
+      <span class="mx-2 text-ink/25">/</span>
+      <span class="text-ink">${esc(to)}</span>
     </nav>
-    <p class="eyebrow mt-10 text-sea">${esc(rd.heroEyebrow)}</p>
-    <h1 class="mt-4 max-w-4xl font-display text-4xl font-medium leading-tight sm:text-5xl lg:text-6xl">${esc(from)} <span class="text-sea">→</span> ${esc(to)}</h1>
-    <div class="mt-12 grid gap-px border border-white/15 bg-white/10 sm:grid-cols-3 lg:grid-cols-5">
+    <p class="mt-8 text-sm font-medium text-sea">${esc(rd.heroEyebrow)}</p>
+    <h1 class="mt-3 max-w-4xl text-[clamp(2.2rem,6vw,3.75rem)] font-semibold leading-[1.04] tracking-[-0.025em] text-ink">${esc(from)} <span class="text-sea">→</span> ${esc(to)}</h1>
+    <div class="mt-10 grid gap-3 sm:grid-cols-3 lg:grid-cols-5">
       ${facts
         .map(
           ([k, v]) => `
-      <div class="bg-navy/80 px-5 py-4">
-        <p class="text-[10px] uppercase tracking-[0.2em] text-white/40">${esc(k)}</p>
-        <p class="mt-1 text-sm text-sea-pale">${esc(String(v))}</p>
+      <div class="rounded-2xl border border-line bg-cloud px-5 py-4">
+        <p class="text-[11px] text-slate">${esc(k)}</p>
+        <p class="mt-1 text-[15px] font-semibold text-ink">${esc(String(v))}</p>
       </div>`,
         )
         .join('')}
     </div>
-    <a href="${base}/book/?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-13 items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
+    <a href="${base}/book/?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
   </div>
 </section>
 
-<section class="bg-mist py-20 lg:py-28">
-  <div class="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
     <div>
-      <h2 class="font-display text-3xl font-medium">${esc(rd.includedTitle)}</h2>
-      <ul class="mt-8 flex flex-col gap-4">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink">${esc(rd.includedTitle)}</h2>
+      <ul class="mt-8 flex flex-col gap-3">
         ${rd.included
           .map(
             (item) => `
-        <li class="flex items-start gap-3 border-b border-ink/10 pb-4 text-sm text-slate">
-          <span class="mt-0.5 text-sea-deep">${icons.check}</span>
-          ${esc(item)}
+        <li class="flex items-start gap-3 rounded-2xl border border-line bg-paper px-5 py-4 text-[15px] leading-relaxed text-slate">
+          <span class="mt-0.5 shrink-0 text-sea">${icons.check}</span>
+          <span>${esc(item)}</span>
         </li>`,
           )
           .join('')}
       </ul>
     </div>
     <div>
-      <h2 class="font-display text-3xl font-medium">${esc(rd.otherRoutes)}</h2>
-      <div class="mt-8 grid gap-px overflow-hidden border border-ink/10 bg-ink/10">
+      <h2 class="text-3xl font-semibold tracking-tight text-ink">${esc(rd.otherRoutes)}</h2>
+      <div class="mt-8 grid gap-3">
         ${others
           .map(
             (r) => `
-        <a href="${base}/routes/${r.slug}/" class="group flex items-center justify-between gap-4 bg-mist p-5 transition-colors hover:bg-white">
-          <p class="text-sm leading-snug">${esc(routeLabel(r, lang))}</p>
-          <span class="kicker whitespace-nowrap text-2xl text-sea-deep">€${r.price}</span>
+        <a href="${base}/routes/${r.slug}/" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
+          <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
+          <span class="shrink-0 text-right">
+            <span class="block text-[11px] text-slate">${esc(dict.homepage.routes.from)}</span>
+            <span class="text-2xl font-semibold tabular-nums text-sea">€${r.price}</span>
+          </span>
         </a>`,
           )
           .join('')}
