@@ -5,8 +5,6 @@ import { locationGroups } from '../data/locations.mjs'
 
 const photo = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`
 const pexels = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
-// Girne (Kyrenia) limanı — tarihi kale surları ve derin Akdeniz. Pexels, ücretsiz ticari lisans.
-export const heroPhoto = pexels(16531858, 1920)
 // Sırayla: E200/E220, E220d/E300, Vito, V-Class VIP, Sprinter — dict fleet.items ile aynı sıra
 const fleetPhotos = [
   pexels(26690693, 900),
@@ -173,7 +171,7 @@ export function renderHome(ctx) {
   <div aria-hidden="true" class="pointer-events-none absolute inset-0">
     <div class="absolute -top-40 right-[-15%] h-[560px] w-[560px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
   </div>
-  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-14 sm:px-8 lg:pt-24">
+  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 lg:pt-24 lg:pb-28">
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-1.5 text-[13px] font-medium text-slate opacity-0 shadow-sm" style="animation:reveal 700ms ${ease} forwards">
         <span class="size-1.5 rounded-full bg-sea"></span>${esc(t.hero.eyebrow)}
@@ -212,11 +210,6 @@ export function renderHome(ctx) {
         </div>
       </div>
     </form>
-  </div>
-
-  <!-- Yer duygusu: Girne limanı, geniş yuvarlak görsel -->
-  <div class="relative mx-auto mt-4 max-w-6xl px-5 pb-16 sm:px-8 lg:pb-24">
-    <img src="${heroPhoto}" alt="Kyrenia harbour, Cyprus" fetchpriority="high" class="aspect-[2/1] w-full rounded-3xl object-cover object-center shadow-card">
   </div>
 </section>
 
