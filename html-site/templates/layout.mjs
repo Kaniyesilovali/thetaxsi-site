@@ -31,35 +31,36 @@ function header(ctx) {
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="/${l}${path}" class="px-1.5 text-[11px] uppercase tracking-[0.18em] ${active ? 'text-sea' : 'text-white/45 hover:text-white'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
+      return `<a href="/${l}${path}" class="px-1.5 text-[12px] font-medium ${active ? 'text-sea' : 'text-ink/40 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
     })
-    .join('<span class="text-white/20">·</span>')
+    .join('<span class="text-ink/15">·</span>')
 
   return `
-<header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80">
-  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-20">
-    <a href="${base}/" class="font-display text-2xl font-semibold tracking-tight text-white transition-opacity hover:opacity-75 lg:text-[1.7rem]">TheTaxsi</a>
-    <nav class="hidden items-center gap-7 lg:flex">
-      ${links.map((l) => `<a href="${l.href}" class="text-xs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-white">${esc(l.label)}</a>`).join('\n      ')}
+<header class="sticky top-0 z-50 border-b border-line bg-paper/80 backdrop-blur-xl supports-[backdrop-filter]:bg-paper/70">
+  <div class="mx-auto flex h-14 max-w-6xl items-center justify-between gap-6 px-5 sm:px-8 lg:h-16">
+    <a href="${base}/" class="text-xl font-semibold tracking-tight text-ink transition-opacity hover:opacity-70">TheTaxsi</a>
+    <nav class="hidden items-center gap-8 lg:flex">
+      ${links.map((l) => `<a href="${l.href}" class="text-[13px] font-medium text-ink/65 transition-colors hover:text-ink">${esc(l.label)}</a>`).join('\n      ')}
     </nav>
     <div class="flex items-center gap-3 sm:gap-4">
-      <a href="tel:${config.phoneHref}" class="hidden items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/55 transition-colors hover:text-sea xl:flex">
+      <a href="tel:${config.phoneHref}" class="hidden items-center gap-2 text-[13px] font-medium text-ink/60 transition-colors hover:text-sea xl:flex">
         ${icons.phone}
         ${config.phoneDisplay}
       </a>
-      <div class="flex items-center">${langLinks}</div>
-      <a href="${base}/book/" class="hidden h-11 items-center border border-sea px-5 text-[10px] font-medium uppercase tracking-[0.28em] text-sea transition-colors hover:bg-sea hover:text-navy sm:inline-flex">${esc(dict.nav.reserve)}</a>
-      <button type="button" data-menu-toggle class="text-white/60 transition-colors hover:text-white lg:hidden" aria-label="Toggle menu" aria-expanded="false">
+      <div class="hidden items-center sm:flex">${langLinks}</div>
+      <a href="${base}/book/" class="hidden h-9 items-center rounded-full bg-sea px-5 text-[13px] font-medium text-white transition-colors hover:bg-sea-deep sm:inline-flex">${esc(dict.nav.reserve)}</a>
+      <button type="button" data-menu-toggle class="text-ink/60 transition-colors hover:text-ink lg:hidden" aria-label="Toggle menu" aria-expanded="false">
         <span data-menu-icon-open>${icons.menu}</span>
         <span data-menu-icon-close class="hidden">${icons.x}</span>
       </button>
     </div>
   </div>
-  <div data-menu-panel class="hidden border-t border-white/10 bg-navy/95 backdrop-blur lg:hidden">
-    <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
-      ${links.map((l) => `<a href="${l.href}" class="border-b border-white/5 py-4 text-sm uppercase tracking-[0.18em] text-white/65 transition-colors hover:text-white">${esc(l.label)}</a>`).join('\n      ')}
-      <a href="tel:${config.phoneHref}" class="mt-2 flex items-center gap-2 py-4 text-sm uppercase tracking-[0.18em] text-sea">${icons.phone} ${config.phoneDisplay}</a>
-      <a href="${base}/book/" class="mt-3 inline-flex h-12 items-center justify-center border border-sea px-6 text-xs font-medium uppercase tracking-[0.28em] text-sea transition-colors hover:bg-sea hover:text-navy sm:hidden">${esc(dict.nav.reserve)}</a>
+  <div data-menu-panel class="hidden border-t border-line bg-paper lg:hidden">
+    <nav class="mx-auto flex max-w-6xl flex-col px-5 py-3 sm:px-8">
+      ${links.map((l) => `<a href="${l.href}" class="border-b border-line py-4 text-[15px] font-medium text-ink/80 transition-colors hover:text-sea">${esc(l.label)}</a>`).join('\n      ')}
+      <a href="tel:${config.phoneHref}" class="flex items-center gap-2 border-b border-line py-4 text-[15px] font-medium text-sea">${icons.phone} ${config.phoneDisplay}</a>
+      <div class="flex items-center gap-1 py-4">${langLinks}</div>
+      <a href="${base}/book/" class="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-sea px-6 text-[14px] font-medium text-white transition-colors hover:bg-sea-deep sm:hidden">${esc(dict.nav.reserve)}</a>
     </nav>
   </div>
 </header>`
@@ -85,12 +86,12 @@ function footer(ctx) {
     label,
   }))
 
-  // Link sütunu — başlık + bağlantı listesi (referans görseldeki Hizmetler/Kurumsal düzeni)
+  // Link sütunu — başlık + bağlantı listesi
   const col = (heading, items) => `
       <div>
-        <p class="eyebrow text-sea">${esc(heading)}</p>
-        <ul class="mt-6 flex flex-col gap-3">
-          ${items.map((l) => `<li><a href="${l.href}" class="text-sm text-white/60 transition-colors hover:text-white">${esc(l.label)}</a></li>`).join('\n          ')}
+        <p class="text-[13px] font-semibold text-ink">${esc(heading)}</p>
+        <ul class="mt-5 flex flex-col gap-3">
+          ${items.map((l) => `<li><a href="${l.href}" class="text-[13px] text-slate transition-colors hover:text-ink">${esc(l.label)}</a></li>`).join('\n          ')}
         </ul>
       </div>`
 
@@ -98,28 +99,28 @@ function footer(ctx) {
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="/${l}${path}" class="transition-colors ${active ? 'text-sea' : 'text-white/45 hover:text-white'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
+      return `<a href="/${l}${path}" class="transition-colors ${active ? 'text-sea' : 'text-ink/45 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
     })
-    .join('<span class="text-white/20">·</span>')
+    .join('<span class="text-ink/20">·</span>')
 
   // Sosyal ikon — config'de bağlantı boşsa gösterilmez
   const social = (href, icon, label) =>
     href
-      ? `<a href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${label}" class="inline-flex size-10 items-center justify-center rounded-full border border-white/12 text-white/60 transition-colors hover:border-sea hover:text-sea">${icon}</a>`
+      ? `<a href="${href}" target="_blank" rel="noopener noreferrer" aria-label="${label}" class="inline-flex size-10 items-center justify-center rounded-full border border-line bg-paper text-ink/55 transition-colors hover:border-sea hover:text-sea">${icon}</a>`
       : ''
 
   return `
-<footer class="relative border-t border-white/10 bg-navy text-white">
-  <div class="relative mx-auto max-w-7xl px-4 pt-20 pb-10 sm:px-6">
+<footer class="relative border-t border-line bg-fog text-ink">
+  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-10 sm:px-8">
     <div class="flex flex-col gap-14 lg:flex-row lg:gap-20">
       <!-- Marka: logo + isim, açıklama, dil seçici, sosyal ikonlar -->
       <div class="lg:w-64 lg:shrink-0">
         <a href="${base}/" class="inline-flex items-center gap-3">
-          <span class="inline-flex size-11 items-center justify-center rounded-full bg-sea/12 font-display text-lg font-semibold text-sea">T</span>
-          <span class="font-display text-2xl font-semibold tracking-tight text-white">TheTaxsi</span>
+          <span class="inline-flex size-10 items-center justify-center rounded-2xl bg-sea/10 text-lg font-semibold text-sea">T</span>
+          <span class="text-xl font-semibold tracking-tight text-ink">TheTaxsi</span>
         </a>
-        <p class="mt-6 max-w-xs text-sm leading-relaxed text-white/50">${esc(t.tagline)}</p>
-        <p class="mt-6 flex items-center gap-2 text-xs text-white/45">${langLinks}</p>
+        <p class="mt-6 max-w-xs text-[13px] leading-relaxed text-slate">${esc(t.tagline)}</p>
+        <p class="mt-6 flex items-center gap-2 text-xs text-ink/45">${langLinks}</p>
         <div class="mt-6 flex items-center gap-3">
           ${social(config.instagram, icons.instagram, 'Instagram')}
           ${social(config.facebook, icons.facebook, 'Facebook')}
@@ -138,33 +139,33 @@ function footer(ctx) {
         { href: `${base}/faq/`, label: xtra.nav.faq },
         { href: `${base}/contact/`, label: dict.nav.contact },
       ])}
-      <!-- Bilgi Merkezi: öne çıkan rehber yazıları (referans görseldeki düzen) -->
+      <!-- Bilgi Merkezi: öne çıkan rehber yazıları -->
       ${col(t.guidesHeading, guideItems)}
       <!-- İletişim: ikonlu adres, telefon, WhatsApp, e-posta -->
       <div>
-        <p class="eyebrow text-sea">${esc(t.directHeading)}</p>
-        <ul class="mt-6 flex flex-col gap-4">
-          <li class="flex items-start gap-3 text-sm text-white/60"><span class="mt-0.5 shrink-0 text-sea/70">${icons.pin}</span><span>${t.addressLines.map(esc).join(' · ')}</span></li>
-          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>
-          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white"><span class="text-sea/70 transition-colors group-hover:text-sea">${icons.whatsapp}</span>WhatsApp</a></li>
-          <li><a href="mailto:${config.email}" class="group flex items-start gap-3 text-sm text-white/60 transition-colors hover:text-white"><span class="mt-0.5 shrink-0 text-sea/70 transition-colors group-hover:text-sea">${icons.mail}</span><span class="break-all">${config.email}</span></a></li>
+        <p class="text-[13px] font-semibold text-ink">${esc(t.directHeading)}</p>
+        <ul class="mt-5 flex flex-col gap-4">
+          <li class="flex items-start gap-3 text-[13px] text-slate"><span class="mt-0.5 shrink-0 text-sea">${icons.pin}</span><span>${t.addressLines.map(esc).join(' · ')}</span></li>
+          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>
+          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="text-sea">${icons.whatsapp}</span>WhatsApp</a></li>
+          <li><a href="mailto:${config.email}" class="group flex items-start gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="mt-0.5 shrink-0 text-sea">${icons.mail}</span><span class="break-all">${config.email}</span></a></li>
         </ul>
-        <p class="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-sea/80">
+        <p class="mt-6 flex items-center gap-2 text-xs font-medium text-sea">
           <span class="size-1.5 shrink-0 rounded-full bg-sea"></span>
           ${esc(t.hours)}
         </p>
       </div>
       </div>
     </div>
-    <!-- Alt bar: solda telif, sağda yasal bağlantılar (referans düzen) -->
-    <div class="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-      <p class="text-xs text-white/30">${esc(t.copyright.replace('{year}', String(new Date().getFullYear())))}</p>
-      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-white/40">
-        <a href="${base}/privacy/" class="transition-colors hover:text-white">${esc(dict.privacy.title)}</a>
-        <a href="${base}/terms/" class="transition-colors hover:text-white">${esc(dict.terms.title)}</a>
+    <!-- Alt bar: solda telif, sağda yasal bağlantılar -->
+    <div class="mt-14 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-xs text-ink/40">${esc(t.copyright.replace('{year}', String(new Date().getFullYear())))}</p>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink/45">
+        <a href="${base}/privacy/" class="transition-colors hover:text-ink">${esc(dict.privacy.title)}</a>
+        <a href="${base}/terms/" class="transition-colors hover:text-ink">${esc(dict.terms.title)}</a>
       </div>
     </div>
-    <p class="mt-6 text-[11px] uppercase tracking-[0.22em] text-white/25">${esc(t.paymentsLine)}</p>
+    <p class="mt-6 text-[11px] text-ink/35">${esc(t.paymentsLine)}</p>
   </div>
 </footer>
 
@@ -183,25 +184,25 @@ export function faqSection(ctx) {
   const base = `/${lang}`
 
   const html = `
-<section class="border-t border-ink/10 bg-white py-20 lg:py-24" aria-labelledby="page-faq">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6">
-    <p class="eyebrow text-sea-deep">${esc(t.eyebrow)}</p>
-    <h2 id="page-faq" class="mt-4 font-display text-3xl font-medium sm:text-4xl">${esc(t.title)}</h2>
-    <div class="mt-10 border-t border-ink/10">
+<section class="border-t border-line bg-paper py-20 lg:py-28" aria-labelledby="page-faq">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8">
+    <p class="text-sm font-medium text-sea">${esc(t.eyebrow)}</p>
+    <h2 id="page-faq" class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">${esc(t.title)}</h2>
+    <div class="mt-10 overflow-hidden rounded-3xl border border-line bg-cloud">
       ${t.items
         .map(
           (item) => `
-      <details class="group border-b border-ink/10" open>
-        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-sm font-medium [&::-webkit-details-marker]:hidden">
+      <details class="group border-b border-line last:border-b-0" open>
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-[15px] font-medium [&::-webkit-details-marker]:hidden">
           <span>${esc(item.q)}</span>
-          <span class="shrink-0 text-lg leading-none text-sea-deep transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+          <span class="shrink-0 text-xl leading-none text-sea transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
         </summary>
-        <p class="-mt-1 pb-6 text-sm leading-relaxed text-slate">${esc(item.a)}</p>
+        <p class="-mt-1 px-6 pb-6 text-[15px] leading-relaxed text-slate">${esc(item.a)}</p>
       </details>`,
         )
         .join('')}
     </div>
-    <a href="${base}/faq/" class="mt-10 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-sea-deep transition-colors hover:text-navy">${esc(t.allCta)} <span aria-hidden="true">→</span></a>
+    <a href="${base}/faq/" class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-sea transition-colors hover:text-sea-deep">${esc(t.allCta)} <span aria-hidden="true">→</span></a>
   </div>
 </section>`
 
@@ -247,7 +248,7 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   ${allJsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n  ')}
 </head>

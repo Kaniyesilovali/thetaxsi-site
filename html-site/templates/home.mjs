@@ -18,6 +18,15 @@ const fleetPhotos = [
 const fleetPax = [3, 3, 8, 6, 16]
 const corpPhoto = photo('1436491865332-7a61a109cc05', 1200)
 
+// Ana sayfaya özel ince çizgi ikonları (trust şeridi + yıldız)
+const homeIcons = {
+  greet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  plane: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5S18 3 16.5 4.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>`,
+  tag: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>`,
+  star: `<svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.6-5 4.4 1.5 6.5-6-3.4-6 3.4 1.5-6.5-5-4.4 6.6-.6z"/></svg>`,
+}
+const trustIcons = ['greet', 'plane', 'tag']
+
 export function routeLabel(r, lang) {
   return `${r.from[lang]} → ${r.to[lang]}`
 }
@@ -26,21 +35,21 @@ export function routeLabel(r, lang) {
 // tek kaynak. Açık zeminli formlar (book, contact) bunları kullanır; hero kendi
 // koyu bar stilini korur ama liste teması buradan gelir.
 export const lightInputCls =
-  'h-12 w-full border border-ink/15 bg-white px-4 text-sm text-ink outline-none transition-colors focus:border-sea-deep [color-scheme:light]'
+  'h-12 w-full rounded-xl border border-line bg-paper px-4 text-sm text-ink outline-none transition-all focus:border-sea focus:ring-2 focus:ring-sea/20 [color-scheme:light]'
 export const lightSelectCls = `${lightInputCls} [&>option]:bg-white [&>option]:text-ink`
-export const fieldLabelCls = 'text-[11px] font-medium uppercase tracking-[0.18em] text-slate'
+export const fieldLabelCls = 'text-xs font-medium text-slate'
 
 // Combobox'ın liste teması — açık zeminli formda açık, hero'da koyu görünür.
 const comboTheme = {
   dark: {
-    list: 'border border-white/10 bg-navy-soft shadow-xl shadow-black/40 [color-scheme:dark]',
+    list: 'rounded-2xl border border-white/10 bg-navy-soft shadow-xl shadow-black/40 [color-scheme:dark]',
     group: 'text-sea',
     option: 'text-white/90 hover:bg-sea/15 hover:text-sea-pale',
     empty: 'text-white/50',
   },
   light: {
-    list: 'border border-ink/10 bg-white shadow-xl shadow-ink/10 [color-scheme:light]',
-    group: 'text-sea-deep',
+    list: 'rounded-2xl border border-line bg-paper shadow-lift [color-scheme:light]',
+    group: 'text-slate',
     option: 'text-ink hover:bg-sea/10 hover:text-sea-deep',
     empty: 'text-slate',
   },
@@ -105,8 +114,8 @@ export function hotelComboboxHtml(lang, opts) {
 // Noktadan noktaya ipucu satırı — Nereden/Nereye alanlarının her Kıbrıs noktasını
 // (havalimanı, otel, şehir merkezi) kabul ettiğini anlatır. Hero ve book formu paylaşır.
 export function journeyHintHtml(picker, { tone } = {}) {
-  const cls = tone === 'light' ? 'text-slate' : 'text-white/45'
-  return `<p class="text-[11px] leading-relaxed ${cls}">${esc(picker.hint)}</p>`
+  const cls = tone === 'dark' ? 'text-white/45' : 'text-slate'
+  return `<p class="text-[12px] leading-relaxed ${cls}">${esc(picker.hint)}</p>`
 }
 
 // Tek yön / gidiş-dönüş radyo satırı — hero search kartında. Seçim GET ile /book/
@@ -118,17 +127,14 @@ export function tripTypeHtml(picker) {
     ['', t.oneWay, true],
     ['yes', t.roundTrip, false],
   ]
-  return `<fieldset data-trip-type class="flex flex-wrap items-center gap-x-6 gap-y-2">
+  return `<fieldset data-trip-type class="inline-flex rounded-full border border-line bg-fog p-1 text-[13px]">
       <legend class="sr-only">${esc(t.aria)}</legend>
       ${opts
         .map(
           ([value, label, checked]) =>
-            `<label class="inline-flex cursor-pointer items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-white/55">
+            `<label class="cursor-pointer">
         <input type="radio" name="roundtrip" value="${value}"${checked ? ' checked' : ''} class="peer sr-only">
-        <span class="grid size-4 place-items-center rounded-full border border-white/30 transition-colors peer-checked:border-sea peer-checked:bg-sea peer-focus-visible:ring-2 peer-focus-visible:ring-sea/60">
-          <span class="size-1.5 rounded-full bg-white opacity-0 transition-opacity peer-checked:opacity-100"></span>
-        </span>
-        <span class="transition-colors peer-checked:text-white">${esc(label)}</span>
+        <span class="inline-flex items-center rounded-full px-4 py-1.5 font-medium text-slate transition-colors peer-checked:bg-paper peer-checked:text-ink peer-checked:shadow-sm peer-focus-visible:ring-2 peer-focus-visible:ring-sea/50">${esc(label)}</span>
       </label>`,
         )
         .join('\n      ')}
@@ -140,13 +146,14 @@ export function renderHome(ctx) {
   const t = dict.homepage
   const base = `/${lang}`
 
-  const heroComboCls = 'w-full bg-transparent text-sm text-white outline-none placeholder:text-white/40'
+  const heroComboCls = 'w-full bg-transparent text-[15px] font-medium text-ink outline-none placeholder:font-normal placeholder:text-ink/35'
   const fromCombo = locationComboboxHtml(lang, {
     id: 'hp-from',
     name: 'from',
     placeholder: t.hero.picker.selectFrom,
     inputCls: heroComboCls,
     noResults: t.hero.picker.noResults,
+    theme: 'light',
   })
   const toCombo = locationComboboxHtml(lang, {
     id: 'hp-to',
@@ -154,68 +161,77 @@ export function renderHome(ctx) {
     placeholder: t.hero.picker.selectTo,
     inputCls: heroComboCls,
     noResults: t.hero.picker.noResults,
+    theme: 'light',
   })
+
+  const ease = 'cubic-bezier(.16,1,.3,1)'
+  const stars = homeIcons.star.repeat(5)
 
   const body = `
 <!-- HERO -->
-<section class="relative isolate bg-navy text-white">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
-    <img src="${heroPhoto}" alt="" fetchpriority="high" class="size-full object-cover object-center opacity-55">
-    <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(11,36,54,.55) 0%,rgba(11,36,54,.4) 35%,rgba(11,36,54,.85) 75%,rgba(11,36,54,1) 100%)"></div>
-    <div class="absolute inset-0 mix-blend-screen" style="background:radial-gradient(65% 55% at 82% 62%,rgba(31,182,201,.32),rgba(31,182,201,0) 62%);animation:glow-drift 14s ease-in-out infinite"></div>
-    <div class="absolute inset-x-0 top-[64%] h-px bg-gradient-to-r from-transparent via-sea/35 to-transparent"></div>
+<section class="relative overflow-hidden bg-fog">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -top-40 right-[-15%] h-[560px] w-[560px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
   </div>
-  <div class="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-between gap-16 px-4 pt-32 pb-12 sm:px-6 sm:pt-36 lg:min-h-[92vh] lg:gap-24 lg:pt-44 lg:pb-16">
-    <div class="max-w-3xl">
-      <p class="eyebrow text-sea opacity-0" style="animation:reveal 900ms cubic-bezier(.16,1,.3,1) forwards">${esc(t.hero.eyebrow)}</p>
-      <h1 class="mt-6 font-display text-[clamp(2.4rem,10vw,5.5rem)] font-light leading-[0.95] tracking-tight text-balance text-white opacity-0 sm:text-7xl lg:text-[7.5rem]" style="animation:reveal 1100ms 120ms cubic-bezier(.16,1,.3,1) forwards">${esc(t.hero.title)}</h1>
-      <p class="mt-8 max-w-xl text-base font-light leading-relaxed text-white/65 opacity-0 sm:text-lg" style="animation:reveal 1100ms 280ms cubic-bezier(.16,1,.3,1) forwards">${esc(t.hero.subtitle)}</p>
+  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-14 sm:px-8 lg:pt-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-1.5 text-[13px] font-medium text-slate opacity-0 shadow-sm" style="animation:reveal 700ms ${ease} forwards">
+        <span class="size-1.5 rounded-full bg-sea"></span>${esc(t.hero.eyebrow)}
+      </span>
+      <h1 class="mt-7 text-[clamp(2.6rem,7vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance text-ink opacity-0" style="animation:reveal 800ms 100ms ${ease} forwards">${esc(t.hero.title)}</h1>
+      <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-slate opacity-0" style="animation:reveal 800ms 240ms ${ease} forwards">${esc(t.hero.subtitle)}</p>
     </div>
-    <div class="relative opacity-0" style="animation:reveal 1100ms 480ms cubic-bezier(.16,1,.3,1) forwards">
-      <div class="mb-8 h-px w-24 origin-left bg-sea" style="animation:scale-x 800ms 760ms ease-out both"></div>
-      <form action="${base}/book/" method="get" class="max-w-4xl">
-        <div class="border border-white/15 bg-navy/85 backdrop-blur">
-          <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-b border-white/10 px-5 py-4">
-            ${tripTypeHtml(t.hero.picker)}
-            ${journeyHintHtml(t.hero.picker)}
+
+    <!-- Rezervasyon kapsülü — sayfanın imza öğesi -->
+    <form action="${base}/book/" method="get" class="mx-auto mt-12 max-w-4xl opacity-0" style="animation:reveal 900ms 380ms ${ease} forwards">
+      <div class="rounded-[28px] border border-line bg-paper p-3 shadow-lift sm:p-4">
+        <div class="flex flex-wrap items-center justify-between gap-3 px-2 pb-3 pt-1">
+          ${tripTypeHtml(t.hero.picker)}
+          ${journeyHintHtml(t.hero.picker)}
+        </div>
+        <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-[1.3fr_1.3fr_1fr_0.9fr_auto]">
+          <div class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
+            <label for="hp-from" class="text-[11px] font-medium text-slate">${esc(t.hero.picker.from)}</label>
+            <div class="mt-0.5">${fromCombo}</div>
           </div>
-          <div class="grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1.4fr_1fr_1fr_auto]">
-          <div class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
-            <label for="hp-from" class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.from)}</label>
-            ${fromCombo}
+          <div class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
+            <label for="hp-to" class="flex items-center gap-1 text-[11px] font-medium text-slate"><span class="text-sea" aria-hidden="true">→</span>${esc(t.hero.picker.to)}</label>
+            <div class="mt-0.5">${toCombo}</div>
           </div>
-          <div class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
-            <label for="hp-to" class="flex items-center gap-1.5 eyebrow text-[9px] text-sea"><span aria-hidden="true">→</span>${esc(t.hero.picker.to)}</label>
-            ${toCombo}
-          </div>
-          <label class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
-            <span class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.date)}</span>
-            <input type="date" name="date" class="bg-transparent text-sm text-white outline-none [color-scheme:dark]">
+          <label class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
+            <span class="text-[11px] font-medium text-slate">${esc(t.hero.picker.date)}</span>
+            <input type="date" name="date" class="mt-0.5 w-full bg-transparent text-[15px] font-medium text-ink outline-none [color-scheme:light]">
           </label>
-          <label class="flex flex-col gap-1 bg-navy/90 px-5 py-4">
-            <span class="eyebrow text-[9px] text-sea">${esc(t.hero.picker.passengers)}</span>
-            <select name="pax" class="bg-transparent text-sm text-white outline-none [color-scheme:dark] [&>option]:bg-navy-soft [&>option]:text-white">
+          <label class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
+            <span class="text-[11px] font-medium text-slate">${esc(t.hero.picker.passengers)}</span>
+            <select name="pax" class="mt-0.5 w-full bg-transparent text-[15px] font-medium text-ink outline-none [color-scheme:light]">
               ${[1, 2, 3, 4, 5, 6, 7].map((n) => `<option value="${n}">${n} ${n === 1 ? esc(t.hero.picker.passengerSingle) : esc(t.hero.picker.passengerPlural)}</option>`).join('')}
             </select>
           </label>
-          <button type="submit" class="flex items-center justify-center bg-sea px-8 py-4 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.hero.picker.submit)}</button>
-          </div>
+          <button type="submit" class="flex items-center justify-center gap-2 rounded-2xl bg-sea px-7 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.hero.picker.submit)}</button>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Yer duygusu: Girne limanı, geniş yuvarlak görsel -->
+  <div class="relative mx-auto mt-4 max-w-6xl px-5 pb-16 sm:px-8 lg:pb-24">
+    <img src="${heroPhoto}" alt="Kyrenia harbour, Cyprus" fetchpriority="high" class="aspect-[2/1] w-full rounded-3xl object-cover object-center shadow-card">
   </div>
 </section>
 
 <!-- TRUST STRIP -->
-<section class="border-b border-ink/10 bg-haze">
-  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
+<section class="border-y border-line bg-paper">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 md:grid-cols-3">
     ${t.trust.items
       .map(
-        (item) => `
-    <div>
-      <p class="kicker text-2xl text-sea-deep">${esc(item.no)}</p>
-      <h3 class="mt-3 text-sm font-medium uppercase tracking-[0.14em]">${esc(item.title)}</h3>
-      <p class="mt-2 text-sm leading-relaxed text-slate">${esc(item.desc)}</p>
+        (item, i) => `
+    <div class="flex flex-col items-start gap-4">
+      <span class="inline-flex size-11 items-center justify-center rounded-2xl bg-sea/10 text-sea">${homeIcons[trustIcons[i]] || homeIcons.tag}</span>
+      <div>
+        <h3 class="text-[15px] font-semibold text-ink">${esc(item.title)}</h3>
+        <p class="mt-1.5 text-[14px] leading-relaxed text-slate">${esc(item.desc)}</p>
+      </div>
     </div>`,
       )
       .join('')}
@@ -223,17 +239,17 @@ export function renderHome(ctx) {
 </section>
 
 <!-- WHY -->
-<section class="relative bg-navy py-24 text-white lg:py-32">
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea">${esc(t.why.eyebrow)}</p>
-    <h2 class="mt-4 max-w-2xl font-display text-4xl font-medium sm:text-5xl">${esc(t.why.title)}</h2>
-    <div class="mt-16 grid gap-x-12 gap-y-12 md:grid-cols-2">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <p class="text-sm font-medium text-sea">${esc(t.why.eyebrow)}</p>
+    <h2 class="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.why.title)}</h2>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2">
       ${t.why.items
         .map(
           (item) => `
-      <div class="border-t border-white/15 pt-6">
-        <h3 class="font-display text-2xl font-medium text-sea-pale">${esc(item.phrase)}</h3>
-        <p class="mt-3 max-w-md text-sm leading-relaxed text-white/55">${esc(item.desc)}</p>
+      <div class="rounded-3xl border border-line bg-paper p-7">
+        <h3 class="text-xl font-semibold text-ink">${esc(item.phrase)}</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-slate">${esc(item.desc)}</p>
       </div>`,
         )
         .join('')}
@@ -242,23 +258,23 @@ export function renderHome(ctx) {
 </section>
 
 <!-- FLEET -->
-<section class="bg-mist py-24 lg:py-32">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea-deep">${esc(t.fleet.eyebrow)}</p>
-    <h2 class="mt-4 max-w-2xl font-display text-4xl font-medium sm:text-5xl">${esc(t.fleet.title)}</h2>
-    <div class="mt-16 grid gap-8 md:grid-cols-3">
+<section class="border-t border-line bg-paper py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <p class="text-sm font-medium text-sea">${esc(t.fleet.eyebrow)}</p>
+    <h2 class="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.fleet.title)}</h2>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       ${t.fleet.items
         .map(
           (item, i) => `
-      <article class="group border border-ink/10 bg-white">
-        <div class="relative aspect-[4/3] overflow-hidden bg-navy">
-          <img src="${fleetPhotos[i]}" alt="${esc(item.name)}" loading="lazy" class="size-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105">
-          <p class="pointer-events-none absolute bottom-3 left-5 flex items-baseline gap-1.5 font-mono text-5xl font-medium tabular-nums text-sea-pale" style="text-shadow:0 2px 16px rgba(0,0,0,.65)">${fleetPax[i]}<span class="font-sans text-[10px] uppercase tracking-[0.24em] text-white/85">${esc(t.hero.picker.passengerPlural)}</span></p>
+      <article class="group overflow-hidden rounded-3xl border border-line bg-cloud transition-shadow duration-300 hover:shadow-card">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="${fleetPhotos[i]}" alt="${esc(item.name)}" loading="lazy" class="size-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <span class="absolute left-4 top-4 inline-flex items-center rounded-full bg-paper/90 px-3 py-1 text-[12px] font-semibold text-ink backdrop-blur">${fleetPax[i]} ${esc(t.hero.picker.passengerPlural)}</span>
         </div>
         <div class="p-6">
-          <h3 class="font-display text-2xl font-medium">${esc(item.name)}</h3>
-          <p class="mt-1 text-[11px] uppercase tracking-[0.18em] text-sea-deep">${esc(item.capacity)}</p>
-          <p class="mt-3 text-sm leading-relaxed text-slate">${esc(item.desc)}</p>
+          <h3 class="text-lg font-semibold text-ink">${esc(item.name)}</h3>
+          <p class="mt-1 text-[13px] font-medium text-sea">${esc(item.capacity)}</p>
+          <p class="mt-3 text-[14px] leading-relaxed text-slate">${esc(item.desc)}</p>
         </div>
       </article>`,
         )
@@ -268,25 +284,25 @@ export function renderHome(ctx) {
 </section>
 
 <!-- ROUTES PREVIEW -->
-<section class="border-t border-ink/10 bg-haze py-24 lg:py-32">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
     <div class="flex flex-wrap items-end justify-between gap-6">
       <div>
-        <p class="eyebrow text-sea-deep">${esc(t.routes.eyebrow)}</p>
-        <h2 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(t.routes.title)}</h2>
+        <p class="text-sm font-medium text-sea">${esc(t.routes.eyebrow)}</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.routes.title)}</h2>
       </div>
-      <a href="${base}/routes/" class="text-xs uppercase tracking-[0.22em] text-sea-deep transition-colors hover:text-ink">${esc(t.routes.viewAll)}</a>
+      <a href="${base}/routes/" class="inline-flex items-center gap-1.5 text-sm font-medium text-sea transition-colors hover:text-sea-deep">${esc(t.routes.viewAll)}</a>
     </div>
-    <div class="mt-14 grid gap-px overflow-hidden border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       ${routes
         .map(
           (r) => `
-      <a href="${base}/routes/${r.slug}/" class="group bg-mist p-6 transition-colors hover:bg-white">
-        <p class="text-sm font-medium leading-snug">${esc(routeLabel(r, lang))}</p>
-        <p class="mt-4 flex items-baseline gap-2">
-          <span class="text-[10px] uppercase tracking-[0.2em] text-slate">${esc(t.routes.from)}</span>
-          <span class="kicker text-3xl text-sea-deep">€${r.price}</span>
-        </p>
+      <a href="${base}/routes/${r.slug}/" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
+        <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
+        <span class="shrink-0 text-right">
+          <span class="block text-[11px] text-slate">${esc(t.routes.from)}</span>
+          <span class="text-2xl font-semibold tabular-nums text-sea">€${r.price}</span>
+        </span>
       </a>`,
         )
         .join('')}
@@ -295,18 +311,18 @@ export function renderHome(ctx) {
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="bg-mist py-24 lg:py-32">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea-deep">${esc(t.howItWorks.eyebrow)}</p>
-    <h2 class="mt-4 max-w-2xl font-display text-4xl font-medium sm:text-5xl">${esc(t.howItWorks.title)}</h2>
-    <div class="mt-16 grid gap-10 md:grid-cols-3">
+<section class="border-t border-line bg-paper py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <p class="text-sm font-medium text-sea">${esc(t.howItWorks.eyebrow)}</p>
+    <h2 class="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.howItWorks.title)}</h2>
+    <div class="mt-12 grid gap-10 md:grid-cols-3">
       ${t.howItWorks.steps
         .map(
           (s, i) => `
-      <div class="border-t border-ink/15 pt-6">
-        <p class="kicker text-2xl text-sea-deep">0${i + 1}</p>
-        <h3 class="mt-3 text-sm font-medium uppercase tracking-[0.14em]">${esc(s.title)}</h3>
-        <p class="mt-2 text-sm leading-relaxed text-slate">${esc(s.desc)}</p>
+      <div>
+        <span class="inline-flex size-10 items-center justify-center rounded-full bg-sea/10 text-[15px] font-semibold text-sea">${i + 1}</span>
+        <h3 class="mt-5 text-lg font-semibold text-ink">${esc(s.title)}</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-slate">${esc(s.desc)}</p>
       </div>`,
         )
         .join('')}
@@ -315,28 +331,29 @@ export function renderHome(ctx) {
 </section>
 
 <!-- REVIEWS -->
-<section class="relative bg-navy py-24 text-white lg:py-32">
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
-    <p class="eyebrow text-sea">${esc(t.reviews.eyebrow)}</p>
-    <h2 class="mt-4 font-display text-4xl font-medium sm:text-5xl">${esc(t.reviews.title)}</h2>
-    <div class="mt-16 grid gap-10 md:grid-cols-3">
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <p class="text-sm font-medium text-sea">${esc(t.reviews.eyebrow)}</p>
+    <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.reviews.title)}</h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
       ${t.reviews.items
         .map(
           (r) => `
-      <figure class="border-t border-white/15 pt-6">
-        <blockquote class="font-display text-xl font-medium leading-relaxed text-white/85">“${esc(r.quote)}”</blockquote>
-        <figcaption class="mt-5 text-xs uppercase tracking-[0.18em] text-white/45">${esc(r.author)} · ${esc(r.origin)}<span class="mt-1 block text-sea/70">${esc(r.context)}</span></figcaption>
+      <figure class="flex flex-col rounded-3xl border border-line bg-paper p-7">
+        <div class="flex gap-0.5 text-sea">${stars}</div>
+        <blockquote class="mt-4 text-[16px] leading-relaxed text-ink/90">“${esc(r.quote)}”</blockquote>
+        <figcaption class="mt-6 text-[13px] text-slate">${esc(r.author)} · ${esc(r.origin)}<span class="mt-0.5 block font-medium text-sea">${esc(r.context)}</span></figcaption>
       </figure>`,
         )
         .join('')}
     </div>
-    <div class="mt-20 grid grid-cols-2 gap-8 border-t border-white/10 pt-10 lg:grid-cols-4">
+    <div class="mt-10 grid grid-cols-2 gap-8 rounded-3xl border border-line bg-paper px-8 py-9 lg:grid-cols-4">
       ${t.trustedBy.items
         .map(
           (s) => `
       <div>
-        <p class="kicker text-4xl text-sea">${esc(s.value)}</p>
-        <p class="mt-1 text-[11px] uppercase tracking-[0.18em] text-white/45">${esc(s.label)}</p>
+        <p class="text-3xl font-semibold tracking-tight tabular-nums text-ink">${esc(s.value)}</p>
+        <p class="mt-1 text-[13px] text-slate">${esc(s.label)}</p>
       </div>`,
         )
         .join('')}
@@ -345,26 +362,27 @@ export function renderHome(ctx) {
 </section>
 
 <!-- CORPORATE -->
-<section class="border-b border-ink/10 bg-haze py-20 lg:py-28">
-  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[2fr_3fr] lg:gap-16">
-    <img src="${corpPhoto}" alt="" loading="lazy" class="aspect-[4/3] w-full border border-ink/10 object-cover">
-    <div class="flex flex-wrap items-center justify-between gap-10">
-      <div class="max-w-xl">
-        <p class="eyebrow text-sea-deep">${esc(t.corporate.eyebrow)}</p>
-        <h2 class="mt-4 font-display text-3xl font-medium sm:text-4xl">${esc(t.corporate.title)}</h2>
-        <p class="mt-4 text-sm leading-relaxed text-slate">${esc(t.corporate.body)}</p>
-      </div>
-      <a href="${base}/contact/" class="inline-flex h-12 items-center border border-ink px-7 text-xs font-medium uppercase tracking-[0.24em] transition-colors hover:bg-ink hover:text-mist">${esc(t.corporate.cta)}</a>
+<section class="border-t border-line bg-paper py-20 lg:py-28">
+  <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+    <img src="${corpPhoto}" alt="" loading="lazy" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-card">
+    <div class="max-w-xl">
+      <p class="text-sm font-medium text-sea">${esc(t.corporate.eyebrow)}</p>
+      <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.corporate.title)}</h2>
+      <p class="mt-4 text-[15px] leading-relaxed text-slate">${esc(t.corporate.body)}</p>
+      <a href="${base}/contact/" class="mt-8 inline-flex h-11 items-center gap-2 rounded-full border border-ink/15 px-6 text-[14px] font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">${esc(t.corporate.cta)}</a>
     </div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section class="relative bg-navy py-24 text-center text-white lg:py-32">
-  <div class="relative mx-auto max-w-3xl px-4 sm:px-6">
-    <h2 class="font-display text-4xl font-medium sm:text-5xl">${esc(t.cta.title)}</h2>
-    <p class="mt-4 text-sm text-white/55">${esc(t.cta.subtitle)}</p>
-    <a href="${base}/book/" class="mt-10 inline-flex h-13 items-center bg-sea px-10 text-xs font-medium uppercase tracking-[0.28em] text-navy transition-colors hover:bg-sea-deep">${esc(t.cta.button)}</a>
+<!-- CTA BANNER — tek koyu kontrast paneli -->
+<section class="bg-paper px-5 pb-20 sm:px-8 lg:pb-28">
+  <div class="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] bg-charcoal px-6 py-20 text-center text-white">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0" style="background:radial-gradient(60% 80% at 50% 0%,rgba(18,165,188,.12),transparent 70%)"></div>
+    <div class="relative mx-auto max-w-2xl">
+      <h2 class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">${esc(t.cta.title)}</h2>
+      <p class="mx-auto mt-4 max-w-md text-[15px] text-white/60">${esc(t.cta.subtitle)}</p>
+      <a href="${base}/book/" class="mt-9 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta.button)}</a>
+    </div>
   </div>
 </section>`
 
@@ -392,5 +410,6 @@ export function renderHome(ctx) {
     path: '/',
     body,
     jsonld,
+    bodyClass: 'bg-paper text-ink',
   })
 }

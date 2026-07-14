@@ -4,19 +4,29 @@
 @source "./public/js";
 
 @theme {
-  --font-display: "Bricolage Grotesque", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", monospace;
+  /* Apple-clean sistem yığını: Apple cihazlarda SF Pro, diğerlerinde Inter yedeği */
+  --font-display: -apple-system, BlinkMacSystemFont, "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, monospace;
 
   --color-navy: #0B2436;
   --color-navy-soft: #12314A;
-  --color-sea: #1FB6C9;
+  --color-sea: #12A5BC;
   --color-sea-deep: #0E7C93;
   --color-sea-pale: #CDEEF2;
   --color-haze: #E8EFF3;
   --color-mist: #F4F8FA;
-  --color-ink: #0B2436;
-  --color-slate: #51677A;
+  --color-ink: #0A1A24;
+  --color-slate: #5A6B75;
+
+  /* Apple-clean nötr taban */
+  --color-paper: #FFFFFF;
+  --color-fog: #F5F7F9;
+  --color-cloud: #FBFCFD;
+  --color-line: #E7ECEF;
+  --color-charcoal: #17191B;
+
+  --radius-apple: 1.5rem;
 }
 
 @layer utilities {
@@ -47,6 +57,15 @@
     background: var(--color-sea);
     transform-origin: left;
   }
+
+  /* Apple-clean yumuşak gölgeler — geniş, düşük opaklık, katmanlı */
+  .shadow-card {
+    box-shadow: 0 1px 2px rgba(10, 26, 36, 0.04), 0 10px 30px -14px rgba(10, 26, 36, 0.16);
+  }
+
+  .shadow-lift {
+    box-shadow: 0 2px 8px rgba(10, 26, 36, 0.06), 0 28px 64px -24px rgba(10, 26, 36, 0.28);
+  }
 }
 
 /* Blog yazı gövdesi — data/posts.mjs içindeki HTML Tailwind taramasına girmediği için
@@ -64,7 +83,7 @@
   .article-body p {
     font-size: 0.9375rem;
     line-height: 1.75;
-    color: var(--color-clay);
+    color: var(--color-slate);
     margin-top: 1.25rem;
   }
 
@@ -77,7 +96,7 @@
     gap: 0.5rem;
     font-size: 0.9375rem;
     line-height: 1.75;
-    color: var(--color-clay);
+    color: var(--color-slate);
   }
 
   .article-body ul { list-style: disc; }
