@@ -75,7 +75,7 @@ function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults, them
   return `<div class="relative" data-loc-combo>
       <input type="hidden" name="${name}">
       <input id="${id}" type="text" role="combobox" aria-expanded="false" aria-autocomplete="list" autocomplete="off" placeholder="${esc(placeholder)}" class="${inputCls}">
-      <div data-combo-list class="absolute inset-x-0 top-full z-30 mt-2 hidden max-h-56 min-w-full overflow-y-auto pb-2 ${th.list}" role="listbox">
+      <div data-combo-list class="absolute inset-x-0 top-full z-50 mt-2 hidden max-h-72 min-w-full overflow-y-auto pb-2 ${th.list}" role="listbox">
       ${groupsHtml}
       <p data-combo-empty class="hidden px-4 py-3 text-sm ${th.empty}">${esc(noResults)}</p>
       </div>
@@ -167,8 +167,8 @@ export function renderHome(ctx) {
 
   const body = `
 <!-- HERO -->
-<section class="relative overflow-hidden bg-fog">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+<section class="relative bg-fog">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
     <div class="absolute -top-40 right-[-15%] h-[560px] w-[560px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
   </div>
   <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 lg:pt-24 lg:pb-28">
