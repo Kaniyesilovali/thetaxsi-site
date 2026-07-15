@@ -8,13 +8,13 @@ export const posts = [
     date: '2026-07-13',
     title: {
       en: 'Güzelyurt Taxi: In-Town, Out-of-Town and Student Rides',
-      tr: 'Güzelyurt Taksi: Şehir İçi, Şehir Dışı ve Öğrenci Ulaşım Rehberi',
+      tr: 'Güzelyurt Taksi: Şehir İçi, Şehir Dışı ve Öğrenci Rehberi',
       ru: 'Такси в Гюзельюрте: по городу, за город и для студентов',
     },
     description: {
-      en: 'A practical Güzelyurt taxi guide: fixed-price in-town rides, out-of-town trips to Nicosia, Kyrenia and Ercan Airport, and rides built around student life around the campuses.',
-      tr: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, Lefkoşa, Girne ve Ercan Havalimanı'na şehir dışı transferler ve kampüs çevresindeki öğrencilere göre kurgulanmış ulaşım.",
-      ru: 'Практичный гид по такси в Гюзельюрте: поездки по городу по фиксированной цене, за город — в Никосию, Кирению и аэропорт Эрджан, и поездки под студенческую жизнь у кампусов.',
+      en: 'A practical Güzelyurt taxi guide: fixed-price in-town rides, out-of-town trips to Nicosia, Kyrenia and Ercan Airport, and student rides.',
+      tr: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, Lefkoşa, Girne ve Ercan Havalimanı'na şehir dışı transferler ve öğrenci ulaşımı.",
+      ru: 'Гид по такси в Гюзельюрте: поездки по городу по фиксированной цене, за город — в Никосию, Кирению и аэропорт Эрджан, и поездки для студентов.',
     },
     body: {
       en: `
@@ -419,9 +419,9 @@ export const posts = [
     slug: 'larnaca-airport-to-kyrenia-border-crossing-guide',
     date: '2026-07-11',
     title: {
-      en: 'Larnaca Airport to Kyrenia: The Complete Border-Crossing Guide',
-      tr: "Larnaka Havalimanından Girne'ye: Eksiksiz Sınır Geçiş Rehberi",
-      ru: 'Из аэропорта Ларнаки в Кирению: полный гид по пересечению границы',
+      en: 'Larnaca Airport to Kyrenia: Border-Crossing Guide',
+      tr: "Larnaka Havalimanından Girne'ye: Sınır Geçiş Rehberi",
+      ru: 'Из аэропорта Ларнаки в Кирению: пересечение границы',
     },
     description: {
       en: 'How the North Cyprus border crossing really works — checkpoints, passports, visas, and the western route to Güzelyurt and Lefke.',

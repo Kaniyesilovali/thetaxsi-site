@@ -3,32 +3,35 @@ import { config } from '../site.config.mjs'
 import { routes } from '../data/routes.mjs'
 import { locationGroups } from '../data/locations.mjs'
 
-const photo = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`
-const pexels = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
-// Sırayla: E200/E220, E220d/E300, Vito, V-Class VIP, Sprinter — dict fleet.items ile aynı sıra
+// Tüm görseller kendi sunucumuzda barındırılır (public/img → /assets/img). Dış
+// CDN'e (Unsplash/Pexels) bağımlılık yok: daha hızlı LCP, güvenilir yük, kontrol
+// bizde. width/height oranı korur (CLS'yi engeller). Yeni görsel eklerken hem
+// dosyayı public/img'e koy hem de buradaki en/boy değerini gerçek boyutla eşle.
+// Sıra: E200/E220, E220d/E300, Vito, V-Class VIP, Sprinter — dict fleet.items ile aynı.
 const fleetPhotos = [
-  pexels(26690693, 900),
-  pexels(19758544, 900),
-  pexels(17455625, 900),
-  pexels(17455632, 900),
-  pexels(19871521, 900),
+  { src: '/assets/img/fleet-1.jpg', w: 1200, h: 675 },
+  { src: '/assets/img/fleet-2.jpg', w: 1200, h: 800 },
+  { src: '/assets/img/fleet-3.jpg', w: 1200, h: 800 },
+  { src: '/assets/img/fleet-4.jpg', w: 1200, h: 800 },
+  { src: '/assets/img/fleet-5.jpg', w: 1200, h: 1500 },
 ]
 const fleetPax = [3, 3, 8, 6, 16]
-const corpPhoto = photo('1436491865332-7a61a109cc05', 1200)
+const corpPhoto = { src: '/assets/img/corp.jpg', w: 1600, h: 1063 }
 
-// Hero zemin görseli — otel önünde siyah Vito, TR plaka (Pexels filo çekimi).
-const heroPhoto = pexels(17455625, 1600)
+// Hero zemin görseli — otel önünde siyah Vito, TR plaka. layout preloadImage ile
+// LCP için öncelikli yüklenir.
+export const heroPhoto = '/assets/img/hero.jpg'
 
 // Bölge vitrini karuseli — sıra dict.destinations.items ile birebir aynı:
 // Girne limanı, Karpaz Altın Kumsal, Mağusa körfezi, İskele Long Beach,
-// Güzelyurt/Mesarya ovası, Kıbrıs köy dokusu. Görseller elle doğrulandı (Unsplash).
+// Güzelyurt/Mesarya ovası, Kıbrıs köy dokusu.
 const destinationPhotos = [
-  '1664075919566-5807a9fc567c',
-  '1649872646748-629a3a578bfe',
-  '1710106793368-82f483165c7f',
-  '1710420667129-6f2c1cee7544',
-  '1643856555888-c9453eec77f0',
-  '1666011944229-807ee616ab47',
+  { src: '/assets/img/dest-1.jpg', w: 1000, h: 563 },
+  { src: '/assets/img/dest-2.jpg', w: 1000, h: 747 },
+  { src: '/assets/img/dest-3.jpg', w: 1000, h: 563 },
+  { src: '/assets/img/dest-4.jpg', w: 1000, h: 667 },
+  { src: '/assets/img/dest-5.jpg', w: 1000, h: 749 },
+  { src: '/assets/img/dest-6.jpg', w: 1000, h: 667 },
 ]
 
 // Ana sayfaya özel ince çizgi ikonları (trust şeridi + yıldız)
@@ -255,7 +258,7 @@ export function renderHome(ctx) {
         .map(
           (d, i) => `
       <a href="${base}/book/" class="group/card relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-cloud shadow-card sm:w-[46%] lg:w-[31%]">
-        <img src="${photo(destinationPhotos[i], 900)}" alt="${esc(d.place)}" loading="lazy" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover/card:scale-[1.06]">
+        <img src="${destinationPhotos[i].src}" width="${destinationPhotos[i].w}" height="${destinationPhotos[i].h}" alt="${esc(d.place)}" loading="lazy" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover/card:scale-[1.06]">
         <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/15 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-6">
           <h3 class="text-xl font-semibold text-white">${esc(d.place)}</h3>
@@ -316,7 +319,7 @@ export function renderHome(ctx) {
           (item, i) => `
       <article class="group overflow-hidden rounded-3xl border border-line bg-cloud transition-shadow duration-300 hover:shadow-card">
         <div class="relative aspect-[4/3] overflow-hidden">
-          <img src="${fleetPhotos[i]}" alt="${esc(item.name)}" loading="lazy" class="size-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <img src="${fleetPhotos[i].src}" width="${fleetPhotos[i].w}" height="${fleetPhotos[i].h}" alt="${esc(item.name)}" loading="lazy" class="size-full object-cover transition-transform duration-700 group-hover:scale-105">
           <span class="absolute left-4 top-4 inline-flex items-center rounded-full bg-paper/90 px-3 py-1 text-[12px] font-semibold text-ink backdrop-blur">${fleetPax[i]} ${esc(t.hero.picker.passengerPlural)}</span>
         </div>
         <div class="p-6">
@@ -412,7 +415,7 @@ export function renderHome(ctx) {
 <!-- CORPORATE -->
 <section class="border-t border-line bg-paper py-20 lg:py-28">
   <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
-    <img src="${corpPhoto}" alt="" loading="lazy" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-card">
+    <img src="${corpPhoto.src}" width="${corpPhoto.w}" height="${corpPhoto.h}" alt="" loading="lazy" class="aspect-[4/3] w-full rounded-3xl object-cover shadow-card">
     <div class="max-w-xl">
       <p class="text-sm font-medium text-sea">${esc(t.corporate.eyebrow)}</p>
       <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.corporate.title)}</h2>
@@ -459,5 +462,6 @@ export function renderHome(ctx) {
     body,
     jsonld,
     bodyClass: 'bg-paper text-ink',
+    preloadImage: heroPhoto,
   })
 }

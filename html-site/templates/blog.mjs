@@ -103,6 +103,7 @@ export function renderBlogPost(ctx, post) {
   </div>
 </section>`
 
+  const ogImage = `${config.siteUrl}/assets/img/og.jpg`
   const jsonld = [
     {
       '@context': 'https://schema.org',
@@ -110,9 +111,18 @@ export function renderBlogPost(ctx, post) {
       headline: title,
       description,
       datePublished: post.date,
+      dateModified: post.updated ?? post.date,
       inLanguage: lang,
       url: `${config.siteUrl}/${lang}${path}`,
-      publisher: { '@type': 'LocalBusiness', name: config.brand, telephone: config.phoneHref },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `${config.siteUrl}/${lang}${path}` },
+      image: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
+      author: { '@type': 'Organization', name: config.brand, url: `${config.siteUrl}/${lang}/` },
+      publisher: {
+        '@type': 'LocalBusiness',
+        name: config.brand,
+        telephone: config.phoneHref,
+        logo: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
+      },
     },
     {
       '@context': 'https://schema.org',
@@ -124,11 +134,16 @@ export function renderBlogPost(ctx, post) {
     },
   ]
 
+  // Marka ekini yalnızca başlık kısa kaldığında ekle — uzun başlıklar SERP'te
+  // ~60 karakterde kesilmesin diye markasız bırakılır.
+  const withBrand = `${title} — ${config.brand}`
+
   return page(ctx, {
-    title: `${title} — ${config.brand}`,
+    title: withBrand.length <= 60 ? withBrand : title,
     description,
     path,
     body,
     jsonld,
+    ogType: 'article',
   })
 }

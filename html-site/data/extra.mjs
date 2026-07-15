@@ -15,7 +15,7 @@ export const extra = {
       cta: 'Reserve your transfer',
     },
     routeDetail: {
-      metaTitle: '{from} to {to} Transfer — Fixed Price €{price}',
+      metaTitle: '{from} to {to} Transfer — €{price}',
       metaDescription:
         'Private chauffeur transfer from {from} to {to}. Fixed price €{price}, approx. {duration} min, meet & greet included. Book in two minutes.',
       breadcrumbRoutes: 'Routes',
@@ -141,7 +141,7 @@ export const extra = {
       cta: 'Transferinizi rezerve edin',
     },
     routeDetail: {
-      metaTitle: '{from} – {to} Transfer — Sabit Fiyat €{price}',
+      metaTitle: '{from} – {to} Transfer — €{price}',
       metaDescription:
         '{from} – {to} özel şoförlü transfer. Sabit fiyat €{price}, yaklaşık {duration} dk, karşılama dahil. İki dakikada rezervasyon.',
       breadcrumbRoutes: 'Güzergahlar',
@@ -267,9 +267,9 @@ export const extra = {
       cta: 'Забронировать трансфер',
     },
     routeDetail: {
-      metaTitle: 'Трансфер {from} – {to} — фиксированная цена €{price}',
+      metaTitle: 'Трансфер {from} – {to} — €{price}',
       metaDescription:
-        'Индивидуальный трансфер с водителем: {from} – {to}. Фиксированная цена €{price}, около {duration} мин, встреча с табличкой включена. Бронирование за две минуты.',
+        'Трансфер {from} – {to} с водителем. Фиксированная цена €{price}, около {duration} мин, встреча с табличкой. Бронь за 2 минуты.',
       breadcrumbRoutes: 'Маршруты',
       heroEyebrow: 'Из точки в точку',
       facts: {

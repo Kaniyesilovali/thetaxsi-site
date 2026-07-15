@@ -33,11 +33,13 @@ function emit(path, html) {
   writeFileSync(file, html)
 }
 
-const sitemapPaths = []
+const buildDate = new Date().toISOString().slice(0, 10)
+const sitemapEntries = []
 
 for (const lang of config.languages) {
   const ctx = { lang, dict: dictionaries[lang], xtra: extra[lang], path: '/' }
 
+  // [path, render, lastmod] — lastmod verilmezse build tarihi kullanılır.
   const pages = [
     ['/', renderHome],
     ['/book/', renderBook],
@@ -53,12 +55,12 @@ for (const lang of config.languages) {
     pages.push([`/routes/${r.slug}/`, (c) => renderRouteDetail(c, r)])
   }
   for (const p of posts) {
-    pages.push([`/blog/${p.slug}/`, (c) => renderBlogPost(c, p)])
+    pages.push([`/blog/${p.slug}/`, (c) => renderBlogPost(c, p), p.date])
   }
 
-  for (const [path, render] of pages) {
+  for (const [path, render, lastmod] of pages) {
     emit(`${lang}${path}`, render({ ...ctx, path }))
-    if (lang === config.defaultLang) sitemapPaths.push(path)
+    if (lang === config.defaultLang) sitemapEntries.push({ path, lastmod: lastmod || buildDate })
   }
 
   emit(`${lang}/404.html`, render404({ ...ctx, path: '/' }))
@@ -84,14 +86,18 @@ writeFileSync(join(dist, 'index.html'), rootRedirect)
 writeFileSync(join(dist, '404.html'), rootRedirect.replace('<meta name="robots" content="noindex">', '<meta name="robots" content="noindex">'))
 
 /* ---------- sitemap.xml + robots.txt ---------- */
-const urls = sitemapPaths
-  .map((path) => {
-    const alternates = config.languages
-      .map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}"/>`)
-      .join('\n')
+const urls = sitemapEntries
+  .map(({ path, lastmod }) => {
+    const alternates = [
+      ...config.languages.map(
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}"/>`,
+      ),
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${config.siteUrl}/${config.defaultLang}${path}"/>`,
+    ].join('\n')
     return config.languages
       .map(
-        (l) => `  <url>\n    <loc>${config.siteUrl}/${l}${path}</loc>\n${alternates}\n  </url>`,
+        (l) =>
+          `  <url>\n    <loc>${config.siteUrl}/${l}${path}</loc>\n    <lastmod>${lastmod}</lastmod>\n${alternates}\n  </url>`,
       )
       .join('\n')
   })
@@ -110,6 +116,12 @@ const mainJs = readFileSync(join(root, 'public/js/main.js'), 'utf8')
   .replaceAll('__SHEETS_ENDPOINT__', config.sheetsEndpoint)
   .replaceAll('__EMAIL__', config.email)
 writeFileSync(join(dist, 'assets/main.js'), mainJs)
+
+// Kendi sunucumuzda barındırdığımız görseller (public/img) → dist/assets/img.
+cpSync(join(root, 'public/img'), join(dist, 'assets/img'), { recursive: true })
+
+// Kendi sunucumuzda barındırdığımız Inter woff2 alt kümeleri → dist/assets/fonts.
+cpSync(join(root, 'public/fonts'), join(dist, 'assets/fonts'), { recursive: true })
 
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#0B2436"/><text x="16" y="23" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#1FB6C9" text-anchor="middle">T</text></svg>`
 writeFileSync(join(dist, 'assets/favicon.svg'), favicon)

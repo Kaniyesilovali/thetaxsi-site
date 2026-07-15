@@ -235,11 +235,12 @@ export function pageHero({ eyebrow, title, subtitle }) {
 
 // path: dile göre değişmeyen sayfa yolu, örn. "/routes/larnaca-airport-to-nicosia/"
 // faq: false verilirse sayfa sonuna ortak SSS bloğu eklenmez (örn. /faq/ ve 404).
-export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-paper text-ink', faq = true }) {
+export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-paper text-ink', faq = true, ogType = 'website', preloadImage = '' }) {
   const { lang } = ctx
   const faqBlock = faq ? faqSection(ctx) : { html: '', jsonld: null }
   const allJsonld = faqBlock.jsonld ? [...jsonld, faqBlock.jsonld] : jsonld
   const url = `${config.siteUrl}/${lang}${path}`
+  const ogImage = `${config.siteUrl}/assets/img/og.jpg`
   const alternates = config.languages
     .map((l) => `<link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}">`)
     .join('\n  ')
@@ -257,13 +258,19 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${url}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${ogType}">
   <meta property="og:site_name" content="${config.brand}">
+  <meta property="og:locale" content="${lang === 'tr' ? 'tr_TR' : lang === 'ru' ? 'ru_RU' : 'en_US'}">
+  <meta property="og:image" content="${ogImage}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(config.brand)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(title)}">
+  <meta name="twitter:description" content="${esc(description)}">
+  <meta name="twitter:image" content="${ogImage}">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css">
+  ${preloadImage ? `<link rel="preload" as="image" href="${preloadImage}" fetchpriority="high">\n  ` : ''}<link rel="stylesheet" href="/assets/main.css">
   ${allJsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n  ')}
 </head>
 <body class="min-h-full flex flex-col font-sans ${bodyClass}">
