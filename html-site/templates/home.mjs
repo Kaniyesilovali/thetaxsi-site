@@ -16,6 +16,21 @@ const fleetPhotos = [
 const fleetPax = [3, 3, 8, 6, 16]
 const corpPhoto = photo('1436491865332-7a61a109cc05', 1200)
 
+// Hero zemin görseli — otel önünde siyah Vito, TR plaka (Pexels filo çekimi).
+const heroPhoto = pexels(17455625, 1600)
+
+// Bölge vitrini karuseli — sıra dict.destinations.items ile birebir aynı:
+// Girne limanı, Karpaz Altın Kumsal, Mağusa körfezi, İskele Long Beach,
+// Güzelyurt/Mesarya ovası, Kıbrıs köy dokusu. Görseller elle doğrulandı (Unsplash).
+const destinationPhotos = [
+  '1664075919566-5807a9fc567c',
+  '1649872646748-629a3a578bfe',
+  '1710106793368-82f483165c7f',
+  '1710420667129-6f2c1cee7544',
+  '1643856555888-c9453eec77f0',
+  '1666011944229-807ee616ab47',
+]
+
 // Ana sayfaya özel ince çizgi ikonları (trust şeridi + yıldız)
 const homeIcons = {
   greet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
@@ -167,22 +182,24 @@ export function renderHome(ctx) {
 
   const body = `
 <!-- HERO -->
-<section class="relative bg-fog">
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
-    <div class="absolute -top-40 right-[-15%] h-[560px] w-[560px] rounded-full blur-3xl" style="background:radial-gradient(circle,rgba(18,165,188,.06),transparent 70%)"></div>
-  </div>
-  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-20 sm:px-8 lg:pt-24 lg:pb-28">
+<section class="relative overflow-hidden bg-ink">
+  <!-- Zemin görseli + okunabilirlik/geçiş katmanları -->
+  <div aria-hidden="true" class="absolute inset-0 bg-cover bg-center" style="background-image:url('${heroPhoto}')"></div>
+  <div aria-hidden="true" class="absolute inset-0" style="background:linear-gradient(180deg,rgba(6,20,26,.64) 0%,rgba(6,20,26,.20) 32%,rgba(6,20,26,.14) 58%,rgba(6,20,26,.30) 100%)"></div>
+  <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-32" style="background:linear-gradient(180deg,transparent,#F5F7F9)"></div>
+
+  <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-24 sm:px-8 lg:pt-24 lg:pb-32">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-1.5 text-[13px] font-medium text-slate opacity-0 shadow-sm" style="animation:reveal 700ms ${ease} forwards">
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/15 px-4 py-1.5 text-[13px] font-medium text-white opacity-0 shadow-sm backdrop-blur-md" style="animation:reveal 700ms ${ease} forwards">
         <span class="size-1.5 rounded-full bg-sea"></span>${esc(t.hero.eyebrow)}
       </span>
-      <h1 class="mt-7 text-[clamp(2.6rem,7vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance text-ink opacity-0" style="animation:reveal 800ms 100ms ${ease} forwards">${esc(t.hero.title)}</h1>
-      <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-slate opacity-0" style="animation:reveal 800ms 240ms ${ease} forwards">${esc(t.hero.subtitle)}</p>
+      <h1 class="mt-7 text-[clamp(2.6rem,7vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance text-white opacity-0 [text-shadow:0_2px_30px_rgba(6,20,26,.35)]" style="animation:reveal 800ms 100ms ${ease} forwards">${esc(t.hero.title)}</h1>
+      <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-white/85 opacity-0 [text-shadow:0_1px_16px_rgba(6,20,26,.35)]" style="animation:reveal 800ms 240ms ${ease} forwards">${esc(t.hero.subtitle)}</p>
     </div>
 
     <!-- Rezervasyon kapsülü — sayfanın imza öğesi -->
     <form action="${base}/book/" method="get" class="mx-auto mt-12 max-w-4xl opacity-0" style="animation:reveal 900ms 380ms ${ease} forwards">
-      <div class="rounded-[28px] border border-line bg-paper p-3 shadow-lift sm:p-4">
+      <div class="rounded-[28px] border border-white/50 bg-white/70 p-3 shadow-lift backdrop-blur-2xl sm:p-4">
         <div class="flex flex-wrap items-center justify-between gap-3 px-2 pb-3 pt-1">
           ${tripTypeHtml(t.hero.picker)}
           ${journeyHintHtml(t.hero.picker)}
@@ -210,6 +227,44 @@ export function renderHome(ctx) {
         </div>
       </div>
     </form>
+  </div>
+</section>
+
+<!-- DESTINATIONS CAROUSEL — hero altındaki geniş beyaz alanı Kıbrıs bölgeleriyle doldurur -->
+<section class="border-t border-line bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-medium text-sea">${esc(t.destinations.eyebrow)}</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.destinations.title)}</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-slate">${esc(t.destinations.subtitle)}</p>
+      </div>
+      <div class="hidden shrink-0 gap-2 sm:flex">
+        <button type="button" data-carousel-prev aria-label="${esc(t.destinations.prev)}" class="inline-flex size-10 items-center justify-center rounded-full border border-line bg-paper text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button type="button" data-carousel-next aria-label="${esc(t.destinations.next)}" class="inline-flex size-10 items-center justify-center rounded-full border border-line bg-paper text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div data-carousel class="mx-auto mt-12 max-w-6xl px-5 sm:px-8">
+    <div data-carousel-track class="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2">
+      ${t.destinations.items
+        .map(
+          (d, i) => `
+      <a href="${base}/book/" class="group/card relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-cloud shadow-card sm:w-[46%] lg:w-[31%]">
+        <img src="${photo(destinationPhotos[i], 900)}" alt="${esc(d.place)}" loading="lazy" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover/card:scale-[1.06]">
+        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/15 to-transparent"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6">
+          <h3 class="text-xl font-semibold text-white">${esc(d.place)}</h3>
+          <p class="mt-1 text-[13px] font-medium text-white/75">${esc(d.note)}</p>
+        </div>
+      </a>`,
+        )
+        .join('')}
+    </div>
   </div>
 </section>
 
