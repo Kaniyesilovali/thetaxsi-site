@@ -17,7 +17,7 @@
     "hero": {
       "eyebrow": "Kıbrıs · Şoförlü Transfer",
       "title": "Sakin bir varışın ayrıcalığı.",
-      "subtitle": "Kıbrıs'ta önceden rezervasyonlu transferler. Sabit fiyatlar, profesyonel şoförler ve uçaktan iner inmez sizi karşılayan bir şoför.",
+      "subtitle": "Uçaktan iner inmez sizi bekleyen özel bir Mercedes ve size özel bir şoför. Kıbrıs genelinde sabit ücret — her ayrıntı siz daha yola çıkmadan planlanmış.",
       "cta": "Rezerve Et",
       "picker": {
         "from": "Nereden",
@@ -57,16 +57,31 @@
         }
       ]
     },
+    "destinations": {
+      "eyebrow": "Adanın her köşesi",
+      "title": "Gezdiğimiz Kıbrıs.",
+      "subtitle": "Girne'nin tarihi limanından Karpaz kumullarına — her kasabaya, plaja ve tarihi dokuya sabit fiyatlı transfer.",
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "items": [
+        { "place": "Girne Limanı", "note": "Girne · tarihi liman & kale" },
+        { "place": "Altın Kumsal", "note": "Karpaz · kumullar & el değmemiş kıyı" },
+        { "place": "Gazimağusa Körfezi", "note": "Mağusa · turkuaz plajlar" },
+        { "place": "Long Beach", "note": "İskele · doğu kıyısı tatil beldeleri" },
+        { "place": "Güzelyurt Ovası", "note": "Mesarya · narenciye & köyler" },
+        { "place": "Köy dokusu", "note": "Taş kiliseler & gölgeli meydanlar" }
+      ]
+    },
     "why": {
       "eyebrow": "Neden TheTaxsi",
-      "title": "Farklı bir transfer anlayışı.",
+      "title": "Üst düzey bir transfer anlayışı.",
       "items": [
         {
           "phrase": "Sabit fiyatlar.",
           "desc": "Sayaç yok, sürpriz yok. Gördüğünüz fiyat ödediğiniz fiyattır."
         },
         {
-          "phrase": "Profesyonel şoförler.",
+          "phrase": "Deneyimli şoförler.",
           "desc": "Lisanslı, deneyimli şoförler — Kıbrıs yollarında yıllarca deneyim, sessiz ve özenli hizmet."
         },
         {
@@ -81,38 +96,38 @@
     },
     "fleet": {
       "eyebrow": "Filo",
-      "title": "Sakin yolculuk, özenli detaylar.",
+      "title": "Her varış için bir Mercedes.",
       "items": [
         {
           "name": "E200 / E220",
           "capacity": "Sedan · 4 yolcuya kadar · 3 bagaj",
-          "desc": "Standart havalimanı aracı. Serin kabin, ikram su, sabit ücretle sakin bir sürüş."
+          "desc": "Her güne uygun Mercedes sedan — serin ve sessiz bir kabin, elinizin altında soğuk su ve size sunulan sabit ücretle telaşsız bir sürüş."
         },
         {
           "name": "E220d / E300",
           "capacity": "Business sedan · 4 yolcuya kadar · 3 bagaj",
-          "desc": "Uçaktan toplantıya gidenler için yeni nesil E-Serisi. Sessiz, özenli, dakik."
+          "desc": "Uçaktan doğruca toplantıya gidenler için son nesil E-Serisi — yumuşak deri, sessiz bir kabin ve saati sizin yerinize takip eden bir şoför."
         },
         {
           "name": "Vito",
           "capacity": "Grup minivanı · 8 yolcuya kadar · 8 bagaj",
-          "desc": "Aileler ve gruplar bagajlarıyla birlikte yolculuk eder — tek araç, tek ücret."
+          "desc": "Bütün ekibe ve her bagaja yer var — aileler ve gruplar tek bir Mercedes minivanda, tek sabit ücretle birlikte yol alır."
         },
         {
           "name": "V-Class VIP",
           "capacity": "VIP minivan · 6 yolcuya kadar · 6 bagaj",
-          "desc": "Beyaz deri kaptan koltukları, adeta tekerlekli bir lounge. İlk izlenim sayılan varışlar için."
+          "desc": "Beyaz deri tekli kaptan koltukları, rahatça uzanacak alan — ilk izlenim sayılan varışlar için tekerlekli bir lounge."
         },
         {
           "name": "Sprinter",
           "capacity": "Minibüs · 16 yolcuya kadar · 16 bagaj",
-          "desc": "Bütün villa tek araçta — düğünler, ekipler ve tur grupları birlikte varır."
+          "desc": "Bütün villa tek bir Mercedes'te — düğünler, ekipler ve tur grupları ikinci bir araca gerek kalmadan bagajlarıyla birlikte varır."
         }
       ]
     },
     "routes": {
       "eyebrow": "Kıbrıs, noktadan noktaya",
-      "title": "Güzergahlar.",
+      "title": "Öne çıkan güzergahlar.",
       "viewAll": "Tüm güzergahlar →",
       "from": "şu fiyattan"
     },

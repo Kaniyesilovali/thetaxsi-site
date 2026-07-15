@@ -17,7 +17,7 @@
     "hero": {
       "eyebrow": "Cyprus · Chauffeur Service",
       "title": "Arrive composed.",
-      "subtitle": "Pre-booked transfers across Cyprus. Fixed prices, professional drivers, and a chauffeur waiting the moment you land.",
+      "subtitle": "A private Mercedes and your own chauffeur, waiting the moment you land. Fixed fares across Cyprus — every detail arranged before you fly.",
       "cta": "Reserve",
       "picker": {
         "from": "From",
@@ -57,16 +57,31 @@
         }
       ]
     },
+    "destinations": {
+      "eyebrow": "Every corner of the island",
+      "title": "The Cyprus we drive.",
+      "subtitle": "From Kyrenia's old harbour to the Karpaz dunes — fixed-price transfers to every town, beach, and old quarter.",
+      "prev": "Previous",
+      "next": "Next",
+      "items": [
+        { "place": "Kyrenia Harbour", "note": "Girne · old town & castle" },
+        { "place": "Golden Beach", "note": "Karpaz · dunes & wild coast" },
+        { "place": "Famagusta Bay", "note": "Mağusa · turquoise beaches" },
+        { "place": "Long Beach", "note": "İskele · east-coast resorts" },
+        { "place": "Güzelyurt plains", "note": "Mesarya · groves & villages" },
+        { "place": "Village heritage", "note": "Stone churches & shaded squares" }
+      ]
+    },
     "why": {
       "eyebrow": "Why TheTaxsi",
-      "title": "A different kind of transfer.",
+      "title": "A higher standard of arrival.",
       "items": [
         {
           "phrase": "Fixed prices.",
           "desc": "No meters, no surprises. The price you see is the price you pay."
         },
         {
-          "phrase": "Professional drivers.",
+          "phrase": "Seasoned chauffeurs.",
           "desc": "Licensed, vetted chauffeurs with years on Cyprus roads — quiet, careful, and on time."
         },
         {
@@ -81,38 +96,38 @@
     },
     "fleet": {
       "eyebrow": "The Fleet",
-      "title": "Composed transport, considered details.",
+      "title": "A Mercedes for every arrival.",
       "items": [
         {
           "name": "E200 / E220",
           "capacity": "Saloon · up to 4 guests · 3 cases",
-          "desc": "The standard airport car. Cooled cabin, bottled water, unhurried driving at the fixed fare."
+          "desc": "The everyday Mercedes saloon — a cool, quiet cabin, chilled water within reach, and an unhurried drive at the fare you were quoted."
         },
         {
           "name": "E220d / E300",
           "capacity": "Business saloon · up to 4 guests · 3 cases",
-          "desc": "The newer-generation E-Class for arrivals that go straight into a meeting. Quiet, composed, punctual."
+          "desc": "The latest-generation E-Class for arrivals that go straight into a meeting — supple leather, a hushed cabin, and a driver who watches the clock so you don't have to."
         },
         {
           "name": "Vito",
           "capacity": "Group van · up to 8 guests · 8 cases",
-          "desc": "Families and groups travel together, luggage and all — one van, one fare, one conversation."
+          "desc": "Room for the whole party and every case — families and groups stay together in one Mercedes van, one fixed fare, one easy conversation."
         },
         {
           "name": "V-Class VIP",
           "capacity": "VIP van · up to 6 guests · 6 cases",
-          "desc": "Captain chairs in white leather, a lounge on wheels. For arrivals that double as first impressions."
+          "desc": "Individual captain's chairs in white leather, room to stretch out — a lounge on wheels for the arrival that doubles as a first impression."
         },
         {
           "name": "Sprinter",
           "capacity": "Minibus · up to 16 guests · 16 cases",
-          "desc": "The whole villa in one vehicle — weddings, retreats and tour groups arrive together."
+          "desc": "The whole villa in a single Mercedes — weddings, retreats and tour groups arrive together, luggage and all, with no second vehicle."
         }
       ]
     },
     "routes": {
       "eyebrow": "Cyprus, point to point",
-      "title": "Routes.",
+      "title": "Signature routes.",
       "viewAll": "All routes →",
       "from": "from"
     },
@@ -192,7 +207,7 @@
       "cta": "Speak with our concierge →"
     },
     "cta": {
-      "title": "Wherever you're heading. We've already arrived.",
+      "title": "Wherever you're headed, we're already there.",
       "subtitle": "Reserve a transfer in under two minutes.",
       "button": "Reserve a transfer"
     }

@@ -538,4 +538,49 @@
       }
     })
   }
+
+  /* ---------- Bölge vitrini karuseli ---------- */
+  var carousel = document.querySelector('[data-carousel]')
+  if (carousel) {
+    var track = carousel.querySelector('[data-carousel-track]')
+    var prevBtn = document.querySelector('[data-carousel-prev]')
+    var nextBtn = document.querySelector('[data-carousel-next]')
+
+    var stepWidth = function () {
+      var card = track.firstElementChild
+      if (!card) return track.clientWidth
+      var styles = getComputedStyle(track)
+      var gap = parseFloat(styles.columnGap || styles.gap) || 16
+      return card.getBoundingClientRect().width + gap
+    }
+    var atEnd = function () {
+      return track.scrollLeft + track.clientWidth >= track.scrollWidth - 4
+    }
+    var goNext = function () {
+      if (atEnd()) track.scrollTo({ left: 0, behavior: 'smooth' })
+      else track.scrollBy({ left: stepWidth(), behavior: 'smooth' })
+    }
+    var goPrev = function () {
+      if (track.scrollLeft <= 4) track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' })
+      else track.scrollBy({ left: -stepWidth(), behavior: 'smooth' })
+    }
+    if (nextBtn) nextBtn.addEventListener('click', goNext)
+    if (prevBtn) prevBtn.addEventListener('click', goPrev)
+
+    // Otomatik dönüş — hover / dokunma / sekme gizliyken duraklat, azalt-hareket tercihine saygı duy
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (!reduce) {
+      var timer = null
+      var play = function () { if (!timer) timer = setInterval(goNext, 4500) }
+      var pause = function () { if (timer) { clearInterval(timer); timer = null } }
+      carousel.addEventListener('mouseenter', pause)
+      carousel.addEventListener('mouseleave', play)
+      carousel.addEventListener('touchstart', pause, { passive: true })
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) pause()
+        else play()
+      })
+      play()
+    }
+  }
 })()
