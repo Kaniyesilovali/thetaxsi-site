@@ -68,6 +68,7 @@ export const posts = [
 <p>Yes. Short local rides around Güzelyurt run at a fixed local price — the centre, the campus, the hospital or an evening out.</p>
 <h3>Can I set up a regular or monthly ride?</h3>
 <p>Yes. If you have a repeated route — a weekly shop, a campus commute — tell us and we'll agree a fixed arrangement so the same car is there each time.</p>
+<p><strong>Güzelyurt line — direct contact.</strong> Güzelyurt rides are handled directly by Halit Yeşilovalı — call or WhatsApp <a href="tel:+905488616939">+90 548 861 69 39</a> for availability and pickup.</p>
 <p>Need a ride now or on a schedule? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book in two minutes</a>.</p>`,
       tr: `
 <p>Güzelyurt geniş yayılan, telaşsız bir kasabadır ve bu, taksinin burada nasıl çalıştığını doğrudan belirler. Araçlar sokakta pek beklemez, akşamlar sessiz olabilir ve insanların gerçekten gitmesi gereken yerler — şehir merkezi, kampüsler, Lefke sahili, adanın öbür ucundaki havalimanı — hep birbirinden biraz uzaktır. Sabit fiyatlı bir <strong>Güzelyurt taksi</strong> hizmeti bunu tek aramayla çözer: ücreti yola çıkmadan bilirsiniz, araç kapınıza gelir ve aynı hizmet hem beş dakikalık kısa bir yolu hem de ada boyu bir yolculuğu kapsar. İşte şehir içi, şehir dışı ve öğrenciye özel yolculukların nasıl işlediği.</p>
@@ -120,6 +121,7 @@ export const posts = [
 <p>Evet. Güzelyurt içindeki kısa yerel yolculuklar sabit yerel fiyatla yapılır — merkez, kampüs, hastane ya da akşam gezmesi.</p>
 <h3>Düzenli ya da aylık yolculuk ayarlayabilir miyim?</h3>
 <p>Evet. Tekrar eden bir güzergahınız varsa — haftalık alışveriş, kampüs gidiş-gelişi — bize söyleyin, aynı araç her seferinde orada olacak şekilde sabit bir anlaşma yapalım.</p>
+<p><strong>Güzelyurt hattı — doğrudan iletişim.</strong> Güzelyurt yolculuklarını doğrudan Halit Yeşilovalı yürütür — uygunluk ve alım için <a href="tel:+905488616939">+90 548 861 69 39</a> numarasını arayın ya da WhatsApp'tan yazın.</p>
 <p>Şimdi ya da düzenli bir yolculuk mu lazım? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada rezervasyon yapın</a>.</p>`,
       ru: `
 <p>Гюзельюрт — растянутый, неспешный город, и это определяет, как здесь работает такси. Машины редко стоят на улице, вечера бывают тихими, а места, куда действительно нужно попасть — центр, кампусы, побережье у Лефке, аэропорт на другом конце острова, — все немного в стороне друг от друга. Такси в Гюзельюрте по фиксированной цене решает это одним звонком: цену вы знаете до выезда, машина приезжает к двери, и одна и та же услуга покрывает и пятиминутную поездку, и дорогу через весь остров. Вот как устроены поездки по городу, за город и для студентов.</p>
@@ -172,6 +174,7 @@ export const posts = [
 <p>Да. Короткие местные поездки по Гюзельюрту идут по фиксированной местной цене — центр, кампус, больница или вечерний выход.</p>
 <h3>Можно ли договориться о регулярной или месячной поездке?</h3>
 <p>Да. Если у вас есть повторяющийся маршрут — еженедельные покупки, дорога к кампусу — скажите нам, и мы согласуем фиксированную договорённость, чтобы та же машина была на месте каждый раз.</p>
+<p><strong>Линия Гюзельюрт — прямой контакт.</strong> Поездки в Гюзельюрт выполняет напрямую Халит Йешиловалы — звоните или пишите в WhatsApp на <a href="tel:+905488616939">+90 548 861 69 39</a> для уточнения и подачи.</p>
 <p>Нужна поездка сейчас или по расписанию? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте за две минуты</a>.</p>`,
     },
   },
@@ -851,6 +854,7 @@ export const posts = [
 <p>Yes. We run in-town and around-town rides at fixed local prices — the town centre, the groves, Lefke, the university, or an evening out. Just ask.</p>
 <h3>How long does the border crossing take?</h3>
 <p>Usually only a few minutes at Bostancı. You stay in the car, show passports, and there is no charge for passengers.</p>
+<p><strong>Güzelyurt line — direct contact.</strong> Güzelyurt rides are handled directly by Halit Yeşilovalı — call or WhatsApp <a href="tel:+905488616939">+90 548 861 69 39</a> for availability and pickup.</p>
 <p>Arriving, leaving, or just getting around — <a href="/en/routes/">see fixed prices</a> or <a href="/en/book/">book your transfer</a> in two minutes.</p>`,
       tr: `
 <p>Güzelyurt — eski haritalarda Omorfo/Morphou — Kuzey Kıbrıs'ın kuzeybatısının sakin kalbidir: narenciye bahçeleri, telaşsız bir şehir merkezi ve hemen yanı başında adanın en güzel arkeolojik alanlarından bazıları. Sahile kıyasla çok daha az ziyaretçi alır; işte tam da bu onun cazibesidir — ama aynı zamanda ulaşımın az olabileceği anlamına gelir, bu yüzden biraz planlama işe yarar. İşte her havalimanından Güzelyurt'a nasıl ulaşacağınız, güneyden sınır geçişinin nasıl işlediği ve vardıktan sonra sizi nasıl gezdirdiğimiz.</p>
@@ -883,6 +887,7 @@ export const posts = [
 <p>Evet. Şehir içi ve kasaba çevresi yolculuklarını sabit yerel fiyatlarla yaparız — şehir merkezi, bahçeler, Lefke, üniversite ya da akşam gezmesi. Sormanız yeterli.</p>
 <h3>Sınır geçişi ne kadar sürer?</h3>
 <p>Bostancı'da genellikle yalnızca birkaç dakika. Araçta kalırsınız, pasaport gösterirsiniz ve yolculardan ücret alınmaz.</p>
+<p><strong>Güzelyurt hattı — doğrudan iletişim.</strong> Güzelyurt yolculuklarını doğrudan Halit Yeşilovalı yürütür — uygunluk ve alım için <a href="tel:+905488616939">+90 548 861 69 39</a> numarasını arayın ya da WhatsApp'tan yazın.</p>
 <p>Geliş, gidiş ya da yalnızca gezinmek — <a href="/tr/routes/">sabit fiyatlara bakın</a> veya iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>`,
       ru: `
 <p>Гюзельюрт — на старых картах Морфу — тихое сердце северо-запада Северного Кипра: цитрусовые сады, неспешный центр города и одни из лучших археологических памятников острова совсем рядом. Сюда приезжает гораздо меньше гостей, чем на побережье, — в этом и есть его очарование, но это же значит, что транспорта немного, и немного планирования окупается. Вот как добраться до Гюзельюрта из каждого аэропорта, как проходит переход границы с юга и как мы возим вас после приезда.</p>
@@ -915,6 +920,7 @@ export const posts = [
 <p>Да. Мы возим по городу и окрестностям по фиксированным местным ценам — центр, сады, Лефке, университет или вечерний выход. Просто спросите.</p>
 <h3>Сколько занимает переход границы?</h3>
 <p>Обычно всего несколько минут на Бостанджи. Вы остаётесь в машине, показываете паспорта, и с пассажиров плата не берётся.</p>
+<p><strong>Линия Гюзельюрт — прямой контакт.</strong> Поездки в Гюзельюрт выполняет напрямую Халит Йешиловалы — звоните или пишите в WhatsApp на <a href="tel:+905488616939">+90 548 861 69 39</a> для уточнения и подачи.</p>
 <p>Приезд, отъезд или просто передвижение — <a href="/ru/routes/">смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте трансфер</a> за две минуты.</p>`,
     },
   },
