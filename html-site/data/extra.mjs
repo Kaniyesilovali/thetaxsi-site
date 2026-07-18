@@ -40,6 +40,10 @@ export const extra = {
       ],
       reserveCta: 'Reserve this route',
       otherRoutes: 'Other routes',
+      directHeading: 'Güzelyurt line — direct contact',
+      directNote: 'Güzelyurt transfers are handled directly by {name}. Call or message on WhatsApp for availability and pickup.',
+      callCta: 'Call {phone}',
+      whatsappCta: 'WhatsApp {name}',
     },
     bookForm: {
       routeLabel: 'Route',
@@ -166,6 +170,10 @@ export const extra = {
       ],
       reserveCta: 'Bu güzergahı rezerve et',
       otherRoutes: 'Diğer güzergahlar',
+      directHeading: 'Güzelyurt hattı — doğrudan iletişim',
+      directNote: 'Güzelyurt transferleri doğrudan {name} tarafından yürütülür. Uygunluk ve alım için arayın ya da WhatsApp’tan yazın.',
+      callCta: '{phone} — Ara',
+      whatsappCta: 'WhatsApp: {name}',
     },
     bookForm: {
       routeLabel: 'Güzergah',
@@ -292,6 +300,10 @@ export const extra = {
       ],
       reserveCta: 'Забронировать этот маршрут',
       otherRoutes: 'Другие маршруты',
+      directHeading: 'Линия Гюзельюрт — прямой контакт',
+      directNote: 'Трансферы в Гюзельюрт выполняет напрямую {name}. Позвоните или напишите в WhatsApp для уточнения и подачи.',
+      callCta: 'Позвонить {phone}',
+      whatsappCta: 'WhatsApp: {name}',
     },
     bookForm: {
       routeLabel: 'Маршрут',

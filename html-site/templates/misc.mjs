@@ -228,6 +228,20 @@ const legalContent = {
   },
 }
 
+// Yasal sayfa meta açıklamaları — SERP için 120-150 karakter, dile göre gerçek özet.
+const legalMeta = {
+  privacy: {
+    en: 'How TheTaxsi collects, uses and protects your booking data for Cyprus airport transfers. Your rights, data storage and how to request deletion.',
+    tr: 'TheTaxsi’nin Kıbrıs havalimanı transferlerinde rezervasyon verilerinizi nasıl topladığı, kullandığı ve koruduğu. Haklarınız ve veri silme talebi.',
+    ru: 'Как TheTaxsi собирает, использует и защищает данные бронирования трансферов на Кипре. Ваши права, хранение данных и запрос на удаление.',
+  },
+  terms: {
+    en: 'Booking terms for TheTaxsi Cyprus airport transfers: reservations, cancellations, flight delays, payment and liability. Fixed fares, clear conditions.',
+    tr: 'TheTaxsi Kıbrıs havalimanı transferleri için koşullar: rezervasyon, iptal, uçuş rötarı, ödeme ve sorumluluk. Sabit fiyat, açık şartlar.',
+    ru: 'Условия трансферов TheTaxsi на Кипре: бронирование, отмена, задержки рейсов, оплата и ответственность. Фиксированные цены и понятные условия.',
+  },
+}
+
 export function renderLegal(ctx, kind) {
   const { lang, dict } = ctx
   const t = dict[kind]
@@ -251,7 +265,7 @@ ${pageHero({ eyebrow: config.brand, title: t.title, subtitle: t.lastUpdated })}
 
   return page(ctx, {
     title: `${t.title} — ${config.brand}`,
-    description: `${t.title} · ${config.brand}`,
+    description: legalMeta[kind][lang],
     path: `/${kind}/`,
     body,
   })

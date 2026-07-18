@@ -68,6 +68,20 @@ export function renderRouteDetail(ctx, route) {
 
   const others = routes.filter((r) => r.slug !== route.slug)
 
+  // Bazı hatlar (ör. Güzelyurt) doğrudan bir şoför tarafından işletilir; gerçek
+  // telefon/WhatsApp varsa hero'da görünür iletişim bloğu göster.
+  const directContact = route.phoneHref
+    ? `
+    <div class="mt-8 flex flex-col gap-3 rounded-2xl border border-sea/25 bg-sea/5 p-5 sm:max-w-lg">
+      <p class="text-[13px] font-semibold text-ink">${esc(rd.directHeading)}</p>
+      <p class="text-[13px] leading-relaxed text-slate">${esc(fmt(rd.directNote, { name: route.contactName }))}</p>
+      <div class="flex flex-wrap gap-2">
+        <a href="tel:${route.phoneHref}" class="inline-flex h-10 items-center gap-2 rounded-full bg-sea px-5 text-[13px] font-semibold text-white transition-colors hover:bg-sea-deep"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(fmt(rd.callCta, { phone: route.phoneDisplay }))}</a>
+        <a href="https://wa.me/${route.whatsapp}" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 items-center gap-2 rounded-full border border-line bg-paper px-5 text-[13px] font-semibold text-ink transition-colors hover:border-sea hover:text-sea"><span class="[&>svg]:size-4">${icons.whatsapp}</span>${esc(fmt(rd.whatsappCta, { name: route.contactName }))}</a>
+      </div>
+    </div>`
+    : ''
+
   const body = `
 <section class="relative overflow-hidden border-b border-line bg-paper">
   <div aria-hidden="true" class="pointer-events-none absolute inset-0">
@@ -93,6 +107,7 @@ export function renderRouteDetail(ctx, route) {
         .join('')}
     </div>
     <a href="${base}/book/?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
+    ${directContact}
   </div>
 </section>
 
@@ -138,7 +153,11 @@ export function renderRouteDetail(ctx, route) {
       '@type': 'Service',
       serviceType: 'Airport transfer',
       name: `${from} → ${to}`,
-      provider: { '@type': 'LocalBusiness', name: config.brand, telephone: config.phoneHref },
+      provider: {
+        '@type': 'LocalBusiness',
+        name: route.contactName ? `${config.brand} — ${route.contactName}` : config.brand,
+        telephone: route.phoneHref ?? config.phoneHref,
+      },
       areaServed: 'Cyprus',
       offers: {
         '@type': 'Offer',

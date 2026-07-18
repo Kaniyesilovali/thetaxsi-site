@@ -139,6 +139,11 @@ export const routes = [
     roundTrip: 70,
     durationMin: 50,
     distanceKm: 52,
+    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
+    contactName: 'Halit Yeşilovalı',
+    phoneDisplay: '+90 548 861 69 39',
+    phoneHref: '+905488616939',
+    whatsapp: '905488616939',
   },
   // --- Larnaka Havalimanı ---
   {
@@ -235,6 +240,11 @@ export const routes = [
     roundTrip: 130,
     durationMin: 105,
     distanceKm: 100,
+    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
+    contactName: 'Halit Yeşilovalı',
+    phoneDisplay: '+90 548 861 69 39',
+    phoneHref: '+905488616939',
+    whatsapp: '905488616939',
   },
   // --- Baf Havalimanı ---
   {
@@ -293,5 +303,10 @@ export const routes = [
     roundTrip: 150,
     durationMin: 110,
     distanceKm: 115,
+    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
+    contactName: 'Halit Yeşilovalı',
+    phoneDisplay: '+90 548 861 69 39',
+    phoneHref: '+905488616939',
+    whatsapp: '905488616939',
   },
 ]

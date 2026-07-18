@@ -203,17 +203,10 @@ export function faqSection(ctx) {
   </div>
 </section>`
 
-  const jsonld = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: t.items.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-  }
-
-  return { html, jsonld }
+  // FAQPage JSON-LD'i yalnızca /faq/ sayfasında yayınlıyoruz. Ortak SSS bloğu her
+  // sayfada görünür kalır ama aynı şemayı 30+ sayfada tekrarlamak (duplicate
+  // structured data) yerine tek yetkili kaynak /faq/ olur.
+  return { html, jsonld: null }
 }
 
 // Apple-clean iç sayfa başlığı — beyaz zemin, ince deniz parıltısı, alt hairline.
@@ -241,8 +234,13 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   const allJsonld = faqBlock.jsonld ? [...jsonld, faqBlock.jsonld] : jsonld
   const url = `${config.siteUrl}/${lang}${path}`
   const ogImage = `${config.siteUrl}/assets/img/og.jpg`
+  const ogLocales = { en: 'en_US', tr: 'tr_TR', ru: 'ru_RU' }
   const alternates = config.languages
     .map((l) => `<link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}">`)
+    .join('\n  ')
+  const ogLocaleAlternates = config.languages
+    .filter((l) => l !== lang)
+    .map((l) => `<meta property="og:locale:alternate" content="${ogLocales[l] || l}">`)
     .join('\n  ')
 
   return `<!doctype html>
@@ -260,7 +258,8 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   <meta property="og:url" content="${url}">
   <meta property="og:type" content="${ogType}">
   <meta property="og:site_name" content="${config.brand}">
-  <meta property="og:locale" content="${lang === 'tr' ? 'tr_TR' : lang === 'ru' ? 'ru_RU' : 'en_US'}">
+  <meta property="og:locale" content="${ogLocales[lang] || 'en_US'}">
+  ${ogLocaleAlternates}
   <meta property="og:image" content="${ogImage}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">

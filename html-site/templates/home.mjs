@@ -437,7 +437,18 @@ export function renderHome(ctx) {
   </div>
 </section>`
 
+  // priceRange rota fiyatlarından türetilir — gerçek veri, uydurma değil.
+  const routePrices = routes.map((r) => r.price)
+  const priceRange = `€${Math.min(...routePrices)}–€${Math.max(...routePrices)}`
+
   const jsonld = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: config.brand,
+      url: `${config.siteUrl}/${lang}/`,
+      inLanguage: lang,
+    },
     {
       '@context': 'https://schema.org',
       '@type': 'TaxiService',
@@ -446,10 +457,12 @@ export function renderHome(ctx) {
       telephone: config.phoneHref,
       email: config.email,
       areaServed: 'Cyprus',
+      priceRange,
       provider: {
         '@type': 'LocalBusiness',
         name: config.brand,
         telephone: config.phoneHref,
+        priceRange,
         address: { '@type': 'PostalAddress', addressCountry: 'CY' },
       },
     },
