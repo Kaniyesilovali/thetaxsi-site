@@ -1,0 +1,57 @@
+# TheTaxsi — sunucu ayarları. Bu dosya build ile dist/ içine kopyalanır ve
+# deploy sırasında sunucuya gider. Sunucuda elle düzenleme — burada düzenle.
+
+# ---------- Dizin listelemeyi kapat ----------
+# Olmadan /assets/ gibi klasörler herkese açık dosya listesi gösterir.
+Options -Indexes
+
+# ---------- Kendi 404 sayfamız ----------
+ErrorDocument 404 /404.html
+
+# ---------- Yönlendirmeler ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # www → www'suz (kopya içerik olmasın, canonical ile aynı adres kalsın)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # HTTPS zorunlu — SSL sertifikası kurulana kadar KAPALI.
+  # Sertifika çıktıktan sonra alttaki iki satırın başındaki # işaretini sil.
+  # Sertifika yokken açılırsa site tamamen erişilemez hale gelir.
+  # RewriteCond %{HTTPS} !=on
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ---------- Sıkıştırma ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ---------- Tarayıcı önbelleği ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML: önbelleğe alma — deploy sonrası değişiklikler anında görünsün.
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # Varlıklar: uzun süre. Dosya adları sabit olduğu için CSS/JS güncellemesinde
+  # kullanıcı eskiyi görebilir; bu yüzden bir haftada tutuluyor, bir yıl değil.
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ---------- Güvenlik başlıkları ----------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>

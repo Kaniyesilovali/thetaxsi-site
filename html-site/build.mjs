@@ -123,6 +123,9 @@ cpSync(join(root, 'public/img'), join(dist, 'assets/img'), { recursive: true })
 // Kendi sunucumuzda barındırdığımız Inter woff2 alt kümeleri → dist/assets/fonts.
 cpSync(join(root, 'public/fonts'), join(dist, 'assets/fonts'), { recursive: true })
 
+// Sunucu ayarları (dizin listeleme, 404, yönlendirme, cache) → dist kökü.
+cpSync(join(root, 'public/.htaccess'), join(dist, '.htaccess'))
+
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#0B2436"/><text x="16" y="23" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#1FB6C9" text-anchor="middle">T</text></svg>`
 writeFileSync(join(dist, 'assets/favicon.svg'), favicon)
 
