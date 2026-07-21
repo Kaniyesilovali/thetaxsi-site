@@ -13,8 +13,10 @@ ErrorDocument 404 /404.html
   RewriteEngine On
 
   # www → www'suz (kopya içerik olmasın, canonical ile aynı adres kalsın)
+  # Şema http: sertifika yokken https'e yönlendirmek www'yu erişilemez yapar.
+  # HTTPS bloğu açıldığında yükseltmeyi o hallediyor.
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 
   # HTTPS zorunlu — SSL sertifikası kurulana kadar KAPALI.
   # Sertifika çıktıktan sonra alttaki iki satırın başındaki # işaretini sil.
