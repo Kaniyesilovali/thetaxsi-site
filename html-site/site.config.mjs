@@ -5,11 +5,11 @@ export const config = {
 
   brand: 'TheTaxsi',
 
-  // İletişim — TODO: gerçek numarayla değiştir
-  phoneDisplay: '+357 99 000 000',
-  phoneHref: '+35799000000',
-  whatsapp: '35799000000', // wa.me formatı: ülke kodu + numara, boşluksuz, + işaretsiz
-  email: 'concierge@thetaxsi.com',
+  // İletişim
+  phoneDisplay: '+90 548 861 69 39',
+  phoneHref: '+905488616939',
+  whatsapp: '905488616939', // wa.me formatı: ülke kodu + numara, boşluksuz, + işaretsiz
+  email: 'info@thetaxsi.com',
 
   // Sosyal medya — TODO: gerçek hesaplarla değiştir. Boş bırakılırsa footer'da gizlenir.
   instagram: 'https://instagram.com/',
