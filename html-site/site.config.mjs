@@ -17,7 +17,7 @@ export const config = {
 
   // Google Apps Script Web App URL'i — apps-script/README-sheets.md'deki
   // kurulumu yaptıktan sonra buraya yapıştır. Boşsa form yalnızca WhatsApp'a yönlendirir.
-  sheetsEndpoint: '',
+  sheetsEndpoint: 'https://script.google.com/macros/s/AKfycbyi1pR50kZvzAXW0D6yzZwiGal4OBAMWvYUhYjAtDIkzzG7ENIAaFiz3f7X_IdKN4OVPQ/exec',
 
   languages: ['en', 'tr', 'ru'],
   defaultLang: 'en',
