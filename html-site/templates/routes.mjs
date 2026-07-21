@@ -1,6 +1,7 @@
 import { esc, fmt, icons, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { routes } from '../data/routes.mjs'
+import { locationGroups } from '../data/locations.mjs'
 import { routeLabel } from './home.mjs'
 
 export function renderRoutesIndex(ctx) {
@@ -10,8 +11,14 @@ export function renderRoutesIndex(ctx) {
   const cur = config.currencySymbol
 
   // Kalkış havalimanına göre filtre grupları — data/routes.mjs sırasını korur.
+  // Sadece locations.mjs'teki `airports` grubundaki kalkışlar pill alır; şehir
+  // hatları (ör. Güzelyurt → Limasol) listede kalır, "Tüm güzergahlar" altında görünür.
+  const airportValues = new Set(
+    (locationGroups.find((g) => g.id === 'airports')?.locations ?? []).map((l) => l.value),
+  )
   const airports = []
   for (const r of routes) {
+    if (!airportValues.has(r.fromValue)) continue
     if (!airports.some((a) => a.value === r.fromValue)) {
       airports.push({ value: r.fromValue, label: r.from[lang], count: 1 })
     } else {
