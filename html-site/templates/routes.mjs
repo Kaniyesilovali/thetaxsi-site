@@ -8,15 +8,36 @@ export function renderRoutesIndex(ctx) {
   const t = dict.routes
   const base = `/${lang}`
 
+  // Kalkış havalimanına göre filtre grupları — data/routes.mjs sırasını korur.
+  const airports = []
+  for (const r of routes) {
+    if (!airports.some((a) => a.value === r.fromValue)) {
+      airports.push({ value: r.fromValue, label: r.from[lang], count: 1 })
+    } else {
+      airports.find((a) => a.value === r.fromValue).count += 1
+    }
+  }
+
+  const pill = (value, label, count, active) => `
+      <button type="button" data-route-filter="${esc(value)}" aria-pressed="${active}" class="inline-flex h-10 items-center gap-2 rounded-full border px-5 text-[13px] font-medium transition-colors ${
+        active
+          ? 'border-ink bg-ink text-paper'
+          : 'border-line bg-paper text-ink hover:border-ink'
+      }">${esc(label)} <span class="text-[11px] tabular-nums opacity-60">${count}</span></button>`
+
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 <section class="bg-fog py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="mb-8 flex flex-wrap gap-2" data-route-filters role="group" aria-label="${esc(t.filterLabel)}">
+      ${pill('all', t.filterAll, routes.length, true)}
+      ${airports.map((a) => pill(a.value, a.label, a.count, false)).join('')}
+    </div>
     <div class="grid gap-4 sm:grid-cols-2">
       ${routes
         .map(
           (r) => `
-      <a href="${base}/routes/${r.slug}/" class="group flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
+      <a href="${base}/routes/${r.slug}/" data-route-from="${esc(r.fromValue)}" class="group flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
         <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
         <div class="mt-auto flex items-end justify-between gap-4">
           <div class="flex gap-6">

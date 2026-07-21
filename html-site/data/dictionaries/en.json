@@ -313,7 +313,9 @@
     "oneWay": "One Way",
     "roundTrip": "Round Trip",
     "bookRoute": "Reserve this route",
-    "tableHeading": "Route"
+    "tableHeading": "Route",
+    "filterLabel": "Filter routes by airport",
+    "filterAll": "All routes"
   },
   "about": {
     "meta": {

@@ -313,7 +313,9 @@
     "oneWay": "В одну сторону",
     "roundTrip": "Туда и обратно",
     "bookRoute": "Забронировать этот маршрут",
-    "tableHeading": "Маршрут"
+    "tableHeading": "Маршрут",
+    "filterLabel": "Фильтр маршрутов по аэропорту",
+    "filterAll": "Все маршруты"
   },
   "about": {
     "meta": {

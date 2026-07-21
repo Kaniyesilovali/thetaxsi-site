@@ -539,6 +539,35 @@
     })
   }
 
+  /* ---------- Güzergah listesi: havalimanı filtresi ---------- */
+  var filterBar = document.querySelector('[data-route-filters]')
+  if (filterBar) {
+    var filterBtns = filterBar.querySelectorAll('[data-route-filter]')
+    var routeCards = document.querySelectorAll('[data-route-from]')
+    var ACTIVE = ['border-ink', 'bg-ink', 'text-paper']
+    var IDLE = ['border-line', 'bg-paper', 'text-ink', 'hover:border-ink']
+
+    var applyFilter = function (value) {
+      for (var i = 0; i < filterBtns.length; i++) {
+        var btn = filterBtns[i]
+        var on = btn.getAttribute('data-route-filter') === value
+        btn.setAttribute('aria-pressed', String(on))
+        btn.classList.remove.apply(btn.classList, on ? IDLE : ACTIVE)
+        btn.classList.add.apply(btn.classList, on ? ACTIVE : IDLE)
+      }
+      for (var j = 0; j < routeCards.length; j++) {
+        var card = routeCards[j]
+        var show = value === 'all' || card.getAttribute('data-route-from') === value
+        card.classList.toggle('hidden', !show)
+      }
+    }
+
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-route-filter]')
+      if (btn) applyFilter(btn.getAttribute('data-route-filter'))
+    })
+  }
+
   /* ---------- Bölge vitrini karuseli ---------- */
   var carousel = document.querySelector('[data-carousel]')
   if (carousel) {

@@ -313,7 +313,9 @@
     "oneWay": "Tek Yön",
     "roundTrip": "Gidiş-Dönüş",
     "bookRoute": "Bu güzergahı rezerve et",
-    "tableHeading": "Güzergah"
+    "tableHeading": "Güzergah",
+    "filterLabel": "Güzergahları havalimanına göre filtrele",
+    "filterAll": "Tüm güzergahlar"
   },
   "about": {
     "meta": {
