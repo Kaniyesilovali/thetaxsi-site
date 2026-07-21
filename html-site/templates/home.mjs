@@ -161,6 +161,7 @@ export function renderHome(ctx) {
   const { lang, dict, xtra } = ctx
   const t = dict.homepage
   const base = `/${lang}`
+  const cur = config.currencySymbol
 
   const heroComboCls = 'w-full bg-transparent text-[15px] font-medium text-ink outline-none placeholder:font-normal placeholder:text-ink/35'
   const fromCombo = locationComboboxHtml(lang, {
@@ -352,7 +353,7 @@ export function renderHome(ctx) {
         <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
         <span class="shrink-0 text-right">
           <span class="block text-[11px] text-slate">${esc(t.routes.from)}</span>
-          <span class="text-2xl font-semibold tabular-nums text-sea">€${r.price}</span>
+          <span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>
         </span>
       </a>`,
         )
@@ -439,7 +440,7 @@ export function renderHome(ctx) {
 
   // priceRange rota fiyatlarından türetilir — gerçek veri, uydurma değil.
   const routePrices = routes.map((r) => r.price)
-  const priceRange = `€${Math.min(...routePrices)}–€${Math.max(...routePrices)}`
+  const priceRange = `${cur}${Math.min(...routePrices)}–${cur}${Math.max(...routePrices)}`
 
   const jsonld = [
     {

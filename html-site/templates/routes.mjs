@@ -7,6 +7,7 @@ export function renderRoutesIndex(ctx) {
   const { lang, dict } = ctx
   const t = dict.routes
   const base = `/${lang}`
+  const cur = config.currencySymbol
 
   // Kalkış havalimanına göre filtre grupları — data/routes.mjs sırasını korur.
   const airports = []
@@ -43,11 +44,11 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
           <div class="flex gap-6">
             <span class="block">
               <span class="block text-[11px] text-slate">${esc(t.oneWay)}</span>
-              <span class="text-2xl font-semibold tabular-nums text-sea">€${r.price}</span>
+              <span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>
             </span>
             <span class="block">
               <span class="block text-[11px] text-slate">${esc(t.roundTrip)}</span>
-              <span class="text-2xl font-semibold tabular-nums text-ink">€${r.roundTrip}</span>
+              <span class="text-2xl font-semibold tabular-nums text-ink">${cur}${r.roundTrip}</span>
             </span>
           </div>
           <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-sea transition-colors group-hover:text-sea-deep">${esc(t.bookRoute)} <span aria-hidden="true">→</span></span>
@@ -71,6 +72,7 @@ export function renderRouteDetail(ctx, route) {
   const { lang, dict, xtra } = ctx
   const rd = xtra.routeDetail
   const base = `/${lang}`
+  const cur = config.currencySymbol
   const from = route.from[lang]
   const to = route.to[lang]
   const label = routeLabel(route, lang)
@@ -82,12 +84,40 @@ export function renderRouteDetail(ctx, route) {
   const facts = [
     [rd.facts.duration, fmt(rd.facts.durationValue, { min: route.durationMin })],
     [rd.facts.distance, fmt(rd.facts.distanceValue, { km: route.distanceKm })],
-    [rd.facts.oneWay, `€${route.price}`],
-    [rd.facts.roundTrip, `€${route.roundTrip}`],
+    [rd.facts.oneWay, `${cur}${route.price}`],
+    [rd.facts.roundTrip, `${cur}${route.roundTrip}`],
     [rd.facts.vehicle, rd.facts.vehicleValue],
   ]
 
   const others = routes.filter((r) => r.slug !== route.slug)
+
+  // Vito fiyatı verilen hatlarda (Güzelyurt) salon/Vito ayrı ayrı listelenir;
+  // diğer rotalarda tek fiyat geçerli olduğu için blok gizlenir.
+  const vehicleRow = (label, seats, one, round) => `
+      <div class="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-line bg-cloud px-5 py-4">
+        <span class="text-[15px] font-semibold text-ink">${esc(label)} <span class="font-normal text-slate">${esc(seats)}</span></span>
+        <span class="flex gap-6">
+          <span class="block text-right">
+            <span class="block text-[11px] text-slate">${esc(rd.facts.oneWay)}</span>
+            <span class="text-lg font-semibold tabular-nums text-sea">${cur}${one}</span>
+          </span>
+          <span class="block text-right">
+            <span class="block text-[11px] text-slate">${esc(rd.facts.roundTrip)}</span>
+            <span class="text-lg font-semibold tabular-nums text-ink">${cur}${round}</span>
+          </span>
+        </span>
+      </div>`
+
+  const vehiclePricing = route.vitoPrice
+    ? `
+    <div class="mt-10 sm:max-w-lg">
+      <p class="text-[13px] font-semibold text-ink">${esc(rd.vehiclesTitle)}</p>
+      <div class="mt-3 flex flex-col gap-3">
+        ${vehicleRow(rd.salonLabel, rd.salonSeats, route.price, route.roundTrip)}
+        ${vehicleRow(rd.vitoLabel, rd.vitoSeats, route.vitoPrice, route.vitoRoundTrip)}
+      </div>
+    </div>`
+    : ''
 
   // Bazı hatlar (ör. Güzelyurt) doğrudan bir şoför tarafından işletilir; gerçek
   // telefon/WhatsApp varsa hero'da görünür iletişim bloğu göster.
@@ -127,6 +157,7 @@ export function renderRouteDetail(ctx, route) {
         )
         .join('')}
     </div>
+    ${vehiclePricing}
     <a href="${base}/book/?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
     ${directContact}
   </div>
@@ -158,7 +189,7 @@ export function renderRouteDetail(ctx, route) {
           <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
           <span class="shrink-0 text-right">
             <span class="block text-[11px] text-slate">${esc(dict.homepage.routes.from)}</span>
-            <span class="text-2xl font-semibold tabular-nums text-sea">€${r.price}</span>
+            <span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>
           </span>
         </a>`,
           )
@@ -183,7 +214,7 @@ export function renderRouteDetail(ctx, route) {
       offers: {
         '@type': 'Offer',
         price: route.price,
-        priceCurrency: 'EUR',
+        priceCurrency: config.currencyCode,
         url: `${config.siteUrl}/${lang}${path}`,
       },
     },

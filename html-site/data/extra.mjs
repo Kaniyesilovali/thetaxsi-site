@@ -15,9 +15,9 @@ export const extra = {
       cta: 'Reserve your transfer',
     },
     routeDetail: {
-      metaTitle: '{from} to {to} Transfer — €{price}',
+      metaTitle: '{from} to {to} Transfer — £{price}',
       metaDescription:
-        'Private chauffeur transfer from {from} to {to}. Fixed price €{price}, approx. {duration} min, meet & greet included. Book in two minutes.',
+        'Private chauffeur transfer from {from} to {to}. Fixed price £{price}, approx. {duration} min, meet & greet included. Book in two minutes.',
       breadcrumbRoutes: 'Routes',
       heroEyebrow: 'Point to point',
       facts: {
@@ -30,6 +30,11 @@ export const extra = {
         vehicle: 'Vehicle',
         vehicleValue: 'Mercedes E-Class or equivalent',
       },
+      vehiclesTitle: 'Price by vehicle',
+      salonLabel: 'Saloon',
+      salonSeats: '1–4 passengers',
+      vitoLabel: 'Mercedes Vito',
+      vitoSeats: '1–7 passengers',
       includedTitle: 'Every transfer includes',
       included: [
         'Meet & greet at arrivals with your name sign',
@@ -145,9 +150,9 @@ export const extra = {
       cta: 'Transferinizi rezerve edin',
     },
     routeDetail: {
-      metaTitle: '{from} – {to} Transfer — €{price}',
+      metaTitle: '{from} – {to} Transfer — £{price}',
       metaDescription:
-        '{from} – {to} özel şoförlü transfer. Sabit fiyat €{price}, yaklaşık {duration} dk, karşılama dahil. İki dakikada rezervasyon.',
+        '{from} – {to} özel şoförlü transfer. Sabit fiyat £{price}, yaklaşık {duration} dk, karşılama dahil. İki dakikada rezervasyon.',
       breadcrumbRoutes: 'Güzergahlar',
       heroEyebrow: 'Noktadan noktaya',
       facts: {
@@ -160,6 +165,11 @@ export const extra = {
         vehicle: 'Araç',
         vehicleValue: 'Mercedes E-Serisi veya muadili',
       },
+      vehiclesTitle: 'Araca göre fiyat',
+      salonLabel: 'Salon araç',
+      salonSeats: '1–4 yolcu',
+      vitoLabel: 'Mercedes Vito',
+      vitoSeats: '1–7 yolcu',
       includedTitle: 'Her transfere dahil',
       included: [
         'Varışta isim tabelasıyla karşılama',
@@ -275,9 +285,9 @@ export const extra = {
       cta: 'Забронировать трансфер',
     },
     routeDetail: {
-      metaTitle: 'Трансфер {from} – {to} — €{price}',
+      metaTitle: 'Трансфер {from} – {to} — £{price}',
       metaDescription:
-        'Трансфер {from} – {to} с водителем. Фиксированная цена €{price}, около {duration} мин, встреча с табличкой. Бронь за 2 минуты.',
+        'Трансфер {from} – {to} с водителем. Фиксированная цена £{price}, около {duration} мин, встреча с табличкой. Бронь за 2 минуты.',
       breadcrumbRoutes: 'Маршруты',
       heroEyebrow: 'Из точки в точку',
       facts: {
@@ -290,6 +300,11 @@ export const extra = {
         vehicle: 'Автомобиль',
         vehicleValue: 'Mercedes E-Class или аналог',
       },
+      vehiclesTitle: 'Цена по классу авто',
+      salonLabel: 'Седан',
+      salonSeats: '1–4 пассажира',
+      vitoLabel: 'Mercedes Vito',
+      vitoSeats: '1–7 пассажиров',
       includedTitle: 'В каждый трансфер включено',
       included: [
         'Встреча в зале прилёта с табличкой',

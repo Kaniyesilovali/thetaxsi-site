@@ -121,4 +121,9 @@ export const locationGroups = [
       center('Kalecik', 'Kalecik', 'Каледжик'),
     ],
   },
+  {
+    id: 'south',
+    label: { tr: 'Güney Kıbrıs', en: 'South Cyprus', ru: 'Южный Кипр' },
+    locations: [center('Limasol', 'Limassol', 'Лимассол')],
+  },
 ]
