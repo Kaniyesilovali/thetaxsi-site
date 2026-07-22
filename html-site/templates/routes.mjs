@@ -1,6 +1,8 @@
 import { esc, fmt, icons, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { routes, connectingRoutes } from '../data/routes.mjs'
+import { routeCopy } from '../data/route-copy.mjs'
+import { posts } from '../data/posts.mjs'
 import { locationGroups } from '../data/locations.mjs'
 import { routeLabel } from './home.mjs'
 
@@ -143,6 +145,81 @@ export function renderRouteDetail(ctx, route) {
     </div>`
     : ''
 
+  // Rotaya özgü metin (data/route-copy.mjs). Ters yön sayfası kaydı `baseSlug`
+  // ile bulur ve tam metin yerine kısa `returnIntro`yu kullanır; pratik notların
+  // yerini de veriden türetilen kalkış saati uyarısı alır.
+  const entry = routeCopy[route.baseSlug ?? route.slug]
+  const copy = entry?.[lang]
+  const intro = route.isReturn ? copy?.returnIntro : copy?.intro
+  const notes = route.isReturn
+    ? [fmt(rd.departureNote, { min: route.durationMin })]
+    : (copy?.notes ?? [])
+  const routeFaq = route.isReturn ? [] : (copy?.faq ?? [])
+
+  // İlgili blog yazısına iç link — hem okuyucu için devam yolu, hem rota
+  // sayfasıyla rehber arasında SEO bağı.
+  const guide = entry?.guide ? posts.find((p) => p.slug === entry.guide) : null
+  const guideLink =
+    guide && guide.title[lang]
+      ? `
+      <a href="${base}/blog/${guide.slug}/" class="mt-8 inline-flex items-baseline gap-2 text-[15px] font-medium text-sea transition-colors hover:text-sea-deep">
+        <span>${esc(guide.title[lang])}</span><span aria-hidden="true">→</span>
+      </a>
+      <p class="mt-1 text-[13px] text-slate">${esc(rd.guideCta)}</p>`
+      : ''
+
+  const aboutSection = intro
+    ? `
+<section class="border-b border-line bg-paper py-16 lg:py-20" aria-labelledby="route-about">
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+    <div>
+      <h2 id="route-about" class="text-3xl font-semibold tracking-tight text-ink">${esc(rd.aboutTitle)}</h2>
+      <p class="mt-6 text-[17px] leading-relaxed text-slate">${esc(intro)}</p>
+      ${guideLink}
+    </div>
+    ${
+      notes.length
+        ? `<div>
+      <p class="text-[13px] font-semibold text-ink">${esc(rd.notesTitle)}</p>
+      <ul class="mt-4 flex flex-col gap-3">
+        ${notes
+          .map(
+            (n) => `
+        <li class="flex items-start gap-3 rounded-2xl border border-line bg-cloud px-5 py-4 text-[15px] leading-relaxed text-slate">
+          <span class="mt-0.5 shrink-0 text-sea">${icons.check}</span><span>${esc(n)}</span>
+        </li>`,
+          )
+          .join('')}
+      </ul>
+    </div>`
+        : ''
+    }
+  </div>
+</section>`
+    : ''
+
+  // Rotaya özgü SSS — ortak SSS bloğunun aksine her sayfada farklı olduğu için
+  // FAQPage şeması burada yayınlanabilir (duplicate structured data oluşmaz).
+  const faqSectionHtml = routeFaq.length
+    ? `
+<section class="border-t border-line bg-paper py-20 lg:py-24" aria-labelledby="route-faq">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8">
+    <h2 id="route-faq" class="text-3xl font-semibold tracking-tight text-ink">${esc(rd.routeFaqTitle)}</h2>
+    <div class="mt-10 overflow-hidden rounded-3xl border border-line bg-cloud">
+      ${routeFaq
+        .map(
+          (item) => `
+      <div class="border-b border-line px-6 py-5 last:border-b-0">
+        <h3 class="text-[15px] font-medium text-ink">${esc(item.q)}</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-slate">${esc(item.a)}</p>
+      </div>`,
+        )
+        .join('')}
+    </div>
+  </div>
+</section>`
+    : ''
+
   const body = `
 <section class="relative overflow-hidden border-b border-line bg-paper">
   <div aria-hidden="true" class="pointer-events-none absolute inset-0">
@@ -172,7 +249,7 @@ export function renderRouteDetail(ctx, route) {
     ${directContact}
   </div>
 </section>
-
+${aboutSection}
 <section class="bg-fog py-20 lg:py-28">
   <div class="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
     <div>
@@ -208,7 +285,8 @@ export function renderRouteDetail(ctx, route) {
       </div>
     </div>
   </div>
-</section>`
+</section>
+${faqSectionHtml}`
 
   const jsonld = [
     {
@@ -238,6 +316,18 @@ export function renderRouteDetail(ctx, route) {
       ],
     },
   ]
+
+  if (routeFaq.length) {
+    jsonld.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: routeFaq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    })
+  }
 
   return page(ctx, { title, description, path, body, jsonld })
 }

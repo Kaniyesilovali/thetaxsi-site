@@ -472,6 +472,9 @@ function reverse(route) {
     // Ters yönde çıkış noktası havalimanı değil; rota indeksindeki havalimanı
     // filtresi bu kayıtları dışarıda bırakabilsin diye işaretlenir.
     isReturn: true,
+    // Özgün metinler gidiş yönündeki slug altında tutulur (data/route-copy.mjs);
+    // ters yön sayfası kaydı bu anahtarla bulur.
+    baseSlug: route.slug,
   }
 }
 
