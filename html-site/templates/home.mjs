@@ -274,7 +274,10 @@ export function renderHome(ctx) {
 
   const body = `
 <!-- HERO -->
-<section class="relative overflow-hidden bg-ink">
+<!-- overflow-hidden YOK: rezervasyon kapsülünün açılır panelleri (konum listesi,
+     takvim, yolcu menüsü) hero'nun altına taşar; kesilirse "filtre açılmıyor" görünür.
+     Zemin katmanlarının hepsi inset-0 olduğu için taşma riski zaten yok. -->
+<section class="relative bg-ink">
   <!-- Zemin görseli + okunabilirlik/geçiş katmanları -->
   <div aria-hidden="true" class="absolute inset-0 bg-cover bg-center" style="background-image:url('${heroPhoto}')"></div>
   <div aria-hidden="true" class="absolute inset-0" style="background:linear-gradient(180deg,rgba(6,20,26,.68) 0%,rgba(6,20,26,.42) 32%,rgba(6,20,26,.44) 58%,rgba(6,20,26,.34) 100%)"></div>
