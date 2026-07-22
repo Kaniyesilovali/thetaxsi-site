@@ -54,6 +54,21 @@
       .replace(/ı/g, 'i')
   }
 
+  /* ---------- Açılır panel kaydı ---------- */
+  // Konum listesi, tarih takvimi ve yolcu menüsü aynı panel kabuğunu paylaşır;
+  // biri açılınca diğerleri kapansın diye hepsi buraya kaydolur.
+  var popovers = []
+
+  function registerPopover(root, close) {
+    popovers.push({ root: root, close: close })
+  }
+
+  function closeOtherPopovers(except) {
+    popovers.forEach(function (p) {
+      if (p.root !== except) p.close()
+    })
+  }
+
   function initLocCombo(root) {
     var hidden = root.querySelector('input[type="hidden"]')
     var input = root.querySelector('input[type="text"]')
@@ -74,6 +89,7 @@
     }
 
     function openList() {
+      closeOtherPopovers(root)
       list.classList.remove('hidden')
       input.setAttribute('aria-expanded', 'true')
     }
@@ -209,6 +225,8 @@
       }
     })
 
+    registerPopover(root, closeList)
+
     root.locCombo = {
       getValue: function () {
         return hidden.value
@@ -247,6 +265,191 @@
 
   var comboRoots = [].slice.call(document.querySelectorAll('[data-loc-combo]'))
   comboRoots.forEach(initLocCombo)
+
+  /* ---------- Seçim menüsü (Yolcu sayısı) ---------- */
+  // Yerel <select> yerine konum listesiyle aynı paneli açar; değer gizli input'ta.
+  var SELECTED_CLS = ['bg-sea/10', 'text-sea-deep', 'font-medium']
+
+  function initMenu(root) {
+    var hidden = root.querySelector('input[type="hidden"]')
+    var btn = root.querySelector('[data-menu-button]')
+    var list = root.querySelector('[data-menu-list]')
+    var labelEl = root.querySelector('[data-menu-label]')
+    var options = [].slice.call(root.querySelectorAll('[data-menu-option]'))
+
+    function close() {
+      list.classList.add('hidden')
+      btn.setAttribute('aria-expanded', 'false')
+    }
+
+    function open() {
+      closeOtherPopovers(root)
+      list.classList.remove('hidden')
+      btn.setAttribute('aria-expanded', 'true')
+      var sel = list.querySelector('[data-menu-option][aria-selected="true"]')
+      if (sel) sel.scrollIntoView({ block: 'nearest' })
+    }
+
+    function paint() {
+      options.forEach(function (o) {
+        var on = o.getAttribute('data-value') === hidden.value
+        o.setAttribute('aria-selected', String(on))
+        SELECTED_CLS.forEach(function (c) {
+          o.classList.toggle(c, on)
+        })
+      })
+    }
+
+    options.forEach(function (o) {
+      o.addEventListener('click', function () {
+        hidden.value = o.getAttribute('data-value')
+        labelEl.textContent = o.textContent.trim()
+        paint()
+        close()
+      })
+    })
+
+    btn.addEventListener('click', function () {
+      if (list.classList.contains('hidden')) open()
+      else close()
+    })
+
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close()
+    })
+
+    document.addEventListener('click', function (e) {
+      if (!root.contains(e.target)) close()
+    })
+
+    paint()
+    registerPopover(root, close)
+  }
+
+  ;[].slice.call(document.querySelectorAll('[data-menu]')).forEach(initMenu)
+
+  /* ---------- Tarih seçici ---------- */
+  // Tarayıcının kendi takvimi yerine site takvimi: aynı panel, aynı satır dili.
+  // Gizli input ISO (yyyy-mm-dd) taşır, böylece /book/ prefill'i değişmez.
+  function isoDate(d) {
+    var m = d.getMonth() + 1
+    var day = d.getDate()
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day
+  }
+
+  var DAY_BASE = 'flex h-9 items-center justify-center rounded-xl text-sm transition-colors'
+
+  function initDatePicker(root) {
+    var hidden = root.querySelector('input[type="hidden"]')
+    var btn = root.querySelector('[data-dp-button]')
+    var labelEl = root.querySelector('[data-dp-label]')
+    var panel = root.querySelector('[data-dp-panel]')
+    var titleEl = root.querySelector('[data-dp-title]')
+    var weekEl = root.querySelector('[data-dp-week]')
+    var gridEl = root.querySelector('[data-dp-grid]')
+    var placeholder = labelEl.getAttribute('data-dp-placeholder') || ''
+    var locale = document.documentElement.lang || 'en'
+    var today = new Date()
+    today.setHours(0, 0, 0, 0)
+    var view = new Date(today.getFullYear(), today.getMonth(), 1)
+
+    // Pazartesi başlangıçlı hafta başlıkları
+    var monday = new Date(2024, 0, 1) // 1 Ocak 2024 = Pazartesi
+    for (var w = 0; w < 7; w++) {
+      var d = new Date(monday.getTime() + w * 86400000)
+      var cell = document.createElement('span')
+      cell.textContent = d.toLocaleDateString(locale, { weekday: 'short' }).slice(0, 2)
+      weekEl.appendChild(cell)
+    }
+
+    function close() {
+      panel.classList.add('hidden')
+      btn.setAttribute('aria-expanded', 'false')
+    }
+
+    function open() {
+      closeOtherPopovers(root)
+      if (hidden.value) {
+        var sel = new Date(hidden.value)
+        if (!isNaN(sel)) view = new Date(sel.getFullYear(), sel.getMonth(), 1)
+      }
+      render()
+      panel.classList.remove('hidden')
+      btn.setAttribute('aria-expanded', 'true')
+    }
+
+    function setValue(iso) {
+      hidden.value = iso
+      if (iso) {
+        var d = new Date(iso)
+        labelEl.textContent = d.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' })
+        labelEl.classList.remove('font-normal', 'text-ink/35')
+      } else {
+        labelEl.textContent = placeholder
+        labelEl.classList.add('font-normal', 'text-ink/35')
+      }
+    }
+
+    function render() {
+      titleEl.textContent = view.toLocaleDateString(locale, { month: 'long', year: 'numeric' })
+      gridEl.innerHTML = ''
+      // Pazartesi=0 olacak şekilde ilk günün boşlukları
+      var lead = (view.getDay() + 6) % 7
+      for (var i = 0; i < lead; i++) gridEl.appendChild(document.createElement('span'))
+
+      var days = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate()
+      for (var n = 1; n <= days; n++) {
+        var date = new Date(view.getFullYear(), view.getMonth(), n)
+        var iso = isoDate(date)
+        var past = date < today
+        var b = document.createElement('button')
+        b.type = 'button'
+        b.textContent = String(n)
+        b.setAttribute('data-value', iso)
+        b.className =
+          DAY_BASE +
+          (past
+            ? ' pointer-events-none text-ink/25'
+            : iso === hidden.value
+              ? ' bg-sea font-medium text-white'
+              : ' text-ink hover:bg-sea/10 hover:text-sea-deep')
+        if (!past) {
+          b.addEventListener('click', onPick)
+        }
+        gridEl.appendChild(b)
+      }
+    }
+
+    function onPick(e) {
+      setValue(e.currentTarget.getAttribute('data-value'))
+      close()
+    }
+
+    root.querySelector('[data-dp-prev]').addEventListener('click', function () {
+      view = new Date(view.getFullYear(), view.getMonth() - 1, 1)
+      render()
+    })
+    root.querySelector('[data-dp-next]').addEventListener('click', function () {
+      view = new Date(view.getFullYear(), view.getMonth() + 1, 1)
+      render()
+    })
+
+    btn.addEventListener('click', function () {
+      if (panel.classList.contains('hidden')) open()
+      else close()
+    })
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close()
+    })
+    document.addEventListener('click', function (e) {
+      if (!root.contains(e.target)) close()
+    })
+
+    setValue(hidden.value)
+    registerPopover(root, close)
+  }
+
+  ;[].slice.call(document.querySelectorAll('[data-datepicker]')).forEach(initDatePicker)
 
   /* ---------- Noktadan noktaya form akışı ---------- */
   // Nereden/Nereye artık serbesttir: her iki alan da tüm grupları (havalimanı, otel,

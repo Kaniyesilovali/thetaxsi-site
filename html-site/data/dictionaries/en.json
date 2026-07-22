@@ -27,6 +27,7 @@
         "passengerSingle": "guest",
         "passengerPlural": "guests",
         "submit": "Reserve",
+        "selectDate": "Select date",
         "selectFrom": "Select pickup",
         "selectTo": "Select destination",
         "noResults": "No matches found",

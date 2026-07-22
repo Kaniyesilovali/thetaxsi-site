@@ -27,6 +27,7 @@
         "passengerSingle": "yolcu",
         "passengerPlural": "yolcu",
         "submit": "Rezerve Et",
+        "selectDate": "Tarih seçin",
         "selectFrom": "Kalkış noktası",
         "selectTo": "Varış noktası",
         "noResults": "Sonuç bulunamadı",

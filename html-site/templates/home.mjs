@@ -15,7 +15,7 @@ const fleetPhotos = [
   { src: '/assets/img/fleet-4.jpg', w: 1200, h: 800 },
   { src: '/assets/img/fleet-5.jpg', w: 1200, h: 1500 },
 ]
-const fleetPax = [3, 3, 8, 6, 16]
+const fleetPax = [4, 4, 8, 6, 16]
 const corpPhoto = { src: '/assets/img/corp.jpg', w: 1600, h: 1063 }
 
 // Hero zemin görseli — otel önünde siyah Vito, TR plaka. layout preloadImage ile
@@ -55,6 +55,15 @@ export const lightInputCls =
 export const lightSelectCls = `${lightInputCls} [&>option]:bg-white [&>option]:text-ink`
 export const fieldLabelCls = 'text-xs font-medium text-slate'
 
+// Tüm açılır panellerin ortak kabuğu — Nereden/Nereye listesi, Tarih takvimi ve
+// Yolcu menüsü aynı kutuyu kullanır ki her filtre aynı şekilde açılsın.
+export const POPOVER_POS = 'absolute inset-x-0 top-full z-50 mt-2 hidden min-w-full'
+export const POPOVER_SKIN = 'rounded-2xl border border-line bg-paper shadow-lift [color-scheme:light]'
+export const POPOVER_CLS = `${POPOVER_POS} ${POPOVER_SKIN}`
+// Panel içindeki seçenek satırı — combobox, menü ve takvim aynı satır dilini konuşur.
+export const POPOVER_OPTION_CLS =
+  'block w-full rounded-xl px-3 py-2 text-left text-sm text-ink transition-colors hover:bg-sea/10 hover:text-sea-deep'
+
 // Combobox'ın liste teması — açık zeminli formda açık, hero'da koyu görünür.
 const comboTheme = {
   dark: {
@@ -64,9 +73,9 @@ const comboTheme = {
     empty: 'text-white/50',
   },
   light: {
-    list: 'rounded-2xl border border-line bg-paper shadow-lift [color-scheme:light]',
+    list: `${POPOVER_SKIN} p-1.5`,
     group: 'text-slate',
-    option: 'text-ink hover:bg-sea/10 hover:text-sea-deep',
+    option: 'rounded-xl text-ink hover:bg-sea/10 hover:text-sea-deep',
     empty: 'text-slate',
   },
 }
@@ -79,11 +88,11 @@ function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults, them
   const groupsHtml = groups
     .map(
       (g) => `<div data-combo-group="${esc(g.id)}">
-        <p class="px-4 pt-3 pb-1 text-[10px] font-medium uppercase tracking-[0.18em] ${th.group}">${esc(g.label)}</p>
+        <p class="px-3 pt-3 pb-1 text-[10px] font-medium uppercase tracking-[0.18em] ${th.group}">${esc(g.label)}</p>
         ${g.options
           .map(
             (o) =>
-              `<button type="button" data-combo-option data-value="${esc(o.value)}" data-group="${esc(g.id)}" class="block w-full px-4 py-2 text-left text-sm transition-colors ${th.option}">${esc(o.label)}</button>`,
+              `<button type="button" data-combo-option data-value="${esc(o.value)}" data-group="${esc(g.id)}" class="block w-full px-3 py-2 text-left text-sm transition-colors ${th.option}">${esc(o.label)}</button>`,
           )
           .join('\n        ')}
       </div>`,
@@ -93,9 +102,9 @@ function comboboxHtml(groups, { id, name, placeholder, inputCls, noResults, them
   return `<div class="relative" data-loc-combo>
       <input type="hidden" name="${name}">
       <input id="${id}" type="text" role="combobox" aria-expanded="false" aria-autocomplete="list" autocomplete="off" placeholder="${esc(placeholder)}" class="${inputCls}">
-      <div data-combo-list class="absolute inset-x-0 top-full z-50 mt-2 hidden max-h-72 min-w-full overflow-y-auto pb-2 ${th.list}" role="listbox">
+      <div data-combo-list class="${POPOVER_POS} max-h-72 overflow-y-auto [scrollbar-width:thin] ${th.list}" role="listbox">
       ${groupsHtml}
-      <p data-combo-empty class="hidden px-4 py-3 text-sm ${th.empty}">${esc(noResults)}</p>
+      <p data-combo-empty class="hidden px-3 py-3 text-sm ${th.empty}">${esc(noResults)}</p>
       </div>
     </div>`
 }
@@ -125,6 +134,58 @@ export function hotelComboboxHtml(lang, opts) {
         })),
     )
   return comboboxHtml(groups, opts)
+}
+
+// Alan tetikleyicisi — Tarih ve Yolcu alanlarının görünen satırı. Nereden/Nereye
+// input'uyla aynı tipografide durur ki dört alan tek bir kontrol gibi okunsun.
+const triggerCls =
+  'flex w-full items-center justify-between gap-2 text-left text-[15px] font-medium text-ink outline-none'
+const chevronSvg =
+  '<svg viewBox="0 0 12 8" aria-hidden="true" class="size-3 shrink-0 text-slate" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5 6 6.5 11 1.5"/></svg>'
+
+// Yolcu sayısı menüsü — yerel <select> yerine paylaşılan panelin içinde açılır.
+export function selectMenuHtml({ id, name, options, value }) {
+  const sel = options.find((o) => String(o.value) === String(value)) || options[0]
+  return `<div class="relative" data-menu>
+      <input type="hidden" name="${name}" value="${esc(String(sel.value))}">
+      <button id="${id}" type="button" data-menu-button aria-haspopup="listbox" aria-expanded="false" class="${triggerCls}">
+        <span data-menu-label>${esc(sel.label)}</span>${chevronSvg}
+      </button>
+      <div data-menu-list role="listbox" class="${POPOVER_CLS} max-h-72 overflow-y-auto p-1.5 [scrollbar-width:thin]">
+        ${options
+          .map(
+            (o) =>
+              `<button type="button" data-menu-option data-value="${esc(String(o.value))}" class="${POPOVER_OPTION_CLS}">${esc(o.label)}</button>`,
+          )
+          .join('\n        ')}
+      </div>
+    </div>`
+}
+
+// Tarih seçici — tarayıcının kendi takvimi yerine site takvimi. Gövde main.js'te
+// doldurulur; burada yalnızca panelin iskeleti vardır.
+export function datePickerHtml({ id, name, placeholder }) {
+  const navBtn =
+    'flex size-8 items-center justify-center rounded-lg text-slate transition-colors hover:bg-fog hover:text-ink'
+  return `<div class="relative" data-datepicker>
+      <input type="hidden" name="${name}" value="">
+      <button id="${id}" type="button" data-dp-button aria-haspopup="dialog" aria-expanded="false" class="${triggerCls}">
+        <span data-dp-label data-dp-placeholder="${esc(placeholder)}" class="font-normal text-ink/35">${esc(placeholder)}</span>${chevronSvg}
+      </button>
+      <div data-dp-panel role="dialog" class="absolute left-0 top-full z-50 mt-2 hidden w-[19rem] max-w-[calc(100vw-2.5rem)] p-3 ${POPOVER_SKIN}">
+        <div class="flex items-center justify-between pb-2">
+          <button type="button" data-dp-prev class="${navBtn}" aria-label="&lt;">
+            <svg viewBox="0 0 8 12" class="size-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 1 1.5 6l5 5"/></svg>
+          </button>
+          <span data-dp-title class="text-sm font-semibold text-ink"></span>
+          <button type="button" data-dp-next class="${navBtn}" aria-label="&gt;">
+            <svg viewBox="0 0 8 12" class="size-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m1.5 1 5 5-5 5"/></svg>
+          </button>
+        </div>
+        <div data-dp-week class="grid grid-cols-7 gap-1 pb-1 text-center text-[10px] font-medium uppercase tracking-[0.12em] text-slate"></div>
+        <div data-dp-grid class="grid grid-cols-7 gap-1"></div>
+      </div>
+    </div>`
 }
 
 // Noktadan noktaya ipucu satırı — Nereden/Nereye alanlarının her Kıbrıs noktasını
@@ -181,6 +242,21 @@ export function renderHome(ctx) {
     theme: 'light',
   })
 
+  const datePicker = datePickerHtml({
+    id: 'hp-date',
+    name: 'date',
+    placeholder: t.hero.picker.selectDate,
+  })
+  const paxMenu = selectMenuHtml({
+    id: 'hp-pax',
+    name: 'pax',
+    value: 1,
+    options: [1, 2, 3, 4, 5, 6, 7].map((n) => ({
+      value: n,
+      label: `${n} ${n === 1 ? t.hero.picker.passengerSingle : t.hero.picker.passengerPlural}`,
+    })),
+  })
+
   const ease = 'cubic-bezier(.16,1,.3,1)'
   const stars = homeIcons.star.repeat(5)
 
@@ -218,16 +294,14 @@ export function renderHome(ctx) {
             <label for="hp-to" class="flex items-center gap-1 text-[11px] font-medium text-slate"><span class="text-sea" aria-hidden="true">→</span>${esc(t.hero.picker.to)}</label>
             <div class="mt-0.5">${toCombo}</div>
           </div>
-          <label class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
-            <span class="text-[11px] font-medium text-slate">${esc(t.hero.picker.date)}</span>
-            <input type="date" name="date" class="mt-0.5 w-full bg-transparent text-[15px] font-medium text-ink outline-none [color-scheme:light]">
-          </label>
-          <label class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
-            <span class="text-[11px] font-medium text-slate">${esc(t.hero.picker.passengers)}</span>
-            <select name="pax" class="mt-0.5 w-full bg-transparent text-[15px] font-medium text-ink outline-none [color-scheme:light]">
-              ${[1, 2, 3, 4, 5, 6, 7].map((n) => `<option value="${n}">${n} ${n === 1 ? esc(t.hero.picker.passengerSingle) : esc(t.hero.picker.passengerPlural)}</option>`).join('')}
-            </select>
-          </label>
+          <div class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
+            <label for="hp-date" class="text-[11px] font-medium text-slate">${esc(t.hero.picker.date)}</label>
+            <div class="mt-0.5">${datePicker}</div>
+          </div>
+          <div class="rounded-2xl bg-fog px-4 py-3 transition-all focus-within:bg-paper focus-within:ring-2 focus-within:ring-sea/30">
+            <label for="hp-pax" class="text-[11px] font-medium text-slate">${esc(t.hero.picker.passengers)}</label>
+            <div class="mt-0.5">${paxMenu}</div>
+          </div>
           <button type="submit" class="flex items-center justify-center gap-2 rounded-2xl bg-sea px-7 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.hero.picker.submit)}</button>
         </div>
       </div>

@@ -27,6 +27,7 @@
         "passengerSingle": "гость",
         "passengerPlural": "гостей",
         "submit": "Забронировать",
+        "selectDate": "Выберите дату",
         "selectFrom": "Место подачи",
         "selectTo": "Место назначения",
         "noResults": "Ничего не найдено",
