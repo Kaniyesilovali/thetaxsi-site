@@ -4,13 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build.mjs && npx @tailwindcss/cli -i ./tailwind.css -o ./dist/assets/main.css --minify",
+    "content:check": "node scripts/content-check.mjs",
+    "build": "npm run content:check && node build.mjs && npx @tailwindcss/cli -i ./tailwind.css -o ./dist/assets/main.css --minify",
     "serve": "python3 -m http.server 8080 -d dist",
     "dev": "npm run build && npm run serve",
-    "deploy": "npm run build && rm -rf ../public_html && cp -R dist ../public_html && echo '\\n✓ public_html hazir → FileZilla ile ../public_html icindekileri sunucudaki public_html e yukle'"
+    "deploy": "npm run build && rm -rf ../public_html && cp -R dist ../public_html && echo '\\n✓ public_html hazir → FileZilla ile ../public_html icindekileri sunucudaki public_html e yukle'",
+    "db:setup": "node db/setup.mjs",
+    "db:migrate": "node db/migrate.mjs",
+    "db:list": "node db/list.mjs",
+    "db:check": "node db/check.mjs"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
+    "marked": "^18.0.7",
     "tailwindcss": "^4.1.0"
+  },
+  "dependencies": {
+    "mysql2": "^3.23.1"
   }
 }

@@ -1,0 +1,29 @@
+---
+title: "Larnaka Havalimanından Girne'ye: Sınır Geçiş Rehberi"
+description: "Kuzey Kıbrıs sınır geçişi gerçekte nasıl işler — kontrol noktaları, pasaport, vize ve Güzelyurt ile Lefke'ye giden batı güzergahı."
+---
+<p>Uçağınız Larnaka'ya iniyor ama oteliniz Girne'de — peki sınırı tam olarak nasıl geçeceksiniz? Kısacası: özel bir transfer sizi varış salonundan alır, sizi Yeşil Hat üzerindeki bir kontrol noktasına götürür, hızlı bir kontrol için pasaportunuzu gösterir ve kuzeye devam eder. Larnaka–Girne yolculuğunun tamamı kapıdan kapıya yaklaşık 75 dakika sürer, geçişin kendisi yalnızca 20–30 dakika ekler ve yolculardan ücret alınmaz. Aşağıda bunun nasıl işlediğini, Güzelyurt için batı güzergahını ve vardıktan sonra sizi nasıl gezdirdiğimizi bulacaksınız.</p>
+<h2>Kuzeydeki bir otel için neden Larnaka'ya inmeli?</h2>
+<p>Larnaka Uluslararası Havalimanı (LCA), adanın en yoğun kapısıdır; Avrupa ve İngiltere'den direkt uçuşları vardır. Kuzeyin kendi havalimanı Ercan, Girne'ye daha yakındır ama neredeyse tamamen Türkiye üzerinden aktarmalı uçuşlarla hizmet verir. Birçok yolcu için bu, Larnaka'nın daha ucuz bir bilet, direkt bir uçuş ve daha fazla kalkış saati seçeneği sunması demektir — yolda geçen fazladan yarım saate değer. Transfer ücretiniz önceden sabitlendiği için, uçuşunuzu rezerve etmeden önce her havalimanının gerçek kapıdan kapıya maliyetini karşılaştırabilirsiniz.</p>
+<h2>Geçiş ne kadar sürer?</h2>
+<p>Larnaka varış salonundan Girne merkezindeki bir otele yaklaşık 75 dakika hesaplayın. Bunun yaklaşık 45 dakikası Lefkoşa kenarına kadar sürüş, beş ila on beş dakikası günün saatine göre kontrol noktası ve 20–25 dakikası dağları aşıp Girne'ye iniştir. En sakin saatler sabah erken ve akşam geç saatlerdir; en yoğun dönemler hafta içi trafik saatleri ve yaz öğleden sonralarıdır.</p>
+<h2>Kontrol noktasında ne olur</h2>
+<p>Güzergahınız Lefkoşa'nın araç kontrol noktalarından birinden geçer — Girne'ye giderken genellikle Metehan (Ağırdağ). Boyunca araçta kalırsınız. Bir görevli herkesin pasaportunu görmek ve şoförünüzün taşıdığı araç belgelerine bakmak isteyebilir. Yolculardan ücret alınmaz ve kontrol genellikle kısadır. Şoförünüz bunu her gün yapar; hangi şeridi kullanacağını ve neyi hazır tutacağını bilir, bu yüzden pasaportları elinizin altında tutmanız dışında hazırlamanız gereken bir şey yoktur.</p>
+<h2>Vize veya mühür gerekir mi?</h2>
+<p>Çoğu ülke vatandaşına önceden vize olmadan, 90 güne kadar konaklama için varışta giriş verilir. Sınır görevlileri çoğunlukla pasaportunuza değil ayrı bir kağıda mühür basar, böylece kuzeye yapılan ziyaret belgede iz bırakmaz — bunu soran ülkelere devam edecekseniz işinize yarar. Kurallar değişebilir, bu yüzden uçmadan önce kendi pasaportunuzun koşullarını kontrol edin; ama ziyaretçilerin büyük çoğunluğu için cebinizdeki pasaport yeterlidir.</p>
+<h2>Batıya geçiş: Güzelyurt, Lefke ve Bostancı kapısı</h2>
+<p>Hedefiniz kuzeyin batı yarısındaysa — <strong>Güzelyurt (Morphou)</strong>, Lefke veya Gemikonağı — Lefkoşa üzerinden hiç gitmeyiz. Bunun yerine, Güzelyurt'un hemen güneyinde yer alan ve açık ara en hızlı giriş olan <strong>Bostancı (Astromeritis) geçişini</strong> kullanırız. Bu yolla <strong>Larnaka–Güzelyurt</strong> transferi yaklaşık 1 saat 45 dakika sürer; <strong>Baf–Güzelyurt</strong> için batı geçişi daha da doğrudandır, çünkü başkente geri dönmeyi önler. Hedefiniz için doğru kapıyı seçmek, yerel bir şoförün sıradan bir taksiyle asla geri kazanamayacağınız zamanı size kazandırmasının sessiz yollarından biridir.</p>
+<h2>Vardıktan sonra ulaşım — şehir içi de</h2>
+<p>Bir transfer otel kapınızda bitmek zorunda değil. Yerleştikten sonra <strong>şehir içi kısa yolculukları</strong> da sabit yerel fiyatlarla düzenliyoruz — akşam yemeği için Girne limanına bir sefer, Bellapais Manastırı'nda bir sabah, hastane ya da eczane yolculuğu, bir casino otelinde akşam ya da taksi bulmanın zor olduğu saatlerde tesisinizle şehir merkezi arasında gidip gelme. Akşam taksilerinin özellikle az olduğu Güzelyurt ve batı köylerinde bu <strong>şehir içi yolculuklar</strong> çoğu zaman hizmetin en faydalı kısmıdır: şehir merkezine, portakal bahçelerine ya da sahil boyunca Lefke'ye. Rezervasyon sırasında sorun veya konaklamanız sırasında bize yazın.</p>
+<h2>Bagaj, zamanlama ve uçuş rötarları</h2>
+<p>Uçuşunuzu kalktığı andan itibaren takip ederiz, böylece geç bir iniş dahil olan bekleme sürenizi asla yemez ve şoförünüz siz ne zaman varırsanız oradadır. Şoförünüz sizi varış salonunda isimli tabelayla karşılar, bagajları alır ve sizi birkaç dakika mesafede park etmiş araca götürür. Kabinde su hazırdır. Yol kenarında ayarlanacak bir şey ve siz bavul yüklerken çalışan bir taksimetre yoktur.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Taksi veya transfer gerçekten sınırı geçebilir mi?</h3>
+<p>Evet. Lisanslı transfer araçları her gün Yeşil Hat'tı geçer. Yolculuğun tamamında aynı araçta kalırsınız — kontrol noktasında araç değiştirmenize gerek yoktur.</p>
+<h3>Ercan'a inmek daha mı ucuz?</h3>
+<p>Bazen. Ercan Girne'ye daha yakındır ama uçuşları neredeyse her zaman Türkiye üzerinden aktarmalıdır. Larnaka'ya direkt uçuş daha ucuz ya da daha uygunsa, geçiş kolaydır ve sabit transfer ücreti sürpriz olmaması demektir.</p>
+<h3>Pasaportuma mühür basılır mı?</h3>
+<p>Genellikle hayır — görevliler varsayılan olarak ayrı bir kağıda mühür basar. Bunu tercih ederseniz istemenize bile gerek yok; olağan uygulama budur.</p>
+<h3>Geçiş fiyata ne kadar ekler?</h3>
+<p>Mesafe dışında hiçbir şey. Ücretlerimiz güzergaha göre sabittir; sınır ek ücreti ve taksimetre yoktur.</p>
+<p>Geçişinizi planlamaya hazır mısınız? <a href="/tr/routes/">Tüm güzergahların sabit fiyatlarına bakın</a> — Larnaka veya Baf'tan Girne, Gazimağusa, İskele, Bafra ve Güzelyurt'a — ya da iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

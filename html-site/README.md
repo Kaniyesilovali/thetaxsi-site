@@ -18,7 +18,9 @@ npm run dev        # build + serve
 |---|---|
 | `site.config.mjs` | Domain, telefon, WhatsApp, e-posta, Sheets endpoint — **canlıya çıkmadan güncelle** |
 | `data/routes.mjs` | Rota verisi — yeni rota eklemek = yeni SEO landing page |
-| `data/posts.mjs` | Blog yazıları — yeni yazı eklemek = yeni blog sayfası (3 dilde) |
+| `content/blog/` | Blog yazılarının kendisi — klasör başına bir yazı, dil başına bir `.md` |
+| `data/posts.mjs` | `content/blog/` klasörünü okuyup yazı listesini üreten yükleyici |
+| `scripts/content-check.mjs` | İçerik doğrulama — `npm run build` öncesi otomatik çalışır |
 | `data/dictionaries/` | 3 dilin metinleri (frontend'den kopyalandı) |
 | `data/extra.mjs` | Statik siteye özgü ek metinler (form, rota sayfaları) |
 | `templates/` | Sayfa şablonları (JS template literal) |
@@ -34,11 +36,35 @@ Ayrıca kök yönlendirme, `sitemap.xml` (hreflang'li) ve `robots.txt`.
 
 ## Blog
 
-Yazılar `data/posts.mjs` içinde tutulur: her kayıt tek `slug` + `date` ve üç dilde
-`title` / `description` / `body` (HTML) içerir. Yeni yazı eklemek için diziye kayıt
-ekleyip `npm run build` çalıştırman yeterli — liste sayfası, yazı sayfası, sitemap
-ve BlogPosting JSON-LD otomatik üretilir. Frontend'deki MDX yazı
-(`cyprus-airport-transfer-guide`) buraya taşındı.
+Yazılar `content/blog/` altında, klasör başına bir yazı olarak durur. Klasör adı = slug:
+
+```
+content/blog/ercan-airport-arrival-guide/
+  meta.json      { "date": "2026-07-11", "order": 11 }
+  en.md  tr.md  ru.md
+```
+
+Her `.md` dosyası `---` frontmatter (`title`, `description`) ile başlar, altında gövde gelir.
+Gövde **Markdown**'dır (`## başlık`, `**kalın**`, `- liste`, `[metin](/tr/routes/)`) ve
+gerektiğinde ham HTML de yazılabilir.
+
+Yeni yazı eklemek için: klasörü aç, `meta.json` + üç dil dosyasını koy, `npm run build`
+çalıştır. Liste sayfası, yazı sayfası, sitemap ve BlogPosting JSON-LD otomatik üretilir.
+Şablon (`templates/blog.mjs`) hiç değişmez.
+
+`meta.json` alanları: `date` (zorunlu, YYYY-AA-GG), `order` (aynı tarihli yazılar arasında
+sıra — küçük olan önce), `updated` (opsiyonel, JSON-LD `dateModified`).
+
+### İçerik kontrolü
+
+`npm run build` önce `npm run content:check` çalıştırır; hata varsa build durur:
+
+- eksik dil dosyası, eksik `meta.json`, boş başlık/açıklama/gövde
+- slug biçimi, geçersiz veya gelecek tarih, `updated < date`
+- başlık/açıklama SEO uzunlukları (~60 / ~160), aynı dilde tekrar eden başlık
+- **kırık iç link** — gövdedeki her `/tr/...` yolu gerçekten üretilen bir sayfaya gitmeli
+- yanlış dile link (`tr.md` içinde `/en/...`)
+- `public/img` altında olmayan görsel, gövdede `<h1>` kullanımı
 
 ## Rezervasyon akışı
 
