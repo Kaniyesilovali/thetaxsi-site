@@ -1,6 +1,6 @@
 import { esc, fmt, icons, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
-import { routes } from '../data/routes.mjs'
+import { routes, connectingRoutes } from '../data/routes.mjs'
 import { locationGroups } from '../data/locations.mjs'
 import { routeLabel } from './home.mjs'
 
@@ -96,7 +96,10 @@ export function renderRouteDetail(ctx, route) {
     [rd.facts.vehicle, rd.facts.vehicleValue],
   ]
 
-  const others = routes.filter((r) => r.slug !== route.slug)
+  // Alakasız fiyat göstermemek için: bu sayfanın varış noktasından kalkan
+  // güzergahlar listelenir (Baf → Girne sayfasında Girne çıkışlı hatlar).
+  const others = connectingRoutes(route)
+  const onwardOnly = others.every((r) => r.fromValue === route.toValue)
 
   // Vito fiyatı verilen hatlarda (Güzelyurt) salon/Vito ayrı ayrı listelenir;
   // diğer rotalarda tek fiyat geçerli olduğu için blok gizlenir.
@@ -187,7 +190,8 @@ export function renderRouteDetail(ctx, route) {
       </ul>
     </div>
     <div>
-      <h2 class="text-3xl font-semibold tracking-tight text-ink">${esc(rd.otherRoutes)}</h2>
+      <h2 class="text-3xl font-semibold tracking-tight text-ink">${esc(onwardOnly ? fmt(rd.onwardRoutes, { from: to }) : rd.otherRoutes)}</h2>
+      ${onwardOnly ? `<p class="mt-4 text-[15px] leading-relaxed text-slate">${esc(fmt(rd.onwardNote, { from: to }))}</p>` : ''}
       <div class="mt-8 grid gap-3">
         ${others
           .map(

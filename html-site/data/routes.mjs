@@ -4,6 +4,7 @@
 // fromValue/toValue, locations.mjs'teki `value` ile birebir aynı olmalı — landing
 // sayfasındaki CTA rezervasyon formunu bu değerlerle önceden doldurur.
 // Yeni rota eklemek için bu diziye bir kayıt ekleyip `npm run build` çalıştırman yeterli.
+// Ters yön (şehir → havalimanı) elle yazılmaz; aşağıdaki `reverseRoutes` otomatik türetir.
 export const routes = [
   // --- Ercan Havalimanı ---
   {
@@ -456,3 +457,38 @@ export const routes = [
     whatsapp: '905488616939',
   },
 ]
+
+// Her rotanın dönüş yönü — fiyat/süre/mesafe aynı, yön ve slug ters çevrilir.
+// Örn. `ercan-airport-to-kyrenia` → `kyrenia-to-ercan-airport`.
+function reverse(route) {
+  const i = route.slug.indexOf('-to-')
+  return {
+    ...route,
+    slug: `${route.slug.slice(i + 4)}-to-${route.slug.slice(0, i)}`,
+    from: route.to,
+    to: route.from,
+    fromValue: route.toValue,
+    toValue: route.fromValue,
+    // Ters yönde çıkış noktası havalimanı değil; rota indeksindeki havalimanı
+    // filtresi bu kayıtları dışarıda bırakabilsin diye işaretlenir.
+    isReturn: true,
+  }
+}
+
+export const reverseRoutes = routes.map(reverse)
+
+// Sayfa üretimi ve rota-içi çapraz linkler tüm yönleri görür; ana sayfa ve
+// /routes/ listesi sade kalsın diye yalnızca `routes` kullanır.
+export const allRoutes = [...routes, ...reverseRoutes]
+
+// Bir rotanın varış noktasından kalkan rotalar — landing sayfasındaki
+// "devam güzergahları" bloğu bunları listeler. Az sonuç çıkarsa (ör. tek yönlü
+// şehir hatları) aynı kalkış noktasının diğer varışlarıyla tamamlanır.
+export function connectingRoutes(route, min = 3) {
+  const seen = new Set([route.slug])
+  const take = (list) => list.filter((r) => !seen.has(r.slug) && (seen.add(r.slug), true))
+
+  const onward = take(allRoutes.filter((r) => r.fromValue === route.toValue))
+  if (onward.length >= min) return onward
+  return [...onward, ...take(allRoutes.filter((r) => r.fromValue === route.fromValue))]
+}

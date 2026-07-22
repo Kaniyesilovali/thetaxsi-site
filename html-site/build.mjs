@@ -5,7 +5,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { config } from './site.config.mjs'
-import { routes } from './data/routes.mjs'
+import { allRoutes } from './data/routes.mjs'
 import { posts } from './data/posts.mjs'
 import { extra } from './data/extra.mjs'
 import { renderHome } from './templates/home.mjs'
@@ -51,7 +51,7 @@ for (const lang of config.languages) {
     ['/privacy/', (c) => renderLegal(c, 'privacy')],
     ['/terms/', (c) => renderLegal(c, 'terms')],
   ]
-  for (const r of routes) {
+  for (const r of allRoutes) {
     pages.push([`/routes/${r.slug}/`, (c) => renderRouteDetail(c, r)])
   }
   for (const p of posts) {
@@ -129,9 +129,9 @@ cpSync(join(root, 'public/.htaccess'), join(dist, '.htaccess'))
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#0B2436"/><text x="16" y="23" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#1FB6C9" text-anchor="middle">T</text></svg>`
 writeFileSync(join(dist, 'assets/favicon.svg'), favicon)
 
-const pageCount = config.languages.length * (9 + routes.length + posts.length + 1) + 2
+const pageCount = config.languages.length * (9 + allRoutes.length + posts.length + 1) + 2
 console.log(`✓ ${pageCount} sayfa üretildi → dist/`)
-console.log(`  Diller: ${config.languages.join(', ')} · Rotalar: ${routes.length} · Blog yazıları: ${posts.length}`)
+console.log(`  Diller: ${config.languages.join(', ')} · Rotalar: ${allRoutes.length} · Blog yazıları: ${posts.length}`)
 if (!config.sheetsEndpoint) {
   console.log("  ⚠ sheetsEndpoint boş — form kayıtları Google Sheets'e düşmeyecek (WhatsApp akışı çalışır).")
 }
