@@ -3,6 +3,829 @@
 // body alanı HTML kabul eder; başlıklar için <h2>, paragraflar için <p> kullan.
 // Yazılar tarihe göre yeniden eskiye sıralanır (date alanı ISO formatında: YYYY-MM-DD).
 export const posts = [
+  /* --- Bölge rehberleri: ana sayfadaki destinasyon kartları buraya bağlanır --- */
+{
+    slug: 'kyrenia-harbour-castle-old-town-guide',
+    date: '2026-07-22',
+    title: {
+      en: 'Kyrenia Guide: Harbour, Castle, Abbey and Beaches',
+      tr: 'Girne Rehberi: Liman, Kale, Manastır ve Plajlar',
+      ru: 'Гид по Кирении: гавань, замок, аббатство и пляжи',
+    },
+    description: {
+      en: 'What to see in Kyrenia: the old harbour, the castle and Shipwreck Museum, Bellapais Abbey, St Hilarion and the beaches — with timings and practical tips.',
+      tr: "Girne'de ne görülür: eski liman, kale ve Batık Gemi Müzesi, Beylerbeyi Manastırı, Aziz Hilarion Kalesi ve plajlar — süreler ve pratik ipuçlarıyla.",
+      ru: 'Что посмотреть в Кирении: старая гавань, замок и Музей затонувшего корабля, аббатство Беллапаис, Святой Иларион и пляжи — со временем и советами.',
+    },
+    body: {
+      en: `
+<p>Kyrenia (Girne) is the town most visitors to North Cyprus see first, and the one they come back to. A horseshoe harbour with a castle at one end, a mountain ridge behind it carrying two of the finest medieval buildings on the island, and beaches twenty minutes away in either direction. Here is what to see, how long each stop takes, and when to go.</p>
+<h2>The old harbour</h2>
+<p>The harbour is the heart of the town: a curved stone quay, fishing boats and gulets tied against it, and a row of former carob warehouses now working as restaurants and bars. It was a working port from antiquity until the 1970s, and the trade is still visible in the buildings — high doors, thick walls, small windows.</p>
+<p>Allow an hour to walk it end to end, longer if you sit down. Late afternoon into sunset is the best light, and the quay is calmest before about eleven in the morning.</p>
+<h2>Kyrenia Castle and the Shipwreck Museum</h2>
+<p>The castle closes the eastern end of the harbour. Byzantine in origin, rebuilt by the Lusignans and reshaped by the Venetians into the squat artillery fort you see now, it is large enough for a proper walk — ramparts, a chapel, dungeons, and long views over the harbour and out to the Taurus mountains on a clear day.</p>
+<p>Inside is the <strong>Shipwreck Museum</strong>, the single most important thing to see in Kyrenia. The Kyrenia ship is a Greek merchant vessel that sank off the coast in the fourth century BC and was recovered in the 1960s. What survives is the hull itself, conserved and displayed, with amphorae and almonds from the cargo — one of the oldest recovered trading ships anywhere.</p>
+<p>Budget <strong>90 minutes to two hours</strong> for both. The ramparts are exposed, so go early or late in summer, and wear something with grip — the ramps and stairs are worn stone.</p>
+<h2>Bellapais Abbey</h2>
+<p>Five kilometres up the hill behind Kyrenia, in the village of Beylerbeyi, stands the Gothic abbey of Bellapais — a ruin, but a remarkably complete one: the cloister, the refectory with its rose window, and a terrace looking down over the coastal plain to the sea. The drive up takes about fifteen minutes on a road that is steep and narrow in places.</p>
+<p>Allow <strong>an hour</strong>, plus a coffee in the village square under the tree Lawrence Durrell wrote about in <em>Bitter Lemons</em>. Concerts are sometimes held in the refectory in summer; check locally first.</p>
+<h2>St Hilarion Castle</h2>
+<p>St Hilarion sits on a crag above the Kyrenia pass, about twenty-five minutes from town. It climbs the mountain in three wards, and the top ward is a genuine ascent — several hundred uneven steps with drops beside them. The reward is a view across the whole northern coast and, in good weather, towards the Turkish mainland.</p>
+<p>Allow <strong>two hours</strong> if you intend to reach the top, and take water. Above the second ward it is not suitable for anyone unsteady on stairs. The approach road passes through a military area, so photography is restricted along the way — signs make it clear where.</p>
+<h2>The beaches</h2>
+<ul>
+  <li><strong>Escape Beach</strong> — about fifteen minutes west of town, sandy and organised, with loungers and food. The reliable choice for a full beach day with children.</li>
+  <li><strong>Alagadi (Turtle Beach)</strong> — around twenty-five minutes east, a long protected stretch where loggerhead and green turtles nest in summer. Nesting sections are fenced and the beach closes at night in season. Conservation volunteers sometimes run evening walks; ask locally first.</li>
+  <li><strong>Camelot Beach</strong> — west of Escape, quieter, a broad open bay with fewer facilities. Good when the organised beaches are busy.</li>
+</ul>
+<p>The sea here is usually calm from May to October, and there is little natural shade on any of the three.</p>
+<h2>Planning a day around it</h2>
+<p>A workable single day: castle and Shipwreck Museum in the morning, lunch at the harbour, St Hilarion in the afternoon, Bellapais at golden hour. Two days lets you add a beach. The roads up to Bellapais and St Hilarion are narrow and steep and parking at both is limited, which is why many visitors book a car with a driver for the day — the chauffeur waits at each stop, at a fare agreed before you set off.</p>
+<h2>Frequently asked questions</h2>
+<h3>How many days do you need in Kyrenia?</h3>
+<p>Two full days covers the harbour, the castle and museum, Bellapais, St Hilarion and one beach without rushing. One day does the town plus a single hilltop site.</p>
+<h3>What is the best time of year to visit?</h3>
+<p>May, June, September and October give warm sea and manageable heat. In July and August the hilltop castles are best done before ten or after five.</p>
+<h3>Can you walk to St Hilarion or Bellapais from Kyrenia?</h3>
+<p>Not realistically. Both are uphill on roads with no pavement, and both need a car, a taxi or a driver for the day.</p>
+<h3>How far is Kyrenia from Ercan Airport?</h3>
+<p>About 40 to 45 minutes by road. Transfers run at a fixed price agreed in advance, with the flight tracked so a late landing does not cost you the car.</p>
+<h3>Is Kyrenia Castle worth it if you only see one thing?</h3>
+<p>Yes. The Shipwreck Museum inside it is the most significant single exhibit in North Cyprus, and the ramparts give you the best view of the harbour you will get.</p>
+<p>Planning your days around Kyrenia? <a href="/en/routes/">See fixed transfer prices</a> or <a href="/en/book/">book a car and driver</a>.</p>`,
+      tr: `
+<p>Girne, Kuzey Kıbrıs'a gelenlerin çoğunun ilk gördüğü ve sonra tekrar döndüğü kasabadır. At nalı biçiminde bir liman, bir ucunda kale, arkasında adanın en güzel ortaçağ yapılarından ikisini taşıyan dağ sırtı ve iki yöne de yirmi dakika mesafede uzanan bir sahil. Temel duraklar bir buçuk günde görülür ama kasaba yavaşlığı ödüllendirir. İşte ne görülür, her durak ne kadar sürer ve ne zaman gidilir.</p>
+<h2>Eski liman</h2>
+<p>Liman kasabanın kalbidir: kavisli taş rıhtım, ona bağlı balıkçı tekneleri ve guletler, bir sıra eski keçiboynuzu deposu — bugün restoran ve bar olarak çalışıyor. Antik çağdan 1970'lere kadar işleyen bir limandı ve ticaretin biçimi yapılarda hâlâ okunuyor: yüksek kapılar, kalın duvarlar, küçük pencereler.</p>
+<p>Baştan sona yürüyüp levhaları okumak için bir saat ayırın; oturursanız daha fazlası. En iyi ışık ikindiden gün batımına doğrudur ve rıhtım sabah on birden önce en sakin halindedir. Su kenarındaki masalar bir sokak arkadakilerden pahalıdır; ikisi de iyidir.</p>
+<h2>Girne Kalesi ve Batık Gemi Müzesi</h2>
+<p>Kale limanın doğu ucunu kapatır. Kökeni Bizans'tır, Lüzinyanlar yeniden inşa etmiş, Venedikliler ise bugün gördüğünüz basık, kalın duvarlı topçu kalesine dönüştürmüştür. İçinde gerçek bir yürüyüş yapacak kadar geniştir: surlar, şapel, zindanlar ve açık havada limanın üzerinden Toroslar'a uzanan manzara.</p>
+<p>İçeride <strong>Batık Gemi Müzesi</strong> var ve Girne'de görülecek en önemli tek şey odur. Girne gemisi, MÖ dördüncü yüzyılda kıyı açıklarında batmış ve 1960'larda çıkarılmış bir Yunan ticaret gemisidir. Ayakta kalan şey, korunarak sergilenen teknenin kendisi ile yükünden kalan amforalar ve bademlerdir. Dünyada çıkarılmış en eski ticaret gemilerinden biridir.</p>
+<p>Kale ve müze için birlikte <strong>90 dakika ile iki saat</strong> ayırın. Surlar açıktadır, yazın erken ya da geç saatte gidin ve tabanı tutan ayakkabı giyin — rampalar ve merdivenler aşınmış taştır.</p>
+<h2>Beylerbeyi Manastırı</h2>
+<p>Girne'nin arkasındaki yamaçta, beş kilometre yukarıda, Beylerbeyi köyünde Gotik Bellapais Manastırı durur. Bir harabedir ama olağanüstü eksiksiz bir harabe: revak, gül pencereli yemekhane ve doğrudan sahil ovasına, oradan denize bakan bir teras. Yukarı çıkış yaklaşık on beş dakika sürer, yol yer yer dik ve dardır.</p>
+<p><strong>Bir saat</strong> ayırın; üstüne köy meydanında, Lawrence Durrell'in <em>Bitter Lemons</em> kitabında yazdığı ağacın altında bir kahve. Yaz aylarında yemekhanede zaman zaman konser düzenlenir; akşamınızı buna göre kurmadan önce yerel olarak teyit edin.</p>
+<h2>Aziz Hilarion Kalesi</h2>
+<p>Aziz Hilarion Kalesi, Girne geçidinin üzerindeki kayalıkta, kasabadan yaklaşık yirmi beş dakika uzaklıkta oturur. Dağ boyunca üç bölüm halinde yükselir ve en üst bölüm gerçek bir tırmanış ister: yüzlerce basamak, düzensiz ve uçurumlu. Karşılığı, tüm kuzey sahiline ve havanın iyi olduğu günlerde Türkiye kıyılarına doğru uzanan bir manzaradır.</p>
+<p>Zirveye çıkmayı düşünüyorsanız <strong>iki saat</strong> ayırın ve su alın. İkinci bölümün üstü, merdivenlerde rahat olmayan kimse için uygun değildir; alt kademeler ise kolayca gezilir. Yaklaşım yolu askeri bölgeden geçtiği için güzergah boyunca fotoğraf çekimi kısıtlıdır; levhalar nerede olduğunu açıkça gösterir.</p>
+<h2>Plajlar</h2>
+<ul>
+  <li><strong>Escape Beach</strong> — kasabanın yaklaşık on beş dakika batısında, kumlu ve düzenli; şezlong ve yemek var. Çocuklu tam gün plaj günü için güvenli seçim.</li>
+  <li><strong>Alagadi (Kaplumbağa Plajı)</strong> — yaklaşık yirmi beş dakika doğuda, yazın caretta caretta ve yeşil deniz kaplumbağalarının yuvaladığı uzun, korumalı bir kum şeridi. Yuvalama bölümleri çitle ayrılır ve sezonda plaj geceleri kapanır. Koruma gönüllüleri bazen akşam turları düzenler; gidip beklemek yerine önceden sorun.</li>
+  <li><strong>Camelot Plajı</strong> — Escape'in batısında, daha sakin, geniş açık bir koy ve daha az tesis. Düzenli plajlar kalabalıkken iyi bir seçenek.</li>
+</ul>
+<p>Bu sahilde deniz mayıstan ekime kadar genellikle sakindir. Üçünde de doğal gölge azdır; öğleden sonraya kalacaksanız yanınıza gölgelik alın.</p>
+<h2>Günü nasıl kurmalı</h2>
+<p>İşleyen bir tek gün planı: sabah kale ve Batık Gemi Müzesi, limanda öğle yemeği, öğleden sonra Aziz Hilarion, gün batımına yakın Beylerbeyi. İki gün, araya bir plaj ekleyip her şeyi yavaşlatmanızı sağlar. Beylerbeyi ve Aziz Hilarion yolları dar ve diktir, ikisinde de park yeri sınırlıdır; çoğu ziyaretçinin gün boyu şoförlü araç tutmasının sebebi budur — şoför her durakta bekler, park derdi tümden ortadan kalkar. Tam gün kiralamada ücret yola çıkmadan kararlaştırılır.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Girne için kaç gün gerekir?</h3>
+<p>İki tam gün; limanı, kale ve müzeyi, Beylerbeyi'ni, Aziz Hilarion'u ve bir plajı acele etmeden kapsar. Bir gün, kasabanın kendisi artı tek bir tepe kalesi için yeterlidir.</p>
+<h3>Yılın hangi zamanı daha iyi?</h3>
+<p>Mayıs, haziran, eylül ve ekim; deniz ılık, sıcaklık ise yönetilebilir olur. Temmuz ve ağustosta tepe kalelerini sabah ondan önce ya da öğleden sonra beşten sonra gezmek daha akıllıcadır.</p>
+<h3>Aziz Hilarion'a ya da Beylerbeyi'ne Girne'den yürünür mü?</h3>
+<p>Gerçekçi değil. İkisi de yokuş yukarı ve kaldırımsız yollarda. Beylerbeyi kısa bir araç yolculuğu, Aziz Hilarion ise dağ yolunda daha uzun bir yolculuktur; ikisi için de araç, taksi ya da gün boyu şoför gerekir.</p>
+<h3>Girne, Ercan Havalimanı'na ne kadar uzakta?</h3>
+<p>Karayoluyla yaklaşık 40-45 dakika. Transferler önceden kararlaştırılan sabit fiyatla yapılır ve uçuş takip edilir; geç iniş aracınıza mal olmaz.</p>
+<h3>Tek bir yer görecek olsam Girne Kalesi değer mi?</h3>
+<p>Evet. İçindeki Batık Gemi Müzesi Kuzey Kıbrıs'ın en önemli tek sergisidir ve surlar limanın görebileceğiniz en iyi manzarasını verir.</p>
+<p>Günlerinizi Girne çevresinde mi kuruyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına bakın</a> ya da <a href="/tr/book/">şoförlü araç ayırtın</a>.</p>`,
+      ru: `
+<p>Кирения (Гирне) — город, который большинство гостей Северного Кипра видят первым и куда чаще всего возвращаются. Подковообразная гавань с замком на одном конце, горный хребет за спиной, несущий два лучших средневековых сооружения острова, и побережье с пляжами в двадцати минутах в обе стороны. Основное можно охватить за полтора дня, но город вознаграждает неспешность. Вот что смотреть, сколько времени занимает каждая остановка и когда ехать.</p>
+<h2>Старая гавань</h2>
+<p>Гавань — сердце города: изогнутая каменная набережная, пришвартованные рыбацкие лодки и гулеты, ряд бывших складов рожкового дерева, которые теперь работают как рестораны и бары. Порт действовал с античности до 1970-х годов, и форма прежней торговли до сих пор читается в зданиях: высокие двери, толстые стены, маленькие окна.</p>
+<p>Заложите час, чтобы пройти набережную из конца в конец и прочитать таблички, больше — если сядете за стол. Лучший свет с позднего дня до заката, а тише всего на причале примерно до одиннадцати утра. Столики у самой воды дороже, чем в улочке кварталом выше; хороши и те и другие.</p>
+<h2>Киренийский замок и Музей затонувшего корабля</h2>
+<p>Замок закрывает восточный конец гавани. Византийский по происхождению, перестроенный Лузиньянами и затем превращённый венецианцами в приземистый артиллерийский форт с толстыми стенами, он достаточно велик для настоящей прогулки: крепостные стены, часовня, подземелья и дальние виды на гавань, а в ясный день — на Таврские горы.</p>
+<p>Внутри находится <strong>Музей затонувшего корабля</strong>, и это самое важное, что стоит увидеть в Кирении. Киренийский корабль — греческое торговое судно, затонувшее у побережья в четвёртом веке до нашей эры и поднятое в 1960-х. Сохранился сам корпус, законсервированный и выставленный, вместе с амфорами и миндалём из груза. Это одно из старейших поднятых торговых судов в мире.</p>
+<p>На замок и музей вместе заложите <strong>от 90 минут до двух часов</strong>. Стены открыты солнцу, поэтому летом идите рано или поздно, и обуйтесь во что-то нескользящее: пандусы и лестницы из стёртого камня.</p>
+<h2>Аббатство Беллапаис</h2>
+<p>В пяти километрах вверх по склону за Киренией, в деревне Бейлербейи, стоит готическое аббатство Беллапаис. Это руина, но на редкость целая: клуатр, трапезная с розовым окном и терраса с видом прямо вниз, через прибрежную равнину к морю. Подъём занимает около пятнадцати минут, дорога местами крутая и узкая.</p>
+<p>Отведите <strong>час</strong> плюс время на кофе на деревенской площади под деревом, о котором писал Лоуренс Даррелл в книге <em>Горькие лимоны</em>. Летом в трапезной иногда проходят концерты; уточните на месте, прежде чем строить вечер вокруг этого.</p>
+<h2>Замок Святого Илариона</h2>
+<p>Святой Иларион стоит на скале над Киренийским перевалом, примерно в двадцати пяти минутах от города. Он поднимается по горе тремя ярусами, и верхний ярус требует настоящего подъёма: несколько сотен неровных ступеней с обрывами. Награда — вид на всё северное побережье, а в хорошую погоду почти до турецкого берега.</p>
+<p>Если собираетесь наверх, заложите <strong>два часа</strong> и возьмите воду. Выше второго яруса место не подходит тем, кто неуверенно чувствует себя на лестницах, зато нижние уровни проходятся спокойно. Подъездная дорога идёт через военную зону, поэтому фотосъёмка вдоль неё ограничена — знаки ясно показывают где.</p>
+<h2>Пляжи</h2>
+<ul>
+  <li><strong>Escape Beach</strong> — примерно в пятнадцати минутах к западу от города, песчаный и организованный, с лежаками и едой. Надёжный выбор для целого пляжного дня с детьми.</li>
+  <li><strong>Алагади (Черепаший пляж)</strong> — около двадцати пяти минут к востоку, длинная охраняемая полоса песка, где летом гнездятся головастые и зелёные черепахи. Гнездовые участки огорожены, и в сезон пляж закрыт ночью. Волонтёры-натуралисты иногда водят вечерние прогулки; лучше спросить заранее, чем приехать в расчёте на них.</li>
+  <li><strong>Camelot Beach</strong> — западнее Escape, тише, с широкой открытой бухтой и меньшим числом удобств. Хорош, когда организованные пляжи заполнены.</li>
+</ul>
+<p>С мая по октябрь море на этом побережье обычно спокойное. Естественной тени почти нет ни на одном из трёх пляжей, так что берите с собой укрытие, если останетесь после полудня.</p>
+<h2>Как собрать день</h2>
+<p>Рабочий вариант на один день: утром замок и Музей затонувшего корабля, обед в гавани, днём Святой Иларион, к закату Беллапаис. Два дня позволяют добавить пляж и сбавить темп. Дороги к Беллапаису и Святому Илариону узкие и крутые, парковка у обоих ограничена — поэтому многие берут машину с водителем на весь день: шофёр ждёт на каждой остановке, а парковка перестаёт быть вашей заботой. Цена дневной аренды согласуется до выезда.</p>
+<h2>Частые вопросы</h2>
+<h3>Сколько дней нужно на Кирению?</h3>
+<p>Двух полных дней хватает на гавань, замок с музеем, Беллапаис, Святой Иларион и один пляж без спешки. Одного дня достаточно на сам город плюс один замок в горах.</p>
+<h3>Когда лучше приезжать?</h3>
+<p>Май, июнь, сентябрь и октябрь дают тёплое море и переносимую жару. В июле и августе горные замки лучше осматривать до десяти утра или после пяти вечера.</p>
+<h3>Можно ли дойти пешком до Святого Илариона или Беллапаиса?</h3>
+<p>Реально — нет. Оба вверх по склону и по дорогам без тротуара. До Беллапаиса — короткая поездка, до Святого Илариона — длиннее и по горной дороге; в обоих случаях нужна машина, такси или водитель на день.</p>
+<h3>Далеко ли Кирения от аэропорта Эрджан?</h3>
+<p>Около 40-45 минут по дороге. Трансферы идут по фиксированной цене, согласованной заранее, с отслеживанием рейса, так что задержка не стоит вам машины.</p>
+<h3>Стоит ли Киренийский замок посещения, если время только на одно место?</h3>
+<p>Да. Музей затонувшего корабля внутри — самый значимый экспонат Северного Кипра, а со стен открывается лучший вид на гавань.</p>
+<p>Строите маршрут по Кирении? <a href="/ru/routes/">Смотрите фиксированные цены на трансфер</a> или <a href="/ru/book/">закажите машину с водителем</a>.</p>`,
+    },
+  },
+  {
+    slug: 'karpaz-golden-beach-guide',
+    date: '2026-07-22',
+    title: {
+      en: 'Karpaz Peninsula Guide: Golden Beach and the Wild North',
+      tr: 'Karpaz Rehberi: Altınkum Plajı ve Yabani Kuzey',
+      ru: 'Гид по Карпасу: Золотой пляж и дикий север',
+    },
+    description: {
+      en: 'A full-day guide to the Karpaz peninsula: Golden Beach, the wild donkeys, Apostolos Andreas Monastery, Dipkarpaz and the ruins near Yeni Erenköy.',
+      tr: "Karpaz yarımadası için tam gün rehberi: Altınkum Plajı, yabani eşekler, Apostolos Andreas Manastırı, Dipkarpaz ve Yeni Erenköy yakınındaki kalıntılar.",
+      ru: 'Гид на целый день по полуострову Карпас: Золотой пляж, дюны, дикие ослы, монастырь Апостола Андрея, деревня Дипкарпаз и руины у Йени Эренкёя.',
+    },
+    body: {
+      en: `
+<p>The Karpaz is the long finger of land running north-east off the top of Cyprus, and the emptiest part of the island. No resorts, almost no development, a single road down the spine, and at the end of it a beach that has stayed the way beaches used to be. It is a full day out from anywhere and needs planning, because past Dipkarpaz the facilities stop. Here is what is there and how to do it properly.</p>
+<h2>Golden Beach (Altınkum)</h2>
+<p>Golden Beach is a long run of pale sand backed by dunes, near the far end of the peninsula. There are no hotels behind it and no promenade — a handful of simple beach huts and small restaurants sit at the access points, and the rest is open sand. The dunes behind shift, hold scrub and in places rise several metres.</p>
+<p>The water shelves gently and is usually calm from May through October. There is no lifeguard, no shade beyond what you bring, and the sand gets genuinely hot by midday. Allow <strong>two to three hours</strong> for a swim and a walk, which is the point of coming.</p>
+<h2>The wild donkeys</h2>
+<p>The Karpaz donkeys descend from working animals released decades ago and now roam free across the peninsula. You will meet them on the road in small groups, often standing exactly where you want to drive, and they are used to cars.</p>
+<ul>
+  <li><strong>Slow right down</strong> when you see them; they do not move predictably.</li>
+  <li><strong>Do not feed them.</strong> It teaches them to crowd cars and makes them ill.</li>
+  <li><strong>Keep windows up</strong> if you have food inside.</li>
+  <li><strong>Do not get between a jenny and her foal</strong> — these are wild animals, not pets.</li>
+</ul>
+<h2>Apostolos Andreas Monastery</h2>
+<p>Near the tip of the peninsula, at Zafer Burnu, stands the monastery of Apostolos Andreas. It has been a pilgrimage site for centuries and remains one for Cypriots of both communities. A restoration completed in recent years brought the church back into good order.</p>
+<p>Allow <strong>45 minutes to an hour</strong>. Dress as you would for any working church — covered shoulders and knees. Beyond it the road runs a short way to the cape itself, the north-easternmost point of Cyprus, where the coast breaks into rocks and islets.</p>
+<h2>Dipkarpaz village</h2>
+<p>Dipkarpaz (Rizokarpaso) is the last real village on the peninsula and the last place with a shop, a petrol station and somewhere to eat. It is also one of the few villages in the north with a continuous Greek Cypriot population, which is why a church and a mosque are both in use in the same small place.</p>
+<h2>Ayfilon and Aphendrika near Yeni Erenköy</h2>
+<p>East of Yeni Erenköy the coast holds two sets of ruins most visitors drive straight past. <strong>Ayfilon (Agios Philon)</strong> is a ruined basilica standing alone above a small harbour, with mosaic fragments and a single palm, on the site of ancient Karpasia. A few kilometres on, <strong>Aphendrika</strong> spreads across open ground: three ruined churches and the remains of a city classical writers list among the more important towns of Cyprus. Neither is well signposted; both are unfenced and free to walk.</p>
+<p>Allow <strong>an hour for both</strong>, more if you like ruins with nobody else present.</p>
+<h2>Getting there and why it is a full day</h2>
+<ul>
+  <li><strong>From Kyrenia:</strong> roughly 2 hours 30 minutes to 3 hours each way to Golden Beach</li>
+  <li><strong>From Famagusta:</strong> roughly 2 hours each way</li>
+  <li><strong>From Ercan Airport:</strong> roughly 2 hours 15 minutes to 2 hours 30 minutes</li>
+  <li><strong>From İskele or Bafra:</strong> roughly 1 hour 30 minutes</li>
+</ul>
+<p>Add stops and you are looking at eight to ten hours door to door, which is why the Karpaz does not work as a half-day.</p>
+<h2>Practical warnings</h2>
+<p><strong>Fuel up before Dipkarpaz.</strong> Beyond the village there is no petrol station, no pharmacy and no cash machine, and mobile signal is patchy in the dunes and on parts of the coast road. Carry more water than you think you need and do not rely on finding lunch open out of season — several beach restaurants run summer hours only. Roads here are surfaced but narrow, with livestock on them, and driving after dark is best avoided.</p>
+<p>Because of the distance, many visitors take the Karpaz as a full-day hire with a driver: one fixed price agreed in advance, the chauffeur waiting at the monastery and the beach, and nobody facing three hours at the wheel after a day in the sun.</p>
+<h2>Frequently asked questions</h2>
+<h3>Can you visit the Karpaz in half a day?</h3>
+<p>No. From Kyrenia the driving alone is five to six hours return. Plan a full day and leave early.</p>
+<h3>Is Golden Beach suitable for children?</h3>
+<p>The water shelves gently and is usually calm, which suits families, but there is no lifeguard and very little shade. Bring shade, water and sun cover.</p>
+<h3>Where are the wild donkeys?</h3>
+<p>Along the main road, mostly between Dipkarpaz and the monastery. You do not need to look for them — they find the cars. Slow down and do not feed them.</p>
+<h3>Is there anywhere to eat and refuel out there?</h3>
+<p>Dipkarpaz is the last village with a petrol station, a shop and reliable food. A few simple restaurants open near Golden Beach in summer, but do not plan around them.</p>
+<h3>Do you need a four-wheel drive?</h3>
+<p>Not for the main road or the marked access points. Some tracks down to the dunes are soft sand; an ordinary car is better left at the top.</p>
+<p>Planning a day on the peninsula? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a full-day car and driver</a>.</p>`,
+      tr: `
+<p>Karpaz, Kıbrıs'ın kuzeydoğusuna doğru uzanan uzun parmak biçimli topraktır ve adanın en boş bölgesidir. Tatil köyü yok, neredeyse hiç yapılaşma yok, sırt boyunca tek bir yol var ve yolun sonunda plajların eskiden olduğu gibi kalmış bir plajı. Nereden giderseniz gidin tam gün süren bir gezidir ve planlama ister; çünkü Dipkarpaz'ı geçtikten sonra tesisler biter. İşte orada ne var ve nasıl düzgün yapılır.</p>
+<h2>Altınkum Plajı</h2>
+<p>Altınkum, yarımadanın uç kısmına yakın, kumullarla çevrili uzun ve açık renkli bir kum şerididir. Arkasında otel yok, sahil yürüyüş yolu yok; giriş noktalarında birkaç basit plaj kulübesi ve küçük lokanta var, gerisi açık kum. Arkadaki kumullar hareket eder, çalı tutar ve yer yer birkaç metre yükselir.</p>
+<p>Deniz yumuşak eğimlidir ve mayıstan ekime kadar genellikle sakindir. Cankurtaran yok, yanınızda getirdiğiniz ya da kulübelerin sunduğu dışında gölge yok ve kum öğleye doğru gerçekten ısınır. Doğru düzgün bir yüzme ve kum boyunca bir yürüyüş için <strong>iki üç saat</strong> ayırın; buraya gelmenin sebebi zaten bu.</p>
+<h2>Karpaz eşekleri</h2>
+<p>Karpaz eşekleri, onlarca yıl önce serbest bırakılmış çalışma hayvanlarının torunlarıdır ve bugün yarımada boyunca özgürce dolaşırlar. Onlarla yolda karşılaşırsınız; genellikle küçük gruplar halinde, çoğu zaman tam da geçmek istediğiniz yerde dururlar. Araçlara alışkındırlar ve camlara yaklaşırlar.</p>
+<ul>
+  <li>Gördüğünüzde <strong>hızınızı iyice düşürün</strong>; hareketleri tahmin edilebilir değildir.</li>
+  <li><strong>Yem vermeyin.</strong> Bu onlara araçların etrafını sarmayı öğretir ve hasta eder.</li>
+  <li>İçeride yiyecek varsa <strong>camları kapalı tutun</strong>. İçeri uzanırlar.</li>
+  <li><strong>Anne ile yavrunun arasına girmeyin</strong> — bunlar evcil değil, yabani hayvanlardır.</li>
+</ul>
+<h2>Apostolos Andreas Manastırı</h2>
+<p>Yarımadanın ucuna yakın, Zafer Burnu'nda Apostolos Andreas Manastırı bulunur. Yüzyıllardır bir hac yeri olmuştur ve her iki toplumdan Kıbrıslılar için hâlâ öyledir. Son yıllarda tamamlanan kapsamlı restorasyon, uzun bir ihmalin ardından kiliseyi ve yapılarını tekrar iyi duruma getirdi.</p>
+<p><strong>45 dakika ile bir saat</strong> ayırın. İbadete açık herhangi bir kiliseye gider gibi giyinin — omuzlar ve dizler kapalı. Manastırın ötesinde yol kısa bir mesafe daha, Kıbrıs'ın en kuzeydoğu noktası olan burnun kendisine kadar devam eder; orada kıyı kayalıklara ve küçük adacıklara bölünür.</p>
+<h2>Dipkarpaz köyü</h2>
+<p>Dipkarpaz, yarımadadaki son gerçek köy ve dükkânı, benzin istasyonu ve yemek yenecek yeri olan son yerdir. Aynı zamanda kuzeyde kesintisiz Kıbrıslı Rum nüfusu bulunan az sayıdaki köyden biridir; bu yüzden aynı küçük yerleşimde hem kullanılan bir kilise hem bir cami görürsünüz. İhtiyacınız olduğunu düşünseniz de düşünmeseniz de yakıt ve yemek için burada durun.</p>
+<h2>Yeni Erenköy yakınında Ayfilon ve Aphendrika</h2>
+<p>Yeni Erenköy'ün doğusunda, çoğu ziyaretçinin yanından geçip gittiği iki kalıntı grubu vardır. <strong>Ayfilon (Agios Philon)</strong>, küçük bir limanın üzerinde tek başına duran yıkık bir bazilikadır; mozaik parçaları ve tek bir palmiye ile — antik Karpasia'nın yeri. Birkaç kilometre ötede <strong>Aphendrika</strong> açık araziye yayılır: üç yıkık kilise ve klasik yazarların Kıbrıs'ın önemli kentleri arasında saydığı bir şehrin kalıntıları. İkisi de iyi işaretlenmemiştir. İkisi de açık, çitsiz ve ücretsiz gezilir.</p>
+<p>İkisi için birlikte <strong>bir saat</strong> ayırın; kimsenin olmadığı kalıntılarda dolaşmayı seviyorsanız daha fazla — ki genellikle kimse olmaz.</p>
+<h2>Nasıl gidilir ve neden tam gün sürer</h2>
+<ul>
+  <li><strong>Girne'den:</strong> Altınkum'a tek yön yaklaşık 2 saat 30 dakika - 3 saat</li>
+  <li><strong>Gazimağusa'dan:</strong> tek yön yaklaşık 2 saat</li>
+  <li><strong>Ercan Havalimanı'ndan:</strong> yaklaşık 2 saat 15 dakika - 2 saat 30 dakika</li>
+  <li><strong>İskele ya da Bafra'dan:</strong> yaklaşık 1 saat 30 dakika</li>
+</ul>
+<p>Duraklar eklendiğinde kapıdan kapıya sekiz on saatlik bir gün çıkar. Aritmetik bu kadar dürüsttür ve Karpaz'ın neden yarım günlük bir gezi olmadığını açıklar.</p>
+<h2>Pratik uyarılar</h2>
+<p><strong>Dipkarpaz'dan önce depoyu doldurun.</strong> Köyün ötesinde benzin istasyonu, eczane ve ATM yoktur; kumullarda ve sahil yolunun bazı bölümlerinde telefon çekmez. Gerekeceğini düşündüğünüzden fazla su taşıyın, gölgenizi yanınızda götürün ve sezon dışında açık bir lokanta bulmaya güvenmeyin — plaj lokantalarının birçoğu yalnızca yaz saatlerinde çalışır. Yarımadadaki yollar asfalttır ama dardır, üzerlerinde küçükbaş hayvan ve eşek bulunur; hava karardıktan sonra araç kullanmaktan kaçının.</p>
+<p>Mesafe ve günün uzunluğu yüzünden çoğu ziyaretçi Karpaz'ı gün boyu şoförlü araçla yapar: önceden kararlaştırılmış tek bir sabit fiyat, manastırda ve plajda bekleyen bir şoför ve güneşte geçen bir günün ardından üç saat direksiyon başında kalmama rahatlığı.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Karpaz yarım günde gezilir mi?</h3>
+<p>Hayır. Girne'den yalnızca yol gidiş-dönüş beş altı saattir. Tam gün planlayın, erken çıkın ve Dipkarpaz öncesindeki her şeyi hedef değil ikramiye olarak görün.</p>
+<h3>Altınkum çocuklar için uygun mu?</h3>
+<p>Deniz yumuşak eğimli ve genellikle sakindir, bu da aileler için iyidir; ama cankurtaran yok ve gölge çok az. Gölgelik, su ve güneş koruması götürün, rüzgâr varsa denizden gözünüzü ayırmayın.</p>
+<h3>Yabani eşekler nerede?</h3>
+<p>Yarımadanın ana yolu boyunca, çoğunlukla Dipkarpaz ile manastır arasında. Aramanıza gerek yok — onlar araçları bulur. Yavaşlayın ve yem vermeyin.</p>
+<h3>Orada yemek yenecek ve yakıt alınacak yer var mı?</h3>
+<p>Dipkarpaz, benzin istasyonu, dükkânı ve güvenilir yemeği olan son köydür. Altınkum yakınında yazın birkaç basit lokanta çalışır ama günü onların açık olacağına göre kurmayın.</p>
+<h3>Dört çeker araç gerekir mi?</h3>
+<p>Ana yol ve işaretli giriş noktaları için gerekmez; bunlar asfalt ya da sıkı zeminlidir. Kumullara inen bazı patikalar gevşek kumdur; sıradan bir aracı yukarıda bırakıp yürüyerek inmek daha doğrudur.</p>
+<p>Yarımadada bir gün mü planlıyorsunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">tam gün şoförlü araç ayırtın</a>.</p>`,
+      ru: `
+<p>Карпас — длинный палец суши, уходящий на северо-восток от верхушки Кипра, и самая пустая часть острова. Ни курортов, ни почти никакой застройки, одна дорога вдоль хребта, а в конце неё пляж, оставшийся таким, какими пляжи были раньше. Откуда бы вы ни ехали, это поездка на целый день, и она требует подготовки: за Дипкарпазом инфраструктура заканчивается. Вот что там есть и как сделать это правильно.</p>
+<h2>Золотой пляж (Алтынкум)</h2>
+<p>Золотой пляж — длинная полоса светлого песка с дюнами за спиной, ближе к дальнему концу полуострова. За ним нет отелей и набережной: у точек выхода стоят несколько простых пляжных хижин и маленьких ресторанов, всё остальное — открытый песок. Дюны позади подвижны, держат кустарник и местами поднимаются на несколько метров.</p>
+<p>Дно уходит полого, море с мая по октябрь обычно спокойное. Спасателей нет, тени нет, кроме той, что вы привезли или дают хижины, и песок к полудню становится по-настоящему горячим. На нормальное купание и прогулку вдоль воды заложите <strong>два-три часа</strong> — ради этого сюда и едут.</p>
+<h2>Дикие ослы</h2>
+<p>Ослы Карпаса — потомки рабочих животных, отпущенных десятилетия назад, и сегодня они свободно бродят по всему полуострову. Вы встретите их на дороге, обычно небольшими группами, часто ровно там, где вам надо проехать. Они привыкли к машинам и подходят к окнам.</p>
+<ul>
+  <li><strong>Сильно сбавляйте скорость</strong>, когда видите их: они двигаются непредсказуемо.</li>
+  <li><strong>Не кормите их.</strong> Это приучает их толпиться у машин и вредит их здоровью.</li>
+  <li><strong>Держите окна закрытыми</strong>, если в салоне есть еда. Они заглядывают внутрь.</li>
+  <li><strong>Не вставайте между ослицей и жеребёнком</strong> — это дикие животные, а не домашние.</li>
+</ul>
+<h2>Монастырь Апостола Андрея</h2>
+<p>Недалеко от оконечности полуострова, у мыса Зафер Бурну, стоит монастырь Апостола Андрея. Веками он был местом паломничества и остаётся им для киприотов обеих общин. Завершённая в последние годы масштабная реставрация вернула храм и его постройки в порядок после долгого запустения.</p>
+<p>Заложите <strong>45 минут — час</strong>. Одевайтесь как для действующего храма: закрытые плечи и колени. За монастырём дорога идёт ещё немного до самого мыса, северо-восточной оконечности Кипра, где берег распадается на скалы и мелкие островки.</p>
+<h2>Деревня Дипкарпаз</h2>
+<p>Дипкарпаз (Ризокарпасо) — последняя настоящая деревня на полуострове и последнее место с магазином, заправкой и едой. Это также одна из немногих деревень севера с непрерывно живущим греко-кипрским населением, поэтому в одном небольшом селении вы увидите действующие церковь и мечеть. Остановитесь здесь за топливом и обедом, даже если кажется, что не нужно.</p>
+<h2>Айфилон и Афендрика у Йени Эренкёя</h2>
+<p>К востоку от Йени Эренкёя на побережье лежат две группы руин, мимо которых большинство проезжает не останавливаясь. <strong>Айфилон (Агиос Филон)</strong> — разрушенная базилика, стоящая в одиночестве над маленькой гаванью, с фрагментами мозаик и одной пальмой; это место древней Карпасии. Ещё несколькими километрами дальше <strong>Афендрика</strong> раскинулась по открытой земле: три разрушенные церкви и остатки города, который античные авторы называли среди значимых городов Кипра. Ни то ни другое не обозначено толком. Оба места открыты, не огорожены и бесплатны.</p>
+<p>На оба заложите <strong>час</strong>, больше — если вам нравится бродить по руинам в полном одиночестве, что здесь обычное дело.</p>
+<h2>Как добраться и почему это целый день</h2>
+<ul>
+  <li><strong>Из Кирении:</strong> примерно 2 ч 30 мин — 3 часа в одну сторону до Золотого пляжа</li>
+  <li><strong>Из Фамагусты:</strong> примерно 2 часа в одну сторону</li>
+  <li><strong>Из аэропорта Эрджан:</strong> примерно 2 ч 15 мин — 2 ч 30 мин</li>
+  <li><strong>Из Искеле или Бафры:</strong> примерно 1 ч 30 мин</li>
+</ul>
+<p>Добавьте остановки — и получится восемь-десять часов от двери до двери. Это честная арифметика, и именно поэтому Карпас не помещается в полдня.</p>
+<h2>Практические предупреждения</h2>
+<p><strong>Заправляйтесь до Дипкарпаза.</strong> За деревней нет ни заправки, ни аптеки, ни банкомата, а связь в дюнах и на отдельных участках прибрежной дороги неустойчивая. Возьмите воды больше, чем кажется нужным, привезите свою тень и не рассчитывайте найти открытый обед вне сезона — многие пляжные рестораны работают только летом. Дороги на полуострове асфальтированы, но узкие, на них выходит скот и ослы, а ездить после темноты лучше не стоит.</p>
+<p>Из-за расстояния и длины дня многие берут Карпас как дневную аренду с водителем: одна фиксированная цена, согласованная заранее, шофёр, ожидающий у монастыря и на пляже, и никакой необходимости провести три часа за рулём после дня на солнце.</p>
+<h2>Частые вопросы</h2>
+<h3>Можно ли осмотреть Карпас за полдня?</h3>
+<p>Нет. Из Кирении одна только дорога занимает пять-шесть часов туда и обратно. Планируйте полный день, выезжайте рано и считайте всё до Дипкарпаза бонусом, а не целью.</p>
+<h3>Подходит ли Золотой пляж для детей?</h3>
+<p>Дно уходит полого, море обычно спокойное — это удобно для семей, но спасателей нет и тени почти нет. Берите тень, воду и защиту от солнца, а при ветре не спускайте глаз с моря.</p>
+<h3>Где искать диких ослов?</h3>
+<p>Вдоль главной дороги полуострова, в основном между Дипкарпазом и монастырём. Искать их не нужно — они сами находят машины. Сбавьте скорость и не кормите их.</p>
+<h3>Есть ли там где поесть и заправиться?</h3>
+<p>Дипкарпаз — последняя деревня с заправкой, магазином и надёжной едой. Летом у Золотого пляжа работают несколько простых ресторанов, но не стройте день на том, что они будут открыты.</p>
+<h3>Нужен ли полный привод?</h3>
+<p>Для главной дороги и обозначенных подъездов — нет, они с покрытием или плотные. Часть колей к дюнам идёт по рыхлому песку; обычную машину лучше оставить наверху и спуститься пешком.</p>
+<p>Планируете день на полуострове? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">закажите машину с водителем на весь день</a>.</p>`,
+    },
+  },
+{
+    slug: 'famagusta-beaches-old-city-guide',
+    date: '2026-07-22',
+    title: {
+      en: 'Famagusta Guide: Old City, Salamis and the Beaches',
+      tr: 'Gazimağusa Rehberi: Surlariçi, Salamis ve Plajlar',
+      ru: 'Фамагуста: старый город, Саламин и пляжи залива',
+    },
+    description: {
+      en: 'A walking guide to Famagusta: the walled old city, Othello Castle, Salamis and the Royal Tombs, St Barnabas, and the beaches of Famagusta Bay.',
+      tr: "Gazimağusa gezi rehberi: surlariçi, Othello Kalesi, Salamis Harabeleri ve Kral Mezarları, St. Barnabas Manastırı ve Mağusa Körfezi plajları.",
+      ru: 'Гид по Фамагусте: старый город в венецианских стенах, замок Отелло, руины Саламина, Царские гробницы, монастырь Святого Варнавы и пляжи залива.',
+    },
+    body: {
+      en: `
+<p>Famagusta (Gazimağusa) rewards a slow day. Inside the Venetian walls you walk from a Gothic cathedral turned mosque to a sea castle in about fifteen minutes, and ten minutes up the coast the ruined Roman city of Salamis runs down to an empty beach. It is the densest concentration of history in North Cyprus, and it is hot, open and short on shade. Here is a walking order for the old city, what lies outside it, and how to time the day.</p>
+<h2>The walled old city, in walking order</h2>
+<p>Start at the <strong>Land Gate and the Ravelin</strong> on the western side, the bastion the Venetians rebuilt as the main landward defence. Climbing it first gives you the shape of everything else — the walls, the roofs, the sea. Then walk east to the centre.</p>
+<p>You come out in the square before the <strong>Lala Mustafa Pasha Mosque</strong>, the former Cathedral of St Nicholas: a French Gothic cathedral begun in the fourteenth century, where the Lusignan kings were crowned kings of Jerusalem. A minaret was added to one tower after 1571 and it has been a mosque since. The west front, with its three portals and rose window, is the finest architecture on the island. Visit outside prayer times, and remove shoes at the door.</p>
+<p>Around the square sit the Venetian loggia, the <strong>Namık Kemal dungeon</strong> and cafes under trees — the one properly shaded spot in the old city, so break here.</p>
+<p>Walk north-east to <strong>Othello Castle</strong>, the Lusignan citadel the Venetians reshaped, named for the Shakespeare play set in a port of Cyprus. Inside is mostly bare stone, but the great hall is cool and the ramparts look down into the harbour.</p>
+<p>Loop back through the roofless Gothic churches between the houses — the largest survivor is the <strong>Sinan Pasha Mosque</strong>, formerly St Peter and St Paul — and leave by the <strong>Sea Gate</strong>, with its Venetian lion.</p>
+<h2>Salamis and the Royal Tombs</h2>
+<p>About ten minutes north, <strong>Salamis</strong> is the ruined capital of ancient Cyprus, spread over pine and sand down to the shore. The gymnasium with its colonnade and statues, the Roman theatre, the baths and the basilicas are the set pieces. The site is large, flat and almost unshaded: allow two hours, take water, and wear real shoes for the broken paving.</p>
+<p>A short drive inland are the <strong>Royal Tombs</strong>, the burial ground of Salamis, where chariots and horses were buried in the entrance ramps of the chamber tombs. Smaller and quieter than the main site.</p>
+<h2>St Barnabas Monastery</h2>
+<p>Close by, the <strong>Monastery of St Barnabas</strong> stands over the traditional tomb of the apostle. The buildings hold an icon collection and an archaeological collection around a courtyard with palms and a well — small, shaded and cool.</p>
+<h2>The beaches of Famagusta Bay</h2>
+<p>The bay curves north from the city in a long line of sand. Three stretches are the ones people use:</p>
+<ul>
+  <li><strong>Glapsides Beach</strong> — closest to town, wide and sandy, with beach clubs and food. Busy at weekends.</li>
+  <li><strong>Silver Beach</strong> — beside the Salamis site, quieter, shallow water and a simple beach restaurant. Good for ruins in the morning and a swim after.</li>
+  <li><strong>Palm Beach</strong> — at the southern end of the bay, next to the fenced quarter of Varosha (Kapalı Maraş), with the empty high-rises behind the sand.</li>
+</ul>
+<p><strong>Varosha</strong> is a fenced-off district of Famagusta, closed since 1974. Part of it has been opened to visitors, who may walk or cycle along marked routes through some of the streets; the rest remains behind the fence.</p>
+<h2>Timing, heat and shade</h2>
+<p>From May to September, do the open sites early. Salamis and the walls are best before about eleven; the narrow streets keep some shade until midday, and the monastery and museums are comfortable at any hour. Between roughly one and four, be on a beach or indoors.</p>
+<p>A full day covering the old city, Salamis and a beach is a lot of moving in the heat. Many visitors from Kyrenia, Long Beach or Nicosia book a car for the day: the chauffeur drops you at the Land Gate, collects you at the Sea Gate and runs you out to Salamis and the beach, at a fixed price.</p>
+<h2>Frequently asked questions</h2>
+<h3>How long do I need in Famagusta?</h3>
+<p>A half day covers the walled city on foot. A full day adds Salamis, the Royal Tombs, St Barnabas and a swim in the bay.</p>
+<h3>Can you walk around the old city?</h3>
+<p>Yes, and it is the best way to see it. The walled area is compact and flat, and the main sights are about fifteen minutes apart on foot. Bring shoes with grip for the old stone.</p>
+<h3>Can visitors go into Varosha?</h3>
+<p>Part of the quarter is open on foot and by bicycle along marked routes. The rest stays behind the fence, and entering the buildings is not permitted.</p>
+<h3>Is there shade at Salamis?</h3>
+<p>Very little — open ground with pines only at the edges. Go early or late, carry water and use a hat.</p>
+<h3>What is the easiest way to reach Famagusta?</h3>
+<p>By road — roughly 45 minutes from Ercan Airport, about an hour from Kyrenia and around 20 minutes from Long Beach. A full-day hire keeps the same chauffeur with you between the sites.</p>
+<p>Planning a day in Famagusta? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car for the day</a>.</p>`,
+      tr: `
+<p>Gazimağusa yavaş geçirilen bir günü hak eder. Venedik surlarının içinde, camiye dönüştürülmüş Gotik bir katedralden deniz kenarındaki bir kaleye yaklaşık on beş dakikada yürürsünüz; kıyıdan on dakika kuzeyde ise antik Salamis kenti harabeleri boş bir kumsala kadar iner. Kuzey Kıbrıs'ın tarih bakımından en yoğun noktasıdır ve yılın büyük bölümünde sıcak, açık ve gölgesizdir. Bu rehber surlariçi için mantıklı bir yürüyüş sırası, dışarıda görülecekler, sonrasında nerede yüzüleceği ve sıcağın size karşı değil sizin lehinize çalışması için günü nasıl planlayacağınızı anlatıyor.</p>
+<h2>Surlariçi — yürüyüş sırasıyla</h2>
+<p>Batı tarafındaki <strong>Kara Kapısı ve Ravelin</strong> ile başlayın. Venedikliler kara yönündeki ana savunmayı burada yeniden inşa etti; ilk buraya çıkmak diğer her şeyin şemasını verir — surların hattı, surlariçinin damları, arkadaki deniz. Oradan Namık Kemal Caddesi boyunca doğuya, merkeze doğru yürüyün.</p>
+<p>Yürüyüş sizi <strong>Lala Mustafa Paşa Camii</strong>'nin, yani eski St. Nicholas Katedrali'nin önündeki meydana çıkarır. On dördüncü yüzyılda başlanmış bir Fransız Gotik katedralidir; Lusignan kralları burada Kudüs kralı olarak taç giydi. 1571 sonrasında kulelerden birine minare eklendi ve yapı o günden beri cami olarak kullanılıyor. Üç portali ve gül penceresiyle batı cephesi, adadaki en güçlü mimari parçadır. Namaz vakitleri dışında ziyaret edilebilir; omuz ve dizleri kapatın, kapıda ayakkabılarınızı çıkarın.</p>
+<p>Çevresindeki meydan merkezin geri kalanını barındırır: caminin yanındaki Venedik Sarayı, Osmanlı şairinin tutulduğu <strong>Namık Kemal Zindanı</strong> ve ağaç altındaki birkaç kafe. Surlariçinde doğru dürüst gölge bulunan tek yer burasıdır, molanızı buraya göre planlayın.</p>
+<p>Kuzeydoğuya yürüdüğünüzde <strong>Othello Kalesi</strong>'ne varırsınız — Venediklilerin yeniden biçimlendirdiği Lusignan iç kalesi. Adını, Kıbrıs'ta bir limanda geçen Shakespeare oyunundan alır. İç mekân büyük ölçüde çıplak taştır ama büyük salon serindir ve surlardan doğrudan limana bakarsınız. Burçlarda rüzgâr ve güneş serttir; şapka zor durur.</p>
+<p>Dönüşte sokaklara dağılmış yıkık Gotik kiliselerin arasından geçin. Gazimağusa'da bir zamanlar onlarca kilise vardı ve birçoğu evlerin arasında çatısız ayakta duruyor. En büyük kalıntı, eski Aziz Petrus ve Pavlus Kilisesi olan <strong>Sinan Paşa Camii</strong>'dir. Surları ve suyu tek karede görmek isterseniz, Venedik aslanının bulunduğu <strong>Deniz Kapısı</strong>'ndan çıkın.</p>
+<h2>Salamis Harabeleri ve Kral Mezarları</h2>
+<p>Şehrin yaklaşık on dakika kuzeyindeki <strong>Salamis Harabeleri</strong>, antik Kıbrıs'ın başkentidir; çam ve kum üzerine yayılmış geniş bir alandır. Sütunlu gymnasium ve heykelleri, Roma tiyatrosu, hamamlar ve bazilikalar başlıca duraklardır ve alan kıyıya kadar iner. Büyük, düz ve neredeyse tamamen gölgesizdir. İki saat ayırın, düşündüğünüzden fazla su alın ve kırık döşemeler için düzgün ayakkabı giyin.</p>
+<p>İçeri doğru kısa bir sürüşle <strong>Kral Mezarları</strong>'na varılır. Salamis'in mezarlığıdır; oda mezarların giriş rampalarına savaş arabaları ve atlar gömülmüştür. Daha sessiz, daha küçük bir alandır ve harabeleri iyi tamamlar.</p>
+<h2>St. Barnabas Manastırı</h2>
+<p>Kral Mezarları'nın yakınında, havarinin geleneksel mezarının üzerinde <strong>St. Barnabas Manastırı</strong> yükselir. Manastır binaları bugün bir ikona koleksiyonu ile arkeoloji koleksiyonunu barındırır; hepsi palmiyeli ve kuyulu bir avlunun çevresinde dizilidir. Küçük, gölgeli ve serindir — sıcak bir sabahın doğal son durağı.</p>
+<h2>Mağusa Körfezi plajları</h2>
+<p>Körfez, şehirden kuzeye doğru uzun ve sığ bir kum hattı çizer. Üç bölüm çok kullanılır:</p>
+<ul>
+  <li><strong>Glapsides Plajı</strong> — şehre en yakını; geniş, kumlu, beach club'lar, şezlong ve yemek imkânı var. Hafta sonları kalabalıklaşır, öğrenciler arasında popülerdir.</li>
+  <li><strong>Silver Beach</strong> — Salamis alanının hemen yanında, daha sakin, sığ su ve sade bir plaj lokantası. Sabah harabe, hemen ardından deniz isteyenler için ideal.</li>
+  <li><strong>Palm Beach</strong> — körfezin güney ucunda, kapalı bölge Kapalı Maraş'ın hemen bitişiğinde. Kum, şezlong ve sakin su; arkada bölgenin boş yüksek binaları.</li>
+</ul>
+<p><strong>Kapalı Maraş</strong>, Gazimağusa'nın 1974'ten beri kapalı olan çitle çevrili bir mahallesidir. Bir bölümü ziyarete açıldı; ziyaretçiler bazı sokaklarda işaretli güzergâhlar boyunca yürüyerek veya bisikletle dolaşabiliyor. Geri kalanı çitin arkasındadır ve binalara girilemez. Fotoğraf kuralları girişte asılıdır; makineyi kaldırmadan önce okumakta fayda var.</p>
+<h2>Zamanlama, sıcak ve gölge</h2>
+<p>Mayıs–Eylül arasında açık alanları erken gezin. Salamis ve surlar için en iyi zaman saat on birden öncesidir; surlariçinin dar sokakları öğlene kadar bir miktar gölge tutar, manastır ve müzeler ise her saatte rahattır. Öğleden sonra bir ile dört arası plajda ya da kapalı bir yerde olun. Katedral cephesi ve Othello Kalesi'nden liman manzarası için en iyi ışık ikindidir.</p>
+<p>Surlariçi, Salamis ve bir plajı kapsayan tam gün, sıcakta epey hareket demektir. Girne, Long Beach ya da Lefkoşa'dan gelen birçok ziyaretçi kendi araç kullanmak yerine günlük araç tutuyor: şoför sizi Kara Kapısı'nda bırakır, bekler, Deniz Kapısı'ndan alır ve Salamis ile plaja götürür. Fiyat yola çıkmadan sabitlenir; uzun bir öğle yemeği ödediğiniz tutarı değiştirmez.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Gazimağusa için ne kadar süre ayırmalıyım?</h3>
+<p>Yarım gün, surlariçini yürüyerek gezmeye yeter. Tam gün buna Salamis'i, Kral Mezarları'nı, St. Barnabas'ı ve körfezde bir denizi ekler. İki gün ise Kapalı Maraş'ı da dahil ederek işi yavaşlatmanızı sağlar.</p>
+<h3>Surlariçi yürünerek gezilir mi?</h3>
+<p>Evet ve görmenin en iyi yolu budur. Surlarla çevrili alan derli toplu ve düzdür; başlıca noktalar birbirine yürüyerek yaklaşık on beş dakikadır. Zemin eski taştır, tabanı tutan ayakkabı getirin.</p>
+<h3>Kapalı Maraş'a girilebiliyor mu?</h3>
+<p>Mahallenin bir bölümü işaretli güzergâhlar boyunca yaya ve bisikletli ziyarete açık. Geri kalanı çitin arkasında kalıyor ve binalara girmek serbest değil. Girişte asılı kurallara uyun.</p>
+<h3>Salamis'te gölge var mı?</h3>
+<p>Neredeyse yok. Alan açık arazidir, çamlar yalnızca kenarlardadır; erken ya da geç gidin, su taşıyın, şapka kullanın. Aynısı surlar için de geçerli.</p>
+<h3>Gazimağusa'ya en kolay nasıl gidilir?</h3>
+<p>Karayoluyla. Ercan Havalimanı'ndan yaklaşık 45 dakika, Girne'den yaklaşık bir saat, Long Beach'ten yaklaşık 20 dakikadır. Sabit fiyatlı transfer sizi kapıdan kapıya götürür; günlük kiralamada ise aynı şoför sizi surlariçi, Salamis ve plaj arasında gezdirir.</p>
+<p>Gazimağusa'da bir gün mü planlıyorsunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">günlük araç ayarlayın</a>.</p>`,
+      ru: `
+<p>Фамагуста (Газимагуса) создана для неспешного дня. Внутри венецианских стен вы за пятнадцать минут дойдёте от готического собора, ставшего мечетью, до крепости у самой воды, а в десяти минутах вдоль побережья руины античного Саламина спускаются к пустому пляжу. Это самая плотная концентрация истории на Северном Кипре — и одновременно место жаркое, открытое и почти лишённое тени большую часть года. Ниже — разумный порядок пешей прогулки по старому городу, что смотреть за его стенами, где потом купаться и как выстроить день, чтобы жара работала на вас.</p>
+<h2>Старый город: маршрут по порядку</h2>
+<p>Начните с <strong>Сухопутных ворот и Равелина</strong> на западной стороне. Венецианцы перестроили этот бастион как главную защиту со стороны суши, и подъём сюда в самом начале даёт понимание всей планировки — линию стен, крыши старого города, море за ними. Дальше идите на восток по улице Намыка Кемаля к центру.</p>
+<p>Вы выйдете на главную площадь перед <strong>мечетью Лала Мустафы-паши</strong> — бывшим собором Святого Николая. Это французский готический собор, начатый в XIV веке, где короли Лузиньяны короновались королями Иерусалима. После 1571 года к одной из башен пристроили минарет, и с тех пор здание служит мечетью. Западный фасад с тремя порталами и розой — самая сильная архитектура на острове. Вход открыт вне времени молитвы: прикройте плечи и колени, обувь снимите у дверей.</p>
+<p>Вокруг сосредоточен остальной центр: венецианская лоджия, <strong>темница Намыка Кемаля</strong>, где содержали османского поэта, и несколько кафе под деревьями. Это единственное по-настоящему тенистое место в старом городе — перерыв планируйте здесь.</p>
+<p>Дальше на северо-восток стоит <strong>замок Отелло</strong> — цитадель Лузиньянов, перестроенная венецианцами и названная по пьесе Шекспира, действие которой происходит в кипрском порту. Внутри в основном голый камень, но большой зал прохладен, а со стен видно прямо вниз, в гавань.</p>
+<p>На обратном пути пройдите мимо готических церквей, разбросанных по улицам: когда-то их в Фамагусте были десятки, и многие стоят без крыш между жилыми домами. Самая крупная уцелевшая — <strong>мечеть Синан-паши</strong>, бывшая церковь Святых Петра и Павла. Выходите через <strong>Морские ворота</strong> с венецианским львом.</p>
+<h2>Саламин и Царские гробницы</h2>
+<p>Примерно в десяти минутах к северу от города лежит <strong>Саламин</strong> — руины столицы античного Кипра на большой территории среди сосен и песка. Главное здесь: гимнасий с колоннадой и статуями, римский театр, бани и базилики; территория доходит до самого берега. Она обширная, ровная и почти без тени. Заложите два часа, возьмите больше воды, чем кажется нужным, и обуйтесь как следует — мощение разбитое.</p>
+<p>Чуть вглубь острова находятся <strong>Царские гробницы</strong> — некрополь Саламина, где в спусках к погребальным камерам хоронили колесницы и лошадей. Место тише и меньше и хорошо дополняет руины.</p>
+<h2>Монастырь Святого Варнавы</h2>
+<p>Рядом с гробницами стоит <strong>монастырь Святого Варнавы</strong>, над традиционной гробницей апостола. В монастырских корпусах сегодня размещены собрание икон и археологическая коллекция, расставленные вокруг двора с пальмами и колодцем. Небольшой, тенистый и прохладный — естественная последняя точка жаркого утра.</p>
+<h2>Пляжи залива Фамагусты</h2>
+<p>Залив уходит от города на север длинной пологой полосой песка. Чаще всего используют три участка:</p>
+<ul>
+  <li><strong>Glapsides</strong> — ближайший к городу, широкий и песчаный, с пляжными клубами, лежаками и едой. По выходным людно, популярен у студентов.</li>
+  <li><strong>Silver Beach</strong> — рядом с территорией Саламина, спокойнее, мелкая вода и простой пляжный ресторан. Удобно, если утром руины, а сразу после — купание.</li>
+  <li><strong>Palm Beach</strong> — на южном краю залива, вплотную к огороженному кварталу Вароша (Капалы Мараш). Песок, лежаки, спокойная вода, а позади — пустые высотные дома квартала.</li>
+</ul>
+<p><strong>Вароша</strong> — огороженный квартал Фамагусты, закрытый с 1974 года. Часть его открыта для посетителей: по размеченным маршрутам можно пройти пешком или проехать на велосипеде по некоторым улицам. Остальное остаётся за ограждением, входить в здания нельзя. Правила фотосъёмки вывешены у входа, их стоит прочитать до того, как поднимете камеру.</p>
+<h2>Время дня, жара и тень</h2>
+<p>С мая по сентябрь открытые объекты смотрите рано. Саламин и стены лучше всего до одиннадцати; узкие улицы старого города держат немного тени до полудня, а монастырь и музеи комфортны в любой час. Примерно с часа до четырёх дня будьте на пляже или в помещении.</p>
+<p>Полный день со старым городом, Саламином и пляжем — это много перемещений по жаре. Многие гости из Кирении, Лонг-Бич или Никосии берут машину с водителем на день: шофёр высаживает вас у Сухопутных ворот, забирает у Морских и везёт дальше к Саламину и на пляж, по цене, зафиксированной до выезда.</p>
+<h2>Частые вопросы</h2>
+<h3>Сколько времени нужно на Фамагусту?</h3>
+<p>Полдня хватает на старый город пешком. Полный день добавляет Саламин, Царские гробницы, монастырь Святого Варнавы и купание в заливе.</p>
+<h3>По старому городу можно ходить пешком?</h3>
+<p>Да, и это лучший способ его увидеть. Территория внутри стен компактная и ровная, между главными точками около пятнадцати минут ходьбы. Покрытие — старый камень, нужна обувь с хорошим сцеплением.</p>
+<h3>Можно ли попасть в Варошу?</h3>
+<p>Часть квартала открыта для посещения пешком и на велосипеде по размеченным маршрутам. Остальное остаётся за ограждением, вход в здания не разрешён.</p>
+<h3>Есть ли тень в Саламине?</h3>
+<p>Почти нет. Это открытая местность, сосны только по краям — идите рано или поздно, берите воду и головной убор. То же касается городских стен.</p>
+<h3>Как проще всего добраться до Фамагусты?</h3>
+<p>По дороге. Примерно 45 минут от аэропорта Эрджан, около часа от Кирении и около 20 минут от Лонг-Бич. Трансфер по фиксированной цене довезёт от двери до двери, а аренда машины с водителем на день позволит одному и тому же шофёру возить вас между старым городом, Саламином и пляжем.</p>
+<p>Планируете день в Фамагусте? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">закажите машину на день</a>.</p>`,
+    },
+  },
+  {
+    slug: 'long-beach-iskele-things-to-do',
+    date: '2026-07-22',
+    title: {
+      en: 'Long Beach and İskele: Things to Do on the East Coast',
+      tr: 'Long Beach ve İskele: Doğu Kıyısında Yapılacaklar',
+      ru: 'Лонг-Бич и Искеле: что делать на восточном берегу',
+    },
+    description: {
+      en: 'What to do at Long Beach and İskele — the sand, beach clubs, Bafra, the Boğaz and Kumyalı harbours, the Icon Museum and day trips along the east coast.',
+      tr: "Long Beach ve İskele'de yapılacaklar: kumsal, beach club'lar, Bafra, Boğaz ve Kumyalı limanları, İkon Müzesi ve doğu kıyısından günübirlik geziler.",
+      ru: 'Чем заняться на Лонг-Бич и в Искеле: песок и пляжные клубы, отели Бафры, гавани Богаз и Кумьялы, Музей икон и поездки по восточному побережью.',
+    },
+    body: {
+      en: `
+<p>Long Beach is the longest continuous stretch of sand in North Cyprus, running for several kilometres along the east coast in the İskele district. Behind it stands a line of large resort hotels and apartment complexes, and around it sits a quieter countryside of villages, fishing harbours and Byzantine churches most guests never look at. Here is what there is to do, who the area suits, and how to get around without a car.</p>
+<h2>The beach itself</h2>
+<p>The sand is soft, pale and wide, and the water shelves gently for a long way out, which is the main reason families choose this coast over the rockier north. The beach is exposed, so afternoons can be breezy, and there is little natural shade beyond what the clubs and hotels provide.</p>
+<p>Access varies along the strip. Hotel guests use their own section, with loungers included or charged at the door. Between the hotels are public stretches with no facilities, so bring water and an umbrella.</p>
+<h2>Beach clubs and evenings</h2>
+<p>Several beach clubs sit along the shore, mostly attached to the larger resorts, and a day pass typically buys a lounger, an umbrella and use of the pool and bar. In the evening, most activity is inside the hotels — restaurants, bars, entertainment programmes and, at the bigger properties, a casino. This is a resort coast rather than a town.</p>
+<h2>Bafra hotel strip</h2>
+<p>About twenty minutes north, <strong>Bafra</strong> is a separate purpose-built hotel zone on its own bay, home to several of the island's largest five-star and casino resorts. Even if you are not staying there it works as an evening out. The road is easy but unlit in stretches, so many guests book a car with a return pickup.</p>
+<h2>Boğaz and Kumyalı fishing harbours</h2>
+<p><strong>Boğaz</strong>, ten minutes north, is the closest thing to a proper evening out beyond the hotels: a working fishing harbour lined with fish restaurants, where the catch is displayed on ice and priced by weight. Go around sunset and walk the quay first.</p>
+<p><strong>Kumyalı</strong> is smaller and further up the Karpaz road, roughly half an hour on — a village harbour with a few tables by the water and little else.</p>
+<h2>Panayia Theotokos and the İskele Icon Museum</h2>
+<p>In the middle of İskele town stands the Byzantine church of <strong>Panayia Theotokos</strong>, now the <strong>İskele Icon Museum</strong>. The building has two layers of history — a domed church with wall paintings from the twelfth century, extended later — and the frescoes are the reason to come. Small, cool, about half an hour.</p>
+<h2>Day trips from Long Beach</h2>
+<p>The quiet advantage of Long Beach is its position, within reach of the best of the east.</p>
+<ul>
+  <li><strong>Famagusta (Gazimağusa)</strong> — about 20 minutes. The walled old city, the Gothic cathedral turned mosque, Othello Castle and the fenced quarter of Varosha, part of which is open on foot and by bicycle along marked routes.</li>
+  <li><strong>Salamis and St Barnabas</strong> — about 20 minutes. A large Roman site running down to the sea, with the Royal Tombs and the monastery museum nearby.</li>
+  <li><strong>The Karpaz peninsula</strong> — wild beaches, free-roaming donkeys and the Apostolos Andreas Monastery near the tip, roughly an hour and a half each way.</li>
+  <li><strong>Kantara Castle</strong> — around 40 minutes inland and up, with a view over both coasts.</li>
+  <li><strong>Nicosia (Lefkoşa)</strong> — about an hour, for the walled capital and the Selimiye Mosque.</li>
+</ul>
+<h2>Who the area suits</h2>
+<p>Long Beach works best for people who want a base rather than a tour. Families do well here because of the shallow water, the space on the sand and the all-in resort setup. Long-stay and winter visitors take apartments in the complexes and treat it as a quiet coastal address. If you want old streets and nightlife on your doorstep, Kyrenia suits better.</p>
+<h2>Getting around without a car</h2>
+<p>The resorts are self-contained and spread out, public transport along the strip is limited, and taxis do not wait outside the hotels in the evening.</p>
+<p>For a single outing — dinner at Boğaz, a night at Bafra, the museum at İskele — book a car with a fixed price each way and a return pickup time. For a full day out, a full-day hire is simpler: the chauffeur waits at each stop, at a price agreed before you leave. If you are still planning your arrival, our <a href="/en/blog/iskele-long-beach-hotels-transfer-guide/">Long Beach hotel transfer guide</a> covers the airport run.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is Long Beach good for families?</h3>
+<p>Yes. The water is shallow a long way out, the sand is soft and wide, and the resorts are built around pools, kids' clubs and all-inclusive catering.</p>
+<h3>How far is Famagusta from Long Beach?</h3>
+<p>About 20 minutes by road — close enough for a morning in the walled city and an afternoon on the beach.</p>
+<h3>Do I need a hire car at Long Beach?</h3>
+<p>Not necessarily. If you leave the resort most days a car helps; if you go out a few times a week, fixed-price rides with an arranged pickup are simpler.</p>
+<h3>When is the best time to visit?</h3>
+<p>May, June, September and October give warm sea and manageable heat. July and August are hot and the beach is exposed, so mornings and late afternoons are the comfortable hours.</p>
+<p>Planning your days on the east coast? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car</a>.</p>`,
+      tr: `
+<p>Long Beach, Kuzey Kıbrıs'ın kesintisiz en uzun kum şerididir; doğu kıyısında, İskele bölgesinde birkaç kilometre boyunca uzanır. Arkasında büyük tatil otelleri ve site kompleksleri sıralanır; çevresinde ise misafirlerin çoğunun hiç bakmadığı sakin bir taşra vardır — köyler, balıkçı limanları, Bizans kiliseleri. Bu rehber burada gerçekten yapılacak şeyleri, bölgenin kime uyduğunu ve araba getirmediyseniz nasıl dolaşacağınızı anlatıyor.</p>
+<h2>Kumsalın kendisi</h2>
+<p>Kum yumuşak, açık renkli ve geniştir; deniz uzun süre sığ ilerler. Ailelerin bu kıyıyı daha kayalık kuzeye tercih etmesinin başlıca nedeni budur. Kumsal açıktır, öğleden sonraları rüzgâr artabilir ve doğal gölge neredeyse yoktur; gölge yalnızca kulüplerin ve otellerin sağladığı kadardır.</p>
+<p>Şerit boyunca erişim değişir. Otel misafirleri genellikle kendi bölümlerini kullanır; şezlong ve servis ya dahildir ya girişte ücretlendirilir. Oteller arasında herkese açık kısımlar vardır, yürüyerek girip yakına park edip yüzebilirsiniz ama buralarda tesis yoktur; su ve şemsiye götürün.</p>
+<h2>Beach club'lar ve akşamlar</h2>
+<p>Kıyı boyunca, çoğu büyük tatil köylerine bağlı birkaç beach club sıralanır. Günlük giriş genelde şezlong, şemsiye ve havuz ile bar kullanımını kapsar; şeridin gündüz müziği ve yemeği buralarda olur. Akşam hareketi ise büyük ölçüde otellerin içindedir — restoranlar, barlar, eğlence programları ve birkaç büyük tesiste casino. Burası bir kasaba değil, tatil kıyısıdır; bağımsız barlarla dolu bir sahil caddesi beklemeyin.</p>
+<h2>Bafra otel şeridi</h2>
+<p>Yaklaşık yirmi dakika kuzeydeki <strong>Bafra</strong>, kendi koyunda ayrı ve planlı bir otel bölgesidir; adanın en büyük beş yıldızlı ve casinolu tesislerinden birkaçı buradadır. Orada kalmasanız bile bir akşam çıkışı olarak işe yarar: yemek, gösteri ya da casino katları, ardından aynı gece Long Beach'e dönüş. Yol kolaydır ama bazı bölümleri aydınlatmasızdır; birçok misafirin kendi sürmek yerine dönüş alımı ayarlanmış araç tutmasının bir nedeni de budur.</p>
+<h2>Boğaz ve Kumyalı balıkçı limanları</h2>
+<p><strong>Boğaz</strong>, Long Beach'in on dakika kuzeyindedir ve otellerin dışında bölgenin doğru dürüst akşam çıkışına en yakın yeridir. Çalışan bir balıkçı limanıdır; rıhtım boyunca balık lokantaları dizilidir, günün avı genelde buz üzerinde sergilenir ve kilo ile fiyatlanır. Gün batımına doğru gidin, önce rıhtımı ve tekneleri yürüyün, sonra yemeğe oturun.</p>
+<p><strong>Kumyalı</strong> daha küçüktür ve Karpaz yolunda, yaklaşık yarım saat ileridedir. Suyun kenarında birkaç masası olan gerçek bir köy limanıdır, başka pek bir şey yoktur; kıyıyı tatil köyü bağlamı olmadan görmek isteyene yolu değer.</p>
+<h2>Panayia Theotokos ve İskele İkon Müzesi</h2>
+<p>İskele kasabasının ortasında, birkaç dakika içeride, Bizans dönemine ait <strong>Panayia Theotokos Kilisesi</strong> bulunur; bugün <strong>İskele İkon Müzesi</strong> olarak düzenlenmiştir. Yapının iki katmanlı bir tarihi vardır — on ikinci yüzyıl duvar resimlerini taşıyan kubbeli bir kilise, sonradan genişletilmiş — ve gelmenin asıl sebebi içerideki freskolardır. Küçüktür, serindir ve yarım saat sürer. Köy meydanında bir yürüyüş ve bir kahveyle birleştirin.</p>
+<h2>Long Beach'ten günübirlik geziler</h2>
+<p>Long Beach'in sessiz avantajı konumudur: doğunun en iyisi menzilinizdedir.</p>
+<ul>
+  <li><strong>Gazimağusa</strong> — yaklaşık 20 dakika. Surlariçi, camiye dönüşmüş Gotik katedral, Othello Kalesi ve bir bölümü işaretli güzergâhlar boyunca yaya ve bisikletli ziyarete açık olan Kapalı Maraş.</li>
+  <li><strong>Salamis ve St. Barnabas</strong> — yaklaşık 20 dakika. Denize kadar inen geniş bir Roma alanı; yakınında Kral Mezarları ve manastır müzesi.</li>
+  <li><strong>Karpaz Yarımadası</strong> — kuzeydoğunuzdaki uzun parmak; yabani plajlar, serbest dolaşan eşekler ve uçtaki Apostolos Andreas Manastırı. Tam gün ayırın; uca gidiş yaklaşık bir buçuk saattir.</li>
+  <li><strong>Kantara Kalesi</strong> — içeriye ve yukarıya doğru yaklaşık 40 dakika. Üç dağ kalesinin en doğudakidir, iki kıyıyı birden görür.</li>
+  <li><strong>Lefkoşa</strong> — yaklaşık bir saat. Surlarla çevrili başkent, çarşı ve Selimiye Camii.</li>
+</ul>
+<h2>Bölge kime uygun?</h2>
+<p>Long Beach, gezi turundan çok bir üs isteyenlere göredir. Aileler burada rahat eder: sığ su, kumsalda yer ve her şeyi içeren tesis düzeni. Uzun süreli ve kış misafirleri sitelerde daire tutar ve burayı sakin bir sahil adresi olarak kullanır. Eski sokaklar, yürüme mesafesinde bağımsız restoranlar ve kapı önünde gece hayatı istiyorsanız Girne size daha uygundur — ama Long Beach çok daha fazla kumsal verir.</p>
+<h2>Araba olmadan dolaşmak</h2>
+<p>Önceden planlanmaya değen tek pratik konu budur. Tesisler kendi içinde kapalıdır ve birbirinden uzaktır, şerit boyunca toplu ulaşım sınırlıdır ve özellikle akşam otellerin önünde taksi beklemez. Kompleksler arasında yürümek mümkündür ama yol kenarı sıcakta pek konforlu değildir.</p>
+<p>Misafirlerin çoğu bunu iki yoldan biriyle çözer. Tek bir çıkış için — Boğaz'da balık, Bafra'da bir gece, İskele'de müze — gidiş ve dönüşü sabit fiyatlı, dönüş alım saati belirlenmiş bir araçla ayarlayın. Gazimağusa ile Salamis ya da Karpaz gibi tam gün için ise günlük kiralama daha kolaydır: şoför her durakta bekler, her noktada yeniden araç aramazsınız ve fiyat yola çıkmadan kararlaşır. Henüz varışınızı planlıyorsanız, <a href="/tr/blog/iskele-long-beach-hotels-transfer-guide/">Long Beach otel transfer rehberimiz</a> havalimanı yolculuğunu ve otel bırakmalarını ayrıntılı anlatıyor.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Long Beach aileler için uygun mu?</h3>
+<p>Evet. Deniz uzun mesafe sığdır, kum yumuşak ve geniştir, tesisler havuz, çocuk kulübü ve yarım pansiyon ya da her şey dahil düzen üzerine kuruludur. Açık kısımlar için gölge götürün.</p>
+<h3>Kumsal dışında ne yapılır?</h3>
+<p>İskele'deki İkon Müzesi, Boğaz ve Kumyalı balıkçı limanları, Bafra'daki otel ve casino şeridi ve Gazimağusa, Salamis, Kantara Kalesi ile Karpaz Yarımadası'na günübirlik geziler.</p>
+<h3>Gazimağusa Long Beach'e ne kadar uzak?</h3>
+<p>Karayoluyla yaklaşık 20 dakika. Sabahı surlariçinde geçirip öğleden sonra kumsala dönecek kadar yakın.</p>
+<h3>Long Beach'te kiralık arabaya ihtiyacım var mı?</h3>
+<p>Şart değil. Neredeyse her gün tesisten çıkacaksanız araba işinizi kolaylaştırır. Haftada birkaç kez çıkıyorsanız, alım saati ayarlanmış sabit fiyatlı yolculuklar genelde gece yabancı yollarda sürmekten ve park yeri aramaktan daha pratiktir.</p>
+<h3>En iyi ziyaret zamanı ne zaman?</h3>
+<p>Mayıs, haziran, eylül ve ekim ılık deniz ve dayanılabilir sıcak sunar. Temmuz ve ağustos sıcaktır ve kumsal açıktır; rahat saatler sabah ve ikindidir. Kış ılıman ve çok sakindir, uzun konaklamalara uyar.</p>
+<p>Doğu kıyısındaki günlerinizi mi planlıyorsunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">araç ayarlayın</a>.</p>`,
+      ru: `
+<p>Лонг-Бич — самая длинная непрерывная полоса песка на Северном Кипре: несколько километров вдоль восточного побережья в районе Искеле. За ней тянется линия крупных курортных отелей и жилых комплексов, а вокруг лежит тихая сельская местность с деревнями, рыбацкими гаванями и византийскими церквями, на которую большинство гостей так и не смотрит. Ниже — чем здесь заняться, кому подходит это место и как передвигаться без машины.</p>
+<h2>Сам пляж</h2>
+<p>Песок мягкий, светлый и широкий, дно уходит вглубь очень полого — именно поэтому семьи выбирают этот берег, а не более скалистый север. Пляж открытый, во второй половине дня бывает ветрено, и естественной тени почти нет: тень дают только клубы и отели.</p>
+<p>Доступ вдоль полосы разный. Гости отелей пользуются своим участком с лежаками — включёнными или оплачиваемыми на входе. Между отелями есть общедоступные отрезки, где можно просто выйти к воде и купаться, но инфраструктуры там нет, так что берите воду и зонт.</p>
+<h2>Пляжные клубы и вечера</h2>
+<p>Вдоль берега работает несколько пляжных клубов при крупных курортах; дневной вход обычно даёт лежак, зонт и доступ к бассейну и бару. Вечером почти вся жизнь идёт внутри отелей — рестораны, бары, развлекательные программы, а в нескольких крупных комплексах и казино. Это курортный берег, а не город, так что набережной с независимыми барами здесь ждать не стоит.</p>
+<h2>Отельная зона Бафра</h2>
+<p>Примерно в двадцати минутах к северу находится <strong>Бафра</strong> — отдельная спланированная отельная зона в собственной бухте, где стоят несколько крупнейших пятизвёздочных и казино-курортов острова. Даже если вы живёте не там, это вариант вечернего выезда: ужин, шоу или игровые залы, а затем возвращение на Лонг-Бич в ту же ночь. Дорога простая, но местами без освещения — одна из причин, по которой многие берут машину с водителем и заранее назначенным обратным временем.</p>
+<h2>Рыбацкие гавани Богаз и Кумьялы</h2>
+<p><strong>Богаз</strong> лежит в десяти минутах к северу и остаётся ближайшим настоящим вечерним выходом за пределами отелей: рабочая рыбацкая гавань, вдоль причала — рыбные рестораны, где дневной улов обычно выложен на льду и продаётся на вес. Приезжайте к закату и сначала пройдитесь по причалу.</p>
+<p><strong>Кумьялы</strong> меньше и дальше по дороге на Карпаз, примерно ещё полчаса — деревенская гавань с несколькими столами у воды и почти ничем больше. Стоит поездки, если хочется побережья без курортного обрамления.</p>
+<h2>Панагия Теотокос и Музей икон в Искеле</h2>
+<p>В центре городка Искеле стоит византийская церковь <strong>Панагия Теотокос</strong>, ныне <strong>Музей икон Искеле</strong>. У здания два слоя истории — купольная церковь с настенной живописью XII века, позже расширенная, — и ради фресок внутри сюда и едут. Небольшое, прохладное, полчаса.</p>
+<h2>Поездки на день с Лонг-Бич</h2>
+<p>Тихое преимущество Лонг-Бич — расположение: лучшее на востоке острова находится в пределах досягаемости.</p>
+<ul>
+  <li><strong>Фамагуста (Газимагуса)</strong> — около 20 минут. Старый город в стенах, готический собор, ставший мечетью, замок Отелло и огороженный квартал Вароша, часть которого открыта для пеших и велосипедных прогулок по размеченным маршрутам.</li>
+  <li><strong>Саламин и монастырь Св. Варнавы</strong> — около 20 минут. Обширный римский комплекс, спускающийся к морю, рядом Царские гробницы и музей в монастыре.</li>
+  <li><strong>Полуостров Карпаз</strong> — дикие пляжи, свободно живущие ослы и монастырь Апостола Андрея у самой оконечности; до мыса около полутора часов в одну сторону.</li>
+  <li><strong>Замок Кантара</strong> — примерно 40 минут вглубь и вверх, с видом сразу на оба побережья.</li>
+  <li><strong>Никосия (Лефкоша)</strong> — около часа: столица в стенах, базар и мечеть Селимие.</li>
+</ul>
+<h2>Кому подходит это место</h2>
+<p>Лонг-Бич лучше всего работает для тех, кому нужна база, а не маршрут. Семьям здесь удобно из-за мелкой воды, простора на песке и формата курорта со всем включённым. Гости на долгий срок и зимующие снимают квартиры в комплексах и живут здесь как по тихому приморскому адресу. Если нужны старые улицы и ночная жизнь под окном, лучше подойдёт Кирения.</p>
+<h2>Как передвигаться без машины</h2>
+<p>Это единственное, что стоит продумать заранее. Комплексы самодостаточны и разбросаны, общественный транспорт вдоль полосы ограничен, а такси у отелей не стоят, особенно вечером. Идти пешком между комплексами можно, но обочина в жару не самая приятная.</p>
+<p>Большинство гостей решают это одним из двух способов. Для разовой поездки — ужин в Богазе, вечер в Бафре, музей в Искеле — заказывают машину с фиксированной ценой в обе стороны и назначенным временем возврата. Для полного дня, например Фамагуста с Саламином или Карпаз, проще аренда с водителем на день: шофёр ждёт на каждой остановке, вам не приходится искать транспорт у каждого объекта, а цена согласована до выезда. Если вы ещё планируете приезд, наш <a href="/ru/blog/iskele-long-beach-hotels-transfer-guide/">гид по трансферу в отели Лонг-Бич</a> подробно разбирает дорогу из аэропорта и высадку у отелей.</p>
+<h2>Частые вопросы</h2>
+<h3>Подходит ли Лонг-Бич для семей?</h3>
+<p>Да. Вода мелкая далеко от берега, песок мягкий и широкий, а курорты построены вокруг бассейнов, детских клубов и питания по системе полупансиона или всё включено. На открытых участках берите с собой тень.</p>
+<h3>Чем заняться, кроме пляжа?</h3>
+<p>Музей икон в Искеле, рыбацкие гавани Богаз и Кумьялы, отельно-казиношная зона Бафра и поездки на день в Фамагусту, Саламин, замок Кантара и на полуостров Карпаз.</p>
+<h3>Далеко ли Фамагуста от Лонг-Бич?</h3>
+<p>Около 20 минут по дороге. Достаточно близко, чтобы провести утро в старом городе и вернуться на пляж к середине дня.</p>
+<h3>Нужна ли на Лонг-Бич арендованная машина?</h3>
+<p>Не обязательно. Если вы собираетесь выезжать почти каждый день, машина пригодится. Если выбираетесь пару раз в неделю, поездки по фиксированной цене с заранее назначенной подачей обычно проще, чем парковка и незнакомые дороги ночью.</p>
+<h3>Когда лучше приезжать?</h3>
+<p>Май, июнь, сентябрь и октябрь дают тёплое море и терпимую жару. В июле и августе жарко, а пляж открытый, так что комфортны утро и ближе к вечеру. Зима мягкая и очень тихая — хороший вариант для долгого пребывания.</p>
+<p>Планируете дни на востоке? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">закажите машину</a>.</p>`,
+    },
+  },
+{
+    slug: 'guzelyurt-soli-vouni-west-cyprus-guide',
+    date: '2026-07-22',
+    title: {
+      en: 'Güzelyurt, Soli and Vouni: A Day in West North Cyprus',
+      tr: 'Güzelyurt, Soli ve Vouni: Batı Kıbrıs Gezi Rehberi',
+      ru: 'Гюзельюрт, Соли и Вуни: день на западе Северного Кипра',
+    },
+    description: {
+      en: 'A day guide to west North Cyprus: Güzelyurt museum and St Mammas, the Soli mosaics, Vouni Palace, Lefke, Gemikonağı and the quiet bay beaches.',
+      tr: 'Batı Kıbrıs için bir günlük gezi rehberi: Güzelyurt Müzesi ve Aya Mamas, Soli mozaikleri, Vouni Sarayı, Lefke, Gemikonağı ve sakin körfez plajları.',
+      ru: 'Гид на день по западу Северного Кипра: музей Гюзельюрта и церковь Айя-Мамас, мозаики Соли, дворец Вуни, Лефке, Гемиконагы и тихие пляжи залива.',
+    },
+    body: {
+      en: `
+<p>West of Nicosia the island changes character. The hills flatten into the citrus plain around Güzelyurt, the road runs out towards a coast with almost nothing built on it, and the ruins you stop at are usually empty apart from a caretaker and a cat. This is the quietest quarter of North Cyprus and the easiest to see in one unhurried loop — a museum, a Roman theatre and its mosaics, a hilltop palace over the sea, an Ottoman-era town and a long, plain beach. Half a day covers the highlights; a full day adds lunch and still gets you back before dark.</p>
+<h2>A suggested route</h2>
+<p>From Kyrenia the drive to Güzelyurt takes roughly 45 minutes; from Nicosia about 30 to 35. This order keeps the driving short and puts the coast in the afternoon light:</p>
+<ul>
+  <li><strong>Güzelyurt</strong> — museum and St Mammas, about 1 hour</li>
+  <li><strong>Soli</strong> — 20 minutes west, allow an hour</li>
+  <li><strong>Vouni Palace</strong> — about 10 minutes further, 45 minutes on site</li>
+  <li><strong>Gemikonağı and Lefke</strong> — 15 minutes back east, lunch and a walk</li>
+  <li><strong>Güzelyurt Bay beaches</strong> — on the way home if there is light left</li>
+</ul>
+<h2>Güzelyurt: the museum and St Mammas</h2>
+<p>Güzelyurt — Morphou on older maps — sits in the middle of the orange and lemon groves that made its name. In spring the whole plain smells of citrus blossom.</p>
+<p>The <strong>Güzelyurt Museum of Archaeology and Nature</strong> occupies the buildings beside the church of <strong>St Mammas</strong>, and the two are seen together. Downstairs is an old-fashioned natural history collection; upstairs the archaeology runs from Bronze Age pottery to Roman glass, including a well-known Artemis figure. Next door, the church is the reason many people come: a domed building with a carved and gilded iconostasis, and the tomb of St Mammas set into the wall. It is cool, dim and completely silent.</p>
+<h2>Soli: theatre, basilica and mosaics</h2>
+<p>Soli was one of the ancient city-kingdoms of Cyprus, and what survives sits on a slope facing the sea. The <strong>theatre</strong> has been substantially reconstructed and looks straight out over the gulf. Above it, under a modern shelter, lies the floor of a large <strong>basilica</strong> whose mosaics are the real draw — geometric panels, animals, and the small swan that appears on half the postcards in the region. A Roman street and the remains of a colonnade lie below. Bring a hat: there is very little shade.</p>
+<h2>Vouni Palace</h2>
+<p>Ten minutes further west, a narrow road climbs to <strong>Vouni Palace</strong>, a fifth-century BC hilltop residence whose foundations, cisterns and stairways are still legible on the ground. Historians argue about who built it and why. The position is not in doubt: the hill drops to the sea on one side and the plain on the other, and on a clear day the view runs far along the coast.</p>
+<p>The last stretch of road is steep and single-track with few passing places. If you are driving yourself, take it slowly; a chauffeur who knows the turn can wait at the top instead.</p>
+<h2>Lefke, Gemikonağı and the coast</h2>
+<p><strong>Lefke</strong> is the most likeable town in the west: water running in open channels, palm trees, an old mosque, and streets of Ottoman-era houses with wooden balconies and heavy doors. It grew on copper and citrus and has kept a slower rhythm than the north coast. Coffee in the shade of the square is the right way to spend an hour.</p>
+<p><strong>Gemikonağı</strong>, on the shore below, is the old mining port — the ruined loading pier out in the water is the landmark, and simple fish restaurants line the road. East of there the <strong>beaches of Güzelyurt Bay</strong> are long, flat and mostly undeveloped, with few facilities — precisely the appeal on a hot afternoon.</p>
+<h2>Practical notes</h2>
+<ul>
+  <li>No public transport links these sites usefully. A car or a driver is the only sensible way to do the loop.</li>
+  <li>Sites open through the day but close earlier in winter. Be at Soli and Vouni by mid-afternoon at the latest.</li>
+  <li>Carry cash for entry fees and small cafés.</li>
+  <li>Wear shoes with grip — Soli and Vouni are both uneven underfoot.</li>
+</ul>
+<p>If you want the day without the driving, a <strong>full-day hire at a fixed price</strong> works well here: the chauffeur waits at each stop, the price is agreed before you set off, and nothing is metered while you are inside a museum. For arrivals and hotel runs to the same area, see our <a href="/en/blog/guzelyurt-morphou-transfer-guide/">Güzelyurt transfer guide</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Can I see Güzelyurt, Soli and Vouni in one day?</h3>
+<p>Comfortably. The three sites are within about half an hour of each other, and adding Lefke and the coast still makes a relaxed full day from Kyrenia or Nicosia.</p>
+<h3>How far is Güzelyurt from Kyrenia?</h3>
+<p>About 45 minutes by road. From Nicosia it is roughly 30 to 35 minutes, and from Ercan Airport around 50 minutes.</p>
+<h3>Is the road to Vouni Palace difficult?</h3>
+<p>The final climb is narrow, steep and single-track. It is manageable in a normal car driven carefully, but many visitors prefer a driver for that stretch.</p>
+<h3>What is the best time of year to visit the west?</h3>
+<p>Spring, when the citrus is in blossom, and autumn. Midsummer works if you start early — Soli and Vouni offer very little shade.</p>
+<h3>Are the beaches at Güzelyurt Bay worth stopping for?</h3>
+<p>If you want quiet, yes. They are long, open and largely undeveloped. For sunbeds and beach clubs, the Kyrenia coast instead.</p>
+<p>Planning the loop? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car in two minutes</a>.</p>`,
+      tr: `
+<p>Lefkoşa'nın batısında ada karakter değiştirir. Tepeler Güzelyurt çevresindeki narenciye ovasına iner, yol neredeyse hiç yapılaşmamış bir sahile doğru uzanır ve durduğunuz antik alanlarda genelde bir bekçi ile bir kediden başkası olmaz. Burası Kuzey Kıbrıs'ın en sakin köşesi ve tek bir telaşsız turla görülmesi en kolay olanı — bir müze, bir Roma tiyatrosu ve mozaikleri, deniz üstünde bir tepe sarayı, Osmanlı dönemi bir kasaba ve uzun, sade bir kumsal. Yarım gün ana durakları kapsar. Tam gün ise oturup öğle yemeği yemenize ve yine de hava kararmadan dönmenize izin verir.</p>
+<h2>Önerilen güzergah</h2>
+<p>Girne'den Güzelyurt'a yolculuk yaklaşık 45 dakika, Lefkoşa'dan 30–35 dakika sürer. Turu şu sırayla yapmak yolu kısaltır ve sahili öğleden sonranın ışığına denk getirir:</p>
+<ul>
+  <li><strong>Güzelyurt</strong> — müze ve Aya Mamas, yaklaşık 1 saat</li>
+  <li><strong>Soli Harabeleri</strong> — 20 dakika batıda, bir saat ayırın</li>
+  <li><strong>Vouni Sarayı</strong> — 10 dakika ileride, alanda 45 dakika</li>
+  <li><strong>Gemikonağı ve Lefke</strong> — 15 dakika doğuda, yemek ve kısa bir yürüyüş</li>
+  <li><strong>Güzelyurt Körfezi plajları</strong> — dönüş yolunda, ışık kaldıysa</li>
+</ul>
+<h2>Güzelyurt: müze ve Aya Mamas</h2>
+<p>Eski haritalarda Omorfo olarak geçen Güzelyurt, kasabanın adını duyuran portakal ve limon bahçelerinin tam ortasındadır. İlkbaharda bütün ova narenciye çiçeği kokar, yol kenarındaki tezgahlar meyveyi ve suyunu kasayla satar.</p>
+<p><strong>Güzelyurt Arkeoloji ve Doğa Müzesi</strong>, <strong>Aya Mamas Kilisesi</strong>'nin yanındaki binalarda yer alır ve ikisi birlikte gezilir. Alt katta doğa tarihi bölümü Kıbrıs faunasına dair açık sözlü, eski usul bir koleksiyon barındırır; üst katta arkeoloji Tunç Çağı seramiğinden Roma camına uzanır ve bilinen Artemis heykeli buradadır. Yan taraftaki kilise ise çoğu ziyaretçinin asıl gelme sebebidir: kubbeli bir yapı, oyma ve yaldızlı ahşap ikonostasis, duvara yerleştirilmiş Aya Mamas lahdi. Serin, loş ve tamamen sessizdir; acele etmeden geçirilen on dakikayı hak eder.</p>
+<h2>Soli Harabeleri: tiyatro, bazilika ve mozaikler</h2>
+<p>Soli, Kıbrıs'ın antik şehir krallıklarından biriydi ve ayakta kalanlar denize bakan bir yamaca yayılır. <strong>Tiyatro</strong> büyük ölçüde yeniden yapılandırılmıştır ve doğrudan körfeze bakar. Üstünde, modern bir çatının altında, büyük bir <strong>bazilikanın</strong> tabanı ve asıl ilgiyi çeken mozaikleri uzanır — geometrik panolar, hayvan figürleri ve bölgedeki kartpostalların yarısında görünen o küçük kuğu. Aşağıda bir Roma caddesi ile sütunlu yolun kalıntıları vardır.</p>
+<p>Şapka alın. Çatı ile tiyatro arasında neredeyse hiç gölge yoktur ve alan günün büyük bölümünde açıktır.</p>
+<h2>Vouni Sarayı</h2>
+<p>On dakika daha batıda dar bir yol, MÖ 5. yüzyıla tarihlenen <strong>Vouni Sarayı</strong>'na tırmanır; temelleri, sarnıçları ve merdivenleri zeminde hâlâ okunabilir. Sarayı kimin ve neden yaptırdığı tartışılmaya devam eder, alan da bu belirsizliğin verdiği hoş havayı taşır. Tartışmasız olan konumudur: tepe bir yanda denize, diğer yanda ovaya iner ve açık bir günde manzara sahil boyunca uzanır.</p>
+<p>Yolun son bölümü dik, tek şeritli ve geçiş cebi azdır. Kendi aracınızı kullanıyorsanız yavaş gidin. Dönemeci bilen bir şoför bu bölümü kolaylaştırır ve siz aceleyle inmek yerine yukarıda bekleyebilir.</p>
+<h2>Lefke, Gemikonağı ve sahil</h2>
+<p><strong>Lefke</strong> batının en sevimli kasabasıdır: açık kanallarda akan su, palmiyeler, eski bir cami ve ahşap balkonlu, ağır kapılı Osmanlı dönemi evlerin sıralandığı sokaklar. Bakır ve narenciyeyle büyümüş, kuzey sahilindeki her yerden daha yavaş bir ritmi korumuştur. Meydanın gölgesinde bir kahve, burada bir saat geçirmenin doğru yoludur.</p>
+<p>Aşağıdaki sahilde yer alan <strong>Gemikonağı</strong> eski maden limanıdır — suyun içinde duran yıkık yükleme iskelesi buranın simgesidir, yol boyunca sade balık lokantaları vardır. Doğusunda <strong>Güzelyurt Körfezi plajları</strong> uzun, düz ve büyük ölçüde yapılaşmamıştır. Tatil köyü plajı değildirler ve tesis neredeyse yoktur; sıcak bir öğleden sonra çekiciliği de tam olarak budur.</p>
+<h2>Pratik notlar</h2>
+<ul>
+  <li>Bu noktaları birbirine bağlayan işe yarar bir toplu taşıma yoktur. Tur için araç ya da şoför tek makul seçenektir.</li>
+  <li>Alanlar gün boyu açıktır ama kışın saatler kısalır. En geç öğleden sonranın ortasında Soli ve Vouni'de olmayı hedefleyin.</li>
+  <li>Giriş ücretleri ve küçük kafeler için nakit bulundurun.</li>
+  <li>Tabanı tutan ayakkabı giyin — Soli de Vouni de engebelidir.</li>
+</ul>
+<p>Günü direksiyon başında geçirmek istemiyorsanız burada <strong>sabit fiyatlı tam gün araç kiralama</strong> iyi çalışır: şoför her durakta bekler, fiyat yola çıkmadan kararlaşır ve siz müzedeyken taksimetre işlemez. Aynı bölgeye varış ve otel yolculukları için <a href="/tr/blog/guzelyurt-morphou-transfer-guide/">Güzelyurt transfer rehberimize</a> bakın.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Güzelyurt, Soli ve Vouni'yi bir günde görebilir miyim?</h3>
+<p>Rahatlıkla. Üç nokta birbirine yaklaşık yarım saat mesafededir; Lefke ve sahili eklemek bile Girne ya da Lefkoşa'dan rahat bir tam gün eder.</p>
+<h3>Girne'den Güzelyurt ne kadar uzakta?</h3>
+<p>Karayoluyla yaklaşık 45 dakika. Lefkoşa'dan 30–35 dakika, Ercan Havalimanı'ndan ise yaklaşık 50 dakika sürer.</p>
+<h3>Vouni Sarayı'na çıkan yol zor mu?</h3>
+<p>Son tırmanış dar, dik ve tek şeritlidir, geçiş yeri sınırlıdır. Dikkatli sürülen normal bir otomobille çıkılabilir, ama çoğu ziyaretçi bu bölüm için şoför tercih eder.</p>
+<h3>Batıyı gezmek için en iyi mevsim hangisi?</h3>
+<p>Narenciyenin çiçek açtığı ve ovanın yeşerdiği ilkbahar ile sonbahar. Yaz ortasında da olur, yeter ki erken çıkın — Soli ve Vouni'de gölge çok azdır.</p>
+<h3>Güzelyurt Körfezi plajları uğramaya değer mi?</h3>
+<p>Sessizlik istiyorsanız evet. Uzun, açık ve büyük ölçüde doğaldırlar, tesis azdır. Şezlong ve beach club için Girne sahili daha uygundur.</p>
+<p>Turu planlıyor musunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada araç ayırtın</a>.</p>`,
+      ru: `
+<p>К западу от Никосии остров меняет характер. Холмы переходят в цитрусовую равнину вокруг Гюзельюрта, дорога уходит к побережью, на котором почти ничего не построено, а на античных площадках вы обычно застаёте только смотрителя и кошку. Это самая тихая четверть Северного Кипра и самая удобная для одного неспешного круга — музей, римский театр с мозаиками, дворец на холме над морем, городок османской эпохи и длинный простой пляж. Полдня хватает на главное. Полный день позволяет спокойно пообедать и вернуться до темноты.</p>
+<h2>Предлагаемый маршрут</h2>
+<p>Из Кирении до Гюзельюрта ехать примерно 45 минут, из Никосии — 30–35. Такой порядок сокращает дорогу и оставляет побережье на послеполуденный свет:</p>
+<ul>
+  <li><strong>Гюзельюрт</strong> — музей и церковь Айя-Мамас, около часа</li>
+  <li><strong>Соли</strong> — 20 минут западнее, заложите час</li>
+  <li><strong>Дворец Вуни</strong> — ещё около 10 минут, 45 минут на месте</li>
+  <li><strong>Гемиконагы и Лефке</strong> — 15 минут обратно на восток, обед и прогулка</li>
+  <li><strong>Пляжи залива Гюзельюрт</strong> — по дороге назад, если остаётся свет</li>
+</ul>
+<h2>Гюзельюрт: музей и Айя-Мамас</h2>
+<p>Гюзельюрт — на старых картах Морфу — стоит посреди апельсиновых и лимонных садов, которые и создали городу имя. Весной вся равнина пахнет цитрусовым цветом, а придорожные лотки продают фрукты и сок ящиками.</p>
+<p><strong>Музей археологии и природы Гюзельюрта</strong> занимает здания рядом с церковью <strong>Айя-Мамас</strong>, и осматривают их вместе. Внизу залы естественной истории с прямолинейной, старомодной коллекцией кипрской фауны; наверху археология — от керамики бронзового века до римского стекла, включая известную фигуру Артемиды. Рядом сама церковь, ради которой многие и приезжают: купольное здание с резным золочёным иконостасом и гробницей святого Мамаса, встроенной в стену. Внутри прохладно, сумрачно и совершенно тихо, и десять неторопливых минут здесь окупаются.</p>
+<h2>Соли: театр, базилика и мозаики</h2>
+<p>Соли был одним из античных городов-царств Кипра, и то, что уцелело, лежит на склоне лицом к морю. <strong>Театр</strong> в значительной мере восстановлен и смотрит прямо на залив. Выше, под современным навесом, — пол большой <strong>базилики</strong> с мозаиками, ради которых сюда и едут: геометрические панно, животные и тот самый маленький лебедь с половины местных открыток. Ниже сохранились римская улица и остатки колоннады.</p>
+<p>Возьмите шляпу. Между навесом и театром тени почти нет, и площадка открыта солнцу большую часть дня.</p>
+<h2>Дворец Вуни</h2>
+<p>В десяти минутах западнее узкая дорога поднимается к <strong>дворцу Вуни</strong> — резиденции V века до нашей эры, чьи фундаменты, цистерны и лестницы до сих пор читаются на земле. Историки спорят, кто и зачем его построил, и площадка сохраняет приятную неопределённость. Бесспорно одно — положение: холм обрывается к морю с одной стороны и к равнине с другой, и в ясный день вид уходит далеко вдоль берега.</p>
+<p>Последний отрезок дороги крутой, однополосный, с редкими карманами для разъезда. Если едете сами, не торопитесь. Водитель, знающий этот поворот, снимает сложность, и машина может подождать наверху, вместо того чтобы вы спешили вниз.</p>
+<h2>Лефке, Гемиконагы и побережье</h2>
+<p><strong>Лефке</strong> — самый располагающий город запада: вода в открытых каналах, пальмы, старая мечеть и улицы домов османской эпохи с деревянными балконами и тяжёлыми дверями. Город вырос на меди и цитрусовых и сохранил ритм медленнее, чем где-либо на северном побережье. Кофе в тени площади — правильный способ провести здесь час.</p>
+<p><strong>Гемиконагы</strong> на берегу внизу — старый рудничный порт: разрушенный погрузочный пирс, стоящий в воде, служит его ориентиром, вдоль дороги работают простые рыбные таверны. Восточнее <strong>пляжи залива Гюзельюрт</strong> длинные, плоские и почти незастроенные. Это не курортные пляжи, инфраструктуры там мало — в жаркий день именно в этом их привлекательность.</p>
+<h2>Практические заметки</h2>
+<ul>
+  <li>Общественного транспорта, который разумно связывал бы эти точки, нет. Машина или водитель — единственный практичный вариант.</li>
+  <li>Площадки открыты днём, зимой часы короче. Планируйте быть в Соли и Вуни не позже середины дня.</li>
+  <li>Держите наличные на входные билеты и небольшие кафе.</li>
+  <li>Обувь — с хорошей подошвой: и в Соли, и в Вуни под ногами неровно.</li>
+</ul>
+<p>Если хочется дня без руля, здесь хорошо работает <strong>аренда машины с водителем на полный день по фиксированной цене</strong>: шофёр ждёт на каждой остановке, цена согласована до выезда, и счётчик не идёт, пока вы в музее. О встрече в аэропорту и поездках в отели этого района — в нашем <a href="/ru/blog/guzelyurt-morphou-transfer-guide/">гиде по трансферам в Гюзельюрт</a>.</p>
+<h2>Частые вопросы</h2>
+<h3>Можно ли увидеть Гюзельюрт, Соли и Вуни за один день?</h3>
+<p>Спокойно. Три точки лежат примерно в получасе друг от друга, а с Лефке и побережьем получается неспешный полный день из Кирении или Никосии.</p>
+<h3>Далеко ли Гюзельюрт от Кирении?</h3>
+<p>Около 45 минут по дороге. Из Никосии — примерно 30–35 минут, из аэропорта Эрджан — около 50 минут.</p>
+<h3>Сложна ли дорога к дворцу Вуни?</h3>
+<p>Финальный подъём узкий, крутой и однополосный, разъехаться почти негде. На обычной машине при аккуратной езде проехать можно, но многие предпочитают на этом участке водителя.</p>
+<h3>Когда лучше ехать на запад?</h3>
+<p>Весной, когда цветут цитрусовые и равнина зелёная, и осенью. В разгар лета тоже реально, если выезжать рано — в Соли и Вуни тени почти нет.</p>
+<h3>Стоит ли заезжать на пляжи залива Гюзельюрт?</h3>
+<p>Если нужна тишина — да. Они длинные, открытые и почти не застроенные, удобств мало. За шезлонгами и пляжными клубами лучше на побережье Кирении.</p>
+<p>Планируете маршрут? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте машину за две минуты</a>.</p>`,
+    },
+  },
+  {
+    slug: 'north-cyprus-villages-heritage-guide',
+    date: '2026-07-22',
+    title: {
+      en: 'North Cyprus Villages: A Slow Day of Stone and Shade',
+      tr: 'Kuzey Kıbrıs Köyleri: Taş, Gölge ve Yavaş Bir Gün',
+      ru: 'Деревни Северного Кипра: медленный день камня и тени',
+    },
+    description: {
+      en: 'A slow village day in North Cyprus: Bellapais abbey, Karmi, Ozanköy, Lapta, Büyükkonuk and Kalkanlı, with coffee-house etiquette and parking tips.',
+      tr: 'Kuzey Kıbrıs köylerinde yavaş bir gün: Beylerbeyi Manastırı, Karaman, Ozanköy, Lapta, Büyükkonuk ve Kalkanlı, kahve adabı ve park önerileriyle.',
+      ru: 'Медленный день по деревням Северного Кипра: аббатство Беллапаис, Карми, Озанкёй, Лапта, Бююкконук и Калканлы, с этикетом кофейни и советами о парковке.',
+    },
+    body: {
+      en: `
+<p>Most visitors to North Cyprus spend their days on the coast. The villages behind it are the counterpoint: stone churches with the doors ajar, squares under a single old tree, lanes too narrow for two cars, and a rhythm that does not respond to hurry. A village day is not a checklist. Pick three or four places, leave the map loose, and let a coffee run long.</p>
+<h2>Bellapais and the villages above Kyrenia</h2>
+<p><strong>Bellapais (Beylerbeyi)</strong> is the obvious start, and it earns it. The Gothic abbey stands on a shelf of rock with the mountains behind and the sea below, and the cloister and refectory survive well enough to read the whole plan from inside. The village around it is small and steep, with cafés facing the abbey walls. Go early or late — the middle of the day brings the coaches.</p>
+<p><strong>Karmi (Karaman)</strong>, higher up the range, is different in kind: houses painted in ochre, blue and pink, gardens spilling over walls, and lanes that climb in short flights of steps. The setting among pines, with a long view down to the coast, is the reason to walk it. Park at the entrance and go on foot; inside, the lanes are barely a car wide.</p>
+<p><strong>Ozanköy</strong> and <strong>Çatalköy</strong> sit lower, closer to Kyrenia — less picturesque but more lived-in, with olive presses, a couple of good village restaurants and a church tower above the roofs. Places to eat rather than photograph.</p>
+<h2>Lapta and the western foothills</h2>
+<p><strong>Lapta (Lapithos)</strong> spreads up the hillside west of Kyrenia in terraces, held together by the springs that made it prosperous. Water still runs in channels through the upper village, lemon and mulberry trees shade the lanes, and the old quarter keeps its arched doorways and courtyards. Drive up rather than staying on the coast road — the difference between lower and upper Lapta is the difference between a strip and a village.</p>
+<p>Further west and inland, <strong>Kalkanlı</strong> is known for its ancient olive grove, where trees of enormous girth stand in open ground. It takes twenty quiet minutes and is worth the detour if you are heading towards Güzelyurt.</p>
+<h2>East: Büyükkonuk and Tatlısu</h2>
+<p><strong>Büyükkonuk</strong> has positioned itself as North Cyprus's eco-village: restored stone houses, craft workshops, village guesthouses, and seasonal festivals where local food and old trades are on show. It is one of the few places where you can watch bread being made rather than just eat it.</p>
+<p>The road east from Çatalköy along the north coast to <strong>Tatlısu</strong> is one of the best drives on the island — the Beşparmak range on one side, empty sea on the other. Tatlısu is a small coastal village with a harbour and fish restaurants, and from there the mountain road climbs south towards the interior.</p>
+<h2>Coffee-house etiquette</h2>
+<p>Every village has a <strong>kahve</strong> — a coffee house on the square, usually with plastic chairs outside and backgammon within earshot. Visitors are welcome; a few things make it easier:</p>
+<ul>
+  <li>Sit down and wait to be served. There is no counter queue.</li>
+  <li>Order Turkish coffee by sweetness: <strong>sade</strong> (no sugar), <strong>orta</strong> (medium), <strong>şekerli</strong> (sweet).</li>
+  <li>Say <strong>merhaba</strong> on arrival. It is noticed.</li>
+  <li>Pay at the end, in cash.</li>
+  <li>Nobody will hurry you out. An hour over one coffee is the point.</li>
+</ul>
+<h2>What a village breakfast is</h2>
+<p>A Cypriot village breakfast — <strong>köy kahvaltısı</strong> — arrives as many small plates at once: white cheese and hellim, olives, tomato and cucumber, eggs, honey and clotted cream, local jams, bread, and endless tea. It comes late morning rather than early, shared rather than portioned, and is normally enough that lunch becomes unnecessary. Order it for the table and go hungry.</p>
+<h2>Practicalities: lanes, parking and pace</h2>
+<ul>
+  <li><strong>Lanes are narrow.</strong> In Karmi, upper Lapta and old Bellapais, streets were built for donkeys. Park at the edge and walk in.</li>
+  <li><strong>Reversing is the norm.</strong> If you meet a car, one of you goes back — often a long way. This is where a driver who knows the village earns their keep.</li>
+  <li><strong>Cash.</strong> Village cafés and small shops often take nothing else.</li>
+  <li><strong>Shade.</strong> Squares are shaded; the walks between them are not. Go in the morning or after four.</li>
+  <li><strong>Midday.</strong> Some village restaurants close in the afternoon. Call ahead if you are set on one.</li>
+</ul>
+<p>A village day works badly with a tight schedule and well with a <strong>full-day chauffeur at a fixed price</strong>: someone else handles the reversing on the narrow lanes, waits while you finish your coffee, and adjusts the route when a village turns out to be worth another hour.</p>
+<h2>Frequently asked questions</h2>
+<h3>Which North Cyprus village is worth visiting if I only have time for one?</h3>
+<p>Bellapais, for the abbey and the setting. If you would rather walk lanes than see a monument, choose Karmi instead.</p>
+<h3>How many villages can I see in a day?</h3>
+<p>Three or four at a comfortable pace, especially if one includes a long breakfast or lunch. Trying for more turns the day into driving.</p>
+<h3>Can I drive into the villages myself?</h3>
+<p>Yes, but park at the edge. In the old centres of Karmi, Bellapais and upper Lapta, turning around is difficult and passing another car often means reversing.</p>
+<h3>Do I need to book a village breakfast?</h3>
+<p>At weekends it helps, as village restaurants fill with local families. On weekdays you can usually arrive and sit down.</p>
+<h3>Is it acceptable to walk into a village coffee house as a visitor?</h3>
+<p>Yes. Greet people, sit outside if the inside looks like a regulars' room, order coffee and pay in cash at the end.</p>
+<p>Want the villages without the reversing? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car in two minutes</a>.</p>`,
+      tr: `
+<p>Kuzey Kıbrıs'a gelenlerin çoğu günlerini sahilde geçirir. Arkadaki köyler ise bunun karşı ağırlığıdır: kapısı aralık taş kiliseler, tek bir yaşlı ağacın altındaki meydanlar, iki araca yetmeyen sokaklar ve acele ettirilmeye cevap vermeyen bir ritim. Köy günü bir liste değildir. Üç dört yer seçin, haritayı gevşek tutun, kahve uzasın. İşte o günü etrafında kurmaya değer yerler.</p>
+<h2>Beylerbeyi ve Girne'nin üstündeki köyler</h2>
+<p><strong>Beylerbeyi</strong> bariz başlangıçtır ve bunu hak eder. Gotik <strong>Beylerbeyi Manastırı</strong> arkasında dağlar, altında deniz olan bir kaya sekisinde durur; avlu ve yemekhane, planın tamamını içeriden okuyabileceğiniz kadar iyi korunmuştur. Çevresindeki köy küçük ve diktir, kafeler manastır duvarlarına bakar. Erken ya da geç gidin — günün ortası tur otobüslerinin saatidir.</p>
+<p>Dağın daha yukarısındaki <strong>Karaman</strong> ise başka bir tür: okra, mavi ve pembe boyalı evler, duvarlardan taşan bahçeler, kısa merdivenlerle tırmanan sokaklar. Büyük ölçüde uzun süredir burada yaşayan yabancılar tarafından restore edilmiştir ve öyle de görünür; ama çamların arasındaki konumu ve sahile inen uzun manzarası yürümek için asıl sebeptir. Girişte park edip yürüyün; içeride sokaklar ancak bir araç genişliğindedir.</p>
+<p><strong>Ozanköy</strong> ve <strong>Çatalköy</strong> daha aşağıda, Girne'ye yakındır; daha az kartpostal, daha çok yaşanan yerlerdir — zeytin değirmenleri, birkaç iyi köy lokantası, damların üstünde bir çan kulesi. Fotoğraflamaktan çok yemek yenecek yerlerdir.</p>
+<h2>Lapta ve batı etekleri</h2>
+<p><strong>Lapta</strong>, Girne'nin batısında yamaca teraslar halinde yayılır; onu bir arada tutan şey, zenginleştiren kaynak sularıdır. Üst köyde su hâlâ kanallarda akar, limon ve dut ağaçları sokakları gölgeler, eski mahallede kemerli kapılı ve avlulu evler vardır. Sahil yolunda kalmayın, yukarı çıkın — aşağı Lapta ile yukarı Lapta arasındaki fark, bir yol kenarı ile bir köy arasındaki farktır.</p>
+<p>Daha batıda ve içeride <strong>Kalkanlı</strong>, asırlık zeytinlikleriyle bilinir; devasa gövdeli ağaçlar açık arazide durur. Sessiz bir duraktır, yirmi dakika sürer, ama ağaçlar gerçekten yaşlıdır ve Güzelyurt yönüne gidiyorsanız sapmaya değer.</p>
+<h2>Doğu: Büyükkonuk ve Tatlısu</h2>
+<p><strong>Büyükkonuk</strong> kendini Kuzey Kıbrıs'ın eko-köyü olarak konumlandırmıştır: restore edilmiş taş evler, geleneksel el sanatları atölyeleri, köy pansiyonları ve yerel yemekle eski zanaatların sergilendiği mevsimlik festivaller. Ekmeğin sadece yenmediği, yapılışının da izlendiği birkaç yerden biridir.</p>
+<p>Çatalköy'den kuzey sahili boyunca doğuya, <strong>Tatlısu</strong>'ya giden yol adanın en iyi sürüşlerinden biridir — bir yanda Beşparmak Dağları, diğer yanda boş deniz, aralarda hiç yapı olmayan uzun bölümler. Tatlısu'nun kendisi balık lokantaları ve küçük bir limanı olan sahil köyüdür. Oradan dağ yolu güneye, iç kesimlere ve Karpaz yoluna doğru tırmanır.</p>
+<h2>Kahvehane adabı</h2>
+<p>Her köyün bir <strong>kahvesi</strong> vardır — meydanda, dışarıda plastik sandalyeler, içeride kâğıt ya da tavla oynayanlar. Ziyaretçiler hoş karşılanır; birkaç şey işi kolaylaştırır:</p>
+<ul>
+  <li>Oturun ve servisi bekleyin. Tezgâhta sıra yoktur.</li>
+  <li>Kahveyi şekerine göre söyleyin: <strong>sade</strong>, <strong>orta</strong>, <strong>şekerli</strong>.</li>
+  <li>Girerken selam verin. Fark edilir.</li>
+  <li>Hesabı sonunda ve nakit ödeyin. Küçük banknot makbuldür.</li>
+  <li>Kimse sizi kaldırmaz. Tek kahveyle bir saat oturmak zaten meselenin kendisidir.</li>
+</ul>
+<h2>Köy kahvaltısı nedir?</h2>
+<p><strong>Köy kahvaltısı</strong> tek seferde çok sayıda küçük tabak olarak gelir: beyaz peynir ve hellim, zeytin, domates ve salatalık, yumurta, bal ve kaymak, yöresel meyvelerden reçeller, ekmek ve bitmeyen çay. Erken değil, kuşluk vakti servis edilir; porsiyonlanmaz, sofra olarak paylaşılır ve genelde öğle yemeğini gereksiz kılacak kadar doyurucudur. Kişi başı değil, sofra olarak sipariş edin ve aç gidin.</p>
+<h2>Pratik: dar sokaklar, park ve tempo</h2>
+<ul>
+  <li><strong>Sokaklar dardır.</strong> Karaman'da, yukarı Lapta'da ve eski Beylerbeyi'nde sokaklar eşek için yapılmıştır. Kenarda park edip yürüyün.</li>
+  <li><strong>Geri gitmek normaldir.</strong> Karşıdan araç gelirse biriniz geri gider, çoğu zaman epeyce. Köyü bilen bir şoförün değerini burada anlarsınız.</li>
+  <li><strong>Nakit.</strong> Köy kahveleri ve küçük dükkânlar çoğu zaman başka bir şey kabul etmez.</li>
+  <li><strong>Gölge.</strong> Meydanlar gölgelidir, aralarındaki yürüyüşler değil. Sabah ya da dörtten sonra gidin.</li>
+  <li><strong>Öğle arası.</strong> Bazı köy lokantaları öğleden sonra kapanır. Gözünüz bir yerde kaldıysa önceden arayın.</li>
+</ul>
+<p>Köy günü, kiralık araç ve sıkı programla kötü; <strong>sabit fiyatlı tam gün şoförle</strong> iyi gider: dar sokaklarda geri manevrayı başkası yapar, kahveniz bitene kadar beklenir ve bir köy bir saat daha hak ettiğinde güzergah kolayca değişir.</p>
+<h2>Sıkça sorulan sorular</h2>
+<h3>Tek bir köye vaktim varsa hangisini görmeliyim?</h3>
+<p>Manastırı ve konumu için Beylerbeyi. Anıt görmek yerine sokak yürümek istiyorsanız Karaman'ı seçin.</p>
+<h3>Bir günde kaç köy gezilir?</h3>
+<p>Rahat tempoda üç ya da dört; biri uzun bir kahvaltı veya yemek içeriyorsa özellikle. Fazlası günü sürüşe çevirir.</p>
+<h3>Köylere kendi aracımla girebilir miyim?</h3>
+<p>Evet, ama kenarda park edin. Karaman, Beylerbeyi ve yukarı Lapta'nın eski merkezlerinde dönmek zordur ve karşılaşan araçlardan biri genelde geri gitmek zorunda kalır.</p>
+<h3>Köy kahvaltısı için rezervasyon gerekir mi?</h3>
+<p>Hafta sonu işe yarar; köy lokantaları yerli ailelerle dolar. Hafta içi genelde gidip oturabilirsiniz.</p>
+<h3>Ziyaretçi olarak köy kahvesine girmek uygun mu?</h3>
+<p>Evet. Selam verin, içerisi müdavim odası gibi duruyorsa dışarı oturun, kahve söyleyin ve sonunda nakit ödeyin. Orası kamusal bir yerdir, ziyaretçi olağandır.</p>
+<p>Köyleri geri manevra derdi olmadan gezmek ister misiniz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada araç ayırtın</a>.</p>`,
+      ru: `
+<p>Большинство приезжающих на Северный Кипр проводит дни на побережье. Деревни за ним — противовес: каменные церкви с приоткрытой дверью, площади под единственным старым деревом, переулки, в которые не разъедутся две машины, и ритм, который не отзывается на спешку. Деревенский день — не список галочек. Выберите три-четыре места, оставьте маршрут свободным и позвольте кофе затянуться. Вот вокруг чего стоит строить такой день.</p>
+<h2>Беллапаис и деревни над Киренией</h2>
+<p><strong>Беллапаис (Бейлербей)</strong> — очевидное начало, и оно того стоит. Готическое аббатство стоит на скальной полке: горы за спиной, море внизу; клуатр и трапезная сохранились настолько, что весь план читается изнутри. Деревня вокруг маленькая и крутая, кафе смотрят на стены аббатства. Приезжайте рано или ближе к вечеру — в середине дня подходят автобусы.</p>
+<p><strong>Карми (Караман)</strong> выше по хребту — другого рода: дома, крашенные охрой, синим и розовым, сады, переваливающиеся через стены, переулки, поднимающиеся короткими лестницами. Деревню во многом восстановили давно живущие здесь иностранцы, и это заметно, но настоящая причина пройтись — положение среди сосен и длинный вид вниз, к побережью. Оставьте машину на въезде и идите пешком: внутри переулки едва в ширину автомобиля.</p>
+<p><strong>Озанкёй</strong> и <strong>Чаталкёй</strong> лежат ниже, ближе к Кирении: менее открыточные, зато более обжитые — оливковые давильни, пара хороших деревенских ресторанов, колокольня над крышами. Сюда едут есть, а не фотографировать.</p>
+<h2>Лапта и западные предгорья</h2>
+<p><strong>Лапта (Лапитос)</strong> поднимается террасами по склону западнее Кирении, и держат её источники, которые когда-то сделали её зажиточной. В верхней деревне вода до сих пор идёт по открытым каналам, лимонные и тутовые деревья дают тень, а в старом квартале стоят дома с арочными входами и внутренними дворами. Не оставайтесь на прибрежной дороге, поднимитесь наверх — разница между нижней и верхней Лаптой это разница между шоссе и деревней.</p>
+<p>Западнее и вглубь острова <strong>Калканлы</strong> известен древней оливковой рощей: деревья огромного обхвата стоят на открытой земле. Остановка тихая, минут на двадцать, но деревья действительно старые и стоят крюка, если вы едете в сторону Гюзельюрта.</p>
+<h2>Восток: Бююкконук и Татлысу</h2>
+<p><strong>Бююкконук</strong> заявил себя как эко-деревня Северного Кипра: восстановленные каменные дома, мастерские традиционных ремёсел, деревенские гостевые дома и сезонные фестивали, где показывают местную еду и старые ремёсла. Это одно из немногих мест, где хлеб можно не только съесть, но и увидеть, как его пекут.</p>
+<p>Дорога на восток от Чаталкёя вдоль северного берега к <strong>Татлысу</strong> — одна из лучших на острове: хребет Бешпармак с одной стороны, пустое море с другой и длинные отрезки без единой постройки. Сам Татлысу — небольшая прибрежная деревня с рыбными тавернами и гаванью. Оттуда горная дорога уходит на юг, к внутренним районам и дороге на Карпаз.</p>
+<h2>Этикет деревенской кофейни</h2>
+<p>В каждой деревне есть <strong>кахве</strong> — кофейня на площади, обычно с пластиковыми стульями снаружи и картами или нардами внутри. Гостям здесь рады; несколько правил упрощают дело:</p>
+<ul>
+  <li>Садитесь и ждите, пока подойдут. Очереди у стойки нет.</li>
+  <li>Заказывайте турецкий кофе по сладости: <strong>sade</strong> (без сахара), <strong>orta</strong> (средний), <strong>şekerli</strong> (сладкий).</li>
+  <li>Поздоровайтесь при входе — это замечают.</li>
+  <li>Платите в конце и наличными. Мелкие купюры кстати.</li>
+  <li>Вас никто не поторопит. Просидеть час над одной чашкой — это и есть смысл.</li>
+</ul>
+<h2>Что такое деревенский завтрак</h2>
+<p>Кипрский деревенский завтрак — <strong>köy kahvaltısı</strong> — приносят разом множеством маленьких тарелок: белый сыр и хелим, оливки, помидоры и огурцы, яйца, мёд и каймак, варенья из местных фруктов, хлеб и бесконечный чай. Подают его ближе к полудню, а не рано утром; он общий, а не порционный, и его обычно столько, что обед становится лишним. Заказывайте на стол, а не на человека, и приезжайте голодными.</p>
+<h2>Практика: переулки, парковка и темп</h2>
+<ul>
+  <li><strong>Переулки узкие.</strong> В Карми, верхней Лапте и старом Беллапаисе улицы строили под ослов. Ставьте машину на краю и идите пешком.</li>
+  <li><strong>Сдавать назад — норма.</strong> При встрече кто-то один отъезжает, часто далеко. Здесь водитель, знающий деревню, окупается.</li>
+  <li><strong>Наличные.</strong> Деревенские кофейни и лавки часто ничего другого не принимают.</li>
+  <li><strong>Тень.</strong> Площади в тени, дорога между ними — нет. Идите утром или после четырёх.</li>
+  <li><strong>Дневной перерыв.</strong> Часть деревенских ресторанов закрывается днём. Если нацелились на конкретный, позвоните заранее.</li>
+</ul>
+<p>Деревенский день плохо сочетается с прокатной машиной и плотным расписанием и хорошо — с <strong>водителем на полный день по фиксированной цене</strong>: манёвры в узких переулках берёт на себя он, машина ждёт, пока вы допьёте кофе, а маршрут легко меняется, когда деревня заслуживает ещё часа.</p>
+<h2>Частые вопросы</h2>
+<h3>Какую деревню выбрать, если время есть только на одну?</h3>
+<p>Беллапаис — ради аббатства и вида. Если хочется не памятника, а прогулки по переулкам, выбирайте Карми.</p>
+<h3>Сколько деревень реально осмотреть за день?</h3>
+<p>Три-четыре в спокойном темпе, особенно если в одной из них будет долгий завтрак или обед. Больше — и день превратится в дорогу.</p>
+<h3>Можно ли въезжать в деревни на своей машине?</h3>
+<p>Да, но паркуйтесь на краю. В старых центрах Карми, Беллапаиса и верхней Лапты развернуться трудно, а разъезд часто означает движение задним ходом.</p>
+<h3>Нужно ли бронировать деревенский завтрак?</h3>
+<p>На выходных лучше забронировать: деревенские рестораны заполняются местными семьями. В будни обычно можно просто приехать и сесть.</p>
+<h3>Прилично ли гостю зайти в деревенскую кофейню?</h3>
+<p>Да. Поздоровайтесь, сядьте снаружи, если внутри явно комната завсегдатаев, закажите кофе и заплатите наличными в конце. Это общественное место, и гости там обычное дело.</p>
+<p>Хотите деревни без манёвров задним ходом? <a href="/ru/routes/">Смотрите фиксированные цены</a> или <a href="/ru/book/">забронируйте машину за две минуты</a>.</p>`,
+    },
+  },
   {
     slug: 'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci',
     date: '2026-07-13',

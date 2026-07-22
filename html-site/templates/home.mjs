@@ -34,6 +34,18 @@ const destinationPhotos = [
   { src: '/assets/img/dest-6.jpg', w: 1000, h: 667 },
 ]
 
+// Her kartın açtığı bölge rehberi (data/posts.mjs). Sıra destinationPhotos ve
+// dict.destinations.items ile birebir aynı olmalı — kart artık doğrudan /book/
+// yerine o bölgenin plaj/tarih rehberine gider (SEO + iç bağlantı).
+const destinationPosts = [
+  'kyrenia-harbour-castle-old-town-guide',
+  'karpaz-golden-beach-guide',
+  'famagusta-beaches-old-city-guide',
+  'long-beach-iskele-things-to-do',
+  'guzelyurt-soli-vouni-west-cyprus-guide',
+  'north-cyprus-villages-heritage-guide',
+]
+
 // Ana sayfaya özel ince çizgi ikonları (trust şeridi + yıldız)
 const homeIcons = {
   greet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
@@ -333,12 +345,13 @@ export function renderHome(ctx) {
       ${t.destinations.items
         .map(
           (d, i) => `
-      <a href="${base}/book/" class="group/card relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-cloud shadow-card sm:w-[46%] lg:w-[31%]">
+      <a href="${base}/blog/${destinationPosts[i]}/" class="group/card relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-cloud shadow-card sm:w-[46%] lg:w-[31%]">
         <img src="${destinationPhotos[i].src}" width="${destinationPhotos[i].w}" height="${destinationPhotos[i].h}" alt="${esc(d.place)}" loading="lazy" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover/card:scale-[1.06]">
         <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/15 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-6">
           <h3 class="text-xl font-semibold text-white">${esc(d.place)}</h3>
           <p class="mt-1 text-[13px] font-medium text-white/75">${esc(d.note)}</p>
+          <span class="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium text-white/90 transition-colors group-hover/card:text-white">${esc(xtra.blog.readMore)} <span aria-hidden="true" class="transition-transform duration-300 group-hover/card:translate-x-0.5">→</span></span>
         </div>
       </a>`,
         )
