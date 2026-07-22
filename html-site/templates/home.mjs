@@ -189,7 +189,8 @@ export function renderHome(ctx) {
 <section class="relative overflow-hidden bg-ink">
   <!-- Zemin görseli + okunabilirlik/geçiş katmanları -->
   <div aria-hidden="true" class="absolute inset-0 bg-cover bg-center" style="background-image:url('${heroPhoto}')"></div>
-  <div aria-hidden="true" class="absolute inset-0" style="background:linear-gradient(180deg,rgba(6,20,26,.64) 0%,rgba(6,20,26,.20) 32%,rgba(6,20,26,.14) 58%,rgba(6,20,26,.30) 100%)"></div>
+  <div aria-hidden="true" class="absolute inset-0" style="background:linear-gradient(180deg,rgba(6,20,26,.68) 0%,rgba(6,20,26,.42) 32%,rgba(6,20,26,.44) 58%,rgba(6,20,26,.34) 100%)"></div>
+  <div aria-hidden="true" class="absolute inset-0" style="background:radial-gradient(60% 45% at 50% 42%,rgba(6,20,26,.42) 0%,rgba(6,20,26,0) 100%)"></div>
   <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-32" style="background:linear-gradient(180deg,transparent,#F5F7F9)"></div>
 
   <div class="relative mx-auto max-w-6xl px-5 pt-16 pb-24 sm:px-8 lg:pt-24 lg:pb-32">
@@ -198,7 +199,7 @@ export function renderHome(ctx) {
         <span class="size-1.5 rounded-full bg-sea"></span>${esc(t.hero.eyebrow)}
       </span>
       <h1 class="mt-7 text-[clamp(2.6rem,7vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance text-white opacity-0 [text-shadow:0_2px_30px_rgba(6,20,26,.35)]" style="animation:reveal 800ms 100ms ${ease} forwards">${esc(t.hero.title)}</h1>
-      <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-white/85 opacity-0 [text-shadow:0_1px_16px_rgba(6,20,26,.35)]" style="animation:reveal 800ms 240ms ${ease} forwards">${esc(t.hero.subtitle)}</p>
+      <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-white opacity-0 [text-shadow:0_1px_2px_rgba(6,20,26,.55),0_2px_18px_rgba(6,20,26,.65)]" style="animation:reveal 800ms 240ms ${ease} forwards">${esc(t.hero.subtitle)}</p>
     </div>
 
     <!-- Rezervasyon kapsülü — sayfanın imza öğesi -->
