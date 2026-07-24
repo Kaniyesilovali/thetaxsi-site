@@ -73,8 +73,11 @@ export const POPOVER_POS = 'absolute inset-x-0 top-full z-50 mt-2 hidden min-w-f
 export const POPOVER_SKIN = 'rounded-2xl border border-line bg-paper shadow-lift [color-scheme:light]'
 export const POPOVER_CLS = `${POPOVER_POS} ${POPOVER_SKIN}`
 // Panel içindeki seçenek satırı — combobox, menü ve takvim aynı satır dilini konuşur.
-export const POPOVER_OPTION_CLS =
-  'block w-full rounded-xl px-3 py-2 text-left text-sm text-ink transition-colors hover:bg-sea/10 hover:text-sea-deep'
+const POPOVER_OPTION_BASE =
+  'w-full rounded-xl px-3 py-2 text-left text-sm text-ink transition-colors hover:bg-sea/10 hover:text-sea-deep'
+export const POPOVER_OPTION_CLS = `block ${POPOVER_OPTION_BASE}`
+// Sağda ikinci bir değer (ör. güzergah sayısı) taşıyan satır varyantı.
+export const POPOVER_OPTION_SPLIT_CLS = `flex items-center justify-between gap-6 ${POPOVER_OPTION_BASE}`
 
 // Combobox'ın liste teması — açık zeminli formda açık, hero'da koyu görünür.
 const comboTheme = {
@@ -156,18 +159,24 @@ const chevronSvg =
   '<svg viewBox="0 0 12 8" aria-hidden="true" class="size-3 shrink-0 text-slate" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5 6 6.5 11 1.5"/></svg>'
 
 // Yolcu sayısı menüsü — yerel <select> yerine paylaşılan panelin içinde açılır.
-export function selectMenuHtml({ id, name, options, value }) {
+// `wrapperCls`/`buttonCls` verilirse (ör. güzergah filtresi) kabuk kendi zeminini
+// alır; verilmezse booking kapsülünün çerçevesiz alan tipografisi kullanılır.
+// Seçenekte `hint` varsa satırın sağında ikinci bir değer görünür ama tetikleyici
+// etikete girmez — main.js etiket için [data-menu-text] içeriğini okur.
+export function selectMenuHtml({ id, name, options, value, wrapperCls, buttonCls, ariaLabel }) {
   const sel = options.find((o) => String(o.value) === String(value)) || options[0]
-  return `<div class="relative" data-menu>
+  const hintHtml = (o) =>
+    o.hint == null ? '' : `<span class="text-[11px] tabular-nums text-slate">${esc(String(o.hint))}</span>`
+  return `<div class="${wrapperCls || 'relative'}" data-menu>
       <input type="hidden" name="${name}" value="${esc(String(sel.value))}">
-      <button id="${id}" type="button" data-menu-button aria-haspopup="listbox" aria-expanded="false" class="${triggerCls}">
+      <button id="${id}" type="button" data-menu-button aria-haspopup="listbox" aria-expanded="false"${ariaLabel ? ` aria-label="${esc(ariaLabel)}"` : ''} class="${buttonCls || triggerCls}">
         <span data-menu-label>${esc(sel.label)}</span>${chevronSvg}
       </button>
       <div data-menu-list role="listbox" class="${POPOVER_CLS} max-h-72 overflow-y-auto p-1.5 [scrollbar-width:thin]">
         ${options
           .map(
             (o) =>
-              `<button type="button" data-menu-option data-value="${esc(String(o.value))}" class="${POPOVER_OPTION_CLS}">${esc(o.label)}</button>`,
+              `<button type="button" data-menu-option data-value="${esc(String(o.value))}" class="${o.hint == null ? POPOVER_OPTION_CLS : POPOVER_OPTION_SPLIT_CLS}"><span data-menu-text>${esc(o.label)}</span>${hintHtml(o)}</button>`,
           )
           .join('\n        ')}
       </div>

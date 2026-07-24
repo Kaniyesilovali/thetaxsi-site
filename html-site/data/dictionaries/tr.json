@@ -316,7 +316,8 @@
     "bookRoute": "Bu güzergahı rezerve et",
     "tableHeading": "Güzergah",
     "filterLabel": "Güzergahları havalimanına göre filtrele",
-    "filterAll": "Tüm güzergahlar"
+    "filterAll": "Tüm güzergahlar",
+    "filterResult": "{count} güzergah listeleniyor"
   },
   "about": {
     "meta": {

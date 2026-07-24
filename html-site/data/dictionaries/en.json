@@ -316,7 +316,8 @@
     "bookRoute": "Reserve this route",
     "tableHeading": "Route",
     "filterLabel": "Filter routes by airport",
-    "filterAll": "All routes"
+    "filterAll": "All routes",
+    "filterResult": "Showing {count} routes"
   },
   "about": {
     "meta": {

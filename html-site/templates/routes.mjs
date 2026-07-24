@@ -4,7 +4,7 @@ import { routes, connectingRoutes } from '../data/routes.mjs'
 import { routeCopy } from '../data/route-copy.mjs'
 import { posts } from '../data/posts.mjs'
 import { locationGroups } from '../data/locations.mjs'
-import { routeLabel } from './home.mjs'
+import { routeLabel, selectMenuHtml } from './home.mjs'
 
 export function renderRoutesIndex(ctx) {
   const { lang, dict } = ctx
@@ -28,20 +28,32 @@ export function renderRoutesIndex(ctx) {
     }
   }
 
-  const pill = (value, label, count, active) => `
-      <button type="button" data-route-filter="${esc(value)}" aria-pressed="${active}" class="inline-flex h-10 items-center gap-2 rounded-full border px-5 text-[13px] font-medium transition-colors ${
-        active
-          ? 'border-ink bg-ink text-paper'
-          : 'border-line bg-paper text-ink hover:border-ink'
-      }">${esc(label)} <span class="text-[11px] tabular-nums opacity-60">${count}</span></button>`
+  // Filtre artık pill sırası değil, sitenin paylaşılan açılır menüsü (booking
+  // formundaki yolcu menüsüyle aynı kabuk) — havalimanı sayısı arttıkça satır
+  // taşmaz ve mobilde tek kontrol olarak durur.
+  const filterOptions = [
+    { value: 'all', label: t.filterAll, hint: routes.length },
+    ...airports.map((a) => ({ value: a.value, label: a.label, hint: a.count })),
+  ]
+
+  const filterMenu = selectMenuHtml({
+    id: 'route-filter',
+    name: 'routeFilter',
+    value: 'all',
+    options: filterOptions,
+    ariaLabel: t.filterLabel,
+    wrapperCls: 'relative w-full sm:w-80',
+    buttonCls:
+      'flex h-12 w-full items-center justify-between gap-3 rounded-full border border-line bg-paper px-5 text-left text-[14px] font-medium text-ink outline-none transition-colors hover:border-ink focus-visible:border-sea focus-visible:ring-2 focus-visible:ring-sea/20',
+  })
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 <section class="bg-fog py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
-    <div class="mb-8 flex flex-wrap gap-2" data-route-filters role="group" aria-label="${esc(t.filterLabel)}">
-      ${pill('all', t.filterAll, routes.length, true)}
-      ${airports.map((a) => pill(a.value, a.label, a.count, false)).join('')}
+    <div class="mb-8 flex flex-wrap items-center gap-x-4 gap-y-3" data-route-filters>
+      ${filterMenu}
+      <p class="text-[13px] text-slate" data-route-filter-count data-count-template="${esc(t.filterResult)}">${esc(fmt(t.filterResult, { count: routes.length }))}</p>
     </div>
     <div class="grid gap-4 sm:grid-cols-2">
       ${routes

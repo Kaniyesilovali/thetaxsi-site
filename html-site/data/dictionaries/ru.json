@@ -316,7 +316,8 @@
     "bookRoute": "Забронировать этот маршрут",
     "tableHeading": "Маршрут",
     "filterLabel": "Фильтр маршрутов по аэропорту",
-    "filterAll": "Все маршруты"
+    "filterAll": "Все маршруты",
+    "filterResult": "Показано маршрутов: {count}"
   },
   "about": {
     "meta": {

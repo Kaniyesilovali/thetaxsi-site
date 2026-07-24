@@ -34,6 +34,19 @@
     }
   }
 
+  // Gizli input'lar programatik değiştiğinde 'change' yükselt — combobox ve menü
+  // seçimlerini dinleyen kodlar (book özeti, güzergah filtresi) buradan haber alır.
+  function dispatchChange(el) {
+    var ev
+    try {
+      ev = new Event('change', { bubbles: true })
+    } catch (e) {
+      ev = document.createEvent('Event')
+      ev.initEvent('change', true, false)
+    }
+    el.dispatchEvent(ev)
+  }
+
   function tmpl(str, vars) {
     return str.replace(/\{(\w+)\}/g, function (_, k) {
       return vars[k] != null ? vars[k] : ''
@@ -136,14 +149,7 @@
     }
 
     function fireChange() {
-      var ev
-      try {
-        ev = new Event('change', { bubbles: true })
-      } catch (e) {
-        ev = document.createEvent('Event')
-        ev.initEvent('change', true, false)
-      }
-      hidden.dispatchEvent(ev)
+      dispatchChange(hidden)
     }
 
     function commit(opt) {
@@ -300,12 +306,20 @@
       })
     }
 
+    // Satırda sayaç gibi ikinci bir değer olabilir; tetikleyici etiketi yalnızca
+    // [data-menu-text] içeriğidir.
+    function optionLabel(o) {
+      var text = o.querySelector('[data-menu-text]')
+      return (text || o).textContent.trim()
+    }
+
     options.forEach(function (o) {
       o.addEventListener('click', function () {
         hidden.value = o.getAttribute('data-value')
-        labelEl.textContent = o.textContent.trim()
+        labelEl.textContent = optionLabel(o)
         paint()
         close()
+        dispatchChange(hidden)
       })
     })
 
@@ -743,32 +757,31 @@
   }
 
   /* ---------- Güzergah listesi: havalimanı filtresi ---------- */
+  // Seçim, paylaşılan açılır menünün ([data-menu]) gizli input'unda durur; menü
+  // her seçimde 'change' yükselttiği için burada tek dinleyici yeter.
   var filterBar = document.querySelector('[data-route-filters]')
   if (filterBar) {
-    var filterBtns = filterBar.querySelectorAll('[data-route-filter]')
+    var filterInput = filterBar.querySelector('input[type="hidden"]')
     var routeCards = document.querySelectorAll('[data-route-from]')
-    var ACTIVE = ['border-ink', 'bg-ink', 'text-paper']
-    var IDLE = ['border-line', 'bg-paper', 'text-ink', 'hover:border-ink']
+    var countEl = filterBar.querySelector('[data-route-filter-count]')
 
     var applyFilter = function (value) {
-      for (var i = 0; i < filterBtns.length; i++) {
-        var btn = filterBtns[i]
-        var on = btn.getAttribute('data-route-filter') === value
-        btn.setAttribute('aria-pressed', String(on))
-        btn.classList.remove.apply(btn.classList, on ? IDLE : ACTIVE)
-        btn.classList.add.apply(btn.classList, on ? ACTIVE : IDLE)
-      }
+      var shown = 0
       for (var j = 0; j < routeCards.length; j++) {
         var card = routeCards[j]
         var show = value === 'all' || card.getAttribute('data-route-from') === value
         card.classList.toggle('hidden', !show)
+        if (show) shown++
       }
+      if (countEl) countEl.textContent = tmpl(countEl.getAttribute('data-count-template'), { count: shown })
     }
 
-    filterBar.addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-route-filter]')
-      if (btn) applyFilter(btn.getAttribute('data-route-filter'))
-    })
+    if (filterInput) {
+      filterBar.addEventListener('change', function () {
+        applyFilter(filterInput.value)
+      })
+      if (filterInput.value !== 'all') applyFilter(filterInput.value)
+    }
   }
 
   /* ---------- Bölge vitrini karuseli ---------- */
