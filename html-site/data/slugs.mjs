@@ -38,6 +38,26 @@ const places = {
   'Bafra Oteller Bölgesi': { en: 'bafra-hotels', tr: 'bafra-otelleri', ru: 'oteli-bafry' },
   'Güzelyurt Merkez': { en: 'guzelyurt', tr: 'guzelyurt', ru: 'gyuzelyurt' },
   'Limasol Merkez': { en: 'limassol', tr: 'limasol', ru: 'limassol' },
+  'Çatalköy Oteller Bölgesi': {
+    en: 'catalkoy-hotels',
+    tr: 'catalkoy-otelleri',
+    ru: 'oteli-chatalkoya',
+  },
+  'Alsancak Oteller Bölgesi': {
+    en: 'alsancak-hotels',
+    tr: 'alsancak-otelleri',
+    ru: 'oteli-alsandzhaka',
+  },
+  'Esentepe Oteller Bölgesi': {
+    en: 'esentepe-hotels',
+    tr: 'esentepe-otelleri',
+    ru: 'oteli-esentepe',
+  },
+  'Karpaz Otelleri': { en: 'karpaz-hotels', tr: 'karpaz-otelleri', ru: 'oteli-karpaza' },
+  'Lapta Merkez': { en: 'lapta', tr: 'lapta', ru: 'lapta' },
+  'Karşıyaka Merkez': { en: 'karsiyaka', tr: 'karsiyaka', ru: 'karshiyaka' },
+  'Boğaz Merkez': { en: 'bogaz', tr: 'bogaz', ru: 'bogaz' },
+  'Lefke Merkez': { en: 'lefke', tr: 'lefke', ru: 'lefke' },
 }
 
 // Slug kalıbı dile göre değişir; her dilde o dilde aranan sözcük sırası kullanılır.

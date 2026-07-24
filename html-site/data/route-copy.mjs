@@ -1,5 +1,11 @@
 // Rota landing page'lerinin özgün metinleri — slug başına, dil başına.
 //
+// Bu dosya havalimanı ↔ ana varış hatlarını tutar. Kıyı şeridi, batı ve Karpaz
+// hatlarının metni data/route-copy-coast.mjs'te; dosya 146 KB'ı geçince ikiye
+// ayrıldı. Yapı ikisinde de aynı ve aşağıda tek `routeCopy` olarak birleşiyorlar,
+// dolayısıyla şablon tarafında hiçbir fark yok. Yeni metni hangisine yazdığın
+// önemli değil; aynı slug ikisinde de varsa coast dosyası kazanır.
+//
 // Neden ayrı dosya: data/routes.mjs fiyat/süre/mesafe gibi *veriyi* tutar, burası
 // *metni* tutar. Şablon (templates/routes.mjs) buradaki kaydı bulamazsa ilgili
 // bloğu hiç basmaz; yani eksik rota build'i bozmaz, sadece sade sayfa üretir.
@@ -20,7 +26,9 @@
 //   doğrulanmıştır; yeni rota yazarken aynı kaynağa dayan.
 //
 // Sıra data/routes.mjs ile aynıdır.
-export const routeCopy = {
+import { routeCopyCoast } from './route-copy-coast.mjs'
+
+const routeCopyMain = {
   "ercan-airport-to-nicosia": {
     "guide": "nicosia-lefkosa-city-transfer-guide",
     "en": {
@@ -1342,3 +1350,7 @@ export const routeCopy = {
     }
   }
 }
+
+// Şablonun gördüğü tek tablo. İki dosya da aynı biçimde yazıldığı için birleşim
+// düz bir yayma; çakışma olursa (aynı slug iki yerde) coast dosyası kazanır.
+export const routeCopy = { ...routeCopyMain, ...routeCopyCoast }

@@ -17,7 +17,10 @@ npm run dev        # build + serve
 | Yol | Ne işe yarar |
 |---|---|
 | `site.config.mjs` | Domain, telefon, WhatsApp, e-posta, Sheets endpoint — **canlıya çıkmadan güncelle** |
-| `data/routes.mjs` | Rota verisi — yeni rota eklemek = yeni SEO landing page |
+| `data/routes.mjs` | Rota verisi (fiyat/süre/mesafe) — yeni rota eklemek = yeni SEO landing page |
+| `data/route-copy.mjs` | Rota sayfalarının özgün metni — havalimanı ↔ ana varış hatları |
+| `data/route-copy-coast.mjs` | Aynı yapı, kıyı şeridi / batı / Karpaz hatları (dosya 146 KB'ı geçince ayrıldı) |
+| `data/slugs.mjs` | Dile göre adresler — yeni varış noktası eklerken `places` tablosuna da yaz |
 | `content/blog/` | Blog yazılarının kendisi — klasör başına bir yazı, dil başına bir `.md` |
 | `data/posts.mjs` | `content/blog/` klasörünü okuyup yazı listesini üreten yükleyici |
 | `scripts/content-check.mjs` | İçerik doğrulama — `npm run build` öncesi otomatik çalışır |
@@ -30,9 +33,13 @@ npm run dev        # build + serve
 
 ## Üretilen sayfalar
 
-Her dil (en/tr/ru) için: ana sayfa, rezervasyon, rota listesi, 6 rota landing page'i,
-blog listesi + blog yazıları, hakkımızda, iletişim, SSS, gizlilik, şartlar + 404.
+Her dil (en/tr/ru) için: ana sayfa, rezervasyon, rota listesi, 92 rota landing
+page'i (46 gidiş + otomatik türetilen 46 dönüş), blog listesi + 21 blog yazısı,
+hakkımızda, iletişim, SSS, gizlilik, şartlar + 404. Toplam 371 sayfa.
 Ayrıca kök yönlendirme, `sitemap.xml` (hreflang'li) ve `robots.txt`.
+
+`/routes/` listesi ve ana sayfa yalnızca gidiş yönünü gösterir; dönüş sayfalarına
+iç link, o varış noktasının üç havalimanı sayfasından gelir (sayfa başına 3 link).
 
 ## Adresler (URL'ler)
 
