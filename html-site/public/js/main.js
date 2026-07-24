@@ -757,15 +757,24 @@
   }
 
   /* ---------- Güzergah listesi: havalimanı filtresi ---------- */
-  // Seçim, paylaşılan açılır menünün ([data-menu]) gizli input'unda durur; menü
-  // her seçimde 'change' yükselttiği için burada tek dinleyici yeter.
+  // Pill sırası: tıklanan pill aktif olur, kartlar kalkış havalimanına göre
+  // gizlenir, altındaki sayaç görünen kart sayısını yazar.
   var filterBar = document.querySelector('[data-route-filters]')
   if (filterBar) {
-    var filterInput = filterBar.querySelector('input[type="hidden"]')
+    var filterBtns = filterBar.querySelectorAll('[data-route-filter]')
     var routeCards = document.querySelectorAll('[data-route-from]')
     var countEl = filterBar.querySelector('[data-route-filter-count]')
+    var ACTIVE = ['border-ink', 'bg-ink', 'text-paper']
+    var IDLE = ['border-line', 'bg-paper', 'text-ink', 'hover:border-ink']
 
     var applyFilter = function (value) {
+      for (var i = 0; i < filterBtns.length; i++) {
+        var btn = filterBtns[i]
+        var on = btn.getAttribute('data-route-filter') === value
+        btn.setAttribute('aria-pressed', String(on))
+        btn.classList.remove.apply(btn.classList, on ? IDLE : ACTIVE)
+        btn.classList.add.apply(btn.classList, on ? ACTIVE : IDLE)
+      }
       var shown = 0
       for (var j = 0; j < routeCards.length; j++) {
         var card = routeCards[j]
@@ -776,12 +785,10 @@
       if (countEl) countEl.textContent = tmpl(countEl.getAttribute('data-count-template'), { count: shown })
     }
 
-    if (filterInput) {
-      filterBar.addEventListener('change', function () {
-        applyFilter(filterInput.value)
-      })
-      if (filterInput.value !== 'all') applyFilter(filterInput.value)
-    }
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-route-filter]')
+      if (btn) applyFilter(btn.getAttribute('data-route-filter'))
+    })
   }
 
   /* ---------- Bölge vitrini karuseli ---------- */
