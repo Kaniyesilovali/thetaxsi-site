@@ -12,17 +12,17 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # www → www'suz (kopya içerik olmasın, canonical ile aynı adres kalsın)
-  # Şema http: sertifika yokken https'e yönlendirmek www'yu erişilemez yapar.
-  # HTTPS bloğu açıldığında yükseltmeyi o hallediyor.
+  # www → www'suz, doğrudan https'e (kopya içerik olmasın, canonical ile aynı adres kalsın)
+  # Sertifika kurulu (Cloudflare); http hedefi üç adımlı zincir üretiyordu:
+  # https://www → http:// → https://  — ortadaki adım hem şifresizdi hem link değeri yiyordu.
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-  # HTTPS zorunlu — SSL sertifikası kurulana kadar KAPALI.
-  # Sertifika çıktıktan sonra alttaki iki satırın başındaki # işaretini sil.
-  # Sertifika yokken açılırsa site tamamen erişilemez hale gelir.
-  # RewriteCond %{HTTPS} !=on
-  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  # HTTPS zorunlu. Cloudflare "Always Use HTTPS" zaten yükseltiyor; bu blok
+  # origin'e doğrudan gelen http istekleri için ikinci savunma hattı.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # ---------- Sıkıştırma ----------
