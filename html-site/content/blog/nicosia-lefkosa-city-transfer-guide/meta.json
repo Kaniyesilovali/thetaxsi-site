@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 20
+  "order": 20,
+  "slugs": {
+    "tr": "lefkosa-havalimani-transferi-ve-sehir-rehberi",
+    "ru": "nikosiya-transfer-i-gid-po-gorodu"
+  }
 }

@@ -40,6 +40,17 @@ for (const post of posts) {
     err(at, 'klasör adı (slug) yalnızca küçük harf, rakam ve tire içermeli')
   }
 
+  // Yazının Türkçe/Rusça adresi meta.json'daki `slugs` alanından gelir; klasör adı
+  // (İngilizce slug) yalnızca varsayılan dilde kullanılır — bkz. data/slugs.mjs.
+  for (const lang of config.languages) {
+    if (lang === config.defaultLang) continue
+    const localized = post.slugs?.[lang]
+    if (!localized) err(`${at}/meta.json`, `slugs.${lang} eksik — ${lang} adresini yaz (ör. "slugs": { "${lang}": "..." })`)
+    else if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(localized)) {
+      err(`${at}/meta.json`, `slugs.${lang} ("${localized}") yalnızca küçük harf, rakam ve tire içermeli`)
+    }
+  }
+
   if (!/^\d{4}-\d{2}-\d{2}$/.test(post.date ?? '')) {
     err(at, `meta.json date "${post.date}" — YYYY-AA-GG olmalı`)
   } else if (Number.isNaN(Date.parse(post.date))) {
@@ -112,6 +123,19 @@ for (const post of posts) {
   if (lens.length > 1 && Math.min(...lens) < Math.max(...lens) * 0.55) {
     const detay = config.languages.map((l) => `${l}:${post.body[l]?.length ?? 0}`).join(' ')
     warn(at, `diller arası gövde uzunluğu çok farklı, yarım çeviri olabilir (${detay})`)
+  }
+}
+
+/* ---------- Aynı dilde çakışan adresler ---------- */
+for (const lang of config.languages) {
+  if (lang === config.defaultLang) continue
+  const seen = new Map()
+  for (const post of posts) {
+    const localized = post.slugs?.[lang]
+    if (!localized) continue
+    if (seen.has(localized)) {
+      err(`content/blog/${post.slug}/meta.json`, `slugs.${lang} "${localized}" ${seen.get(localized)} ile aynı — iki yazı aynı adrese düşer`)
+    } else seen.set(localized, post.slug)
   }
 }
 

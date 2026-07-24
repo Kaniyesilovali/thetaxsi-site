@@ -1,4 +1,8 @@
 {
   "date": "2026-07-01",
-  "order": 9
+  "order": 9,
+  "slugs": {
+    "tr": "larnaka-havalimani-varis-rehberi",
+    "ru": "pribytie-v-aeroport-larnaki"
+  }
 }

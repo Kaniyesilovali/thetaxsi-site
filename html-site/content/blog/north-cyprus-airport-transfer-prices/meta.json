@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 18
+  "order": 18,
+  "slugs": {
+    "tr": "kibris-havalimani-transfer-fiyatlari",
+    "ru": "tseny-na-transfer-severnyy-kipr"
+  }
 }

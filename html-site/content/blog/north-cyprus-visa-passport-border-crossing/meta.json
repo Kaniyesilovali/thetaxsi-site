@@ -1,4 +1,8 @@
 {
   "date": "2026-07-11",
-  "order": 12
+  "order": 12,
+  "slugs": {
+    "tr": "kuzey-kibris-vize-ve-pasaport-sinir-gecisi",
+    "ru": "viza-i-pasport-dlya-severnogo-kipra"
+  }
 }

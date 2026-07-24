@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 21
+  "order": 21,
+  "slugs": {
+    "tr": "kktc-universite-ogrenci-transferi",
+    "ru": "transfer-dlya-studentov-severnogo-kipra"
+  }
 }

@@ -2,6 +2,7 @@ import { esc, icons, page } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { routes } from '../data/routes.mjs'
 import { locationGroups } from '../data/locations.mjs'
+import { href } from '../data/slugs.mjs'
 
 // Tüm görseller kendi sunucumuzda barındırılır (public/img → /assets/img). Dış
 // CDN'e (Unsplash/Pexels) bağımlılık yok: daha hızlı LCP, güvenilir yük, kontrol
@@ -242,7 +243,6 @@ export function tripTypeHtml(picker) {
 export function renderHome(ctx) {
   const { lang, dict, xtra } = ctx
   const t = dict.homepage
-  const base = `/${lang}`
   const cur = config.currencySymbol
 
   const heroComboCls = 'w-full bg-transparent text-[15px] font-medium text-ink outline-none placeholder:font-normal placeholder:text-ink/35'
@@ -303,7 +303,7 @@ export function renderHome(ctx) {
     </div>
 
     <!-- Rezervasyon kapsülü — sayfanın imza öğesi -->
-    <form action="${base}/book/" method="get" class="mx-auto mt-12 max-w-4xl opacity-0" style="animation:reveal 900ms 380ms ${ease} forwards">
+    <form action="${href(lang, '/book/')}" method="get" class="mx-auto mt-12 max-w-4xl opacity-0" style="animation:reveal 900ms 380ms ${ease} forwards">
       <div class="rounded-[28px] border border-white/50 bg-white/70 p-3 shadow-lift backdrop-blur-2xl sm:p-4">
         <div class="flex flex-wrap items-center justify-between gap-3 px-2 pb-3 pt-1">
           ${tripTypeHtml(t.hero.picker)}
@@ -357,7 +357,7 @@ export function renderHome(ctx) {
       ${t.destinations.items
         .map(
           (d, i) => `
-      <a href="${base}/blog/${destinationPosts[i]}/" class="group/card relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-cloud shadow-card sm:w-[46%] lg:w-[31%]">
+      <a href="${href(lang, `/blog/${destinationPosts[i]}/`)}" class="group/card relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-3xl bg-cloud shadow-card sm:w-[46%] lg:w-[31%]">
         <img src="${destinationPhotos[i].src}" width="${destinationPhotos[i].w}" height="${destinationPhotos[i].h}" alt="${esc(d.place)}" loading="lazy" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover/card:scale-[1.06]">
         <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/15 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-6">
@@ -443,13 +443,13 @@ export function renderHome(ctx) {
         <p class="text-sm font-medium text-sea">${esc(t.routes.eyebrow)}</p>
         <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.routes.title)}</h2>
       </div>
-      <a href="${base}/routes/" class="inline-flex items-center gap-1.5 text-sm font-medium text-sea transition-colors hover:text-sea-deep">${esc(t.routes.viewAll)}</a>
+      <a href="${href(lang, '/routes/')}" class="inline-flex items-center gap-1.5 text-sm font-medium text-sea transition-colors hover:text-sea-deep">${esc(t.routes.viewAll)}</a>
     </div>
     <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       ${routes
         .map(
           (r) => `
-      <a href="${base}/routes/${r.slug}/" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
+      <a href="${href(lang, `/routes/${r.slug}/`)}" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
         <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
         <span class="shrink-0 text-right">
           <span class="block text-[11px] text-slate">${esc(t.routes.from)}</span>
@@ -521,7 +521,7 @@ export function renderHome(ctx) {
       <p class="text-sm font-medium text-sea">${esc(t.corporate.eyebrow)}</p>
       <h2 class="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">${esc(t.corporate.title)}</h2>
       <p class="mt-4 text-[15px] leading-relaxed text-slate">${esc(t.corporate.body)}</p>
-      <a href="${base}/contact/" class="mt-8 inline-flex h-11 items-center gap-2 rounded-full border border-ink/15 px-6 text-[14px] font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">${esc(t.corporate.cta)}</a>
+      <a href="${href(lang, '/contact/')}" class="mt-8 inline-flex h-11 items-center gap-2 rounded-full border border-ink/15 px-6 text-[14px] font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">${esc(t.corporate.cta)}</a>
     </div>
   </div>
 </section>
@@ -533,7 +533,7 @@ export function renderHome(ctx) {
     <div class="relative mx-auto max-w-2xl">
       <h2 class="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">${esc(t.cta.title)}</h2>
       <p class="mx-auto mt-4 max-w-md text-[15px] text-white/60">${esc(t.cta.subtitle)}</p>
-      <a href="${base}/book/" class="mt-9 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta.button)}</a>
+      <a href="${href(lang, '/book/')}" class="mt-9 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta.button)}</a>
     </div>
   </div>
 </section>`

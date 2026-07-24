@@ -34,13 +34,44 @@ Her dil (en/tr/ru) için: ana sayfa, rezervasyon, rota listesi, 6 rota landing p
 blog listesi + blog yazıları, hakkımızda, iletişim, SSS, gizlilik, şartlar + 404.
 Ayrıca kök yönlendirme, `sitemap.xml` (hreflang'li) ve `robots.txt`.
 
+## Adresler (URL'ler)
+
+Türkçe sayfalar Türkçe, Rusça sayfalar Rusça adresten yayınlanır; İngilizce
+(varsayılan dil) adresler değişmez:
+
+```
+/en/routes/ercan-airport-to-kyrenia/
+/tr/guzergahlar/ercan-havalimani-girne-transfer/
+/ru/marshruty/transfer-aeroport-erdzhan-kireniya/
+```
+
+Şablonlar ve `build.mjs` her yerde **canonical** (İngilizce) yolu taşır
+(`/routes/ercan-airport-to-kyrenia/`); adres basılırken `data/slugs.mjs` içindeki
+`href(lang, path)` bunu hedef dile çevirir. Dil değiştirici, `canonical`, `hreflang`,
+`sitemap.xml`, iç linkler ve blog gövdesindeki linkler hep bu tek kaynaktan gelir.
+
+Değiştirilecek yer `data/slugs.mjs`:
+
+- `segments` — bölüm adları (`routes` → `guzergahlar` / `marshruty`)
+- `places` — rota sluglarındaki yer adları (`Girne Merkez` → `girne` / `kireniya`);
+  rota slug kalıbı TR'de `kalkis-varis-transfer`, RU'da `transfer-kalkis-varis`
+- blog slugları yazının kendi `meta.json`'ında (`slugs`)
+
+`build.mjs` ayrıca eski (İngilizce sluglı) TR/RU adresleri için `dist/.htaccess`'e
+301 yönlendirmeleri üretir — adres tablosunu değiştirirsen yönlendirmeler kendiliğinden
+güncellenir. İngilizce slug değişirse eski adres için yönlendirme üretilmez; onu elle
+`public/.htaccess`'e eklemek gerekir.
+
 ## Blog
 
-Yazılar `content/blog/` altında, klasör başına bir yazı olarak durur. Klasör adı = slug:
+Yazılar `content/blog/` altında, klasör başına bir yazı olarak durur. Klasör adı,
+yazının İngilizce slug'ıdır:
 
 ```
 content/blog/ercan-airport-arrival-guide/
-  meta.json      { "date": "2026-07-11", "order": 11 }
+  meta.json      { "date": "2026-07-11", "order": 11,
+                   "slugs": { "tr": "ercan-havalimani-varis-rehberi",
+                              "ru": "pribytie-v-aeroport-erdzhan" } }
   en.md  tr.md  ru.md
 ```
 
@@ -52,8 +83,9 @@ Yeni yazı eklemek için: klasörü aç, `meta.json` + üç dil dosyasını koy,
 çalıştır. Liste sayfası, yazı sayfası, sitemap ve BlogPosting JSON-LD otomatik üretilir.
 Şablon (`templates/blog.mjs`) hiç değişmez.
 
-`meta.json` alanları: `date` (zorunlu, YYYY-AA-GG), `order` (aynı tarihli yazılar arasında
-sıra — küçük olan önce), `updated` (opsiyonel, JSON-LD `dateModified`).
+`meta.json` alanları: `date` (zorunlu, YYYY-AA-GG), `slugs` (zorunlu — yazının Türkçe ve
+Rusça adresi), `order` (aynı tarihli yazılar arasında sıra — küçük olan önce), `updated`
+(opsiyonel, JSON-LD `dateModified`).
 
 ### İçerik kontrolü
 
@@ -62,7 +94,9 @@ sıra — küçük olan önce), `updated` (opsiyonel, JSON-LD `dateModified`).
 - eksik dil dosyası, eksik `meta.json`, boş başlık/açıklama/gövde
 - slug biçimi, geçersiz veya gelecek tarih, `updated < date`
 - başlık/açıklama SEO uzunlukları (~60 / ~160), aynı dilde tekrar eden başlık
+- eksik/hatalı `slugs` alanı, aynı dilde çakışan iki yazı adresi
 - **kırık iç link** — gövdedeki her `/tr/...` yolu gerçekten üretilen bir sayfaya gitmeli
+  (gövde linkleri İngilizce sluglarla yazılır, yayında hedef dile çevrilir)
 - yanlış dile link (`tr.md` içinde `/en/...`)
 - `public/img` altında olmayan görsel, gövdede `<h1>` kullanımı
 

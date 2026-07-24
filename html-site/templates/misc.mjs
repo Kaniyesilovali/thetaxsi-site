@@ -1,6 +1,7 @@
 import { esc, icons, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { fieldLabelCls, lightInputCls } from './home.mjs'
+import { href } from '../data/slugs.mjs'
 
 // Açık zeminli metin alanı — lightInputCls ile aynı dilde (yuvarlak, ince çizgi, deniz odağı)
 const lightTextareaCls =
@@ -9,7 +10,6 @@ const lightTextareaCls =
 export function renderAbout(ctx) {
   const { lang, dict } = ctx
   const t = dict.about
-  const base = `/${lang}`
 
   const chapters = [t.story, t.mission]
 
@@ -45,7 +45,7 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
     </div>
     <div class="flex flex-wrap items-center justify-between gap-6 border-t border-line pt-10">
       <p class="text-sm font-medium text-sea">${esc(config.brand)}</p>
-      <a href="${base}/book/" class="inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
+      <a href="${href(lang, '/book/')}" class="inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
     </div>
   </div>
 </section>`
@@ -296,7 +296,7 @@ export function render404(ctx) {
     <p class="mx-auto mt-6 max-w-md text-[16px] leading-relaxed text-slate">${esc(t.body)}</p>
     <div class="mt-10 flex flex-wrap justify-center gap-3">
       <a href="${base}/" class="inline-flex h-12 items-center rounded-full border border-ink/15 px-7 text-[14px] font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper">${esc(t.home)}</a>
-      <a href="${base}/book/" class="inline-flex h-12 items-center rounded-full bg-sea px-7 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.book)}</a>
+      <a href="${href(lang, '/book/')}" class="inline-flex h-12 items-center rounded-full bg-sea px-7 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.book)}</a>
     </div>
   </div>
 </section>`

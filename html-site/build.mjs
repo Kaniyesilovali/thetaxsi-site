@@ -8,6 +8,7 @@ import { config } from './site.config.mjs'
 import { allRoutes } from './data/routes.mjs'
 import { posts } from './data/posts.mjs'
 import { extra } from './data/extra.mjs'
+import { href, renamedPaths } from './data/slugs.mjs'
 import { renderHome } from './templates/home.mjs'
 import { renderRoutesIndex, renderRouteDetail } from './templates/routes.mjs'
 import { renderBlogIndex, renderBlogPost } from './templates/blog.mjs'
@@ -59,7 +60,9 @@ for (const lang of config.languages) {
   }
 
   for (const [path, render, lastmod] of pages) {
-    emit(`${lang}${path}`, render({ ...ctx, path }))
+    // Dosya yolu dile göre yerelleşir (/tr/guzergahlar/...), şablona verilen
+    // `path` ise canonical kalır — hreflang ve dil değiştirici ondan türer.
+    emit(href(lang, path), render({ ...ctx, path }))
     if (lang === config.defaultLang) sitemapEntries.push({ path, lastmod: lastmod || buildDate })
   }
 
@@ -91,14 +94,14 @@ const urls = sitemapEntries
   .map(({ path, lastmod }) => {
     const alternates = [
       ...config.languages.map(
-        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}"/>`,
+        (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${config.siteUrl}${href(l, path)}"/>`,
       ),
-      `    <xhtml:link rel="alternate" hreflang="x-default" href="${config.siteUrl}/${config.defaultLang}${path}"/>`,
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${config.siteUrl}${href(config.defaultLang, path)}"/>`,
     ].join('\n')
     return config.languages
       .map(
         (l) =>
-          `  <url>\n    <loc>${config.siteUrl}/${l}${path}</loc>\n    <lastmod>${lastmod}</lastmod>\n${alternates}\n  </url>`,
+          `  <url>\n    <loc>${config.siteUrl}${href(l, path)}</loc>\n    <lastmod>${lastmod}</lastmod>\n${alternates}\n  </url>`,
       )
       .join('\n')
   })
@@ -125,7 +128,17 @@ cpSync(join(root, 'public/img'), join(dist, 'assets/img'), { recursive: true })
 cpSync(join(root, 'public/fonts'), join(dist, 'assets/fonts'), { recursive: true })
 
 // Sunucu ayarları (dizin listeleme, 404, yönlendirme, cache) → dist kökü.
-cpSync(join(root, 'public/.htaccess'), join(dist, '.htaccess'))
+// Ardına, TR/RU adresleri yerelleştirildiği için eskiden yayında olan
+// İngilizce sluglı adreslerin 301 yönlendirmeleri eklenir (SEO değeri korunur).
+const redirects = renamedPaths(sitemapEntries.map((e) => e.path))
+const redirectBlock = redirects.length
+  ? `\n# ---------- Eski İngilizce sluglı TR/RU adresleri → yerelleştirilmiş adresler ----------\n` +
+    `# build.mjs tarafından data/slugs.mjs'ten üretilir — elle düzenleme.\n` +
+    `<IfModule mod_alias.c>\n` +
+    redirects.map(({ from, to }) => `  RedirectMatch 301 ^${from.replace(/\/$/, '')}/?$ ${to}`).join('\n') +
+    `\n</IfModule>\n`
+  : ''
+writeFileSync(join(dist, '.htaccess'), readFileSync(join(root, 'public/.htaccess'), 'utf8') + redirectBlock)
 
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#0B2436"/><text x="16" y="23" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#1FB6C9" text-anchor="middle">T</text></svg>`
 writeFileSync(join(dist, 'assets/favicon.svg'), favicon)
@@ -133,6 +146,7 @@ writeFileSync(join(dist, 'assets/favicon.svg'), favicon)
 const pageCount = config.languages.length * (9 + allRoutes.length + posts.length + 1) + 2
 console.log(`✓ ${pageCount} sayfa üretildi → dist/`)
 console.log(`  Diller: ${config.languages.join(', ')} · Rotalar: ${allRoutes.length} · Blog yazıları: ${posts.length}`)
+console.log(`  Yerelleştirilmiş adres yönlendirmesi (301): ${redirects.length}`)
 if (!config.sheetsEndpoint) {
   console.log("  ⚠ sheetsEndpoint boş — form kayıtları Google Sheets'e düşmeyecek (WhatsApp akışı çalışır).")
 }

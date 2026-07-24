@@ -1,4 +1,8 @@
 {
   "date": "2026-07-13",
-  "order": 7
+  "order": 7,
+  "slugs": {
+    "tr": "guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci",
+    "ru": "taksi-v-gyuzelyurte-po-gorodu-i-za-gorod"
+  }
 }

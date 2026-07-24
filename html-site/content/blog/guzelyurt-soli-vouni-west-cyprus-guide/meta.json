@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 5
+  "order": 5,
+  "slugs": {
+    "tr": "guzelyurt-soli-vouni-bati-kibris-rehberi",
+    "ru": "gyuzelyurt-soli-vuni-zapadnyy-kipr"
+  }
 }

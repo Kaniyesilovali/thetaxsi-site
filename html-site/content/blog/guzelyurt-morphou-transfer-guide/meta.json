@@ -1,4 +1,8 @@
 {
   "date": "2026-07-11",
-  "order": 14
+  "order": 14,
+  "slugs": {
+    "tr": "guzelyurt-transfer-ve-bolge-rehberi",
+    "ru": "gyuzelyurt-transfer-i-gid-po-regionu"
+  }
 }

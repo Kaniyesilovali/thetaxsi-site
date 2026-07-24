@@ -1,4 +1,5 @@
 import { esc, fmt, icons, page, pageHero } from './layout.mjs'
+import { href } from '../data/slugs.mjs'
 import { config } from '../site.config.mjs'
 import { routes, connectingRoutes } from '../data/routes.mjs'
 import { routeCopy } from '../data/route-copy.mjs'
@@ -9,7 +10,6 @@ import { routeLabel, selectMenuHtml } from './home.mjs'
 export function renderRoutesIndex(ctx) {
   const { lang, dict } = ctx
   const t = dict.routes
-  const base = `/${lang}`
   const cur = config.currencySymbol
 
   // Kalkış havalimanına göre filtre grupları — data/routes.mjs sırasını korur.
@@ -59,7 +59,7 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
       ${routes
         .map(
           (r) => `
-      <a href="${base}/routes/${r.slug}/" data-route-from="${esc(r.fromValue)}" class="group flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
+      <a href="${href(lang, `/routes/${r.slug}/`)}" data-route-from="${esc(r.fromValue)}" class="group flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
         <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
         <div class="mt-auto flex items-end justify-between gap-4">
           <div class="flex gap-6">
@@ -92,7 +92,6 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 export function renderRouteDetail(ctx, route) {
   const { lang, dict, xtra } = ctx
   const rd = xtra.routeDetail
-  const base = `/${lang}`
   const cur = config.currencySymbol
   const from = route.from[lang]
   const to = route.to[lang]
@@ -174,7 +173,7 @@ export function renderRouteDetail(ctx, route) {
   const guideLink =
     guide && guide.title[lang]
       ? `
-      <a href="${base}/blog/${guide.slug}/" class="mt-8 inline-flex items-baseline gap-2 text-[15px] font-medium text-sea transition-colors hover:text-sea-deep">
+      <a href="${href(lang, `/blog/${guide.slug}/`)}" class="mt-8 inline-flex items-baseline gap-2 text-[15px] font-medium text-sea transition-colors hover:text-sea-deep">
         <span>${esc(guide.title[lang])}</span><span aria-hidden="true">→</span>
       </a>
       <p class="mt-1 text-[13px] text-slate">${esc(rd.guideCta)}</p>`
@@ -239,7 +238,7 @@ export function renderRouteDetail(ctx, route) {
   </div>
   <div class="relative mx-auto max-w-6xl px-5 pt-14 pb-16 sm:px-8 lg:pt-16 lg:pb-20">
     <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
-      <a href="${base}/routes/" class="transition-colors hover:text-ink">${esc(rd.breadcrumbRoutes)}</a>
+      <a href="${href(lang, '/routes/')}" class="transition-colors hover:text-ink">${esc(rd.breadcrumbRoutes)}</a>
       <span class="mx-2 text-ink/25">/</span>
       <span class="text-ink">${esc(to)}</span>
     </nav>
@@ -257,7 +256,7 @@ export function renderRouteDetail(ctx, route) {
         .join('')}
     </div>
     ${vehiclePricing}
-    <a href="${base}/book/?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
+    <a href="${href(lang, '/book/')}?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
     ${directContact}
   </div>
 </section>
@@ -285,7 +284,7 @@ ${aboutSection}
         ${others
           .map(
             (r) => `
-        <a href="${base}/routes/${r.slug}/" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
+        <a href="${href(lang, `/routes/${r.slug}/`)}" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
           <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
           <span class="shrink-0 text-right">
             <span class="block text-[11px] text-slate">${esc(dict.homepage.routes.from)}</span>
@@ -316,15 +315,15 @@ ${faqSectionHtml}`
         '@type': 'Offer',
         price: route.price,
         priceCurrency: config.currencyCode,
-        url: `${config.siteUrl}/${lang}${path}`,
+        url: `${config.siteUrl}${href(lang, path)}`,
       },
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: rd.breadcrumbRoutes, item: `${config.siteUrl}/${lang}/routes/` },
-        { '@type': 'ListItem', position: 2, name: label, item: `${config.siteUrl}/${lang}${path}` },
+        { '@type': 'ListItem', position: 1, name: rd.breadcrumbRoutes, item: `${config.siteUrl}${href(lang, '/routes/')}` },
+        { '@type': 'ListItem', position: 2, name: label, item: `${config.siteUrl}${href(lang, path)}` },
       ],
     },
   ]

@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 1
+  "order": 1,
+  "slugs": {
+    "tr": "girne-liman-kale-ve-eski-sehir-rehberi",
+    "ru": "kireniya-gavan-zamok-staryy-gorod"
+  }
 }

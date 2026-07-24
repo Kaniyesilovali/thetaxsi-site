@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 19
+  "order": 19,
+  "slugs": {
+    "tr": "bafra-otelleri-transfer-rehberi",
+    "ru": "transfer-v-oteli-bafry"
+  }
 }

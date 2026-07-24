@@ -1,6 +1,7 @@
 import { esc, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { posts } from '../data/posts.mjs'
+import { href, localizeHtmlLinks } from '../data/slugs.mjs'
 
 const localeOf = { en: 'en-GB', tr: 'tr-TR', ru: 'ru-RU' }
 
@@ -19,7 +20,6 @@ export function sortedPosts() {
 export function renderBlogIndex(ctx) {
   const { lang, xtra } = ctx
   const t = xtra.blog
-  const base = `/${lang}`
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
@@ -29,7 +29,7 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
       ${sortedPosts()
         .map(
           (p) => `
-      <a href="${base}/blog/${p.slug}/" class="group flex flex-col gap-3 rounded-3xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
+      <a href="${href(lang, `/blog/${p.slug}/`)}" class="group flex flex-col gap-3 rounded-3xl border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-card">
         <p class="text-[12px] font-medium text-slate">${esc(formatDate(p.date, lang))}</p>
         <h2 class="text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-sea">${esc(p.title[lang])}</h2>
         <p class="line-clamp-3 text-[14px] leading-relaxed text-slate">${esc(p.description[lang])}</p>
@@ -52,7 +52,6 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 export function renderBlogPost(ctx, post) {
   const { lang, xtra } = ctx
   const t = xtra.blog
-  const base = `/${lang}`
   const path = `/blog/${post.slug}/`
   const title = post.title[lang]
   const description = post.description[lang]
@@ -65,7 +64,7 @@ export function renderBlogPost(ctx, post) {
   </div>
   <div class="relative mx-auto max-w-3xl px-5 pt-14 pb-14 sm:px-8 lg:pt-16 lg:pb-16">
     <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
-      <a href="${base}/blog/" class="transition-colors hover:text-ink">${esc(t.title)}</a>
+      <a href="${href(lang, '/blog/')}" class="transition-colors hover:text-ink">${esc(t.title)}</a>
       <span class="mx-2 text-ink/25">/</span>
       <span class="text-ink">${esc(formatDate(post.date, lang))}</span>
     </nav>
@@ -75,11 +74,11 @@ export function renderBlogPost(ctx, post) {
 </section>
 <section class="bg-paper py-16 lg:py-20">
   <article class="article-body mx-auto max-w-3xl px-5 sm:px-8">
-    ${post.body[lang]}
+    ${localizeHtmlLinks(post.body[lang], lang)}
   </article>
   <div class="mx-auto mt-16 max-w-3xl px-5 sm:px-8">
     <div class="border-t border-line pt-10">
-      <a href="${base}/book/" class="inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
+      <a href="${href(lang, '/book/')}" class="inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(t.cta)}</a>
     </div>
     ${
       others.length
@@ -90,7 +89,7 @@ export function renderBlogPost(ctx, post) {
         ${others
           .map(
             (p) => `
-        <a href="${base}/blog/${p.slug}/" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-cloud p-5 transition-shadow duration-300 hover:shadow-card">
+        <a href="${href(lang, `/blog/${p.slug}/`)}" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-cloud p-5 transition-shadow duration-300 hover:shadow-card">
           <span class="text-[15px] font-medium leading-snug text-ink transition-colors group-hover:text-sea">${esc(p.title[lang])}</span>
           <span class="shrink-0 whitespace-nowrap text-[12px] text-slate">${esc(formatDate(p.date, lang))}</span>
         </a>`,
@@ -113,8 +112,8 @@ export function renderBlogPost(ctx, post) {
       datePublished: post.date,
       dateModified: post.updated ?? post.date,
       inLanguage: lang,
-      url: `${config.siteUrl}/${lang}${path}`,
-      mainEntityOfPage: { '@type': 'WebPage', '@id': `${config.siteUrl}/${lang}${path}` },
+      url: `${config.siteUrl}${href(lang, path)}`,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `${config.siteUrl}${href(lang, path)}` },
       image: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
       author: { '@type': 'Organization', name: config.brand, url: `${config.siteUrl}/${lang}/` },
       publisher: {
@@ -128,8 +127,8 @@ export function renderBlogPost(ctx, post) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: t.title, item: `${config.siteUrl}/${lang}/blog/` },
-        { '@type': 'ListItem', position: 2, name: title, item: `${config.siteUrl}/${lang}${path}` },
+        { '@type': 'ListItem', position: 1, name: t.title, item: `${config.siteUrl}${href(lang, '/blog/')}` },
+        { '@type': 'ListItem', position: 2, name: title, item: `${config.siteUrl}${href(lang, path)}` },
       ],
     },
   ]

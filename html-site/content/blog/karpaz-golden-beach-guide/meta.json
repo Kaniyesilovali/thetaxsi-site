@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 2
+  "order": 2,
+  "slugs": {
+    "tr": "karpaz-altinkum-plaji-rehberi",
+    "ru": "karpas-zolotoy-plyazh-gid"
+  }
 }

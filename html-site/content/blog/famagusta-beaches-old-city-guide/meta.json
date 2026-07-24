@@ -1,4 +1,8 @@
 {
   "date": "2026-07-22",
-  "order": 3
+  "order": 3,
+  "slugs": {
+    "tr": "gazimagusa-surlarici-ve-plajlar-rehberi",
+    "ru": "famagusta-staryy-gorod-i-plyazhi"
+  }
 }

@@ -1,4 +1,8 @@
 {
   "date": "2026-07-11",
-  "order": 10
+  "order": 10,
+  "slugs": {
+    "tr": "larnaka-havalimanindan-girneye-sinir-gecisi",
+    "ru": "iz-larnaki-v-kireniyu-peresechenie-granitsy"
+  }
 }

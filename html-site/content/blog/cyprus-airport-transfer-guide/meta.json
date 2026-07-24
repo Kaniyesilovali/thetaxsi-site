@@ -1,4 +1,8 @@
 {
   "date": "2026-05-01",
-  "order": 8
+  "order": 8,
+  "slugs": {
+    "tr": "kibris-havalimani-transfer-rehberi",
+    "ru": "transfer-iz-aeroportov-kipra"
+  }
 }

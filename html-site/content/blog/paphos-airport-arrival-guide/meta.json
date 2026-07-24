@@ -1,4 +1,8 @@
 {
   "date": "2026-07-11",
-  "order": 17
+  "order": 17,
+  "slugs": {
+    "tr": "baf-havalimani-varis-rehberi",
+    "ru": "pribytie-v-aeroport-pafosa"
+  }
 }

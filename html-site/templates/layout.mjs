@@ -1,4 +1,5 @@
 import { config } from '../site.config.mjs'
+import { href } from '../data/slugs.mjs'
 
 export const esc = (s = '') =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -22,16 +23,16 @@ function header(ctx) {
   const { lang, dict, xtra, path } = ctx
   const base = `/${lang}`
   const links = [
-    { href: `${base}/routes/`, label: dict.nav.routes },
-    { href: `${base}/about/`, label: dict.nav.about },
-    { href: `${base}/blog/`, label: xtra.nav.blog },
-    { href: `${base}/faq/`, label: xtra.nav.faq },
-    { href: `${base}/contact/`, label: dict.nav.contact },
+    { href: href(lang, '/routes/'), label: dict.nav.routes },
+    { href: href(lang, '/about/'), label: dict.nav.about },
+    { href: href(lang, '/blog/'), label: xtra.nav.blog },
+    { href: href(lang, '/faq/'), label: xtra.nav.faq },
+    { href: href(lang, '/contact/'), label: dict.nav.contact },
   ]
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="/${l}${path}" class="px-1.5 text-[12px] font-medium ${active ? 'text-sea' : 'text-ink/40 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
+      return `<a href="${href(l, path)}" class="px-1.5 text-[12px] font-medium ${active ? 'text-sea' : 'text-ink/40 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
     })
     .join('<span class="text-ink/15">·</span>')
 
@@ -48,7 +49,7 @@ function header(ctx) {
         ${config.phoneDisplay}
       </a>
       <div class="hidden items-center sm:flex">${langLinks}</div>
-      <a href="${base}/book/" class="hidden h-9 items-center rounded-full bg-sea px-5 text-[13px] font-medium text-white transition-colors hover:bg-sea-deep sm:inline-flex">${esc(dict.nav.reserve)}</a>
+      <a href="${href(lang, '/book/')}" class="hidden h-9 items-center rounded-full bg-sea px-5 text-[13px] font-medium text-white transition-colors hover:bg-sea-deep sm:inline-flex">${esc(dict.nav.reserve)}</a>
       <button type="button" data-menu-toggle class="text-ink/60 transition-colors hover:text-ink lg:hidden" aria-label="Toggle menu" aria-expanded="false">
         <span data-menu-icon-open>${icons.menu}</span>
         <span data-menu-icon-close class="hidden">${icons.x}</span>
@@ -60,7 +61,7 @@ function header(ctx) {
       ${links.map((l) => `<a href="${l.href}" class="border-b border-line py-4 text-[15px] font-medium text-ink/80 transition-colors hover:text-sea">${esc(l.label)}</a>`).join('\n      ')}
       <a href="tel:${config.phoneHref}" class="flex items-center gap-2 border-b border-line py-4 text-[15px] font-medium text-sea">${icons.phone} ${config.phoneDisplay}</a>
       <div class="flex items-center gap-1 py-4">${langLinks}</div>
-      <a href="${base}/book/" class="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-sea px-6 text-[14px] font-medium text-white transition-colors hover:bg-sea-deep sm:hidden">${esc(dict.nav.reserve)}</a>
+      <a href="${href(lang, '/book/')}" class="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-sea px-6 text-[14px] font-medium text-white transition-colors hover:bg-sea-deep sm:hidden">${esc(dict.nav.reserve)}</a>
     </nav>
   </div>
 </header>`
@@ -82,7 +83,7 @@ function footer(ctx) {
     'iskele-long-beach-hotels-transfer-guide',
   ]
   const guideItems = (t.guides || []).map((label, i) => ({
-    href: `${base}/blog/${guideSlugs[i]}/`,
+    href: href(lang, `/blog/${guideSlugs[i]}/`),
     label,
   }))
 
@@ -99,7 +100,7 @@ function footer(ctx) {
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="/${l}${path}" class="transition-colors ${active ? 'text-sea' : 'text-ink/45 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
+      return `<a href="${href(l, path)}" class="transition-colors ${active ? 'text-sea' : 'text-ink/45 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
     })
     .join('<span class="text-ink/20">·</span>')
 
@@ -130,14 +131,14 @@ function footer(ctx) {
       <!-- Link + iletişim sütunları: kalan alana eşit dağılır -->
       <div class="grid flex-1 grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-4">
       ${col(t.serviceHeading, [
-        { href: `${base}/book/`, label: dict.nav.book },
-        { href: `${base}/routes/`, label: dict.nav.routes },
+        { href: href(lang, '/book/'), label: dict.nav.book },
+        { href: href(lang, '/routes/'), label: dict.nav.routes },
       ])}
       ${col(t.companyHeading, [
-        { href: `${base}/about/`, label: dict.nav.about },
-        { href: `${base}/blog/`, label: xtra.nav.blog },
-        { href: `${base}/faq/`, label: xtra.nav.faq },
-        { href: `${base}/contact/`, label: dict.nav.contact },
+        { href: href(lang, '/about/'), label: dict.nav.about },
+        { href: href(lang, '/blog/'), label: xtra.nav.blog },
+        { href: href(lang, '/faq/'), label: xtra.nav.faq },
+        { href: href(lang, '/contact/'), label: dict.nav.contact },
       ])}
       <!-- Bilgi Merkezi: öne çıkan rehber yazıları -->
       ${col(t.guidesHeading, guideItems)}
@@ -161,8 +162,8 @@ function footer(ctx) {
     <div class="mt-14 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
       <p class="text-xs text-ink/40">${esc(t.copyright.replace('{year}', String(new Date().getFullYear())))}</p>
       <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-ink/45">
-        <a href="${base}/privacy/" class="transition-colors hover:text-ink">${esc(dict.privacy.title)}</a>
-        <a href="${base}/terms/" class="transition-colors hover:text-ink">${esc(dict.terms.title)}</a>
+        <a href="${href(lang, '/privacy/')}" class="transition-colors hover:text-ink">${esc(dict.privacy.title)}</a>
+        <a href="${href(lang, '/terms/')}" class="transition-colors hover:text-ink">${esc(dict.terms.title)}</a>
       </div>
     </div>
     <p class="mt-6 text-[11px] text-ink/35">${esc(t.paymentsLine)}</p>
@@ -181,7 +182,6 @@ export function faqSection(ctx) {
   const { lang, xtra } = ctx
   const t = xtra.commonFaq
   if (!t || !Array.isArray(t.items) || t.items.length === 0) return { html: '', jsonld: null }
-  const base = `/${lang}`
 
   const html = `
 <section class="border-t border-line bg-paper py-20 lg:py-28" aria-labelledby="page-faq">
@@ -199,7 +199,7 @@ export function faqSection(ctx) {
         )
         .join('')}
     </div>
-    <a href="${base}/faq/" class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-sea transition-colors hover:text-sea-deep">${esc(t.allCta)} <span aria-hidden="true">→</span></a>
+    <a href="${href(lang, '/faq/')}" class="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-sea transition-colors hover:text-sea-deep">${esc(t.allCta)} <span aria-hidden="true">→</span></a>
   </div>
 </section>`
 
@@ -232,11 +232,11 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   const { lang } = ctx
   const faqBlock = faq ? faqSection(ctx) : { html: '', jsonld: null }
   const allJsonld = faqBlock.jsonld ? [...jsonld, faqBlock.jsonld] : jsonld
-  const url = `${config.siteUrl}/${lang}${path}`
+  const url = `${config.siteUrl}${href(lang, path)}`
   const ogImage = `${config.siteUrl}/assets/img/og.jpg`
   const ogLocales = { en: 'en_US', tr: 'tr_TR', ru: 'ru_RU' }
   const alternates = config.languages
-    .map((l) => `<link rel="alternate" hreflang="${l}" href="${config.siteUrl}/${l}${path}">`)
+    .map((l) => `<link rel="alternate" hreflang="${l}" href="${config.siteUrl}${href(l, path)}">`)
     .join('\n  ')
   const ogLocaleAlternates = config.languages
     .filter((l) => l !== lang)
@@ -253,7 +253,7 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
   <meta name="description" content="${esc(description)}">
   <link rel="canonical" href="${url}">
   ${alternates}
-  <link rel="alternate" hreflang="x-default" href="${config.siteUrl}/${config.defaultLang}${path}">
+  <link rel="alternate" hreflang="x-default" href="${config.siteUrl}${href(config.defaultLang, path)}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${url}">

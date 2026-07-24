@@ -1,4 +1,8 @@
 {
   "date": "2026-07-11",
-  "order": 11
+  "order": 11,
+  "slugs": {
+    "tr": "ercan-havalimani-varis-rehberi",
+    "ru": "pribytie-v-aeroport-erdzhan"
+  }
 }
