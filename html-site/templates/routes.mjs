@@ -28,7 +28,8 @@ export function renderRoutesIndex(ctx) {
     }
   }
 
-  // Filtre = pill sırası; mobilde satır kaydırılabilir, masaüstünde sarar.
+  // Filtre = tek satır pill sırası; alt satıra sarmaz, sığmazsa yatay kayar.
+  // Sayaç da aynı satırın sonunda durur.
   const pill = (value, label, count, active) => `
       <button type="button" data-route-filter="${esc(value)}" aria-pressed="${active}" class="inline-flex h-10 shrink-0 items-center gap-2 rounded-full border px-5 text-[13px] font-medium transition-colors ${
         active
@@ -40,12 +41,10 @@ export function renderRoutesIndex(ctx) {
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 <section class="bg-fog py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
-    <div class="mb-8" data-route-filters>
-      <div class="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="${esc(t.filterLabel)}">
-        ${pill('all', t.filterAll, routes.length, true)}
-        ${airports.map((a) => pill(a.value, a.label, a.count, false)).join('')}
-      </div>
-      <p class="mt-3 text-[13px] text-slate" data-route-filter-count data-count-template="${esc(t.filterResult)}">${esc(fmt(t.filterResult, { count: routes.length }))}</p>
+    <div class="-mx-5 mb-8 flex items-center gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:px-0" data-route-filters role="group" aria-label="${esc(t.filterLabel)}">
+      ${pill('all', t.filterAll, routes.length, true)}
+      ${airports.map((a) => pill(a.value, a.label, a.count, false)).join('')}
+      <p class="ml-2 shrink-0 whitespace-nowrap text-[13px] text-slate" data-route-filter-count data-count-template="${esc(t.filterResult)}">${esc(fmt(t.filterResult, { count: routes.length }))}</p>
     </div>
     <div class="grid gap-4 sm:grid-cols-2">
       ${routes
