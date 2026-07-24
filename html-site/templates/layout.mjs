@@ -248,6 +248,7 @@ export function page(ctx, { title, description, path, body, jsonld = [], bodyCla
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="KTeL8umgS-WCfTdoblPAloTqirCkpr-oix5uMxgzmcc">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <link rel="canonical" href="${url}">

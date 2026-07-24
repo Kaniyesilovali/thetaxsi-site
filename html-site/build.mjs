@@ -71,6 +71,7 @@ const rootRedirect = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="google-site-verification" content="KTeL8umgS-WCfTdoblPAloTqirCkpr-oix5uMxgzmcc">
   <title>${config.brand}</title>
   <meta name="robots" content="noindex">
   <script>
