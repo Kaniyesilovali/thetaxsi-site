@@ -102,7 +102,7 @@ Kaynak %10 (10 üzerinden).
 | 3 | **Glossary: "What is Ercan Airport?"** + Green Line + KITSAB + Yeşil Hat | Tanım/AEO | Farkındalık | En ucuz AI Overview kazancı; "what is X" en çok alıntılanan format | **9.0** |
 | 4 | **RU sınır-geçiş rehberi** (Larnaka/Baf → Kuzey, Rusça-öncelikli) | Searchable | Değerlendirme | RU talebi yüksek + yerel rakip RU'da zayıf + sınır en çok soru alan konu = üçlü kesişim | **9.0** |
 | 5 | **"How our fixed price works"** (mekanik + rötar + bekleme) | Trust/AEO | Değerlendirme | Güven açığı; sabit fiyat en güçlü temamız; SSS'e besler | 8.6 |
-| 6 | **"Private transfer vs taxi vs rental car vs kombi"** | Karşılaştırma | Değerlendirme | Karar aşaması; tablo formatı AEO'da güçlü; niyeti yüksek | 8.5 |
+| 6 | ✅ **"Private transfer vs taxi vs rental car vs kombi"** | Karşılaştırma | Değerlendirme | Karar aşaması; tablo formatı AEO'da güçlü; niyeti yüksek — **ÜRETİLDİ 2026-07-25, EN/TR/RU** | 8.5 |
 | 7 | Border-crossing hub genişletme (#4 → pillar) | Searchable | Değerlendirme | Mevcut yazıyı hub'a çıkar, tüm sınır spoke'larını bağla | 8.3 |
 | 8 | **"Is it safe? Booking without prepayment"** | Trust | Karar | Bir numaralı anksiyete (state: "ya gelmezse?"); güven içeriği | 8.2 |
 | 9 | Glossary: "Ercan vs Larnaca vs Paphos" (hangi havalimanı) | Tanım/AEO | Farkındalık | Mevcut #3'ü glossary tanımıyla güçlendir | 8.0 |
@@ -126,6 +126,12 @@ Her parça yazılırken (orchestrator kuralları):
 - Görünür yazar + "Son güncelleme" tarihi (şu an 2/366 sayfada — Faz 5 açığı)
 - **Glossary parçaları (3, 9) çift işlevli:** tanım blokları hem AEO altyapısı hem
   hub içi iç link düğümü. İlk 20'de olması şart (en ucuz alıntılanma).
+
+**⚠️ Faz 6 schema açığı (üretim sırasında bulundu):** blog yazılarının gövdesindeki
+SSS bölümü (h2 "Frequently asked questions" + h3 sorular) **`FAQPage` schema'sı
+üretmiyor** — yalnız rota sayfaları üretiyor (`routeFaq`). FAQPage AEO'da en ağır
+schema türlerinden. `templates/blog.mjs`'e gövdeden SSS çıkarıp FAQPage basan bir
+adım eklenmeli. Tüm blog yazılarını (SSS'li) tek seferde kapsar.
 
 ---
 
