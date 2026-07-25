@@ -1,7 +1,7 @@
 # Product Marketing Context — TheTaxsi
 
-**Document version:** v2
-**Last updated:** 2026-07-24
+**Document version:** v3
+**Last updated:** 2026-07-25
 
 > ⚠️ Bu belge canlı siteden ve repo'dan otomatik çıkarıldı. **⚠️ VARSAYIM** işaretli
 > satırlar tahmindir — düzeltilmeden Faz 4 (içerik stratejisi) ve Faz 5 (metin) bunları
@@ -129,21 +129,35 @@ kesinlik*.
 
 ## Competitive Landscape
 
-> ⚠️ Bu bölüm Faz 3b (`competitor-profiling`) ile doldurulacak. Şu an kategori düzeyinde.
+> ✅ Faz 3b (2026-07-25) ile dolduruldu — ayrıntı `competitor-profiles/`. SEO
+> metrikleri (domain rank/backlink/trafik) DataForSEO olmadığı için bu turda alınamadı.
 
-**Direct** — Kuzey Kıbrıs transfer siteleri ve WhatsApp üzerinden çalışan bireysel
-transfer şoförleri. Genelde: fiyat listesi yok, tek dil, zayıf mobil site,
-rota bazlı sayfa yok. → **Bizim yapısal avantajımız: 92 rota × 3 dil = fiyatı görünür,
-indekslenebilir sayfa.**
+**Direct — yerel transfer firmaları.** ncyprustaxi.com, cyprustaxi.net, gnctaxi.com,
+ercantaxi.com, kibristransferim.com. Hepsi rota bazlı, sabit fiyatlı, form+WhatsApp
+rezervasyonlu. **Gerçek durum varsayımdan farklı çıktı:**
+- Fiyat listesi **var** ve **bizden ucuzlar** — Ercan→Girne: ncyprustaxi £45,
+  cyprustaxi.net £50, **TheTaxsi £55**. Yani "fiyat gizliyorlar" varsayımı yanlıştı.
+- ncyprustaxi **KITSAB lisanslı (#227)**; cyprustaxi.net **10 yıllık marka +
+  TripAdvisor/Google/FB/IG + testimonial**. İkisinde de bizde olmayan güven sinyali var.
+- **Ama neredeyse hepsi yalnız İngilizce (biri +Yunanca) — RU/TR yok.** Bizim tam
+  EN/TR/RU yerelleştirmemiz ve 35 yıllık şoförümüz gerçek hendek.
 
-**Secondary** — havalimanı taksi durağı, otel transfer masası, araç kiralama şirketleri
-(Kuzey Kıbrıs'ta lokal ofisler), Larnaka/Baf tarafında Güney Kıbrıs merkezli transfer
-firmaları (çoğu sınırı geçmiyor — bu bizim için net bir boşluk).
+**Secondary — aggregatörler.** Kiwitaxi, uptransfers, uni-transfers, GetTransfer.
+Yerel şoförleri toplayıp online ön ödemeyle satıyorlar. **Yerel firmalardan pahalı**
+(Ercan→Girne ~$117 ≈ £90 vs bizim £55) ama **çok güçlü yorum altyapısı** (Kiwitaxi:
+TripAdvisor 4.5/574+, Reviews.co.uk 4.6/1194+). Marka/organik aramada güçlüler;
+dile özel + rota bazlı uzun kuyruklu sorgularda zayıflar. Dil garantisi vermiyorlar.
+
+**İçerik/lead-gen — Carrington Cyprus.** Emlak şirketi, 2.500+ kelimelik transfer
+rehberleriyle SEO'da sınır-geçişi ve "Larnaka vs Ercan" sorgularını kapıyor. Ama
+yazar/tarih künyesi yok ve rezervasyon yok → içerikte geçilebilir.
 
 **Indirect** — arkadaş/akraba karşılaması, kombi, "orada bakarız" yaklaşımı.
 
-**Aggregator riski** ⚠️ VARSAYIM — Booking.com/GetTransfer/Kiwitaxi gibi pazaryerleri
-hem rakip hem potansiyel kanal. Faz 3b'de netleşmeli.
+**⚠️ En kritik rekabet bulgusu:** TheTaxsi yerel rakipler arasında **en pahalısı**
+ve **tek güven sinyali taşımıyor**. Fiyatta kazanılamaz; premium'u haklı çıkaran tek
+şey (35 yıllık şoför + derin içerik + görünür güven) şu an sitede yok. Bu, E-E-A-T
+(Faz 5) ve yorum toplama (Faz 9) işini "iyi olur"dan "zorunlu"ya taşıyor.
 
 ---
 
@@ -343,6 +357,10 @@ becerisi Faz 10'dan **Faz 1'e alınmalı** (bkz. program state, Kararlar).
 
 ## Changelog
 
+- v3 (2026-07-25) — Faz 3b rakip profilleme sonucu Rekabet Ortamı bölümü ⚠️
+  varsayımdan gerçek veriye çevrildi (`competitor-profiles/`). Kritik düzeltme:
+  yerel rakipler fiyat gizlemiyor ve bizden ucuz; TheTaxsi en pahalı ve güven
+  sinyali sıfır. Çok dillilik + 35 yıllık şoför gerçek hendek olarak doğrulandı.
 - v2 (2026-07-24) — Kullanıcı doğrulaması sonrası dört karar işlendi: ikili
   konumlandırma (Kuzey ana / Güney sınır-geçişli niş), EN-TR-RU eşit ağırlık,
   yalnız B2C (kurumsal segment çıkarıldı), ve **~35 yıllık şoför deneyiminin

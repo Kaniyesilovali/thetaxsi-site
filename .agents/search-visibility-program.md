@@ -3,7 +3,7 @@
 **Rota:** retrofit (uyarlanmış — aşağıdaki Kararlar bölümüne bak)
 **Başlangıç:** 2026-07-24
 **Son güncelleme:** 2026-07-24
-**Mevcut faz:** 1 — Teknik Teşhis + Ölçüm Kurulumu
+**Mevcut faz:** 1b ölçüm (GA4 bekliyor) · 3b rakip profilleme ✅ ileri çekildi
 **Öncelik:** dengeli (SEO + AEO + GEO)
 
 ## Kurulum
@@ -48,7 +48,7 @@ Kullanıcı kaldıracağını belirtti (2026-07-24). Faz 6 Adım 1'de yeniden do
 | 1b | Ölçüm kurulumu | analytics | ▶ | |
 | 2 | AI görünürlük taban ölçümü | ai-seo (yalnız Adım 1) | ☐ | |
 | 3a | Müşteri araştırması | customer-research | ☐ | |
-| 3b | Rakip profilleri | competitor-profiling | ☐ | |
+| 3b | Rakip profilleri | competitor-profiling | ✅ | `competitor-profiles/` (4 profil + özet) |
 | 4 | İçerik stratejisi (boşluk analizi) | content-strategy | ☐ | |
 | 5 | İçerik AEO'ya uyarlama | copy-editing + copywriting | ☐ | |
 | 6 | Yapısal veri | schema | ☐ | |
@@ -124,6 +124,21 @@ Fazlar arası girdiler — burada tutulmazsa kaybolur.
 **Backlink hedef sayfaları** (Faz 5 → Faz 9)
 - 92 rota landing sayfası (canlı) — kalite doğrulaması Faz 1'de
 - `/en/routes/` liste sayfası (canlı)
+
+**Dağıtım hedefleri** (Faz 3b'de bulundu → Faz 9)
+- RU: vc.ru (transfer listeleri), cypruser.ru, turktrip.ru, northcyprusinform.com
+- EN: whatsonintrnc.com, amyvillas.co.uk (villa+transfer)
+- Yorum platformları: TripAdvisor, Google Maps, Reviews.co.uk (rakipler burada güçlü)
+- Rakiplerin güçlü olduğu yer = bizim de görünmemiz gereken yer
+
+**Faz 3b stratejik sonuçları** (Faz 4 içerik stratejisi + Faz 5 metin girdisi)
+- Fiyatta yarışma — premium'u 35 yıl şoför + içerik + güvenle haklı çıkar
+- Çok dillilik (özellikle RU) gerçek hendek — RU sınır-geçiş içeriğine yatır
+- İçerikte öndeyiz ama E-E-A-T yok — yazar/tarih/şoför eklemek bizi Carrington'ın
+  önüne geçirir
+- "Güney niş" cyprustaxi.net ile çakışıyor — Larnaka hattında £15 ucuzuz (£80 vs £95),
+  bunu + RU sınır rehberini öne çıkar
+- Eksik veri: DataForSEO metrikleri, gnctaxi.com (403), ercantaxi/kibristransferim
 
 ## GEO Taban Ölçümü (Faz 2)
 
