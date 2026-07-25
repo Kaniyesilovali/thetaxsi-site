@@ -3,7 +3,7 @@
 **Rota:** retrofit (uyarlanmış — aşağıdaki Kararlar bölümüne bak)
 **Başlangıç:** 2026-07-24
 **Son güncelleme:** 2026-07-24
-**Mevcut faz:** 1b ölçüm (GA4 bekliyor) · 3b rakip profilleme ✅ ileri çekildi
+**Mevcut faz:** 1b ölçüm (GA4 bekliyor) · araştırma+strateji (3b, 4) ✅ ileri çekildi
 **Öncelik:** dengeli (SEO + AEO + GEO)
 
 ## Kurulum
@@ -49,7 +49,7 @@ Kullanıcı kaldıracağını belirtti (2026-07-24). Faz 6 Adım 1'de yeniden do
 | 2 | AI görünürlük taban ölçümü | ai-seo (yalnız Adım 1) | ☐ | |
 | 3a | Müşteri araştırması | customer-research | ☐ | |
 | 3b | Rakip profilleri | competitor-profiling | ✅ | `competitor-profiles/` (4 profil + özet) |
-| 4 | İçerik stratejisi (boşluk analizi) | content-strategy | ☐ | |
+| 4 | İçerik stratejisi (boşluk analizi) | content-strategy | ✅ | `.agents/content-strategy.md` |
 | 5 | İçerik AEO'ya uyarlama | copy-editing + copywriting | ☐ | |
 | 6 | Yapısal veri | schema | ☐ | |
 | 7 | Site mimarisi | site-architecture | ☐ / n/a | yalnız yapısal sorun çıkarsa |
@@ -118,8 +118,16 @@ Fazlar arası girdiler — burada tutulmazsa kaybolur.
 **Dağıtım hedefleri** (Faz 3a → Faz 9)
 - _henüz doldurulmadı_
 
-**AI taban ölçümü sorgu seti** (Faz 0 Müşteri Dili → Faz 2)
-- _henüz doldurulmadı — ~20 sorgu, 3 dilde_
+**AI taban ölçümü sorgu seti** (Faz 0 Müşteri Dili + Faz 3b → Faz 2/8)
+İçerik stratejisi ve rakip aramalarından türedi — Faz 8 baseline'da kullan:
+- EN: "how to get from Ercan airport to Kyrenia", "Larnaca airport to North Cyprus
+  taxi border crossing", "do I need a visa for North Cyprus", "Ercan or Larnaca for
+  Kyrenia", "North Cyprus airport transfer price", "is it safe to cross into North Cyprus"
+- TR: "Ercan havalimanı Girne transfer", "Ercan Girne taksi kaç para", "Larnaka
+  Kuzey Kıbrıs geçiş", "KKTC vize pasaport"
+- RU: "трансфер аэропорт Эрджан Кирения", "трансфер Ларнака Северный Кипр",
+  "такси Кипр аэропорт заказать", "виза Северный Кипр"
+- (Faz 8'de 20'ye tamamla; her sorguda kim alıntılanıyor kaydet)
 
 **Backlink hedef sayfaları** (Faz 5 → Faz 9)
 - 92 rota landing sayfası (canlı) — kalite doğrulaması Faz 1'de
