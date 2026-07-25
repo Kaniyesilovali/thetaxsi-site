@@ -6,6 +6,7 @@ import { routeCopy } from '../data/route-copy.mjs'
 import { posts } from '../data/posts.mjs'
 import { locationGroups } from '../data/locations.mjs'
 import { routeLabel } from './home.mjs'
+import { businessRef } from '../data/schema.mjs'
 
 export function renderRoutesIndex(ctx) {
   const { lang, dict } = ctx
@@ -296,12 +297,10 @@ ${faqSectionHtml}`
       '@type': 'Service',
       serviceType: 'Airport transfer',
       name: `${from} → ${to}`,
-      provider: {
-        '@type': 'LocalBusiness',
-        name: route.contactName ? `${config.brand} — ${route.contactName}` : config.brand,
-        telephone: route.phoneHref ?? config.phoneHref,
-      },
-      areaServed: 'Cyprus',
+      provider: businessRef,
+      // Rota bazlı hizmet alanı — eski 'Cyprus' hem çok genişti hem konumlandırmayla
+      // çelişiyordu. Bu transfer bu iki noktaya hizmet eder.
+      areaServed: [from, to],
       offers: {
         '@type': 'Offer',
         price: route.price,

@@ -44,7 +44,8 @@ Kullanıcı kaldıracağını belirtti (2026-07-24). Faz 6 Adım 1'de yeniden do
 | # | Faz | Beceri | Durum | Çıktılar |
 |---|---|---|---|---|
 | 0 | Bağlam temeli | product-marketing | ✅ | `.agents/product-marketing.md` (v2) |
-| 1 | Teknik teşhis + ölçüm | seo-audit + analytics | ☐ | |
+| 1a | Teknik teşhis | seo-audit | ✅ | `.agents/seo-audit.md` |
+| 1b | Ölçüm kurulumu | analytics | ▶ | |
 | 2 | AI görünürlük taban ölçümü | ai-seo (yalnız Adım 1) | ☐ | |
 | 3a | Müşteri araştırması | customer-research | ☐ | |
 | 3b | Rakip profilleri | competitor-profiling | ☐ | |
@@ -62,14 +63,37 @@ Durum: ☐ bekliyor · ▶ devam ediyor · ✅ bitti · ⏸ bloke · n/a kapsam 
 
 ## Mevcut Faz
 
-**Faz:** 1 — Teknik Teşhis + Ölçüm Kurulumu
-**Beceriler:** `seo-audit`, ardından `analytics`
-**Çıkış kriteri:** 366 sayfalık sitenin öncelik sıralı teknik bulgu listesi
-(taranabilirlik, indeksleme, hreflang, Core Web Vitals, başlık/meta, iç link,
-E-E-A-T) + GA4 kurulu ve rezervasyon/WhatsApp olayları ölçülüyor.
-**Bloke eden:** yok
-**Sonraki adım:** `seo-audit` becerisini çalıştır; çok dilli site olduğu için
-International SEO & Localization bölümü zorunlu.
+**Faz:** 1b — Ölçüm Kurulumu
+**Beceri:** `analytics`
+**Çıkış kriteri:** GA4 kurulu; `booking_form_submit`, `whatsapp_click`,
+`phone_click` olayları rota + dil boyutuyla ölçülüyor; taban rakamlar kaydedilmiş.
+**Bloke eden:** GA4 measurement ID kullanıcıdan gerekli
+**Sonraki adım:** kullanıcıdan GA4 property / measurement ID al, `templates/layout.mjs`
+ve `public/js/main.js` içine olay izlemeyi göm.
+
+### Faz 1a sonucu — teknik denetim
+
+**Genel sağlık: iyi.** Beklenenden çok daha sağlam kurulmuş. Doğru olanlar:
+hreflang (self-ref + karşılıklı + x-default, HTML/sitemap uyumlu), canonical
+(diller arası canonical yok), sitemap (`xhtml` namespace, tam alternates),
+orphan sayfa 0, 366/366 sayfada tek H1, tekrar eden title/description 0,
+36/36 görselde alt+boyut+lazy, RU/TR içerik gerçekten çevrilmiş.
+
+Öncelikli 5 bulgu — ayrıntı `.agents/seo-audit.md`:
+
+| # | Bulgu | Nerede çözülecek |
+|---|---|---|
+| 1 | 46 ters-yön rota sayfası ince içerik (~%10 özgün, ~55-60 kelime) | Faz 5 — ⏸ şoför görüşmesi bekliyor |
+| 2 | E-E-A-T sıfır: Person schema 0, yazar 0, güncelleme tarihi 2/366, yorum 0 | Faz 5 + 9 — ⏸ şoför görüşmesi bekliyor |
+| 3 | Hiç ölçüm yok | Faz 1b (şimdi) |
+| 4 | ~~`LocalBusiness` eksik, `@id` yok, `areaServed` çelişiyor~~ | ✅ `data/schema.mjs` |
+| 5 | ~~`www` → `http` → `https` üç adımlı zincir~~ | ✅ `0f3b76d` |
+| 6 | Görseller WebP değil (~2.3 MB JPEG) | ⏸ `sharp` bağımlılık onayı bekliyor |
+
+**2026-07-25 — Faz 1a bulguları ele alındı (kullanıcı: "teknik olanları şimdi",
+içerik işi "önce şoförlerle konuşayım").** Bağımlılık gerektirmeyen tüm teknik
+bulgular kapatıldı (4, 5); WebP `sharp` kararına, ince içerik + E-E-A-T ise şoför
+görüşmelerine bırakıldı (uydurma yerel bilgi yazılmayacak — kullanıcı kararı).
 
 ### Faz 0'da ortaya çıkan yapısal bulgular
 

@@ -1,5 +1,6 @@
 import { config } from '../site.config.mjs'
 import { href } from '../data/slugs.mjs'
+import { businessNode } from '../data/schema.mjs'
 
 export const esc = (s = '') =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -231,7 +232,10 @@ export function pageHero({ eyebrow, title, subtitle }) {
 export function page(ctx, { title, description, path, body, jsonld = [], bodyClass = 'bg-paper text-ink', faq = true, ogType = 'website', preloadImage = '' }) {
   const { lang } = ctx
   const faqBlock = faq ? faqSection(ctx) : { html: '', jsonld: null }
-  const allJsonld = faqBlock.jsonld ? [...jsonld, faqBlock.jsonld] : jsonld
+  // Merkezi @id'li işletme düğümü her sayfaya bir kez basılır; diğer düğümlerin
+  // provider/publisher alanları buna businessRef ile referans verir (data/schema.mjs).
+  const withBusiness = [businessNode(lang), ...jsonld]
+  const allJsonld = faqBlock.jsonld ? [...withBusiness, faqBlock.jsonld] : withBusiness
   const url = `${config.siteUrl}${href(lang, path)}`
   const ogImage = `${config.siteUrl}/assets/img/og.jpg`
   const ogLocales = { en: 'en_US', tr: 'tr_TR', ru: 'ru_RU' }

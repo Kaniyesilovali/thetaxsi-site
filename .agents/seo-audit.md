@@ -27,8 +27,8 @@ güven sinyalleri ve ölçüm.
 | 1 | 46 ters-yön rota sayfası ince içerik — sayfa başına ~%10 özgün metin | 🔴 Yüksek |
 | 2 | E-E-A-T sinyali yok: yazar yok, şoför yok, tarih yok, yorum yok | 🔴 Yüksek |
 | 3 | Hiç ölçüm yok — GA4/GTM kurulu değil | 🔴 Yüksek |
-| 4 | `LocalBusiness` schema eksik + `areaServed` konumlandırmayla çelişiyor | 🟠 Orta-Yüksek |
-| 5 | `www` → `http` → `https` üç adımlı yönlendirme zinciri (güvensiz atlama) | 🟠 Orta |
+| 4 | ✅ **Çözüldü** — `@id`'li tek `LocalBusiness` düğümü + rota bazlı `areaServed` (`data/schema.mjs`) | 🟠 Orta-Yüksek |
+| 5 | ✅ **Çözüldü** — `www` yönlendirmesi doğrudan https'e (`0f3b76d`) | 🟠 Orta |
 
 ### Hızlı kazanımlar (birkaç saat, hemen)
 
@@ -196,9 +196,21 @@ birbirine bağlayamıyor.
 `areaServed`'i rota bazlı yap (`Kyrenia`, `Nicosia`…). `sameAs`'e gerçek sosyal
 hesapları ve Google Business Profile URL'ini ekle.
 
-⚠️ `site.config.mjs`'teki Instagram/Facebook hâlâ placeholder — bu iş için gerekli.
+**✅ Çözüldü (2026-07-25).** `data/schema.mjs` merkezi modülü kuruldu:
+- `businessNode(lang)` — `@id: .../#business` ile tekil düğüm; `url` (dile göre),
+  `telephone`, `email`, `priceRange`, `image`/`logo`, `areaServed` (Kuzey Kıbrıs +
+  Larnaka/Baf kalkış), `openingHoursSpecification` (24/7), `availableLanguage` (EN/TR/RU)
+- `businessRef` — `home`/`routes`/`blog` şablonlarının provider/publisher alanı artık
+  buna referans veriyor; kopuk LocalBusiness kopyaları kaldırıldı
+- Rota `areaServed`: `'Cyprus'` → `[from, to]`; ana sayfa TaxiService: `'Northern Cyprus'`
+- Düğüm `layout.page()` ile her sayfaya bir kez basılıyor → 366/366 sayfada tekil (doğrulandı)
+- **Dürüstlük kuralı:** `site.config.mjs`'teki Instagram/Facebook hâlâ placeholder
+  olduğu için `sameAs` bilinçli olarak eklenmedi (sahte sosyal hesap schema'ya girmez).
+  Gerçek hesaplar/GBP gelince `realSocials()` otomatik dahil edecek.
 
-**Öncelik:** 2 — Faz 6 (`schema`).
+**Kalan:** `aggregateRating` (Faz 9, yorumlar gelince), `sameAs` (gerçek hesaplar gelince).
+
+**Öncelik:** 2 — ✅ tamam.
 
 ---
 
@@ -243,7 +255,18 @@ TTFB 0.32s, doğru cache) Core Web Vitals'ta kalan tek anlamlı kaldıraç bu.
 **Çözüm.** WebP'ye çevir (~%65 tasarruf → ~800 KB), `<picture>` + `srcset` ile
 mobil varyant ver. Build adımına eklenebilir.
 
-**Öncelik:** 3.
+**⏸ Ertelendi (2026-07-25) — bağımlılık kararı gerekiyor.** Bu repo bilinçli
+olarak minimal-bağımlılık (yalnız Tailwind CLI + marked). WebP dönüşümü için:
+- macOS yerleşik `sips` bu makinede WebP yazamıyor (test edildi, başarısız)
+- `cwebp` kurulu değil
+- Tek yol: `sharp` (native, ~30 MB) devDependency olarak eklemek
+
+`.htaccess` cache tarafı **zaten hazır** (`image/webp` bir yıllık tanımlı) — yalnız
+dosyaların üretilmesi ve `<picture>` etiketi kaldı. Kullanıcı `sharp` eklemeye
+onay verirse: `scripts/img-webp.mjs` yazılıp build zincirine eklenir, `templates`
+içindeki `<img>` → `<picture>`. Öncelik 3 olduğu için toolchain kararı beklemeye değer.
+
+**Öncelik:** 3 — ⏸ kullanıcı onayı bekliyor.
 
 ---
 

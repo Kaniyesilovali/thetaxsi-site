@@ -2,6 +2,7 @@ import { esc, page, pageHero } from './layout.mjs'
 import { config } from '../site.config.mjs'
 import { posts } from '../data/posts.mjs'
 import { href, localizeHtmlLinks } from '../data/slugs.mjs'
+import { businessRef } from '../data/schema.mjs'
 
 const localeOf = { en: 'en-GB', tr: 'tr-TR', ru: 'ru-RU' }
 
@@ -116,12 +117,7 @@ export function renderBlogPost(ctx, post) {
       mainEntityOfPage: { '@type': 'WebPage', '@id': `${config.siteUrl}${href(lang, path)}` },
       image: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
       author: { '@type': 'Organization', name: config.brand, url: `${config.siteUrl}/${lang}/` },
-      publisher: {
-        '@type': 'LocalBusiness',
-        name: config.brand,
-        telephone: config.phoneHref,
-        logo: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
-      },
+      publisher: businessRef,
     },
     {
       '@context': 'https://schema.org',

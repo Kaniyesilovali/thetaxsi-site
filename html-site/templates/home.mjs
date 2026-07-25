@@ -3,6 +3,7 @@ import { config } from '../site.config.mjs'
 import { routes } from '../data/routes.mjs'
 import { locationGroups } from '../data/locations.mjs'
 import { href } from '../data/slugs.mjs'
+import { businessRef } from '../data/schema.mjs'
 
 // Tüm görseller kendi sunucumuzda barındırılır (public/img → /assets/img). Dış
 // CDN'e (Unsplash/Pexels) bağımlılık yok: daha hızlı LCP, güvenilir yük, kontrol
@@ -557,15 +558,9 @@ export function renderHome(ctx) {
       url: `${config.siteUrl}/${lang}/`,
       telephone: config.phoneHref,
       email: config.email,
-      areaServed: 'Cyprus',
+      areaServed: 'Northern Cyprus',
       priceRange,
-      provider: {
-        '@type': 'LocalBusiness',
-        name: config.brand,
-        telephone: config.phoneHref,
-        priceRange,
-        address: { '@type': 'PostalAddress', addressCountry: 'CY' },
-      },
+      provider: businessRef,
     },
   ]
 
