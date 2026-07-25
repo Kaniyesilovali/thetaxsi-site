@@ -99,12 +99,12 @@ Kaynak %10 (10 üzerinden).
 |---|---|---|---|---|---|
 | 1 | **Şoför profilleri** (2-4 şoför: isim, ~35 yıl, hatlar) | Trust/E-E-A-T | Karar | Taklit edilemez hendek; premium'u haklı çıkarır; Person schema | **9.4** |
 | 2 | **Rota "şoför notu" blokları** (ters yön ince sayfalar) | Trust + searchable | Karar | Faz 5 ince içeriği + E-E-A-T'yi tek hamlede çözer | **9.2** |
-| 3 | **Glossary: "What is Ercan Airport?"** + Green Line + KITSAB + Yeşil Hat | Tanım/AEO | Farkındalık | En ucuz AI Overview kazancı; "what is X" en çok alıntılanan format | **9.0** |
+| 3 | ✅ **Glossary: "What is Ercan Airport?"** + Green Line + KITSAB + Yeşil Hat + kombi + meet&greet + sabit ücret | Tanım/AEO | Farkındalık | En ucuz AI Overview kazancı; "what is X" en çok alıntılanan format — **ÜRETİLDİ 2026-07-25, EN/TR/RU (8 tanım bloğu)** | **9.0** |
 | 4 | **RU sınır-geçiş rehberi** (Larnaka/Baf → Kuzey, Rusça-öncelikli) | Searchable | Değerlendirme | RU talebi yüksek + yerel rakip RU'da zayıf + sınır en çok soru alan konu = üçlü kesişim | **9.0** |
-| 5 | **"How our fixed price works"** (mekanik + rötar + bekleme) | Trust/AEO | Değerlendirme | Güven açığı; sabit fiyat en güçlü temamız; SSS'e besler | 8.6 |
+| 5 | ✅ **"How our fixed price works"** (mekanik + rötar + bekleme) | Trust/AEO | Değerlendirme | Güven açığı; sabit fiyat en güçlü temamız; SSS'e besler — **ÜRETİLDİ 2026-07-25, EN/TR/RU** | 8.6 |
 | 6 | ✅ **"Private transfer vs taxi vs rental car vs kombi"** | Karşılaştırma | Değerlendirme | Karar aşaması; tablo formatı AEO'da güçlü; niyeti yüksek — **ÜRETİLDİ 2026-07-25, EN/TR/RU** | 8.5 |
 | 7 | Border-crossing hub genişletme (#4 → pillar) | Searchable | Değerlendirme | Mevcut yazıyı hub'a çıkar, tüm sınır spoke'larını bağla | 8.3 |
-| 8 | **"Is it safe? Booking without prepayment"** | Trust | Karar | Bir numaralı anksiyete (state: "ya gelmezse?"); güven içeriği | 8.2 |
+| 8 | ✅ **"Is it safe? Booking without prepayment"** | Trust | Karar | Bir numaralı anksiyete (state: "ya gelmezse?"); güven içeriği — **ÜRETİLDİ 2026-07-25, EN/TR/RU** | 8.2 |
 | 9 | Glossary: "Ercan vs Larnaca vs Paphos" (hangi havalimanı) | Tanım/AEO | Farkındalık | Mevcut #3'ü glossary tanımıyla güçlendir | 8.0 |
 | 10 | Airport transfer hub genişletme (#1 → pillar) | Searchable | Farkındalık | Çekirdek hub'ı tüm rota + varış spoke'larına bağla | 7.9 |
 | 11 | "North Cyprus Travel Guide" hub (destinasyonları topla) | Shareable | Farkındalık | Dağıtım/backlink yemi; destinasyon rehberlerini bağlar | 7.5 |
