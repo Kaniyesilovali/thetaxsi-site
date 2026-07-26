@@ -3,7 +3,7 @@
 **Rota:** retrofit (uyarlanmış — aşağıdaki Kararlar bölümüne bak)
 **Başlangıç:** 2026-07-24
 **Son güncelleme:** 2026-07-24
-**Mevcut faz:** 1b ölçüm (GA4 bekliyor) · 3b/4/5(kısmi)/6 ✅ ileri çekildi
+**Mevcut faz:** Claude tarafı bağımsız işler bitti (2026-07-26) — kullanıcı girdisi bekleniyor
 **Öncelik:** dengeli (SEO + AEO + GEO)
 
 ## Kurulum
@@ -63,13 +63,35 @@ Durum: ☐ bekliyor · ▶ devam ediyor · ✅ bitti · ⏸ bloke · n/a kapsam 
 
 ## Mevcut Faz
 
-**Faz:** 1b — Ölçüm Kurulumu
-**Beceri:** `analytics`
-**Çıkış kriteri:** GA4 kurulu; `booking_form_submit`, `whatsapp_click`,
-`phone_click` olayları rota + dil boyutuyla ölçülüyor; taban rakamlar kaydedilmiş.
-**Bloke eden:** GA4 measurement ID kullanıcıdan gerekli
-**Sonraki adım:** kullanıcıdan GA4 property / measurement ID al, `templates/layout.mjs`
-ve `public/js/main.js` içine olay izlemeyi göm.
+**Durum (2026-07-26):** Claude'un girdi gerektirmeyen tüm işleri tamamlandı.
+Program şimdi kullanıcı tarafındaki 4 girdiye bloke. Aşağıdaki "Kullanıcı bekleyen
+işler" tamamlanınca Claude devam edebilir.
+
+### ✅ Claude tarafı bitenler (yerelde commit, PUSH EDİLMEDİ — deploy kullanıcı komutuyla)
+- `.htaccess` www→https zinciri düzeltmesi (`0f3b76d`)
+- Merkezi `@id`'li LocalBusiness schema — entity consolidation (`c909967`)
+- Blog FAQPage schema — 75 sayfa, 281 soru, önce 0 (`f24d060`)
+- `llms.txt` + `pricing.md` makine-okunur dosyalar (`72df1f0`)
+- Pillar-farkında blog iç linkleme (`c1b6a95`)
+- 4 yeni blog yazısı EN/TR/RU: karşılaştırma, glossary, sabit-fiyat, güvenlik
+  (`2eb4999`, `c0566b4`)
+- Denetim + rakip profilleri + içerik stratejisi (`.agents/`, `competitor-profiles/`)
+
+### ⏸ Kullanıcı bekleyen işler (bunlar gelince Claude devam eder)
+1. **GA4 measurement ID** → Faz 1b ölçüm. Verilince `layout.mjs` + `main.js`'e
+   `booking_form_submit`/`whatsapp_click`/`phone_click` (rota+dil boyutlu) gömülür.
+2. **Şoför bilgisi** (isim, ~yıl, hangi hatlar, fotoğraf, filo, işletme yaşı) →
+   Faz 5'in en yüksek-değerli parçaları: şoför profilleri (#1), rota şoför notları
+   (#2, 46 ince ters-yön sayfasını da çözer), RU sınır rehberi (#4). Person schema.
+3. **`sharp` bağımlılık onayı** → görselleri WebP'ye çevir (Bulgu 6). `.htaccess`
+   cache tarafı hazır; onay gelince `scripts/img-webp.mjs` + `<picture>`.
+4. **Cloudflare AI Crawl Control kapat** → Faz 8 GEO baseline'ı bunsuz anlamsız.
+   Kapanınca 20-sorgu AI görünürlük ölçümü alınır (sorgu seti Carried Forward'da hazır).
+
+### Kalan Claude-bağımsız işler (opsiyonel, istenince)
+- Hub/pillar sayfaları (#7/#10/#11) — YENİ URL demek, site-architecture kararı;
+  denetim IA'yı "sağlam" bulduğu için zorunlu değil, kullanıcı isterse.
+- OG görselleri per-page — `sharp`'a bağlı (bkz. madde 3).
 
 ### Faz 1a sonucu — teknik denetim
 
