@@ -67,7 +67,7 @@ Durum: ☐ bekliyor · ▶ devam ediyor · ✅ bitti · ⏸ bloke · n/a kapsam 
 Program şimdi kullanıcı tarafındaki 4 girdiye bloke. Aşağıdaki "Kullanıcı bekleyen
 işler" tamamlanınca Claude devam edebilir.
 
-### ✅ Claude tarafı bitenler (yerelde commit, PUSH EDİLMEDİ — deploy kullanıcı komutuyla)
+### ✅ Claude tarafı bitenler (2026-07-26 push edildi + canlıda doğrulandı — deploy push'ta otomatik)
 - `.htaccess` www→https zinciri düzeltmesi (`0f3b76d`)
 - Merkezi `@id`'li LocalBusiness schema — entity consolidation (`c909967`)
 - Blog FAQPage schema — 75 sayfa, 281 soru, önce 0 (`f24d060`)
