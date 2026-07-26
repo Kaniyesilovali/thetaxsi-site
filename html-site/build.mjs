@@ -114,6 +114,74 @@ writeFileSync(
 
 writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${config.siteUrl}/sitemap.xml\n`)
 
+/* ---------- llms.txt + pricing.md (makine-okunur / AEO-GEO) ----------
+   Fiyatlar rezervasyon kapsülünde JS ile açıldığı için bir AI ajanı onları
+   render etmeden okuyamaz. Bu iki düz-metin dosyası fiyatı ve içeriği JS'siz,
+   ayrıştırılabilir biçimde sunar — Perplexity ve otonom ajanlar bunu ödüllendirir,
+   Google'a zararı yok. Rota/yazı verisinden üretilir, elle düzenlenmez.  */
+const u = (path) => `${config.siteUrl}${href(config.defaultLang, path)}`
+
+const priceRows = allRoutes
+  .slice()
+  .sort((a, b) => a.from.en.localeCompare(b.from.en) || a.to.en.localeCompare(b.to.en))
+  .map(
+    (r) =>
+      `| ${r.from.en} → ${r.to.en} | ${config.currencySymbol}${r.price} | ${config.currencySymbol}${r.roundTrip} | ~${r.durationMin} min | ${u(`/routes/${r.slug}/`)} |`,
+  )
+  .join('\n')
+
+const pricingMd = `# ${config.brand} — Airport Transfer Prices (North Cyprus)
+
+Fixed fares, quoted per vehicle (not per person), in ${config.currencyCode}. Each fare
+includes tolls, parking, live flight tracking and up to 45 minutes of airport waiting.
+No prepayment: pay the driver on arrival. Prices confirmed at booking do not change.
+
+Contact: ${config.phoneDisplay} · WhatsApp ${config.phoneDisplay} · ${config.email}
+Languages: English, Türkçe, Русский. Last generated: ${buildDate}.
+
+| Route | One way | Round trip | Approx. duration | Page |
+|---|---|---|---|---|
+${priceRows}
+`
+writeFileSync(join(dist, 'pricing.md'), pricingMd)
+
+const guideLines = posts
+  .slice()
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .map((p) => `- [${p.title[config.defaultLang]}](${u(`/blog/${p.slug}/`)}): ${p.description[config.defaultLang]}`)
+  .join('\n')
+
+const llmsTxt = `# ${config.brand}
+
+> Fixed-price private airport transfers across North Cyprus — Ercan, Larnaca and
+> Paphos airports to Kyrenia, Nicosia, Famagusta, İskele and every hotel area.
+> Booked online or by WhatsApp, no prepayment, pay the driver on arrival.
+
+${config.brand} runs private chauffeur transfers with ~35 years of local driving
+experience. Fares are fixed per vehicle and published per route (see below), in
+${config.currencyCode}. Transfers from Larnaca and Paphos in the south cross the
+Green Line to the north; the driver handles the crossing and there is no passenger
+fee. The site is fully available in English, Turkish and Russian.
+
+## Prices
+- [Full fare list (machine-readable)](${config.siteUrl}/pricing.md)
+- [Routes & prices](${u('/routes/')})
+
+## Guides
+${guideLines}
+
+## Key pages
+- [Book a transfer](${u('/book/')})
+- [Frequently asked questions](${u('/faq/')})
+- [About](${u('/about/')})
+- [Contact](${u('/contact/')})
+
+## Contact
+- Phone / WhatsApp: ${config.phoneDisplay}
+- Email: ${config.email}
+`
+writeFileSync(join(dist, 'llms.txt'), llmsTxt)
+
 /* ---------- Statik varlıklar ---------- */
 const mainJs = readFileSync(join(root, 'public/js/main.js'), 'utf8')
   .replaceAll('__WHATSAPP__', config.whatsapp)
