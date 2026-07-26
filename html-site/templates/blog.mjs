@@ -56,6 +56,51 @@ export function sortedPosts() {
   return [...posts].sort((a, b) => b.date.localeCompare(a.date))
 }
 
+// İçerik stratejisindeki 4 pillar (bkz. .agents/content-strategy.md). "Diğer
+// yazılar" bölümü artık en yeni 3 yerine AYNI pillar'daki yazıları öne alıyor —
+// hub-and-spoke iç linkini güçlendirir (GEO: topical authority sinyali). Yeni
+// yazı eklerken slug'ını buraya da yaz; eşlenmeyen yazı yalnızca recency'e düşer.
+const pillarOf = {
+  // 1 — Havalimanı transferi
+  'cyprus-airport-transfer-guide': 'airport',
+  'ercan-airport-arrival-guide': 'airport',
+  'larnaca-airport-arrival-guide': 'airport',
+  'paphos-airport-arrival-guide': 'airport',
+  'ercan-vs-larnaca-for-kyrenia': 'airport',
+  'north-cyprus-airport-transfer-prices': 'airport',
+  // 2 — Sınır geçişi
+  'larnaca-airport-to-kyrenia-border-crossing-guide': 'border',
+  'north-cyprus-visa-passport-border-crossing': 'border',
+  'north-cyprus-travel-terms-explained': 'border',
+  'north-cyprus-money-tipping-guide': 'border',
+  // 3 — Destinasyonlar
+  'bafra-hotels-transfer-guide': 'destinations',
+  'famagusta-beaches-old-city-guide': 'destinations',
+  'guzelyurt-morphou-transfer-guide': 'destinations',
+  'guzelyurt-soli-vouni-west-cyprus-guide': 'destinations',
+  'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci': 'destinations',
+  'iskele-long-beach-hotels-transfer-guide': 'destinations',
+  'karpaz-golden-beach-guide': 'destinations',
+  'kyrenia-harbour-castle-old-town-guide': 'destinations',
+  'long-beach-iskele-things-to-do': 'destinations',
+  'nicosia-lefkosa-city-transfer-guide': 'destinations',
+  'north-cyprus-university-student-transfer': 'destinations',
+  'north-cyprus-villages-heritage-guide': 'destinations',
+  // 4 — Güven & nasıl çalışır
+  'how-fixed-price-transfers-work': 'trust',
+  'is-it-safe-book-transfer-without-prepayment': 'trust',
+  'north-cyprus-transfer-vs-taxi-vs-car-hire': 'trust',
+}
+
+// Aynı pillar'daki yazıları öne al, 3'e tamamlamak için en yenilerle doldur.
+function relatedPosts(slug, n = 3) {
+  const pillar = pillarOf[slug]
+  const pool = sortedPosts().filter((p) => p.slug !== slug)
+  const same = pillar ? pool.filter((p) => pillarOf[p.slug] === pillar) : []
+  const rest = pool.filter((p) => !same.includes(p))
+  return [...same, ...rest].slice(0, n)
+}
+
 export function renderBlogIndex(ctx) {
   const { lang, xtra } = ctx
   const t = xtra.blog
@@ -94,7 +139,7 @@ export function renderBlogPost(ctx, post) {
   const path = `/blog/${post.slug}/`
   const title = post.title[lang]
   const description = post.description[lang]
-  const others = sortedPosts().filter((p) => p.slug !== post.slug).slice(0, 3)
+  const others = relatedPosts(post.slug, 3)
 
   const body = `
 <section class="relative overflow-hidden border-b border-line bg-paper">
