@@ -3,7 +3,7 @@
 **Rota:** retrofit (uyarlanmış — aşağıdaki Kararlar bölümüne bak)
 **Başlangıç:** 2026-07-24
 **Son güncelleme:** 2026-07-24
-**Mevcut faz:** 1b ölçüm (GA4 bekliyor) · araştırma+strateji (3b, 4) ✅ ileri çekildi
+**Mevcut faz:** 1b ölçüm (GA4 bekliyor) · 3b/4/5(kısmi)/6 ✅ ileri çekildi
 **Öncelik:** dengeli (SEO + AEO + GEO)
 
 ## Kurulum
@@ -50,8 +50,8 @@ Kullanıcı kaldıracağını belirtti (2026-07-24). Faz 6 Adım 1'de yeniden do
 | 3a | Müşteri araştırması | customer-research | ☐ | |
 | 3b | Rakip profilleri | competitor-profiling | ✅ | `competitor-profiles/` (4 profil + özet) |
 | 4 | İçerik stratejisi (boşluk analizi) | content-strategy | ✅ | `.agents/content-strategy.md` |
-| 5 | İçerik AEO'ya uyarlama | copy-editing + copywriting | ☐ | |
-| 6 | Yapısal veri | schema | ☐ | |
+| 5 | İçerik AEO'ya uyarlama | copy-editing + copywriting | ▶ | 4 yeni blog (EN/TR/RU) — `content-strategy.md` |
+| 6 | Yapısal veri | schema | ✅ | `data/schema.mjs` + blog FAQPage (`blog.mjs`) |
 | 7 | Site mimarisi | site-architecture | ☐ / n/a | yalnız yapısal sorun çıkarsa |
 | 8 | AEO + GEO çekirdeği | ai-seo (tam) | ☐ | |
 | 9 | Site dışı otorite | directory-submissions, public-relations, community-marketing, social | ☐ | |
