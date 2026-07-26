@@ -6,6 +6,44 @@ import { businessRef } from '../data/schema.mjs'
 
 const localeOf = { en: 'en-GB', tr: 'tr-TR', ru: 'ru-RU' }
 
+// Blog gövdesindeki SSS bölümünden FAQPage JSON-LD üret.
+// Tüm yazılarda <h3> YALNIZCA SSS sorusudur (içerik kontrolüyle doğrulandı) ve
+// hemen ardından cevabın <p>'si gelir — bu yüzden dile bağımsız, güvenli çıkarım.
+// FAQPage AEO'da en ağır schema türlerinden; rota sayfaları zaten üretiyordu,
+// blog yazıları üretmiyordu (bkz. content-strategy.md Faz 6 açığı).
+const stripTags = (s) => s.replace(/<[^>]+>/g, '')
+const decodeEntities = (s) =>
+  s
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+const cleanText = (s) => decodeEntities(stripTags(s)).replace(/\s+/g, ' ').trim()
+
+function faqFromBody(html) {
+  const pairs = []
+  // <h3>soru</h3> sonrasında ilk <p>cevap</p> — arada boşluk olabilir.
+  const re = /<h3[^>]*>([\s\S]*?)<\/h3>\s*<p[^>]*>([\s\S]*?)<\/p>/g
+  let m
+  while ((m = re.exec(html))) {
+    const q = cleanText(m[1])
+    const a = cleanText(m[2])
+    if (q && a) pairs.push({ q, a })
+  }
+  if (!pairs.length) return null
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: pairs.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  }
+}
+
 export function formatDate(iso, lang) {
   return new Intl.DateTimeFormat(localeOf[lang] ?? lang, {
     day: 'numeric',
@@ -128,6 +166,10 @@ export function renderBlogPost(ctx, post) {
       ],
     },
   ]
+
+  // Gövdedeki SSS varsa FAQPage ekle (AEO).
+  const faq = faqFromBody(post.body[lang])
+  if (faq) jsonld.push(faq)
 
   // Marka ekini yalnızca başlık kısa kaldığında ekle — uzun başlıklar SERP'te
   // ~60 karakterde kesilmesin diye markasız bırakılır.

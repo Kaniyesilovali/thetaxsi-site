@@ -127,11 +127,12 @@ Her parça yazılırken (orchestrator kuralları):
 - **Glossary parçaları (3, 9) çift işlevli:** tanım blokları hem AEO altyapısı hem
   hub içi iç link düğümü. İlk 20'de olması şart (en ucuz alıntılanma).
 
-**⚠️ Faz 6 schema açığı (üretim sırasında bulundu):** blog yazılarının gövdesindeki
-SSS bölümü (h2 "Frequently asked questions" + h3 sorular) **`FAQPage` schema'sı
-üretmiyor** — yalnız rota sayfaları üretiyor (`routeFaq`). FAQPage AEO'da en ağır
-schema türlerinden. `templates/blog.mjs`'e gövdeden SSS çıkarıp FAQPage basan bir
-adım eklenmeli. Tüm blog yazılarını (SSS'li) tek seferde kapsar.
+**✅ Faz 6 schema açığı kapandı (2026-07-26):** blog yazılarının SSS'i artık
+`FAQPage` schema üretiyor. `templates/blog.mjs`'e `faqFromBody()` eklendi —
+`<h3>`→`<p>` çiftlerini çıkarıp FAQPage basıyor (tüm yazılarda h3 yalnızca SSS
+sorusu, doğrulandı). **75 blog sayfası (25 yazı × 3 dil) artık FAQPage taşıyor,
+281 soru** — önce 0'dı. Kaynak gövde h3 = schema soru sayısı birebir eşleşiyor,
+kaçak HTML/entity yok.
 
 ---
 
