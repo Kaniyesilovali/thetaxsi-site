@@ -266,9 +266,7 @@
       "extrasNone": "No extras available for this route.",
       "paymentHeading": "Payment",
       "paymentCash": "Cash on arrival",
-      "paymentCashDesc": "Settle directly with your chauffeur.",
-      "paymentOnline": "Pay online",
-      "paymentOnlineDesc": "Secure payment via Stripe."
+      "paymentCashDesc": "Settle directly with your chauffeur. No prepayment or deposit."
     },
     "details": {
       "heading": "Your details.",
@@ -416,15 +414,11 @@
         "items": [
           {
             "q": "What payment methods do you accept?",
-            "a": "We accept cash (paid to the driver on arrival) and online payments via credit or debit card (processed securely through Stripe)."
+            "a": "You pay the driver in cash on arrival. No prepayment or deposit is required, and cash is usually accepted in pounds, euros or Turkish lira — agree the currency when you book."
           },
           {
             "q": "What is included in the price?",
             "a": "The price includes the transfer, tolls, parking, and up to 45 minutes waiting at the airport. Extras such as child seats are listed separately."
-          },
-          {
-            "q": "Is online payment secure?",
-            "a": "Yes. Online payments are processed by Stripe, a PCI-DSS Level 1 certified provider. We never store your card details."
           }
         ]
       },
@@ -508,7 +502,7 @@
     ],
     "legalHeading": "Legal",
     "followHeading": "Follow",
-    "paymentsLine": "Secure payments via Stripe · Cards accepted · Cash on arrival",
+    "paymentsLine": "Pay cash on arrival · No prepayment required",
     "copyright": "© {year} TheTaxsi · Cyprus Chauffeur Service"
   }
 }

@@ -125,7 +125,7 @@ export const extra = {
         },
         {
           q: 'How do I pay?',
-          a: 'Pay cash to your chauffeur on arrival, or securely by card online. The price is fixed and agreed before the trip — there are no surprises at the end.',
+          a: 'Pay cash to your chauffeur on arrival — no prepayment or deposit. The price is fixed and agreed before the trip, so there are no surprises at the end.',
         },
         {
           q: 'What happens if my flight is delayed?',
@@ -268,7 +268,7 @@ export const extra = {
         },
         {
           q: 'Ödemeyi nasıl yaparım?',
-          a: 'Varışta şoförünüze nakit ödeyebilir ya da online olarak güvenle kartla ödeyebilirsiniz. Fiyat sabittir ve yolculuktan önce bellidir — sonunda sürpriz yoktur.',
+          a: 'Varışta şoförünüze nakit ödersiniz — peşin ödeme veya kapora yok. Fiyat sabittir ve yolculuktan önce bellidir, sonunda sürpriz olmaz.',
         },
         {
           q: 'Uçuşum rötar yaparsa ne olur?',
@@ -411,7 +411,7 @@ export const extra = {
         },
         {
           q: 'Как происходит оплата?',
-          a: 'Оплатите наличными водителю по прибытии или онлайн картой. Цена фиксированная и известна заранее — никаких сюрпризов в конце.',
+          a: 'Оплатите наличными водителю по прибытии — без предоплаты и депозита. Цена фиксированная и известна заранее, никаких сюрпризов в конце.',
         },
         {
           q: 'Что если мой рейс задержится?',

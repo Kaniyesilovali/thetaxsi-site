@@ -20,7 +20,7 @@ description: "What a fixed fare really includes, how flight tracking and waiting
 <ol>
   <li>You book online or over WhatsApp and receive a confirmation with the fixed fare.</li>
   <li>No deposit or advance payment is required to hold the booking.</li>
-  <li>You pay the driver on arrival — cash is accepted, often in pounds, euros or lira, or by card online if you prefer.</li>
+  <li>You pay the driver in cash on arrival — often in pounds, euros or lira.</li>
 </ol>
 <p>The amount is the one on your confirmation. It does not rise for night arrivals, traffic or a longer wait within the included time.</p>
 
@@ -36,5 +36,5 @@ description: "What a fixed fare really includes, how flight tracking and waiting
 <h3>Can the price change after I book?</h3>
 <p>No. The fare on your confirmation is fixed. It only differs if you change the booking itself — a different vehicle, an added stop, or extra waiting you request.</p>
 <h3>Which currencies can I pay in?</h3>
-<p>Cash is usually accepted in pounds, euros or Turkish lira, or you can pay by card online. Agree the currency when you book so the driver is ready.</p>
+<p>Cash is usually accepted in pounds, euros or Turkish lira. Agree the currency when you book so the driver is ready.</p>
 <p>See fixed fares on our <a href="/en/routes/">routes and prices</a> page, compare the ways to travel in <a href="/en/blog/north-cyprus-transfer-vs-taxi-vs-car-hire/">transfer vs taxi vs car hire</a>, or <a href="/en/book/">book your transfer</a>.</p>

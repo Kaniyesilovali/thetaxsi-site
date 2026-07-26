@@ -266,9 +266,7 @@
       "extrasNone": "Bu güzergah için ekstra mevcut değil.",
       "paymentHeading": "Ödeme",
       "paymentCash": "Varışta nakit",
-      "paymentCashDesc": "Doğrudan şoförünüzle ödeyin.",
-      "paymentOnline": "Online ödeme",
-      "paymentOnlineDesc": "Stripe ile güvenli ödeme."
+      "paymentCashDesc": "Doğrudan şoförünüze ödeyin. Peşin ödeme veya kapora yok."
     },
     "details": {
       "heading": "Bilgileriniz.",
@@ -416,15 +414,11 @@
         "items": [
           {
             "q": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
-            "a": "Nakit (varışta sürücüye) ve online ödeme (Stripe ile güvenli kart ödemesi) kabul ediyoruz."
+            "a": "Ödemeyi varışta şoföre nakit yaparsınız. Peşin ödeme veya kapora gerekmez; nakit çoğu zaman sterlin, euro veya Türk lirası olarak kabul edilir — para birimini rezervasyonda konuşun."
           },
           {
             "q": "Fiyata neler dahil?",
             "a": "Transfer, otoyol ücretleri, park ve havalimanında 45 dakikaya kadar bekleme süresi fiyata dahildir."
-          },
-          {
-            "q": "Online ödeme güvenli mi?",
-            "a": "Evet. Ödemeler PCI-DSS Seviye 1 sertifikalı Stripe tarafından işlenir. Kart bilgilerinizi asla saklamıyoruz."
           }
         ]
       },
@@ -508,7 +502,7 @@
     ],
     "legalHeading": "Yasal",
     "followHeading": "Takip Et",
-    "paymentsLine": "Stripe ile güvenli ödeme · Kartlar kabul edilir · Varışta nakit",
+    "paymentsLine": "Varışta nakit ödeme · Peşin ödeme gerekmez",
     "copyright": "© {year} TheTaxsi · Kıbrıs Şoförlü Transfer"
   }
 }

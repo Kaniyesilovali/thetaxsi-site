@@ -35,8 +35,8 @@ description: "How to book a North Cyprus airport transfer with confidence — no
   </tbody>
 </table>
 
-<h2>Is cash on arrival better than paying online?</h2>
-<p>Both are fine when the company is genuine; the difference is preference. Cash on arrival means nothing leaves your account until the car is there, and many drivers take pounds, euros or lira. Paying by card online suits travellers who would rather not carry cash. Either way, the fare is the fixed one on your confirmation.</p>
+<h2>How do I pay on arrival?</h2>
+<p>You pay the driver in cash once you have been met and the car is in front of you — there is no prepayment and no deposit. Many drivers accept pounds, euros or Turkish lira, so agree the currency when you book. Because nothing leaves your account until the car is there, paying on arrival keeps the risk on the company, not on you.</p>
 
 <h2>Frequently asked questions</h2>
 <h3>Do I have to create an account to book?</h3>

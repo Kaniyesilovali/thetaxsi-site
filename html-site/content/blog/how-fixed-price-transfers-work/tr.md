@@ -20,7 +20,7 @@ description: "Sabit ücret gerçekte neyi kapsar, uçuş takibi ve bekleme nası
 <ol>
   <li>Online veya WhatsApp'tan ayırtır, sabit ücretli bir teyit alırsınız.</li>
   <li>Rezervasyonu tutmak için kapora veya peşin ödeme gerekmez.</li>
-  <li>Varışta şoföre ödersiniz — nakit, çoğu zaman sterlin, euro veya lira olarak kabul edilir; isterseniz online kartla.</li>
+  <li>Varışta şoföre nakit ödersiniz — çoğu zaman sterlin, euro veya lira olarak.</li>
 </ol>
 <p>Tutar, teyidinizde yazan tutardır. Gece varışı, trafik veya dahil süre içindeki daha uzun bir bekleme için artmaz.</p>
 
@@ -36,5 +36,5 @@ description: "Sabit ücret gerçekte neyi kapsar, uçuş takibi ve bekleme nası
 <h3>Rezervasyondan sonra fiyat değişir mi?</h3>
 <p>Hayır. Teyidinizdeki ücret sabittir. Yalnızca rezervasyonun kendisini değiştirirseniz farklılaşır — başka bir araç, eklenen durak ya da talep ettiğiniz ek bekleme.</p>
 <h3>Hangi para birimleriyle ödeyebilirim?</h3>
-<p>Nakit genelde sterlin, euro veya Türk lirası olarak kabul edilir; ya da online kartla ödeyebilirsiniz. Şoför hazır olsun diye para birimini rezervasyonda konuşun.</p>
+<p>Nakit genelde sterlin, euro veya Türk lirası olarak kabul edilir. Şoför hazır olsun diye para birimini rezervasyonda konuşun.</p>
 <p>Sabit ücretleri <a href="/tr/routes/">güzergâhlar ve fiyatlar</a> sayfasında görün, seçenekleri <a href="/tr/blog/north-cyprus-transfer-vs-taxi-vs-car-hire/">transfer, taksi ve kiralık araç</a> yazısında karşılaştırın ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>

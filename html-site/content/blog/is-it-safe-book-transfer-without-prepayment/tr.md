@@ -35,8 +35,8 @@ description: "Kuzey Kıbrıs havalimanı transferini içiniz rahat ayırtmak —
   </tbody>
 </table>
 
-<h2>Varışta nakit mi, online kart mı daha iyi?</h2>
-<p>Firma gerçekse ikisi de olur; fark tercihtir. Varışta nakit, araç orada olana kadar hesabınızdan hiçbir şey çıkmaması demektir ve çoğu şoför sterlin, euro veya lira alır. Online kart, nakit taşımak istemeyen yolcuya uyar. Her iki durumda da ücret, teyidinizdeki sabit tutardır.</p>
+<h2>Varışta nasıl öderim?</h2>
+<p>Sizi karşıladıktan ve araç önünüze geldikten sonra şoföre nakit ödersiniz — peşin ödeme veya kapora yoktur. Çoğu şoför sterlin, euro veya Türk lirası kabul eder, para birimini rezervasyonda konuşun. Araç orada olana kadar hesabınızdan hiçbir şey çıkmadığı için, varışta ödeme riski sizde değil firmada tutar.</p>
 
 <h2>Sık sorulan sorular</h2>
 <h3>Ayırtmak için hesap açmam gerekir mi?</h3>
