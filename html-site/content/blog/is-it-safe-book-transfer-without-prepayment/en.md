@@ -19,6 +19,9 @@ description: "How to book a North Cyprus airport transfer with confidence — no
 <h2>How can I check a transfer company is genuine?</h2>
 <p>A few quick checks tell you most of what you need. Look for a licence — in North Cyprus, a KITSAB registration number signals a registered operator. Check that prices are published per route rather than hidden behind "contact us." And confirm there is a real contact channel, such as a working WhatsApp number that answers before you book.</p>
 
+<h2>What makes TheTaxsi a safe choice?</h2>
+<p>We work with experienced local chauffeurs who are members of the Cyprus Turkish Taxi Associations Federation (Kıbrıs Türk Taksici Dernekleri Federasyonu) — registered, licensed drivers rather than informal operators. On top of that you get a written confirmation with the driver's name and vehicle before you travel, a fixed fare published per route, and no prepayment: the driver earns the fare by turning up.</p>
+
 <h2>What should a trustworthy booking include?</h2>
 <table>
   <thead>

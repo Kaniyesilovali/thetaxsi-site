@@ -19,6 +19,9 @@ description: "Kuzey Kıbrıs havalimanı transferini içiniz rahat ayırtmak —
 <h2>Bir transfer firmasının gerçek olduğunu nasıl kontrol ederim?</h2>
 <p>Birkaç hızlı kontrol, bilmeniz gerekenin çoğunu söyler. Lisansa bakın — Kuzey Kıbrıs'ta bir KITSAB kayıt numarası, kayıtlı bir işletmeye işaret eder. Fiyatların "bize sorun" arkasına gizlenmek yerine rota başına yayınlandığını kontrol edin. Ve gerçek bir iletişim kanalı olduğundan emin olun; örneğin siz ayırtmadan önce cevap veren çalışan bir WhatsApp numarası.</p>
 
+<h2>TheTaxsi'yi güvenli kılan nedir?</h2>
+<p>Kıbrıs Türk Taksici Dernekleri Federasyonu'na bağlı, deneyimli yerel şoförlerle çalışıyoruz — gayriresmi değil, kayıtlı ve lisanslı taksiciler. Bunun üstüne, yola çıkmadan önce şoförün adı ve aracının yazılı olduğu bir teyit, rota başına yayınlanmış sabit bir ücret ve peşin ödemesizlik gelir: şoför ücreti gelerek hak eder.</p>
+
 <h2>Güvenilir bir rezervasyon neleri içermeli?</h2>
 <table>
   <thead>

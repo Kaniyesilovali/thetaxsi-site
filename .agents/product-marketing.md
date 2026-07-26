@@ -1,7 +1,7 @@
 # Product Marketing Context — TheTaxsi
 
-**Document version:** v3
-**Last updated:** 2026-07-25
+**Document version:** v4
+**Last updated:** 2026-07-26
 
 > ⚠️ Bu belge canlı siteden ve repo'dan otomatik çıkarıldı. **⚠️ VARSAYIM** işaretli
 > satırlar tahmindir — düzeltilmeden Faz 4 (içerik stratejisi) ve Faz 5 (metin) bunları
@@ -304,9 +304,17 @@ aksan. Renkli/temalı paletlerden kaçınılıyor — bkz. proje hafızası.
 > kazanç **+%115**'e kadar çıkıyor. Yani buradaki boşluk doğrudan AI görünürlüğü
 > kaybı demek.
 
-**Elimizdeki tek gerçek kanıt (2026-07-24, kullanıcıdan):**
-**Yaklaşık 35 yıllık deneyimli Kıbrıs taksicileriyle çalışılıyor.**
-Sitede hiçbir yerde geçmiyor. Faz 5'in ilk işi bunu her şablona yerleştirmek.
+**Elimizdeki gerçek kanıtlar (kullanıcıdan):**
+1. **Yaklaşık 35 yıllık deneyimli Kıbrıs taksicileriyle çalışılıyor** (2026-07-24).
+2. **Şoförler Kıbrıs Türk Taksici Dernekleri Federasyonu'na bağlı** (2026-07-26) —
+   kayıtlı, lisanslı taksiciler. Rakip ncyprustaxi'nin KITSAB #227'sinin dengi bir
+   kurumsal güven sinyali. İlk uygulandığı yer: güvenlik yazısı (`is-it-safe-book-
+   transfer-without-prepayment`, EN/TR/RU, "What makes TheTaxsi a safe choice?").
+   **Doğru ifade:** şoförler federasyona bağlı; şirketin kendisi üye değil — bu yüzden
+   schema'ya `memberOf` OLARAK EKLENMEDİ (abartı olurdu). Yayılabilecek yerler:
+   glossary tanımı, about sayfası, güven pillar hub'ı.
+
+Bunlar hâlâ çoğu sayfada geçmiyor. Faz 5'in işi bunları şablonlara yerleştirmek.
 
 Bunu kullanılabilir kanıta çevirmek için Faz 5 öncesi toplanması gerekenler:
 - Kaç şoför, her birinin kaç yıllık deneyimi (isim + fotoğraf + yıl)
@@ -332,7 +340,8 @@ hep buradan geliyor. Faz 9'un birinci maddesi.
 | Sabit fiyat | 92 rota sayfasında yayınlanmış rakam | ✅ güçlü |
 | Çok dilli hizmet | EN/TR/RU tam yerelleştirme | ✅ güçlü |
 | Sınır geçişi uzmanlığı | 2 ayrıntılı rehber yazısı | ✅ güçlü |
-| **Şoför deneyimi** | **~35 yıllık taksiciler** | ⚠️ **kanıt var, sitede kullanılmıyor — en büyük kaçırılan fırsat** |
+| **Şoför deneyimi** | **~35 yıllık taksiciler** | ⚠️ kanıt var, yalnız güvenlik yazısında kullanılıyor — diğer sayfalara yayılmalı |
+| **Kurumsal güven** | **Kıbrıs Türk Taksici Dernekleri Federasyonu üyesi şoförler** | ✅ güvenlik yazısına eklendi (2026-07-26); diğer sayfalara yayılmalı |
 | Güvenilirlik (sosyal kanıt) | — | ⛔ yorum ve GBP yok |
 | Uçuş takibi | — | ⛔ iddia var, kanıt yok |
 
@@ -356,6 +365,8 @@ becerisi Faz 10'dan **Faz 1'e alınmalı** (bkz. program state, Kararlar).
 ---
 
 ## Changelog
+
+- v4 (2026-07-26) — Yeni gerçek güven sinyali eklendi: şoförler Kıbrıs Türk Taksici Dernekleri Federasyonu'na bağlı. Kanıt Noktaları güncellendi, güvenlik yazısına (EN/TR/RU) işlendi. Schema'ya memberOf EKLENMEDİ (şirket üye değil, şoförler bağlı — abartı olmasın).
 
 - v3 (2026-07-25) — Faz 3b rakip profilleme sonucu Rekabet Ortamı bölümü ⚠️
   varsayımdan gerçek veriye çevrildi (`competitor-profiles/`). Kritik düzeltme:
