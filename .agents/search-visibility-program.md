@@ -85,8 +85,12 @@ işler" tamamlanınca Claude devam edebilir.
    (#2, 46 ince ters-yön sayfasını da çözer), RU sınır rehberi (#4). Person schema.
 3. **`sharp` bağımlılık onayı** → görselleri WebP'ye çevir (Bulgu 6). `.htaccess`
    cache tarafı hazır; onay gelince `scripts/img-webp.mjs` + `<picture>`.
-4. **Cloudflare AI Crawl Control kapat** → Faz 8 GEO baseline'ı bunsuz anlamsız.
-   Kapanınca 20-sorgu AI görünürlük ölçümü alınır (sorgu seti Carried Forward'da hazır).
+4. ✅ **Cloudflare AI Crawl Control — BİTTİ (2026-07-26).** "Managed robots.txt"
+   toggle kapatıldı; Cloudflare'in enjekte ettiği `Disallow: /` (ClaudeBot/GPTBot/
+   CCBot/Google-Extended/Bytespider/meta-externalagent) + `ai-train=no` sinyali
+   kalktı, sitenin kendi `Allow: /` robots.txt'i serve ediliyor (curl ile doğrulandı).
+   Gün-0 GEO baseline alındı → "GEO Taban Ölçümü (Faz 2)". Botlar yeni robots.txt'i
+   tarayınca (~2-4 hafta) aynı 20 sorgu yeniden ölçülecek.
 
 ### Kalan Claude-bağımsız işler (opsiyonel, istenince)
 - Hub/pillar sayfaları (#7/#10/#11) — YENİ URL demek, site-architecture kararı;
@@ -172,11 +176,54 @@ Fazlar arası girdiler — burada tutulmazsa kaybolur.
 
 ## GEO Taban Ölçümü (Faz 2)
 
-Kayıt tarihi: _henüz alınmadı_
+Kayıt tarihi: **2026-07-26** (Cloudflare Managed robots.txt kapatıldığı gün — gün-0).
+Yöntem: **arama-retrieval vekili** (WebSearch, US-locale). Bu, ChatGPT/Perplexity/
+Google-AI/Claude'un canlı citation logu DEĞİL — o dört ürünü doğrudan sorgulayacak
+araç yok. WebSearch, motorların RAG için çektiği retrieval havuzunu ölçer: taxsi
+yüzeye çıkıyor mu + kim domine ediyor. Robots.txt bloğu yeni kalktığı için botlar
+henüz yeni hali taramadı; bu, düzeltmenin **öncesi** anlık görüntüsü.
 
-| Sorgu | ChatGPT | Perplexity | Google AI | Claude | Onun yerine kim alıntılanıyor |
-|---|---|---|---|---|---|
-| | | | | | |
+**Baş sonuç: 20/20 sorguda thetaxsi.com GÖRÜNMÜYOR.** Markalı sorguda bile
+("thetaxsi north cyprus airport transfer") motor "böyle bir servis bulunamadı" dedi
+→ marka sıfır tanınırlıkta.
+
+Retrieval'ı domine edenler (tekrar edenler, azalan sıklıkla):
+- **EN:** gonorthcyprus.com, carringtontransfers.com / carringtoncyprus.com,
+  cyprustaxi.net, ncyprustaxi.com, ercantaxi.com, easycyprustransfers.com,
+  gnctaxi.com, whatsonintrnc.com + kiprarent.com (rehber), amyvillas.co.uk,
+  aggregator'lar (holidaytaxis, rome2rio, mytransfers, kiwitaxi)
+- **TR:** ercantaksi.com, kibristransfer.com, kibrisviptransfer.com,
+  ercanhavalimanitaksi.com, becemtravel.com; vize/rehber: flypgs.com, kiprarent.com
+- **RU:** kiwitaxi.ru, cypruser.ru, turktrip.ru, prokipr.ru, taxi-cyprus.eu,
+  таксинакипре.com; vize/rehber: visasam.ru, avianity.ru
+
+| # | Sorgu | Dil | taxsi retrieval'da? | Domine eden kaynaklar |
+|---|---|---|---|---|
+| 1 | how to get from Ercan airport to Kyrenia | EN | ❌ | mytransfers, rome2rio, ercanairport.taxi, holidaytaxis, cyprustaxi.net |
+| 2 | Larnaca airport to North Cyprus taxi border crossing | EN | ❌ | amyvillas, gonorthcyprus, carringtoncyprus, whatsonintrnc, ncyprustaxi |
+| 3 | North Cyprus airport transfer price | EN | ❌ | falaktransfer, ncyprustaxi, carringtontransfers, purpleparking |
+| 4 | Ercan or Larnaca for Kyrenia | EN | ❌ | gonorthcyprus, TripAdvisor, kyreniatransfers, ercantaxi, carrington |
+| 5 | do I need a visa for North Cyprus | EN | ❌ | Wikipedia, visitncy, flypgs, kiprarent, whatsonintrnc |
+| 6 | is it safe to cross into North Cyprus border | EN | ❌ | hazelstravels, giveback.guide, whatsonintrnc, kiprarent |
+| 7 | Ercan airport to Famagusta transfer taxi | EN | ❌ | gonorthcyprus, uptransfers, holidaytaxis, ercantaxi, ncyprustaxi, cyprustaxi.net |
+| 8 | best North Cyprus airport transfer company reliable | EN | ❌ | gnctaxi, ncyprustaxi, cyprusparadise, carrington, easycyprustransfers, gonorthcyprus |
+| 9 | Larnaca to Kyrenia transfer price cheapest | EN | ❌ | rome2rio, kiwitaxi, cheap-taxis, suntransfers, ercantaxi |
+| 10 | Ercan havalimanı Girne transfer taksi kaç para | TR | ❌ | yeniistiklal, kibrisviptransfer, ercantaksi, kibristransfer |
+| 11 | Larnaka Kuzey Kıbrıs sınır geçiş transfer | TR | ❌ | becemtravel, booking2cyprus, kuzeykibrisevler, kiprarent |
+| 12 | KKTC vize pasaport gerekli mi | TR | ❌ | neredekal, ayazrentacar, flypgs, ercanhavalimani |
+| 13 | Ercan Gazimağusa transfer taksi | TR | ❌ | ercanhavalimanitaksi, ercantaksi, magusaulastaksi, kibrisviptransfer |
+| 14 | Kıbrıs havalimanı transfer güvenilir şoför | TR | ❌ | araltransfer, falaktransfer, kibristransfervetur, seyahatkibris |
+| 15 | трансфер аэропорт Эрджан Кирения такси | RU | ❌ | kiwitaxi.ru, cypruser.ru, taxi-cyprus.eu, turktrip.ru, prokipr.ru |
+| 16 | трансфер Ларнака Северный Кипр заказать | RU | ❌ | vc.ru, kiwitaxi.ru, cyprus24.taxi, larnaca-taxi.ru, таксинакипре |
+| 17 | виза Северный Кипр нужна ли | RU | ❌ | visasam, letsfly, avianity, vizavsem, kipr-tp |
+| 18 | такси Эрджан Фамагуста трансфер | RU | ❌ | kiwitaxi.ru, cypruser.ru, prokipr.ru, unitaxi.ru |
+| 19 | thetaxsi north cyprus airport transfer (marka) | EN | ❌ | suntransfers, gonorthcyprus, gnctaxi, ncyprustaxi — "taxsi bulunamadı" |
+| 20 | taxsi Ercan transfer Kıbrıs (marka) | TR | ❌ | ayazrentacar, kibrishavaalanitransfer, kibristransferim, ercantaksi |
+
+**Okuma:** gonorthcyprus + carrington + cyprustaxi.net + ncyprustaxi EN'de; ercantaksi
++ kibristransfer TR'de; kiwitaxi.ru + cypruser.ru RU'da tekrar tekrar çıkan "varsayılan"
+kaynaklar. Bunlar Faz 9 backlink/dağıtım ve Faz 8 içerik hedeflerinin ölçütü.
+Yeniden ölçüm: botlar yeni robots.txt'i tarayınca (~2-4 hafta), aynı 20 sorgu.
 
 ## Kararlar
 
