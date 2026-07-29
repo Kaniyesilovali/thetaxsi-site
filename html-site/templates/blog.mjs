@@ -148,6 +148,8 @@ export function renderBlogPost(ctx, post) {
   </div>
   <div class="relative mx-auto max-w-3xl px-5 pt-14 pb-14 sm:px-8 lg:pt-16 lg:pb-16">
     <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
+      <a href="${href(lang, '/')}" class="transition-colors hover:text-ink">${esc(xtra.nav.home)}</a>
+      <span class="mx-2 text-ink/25">/</span>
       <a href="${href(lang, '/blog/')}" class="transition-colors hover:text-ink">${esc(t.title)}</a>
       <span class="mx-2 text-ink/25">/</span>
       <span class="text-ink">${esc(formatDate(post.date, lang))}</span>
@@ -206,8 +208,9 @@ export function renderBlogPost(ctx, post) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: t.title, item: `${config.siteUrl}${href(lang, '/blog/')}` },
-        { '@type': 'ListItem', position: 2, name: title, item: `${config.siteUrl}${href(lang, path)}` },
+        { '@type': 'ListItem', position: 1, name: xtra.nav.home, item: `${config.siteUrl}${href(lang, '/')}` },
+        { '@type': 'ListItem', position: 2, name: t.title, item: `${config.siteUrl}${href(lang, '/blog/')}` },
+        { '@type': 'ListItem', position: 3, name: title, item: `${config.siteUrl}${href(lang, path)}` },
       ],
     },
   ]

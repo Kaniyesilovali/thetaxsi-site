@@ -33,7 +33,7 @@ function header(ctx) {
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="${href(l, path)}" class="px-1.5 text-[12px] font-medium ${active ? 'text-sea' : 'text-ink/40 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
+      return `<a href="${href(l, path)}" hreflang="${l}" lang="${l}" class="px-1.5 text-[12px] font-medium ${active ? 'text-sea' : 'text-ink/40 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${l.toUpperCase()}</a>`
     })
     .join('<span class="text-ink/15">·</span>')
 
@@ -101,7 +101,7 @@ function footer(ctx) {
   const langLinks = config.languages
     .map((l) => {
       const active = l === lang
-      return `<a href="${href(l, path)}" class="transition-colors ${active ? 'text-sea' : 'text-ink/45 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
+      return `<a href="${href(l, path)}" hreflang="${l}" lang="${l}" class="transition-colors ${active ? 'text-sea' : 'text-ink/45 hover:text-ink'}" ${active ? 'aria-current="true"' : ''}>${langNames[l] || l.toUpperCase()}</a>`
     })
     .join('<span class="text-ink/20">·</span>')
 

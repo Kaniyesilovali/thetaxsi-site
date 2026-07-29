@@ -265,6 +265,8 @@ export function renderRouteDetail(ctx, route) {
   </div>
   <div class="relative mx-auto max-w-6xl px-5 pt-14 pb-16 sm:px-8 lg:pt-16 lg:pb-20">
     <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
+      <a href="${href(lang, '/')}" class="transition-colors hover:text-ink">${esc(xtra.nav.home)}</a>
+      <span class="mx-2 text-ink/25">/</span>
       <a href="${href(lang, '/routes/')}" class="transition-colors hover:text-ink">${esc(rd.breadcrumbRoutes)}</a>
       <span class="mx-2 text-ink/25">/</span>
       <span class="text-ink">${esc(to)}</span>
@@ -347,8 +349,9 @@ ${faqSectionHtml}`
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: rd.breadcrumbRoutes, item: `${config.siteUrl}${href(lang, '/routes/')}` },
-        { '@type': 'ListItem', position: 2, name: label, item: `${config.siteUrl}${href(lang, path)}` },
+        { '@type': 'ListItem', position: 1, name: xtra.nav.home, item: `${config.siteUrl}${href(lang, '/')}` },
+        { '@type': 'ListItem', position: 2, name: rd.breadcrumbRoutes, item: `${config.siteUrl}${href(lang, '/routes/')}` },
+        { '@type': 'ListItem', position: 3, name: label, item: `${config.siteUrl}${href(lang, path)}` },
       ],
     },
   ]
