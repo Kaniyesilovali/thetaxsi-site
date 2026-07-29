@@ -315,7 +315,9 @@
     "tableHeading": "Route",
     "filterLabel": "Filter routes by airport",
     "filterAll": "All routes",
-    "filterResult": "Showing {count} routes"
+    "filterResult": "Showing {count} routes",
+    "returnTitle": "Return transfers",
+    "returnSubtitle": "Heading back to the airport? Same fixed price in the other direction — pick your pickup point."
   },
   "about": {
     "meta": {

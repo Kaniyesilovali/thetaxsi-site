@@ -1,7 +1,7 @@
 import { esc, fmt, icons, page, pageHero } from './layout.mjs'
 import { href } from '../data/slugs.mjs'
 import { config } from '../site.config.mjs'
-import { routes, connectingRoutes } from '../data/routes.mjs'
+import { routes, reverseRoutes, connectingRoutes } from '../data/routes.mjs'
 import { routeCopy } from '../data/route-copy.mjs'
 import { posts } from '../data/posts.mjs'
 import { locationGroups } from '../data/locations.mjs'
@@ -38,6 +38,18 @@ export function renderRoutesIndex(ctx) {
           : 'border-line bg-paper text-ink hover:border-ink'
       }">${esc(label)} <span class="text-[11px] tabular-nums opacity-60">${count}</span></button>`
 
+  // Dönüş yönleri kart ızgarasına girmez (liste iki katına çıkar, sayfa dağılır),
+  // ama her dönüş sayfasının hub'dan bir linki olmalı: yoksa yalnızca kardeş rota
+  // sayfalarından erişilir, üç tık derinde kalır ve Search Console'da
+  // "Keşfedildi – dizine eklenmedi" olarak birikir. Varış noktasına göre gruplanır.
+  const returnGroups = []
+  for (const r of reverseRoutes) {
+    const key = r.toValue
+    let group = returnGroups.find((g) => g.key === key)
+    if (!group) returnGroups.push((group = { key, label: r.to[lang], items: [] }))
+    group.items.push(r)
+  }
+
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
 <section class="bg-fog py-20 lg:py-28">
@@ -69,6 +81,29 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
       </a>`,
         )
         .join('')}
+    </div>
+
+    <div class="mt-16 border-t border-line pt-12">
+      <h2 class="text-xl font-semibold text-ink">${esc(t.returnTitle)}</h2>
+      <p class="mt-2 max-w-2xl text-[15px] text-slate">${esc(t.returnSubtitle)}</p>
+      <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        ${returnGroups
+          .map(
+            (g) => `
+        <div>
+          <h3 class="text-[13px] font-medium uppercase tracking-wide text-slate">${esc(g.label)}</h3>
+          <ul class="mt-3 space-y-2">
+            ${g.items
+              .map(
+                (r) => `
+            <li><a href="${href(lang, `/routes/${r.slug}/`)}" class="text-[15px] text-ink transition-colors hover:text-sea">${esc(routeLabel(r, lang))} <span class="tabular-nums text-slate">${cur}${r.price}</span></a></li>`,
+              )
+              .join('')}
+          </ul>
+        </div>`,
+          )
+          .join('')}
+      </div>
     </div>
   </div>
 </section>`

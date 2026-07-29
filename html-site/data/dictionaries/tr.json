@@ -315,7 +315,9 @@
     "tableHeading": "Güzergah",
     "filterLabel": "Güzergahları havalimanına göre filtrele",
     "filterAll": "Tüm güzergahlar",
-    "filterResult": "{count} güzergah listeleniyor"
+    "filterResult": "{count} güzergah listeleniyor",
+    "returnTitle": "Dönüş transferleri",
+    "returnSubtitle": "Havalimanına dönüş de aynı sabit fiyata. Sizi alacağımız bölgeyi seçin."
   },
   "about": {
     "meta": {

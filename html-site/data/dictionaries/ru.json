@@ -315,7 +315,9 @@
     "tableHeading": "Маршрут",
     "filterLabel": "Фильтр маршрутов по аэропорту",
     "filterAll": "Все маршруты",
-    "filterResult": "Показано маршрутов: {count}"
+    "filterResult": "Показано маршрутов: {count}",
+    "returnTitle": "Обратные трансферы",
+    "returnSubtitle": "Обратно в аэропорт — та же фиксированная цена. Выберите место подачи."
   },
   "about": {
     "meta": {
