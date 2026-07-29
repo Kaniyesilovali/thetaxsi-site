@@ -1,0 +1,207 @@
+# Yeni rota sayfaları — 48 rota × 3 dil = 144 sayfa
+
+_Push edilmeden canlıda görünmez._
+
+## Ercan Havalimanı — gidiş
+
+- **Çatalköy Oteller Bölgesi** · £70 · 45 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-catalkoy-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-catalkoy-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-oteli-chatalkoya/
+- **Alsancak Oteller Bölgesi** · £70 · 45 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-alsancak-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-alsancak-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-oteli-alsandzhaka/
+- **Lapta** · £75 · 50 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-lapta/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-lapta-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-lapta/
+- **Karşıyaka** · £80 · 55 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-karsiyaka/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-karsiyaka-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-karshiyaka/
+- **Esentepe Oteller Bölgesi** · £80 · 55 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-esentepe-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-esentepe-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-oteli-esentepe/
+- **Boğaz** · £70 · 50 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-bogaz/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-bogaz-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-bogaz/
+- **Karpaz Otelleri** · £120 · 95 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-karpaz-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-karpaz-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-oteli-karpaza/
+- **Lefke** · £80 · 70 dk
+  - EN: https://thetaxsi.com/en/routes/ercan-airport-to-lefke/
+  - TR: https://thetaxsi.com/tr/guzergahlar/ercan-havalimani-lefke-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-erdzhan-lefke/
+
+## Larnaka Havalimanı — gidiş
+
+- **Çatalköy Oteller Bölgesi** · £110 · 85 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-catalkoy-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-catalkoy-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-oteli-chatalkoya/
+- **Alsancak Oteller Bölgesi** · £115 · 85 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-alsancak-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-alsancak-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-oteli-alsandzhaka/
+- **Lapta** · £120 · 90 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-lapta/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-lapta-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-lapta/
+- **Karşıyaka** · £125 · 95 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-karsiyaka/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-karsiyaka-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-karshiyaka/
+- **Esentepe Oteller Bölgesi** · £125 · 90 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-esentepe-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-esentepe-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-oteli-esentepe/
+- **Boğaz** · £115 · 80 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-bogaz/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-bogaz-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-bogaz/
+- **Karpaz Otelleri** · £165 · 135 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-karpaz-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-karpaz-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-oteli-karpaza/
+- **Lefke** · £120 · 120 dk
+  - EN: https://thetaxsi.com/en/routes/larnaca-airport-to-lefke/
+  - TR: https://thetaxsi.com/tr/guzergahlar/larnaka-havalimani-lefke-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-larnaka-lefke/
+
+## Baf Havalimanı — gidiş
+
+- **Çatalköy Oteller Bölgesi** · £190 · 130 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-catalkoy-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-catalkoy-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-oteli-chatalkoya/
+- **Alsancak Oteller Bölgesi** · £170 · 122 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-alsancak-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-alsancak-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-oteli-alsandzhaka/
+- **Lapta** · £165 · 117 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-lapta/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-lapta-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-lapta/
+- **Karşıyaka** · £160 · 112 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-karsiyaka/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-karsiyaka-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-karshiyaka/
+- **Esentepe Oteller Bölgesi** · £205 · 142 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-esentepe-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-esentepe-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-oteli-esentepe/
+- **Boğaz** · £230 · 165 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-bogaz/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-bogaz-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-bogaz/
+- **Karpaz Otelleri** · £300 · 210 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-karpaz-hotels/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-karpaz-otelleri-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-oteli-karpaza/
+- **Lefke** · £110 · 95 dk
+  - EN: https://thetaxsi.com/en/routes/paphos-airport-to-lefke/
+  - TR: https://thetaxsi.com/tr/guzergahlar/baf-havalimani-lefke-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-aeroport-pafos-lefke/
+
+## Dönüş yönü (şehir → havalimanı)
+
+- **Çatalköy Oteller Bölgesi → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/catalkoy-hotels-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/catalkoy-otelleri-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-chatalkoya-aeroport-erdzhan/
+- **Alsancak Oteller Bölgesi → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/alsancak-hotels-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/alsancak-otelleri-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-alsandzhaka-aeroport-erdzhan/
+- **Lapta → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/lapta-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/lapta-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-lapta-aeroport-erdzhan/
+- **Karşıyaka → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/karsiyaka-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/karsiyaka-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-karshiyaka-aeroport-erdzhan/
+- **Esentepe Oteller Bölgesi → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/esentepe-hotels-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/esentepe-otelleri-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-esentepe-aeroport-erdzhan/
+- **Boğaz → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/bogaz-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/bogaz-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-bogaz-aeroport-erdzhan/
+- **Karpaz Otelleri → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/karpaz-hotels-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/karpaz-otelleri-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-karpaza-aeroport-erdzhan/
+- **Lefke → Ercan Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/lefke-to-ercan-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/lefke-ercan-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-lefke-aeroport-erdzhan/
+- **Çatalköy Oteller Bölgesi → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/catalkoy-hotels-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/catalkoy-otelleri-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-chatalkoya-aeroport-larnaka/
+- **Alsancak Oteller Bölgesi → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/alsancak-hotels-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/alsancak-otelleri-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-alsandzhaka-aeroport-larnaka/
+- **Lapta → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/lapta-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/lapta-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-lapta-aeroport-larnaka/
+- **Karşıyaka → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/karsiyaka-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/karsiyaka-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-karshiyaka-aeroport-larnaka/
+- **Esentepe Oteller Bölgesi → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/esentepe-hotels-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/esentepe-otelleri-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-esentepe-aeroport-larnaka/
+- **Boğaz → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/bogaz-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/bogaz-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-bogaz-aeroport-larnaka/
+- **Karpaz Otelleri → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/karpaz-hotels-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/karpaz-otelleri-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-karpaza-aeroport-larnaka/
+- **Lefke → Larnaka Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/lefke-to-larnaca-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/lefke-larnaka-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-lefke-aeroport-larnaka/
+- **Çatalköy Oteller Bölgesi → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/catalkoy-hotels-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/catalkoy-otelleri-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-chatalkoya-aeroport-pafos/
+- **Alsancak Oteller Bölgesi → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/alsancak-hotels-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/alsancak-otelleri-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-alsandzhaka-aeroport-pafos/
+- **Lapta → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/lapta-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/lapta-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-lapta-aeroport-pafos/
+- **Karşıyaka → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/karsiyaka-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/karsiyaka-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-karshiyaka-aeroport-pafos/
+- **Esentepe Oteller Bölgesi → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/esentepe-hotels-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/esentepe-otelleri-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-esentepe-aeroport-pafos/
+- **Boğaz → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/bogaz-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/bogaz-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-bogaz-aeroport-pafos/
+- **Karpaz Otelleri → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/karpaz-hotels-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/karpaz-otelleri-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-oteli-karpaza-aeroport-pafos/
+- **Lefke → Baf Havalimanı**
+  - EN: https://thetaxsi.com/en/routes/lefke-to-paphos-airport/
+  - TR: https://thetaxsi.com/tr/guzergahlar/lefke-baf-havalimani-transfer/
+  - RU: https://thetaxsi.com/ru/marshruty/transfer-lefke-aeroport-pafos/
