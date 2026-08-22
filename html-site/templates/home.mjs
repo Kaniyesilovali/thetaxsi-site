@@ -539,9 +539,10 @@ export function renderHome(ctx) {
   </div>
 </section>`
 
-  // priceRange rota fiyatlarından türetilir — gerçek veri, uydurma değil.
+  // Fiyat aralığı rota fiyatlarından türetilir — gerçek veri, uydurma değil.
   const routePrices = routes.map((r) => r.price)
-  const priceRange = `${cur}${Math.min(...routePrices)}–${cur}${Math.max(...routePrices)}`
+  const lowPrice = Math.min(...routePrices)
+  const highPrice = Math.max(...routePrices)
 
   const jsonld = [
     {
@@ -551,16 +552,30 @@ export function renderHome(ctx) {
       url: `${config.siteUrl}/${lang}/`,
       inLanguage: lang,
     },
+    // TaxiService bir Service'tir, LocalBusiness DEĞİL. Eskiden burada telephone /
+    // email / priceRange vardı: bunlar Service'in özellikleri değil, işletmenin
+    // özellikleri. Sonuç, adresi olmayan ikinci bir "işletme" bildirimiydi —
+    // Rich Results Test bunu "Missing field 'address'" ile geçersiz sayıyordu ve
+    // data/schema.mjs'in tek @id'li işletme kurgusunu da bölüyordu. Doğru kurgu:
+    // iletişim/adres tek işletme düğümünde kalır, buradaki düğüm ona provider ile
+    // bağlanır ve fiyatı Service'in kendi alanı olan offers üzerinden bildirir.
     {
       '@context': 'https://schema.org',
       '@type': 'TaxiService',
       name: config.brand,
+      serviceType: 'Airport transfer',
       url: `${config.siteUrl}/${lang}/`,
-      telephone: config.phoneHref,
-      email: config.email,
-      areaServed: 'Northern Cyprus',
-      priceRange,
+      areaServed: { '@type': 'AdministrativeArea', name: 'Northern Cyprus' },
       provider: businessRef,
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: config.currencyCode,
+        lowPrice,
+        highPrice,
+        offerCount: routePrices.length,
+        availability: 'https://schema.org/InStock',
+        url: `${config.siteUrl}${href(lang, '/routes/')}`,
+      },
     },
   ]
 

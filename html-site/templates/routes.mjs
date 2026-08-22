@@ -342,6 +342,8 @@ ${faqSectionHtml}`
         '@type': 'Offer',
         price: route.price,
         priceCurrency: config.currencyCode,
+        // 7/24 dispatch beyanıyla tutarlı — rota her zaman rezerve edilebilir.
+        availability: 'https://schema.org/InStock',
         url: `${config.siteUrl}${href(lang, path)}`,
       },
     },

@@ -54,11 +54,20 @@ export function businessNode(lang = config.defaultLang) {
       opens: '00:00',
       closes: '23:59',
     },
-    availableLanguage: [
-      { '@type': 'Language', name: 'English' },
-      { '@type': 'Language', name: 'Turkish' },
-      { '@type': 'Language', name: 'Russian' },
-    ],
+    // availableLanguage doğrudan LocalBusiness'te GEÇERSİZ — schema.org'da yalnızca
+    // ContactPoint / Course / LodgingBusiness / ServiceChannel / TouristAttraction
+    // alanlarında tanımlı. Doğru yeri, işletmenin iletişim noktası düğümü.
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      telephone: config.phoneHref,
+      email: config.email,
+      availableLanguage: [
+        { '@type': 'Language', name: 'English' },
+        { '@type': 'Language', name: 'Turkish' },
+        { '@type': 'Language', name: 'Russian' },
+      ],
+    },
   }
   if (socials.length) node.sameAs = socials
   return node
