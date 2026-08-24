@@ -34,7 +34,6 @@ export function businessNode(lang = config.defaultLang) {
     '@id': businessId,
     name: config.brand,
     url: `${config.siteUrl}/${lang}/`,
-    telephone: config.phoneHref,
     email: config.email,
     priceRange: '£45–£300',
     image: `${config.siteUrl}/assets/img/og.jpg`,
@@ -60,7 +59,6 @@ export function businessNode(lang = config.defaultLang) {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      telephone: config.phoneHref,
       email: config.email,
       availableLanguage: [
         { '@type': 'Language', name: 'English' },
@@ -68,6 +66,12 @@ export function businessNode(lang = config.defaultLang) {
         { '@type': 'Language', name: 'Russian' },
       ],
     },
+  }
+  // Telefon hattı site.config.mjs'te boşken `telephone` alanı hiç basılmaz —
+  // boş string geçersiz yapısal veri sayılır. Numara doldurulunca geri gelir.
+  if (config.phoneHref) {
+    node.telephone = config.phoneHref
+    node.contactPoint.telephone = config.phoneHref
   }
   if (socials.length) node.sameAs = socials
   return node

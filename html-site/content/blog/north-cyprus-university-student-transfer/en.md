@@ -66,4 +66,4 @@ description: "Student airport transfers in North Cyprus: fixed prices from Ercan
 <h3>Does the same price apply to the return?</h3>
 <p>Yes. Reverse routes cost the same, and booking both directions together is cheaper still — Ercan to Famagusta return is £100, for example. For an early end-of-term flight, just tell us the pick-up time.</p>
 
-<p>If a new term is coming up, plan it now: <a href="/en/routes/">see the fixed prices to your campus city</a> or <a href="/en/book/">book your transfer in two minutes</a>. For extra luggage, a group booking or a regular campus run, message us on <a href="tel:+905488616939">+90 548 861 69 39</a>.</p>
+<p>If a new term is coming up, plan it now: <a href="/en/routes/">see the fixed prices to your campus city</a> or <a href="/en/book/">book your transfer in two minutes</a>. For extra luggage, a group booking or a regular campus run, <a href="/en/contact/">get in touch</a>.</p>

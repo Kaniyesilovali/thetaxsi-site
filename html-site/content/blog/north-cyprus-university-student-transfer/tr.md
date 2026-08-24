@@ -66,4 +66,4 @@ description: "KKTC üniversite öğrenci transferi: Ercan, Larnaka ve Baf'tan Ga
 <h3>Aynı fiyat dönüş için de geçerli mi?</h3>
 <p>Evet. Ters yön rotalar aynı fiyattadır ve gidiş-dönüşü birlikte rezerve ederseniz daha da uygun olur — örneğin Ercan – Gazimağusa gidiş-dönüş £100. Dönem sonu sabah erken uçuşları için alım saatini bize söylemeniz yeterli.</p>
 
-<p>Yeni dönem yaklaşıyorsa şimdi planlayın: <a href="/tr/routes/">kampüsünüze giden sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada transferinizi rezerve edin</a>. Bagaj, kalabalık grup ya da düzenli kampüs yolculuğu için <a href="tel:+905488616939">+90 548 861 69 39</a> numarasından yazabilirsiniz.</p>
+<p>Yeni dönem yaklaşıyorsa şimdi planlayın: <a href="/tr/routes/">kampüsünüze giden sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada transferinizi rezerve edin</a>. Bagaj, kalabalık grup ya da düzenli kampüs yolculuğu için <a href="/tr/contact/">bize yazabilirsiniz</a>.</p>

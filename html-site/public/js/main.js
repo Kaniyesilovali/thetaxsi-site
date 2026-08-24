@@ -716,7 +716,11 @@
       })
 
       document.getElementById('bf-success').classList.remove('hidden')
-      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(message), '_blank')
+      // WhatsApp hattı site.config.mjs'te boşken pencere açılmaz; talep yalnızca
+      // Sheets'e düşer ve kullanıcı düz onay mesajını görür.
+      if (WHATSAPP) {
+        window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(message), '_blank')
+      }
     })
   }
 

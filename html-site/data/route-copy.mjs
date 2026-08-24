@@ -392,7 +392,7 @@ const routeCopyMain = {
   "ercan-airport-to-guzelyurt": {
     "guide": "guzelyurt-morphou-transfer-guide",
     "en": {
-      "intro": "Güzelyurt, Morphou on older maps, sits in the citrus country west of Nicosia. From Ercan it is fifty-two kilometres straight across the middle of the island, about fifty minutes, no border and no mountain. The line is run directly by Halit Yeşilovalı, who also drives the town and campus runs.",
+      "intro": "Güzelyurt, Morphou on older maps, sits in the citrus country west of Nicosia. From Ercan it is fifty-two kilometres straight across the middle of the island, about fifty minutes, no border and no mountain. The line is run directly by Denizli Taksi, who also drives the town and campus runs.",
       "notes": [
         "The town is low and wide with few taxis on the street, and almost none late, so an evening ride here is something you book rather than find.",
         "Kalkanlı and the METU campus, the European University of Lefke and KSTÜ all sit within the same half hour, and term-start arrivals go straight to the halls.",
@@ -411,7 +411,7 @@ const routeCopyMain = {
       "returnIntro": "Güzelyurt to Ercan is fifty minutes back across the plain, and the pickup usually comes to a house, a dorm or a campus gate rather than a hotel. Early term-end flights are the common case, and repeat runs can be agreed in advance."
     },
     "tr": {
-      "intro": "Eski haritalarda Omorfo diye geçen Güzelyurt, Lefkoşa'nın batısındaki narenciye bölgesinin merkezi. Ercan'dan elli iki kilometre, adanın ortasından dümdüz, yaklaşık elli dakika; sınır da yok dağ da. Hattı doğrudan Halit Yeşilovalı yürütüyor; şehir içi ve kampüs yolculuklarını da o sürüyor. Uçuş numaranızı verin, iniş saatine göre kapıda olalım.",
+      "intro": "Eski haritalarda Omorfo diye geçen Güzelyurt, Lefkoşa'nın batısındaki narenciye bölgesinin merkezi. Ercan'dan elli iki kilometre, adanın ortasından dümdüz, yaklaşık elli dakika; sınır da yok dağ da. Hattı doğrudan Denizli Taksi yürütüyor; şehir içi ve kampüs yolculuklarını da o sürüyor. Uçuş numaranızı verin, iniş saatine göre kapıda olalım.",
       "notes": [
         "Şehir alçak ve geniş; sokakta bekleyen taksi az, gece neredeyse hiç yok. Buradaki akşam yolculuğu bulunacak değil, önceden ayarlanacak bir şey.",
         "Kalkanlı'daki ODTÜ Kuzey Kıbrıs Kampüsü, Lefke Avrupa Üniversitesi ve KSTÜ aynı yarım saatlik çember içinde; dönem başı gelenleri doğrudan yurda bırakırız.",
@@ -430,7 +430,7 @@ const routeCopyMain = {
       "returnIntro": "Güzelyurt'tan Ercan'a dönüş yine ovadan elli dakika; alış çoğu zaman evin, yurdun ya da kampüs kapısının önünden olur, otelden değil. Dönem sonu uçuşları erken saatte; düzenli yolculuklar önceden karara bağlanır."
     },
     "ru": {
-      "intro": "Гюзельюрт — на старых картах Морфу — центр цитрусового края к западу от Никосии. От Эрджана пятьдесят два километра напрямую через середину острова, около пятидесяти минут, без границы и без гор. Направление ведёт лично Халит Йешиловалы: он встречает в аэропорту с табличкой и он же возит по городу и на кампусы.",
+      "intro": "Гюзельюрт — на старых картах Морфу — центр цитрусового края к западу от Никосии. От Эрджана пятьдесят два километра напрямую через середину острова, около пятидесяти минут, без границы и без гор. Направление ведёт лично Denizli Taksi: он встречает в аэропорту с табличкой и он же возит по городу и на кампусы.",
       "notes": [
         "Город низкий и растянутый, такси на улице мало, а поздним вечером почти нет: поездку здесь заказывают заранее, а не ищут на месте.",
         "Калканлы с кампусом METU, Европейский университет Лефке и KSTÜ укладываются в те же полчаса, а приезд к началу семестра идёт прямо к общежитию.",
@@ -1235,7 +1235,7 @@ const routeCopyMain = {
       "intro": "Of everywhere in the north, Güzelyurt is the one place Paphos genuinely suits: 115 kilometres towards the citrus plain rather than a crossing of the whole island. We use the Bostancı (Astromeritis) checkpoint just south of the town, which avoids doubling back through Nicosia. The drive runs about an hour and fifty.",
       "notes": [
         "Bostancı is a quiet checkpoint and usually takes a few minutes. You stay in the car with passports ready, and passengers pay nothing at the crossing.",
-        "This line is run directly by Halit Yeşilovalı, who drives it regularly and knows which lane moves at which hour.",
+        "This line is run directly by Denizli Taksi, who drives it regularly and knows which lane moves at which hour.",
         "A seven-seat Vito is on the fixed price list for this route, so a large family or a term of luggage is priced before you fly rather than after."
       ],
       "faq": [
@@ -1248,13 +1248,13 @@ const routeCopyMain = {
           "a": "Yes, and term-start runs are regular work on this line. Give the campus, the block and the number of suitcases when you book, and if the bags outgrow a saloon we send the Vito at its fixed price."
         }
       ],
-      "returnIntro": "Güzelyurt back to Paphos runs through Bostancı and down the west of the island in under two hours, which still means an early start for a morning flight. Ask Halit for the pickup time and give him the bag count while you are at it."
+      "returnIntro": "Güzelyurt back to Paphos runs through Bostancı and down the west of the island in under two hours, which still means an early start for a morning flight. Ask Denizli Taksi for the pickup time and give him the bag count while you are at it."
     },
     "tr": {
       "intro": "Kuzeyde Baf'ın gerçekten yakıştığı tek yer Güzelyurt: adanın tamamını geçmek yerine narenciye ovasına doğru 115 kilometre. Kasabanın hemen güneyindeki Bostancı (Astromeritis) kapısını kullanırız; bu, Lefkoşa üzerinden dolaşmayı ortadan kaldırır. Yol yaklaşık bir saat elli dakika sürer. Baf, kuzeyin batısına gelenler için gerçekten kullanışlı bir kapıdır.",
       "notes": [
         "Bostancı sakin bir kapıdır, genelde birkaç dakika sürer. Pasaportlar elinizde araçta oturursunuz; yolcudan geçişte ücret alınmaz.",
-        "Bu hattı doğrudan Halit Yeşilovalı işletiyor. Yolu düzenli gidiyor, hangi şeridin hangi saatte aktığını biliyor.",
+        "Bu hattı doğrudan Denizli Taksi işletiyor. Yolu düzenli gidiyor, hangi şeridin hangi saatte aktığını biliyor.",
         "Yedi kişilik Vito bu güzergâhta sabit fiyat listesinde yer alıyor; kalabalık bir aile ya da bir dönemlik bagaj uçmadan önce fiyatlanıyor, sonrasında değil."
       ],
       "faq": [
@@ -1267,13 +1267,13 @@ const routeCopyMain = {
           "a": "Evet, dönem başı yolculukları bu hattın düzenli işi. Rezervasyonda kampüsü, bloğu ve valiz sayısını yazın; bagaj binek aracı aşarsa sabit fiyatlı Vito'yu gönderiyoruz. Kampüs içinde hangi kapıda inmek istediğinizi de belirtebilirsiniz."
         }
       ],
-      "returnIntro": "Güzelyurt'tan Baf'a dönüş yine Bostancı üzerinden ve adanın batısından, iki saatin altında. Yine de sabah uçuşu erken kalkmak demek. Alış saatini Halit'e sorun, bagaj sayısını da o an söyleyin; sabahın erken saatinde de yola çıkarız."
+      "returnIntro": "Güzelyurt'tan Baf'a dönüş yine Bostancı üzerinden ve adanın batısından, iki saatin altında. Yine de sabah uçuşu erken kalkmak demek. Alış saatini Denizli Taksi'ye sorun, bagaj sayısını da o an söyleyin; sabahın erken saatinde de yola çıkarız."
     },
     "ru": {
       "intro": "Из всего севера Пафос по-настоящему подходит одному месту — Гюзельюрту: 115 километров в сторону цитрусовой равнины вместо переезда через весь остров. Мы идём через пункт Бостанджи (Астромеритис) сразу к югу от города, что снимает необходимость крюка через Никосию. Дорога занимает около часа пятидесяти. Машина одна на весь путь, пересадки на линии нет.",
       "notes": [
         "Бостанджи — спокойный переход, обычно несколько минут. Вы сидите в машине с паспортами наготове, платы с пассажиров нет.",
-        "Линию ведёт лично Халит Йешиловалы: он ездит здесь регулярно и знает, какая полоса в какой час движется.",
+        "Линию ведёт лично Denizli Taksi: он ездит здесь регулярно и знает, какая полоса в какой час движется.",
         "Семиместный Vito на этом маршруте есть в фиксированном прайсе, поэтому большая семья или багаж на семестр считаются до вылета, а не после."
       ],
       "faq": [
@@ -1286,7 +1286,7 @@ const routeCopyMain = {
           "a": "Да, поездки к началу семестра — обычная работа на этой линии. Укажите кампус, корпус и число чемоданов при бронировании; если багаж не помещается в седан, отправим Vito по фиксированной цене."
         }
       ],
-      "returnIntro": "Обратно из Гюзельюрта в Пафос — снова через Бостанджи и вниз по западу острова, меньше двух часов. Но утренний рейс всё равно означает ранний подъём. Спросите у Халита время подачи, он поставит его от вылета."
+      "returnIntro": "Обратно из Гюзельюрта в Пафос — снова через Бостанджи и вниз по западу острова, меньше двух часов. Но утренний рейс всё равно означает ранний подъём. Спросите у Denizli Taksi время подачи, он поставит его от вылета."
     }
   },
   "guzelyurt-to-limassol": {
@@ -1308,7 +1308,7 @@ const routeCopyMain = {
           "a": "Usually not. Cars rented on one side of the line often cannot be taken to the other, and rental insurance rarely covers the crossing. A private transfer avoids the question: one vehicle, both sides, no paperwork on yours."
         }
       ],
-      "returnIntro": "Coming back north from Limassol, the checkpoint is the only fixed point in the day; the rest is yours to decide. Agree the pickup place and hour before you are dropped off, and Halit will be there."
+      "returnIntro": "Coming back north from Limassol, the checkpoint is the only fixed point in the day; the rest is yours to decide. Agree the pickup place and hour before you are dropped off, and Denizli Taksi will be there."
     },
     "tr": {
       "intro": "Bu bir havalimanı hattı değil. Adanın ortasından geçen bir şehirlerarası hat: Güzelyurt'un narenciye ovasından güney sahiline, Limasol'a 105 kilometre ve yaklaşık bir saat kırk dakika. Havalimanı yok, uçuş takibi yok; saati siz koyarsınız. Tek araç sizi hattın iki tarafına da götürür; aynı gün döneceksiniz beklemesi de ayarlanabilir.",
@@ -1327,7 +1327,7 @@ const routeCopyMain = {
           "a": "Genelde hayır. Hattın bir tarafında kiralanan araçlar çoğu zaman diğer tarafa götürülemiyor ve kiralama sigortası geçişi nadiren kapsıyor. Özel transfer bu soruyu ortadan kaldırır: tek araç, iki taraf, sizin tarafınızda evrak yok."
         }
       ],
-      "returnIntro": "Limasol'dan kuzeye dönerken günün tek sabit noktası kontrol noktasıdır; gerisi size kalmış. Bırakılmadan önce alış yerini ve saatini kararlaştırın, Halit dönüş için orada olsun. Planınız uzarsa haber vermeniz yeterli, saat ona göre kaydırılır."
+      "returnIntro": "Limasol'dan kuzeye dönerken günün tek sabit noktası kontrol noktasıdır; gerisi size kalmış. Bırakılmadan önce alış yerini ve saatini kararlaştırın, Denizli Taksi dönüş için orada olsun. Planınız uzarsa haber vermeniz yeterli, saat ona göre kaydırılır."
     },
     "ru": {
       "intro": "Это не аэропортовый маршрут и не встреча рейса, а обычная междугородняя линия через середину острова: 105 километров от цитрусовой равнины Гюзельюрта до южного побережья в Лимассоле, около часа сорока. Одна машина везёт вас по обе стороны линии, а если вы возвращаетесь в тот же день, водитель может подождать.",
@@ -1346,7 +1346,7 @@ const routeCopyMain = {
           "a": "Как правило нет. Автомобили, арендованные по одну сторону линии, обычно нельзя перегонять на другую, а страховка переход редко покрывает. Частный трансфер снимает вопрос: одна машина, обе стороны, никаких бумаг с вашей стороны."
         }
       ],
-      "returnIntro": "На обратном пути из Лимассола на север единственная фиксированная точка дня — пункт пропуска, остальное решаете вы. Договоритесь о месте и часе подачи до высадки, и Халит будет там. Если планы затянутся, просто напишите."
+      "returnIntro": "На обратном пути из Лимассола на север единственная фиксированная точка дня — пункт пропуска, остальное решаете вы. Договоритесь о месте и часе подачи до высадки, и Denizli Taksi будет там. Если планы затянутся, просто напишите."
     }
   }
 }

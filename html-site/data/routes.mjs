@@ -1,3 +1,5 @@
+import { config } from '../site.config.mjs'
+
 // Rota verisi — SEO landing page'leri buradan üretilir.
 // Tüm rotalar havalimanı → şehir merkezi veya havalimanı → otel bölgesi şeklindedir;
 // isimler data/locations.mjs ile uyumlu tutulur.
@@ -5,7 +7,7 @@
 // sayfasındaki CTA rezervasyon formunu bu değerlerle önceden doldurur.
 // Yeni rota eklemek için bu diziye bir kayıt ekleyip `npm run build` çalıştırman yeterli.
 // Ters yön (şehir → havalimanı) elle yazılmaz; aşağıdaki `reverseRoutes` otomatik türetir.
-export const routes = [
+const baseRoutes = [
   // --- Ercan Havalimanı ---
   {
     slug: 'ercan-airport-to-nicosia',
@@ -121,7 +123,7 @@ export const routes = [
     durationMin: 60,
     distanceKm: 80,
   },
-  // Güzelyurt (Morphou) rotaları — tek yön fiyatlar hattı işleten Halit Yeşilovalı'dan
+  // Güzelyurt (Morphou) rotaları — tek yön fiyatlar hattı işleten Denizli Taksi'den
   // alınmıştır. `price`/`roundTrip` salon araç, `vitoPrice`/`vitoRoundTrip` Vito (7 kişi).
   // TODO: gidiş-dönüş rakamları tek yönün ×1.83'ü alınarak türetildi (Limasol hattındaki
   // 60/110 oranı) — operatörle teyit edilip netleştirilecek.
@@ -143,11 +145,6 @@ export const routes = [
     roundTrip: 100,
     durationMin: 50,
     distanceKm: 52,
-    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
-    contactName: 'Halit Yeşilovalı',
-    phoneDisplay: '+90 548 861 69 39',
-    phoneHref: '+905488616939',
-    whatsapp: '905488616939',
   },
   // --- Ercan: kıyı şeridi, batı ve Karpaz hatları ---
   // TODO: fiyat/süre/mesafe rakamları mevcut Ercan anahtarlarından (Girne Otelleri
@@ -440,11 +437,6 @@ export const routes = [
     vitoRoundTrip: 180,
     durationMin: 105,
     distanceKm: 100,
-    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
-    contactName: 'Halit Yeşilovalı',
-    phoneDisplay: '+90 548 861 69 39',
-    phoneHref: '+905488616939',
-    whatsapp: '905488616939',
   },
   // --- Larnaka: kıyı şeridi, batı ve Karpaz hatları ---
   // TODO: rakamlar Larnaka anahtarlarından (Girne 80 km / £100, Girne Otelleri
@@ -736,11 +728,6 @@ export const routes = [
     vitoRoundTrip: 250,
     durationMin: 110,
     distanceKm: 115,
-    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
-    contactName: 'Halit Yeşilovalı',
-    phoneDisplay: '+90 548 861 69 39',
-    phoneHref: '+905488616939',
-    whatsapp: '905488616939',
   },
   // --- Baf: kıyı şeridi, batı ve Karpaz hatları ---
   // TODO: rakamlar Baf anahtarlarından (Girne 165 km / £170, Girne Otelleri
@@ -918,13 +905,28 @@ export const routes = [
     roundTrip: 90,
     durationMin: 100,
     distanceKm: 105,
-    // Güzelyurt hattı doğrudan Halit Yeşilovalı tarafından işletilir — gerçek iletişim.
-    contactName: 'Halit Yeşilovalı',
-    phoneDisplay: '+90 548 861 69 39',
-    phoneHref: '+905488616939',
-    whatsapp: '905488616939',
   },
 ]
+
+// Bölgesel doğrudan iletişim — Lefke/Güzelyurt hattını sahada Denizli Taksi
+// yürütür. Ucu bu bölgelerden birine değen her rota (gidiş ve `reverse` ile
+// türeyen dönüş yönü) iletişim alanlarını buradan alır; başka hiçbir rotada
+// telefon/WhatsApp görünmez.
+const regional = config.regionalContact
+const regionalAreas = new Set(regional?.areas ?? [])
+const inRegion = (route) => regionalAreas.has(route.fromValue) || regionalAreas.has(route.toValue)
+
+export const routes = baseRoutes.map((route) =>
+  inRegion(route)
+    ? {
+        ...route,
+        contactName: regional.name,
+        phoneDisplay: regional.phoneDisplay,
+        phoneHref: regional.phoneHref,
+        whatsapp: regional.whatsapp,
+      }
+    : route,
+)
 
 // Her rotanın dönüş yönü — fiyat/süre/mesafe aynı, yön ve slug ters çevrilir.
 // Örn. `ercan-airport-to-kyrenia` → `kyrenia-to-ercan-airport`.

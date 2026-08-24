@@ -37,7 +37,7 @@ description: "Bafra otelleri transfer rehberi — Kaya Artemis, Noah's Ark, Conc
   <li><strong>İskele / Long Beach</strong> — restoranlar, alışveriş ve daha hareketli bir sahil akşamı (<a href="/tr/blog/long-beach-iskele-things-to-do/">Long Beach'te yapılacaklar</a>)</li>
   <li><strong>Salamis antik kenti</strong> — Gazimağusa'nın hemen kuzeyinde, Bafra'dan çıkışta yol üstünde</li>
 </ul>
-<p>Bu yolculukları rezervasyon sırasında planlayabilir ya da tatiliniz sırasında <a href="tel:+905488616939">+90 548 861 69 39</a> numarasından WhatsApp ile yazıp ayarlayabilirsiniz. Fiyat gitmeden önce bellidir, beklemek ya da dönüş için araç aramak zorunda kalmazsınız.</p>
+<p>Bu yolculukları rezervasyon sırasında planlayabilir ya da tatiliniz sırasında <a href="/tr/book/">rezervasyon formundan</a> ayarlayabilirsiniz. Fiyat gitmeden önce bellidir, beklemek ya da dönüş için araç aramak zorunda kalmazsınız.</p>
 
 <h2>Grup ve aile transferleri</h2>
 <p>Bafra'ya gelen misafirlerin çoğu ailece veya kalabalık gelir: bavul sayısı yüksektir, çocuk koltuğu gerekebilir, bazen iki-üç kuşak birlikte gelir. Standart aracımız normal bagajla dört kişiye rahat yeter. Daha kalabalık gruplar veya fazla valiz için <strong>Vito tipi minibüs</strong> ayarlıyoruz; Bafra hattında minibüs fiyatı sabit listede yer almadığı için grup büyüklüğünüzü ve valiz sayınızı yazın, araç seçeneklerini ve net fiyatı size dönelim. Çocuk koltuğunu rezervasyon notuna eklemeniz yeterli; grup iki ayrı uçakla geliyorsa iki karşılama düzenleriz.</p>

@@ -44,7 +44,7 @@ description: "Every Cyprus transfer fare in one place: Ercan airport taxi cost, 
   <tr><td><a href="/en/routes/paphos-airport-to-bafra-hotels/">Bafra Hotels Area</a></td><td>175 min</td><td>230 km</td><td>£240</td><td>£430</td></tr>
   <tr><td><a href="/en/routes/paphos-airport-to-guzelyurt/">Guzelyurt (Morphou)</a></td><td>110 min</td><td>115 km</td><td>£120</td><td>£215</td></tr>
 </table>
-<p>On the Paphos to Guzelyurt route the Vito minibus is £140 one way and £250 return, which makes more sense than a saloon car for a large family or a lot of luggage. The Guzelyurt line is run directly by <strong>Halit Yeşilovalı</strong> — see the <a href="/en/blog/guzelyurt-morphou-transfer-guide/">Guzelyurt transfer guide</a> for detail.</p>
+<p>On the Paphos to Guzelyurt route the Vito minibus is £140 one way and £250 return, which makes more sense than a saloon car for a large family or a lot of luggage. The Guzelyurt line is run directly by <strong>Denizli Taksi</strong> — see the <a href="/en/blog/guzelyurt-morphou-transfer-guide/">Guzelyurt transfer guide</a> for detail.</p>
 
 <h2>What the price includes</h2>
 <p>There's no small print underneath the number. The fixed fare covers:</p>
@@ -84,4 +84,4 @@ description: "Every Cyprus transfer fare in one place: Ercan airport taxi cost, 
 <h3>When do I pay, and in which currency?</h3>
 <p>Fares are quoted in £ (GBP). You don't need to send money in advance — you can settle with the driver on the journey, and we agree the payment method and currency with you over WhatsApp when you book, so it's clear from the start. The figure you're quoted is the figure you pay.</p>
 
-<p>To check the fare for your own route, see <a href="/en/routes/">all fixed transfer prices</a> or go straight ahead and <a href="/en/book/">book your transfer</a>. If anything is unclear, message us on <a href="tel:+905488616939">+90 548 861 69 39</a>.</p>
+<p>To check the fare for your own route, see <a href="/en/routes/">all fixed transfer prices</a> or go straight ahead and <a href="/en/book/">book your transfer</a>. If anything is unclear, <a href="/en/contact/">get in touch</a>.</p>

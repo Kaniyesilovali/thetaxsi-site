@@ -137,11 +137,19 @@ ${pageHero({ eyebrow: t.hero.eyebrow, title: t.hero.title, subtitle: t.hero.subt
 
       <p id="bf-error" class="hidden text-sm text-red-600">${esc(f.validation)}</p>
 
-      <button type="submit" class="inline-flex h-13 items-center justify-center gap-2.5 rounded-full bg-[#25d366] px-8 text-[14px] font-semibold text-white transition-colors hover:bg-[#1faa52]">
+      ${
+        config.whatsapp
+          ? `<button type="submit" class="inline-flex h-13 items-center justify-center gap-2.5 rounded-full bg-[#25d366] px-8 text-[14px] font-semibold text-white transition-colors hover:bg-[#1faa52]">
         <span class="[&>svg]:size-5">${icons.whatsapp}</span>${esc(f.submit)}
       </button>
       <p class="text-xs leading-relaxed text-slate">${esc(f.submitNote)}</p>
-      <div id="bf-success" class="hidden rounded-2xl border border-sea/30 bg-sea/5 p-5 text-sm leading-relaxed text-ink">${esc(f.success)}</div>
+      <div id="bf-success" class="hidden rounded-2xl border border-sea/30 bg-sea/5 p-5 text-sm leading-relaxed text-ink">${esc(f.success)}</div>`
+          : `<button type="submit" class="inline-flex h-13 items-center justify-center gap-2.5 rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">
+        ${esc(f.submitDirect)}
+      </button>
+      <p class="text-xs leading-relaxed text-slate">${esc(f.submitNoteDirect)}</p>
+      <div id="bf-success" class="hidden rounded-2xl border border-sea/30 bg-sea/5 p-5 text-sm leading-relaxed text-ink">${esc(f.successDirect)}</div>`
+      }
     </form>
 
     <aside class="h-fit rounded-3xl border border-line bg-paper p-7 shadow-card lg:sticky lg:top-24">
@@ -171,9 +179,14 @@ ${pageHero({ eyebrow: t.hero.eyebrow, title: t.hero.title, subtitle: t.hero.subt
         </ul>
       </div>
       <div class="mt-8 border-t border-line pt-6 text-sm">
-        <p class="text-[11px] font-medium uppercase tracking-[0.14em] text-slate">${esc(f.orCall)}</p>
-        <a href="tel:${config.phoneHref}" class="mt-3 block font-medium text-ink transition-colors hover:text-sea">${config.phoneDisplay}</a>
-        <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 block font-medium text-sea transition-colors hover:text-sea-deep">WhatsApp</a>
+        ${
+          config.phoneHref || config.whatsapp
+            ? `<p class="text-[11px] font-medium uppercase tracking-[0.14em] text-slate">${esc(f.orCall)}</p>
+        ${config.phoneHref ? `<a href="tel:${config.phoneHref}" class="mt-3 block font-medium text-ink transition-colors hover:text-sea">${config.phoneDisplay}</a>` : ''}
+        ${config.whatsapp ? `<a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1 block font-medium text-sea transition-colors hover:text-sea-deep">WhatsApp</a>` : ''}`
+            : `<p class="text-[11px] font-medium uppercase tracking-[0.14em] text-slate">${esc(xtra.contactForm.fallback)}</p>
+        <a href="mailto:${config.email}" class="mt-3 block font-medium text-ink transition-colors hover:text-sea">${config.email}</a>`
+        }
       </div>
     </aside>
   </div>

@@ -32,5 +32,5 @@ description: "How to reach Güzelyurt from Ercan, Larnaca and Paphos, local ride
 <p>Yes. We run in-town and around-town rides at fixed local prices — the town centre, the groves, Lefke, the university, or an evening out. Just ask.</p>
 <h3>How long does the border crossing take?</h3>
 <p>Usually only a few minutes at Bostancı. You stay in the car, show passports, and there is no charge for passengers.</p>
-<p><strong>Güzelyurt line — direct contact.</strong> Güzelyurt rides are handled directly by Halit Yeşilovalı — call or WhatsApp <a href="tel:+905488616939">+90 548 861 69 39</a> for availability and pickup.</p>
+<p><strong>Lefke &amp; Güzelyurt line — direct contact.</strong> Rides in Güzelyurt and Lefke are run locally by Denizli Taksi. Call or message on WhatsApp for availability and pickup — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>.</p>
 <p>Arriving, leaving, or just getting around — <a href="/en/routes/">see fixed prices</a> or <a href="/en/book/">book your transfer</a> in two minutes.</p>

@@ -53,8 +53,8 @@ export const extra = {
       otherRoutes: 'Other routes',
       onwardRoutes: 'Onward routes from {from}',
       onwardNote: 'Continuing your trip? These are the fares departing from {from}.',
-      directHeading: 'Güzelyurt line — direct contact',
-      directNote: 'Güzelyurt transfers are handled directly by {name}. Call or message on WhatsApp for availability and pickup.',
+      directHeading: 'Lefke & Güzelyurt line — direct contact',
+      directNote: 'Transfers on the Lefke and Güzelyurt line are handled locally by {name}. Call or message on WhatsApp for availability and pickup.',
       callCta: 'Call {phone}',
       whatsappCta: 'WhatsApp {name}',
     },
@@ -93,6 +93,12 @@ export const extra = {
       submitNote:
         'Tapping the button opens WhatsApp with your reservation details pre-filled — send the message and we confirm within minutes.',
       success: 'Almost done — send the WhatsApp message that just opened to confirm your reservation.',
+      // WhatsApp hattı site.config.mjs'te boşken kullanılan sürüm: form doğrudan
+      // gönderilir, WhatsApp penceresi açılmaz.
+      submitDirect: 'Send reservation request',
+      submitNoteDirect:
+        'Send the form and we come back to you on the phone number or email you gave us, usually within minutes.',
+      successDirect: 'Reservation request received — we will confirm your transfer shortly.',
       validation: 'Please select pickup, destination, date and luggage count, and enter your name and phone.',
       orCall: 'Prefer to talk?',
       waMessage:
@@ -196,8 +202,8 @@ export const extra = {
       otherRoutes: 'Diğer güzergahlar',
       onwardRoutes: '{from} çıkışlı güzergahlar',
       onwardNote: 'Yolculuğunuz devam ediyorsa {from} kalkışlı fiyatlarımız aşağıda.',
-      directHeading: 'Güzelyurt hattı — doğrudan iletişim',
-      directNote: 'Güzelyurt transferleri doğrudan {name} tarafından yürütülür. Uygunluk ve alım için arayın ya da WhatsApp’tan yazın.',
+      directHeading: 'Lefke & Güzelyurt hattı — doğrudan iletişim',
+      directNote: 'Lefke ve Güzelyurt hattındaki transferleri bölgede {name} yürütür. Uygunluk ve alım için arayın ya da WhatsApp’tan yazın.',
       callCta: '{phone} — Ara',
       whatsappCta: 'WhatsApp: {name}',
     },
@@ -233,6 +239,10 @@ export const extra = {
       notesLabel: 'Notlar',
       notesPlaceholder: 'örn. 2 büyük valiz',
       submit: "WhatsApp ile rezerve et",
+      submitDirect: 'Rezervasyon talebini gönder',
+      submitNoteDirect:
+        'Formu gönderin; verdiğiniz telefon ya da e-posta üzerinden genelde birkaç dakika içinde size dönelim.',
+      successDirect: 'Rezervasyon talebiniz alındı — transferinizi kısa süre içinde onaylayacağız.',
       submitNote:
         'Butona bastığınızda rezervasyon bilgileriniz hazır yazılmış olarak WhatsApp açılır — mesajı gönderin, dakikalar içinde onaylayalım.',
       success: 'Neredeyse tamam — açılan WhatsApp mesajını gönderin, rezervasyonunuzu onaylayalım.',
@@ -339,8 +349,8 @@ export const extra = {
       otherRoutes: 'Другие маршруты',
       onwardRoutes: 'Маршруты из пункта {from}',
       onwardNote: 'Продолжаете поездку? Ниже — тарифы с отправлением из пункта {from}.',
-      directHeading: 'Линия Гюзельюрт — прямой контакт',
-      directNote: 'Трансферы в Гюзельюрт выполняет напрямую {name}. Позвоните или напишите в WhatsApp для уточнения и подачи.',
+      directHeading: 'Линия Лефке и Гюзельюрт — прямой контакт',
+      directNote: 'Трансферы на линии Лефке и Гюзельюрт выполняет на месте {name}. Позвоните или напишите в WhatsApp для уточнения и подачи.',
       callCta: 'Позвонить {phone}',
       whatsappCta: 'WhatsApp: {name}',
     },
@@ -376,6 +386,10 @@ export const extra = {
       notesLabel: 'Примечания',
       notesPlaceholder: 'напр. 2 больших чемодана',
       submit: 'Забронировать через WhatsApp',
+      submitDirect: 'Отправить заявку на бронирование',
+      submitNoteDirect:
+        'Отправьте форму — мы свяжемся с вами по указанному телефону или почте, обычно в течение нескольких минут.',
+      successDirect: 'Заявка получена — мы подтвердим ваш трансфер в ближайшее время.',
       submitNote:
         'По нажатию кнопки откроется WhatsApp с готовым сообщением — отправьте его, и мы подтвердим бронь за считанные минуты.',
       success: 'Почти готово — отправьте открывшееся сообщение WhatsApp, чтобы подтвердить бронь.',

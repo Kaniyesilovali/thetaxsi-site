@@ -52,5 +52,5 @@ description: "A practical Güzelyurt taxi guide: fixed-price in-town rides, out-
 <p>Yes. Short local rides around Güzelyurt run at a fixed local price — the centre, the campus, the hospital or an evening out.</p>
 <h3>Can I set up a regular or monthly ride?</h3>
 <p>Yes. If you have a repeated route — a weekly shop, a campus commute — tell us and we'll agree a fixed arrangement so the same car is there each time.</p>
-<p><strong>Güzelyurt line — direct contact.</strong> Güzelyurt rides are handled directly by Halit Yeşilovalı — call or WhatsApp <a href="tel:+905488616939">+90 548 861 69 39</a> for availability and pickup.</p>
+<p><strong>Lefke &amp; Güzelyurt line — direct contact.</strong> Rides in Güzelyurt and Lefke are run locally by Denizli Taksi. Call or message on WhatsApp for availability and pickup — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>.</p>
 <p>Need a ride now or on a schedule? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book in two minutes</a>.</p>

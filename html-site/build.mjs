@@ -136,7 +136,7 @@ Fixed fares, quoted per vehicle (not per person), in ${config.currencyCode}. Eac
 includes tolls, parking, live flight tracking and up to 45 minutes of airport waiting.
 No prepayment: pay the driver on arrival. Prices confirmed at booking do not change.
 
-Contact: ${config.phoneDisplay} · WhatsApp ${config.phoneDisplay} · ${config.email}
+Contact: ${config.phoneDisplay ? `${config.phoneDisplay} · WhatsApp ${config.phoneDisplay} · ` : ''}${config.email}
 Languages: English, Türkçe, Русский. Last generated: ${buildDate}.
 
 | Route | One way | Round trip | Approx. duration | Page |
@@ -177,8 +177,8 @@ ${guideLines}
 - [Contact](${u('/contact/')})
 
 ## Contact
-- Phone / WhatsApp: ${config.phoneDisplay}
-- Email: ${config.email}
+${config.phoneDisplay ? `- Phone / WhatsApp: ${config.phoneDisplay}\n` : ''}- Email: ${config.email}
+- Booking form: ${u('/book/')}
 `
 writeFileSync(join(dist, 'llms.txt'), llmsTxt)
 

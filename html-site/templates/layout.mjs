@@ -45,10 +45,10 @@ function header(ctx) {
       ${links.map((l) => `<a href="${l.href}" class="text-[13px] font-medium text-ink/65 transition-colors hover:text-ink">${esc(l.label)}</a>`).join('\n      ')}
     </nav>
     <div class="flex items-center gap-3 sm:gap-4">
-      <a href="tel:${config.phoneHref}" class="hidden items-center gap-2 text-[13px] font-medium text-ink/60 transition-colors hover:text-sea xl:flex">
+      ${config.phoneHref ? `<a href="tel:${config.phoneHref}" class="hidden items-center gap-2 text-[13px] font-medium text-ink/60 transition-colors hover:text-sea xl:flex">
         ${icons.phone}
         ${config.phoneDisplay}
-      </a>
+      </a>` : ''}
       <div class="hidden items-center sm:flex">${langLinks}</div>
       <a href="${href(lang, '/book/')}" class="hidden h-9 items-center rounded-full bg-sea px-5 text-[13px] font-medium text-white transition-colors hover:bg-sea-deep sm:inline-flex">${esc(dict.nav.reserve)}</a>
       <button type="button" data-menu-toggle class="text-ink/60 transition-colors hover:text-ink lg:hidden" aria-label="Toggle menu" aria-expanded="false">
@@ -60,7 +60,7 @@ function header(ctx) {
   <div data-menu-panel class="hidden border-t border-line bg-paper lg:hidden">
     <nav class="mx-auto flex max-w-6xl flex-col px-5 py-3 sm:px-8">
       ${links.map((l) => `<a href="${l.href}" class="border-b border-line py-4 text-[15px] font-medium text-ink/80 transition-colors hover:text-sea">${esc(l.label)}</a>`).join('\n      ')}
-      <a href="tel:${config.phoneHref}" class="flex items-center gap-2 border-b border-line py-4 text-[15px] font-medium text-sea">${icons.phone} ${config.phoneDisplay}</a>
+      ${config.phoneHref ? `<a href="tel:${config.phoneHref}" class="flex items-center gap-2 border-b border-line py-4 text-[15px] font-medium text-sea">${icons.phone} ${config.phoneDisplay}</a>` : ''}
       <div class="flex items-center gap-1 py-4">${langLinks}</div>
       <a href="${href(lang, '/book/')}" class="mt-1 inline-flex h-12 items-center justify-center rounded-full bg-sea px-6 text-[14px] font-medium text-white transition-colors hover:bg-sea-deep sm:hidden">${esc(dict.nav.reserve)}</a>
     </nav>
@@ -126,7 +126,7 @@ function footer(ctx) {
         <div class="mt-6 flex items-center gap-3">
           ${social(config.instagram, icons.instagram, 'Instagram')}
           ${social(config.facebook, icons.facebook, 'Facebook')}
-          ${social(`https://wa.me/${config.whatsapp}`, icons.whatsapp, 'WhatsApp')}
+          ${config.whatsapp ? social(`https://wa.me/${config.whatsapp}`, icons.whatsapp, 'WhatsApp') : ''}
         </div>
       </div>
       <!-- Link + iletişim sütunları: kalan alana eşit dağılır -->
@@ -148,8 +148,8 @@ function footer(ctx) {
         <p class="text-[13px] font-semibold text-ink">${esc(t.directHeading)}</p>
         <ul class="mt-5 flex flex-col gap-4">
           <li class="flex items-start gap-3 text-[13px] text-slate"><span class="mt-0.5 shrink-0 text-sea">${icons.pin}</span><span>${t.addressLines.map(esc).join(' · ')}</span></li>
-          <li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>
-          <li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="text-sea">${icons.whatsapp}</span>WhatsApp</a></li>
+          ${config.phoneHref ? `<li><a href="tel:${config.phoneHref}" class="group flex items-center gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="text-sea">${icons.phone}</span>${config.phoneDisplay}</a></li>` : ''}
+          ${config.whatsapp ? `<li><a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="text-sea">${icons.whatsapp}</span>WhatsApp</a></li>` : ''}
           <li><a href="mailto:${config.email}" class="group flex items-start gap-3 text-[13px] text-slate transition-colors hover:text-ink"><span class="mt-0.5 shrink-0 text-sea">${icons.mail}</span><span class="break-all">${config.email}</span></a></li>
         </ul>
         <p class="mt-6 flex items-center gap-2 text-xs font-medium text-sea">
@@ -171,10 +171,10 @@ function footer(ctx) {
   </div>
 </footer>
 
-<a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="${esc(dict.nav.whatsappAria)}"
+${config.whatsapp ? `<a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="${esc(dict.nav.whatsappAria)}"
    class="fixed bottom-5 right-5 z-50 inline-flex size-13 items-center justify-center rounded-full bg-[#25d366] text-white shadow-lg shadow-black/30 transition-transform hover:scale-105">
   <span class="[&>svg]:size-6">${icons.whatsapp}</span>
-</a>`
+</a>` : ''}`
 }
 
 // Her sayfanın sonuna eklenen ortak SSS bloğu. Hem görünür içerik (details/summary)

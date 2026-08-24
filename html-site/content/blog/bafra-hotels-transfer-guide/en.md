@@ -37,7 +37,7 @@ description: "Bafra hotels transfer guide — Kaya Artemis, Noah's Ark, Concorde
   <li><strong>İskele / Long Beach</strong> — restaurants, shopping and a livelier seafront evening (<a href="/en/blog/long-beach-iskele-things-to-do/">things to do at Long Beach</a>)</li>
   <li><strong>Salamis ancient city</strong> — just north of Famagusta, directly on the road out of Bafra</li>
 </ul>
-<p>You can plan these when you book, or arrange them during your holiday on WhatsApp at <a href="tel:+905488616939">+90 548 861 69 39</a>. The price is agreed before you set off, and you are never left waiting for a ride home.</p>
+<p>You can plan these when you book, or arrange them during your holiday through the <a href="/en/book/">booking form</a>. The price is agreed before you set off, and you are never left waiting for a ride home.</p>
 
 <h2>Group and family transfers</h2>
 <p>Most guests coming to Bafra arrive as families or in groups: plenty of luggage, often a child seat, sometimes three generations travelling together. Our standard car comfortably takes four passengers with normal suitcases. For larger groups or extra bags we arrange a <strong>Vito-type minibus</strong>; the minibus fare is not on the fixed price list for the Bafra routes, so tell us your group size and suitcase count and we will come back with the vehicle options and an exact price. Child seats just need a note on the booking, and if your group arrives on two different flights we set up two separate meets.</p>

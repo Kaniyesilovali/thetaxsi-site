@@ -72,18 +72,18 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
       <div class="rounded-3xl border border-line bg-paper p-7">
         <p class="text-sm font-medium text-sea">${esc(t.directHeading)}</p>
         <ul class="mt-6 flex flex-col gap-6 text-sm">
-          <li>
+          ${config.phoneHref ? `<li>
             <p class="${fieldLabelCls}">${esc(t.phoneLabel)}</p>
             <a href="tel:${config.phoneHref}" class="mt-1.5 flex items-center gap-3 font-medium text-ink transition-colors hover:text-sea"><span class="text-sea">${icons.phone}</span>${config.phoneDisplay}</a>
-          </li>
+          </li>` : ''}
           <li>
             <p class="${fieldLabelCls}">${esc(t.emailLabel)}</p>
             <a href="mailto:${config.email}" class="mt-1.5 flex items-center gap-3 font-medium text-ink transition-colors hover:text-sea"><span class="text-sea">${icons.mail}</span>${config.email}</a>
           </li>
-          <li>
+          ${config.whatsapp ? `<li>
             <p class="${fieldLabelCls}">${esc(t.whatsappLabel)}</p>
             <a href="https://wa.me/${config.whatsapp}" target="_blank" rel="noopener noreferrer" class="mt-1.5 flex items-center gap-3 font-medium text-ink transition-colors hover:text-sea"><span class="text-sea">${icons.whatsapp}</span>+${config.whatsapp}</a>
-          </li>
+          </li>` : ''}
         </ul>
       </div>
       <div class="rounded-3xl border border-line bg-paper p-7">

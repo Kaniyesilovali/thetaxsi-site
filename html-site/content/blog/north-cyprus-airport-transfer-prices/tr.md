@@ -44,7 +44,7 @@ description: "KKTC transfer ücretleri tek tabloda: Ercan havalimanı taksi ücr
   <tr><td><a href="/tr/routes/paphos-airport-to-bafra-hotels/">Bafra Oteller Bölgesi</a></td><td>175 dk</td><td>230 km</td><td>£240</td><td>£430</td></tr>
   <tr><td><a href="/tr/routes/paphos-airport-to-guzelyurt/">Güzelyurt</a></td><td>110 dk</td><td>115 km</td><td>£120</td><td>£215</td></tr>
 </table>
-<p>Baf–Güzelyurt hattında Vito minibüs £140 tek yön, £250 gidiş-dönüştür; kalabalık aile ya da bol bagajla gelenler için salon araçtan daha mantıklı olur. Güzelyurt hattını <strong>Halit Yeşilovalı</strong> doğrudan işletir; ayrıntı için <a href="/tr/blog/guzelyurt-morphou-transfer-guide/">Güzelyurt transfer rehberi</a>.</p>
+<p>Baf–Güzelyurt hattında Vito minibüs £140 tek yön, £250 gidiş-dönüştür; kalabalık aile ya da bol bagajla gelenler için salon araçtan daha mantıklı olur. Güzelyurt hattını <strong>Denizli Taksi</strong> doğrudan işletir; ayrıntı için <a href="/tr/blog/guzelyurt-morphou-transfer-guide/">Güzelyurt transfer rehberi</a>.</p>
 
 <h2>Fiyata neler dahil</h2>
 <p>Rakamın yanında küçük yazıyla eklenen kalemler yok. Sabit ücrete şunlar dahildir:</p>
@@ -84,4 +84,4 @@ description: "KKTC transfer ücretleri tek tabloda: Ercan havalimanı taksi ücr
 <h3>Ne zaman ödeme yapıyorum, hangi para birimi?</h3>
 <p>Fiyatlar £ (GBP) üzerinden verilir. Ödemeyi peşin göndermeniz gerekmez — yolculuk sırasında şoföre yapabilirsiniz; ödeme şeklini ve para birimini rezervasyon sırasında WhatsApp'tan konuşup baştan netleştiriyoruz. Rakam neyse o kalır.</p>
 
-<p>Rotanızın fiyatını görmek için <a href="/tr/routes/">tüm sabit transfer fiyatlarına</a> bakın ya da doğrudan <a href="/tr/book/">transferinizi rezerve edin</a>. Emin olamadığınız bir nokta varsa <a href="tel:+905488616939">+90 548 861 69 39</a> numarasından yazın.</p>
+<p>Rotanızın fiyatını görmek için <a href="/tr/routes/">tüm sabit transfer fiyatlarına</a> bakın ya da doğrudan <a href="/tr/book/">transferinizi rezerve edin</a>. Emin olamadığınız bir nokta varsa <a href="/tr/contact/">bize yazın</a>.</p>
