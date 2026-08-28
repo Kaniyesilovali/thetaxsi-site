@@ -906,6 +906,52 @@ const baseRoutes = [
     durationMin: 100,
     distanceKm: 105,
   },
+  // --- Güzelyurt/Lefke bölge içi ve şehirler arası hatlar ---
+  // Bu hatları uçtan uca Denizli Taksi işletir ve fiyatı yolculuğa göre kendisi
+  // verir; sabit tarife yayınlamıyoruz. `quote: true` olan rotalarda `price`
+  // yazılmaz — şablon fiyat yerine "fiyat için arayın" basar ve telefon/WhatsApp
+  // birincil eyleme dönüşür. Süre/mesafe rakamları content/blog/
+  // guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci içindeki tablodan alınmıştır.
+  {
+    slug: 'guzelyurt-to-nicosia',
+    from: { en: 'Guzelyurt (Morphou)', tr: 'Güzelyurt', ru: 'Гюзельюрт (Морфу)' },
+    fromValue: 'Güzelyurt Merkez',
+    to: { en: 'Nicosia', tr: 'Lefkoşa', ru: 'Никосия' },
+    toValue: 'Lefkoşa Merkez',
+    quote: true,
+    durationMin: 35,
+    distanceKm: 45,
+  },
+  {
+    slug: 'guzelyurt-to-kyrenia',
+    from: { en: 'Guzelyurt (Morphou)', tr: 'Güzelyurt', ru: 'Гюзельюрт (Морфу)' },
+    fromValue: 'Güzelyurt Merkez',
+    to: { en: 'Kyrenia', tr: 'Girne', ru: 'Кирения' },
+    toValue: 'Girne Merkez',
+    quote: true,
+    durationMin: 45,
+    distanceKm: 55,
+  },
+  {
+    slug: 'guzelyurt-to-lefke',
+    from: { en: 'Guzelyurt (Morphou)', tr: 'Güzelyurt', ru: 'Гюзельюрт (Морфу)' },
+    fromValue: 'Güzelyurt Merkez',
+    to: { en: 'Lefke', tr: 'Lefke', ru: 'Лефке' },
+    toValue: 'Lefke Merkez',
+    quote: true,
+    durationMin: 20,
+    distanceKm: 22,
+  },
+  {
+    slug: 'guzelyurt-to-famagusta',
+    from: { en: 'Guzelyurt (Morphou)', tr: 'Güzelyurt', ru: 'Гюзельюрт (Морфу)' },
+    fromValue: 'Güzelyurt Merkez',
+    to: { en: 'Famagusta', tr: 'Gazimağusa', ru: 'Фамагуста' },
+    toValue: 'Gazimağusa Merkez',
+    quote: true,
+    durationMin: 75,
+    distanceKm: 105,
+  },
 ]
 
 // Bölgesel doğrudan iletişim — Lefke/Güzelyurt hattını sahada Denizli Taksi

@@ -11,12 +11,15 @@
 import { config } from '../site.config.mjs'
 import { allRoutes } from './routes.mjs'
 import { posts } from './posts.mjs'
+import { areas } from './areas.mjs'
 
 // Yolun ilk parçası (bölüm adı). Anahtar = canonical/İngilizce parça.
 export const segments = {
   book: { en: 'book', tr: 'rezervasyon', ru: 'bronirovanie' },
   routes: { en: 'routes', tr: 'guzergahlar', ru: 'marshruty' },
   blog: { en: 'blog', tr: 'blog', ru: 'blog' },
+  // Bölge (hizmet alanı) sayfaları — /en/areas/…, /tr/bolge/…, /ru/rayony/…
+  areas: { en: 'areas', tr: 'bolge', ru: 'rayony' },
   about: { en: 'about', tr: 'hakkimizda', ru: 'o-nas' },
   contact: { en: 'contact', tr: 'iletisim', ru: 'kontakty' },
   faq: { en: 'faq', tr: 'sss', ru: 'voprosy-i-otvety' },
@@ -92,6 +95,20 @@ for (const route of allRoutes) {
   routeSlugs.set(route.slug, byLang)
 }
 
+// canonical slug → { en, tr, ru }; data/areas.mjs içindeki `slugs`ten gelir.
+// Rota sluglarının aksine kalıptan türemez: bunlar arama sorgusunun kendisidir
+// ("güzelyurt taksi"), o yüzden her dilde elle yazılır.
+const areaSlugs = new Map()
+for (const area of areas) {
+  const byLang = {}
+  for (const lang of config.languages) {
+    const slug = area.slugs?.[lang]
+    if (!slug) throw new Error(`data/areas.mjs: "${area.id}" için slugs.${lang} eksik`)
+    byLang[lang] = slug
+  }
+  areaSlugs.set(area.slugs[config.defaultLang], byLang)
+}
+
 // canonical slug → { en, tr, ru }; tr/ru content/blog/<slug>/meta.json içindeki `slugs`ten gelir.
 const postSlugs = new Map()
 for (const post of posts) {
@@ -111,6 +128,7 @@ for (const post of posts) {
 for (const [what, table] of [
   ['rota', routeSlugs],
   ['blog yazısı', postSlugs],
+  ['bölge sayfası', areaSlugs],
 ]) {
   for (const lang of config.languages) {
     const seen = new Map()
@@ -141,7 +159,14 @@ export function localizePath(path, lang) {
   if (!head) throw new Error(`data/slugs.mjs: "${section}" bölümü için ${lang} karşılığı yok (segments tablosuna ekle)`)
   if (!slug) return `/${head}/${suffix}`
 
-  const table = section === 'routes' ? routeSlugs : section === 'blog' ? postSlugs : null
+  const table =
+    section === 'routes'
+      ? routeSlugs
+      : section === 'blog'
+        ? postSlugs
+        : section === 'areas'
+          ? areaSlugs
+          : null
   const tail = table?.get(slug)?.[lang]
   if (!tail) throw new Error(`data/slugs.mjs: "${clean}" için ${lang} slug'ı bulunamadı`)
   return `/${head}/${tail}/${suffix}`

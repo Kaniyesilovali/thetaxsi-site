@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url'
 import { config } from '../site.config.mjs'
 import { allRoutes } from '../data/routes.mjs'
 import { posts, contentDir } from '../data/posts.mjs'
+import { areas } from '../data/areas.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const today = new Date().toISOString().slice(0, 10)
@@ -24,6 +25,9 @@ for (const lang of config.languages) {
   for (const p of staticPaths) validPaths.add(`/${lang}${p}`)
   for (const r of allRoutes) validPaths.add(`/${lang}/routes/${r.slug}/`)
   for (const p of posts) validPaths.add(`/${lang}/blog/${p.slug}/`)
+  // Bölge sayfaları da blog gövdelerinden linklenir — canonical (İngilizce)
+  // slug'la yazılır, yayında href() hedef dilin adresine çevirir.
+  for (const a of areas) validPaths.add(`/${lang}/areas/${a.slugs[config.defaultLang]}/`)
 }
 
 const imageFiles = new Set(

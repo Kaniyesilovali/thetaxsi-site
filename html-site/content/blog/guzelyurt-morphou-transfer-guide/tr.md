@@ -32,5 +32,5 @@ description: "Ercan, Larnaka ve Baf'tan Güzelyurt'a nasıl ulaşılır, şehir 
 <p>Evet. Şehir içi ve kasaba çevresi yolculuklarını sabit yerel fiyatlarla yaparız — şehir merkezi, bahçeler, Lefke, üniversite ya da akşam gezmesi. Sormanız yeterli.</p>
 <h3>Sınır geçişi ne kadar sürer?</h3>
 <p>Bostancı'da genellikle yalnızca birkaç dakika. Araçta kalırsınız, pasaport gösterirsiniz ve yolculardan ücret alınmaz.</p>
-<p><strong>Lefke &amp; Güzelyurt hattı — doğrudan iletişim.</strong> Güzelyurt ve Lefke yolculuklarını bölgede Denizli Taksi yürütür. Uygunluk ve alım için arayın ya da WhatsApp'tan yazın — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>.</p>
+<p><strong>Lefke &amp; Güzelyurt hattı — doğrudan iletişim.</strong> Güzelyurt ve Lefke yolculuklarını bölgede Denizli Taksi yürütür. Uygunluk ve alım için arayın ya da WhatsApp'tan yazın — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>. Şehir içi yolculuklar, kampüs hatları ve güzergahların tamamı için <a href="/tr/areas/guzelyurt-taxi/">Güzelyurt Taksi</a> ve <a href="/tr/areas/lefke-taxi/">Lefke Taksi</a> sayfalarına bakın.</p>
 <p>Geliş, gidiş ya da yalnızca gezinmek — <a href="/tr/routes/">sabit fiyatlara bakın</a> veya iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

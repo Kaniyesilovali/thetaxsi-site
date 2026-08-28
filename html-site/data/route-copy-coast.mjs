@@ -1618,4 +1618,272 @@ export const routeCopyCoast = {
         'Из Лефке в Пафос — час тридцать пять вниз по западному побережью, самый короткий аэропортовый маршрут на этой стороне острова. Сообщите время вылета, и мы назначим подачу с учётом перехода и регистрации.',
     },
   },
+  // ------------------------------------------- Güzelyurt bölge içi hatlar ----
+  // Bu dört hattı (ve ters yönlerini) Denizli Taksi işletir ve fiyatı yolculuğa
+  // göre kendisi verir — metinde rakam yok, "sabit fiyat" da denmez; okuyucu
+  // aramaya yönlendirilir. Süre/mesafe data/routes.mjs'te.
+  'guzelyurt-to-nicosia': {
+    guide: 'nicosia-lefkosa-city-transfer-guide',
+    en: {
+      intro:
+        'Güzelyurt to Nicosia is the run people here make for the things that only exist in the capital: a hospital appointment, a government office, a connection onward to Ercan. Forty-five kilometres of main road east through the citrus belt, about thirty-five minutes, no border and no mountain pass. The line is worked from Güzelyurt itself, so the car starts near you instead of driving out from Kyrenia first.',
+      notes: [
+        'The road runs east through Şahinler and Yılmazköy and reaches the capital from the west, which is shorter than looping round to the northern approaches.',
+        'Parking inside the Venetian walls is difficult. We set down at the gate closest to your address — Girne Kapısı for the north side, Mağusa Kapısı for the east.',
+        'Very little circles for hire in Güzelyurt after dark. If you are coming back the same evening, agree the return time when you arrange the outbound leg.',
+      ],
+      faq: [
+        {
+          q: 'How long does a taxi from Güzelyurt to Nicosia take?',
+          a: 'Around 35 minutes over 45 km of main road, with no crossing and no pass. The only variable is morning traffic at the city gates, so for an early appointment we leave with time in hand.',
+        },
+        {
+          q: 'Can the driver wait in Nicosia and bring me back?',
+          a: 'Yes — hospital appointments and government offices are the two most common reasons for this trip, and waiting is normal on both. Say how long you expect to be when you call, so the wait is part of the fare you are quoted rather than a surprise afterwards.',
+        },
+      ],
+      returnIntro:
+        'Nicosia back to Güzelyurt is the same road west, roughly thirty-five minutes once you are clear of the walls. This is the leg worth arranging in advance: after the offices close there is very little heading this way, and a car booked from Güzelyurt is already at your end of the road.',
+    },
+    tr: {
+      intro:
+        'Güzelyurt – Lefkoşa yolculuğu, buradan yalnızca başkentte olan işler için yapılır: hastane randevusu, bir devlet dairesi, Ercan’a bağlanan bir uçuş. Narenciye kuşağının içinden doğuya doğru kırk beş kilometre ana yol, yaklaşık otuz beş dakika; ne sınır kapısı var ne dağ geçidi. Hattı Güzelyurt’un içinden çalışan bir araç yürütür, yani araç Girne’den yola çıkmaz, size yakın bir yerden kalkar.',
+      notes: [
+        'Yol doğuya, Şahinler ve Yılmazköy üzerinden gider ve başkente batıdan girer; kuzey girişlerine dolanmaktan kısadır.',
+        'Surlariçi’nde park etmek zordur. Adresinize en yakın kapıda ineriz — kuzey için Girne Kapısı, doğu için Mağusa Kapısı.',
+        'Güzelyurt’ta hava karardıktan sonra sokakta boşta taksi neredeyse bulunmaz. Aynı akşam döneceksiniz, dönüş saatini gidişi ayarlarken konuşun.',
+      ],
+      faq: [
+        {
+          q: 'Güzelyurt Lefkoşa taksi ne kadar sürer?',
+          a: 'Kırk beş kilometre ana yol, yaklaşık 35 dakika; sınır geçişi ya da dağ yolu yok. Tek değişken sabahları şehir kapılarındaki trafik, o yüzden erken randevularda biraz erken çıkarız.',
+        },
+        {
+          q: 'Şoför Lefkoşa’da bekleyip beni geri getirir mi?',
+          a: 'Evet. Bu yolculuğun en sık iki sebebi hastane randevusu ve resmi daire işidir; ikisinde de bekleme olağan. Aramanızda ne kadar süreceğini söyleyin, bekleme baştan konuşulan ücretin içinde olsun, sonradan çıkan bir kalem olmasın.',
+        },
+      ],
+      returnIntro:
+        'Lefkoşa’dan Güzelyurt’a dönüş aynı yolun batı yönü; surların çevresinden çıkınca yaklaşık otuz beş dakika. Önceden ayarlanmayı en çok hak eden bacak budur: daireler kapandıktan sonra bu yöne giden pek bir şey kalmaz, Güzelyurt’tan çağrılan araç ise yolun zaten sizin ucunuzdadır.',
+    },
+    ru: {
+      intro:
+        'Гюзельюрт — Никосия: поездка ради того, что есть только в столице — приём в больнице, государственная контора, стыковка на Эрджан. Сорок пять километров трассы на восток через цитрусовый пояс, около тридцати пяти минут, без пункта пропуска и без перевала. Линию ведут из самого Гюзельюрта, поэтому машина выходит рядом с вами, а не едет сначала из Кирении.',
+      notes: [
+        'Дорога идёт на восток через Шахинлер и Йылмазкёй и входит в столицу с запада — короче, чем объезжать к северным въездам.',
+        'Парковка внутри венецианских стен трудная. Мы высаживаем у ближайших к вашему адресу ворот: Киренийские с севера, Фамагустские с востока.',
+        'После темноты свободных машин в Гюзельюрте почти нет. Если возвращаетесь тем же вечером, обговорите время обратной подачи сразу.',
+      ],
+      faq: [
+        {
+          q: 'Сколько ехать на такси из Гюзельюрта в Никосию?',
+          a: 'Около 35 минут на сорок пять километров трассы — без границы и без горного перевала. Единственная переменная — утренний поток у городских ворот, поэтому к раннему приёму мы выезжаем с запасом.',
+        },
+        {
+          q: 'Водитель подождёт в Никосии и отвезёт обратно?',
+          a: 'Да. Две самые частые причины этой поездки — больница и государственные учреждения, и ожидание там обычное дело. Скажите при звонке, сколько примерно вы пробудете, чтобы ожидание вошло в названную цену, а не всплыло потом.',
+        },
+      ],
+      returnIntro:
+        'Обратно из Никосии в Гюзельюрт — та же дорога на запад, около тридцати пяти минут после выезда от стен. Именно этот отрезок стоит согласовать заранее: когда конторы закрываются, в эту сторону почти ничего не идёт, а машина из Гюзельюрта уже стоит на вашем конце дороги.',
+    },
+  },
+  'guzelyurt-to-kyrenia': {
+    guide: 'kyrenia-harbour-castle-old-town-guide',
+    en: {
+      intro:
+        'Güzelyurt to Kyrenia crosses the island from the citrus plain to the north coast in about forty-five minutes. There are two ways to do it and the driver picks by the hour: east to the capital and up the dual carriageway over the Beşparmak ridge, or the western road through Çamlıbel and down the coast past Karşıyaka and Lapta. The first is faster on a clear road, the second avoids Nicosia altogether at rush hour.',
+      notes: [
+        'The coastal option through Çamlıbel is a few kilometres longer but scenic, and it drops you at the western hotels without touching the town centre.',
+        'Kyrenia old harbour is closed to cars. We stop at the nearest point a vehicle can reach and carry the bags in — give the hotel or restaurant name when you call.',
+        'A night out in Kyrenia is the classic reason for this trip, and the classic problem at 2am is getting home. Book the return at the same time and the car is waiting rather than hoped for.',
+      ],
+      faq: [
+        {
+          q: 'How far is Kyrenia from Güzelyurt by taxi?',
+          a: 'Around 55 km and about 45 minutes, either over the Beşparmak pass via the capital or along the western coastal road through Çamlıbel and Lapta. The driver takes whichever is moving better at that hour.',
+        },
+        {
+          q: 'Can you drop me at a hotel outside Kyrenia centre?',
+          a: 'Yes — the hotel strips at Alsancak, Karaoğlanoğlu and Lapta are on the western road, so from Güzelyurt they are on the way rather than past the town. Give the hotel name when you call and the fare is set to that gate.',
+        },
+      ],
+      returnIntro:
+        'Kyrenia back to Güzelyurt is forty-five minutes over the ridge or along the coast, and it is the direction where waiting for a passing car costs the most time. Fix the pickup point on the harbour road or at the hotel entrance when you arrange it, and the return is settled before the evening starts.',
+    },
+    tr: {
+      intro:
+        'Güzelyurt – Girne yolculuğu adayı narenciye ovasından kuzey sahiline geçirir; yaklaşık kırk beş dakika. İki yol var ve şoför saate göre seçer: doğuya, başkent üzerinden Beşparmak’ı aşan çift şeritli yol; ya da batıdan Çamlıbel’e çıkıp Karşıyaka ve Lapta üzerinden sahile inen yol. Yol açıkken birincisi hızlıdır, akşamüstü trafiğinde ikincisi Lefkoşa’ya hiç girmez.',
+      notes: [
+        'Çamlıbel üzerinden sahil seçeneği birkaç kilometre uzundur ama manzaralıdır ve şehir merkezine hiç girmeden batıdaki otellerde bırakır.',
+        'Girne eski liman araç trafiğine kapalıdır. Aracın girebildiği en yakın noktada durur, valizleri gerisini biz taşırız — ararken otelin ya da mekânın adını söyleyin.',
+        'Bu yolculuğun klasik sebebi Girne’de bir akşam, klasik sorunu da gece ikide eve dönüş. Dönüşü aynı anda ayarlayın, araç şansa kalmadan sizi bekler.',
+      ],
+      faq: [
+        {
+          q: 'Güzelyurt Girne taksi kaç km ve ne kadar sürer?',
+          a: 'Yaklaşık 55 km, 45 dakika. İster başkent üzerinden Beşparmak geçidiyle, ister batıdan Çamlıbel ve Lapta sahil yoluyla; şoför o saatte hangisi akıyorsa oradan gider.',
+        },
+        {
+          q: 'Girne merkez dışındaki bir otele bırakıyor musunuz?',
+          a: 'Evet. Alsancak, Karaoğlanoğlu ve Lapta otel şeridi batı yolunun üzerindedir; yani Güzelyurt’tan bakınca şehri geçtikten sonra değil, yol üstündedir. Ararken otel adını verin, ücret o kapıya göre konuşulsun.',
+        },
+      ],
+      returnIntro:
+        'Girne’den Güzelyurt’a dönüş, dağ geçidinden ya da sahil yolundan kırk beş dakika; geçen araç beklemenin en pahalıya mal olduğu yön de budur. Liman yolunda ya da otel girişinde alım noktasını baştan belirleyin, dönüş akşam başlamadan çözülmüş olsun.',
+    },
+    ru: {
+      intro:
+        'Гюзельюрт — Кирения: остров пересекается от цитрусовой равнины до северного побережья примерно за сорок пять минут. Дорог две, и водитель выбирает по времени суток: на восток через столицу и по скоростной трассе через хребет Беспармак — или западным путём через Чамлыбель и вниз по побережью мимо Каршияки и Лапты. Первая быстрее на свободной дороге, вторая вовсе минует Никосию в час пик.',
+      notes: [
+        'Прибрежный вариант через Чамлыбель на несколько километров длиннее, зато живописен и выводит к западным отелям, не заходя в центр города.',
+        'Старая гавань Кирении закрыта для машин. Мы останавливаемся в ближайшей доступной точке и доносим багаж — назовите отель или ресторан при звонке.',
+        'Классический повод для этой поездки — вечер в Кирении, классическая проблема — как уехать в два ночи. Забронируйте обратную подачу сразу, и машина будет ждать, а не разыскиваться.',
+      ],
+      faq: [
+        {
+          q: 'Сколько километров и времени от Гюзельюрта до Кирении на такси?',
+          a: 'Около 55 км и примерно 45 минут — либо через столицу и перевал Беспармак, либо западной прибрежной дорогой через Чамлыбель и Лапту. Водитель едет там, где в этот час свободнее.',
+        },
+        {
+          q: 'Отвезёте в отель за пределами центра Кирении?',
+          a: 'Да. Отельные полосы Алсанджака, Караогланоглу и Лапты стоят на западной дороге, то есть со стороны Гюзельюрта они по пути, а не за городом. Назовите отель при звонке — цена считается до этих ворот.',
+        },
+      ],
+      returnIntro:
+        'Обратно из Кирении в Гюзельюрт — сорок пять минут через хребет или по побережью, и именно в этом направлении ожидание попутной машины стоит дороже всего времени. Определите точку подачи на набережной или у входа в отель заранее, и обратная дорога решена ещё до начала вечера.',
+    },
+  },
+  'guzelyurt-to-lefke': {
+    guide: 'metu-ncc-lefke-campus-transfer-guide',
+    en: {
+      intro:
+        'Güzelyurt to Lefke is the short hop that holds this whole region together — twenty-two kilometres west along the coast road, about twenty minutes, past Kalkanlı and the METU campus and down through Gemikonağı. It is the busiest line here and the least likely to be covered by a passing car: students, campus staff and people going to the beach all move along the same stretch, and almost none of it is walkable.',
+      notes: [
+        'The METU Northern Cyprus campus at Kalkanlı sits directly on this road, roughly ten kilometres out of Güzelyurt. Name the dorm block or faculty building rather than just the campus and the driver comes to the right gate.',
+        'Soli and Vouni are on this route, not a detour from it. If you want to stop at the mosaics or climb to the palace on the way, say so when you call — it changes the timing, not the road.',
+        'Gemikonağı beach is the natural summer end of this trip. Coming back after dark, there is nothing waiting on that coast road, so arrange the return leg before you go.',
+      ],
+      faq: [
+        {
+          q: 'How long is the taxi ride from Güzelyurt to Lefke?',
+          a: 'About twenty minutes over twenty-two kilometres, straight down the coast road through Kalkanlı and Gemikonağı. It is the shortest line we run in this region and the one most often booked at short notice.',
+        },
+        {
+          q: 'Do you cover the university campuses on this road?',
+          a: 'Yes. METU Northern Cyprus at Kalkanlı, European University of Lefke and the health sciences campus all sit on this stretch, and campus runs are a large part of what this line does. Say which campus and which entrance when you call.',
+        },
+      ],
+      returnIntro:
+        'Lefke back to Güzelyurt is the same twenty minutes east along the coast, past Gemikonağı and Kalkanlı. Late finishes at the campuses and evenings on the beach are the two times this leg matters most, and both are worth arranging in advance rather than looking for a car on the road.',
+    },
+    tr: {
+      intro:
+        'Güzelyurt – Lefke, bu bölgeyi bir arada tutan kısa hattır: sahil yolundan batıya yirmi iki kilometre, yaklaşık yirmi dakika; Kalkanlı ve ODTÜ kampüsünün önünden geçip Gemikonağı’na iner. Buranın en yoğun hattı olduğu gibi, geçen bir araca denk gelme ihtimalinin en düşük olduğu hat da budur: öğrenci, kampüs çalışanı ve denize gidenler aynı şeridi kullanır, yürünebilecek bir mesafe de yoktur.',
+      notes: [
+        'ODTÜ Kuzey Kıbrıs Kampüsü Kalkanlı’da, bu yolun tam üstünde ve Güzelyurt’tan yaklaşık on kilometre uzaktadır. “Kampüs” demek yerine yurt bloğunu ya da fakülte binasını söyleyin, şoför doğru kapıya gelsin.',
+        'Soli ve Vouni bu yolun üstünde, sapma değil. Yolda mozaiklerde durmak ya da tepedeki saraya çıkmak isterseniz ararken söyleyin — bu, yolu değil süreyi değiştirir.',
+        'Yazın bu yolculuğun doğal sonu Gemikonağı sahilidir. Karanlıkta dönerken o sahil yolunda bekleyen hiçbir şey olmaz; dönüş bacağını gitmeden ayarlayın.',
+      ],
+      faq: [
+        {
+          q: 'Güzelyurt Lefke taksi ne kadar sürer?',
+          a: 'Yirmi iki kilometre, yaklaşık yirmi dakika; Kalkanlı ve Gemikonağı üzerinden dosdoğru sahil yolu. Bölgede işlettiğimiz en kısa hat ve en çok son dakikada aranan hat.',
+        },
+        {
+          q: 'Bu yol üzerindeki üniversite kampüslerine gidiyor musunuz?',
+          a: 'Evet. Kalkanlı’daki ODTÜ Kuzey Kıbrıs, Lefke Avrupa Üniversitesi ve sağlık bilimleri kampüsü aynı şeridin üzerinde; kampüs yolculukları bu hattın büyük bölümünü oluşturur. Ararken hangi kampüs ve hangi giriş olduğunu söylemeniz yeterli.',
+        },
+      ],
+      returnIntro:
+        'Lefke’den Güzelyurt’a dönüş aynı yolun doğu yönü: Gemikonağı ve Kalkanlı üzerinden yirmi dakika. Bu bacağın en çok işe yaradığı iki an, kampüste geç biten günler ve sahilde geçen akşamlardır; ikisinde de yolda araç aramaktansa önceden ayarlamak daha iyi çalışır.',
+    },
+    ru: {
+      intro:
+        'Гюзельюрт — Лефке: короткий отрезок, который держит весь этот регион вместе. Двадцать два километра на запад по прибрежной дороге, около двадцати минут, мимо Калканлы и кампуса METU, вниз через Гемиконагы. Это самая загруженная здесь линия и одновременно та, где меньше всего шансов поймать попутную машину: студенты, сотрудники кампусов и едущие на пляж идут по одной и той же полосе, а пешком тут не пройти.',
+      notes: [
+        'Кампус METU Северного Кипра в Калканлы стоит прямо на этой дороге, примерно в десяти километрах от Гюзельюрта. Назовите корпус общежития или факультет, а не просто «кампус», — водитель подъедет к нужным воротам.',
+        'Соли и Вуни лежат на этом маршруте, а не в стороне от него. Хотите остановиться у мозаик или подняться к дворцу — скажите при звонке: это меняет время, но не дорогу.',
+        'Летом естественный финал поездки — пляж Гемиконагы. На обратном пути в темноте на прибрежной дороге не ждёт ничего, поэтому обратную подачу договаривайте до выезда.',
+      ],
+      faq: [
+        {
+          q: 'Сколько ехать на такси из Гюзельюрта в Лефке?',
+          a: 'Около двадцати минут на двадцать два километра, прямо по прибрежной дороге через Калканлы и Гемиконагы. Самая короткая линия, которую мы держим в этом регионе, и чаще всего заказываемая в последний момент.',
+        },
+        {
+          q: 'Возите ли вы в университетские кампусы на этой дороге?',
+          a: 'Да. METU Северного Кипра в Калканлы, Европейский университет Лефке и кампус медицинских наук стоят на одной полосе, и поездки в кампусы — большая часть работы этой линии. Скажите при звонке, какой кампус и какой вход.',
+        },
+      ],
+      returnIntro:
+        'Из Лефке обратно в Гюзельюрт — те же двадцать минут на восток по побережью, мимо Гемиконагы и Калканлы. Этот отрезок важнее всего в двух случаях: поздно закончившийся день в кампусе и вечер на пляже. Оба стоит согласовать заранее, а не искать машину на дороге.',
+    },
+  },
+  'guzelyurt-to-famagusta': {
+    guide: 'famagusta-beaches-old-city-guide',
+    en: {
+      intro:
+        'Güzelyurt to Famagusta is the long diagonal across the island — a hundred and five kilometres east through the Mesarya, about an hour and a quarter. It is the one trip from here that no local bus makes comfortably, and the reason people take it is usually fixed: a term starting at Eastern Mediterranean University, a court or hospital appointment, or a day at the walled city and Salamis.',
+      notes: [
+        'The route skirts the capital on the ring road rather than going through it, which is what keeps it near seventy-five minutes instead of ninety.',
+        'Eastern Mediterranean University sits on the northern edge of Famagusta, before the old city. If the campus is the destination, name the faculty or dorm gate — the campus perimeter is long.',
+        'The walled city is largely pedestrian. We stop at the Land Gate or the Canbulat side depending on your address, and pick up from the same point on the way back.',
+      ],
+      faq: [
+        {
+          q: 'How long does Güzelyurt to Famagusta take by taxi?',
+          a: 'Around an hour and fifteen minutes over roughly 105 km, using the Nicosia ring road rather than the city itself. It is the longest domestic line from Güzelyurt and the one most worth booking a day ahead.',
+        },
+        {
+          q: 'Can you do the trip with a wait and bring me back the same day?',
+          a: 'Yes, and on this route it is the usual pattern — an appointment or a campus errand rarely justifies two separate journeys. Tell us how long you expect to be there when you call, so the waiting time is part of what is agreed up front.',
+        },
+      ],
+      returnIntro:
+        'Famagusta back to Güzelyurt is the same seventy-five minutes west across the Mesarya. Coming this way in the evening is the awkward direction: cars heading west out of Famagusta are scarce, and nothing is looking for a fare to the far side of the island. Arrange the return when you set up the outbound and it stops being a problem.',
+    },
+    tr: {
+      intro:
+        'Güzelyurt – Gazimağusa, adanın uzun çaprazıdır: Mesarya üzerinden doğuya yüz beş kilometre, yaklaşık bir saat çeyrek. Buradan yapılan ve hiçbir toplu taşımanın rahat karşılamadığı tek yolculuk budur; sebebi de genelde bellidir — Doğu Akdeniz Üniversitesi’nde başlayan bir dönem, mahkeme ya da hastane randevusu, veya Suriçi ve Salamis’te geçirilecek bir gün.',
+      notes: [
+        'Güzergah başkentin içinden değil, çevre yolundan geçer; yolculuğu doksan dakika yerine yetmiş beş dakika civarında tutan da budur.',
+        'Doğu Akdeniz Üniversitesi, Suriçi’nden önce Gazimağusa’nın kuzey çeperindedir. Hedef kampüsse fakülteyi ya da yurt kapısını söyleyin — kampüs çevresi uzundur.',
+        'Suriçi büyük ölçüde yayadır. Adresinize göre Kara Kapı ya da Canbulat tarafında durur, dönüşte de sizi aynı noktadan alırız.',
+      ],
+      faq: [
+        {
+          q: 'Güzelyurt Mağusa taksi ne kadar sürer?',
+          a: 'Yaklaşık 105 kilometre, bir saat on beş dakika; Lefkoşa’nın içinden değil çevre yolundan. Güzelyurt’tan kalkan en uzun iç hat ve bir gün önceden ayarlanmasında en çok fayda olan hat.',
+        },
+        {
+          q: 'Bekleyip aynı gün geri getiriyor musunuz?',
+          a: 'Evet, bu hatta olağan düzen zaten budur — bir randevu ya da kampüs işi için iki ayrı yolculuk çoğu zaman anlamlı olmaz. Ararken orada ne kadar kalacağınızı söyleyin, bekleme süresi baştan konuşulanın içinde olsun.',
+        },
+      ],
+      returnIntro:
+        'Gazimağusa’dan Güzelyurt’a dönüş, Mesarya üzerinden batıya aynı yetmiş beş dakika. Akşam bu yöne gelmek işin zor tarafıdır: Mağusa’dan batıya çıkan araç azdır ve kimse adanın öbür ucuna müşteri aramaz. Dönüşü gidişle birlikte ayarlayın, sorun olmaktan çıksın.',
+    },
+    ru: {
+      intro:
+        'Гюзельюрт — Фамагуста: длинная диагональ через остров, сто пять километров на восток через Месарию, около часа с четвертью. Это единственная поездка отсюда, которую общественный транспорт не берёт на себя по-человечески, и повод обычно вполне определённый: начало семестра в Восточно-Средиземноморском университете, приём в суде или больнице, день в старом городе и Саламине.',
+      notes: [
+        'Маршрут обходит столицу по кольцевой, а не идёт насквозь, — именно поэтому дорога укладывается в семьдесят пять минут, а не в девяносто.',
+        'Восточно-Средиземноморский университет стоит на северной окраине Фамагусты, перед старым городом. Если цель — кампус, назовите факультет или ворота общежития: периметр здесь длинный.',
+        'Старый город в основном пешеходный. Мы останавливаемся у Сухопутных ворот или со стороны Джанбулата — смотря по вашему адресу, и забираем оттуда же на обратном пути.',
+      ],
+      faq: [
+        {
+          q: 'Сколько ехать на такси из Гюзельюрта в Фамагусту?',
+          a: 'Около часа пятнадцати на примерно 105 км, по кольцевой вокруг Никосии, а не через город. Самая длинная внутренняя линия из Гюзельюрта и та, которую разумнее всего заказывать за день.',
+        },
+        {
+          q: 'Можно с ожиданием и возвращением в тот же день?',
+          a: 'Да, и на этом маршруте так обычно и делают: ради приёма или дела в кампусе редко имеет смысл разбивать поездку надвое. Скажите при звонке, сколько примерно пробудете, чтобы ожидание вошло в оговорённое заранее.',
+        },
+      ],
+      returnIntro:
+        'Из Фамагусты обратно в Гюзельюрт — те же семьдесят пять минут на запад через Месарию. Вечером это неудобное направление: машин, идущих из Фамагусты на запад, мало, и никто не ищет пассажира на дальний край острова. Согласуйте обратную дорогу вместе с поездкой туда — и вопрос снимается.',
+    },
+  },
 }

@@ -1,6 +1,7 @@
 import { config } from '../site.config.mjs'
 import { href } from '../data/slugs.mjs'
 import { businessNode } from '../data/schema.mjs'
+import { areas } from '../data/areas.mjs'
 
 export const esc = (s = '') =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -134,6 +135,12 @@ function footer(ctx) {
       ${col(t.serviceHeading, [
         { href: href(lang, '/book/'), label: dict.nav.book },
         { href: href(lang, '/routes/'), label: dict.nav.routes },
+        // Bölge sayfaları site genelinde buradan linklenir — tek iç link kaynağı
+        // olmasa yalnızca sitemap'ten bulunur ve derinde kalırlardı.
+        ...areas.map((a) => ({
+          href: href(lang, `/areas/${a.slugs[config.defaultLang]}/`),
+          label: a[lang].title,
+        })),
       ])}
       ${col(t.companyHeading, [
         { href: href(lang, '/about/'), label: dict.nav.about },

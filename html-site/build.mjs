@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { config } from './site.config.mjs'
 import { allRoutes } from './data/routes.mjs'
 import { posts } from './data/posts.mjs'
+import { areas } from './data/areas.mjs'
 import { extra } from './data/extra.mjs'
 import { href, renamedPaths } from './data/slugs.mjs'
 import { renderHome } from './templates/home.mjs'
@@ -14,6 +15,7 @@ import { renderRoutesIndex, renderRouteDetail } from './templates/routes.mjs'
 import { renderBlogIndex, renderBlogPost } from './templates/blog.mjs'
 import { renderBook } from './templates/book.mjs'
 import { renderAbout, renderContact, renderFaq, renderLegal, render404 } from './templates/misc.mjs'
+import { renderAreaDetail } from './templates/areas.mjs'
 
 const root = dirname(fileURLToPath(import.meta.url))
 const dist = join(root, 'dist')
@@ -57,6 +59,11 @@ for (const lang of config.languages) {
   }
   for (const p of posts) {
     pages.push([`/blog/${p.slug}/`, (c) => renderBlogPost(c, p), p.date])
+  }
+  // Bölge (hizmet alanı) sayfaları — canonical yol İngilizce slug'ı taşır,
+  // href() bunu /tr/bolge/guzelyurt-taksi/ gibi hedef dile çevirir.
+  for (const a of areas) {
+    pages.push([`/areas/${a.slugs[config.defaultLang]}/`, (c) => renderAreaDetail(c, a)])
   }
 
   for (const [path, render, lastmod] of pages) {
@@ -124,10 +131,13 @@ const u = (path) => `${config.siteUrl}${href(config.defaultLang, path)}`
 const priceRows = allRoutes
   .slice()
   .sort((a, b) => a.from.en.localeCompare(b.from.en) || a.to.en.localeCompare(b.to.en))
-  .map(
-    (r) =>
-      `| ${r.from.en} → ${r.to.en} | ${config.currencySymbol}${r.price} | ${config.currencySymbol}${r.roundTrip} | ~${r.durationMin} min | ${u(`/routes/${r.slug}/`)} |`,
-  )
+  .map((r) => {
+    // Fiyatı sahadaki operatörün verdiği hatlarda (data/routes.mjs `quote: true`)
+    // yayınlanmış tarife yok — tabloya "£undefined" değil, açık bir not düşülür.
+    const one = r.quote ? 'on request' : `${config.currencySymbol}${r.price}`
+    const round = r.quote ? 'on request' : `${config.currencySymbol}${r.roundTrip}`
+    return `| ${r.from.en} → ${r.to.en} | ${one} | ${round} | ~${r.durationMin} min | ${u(`/routes/${r.slug}/`)} |`
+  })
   .join('\n')
 
 const pricingMd = `# ${config.brand} — Airport Transfer Prices (North Cyprus)
@@ -170,6 +180,13 @@ fee. The site is fully available in English, Turkish and Russian.
 ## Guides
 ${guideLines}
 
+## Service areas
+Guzelyurt (Morphou) and Lefke in the north-west are worked on the ground by
+${config.regionalContact.name}, reachable directly on ${config.regionalContact.phoneDisplay}
+(phone and WhatsApp). Local rides, campus runs and airport transfers all go through
+that line; fares inside the region are quoted on the call.
+${areas.map((a) => `- [${a[config.defaultLang].title}](${u(`/areas/${a.slugs[config.defaultLang]}/`)}): ${a[config.defaultLang].metaDescription.replace('{name}', config.regionalContact.name).replace(/\{phone\}/g, config.regionalContact.phoneDisplay)}`).join('\n')}
+
 ## Key pages
 - [Book a transfer](${u('/book/')})
 - [Frequently asked questions](${u('/faq/')})
@@ -211,9 +228,11 @@ writeFileSync(join(dist, '.htaccess'), readFileSync(join(root, 'public/.htaccess
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#0B2436"/><text x="16" y="23" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#1FB6C9" text-anchor="middle">T</text></svg>`
 writeFileSync(join(dist, 'assets/favicon.svg'), favicon)
 
-const pageCount = config.languages.length * (9 + allRoutes.length + posts.length + 1) + 2
+const pageCount = config.languages.length * (9 + allRoutes.length + posts.length + areas.length + 1) + 2
 console.log(`✓ ${pageCount} sayfa üretildi → dist/`)
-console.log(`  Diller: ${config.languages.join(', ')} · Rotalar: ${allRoutes.length} · Blog yazıları: ${posts.length}`)
+console.log(
+  `  Diller: ${config.languages.join(', ')} · Rotalar: ${allRoutes.length} · Blog yazıları: ${posts.length} · Bölge sayfaları: ${areas.length}`,
+)
 console.log(`  Yerelleştirilmiş adres yönlendirmesi (301): ${redirects.length}`)
 if (!config.sheetsEndpoint) {
   console.log("  ⚠ sheetsEndpoint boş — form kayıtları Google Sheets'e düşmeyecek (WhatsApp akışı çalışır).")

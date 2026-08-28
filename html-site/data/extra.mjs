@@ -57,6 +57,22 @@ export const extra = {
       directNote: 'Transfers on the Lefke and Güzelyurt line are handled locally by {name}. Call or message on WhatsApp for availability and pickup.',
       callCta: 'Call {phone}',
       whatsappCta: 'WhatsApp {name}',
+      // Fiyatı sahadaki operatörün verdiği hatlar (data/routes.mjs `quote: true`).
+      // Sabit tarife basmak yerine aramaya yönlendirilir.
+      quoteMetaTitle: '{from} to {to} Taxi — Book Direct with {name}',
+      quoteMetaDescription:
+        'Taxi and private transfer from {from} to {to}, about {duration} minutes. The line is run locally by {name} — call or message on WhatsApp for the fare and pickup.',
+      fareLabel: 'Fare',
+      quoteValue: 'On request',
+      quoteCard: 'Call for a fare',
+      areaLink: 'All rides and fares — {area}',
+    },
+    // Bölge (hizmet alanı) sayfaları — templates/areas.mjs. Sayfa metni
+    // data/areas.mjs'te; burada yalnızca butonlar durur.
+    areaDetail: {
+      callCta: 'Call now',
+      whatsappCta: 'Message on WhatsApp',
+      bookCta: 'Or book a transfer online',
     },
     bookForm: {
       routeLabel: 'Route',
@@ -206,6 +222,22 @@ export const extra = {
       directNote: 'Lefke ve Güzelyurt hattındaki transferleri bölgede {name} yürütür. Uygunluk ve alım için arayın ya da WhatsApp’tan yazın.',
       callCta: '{phone} — Ara',
       whatsappCta: 'WhatsApp: {name}',
+      // Fiyatı sahadaki operatörün verdiği hatlar (data/routes.mjs `quote: true`).
+      // Sabit tarife basmak yerine aramaya yönlendirilir.
+      quoteMetaTitle: '{from} {to} Taksi — {name} ile Doğrudan',
+      quoteMetaDescription:
+        '{from} – {to} taksi ve özel transfer, yaklaşık {duration} dakika. Hattı bölgede {name} yürütür; fiyat ve alım saati için arayın ya da WhatsApp’tan yazın.',
+      fareLabel: 'Ücret',
+      quoteValue: 'Arayın',
+      quoteCard: 'Fiyat için arayın',
+      areaLink: 'Bölgedeki tüm yolculuklar ve ücretler — {area}',
+    },
+    // Bölge (hizmet alanı) sayfaları — templates/areas.mjs. Sayfa metni
+    // data/areas.mjs'te; burada yalnızca butonlar durur.
+    areaDetail: {
+      callCta: 'Hemen ara',
+      whatsappCta: 'WhatsApp’tan yaz',
+      bookCta: 'Ya da transferi online planlayın',
     },
     bookForm: {
       routeLabel: 'Güzergah',
@@ -353,6 +385,22 @@ export const extra = {
       directNote: 'Трансферы на линии Лефке и Гюзельюрт выполняет на месте {name}. Позвоните или напишите в WhatsApp для уточнения и подачи.',
       callCta: 'Позвонить {phone}',
       whatsappCta: 'WhatsApp: {name}',
+      // Fiyatı sahadaki operatörün verdiği hatlar (data/routes.mjs `quote: true`).
+      // Sabit tarife basmak yerine aramaya yönlendirilir.
+      quoteMetaTitle: 'Такси {from} — {to}: заказ напрямую у {name}',
+      quoteMetaDescription:
+        'Такси и частный трансфер {from} — {to}, около {duration} минут. Линию ведёт на месте {name}: цену и время подачи уточните по телефону или в WhatsApp.',
+      fareLabel: 'Стоимость',
+      quoteValue: 'По запросу',
+      quoteCard: 'Цена по телефону',
+      areaLink: 'Все поездки и цены — {area}',
+    },
+    // Bölge (hizmet alanı) sayfaları — templates/areas.mjs. Sayfa metni
+    // data/areas.mjs'te; burada yalnızca butonlar durur.
+    areaDetail: {
+      callCta: 'Позвонить',
+      whatsappCta: 'Написать в WhatsApp',
+      bookCta: 'Или оформить трансфер онлайн',
     },
     bookForm: {
       routeLabel: 'Маршрут',

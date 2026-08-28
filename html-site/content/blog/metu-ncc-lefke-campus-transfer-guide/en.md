@@ -65,7 +65,7 @@ description: "Transfers to METU Northern Cyprus Campus and the European Universi
   <li><strong>Travel as a group</strong> — the fixed fare is per vehicle, not per person</li>
   <li><strong>Agree regular journeys in advance</strong> — a weekly campus run can be priced monthly</li>
 </ul>
-<p><strong>Lefke &amp; Guzelyurt line — direct contact.</strong> Journeys in this region are run on the ground by Denizli Taksi. Call or message on WhatsApp for availability and pick-up — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>.</p>
+<p><strong>Lefke &amp; Guzelyurt line — direct contact.</strong> Journeys in this region are run on the ground by Denizli Taksi. Call or message on WhatsApp for availability and pick-up — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>. See <a href="/en/areas/guzelyurt-taxi/">Guzelyurt Taxi</a> and <a href="/en/areas/lefke-taxi/">Lefke Taxi</a> for local rides, campus runs and the full route list.</p>
 <p>Ready to plan your journey? <a href="/en/routes/">See the fixed prices</a> or <a href="/en/book/">book in two minutes</a>.</p>
 
 <h2>Frequently asked questions</h2>

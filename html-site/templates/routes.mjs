@@ -7,11 +7,15 @@ import { posts } from '../data/posts.mjs'
 import { locationGroups } from '../data/locations.mjs'
 import { routeLabel } from './home.mjs'
 import { businessRef } from '../data/schema.mjs'
+import { areas } from '../data/areas.mjs'
 
 export function renderRoutesIndex(ctx) {
-  const { lang, dict } = ctx
+  const { lang, dict, xtra } = ctx
   const t = dict.routes
   const cur = config.currencySymbol
+  // `quote: true` rotaların yayınlanmış tarifesi yok (fiyatı sahadaki operatör
+  // verir); kartta iki fiyat sütunu yerine tek "fiyat için arayın" satırı çıkar.
+  const quoteCard = xtra.routeDetail.quoteCard
 
   // Kalkış havalimanına göre filtre grupları — data/routes.mjs sırasını korur.
   // Sadece locations.mjs'teki `airports` grubundaki kalkışlar pill alır; şehir
@@ -67,14 +71,21 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
         <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
         <div class="mt-auto flex items-end justify-between gap-4">
           <div class="flex gap-6">
-            <span class="block">
+            ${
+              r.quote
+                ? `<span class="block">
+              <span class="block text-[11px] text-slate">${esc(r.contactName ?? xtra.routeDetail.fareLabel)}</span>
+              <span class="text-[15px] font-semibold text-sea">${esc(quoteCard)}</span>
+            </span>`
+                : `<span class="block">
               <span class="block text-[11px] text-slate">${esc(t.oneWay)}</span>
               <span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>
             </span>
             <span class="block">
               <span class="block text-[11px] text-slate">${esc(t.roundTrip)}</span>
               <span class="text-2xl font-semibold tabular-nums text-ink">${cur}${r.roundTrip}</span>
-            </span>
+            </span>`
+            }
           </div>
           <span class="inline-flex items-center gap-1.5 text-[13px] font-medium text-sea transition-colors group-hover:text-sea-deep">${esc(t.bookRoute)} <span aria-hidden="true">→</span></span>
         </div>
@@ -96,7 +107,7 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
             ${g.items
               .map(
                 (r) => `
-            <li><a href="${href(lang, `/routes/${r.slug}/`)}" class="text-[15px] text-ink transition-colors hover:text-sea">${esc(routeLabel(r, lang))} <span class="tabular-nums text-slate">${cur}${r.price}</span></a></li>`,
+            <li><a href="${href(lang, `/routes/${r.slug}/`)}" class="text-[15px] text-ink transition-colors hover:text-sea">${esc(routeLabel(r, lang))} <span class="${r.quote ? '' : 'tabular-nums '}text-slate">${r.quote ? esc(quoteCard) : `${cur}${r.price}`}</span></a></li>`,
               )
               .join('')}
           </ul>
@@ -125,14 +136,28 @@ export function renderRouteDetail(ctx, route) {
   const label = routeLabel(route, lang)
   const path = `/routes/${route.slug}/`
 
-  const title = fmt(rd.metaTitle, { from, to, price: route.price })
-  const description = fmt(rd.metaDescription, { from, to, price: route.price, duration: route.durationMin })
+  // `quote: true` hatlarda yayınlanmış tarife yok: fiyatı sahadaki operatör
+  // (route.contactName) yolculuğa göre verir. Bu sayfalarda başlık, künye satırı
+  // ve yapısal veri fiyatsız kurulur; birincil eylem rezervasyon formu değil arama olur.
+  const quote = Boolean(route.quote)
+  const contactName = route.contactName ?? config.brand
+
+  const title = quote
+    ? fmt(rd.quoteMetaTitle, { from, to, name: contactName })
+    : fmt(rd.metaTitle, { from, to, price: route.price })
+  const description = quote
+    ? fmt(rd.quoteMetaDescription, { from, to, name: contactName, duration: route.durationMin })
+    : fmt(rd.metaDescription, { from, to, price: route.price, duration: route.durationMin })
 
   const facts = [
     [rd.facts.duration, fmt(rd.facts.durationValue, { min: route.durationMin })],
     [rd.facts.distance, fmt(rd.facts.distanceValue, { km: route.distanceKm })],
-    [rd.facts.oneWay, `${cur}${route.price}`],
-    [rd.facts.roundTrip, `${cur}${route.roundTrip}`],
+    ...(quote
+      ? [[rd.fareLabel, rd.quoteValue]]
+      : [
+          [rd.facts.oneWay, `${cur}${route.price}`],
+          [rd.facts.roundTrip, `${cur}${route.roundTrip}`],
+        ]),
     [rd.facts.vehicle, rd.facts.vehicleValue],
   ]
 
@@ -169,6 +194,17 @@ export function renderRouteDetail(ctx, route) {
     </div>`
     : ''
 
+  // Bu rotanın ucundaki bölge sayfası (varsa) — "güzelyurt taksi" gibi güzergah
+  // içermeyen sorguların hedefi. İletişim bloğundan oraya bağlanır: hem okuyucu
+  // için doğru devam yolu, hem bölge sayfasına konu-içi iç link.
+  const area = areas.find((a) => a.value === route.fromValue || a.value === route.toValue)
+  const areaLink = area
+    ? `
+      <a href="${href(lang, `/areas/${area.slugs[config.defaultLang]}/`)}" class="inline-flex items-baseline gap-1.5 text-[13px] font-medium text-sea transition-colors hover:text-sea-deep">
+        <span>${esc(fmt(rd.areaLink, { area: area[lang].title }))}</span><span aria-hidden="true">→</span>
+      </a>`
+    : ''
+
   // Bazı hatlar (ör. Güzelyurt) doğrudan bir şoför tarafından işletilir; gerçek
   // telefon/WhatsApp varsa hero'da görünür iletişim bloğu göster.
   const directContact = route.phoneHref
@@ -180,6 +216,7 @@ export function renderRouteDetail(ctx, route) {
         <a href="tel:${route.phoneHref}" class="inline-flex h-10 items-center gap-2 rounded-full bg-sea px-5 text-[13px] font-semibold text-white transition-colors hover:bg-sea-deep"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(fmt(rd.callCta, { phone: route.phoneDisplay }))}</a>
         <a href="https://wa.me/${route.whatsapp}" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 items-center gap-2 rounded-full border border-line bg-paper px-5 text-[13px] font-semibold text-ink transition-colors hover:border-sea hover:text-sea"><span class="[&>svg]:size-4">${icons.whatsapp}</span>${esc(fmt(rd.whatsappCta, { name: route.contactName }))}</a>
       </div>
+      ${areaLink}
     </div>`
     : ''
 
@@ -285,8 +322,9 @@ export function renderRouteDetail(ctx, route) {
         .join('')}
     </div>
     ${vehiclePricing}
-    <a href="${href(lang, '/book/')}?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full bg-sea px-8 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep">${esc(rd.reserveCta)}</a>
-    ${directContact}
+    ${quote ? directContact : ''}
+    <a href="${href(lang, '/book/')}?from=${encodeURIComponent(route.fromValue)}&amp;to=${encodeURIComponent(route.toValue)}" class="mt-10 inline-flex h-12 items-center rounded-full ${quote ? 'border border-line bg-paper px-8 text-ink hover:border-sea hover:text-sea' : 'bg-sea px-8 text-white hover:bg-sea-deep'} text-[14px] font-semibold transition-colors">${esc(rd.reserveCta)}</a>
+    ${quote ? '' : directContact}
   </div>
 </section>
 ${aboutSection}
@@ -316,8 +354,12 @@ ${aboutSection}
         <a href="${href(lang, `/routes/${r.slug}/`)}" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
           <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
           <span class="shrink-0 text-right">
-            <span class="block text-[11px] text-slate">${esc(dict.homepage.routes.from)}</span>
-            <span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>
+            <span class="block text-[11px] text-slate">${esc(r.quote ? (r.contactName ?? rd.fareLabel) : dict.homepage.routes.from)}</span>
+            ${
+              r.quote
+                ? `<span class="text-[15px] font-semibold text-sea">${esc(rd.quoteCard)}</span>`
+                : `<span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>`
+            }
           </span>
         </a>`,
           )
@@ -332,20 +374,24 @@ ${faqSectionHtml}`
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      serviceType: 'Airport transfer',
+      serviceType: quote ? 'Taxi service' : 'Airport transfer',
       name: `${from} → ${to}`,
       provider: businessRef,
       // Rota bazlı hizmet alanı — eski 'Cyprus' hem çok genişti hem konumlandırmayla
       // çelişiyordu. Bu transfer bu iki noktaya hizmet eder.
       areaServed: [from, to],
-      offers: {
-        '@type': 'Offer',
-        price: route.price,
-        priceCurrency: config.currencyCode,
-        // 7/24 dispatch beyanıyla tutarlı — rota her zaman rezerve edilebilir.
-        availability: 'https://schema.org/InStock',
-        url: `${config.siteUrl}${href(lang, path)}`,
-      },
+      // Fiyatsız hatta `price` uydurmak yerine Offer hiç basılmaz; sahte fiyat
+      // yapısal veride "fiyat uyuşmuyor" hatası doğurur.
+      offers: quote
+        ? undefined
+        : {
+            '@type': 'Offer',
+            price: route.price,
+            priceCurrency: config.currencyCode,
+            // 7/24 dispatch beyanıyla tutarlı — rota her zaman rezerve edilebilir.
+            availability: 'https://schema.org/InStock',
+            url: `${config.siteUrl}${href(lang, path)}`,
+          },
     },
     {
       '@context': 'https://schema.org',

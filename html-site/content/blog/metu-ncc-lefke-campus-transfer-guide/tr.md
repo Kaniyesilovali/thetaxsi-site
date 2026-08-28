@@ -65,7 +65,7 @@ description: "ODTÜ Kuzey Kıbrıs Kampüsü ve Lefke Avrupa Üniversitesi trans
   <li><strong>Grup olun</strong> — sabit fiyat araç başınadır, kişi başına değil</li>
   <li><strong>Düzenli güzergahları önceden anlaşın</strong> — haftalık kampüs–merkez gidiş-gelişi için aylık fiyat verilebilir</li>
 </ul>
-<p><strong>Lefke &amp; Güzelyurt hattı — doğrudan iletişim.</strong> Bu bölgedeki yolculukları sahada Denizli Taksi yürütür. Uygunluk ve alım için arayın ya da WhatsApp'tan yazın — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>.</p>
+<p><strong>Lefke &amp; Güzelyurt hattı — doğrudan iletişim.</strong> Bu bölgedeki yolculukları sahada Denizli Taksi yürütür. Uygunluk ve alım için arayın ya da WhatsApp'tan yazın — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>. Şehir içi yolculuklar, kampüs hatları ve güzergahların tamamı için <a href="/tr/areas/guzelyurt-taxi/">Güzelyurt Taksi</a> ve <a href="/tr/areas/lefke-taxi/">Lefke Taksi</a> sayfalarına bakın.</p>
 <p>Yolculuğunuzu planlamaya hazır mısınız? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada rezervasyon yapın</a>.</p>
 
 <h2>Sıkça sorulan sorular</h2>

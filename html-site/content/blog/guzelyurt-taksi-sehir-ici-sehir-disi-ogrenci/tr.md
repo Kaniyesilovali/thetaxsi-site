@@ -52,5 +52,5 @@ description: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, 
 <p>Evet. Güzelyurt içindeki kısa yerel yolculuklar sabit yerel fiyatla yapılır — merkez, kampüs, hastane ya da akşam gezmesi.</p>
 <h3>Düzenli ya da aylık yolculuk ayarlayabilir miyim?</h3>
 <p>Evet. Tekrar eden bir güzergahınız varsa — haftalık alışveriş, kampüs gidiş-gelişi — bize söyleyin, aynı araç her seferinde orada olacak şekilde sabit bir anlaşma yapalım.</p>
-<p><strong>Lefke &amp; Güzelyurt hattı — doğrudan iletişim.</strong> Güzelyurt ve Lefke yolculuklarını bölgede Denizli Taksi yürütür. Uygunluk ve alım için arayın ya da WhatsApp'tan yazın — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>.</p>
+<p><strong>Lefke &amp; Güzelyurt hattı — doğrudan iletişim.</strong> Güzelyurt ve Lefke yolculuklarını bölgede Denizli Taksi yürütür. Uygunluk ve alım için arayın ya da WhatsApp'tan yazın — <strong>Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a></strong>. Şehir içi yolculuklar, kampüs hatları ve güzergahların tamamı için <a href="/tr/areas/guzelyurt-taxi/">Güzelyurt Taksi</a> ve <a href="/tr/areas/lefke-taxi/">Lefke Taksi</a> sayfalarına bakın.</p>
 <p>Şimdi ya da düzenli bir yolculuk mu lazım? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada rezervasyon yapın</a>.</p>
