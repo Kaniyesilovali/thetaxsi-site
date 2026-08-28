@@ -1,11 +1,63 @@
-import { esc, fmt, icons, page } from './layout.mjs'
+import { esc, fmt, icons, page, pageHero } from './layout.mjs'
 import { href } from '../data/slugs.mjs'
 import { config } from '../site.config.mjs'
 import { allRoutes } from '../data/routes.mjs'
+import { areas } from '../data/areas.mjs'
 import { posts } from '../data/posts.mjs'
 import { routeLabel } from './home.mjs'
 import { businessRef } from '../data/schema.mjs'
 
+// Bölge sayfalarının hub'ı — /en/areas/, /tr/bolge/, /ru/rayony/.
+// Bölüm adresinin kendisi ebeveynsiz kalmasın diye var: URL'i kısaltan kullanıcı
+// sunucu hatası değil liste görür, ve yeni bölge eklendikçe menü kalemi büyür.
+export function renderAreasIndex(ctx) {
+  const { lang, xtra } = ctx
+  const t = xtra.areasIndex
+  const contact = config.regionalContact
+
+  const body = `
+${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
+<section class="bg-fog py-20 lg:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="grid gap-4 md:grid-cols-2">
+      ${areas
+        .map((a) => {
+          const at = a[lang]
+          return `
+      <a href="${href(lang, `/areas/${a.slugs[config.defaultLang]}/`)}" class="group flex flex-col gap-4 rounded-3xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-card">
+        <h2 class="text-2xl font-semibold tracking-tight text-ink">${esc(at.title)}</h2>
+        <p class="text-[15px] leading-relaxed text-slate">${esc(at.lead)}</p>
+        <span class="mt-auto inline-flex items-center gap-1.5 pt-2 text-[13px] font-medium text-sea transition-colors group-hover:text-sea-deep">${esc(t.cardCta)} <span aria-hidden="true">→</span></span>
+      </a>`
+        })
+        .join('')}
+    </div>
+    <div class="mt-12 flex flex-wrap items-center gap-3 border-t border-line pt-10">
+      <a href="tel:${contact.phoneHref}" class="inline-flex h-12 items-center gap-2 rounded-full bg-sea px-7 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(contact.phoneDisplay)}</a>
+      <a href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 items-center gap-2 rounded-full border border-line bg-paper px-7 text-[14px] font-semibold text-ink transition-colors hover:border-sea hover:text-sea"><span class="[&>svg]:size-4">${icons.whatsapp}</span>${esc(xtra.areaDetail.whatsappCta)}</a>
+    </div>
+  </div>
+</section>`
+
+  const jsonld = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: xtra.nav.home, item: `${config.siteUrl}${href(lang, '/')}` },
+        { '@type': 'ListItem', position: 2, name: t.title, item: `${config.siteUrl}${href(lang, '/areas/')}` },
+      ],
+    },
+  ]
+
+  return page(ctx, {
+    title: t.meta.title,
+    description: t.meta.description,
+    path: '/areas/',
+    body,
+    jsonld,
+  })
+}
 // Bölge (hizmet alanı) sayfası — "güzelyurt taksi", "lefke taksi durağı",
 // "güzelyurt taksi numarası" gibi güzergah içermeyen yerel sorguların hedefi.
 //
@@ -46,6 +98,8 @@ export function renderAreaDetail(ctx, area) {
   <div class="relative mx-auto max-w-6xl px-5 pt-14 pb-16 sm:px-8 lg:pt-16 lg:pb-20">
     <nav class="text-[13px] text-slate" aria-label="Breadcrumb">
       <a href="${href(lang, '/')}" class="transition-colors hover:text-ink">${esc(xtra.nav.home)}</a>
+      <span class="mx-2 text-ink/25">/</span>
+      <a href="${href(lang, '/areas/')}" class="transition-colors hover:text-ink">${esc(xtra.nav.areas)}</a>
       <span class="mx-2 text-ink/25">/</span>
       <span class="text-ink">${esc(t.title)}</span>
     </nav>
@@ -178,7 +232,8 @@ ${
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: xtra.nav.home, item: `${config.siteUrl}${href(lang, '/')}` },
-        { '@type': 'ListItem', position: 2, name: t.title, item: `${config.siteUrl}${href(lang, path)}` },
+        { '@type': 'ListItem', position: 2, name: xtra.nav.areas, item: `${config.siteUrl}${href(lang, '/areas/')}` },
+        { '@type': 'ListItem', position: 3, name: t.title, item: `${config.siteUrl}${href(lang, path)}` },
       ],
     },
     {

@@ -1,7 +1,20 @@
 // Statik siteye özgü metinler — frontend dictionary'lerinde olmayan anahtarlar.
 export const extra = {
   en: {
-    nav: { faq: 'FAQ', home: 'Home', blog: 'Journal' },
+    nav: { faq: 'FAQ', home: 'Home', blog: 'Journal', areas: 'Areas' },
+    // Bölge (hizmet alanı) index sayfası — /en/areas/
+    areasIndex: {
+      meta: {
+        title: 'Service Areas — Local Taxi Lines | TheTaxsi',
+        description:
+          'Where we run a local taxi line rather than only airport transfers: Guzelyurt and Lefke in the north-west, worked on the ground with a direct number.',
+      },
+      eyebrow: 'Service areas',
+      title: 'Service areas',
+      subtitle:
+        'Some parts of the island have no taxi you can flag down. In those places we work a local line with a number that answers directly — local rides, campus runs and airport transfers on the same call.',
+      cardCta: 'See the area',
+    },
     blog: {
       meta: {
         title: 'Cyprus Travel Guides & Transfer Tips | TheTaxsi',
@@ -166,7 +179,20 @@ export const extra = {
     blogNote: '',
   },
   tr: {
-    nav: { faq: 'SSS', home: 'Ana Sayfa', blog: 'Blog' },
+    nav: { faq: 'SSS', home: 'Ana Sayfa', blog: 'Blog', areas: 'Bölgeler' },
+    // Bölge (hizmet alanı) index sayfası — /tr/bolge/
+    areasIndex: {
+      meta: {
+        title: 'Hizmet Bölgeleri — Yerel Taksi Hatları | TheTaxsi',
+        description:
+          'Sadece havalimanı transferi değil, yerel taksi hattı işlettiğimiz bölgeler: kuzeybatıda Güzelyurt ve Lefke — sahada çalışan, doğrudan ulaşılan bir numarayla.',
+      },
+      eyebrow: 'Hizmet bölgeleri',
+      title: 'Hizmet bölgeleri',
+      subtitle:
+        'Adanın bazı yerlerinde el kaldırıp binebileceğiniz taksi yoktur. Oralarda doğrudan açılan bir numarayla yerel hat işletiriz — şehir içi yolculuk, kampüs hattı ve havalimanı transferi aynı aramayla.',
+      cardCta: 'Bölgeyi gör',
+    },
     blog: {
       meta: {
         title: 'Kıbrıs Seyahat Rehberi & Transfer İpuçları | TheTaxsi',
@@ -329,7 +355,20 @@ export const extra = {
     blogNote: '',
   },
   ru: {
-    nav: { faq: 'Вопросы', home: 'Главная', blog: 'Журнал' },
+    nav: { faq: 'Вопросы', home: 'Главная', blog: 'Журнал', areas: 'Районы' },
+    // Bölge (hizmet alanı) index sayfası — /ru/rayony/
+    areasIndex: {
+      meta: {
+        title: 'Зоны обслуживания — местные линии такси | TheTaxsi',
+        description:
+          'Где мы держим местную линию такси, а не только аэропортовые трансферы: Гюзельюрт и Лефке на северо-западе — с прямым номером, который отвечает на месте.',
+      },
+      eyebrow: 'Зоны обслуживания',
+      title: 'Зоны обслуживания',
+      subtitle:
+        'В некоторых местах острова такси не поймать на улице. Там мы держим местную линию с прямым номером — поездки по городу, маршруты в кампусы и трансферы в аэропорт по одному звонку.',
+      cardCta: 'Открыть район',
+    },
     blog: {
       meta: {
         title: 'Путеводители по Кипру и советы по трансферам | TheTaxsi',

@@ -26,6 +26,9 @@ function header(ctx) {
   const base = `/${lang}`
   const links = [
     { href: href(lang, '/routes/'), label: dict.nav.routes },
+    // Bölge sayfaları güzergahların hemen yanında: ikisi de "nereye gidiyorsunuz"
+    // sorusunun cevabı, biri hat biri yer üzerinden.
+    { href: href(lang, '/areas/'), label: xtra.nav.areas },
     { href: href(lang, '/about/'), label: dict.nav.about },
     { href: href(lang, '/blog/'), label: xtra.nav.blog },
     { href: href(lang, '/faq/'), label: xtra.nav.faq },

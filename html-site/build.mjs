@@ -15,7 +15,7 @@ import { renderRoutesIndex, renderRouteDetail } from './templates/routes.mjs'
 import { renderBlogIndex, renderBlogPost } from './templates/blog.mjs'
 import { renderBook } from './templates/book.mjs'
 import { renderAbout, renderContact, renderFaq, renderLegal, render404 } from './templates/misc.mjs'
-import { renderAreaDetail } from './templates/areas.mjs'
+import { renderAreaDetail, renderAreasIndex } from './templates/areas.mjs'
 
 const root = dirname(fileURLToPath(import.meta.url))
 const dist = join(root, 'dist')
@@ -48,6 +48,7 @@ for (const lang of config.languages) {
     ['/book/', renderBook],
     ['/routes/', renderRoutesIndex],
     ['/blog/', renderBlogIndex],
+    ['/areas/', renderAreasIndex],
     ['/about/', renderAbout],
     ['/contact/', renderContact],
     ['/faq/', renderFaq],
@@ -228,7 +229,7 @@ writeFileSync(join(dist, '.htaccess'), readFileSync(join(root, 'public/.htaccess
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#0B2436"/><text x="16" y="23" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="20" fill="#1FB6C9" text-anchor="middle">T</text></svg>`
 writeFileSync(join(dist, 'assets/favicon.svg'), favicon)
 
-const pageCount = config.languages.length * (9 + allRoutes.length + posts.length + areas.length + 1) + 2
+const pageCount = config.languages.length * (10 + allRoutes.length + posts.length + areas.length + 1) + 2
 console.log(`✓ ${pageCount} sayfa üretildi → dist/`)
 console.log(
   `  Diller: ${config.languages.join(', ')} · Rotalar: ${allRoutes.length} · Blog yazıları: ${posts.length} · Bölge sayfaları: ${areas.length}`,

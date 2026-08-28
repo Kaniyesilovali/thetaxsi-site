@@ -54,8 +54,28 @@ export function renderRoutesIndex(ctx) {
     group.items.push(r)
   }
 
+  // Bölge sayfalarına köprü: bu liste hat ("A'dan B'ye") üzerinden düşünen
+  // ziyaretçiye göre kurulu; yer üzerinden arayan ("Güzelyurt taksi") kişinin
+  // buradan bölge sayfasına geçebilmesi gerekir.
+  const areaStrip = `
+<section class="border-b border-line bg-paper py-10">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 sm:px-8">
+    <p class="text-[13px] font-semibold text-ink">${esc(xtra.areasIndex.eyebrow)}</p>
+    <p class="max-w-2xl text-[15px] leading-relaxed text-slate">${esc(xtra.areasIndex.subtitle)}</p>
+    <div class="flex flex-wrap gap-2">
+      ${areas
+        .map(
+          (a) => `
+      <a href="${href(lang, `/areas/${a.slugs[config.defaultLang]}/`)}" class="inline-flex h-10 items-center gap-2 rounded-full border border-line bg-paper px-5 text-[13px] font-medium text-ink transition-colors hover:border-sea hover:text-sea">${esc(a[lang].title)} <span aria-hidden="true">→</span></a>`,
+        )
+        .join('')}
+    </div>
+  </div>
+</section>`
+
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
+${areaStrip}
 <section class="bg-fog py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
     <div class="-mx-5 mb-8 flex items-center gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:px-0" data-route-filters role="group" aria-label="${esc(t.filterLabel)}">

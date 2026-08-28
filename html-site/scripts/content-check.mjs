@@ -19,7 +19,7 @@ const err = (where, msg) => errors.push(`${where}: ${msg}`)
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`)
 
 /* ---------- Üretilen sayfaların tam listesi (iç link kontrolü için) ---------- */
-const staticPaths = ['/', '/book/', '/routes/', '/blog/', '/about/', '/contact/', '/faq/', '/privacy/', '/terms/']
+const staticPaths = ['/', '/book/', '/routes/', '/areas/', '/blog/', '/about/', '/contact/', '/faq/', '/privacy/', '/terms/']
 const validPaths = new Set()
 for (const lang of config.languages) {
   for (const p of staticPaths) validPaths.add(`/${lang}${p}`)
