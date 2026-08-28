@@ -104,7 +104,7 @@ export const areas = [
     tr: {
       metaTitle: 'Güzelyurt Taksi — Bölgede Çalışan Numara | {phone}',
       metaDescription:
-        'Güzelyurt taksi: şehir içi yolculuklar, Ercan Havalimanı transferi, ODTÜ ve Lefke kampüs hatları. Bölgede {name} yürütür — arayın ya da WhatsApp: {phone}.',
+        'KKTC Güzelyurt taksi: şehir içi yolculuklar, Ercan Havalimanı transferi, ODTÜ ve Lefke kampüs hatları. Bölgede {name} yürütür — arayın ya da WhatsApp: {phone}.',
       eyebrow: 'Hizmet bölgesi',
       title: 'Güzelyurt Taksi',
       lead:
@@ -117,7 +117,7 @@ export const areas = [
         {
           title: 'Güzelyurt’ta taksi çağırmak',
           body:
-            'Merkezde sıra bekleyen araç dizisi yoktur, hava karardıktan sonra ise fiilen hiç yoktur. Burada taksi aramayla gelir: nerede olduğunuzu ve nereye gideceğinizi söylersiniz, ücret araç yola çıkmadan konuşulur ve araç buluşma noktasına değil adrese gelir.',
+            'KKTC’nin kuzeybatısındaki Güzelyurt’ta merkezde sıra bekleyen araç dizisi yoktur, hava karardıktan sonra ise fiilen hiç yoktur. Burada taksi aramayla gelir: nerede olduğunuzu ve nereye gideceğinizi söylersiniz, ücret araç yola çıkmadan konuşulur ve araç buluşma noktasına değil adrese gelir.',
         },
         {
           title: 'Şehir içi yolculuklar',
@@ -336,7 +336,7 @@ export const areas = [
     tr: {
       metaTitle: 'Lefke Taksi — Bölgede Çalışan Numara | {phone}',
       metaDescription:
-        'Lefke ve Gemikonağı taksi: Lefke Avrupa Üniversitesi kampüs yolculukları, Ercan Havalimanı transferi ve şehir içi yolculuklar. Bölgede {name} yürütür — {phone}.',
+        'KKTC Lefke taksi: Lefke Avrupa Üniversitesi kampüs yolculukları, Gemikonağı sahili, Ercan Havalimanı transferi ve şehir içi yolculuklar. Bölgede {name} yürütür — {phone}.',
       eyebrow: 'Hizmet bölgesi',
       title: 'Lefke Taksi',
       lead:
@@ -349,7 +349,7 @@ export const areas = [
         {
           title: 'Lefke’de taksi çağırmak',
           body:
-            'Burası el kaldırılan değil, aranan bir yerdir. Nerede olduğunuzu ve nereye gideceğinizi söylersiniz, ücret araç yola çıkmadan konuşulur ve araç adrese gelir — kampüs kapısı, sahil ya da sahil yolundaki bir köy.',
+            'KKTC’nin batı ucundaki Lefke, el kaldırılan değil aranan bir yerdir. Nerede olduğunuzu ve nereye gideceğinizi söylersiniz, ücret araç yola çıkmadan konuşulur ve araç adrese gelir — kampüs kapısı, sahil ya da sahil yolundaki bir köy.',
         },
         {
           title: 'Lefke Avrupa Üniversitesi ve kampüs yolculukları',
