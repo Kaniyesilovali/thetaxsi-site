@@ -1,4 +1,13 @@
 // Site geneli yapılandırma — canlıya çıkmadan önce bu dosyayı güncelle.
+
+// Denizli Taksi'nin (Güzelyurt/Lefke bölge hattı) numaraları — sırası önemli,
+// ilki birincil hat. config.regionalContact bu listeden beslenir.
+const denizliPhones = [
+  { display: '+90 548 861 69 39', href: '+905488616939', whatsapp: '905488616939' },
+  { display: '+90 542 861 69 39', href: '+905428616939', whatsapp: '' },
+  { display: '+90 533 861 69 39', href: '+905338616939', whatsapp: '' },
+]
+
 export const config = {
   // Canlı domain (hreflang, canonical, sitemap için). Sonunda / olmasın.
   siteUrl: 'https://thetaxsi.com',
@@ -20,9 +29,14 @@ export const config = {
   // site geneli iletişim bilgisi DEĞİLDİR (header/footer/schema'ya girmez).
   regionalContact: {
     name: 'Denizli Taksi',
-    phoneDisplay: '+90 548 861 69 39',
-    phoneHref: '+905488616939',
-    whatsapp: '905488616939',
+    // Hattın tüm numaraları. İlk kayıt BİRİNCİL: meta başlık/açıklamalardaki
+    // {phone}, rota sayfasındaki tek butonlu iletişim ve llms.txt onu kullanır;
+    // diğerleri bölge sayfasındaki "diğer hatlar" satırında yedek olarak listelenir.
+    // `whatsapp` boş bırakılan numara yalnızca arama linki alır (WhatsApp butonu çıkmaz).
+    phones: denizliPhones,
+    phoneDisplay: denizliPhones[0].display,
+    phoneHref: denizliPhones[0].href,
+    whatsapp: denizliPhones[0].whatsapp,
     // Bu iletişimin gösterileceği rota uçları (data/routes.mjs fromValue/toValue).
     areas: ['Güzelyurt Merkez', 'Lefke Merkez'],
   },

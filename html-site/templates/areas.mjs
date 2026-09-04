@@ -14,6 +14,7 @@ export function renderAreasIndex(ctx) {
   const { lang, xtra } = ctx
   const t = xtra.areasIndex
   const contact = config.regionalContact
+  const otherPhones = (contact.phones ?? []).slice(1)
 
   const body = `
 ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
@@ -32,9 +33,18 @@ ${pageHero({ eyebrow: t.eyebrow, title: t.title, subtitle: t.subtitle })}
         })
         .join('')}
     </div>
-    <div class="mt-12 flex flex-wrap items-center gap-3 border-t border-line pt-10">
-      <a href="tel:${contact.phoneHref}" class="inline-flex h-12 items-center gap-2 rounded-full bg-sea px-7 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(contact.phoneDisplay)}</a>
-      <a href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 items-center gap-2 rounded-full border border-line bg-paper px-7 text-[14px] font-semibold text-ink transition-colors hover:border-sea hover:text-sea"><span class="[&>svg]:size-4">${icons.whatsapp}</span>${esc(xtra.areaDetail.whatsappCta)}</a>
+    <div class="mt-12 border-t border-line pt-10">
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="tel:${contact.phoneHref}" class="inline-flex h-12 items-center gap-2 rounded-full bg-sea px-7 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(contact.phoneDisplay)}</a>
+        <a href="https://wa.me/${contact.whatsapp}" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 items-center gap-2 rounded-full border border-line bg-paper px-7 text-[14px] font-semibold text-ink transition-colors hover:border-sea hover:text-sea"><span class="[&>svg]:size-4">${icons.whatsapp}</span>${esc(xtra.areaDetail.whatsappCta)}</a>
+      </div>
+      ${
+        otherPhones.length
+          ? `<p class="mt-4 text-[14px] text-slate">${esc(xtra.areaDetail.otherLines)}: ${otherPhones
+              .map((p) => `<a href="tel:${p.href}" class="font-medium tabular-nums text-ink transition-colors hover:text-sea">${esc(p.display)}</a>`)
+              .join('<span class="mx-1 text-ink/25">·</span>')}</p>`
+          : ''
+      }
     </div>
   </div>
 </section>`
@@ -71,6 +81,8 @@ export function renderAreaDetail(ctx, area) {
   const t = area[lang]
   const ad = xtra.areaDetail
   const contact = config.regionalContact
+  // Birincil numara büyük punto ile basılır; kalanlar altında yedek hat olarak.
+  const otherPhones = (contact.phones ?? []).slice(1)
   const path = `/areas/${area.slugs[config.defaultLang]}/`
   const vars = { name: contact.name, phone: contact.phoneDisplay }
 
@@ -83,6 +95,13 @@ export function renderAreaDetail(ctx, area) {
     <div class="mt-10 flex flex-col gap-4 rounded-3xl border border-sea/25 bg-sea/5 p-6 sm:max-w-xl sm:p-7">
       <p class="text-[13px] font-semibold text-ink">${esc(t.callHeading)}</p>
       <a href="tel:${contact.phoneHref}" class="text-[clamp(1.5rem,4vw,2rem)] font-semibold tracking-tight text-ink transition-colors hover:text-sea">${esc(contact.phoneDisplay)}</a>
+      ${
+        otherPhones.length
+          ? `<p class="text-[14px] text-slate">${esc(ad.otherLines)}: ${otherPhones
+              .map((p) => `<a href="tel:${p.href}" class="font-medium tabular-nums text-ink transition-colors hover:text-sea">${esc(p.display)}</a>`)
+              .join('<span class="mx-1 text-ink/25">·</span>')}</p>`
+          : ''
+      }
       <p class="text-[15px] leading-relaxed text-slate">${esc(fmt(t.callNote, vars))}</p>
       <div class="flex flex-wrap gap-2">
         <a href="tel:${contact.phoneHref}" class="inline-flex h-11 items-center gap-2 rounded-full bg-sea px-6 text-[14px] font-semibold text-white transition-colors hover:bg-sea-deep"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(ad.callCta)}</a>
@@ -221,11 +240,12 @@ ${
       serviceType: t.title,
       provider: businessRef,
       areaServed: { '@type': 'City', name: area.id === 'lefke' ? 'Lefke' : 'Güzelyurt' },
-      availableChannel: {
+      // Hattaki her numara ayrı kanal olarak verilir; ilki birincil.
+      availableChannel: (contact.phones ?? [{ href: contact.phoneHref }]).map((p) => ({
         '@type': 'ServiceChannel',
-        servicePhone: { '@type': 'ContactPoint', telephone: contact.phoneHref, contactType: 'reservations' },
+        servicePhone: { '@type': 'ContactPoint', telephone: p.href, contactType: 'reservations' },
         serviceUrl: `${config.siteUrl}${href(lang, path)}`,
-      },
+      })),
     },
     {
       '@context': 'https://schema.org',

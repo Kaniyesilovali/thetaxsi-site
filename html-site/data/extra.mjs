@@ -84,6 +84,9 @@ export const extra = {
     // data/areas.mjs'te; burada yalnızca butonlar durur.
     areaDetail: {
       callCta: 'Call now',
+      // Hatta birden fazla numara varsa (site.config.mjs regionalContact.phones)
+      // birincil numaranın altında listelenir.
+      otherLines: 'Other lines',
       whatsappCta: 'Message on WhatsApp',
       bookCta: 'Or book a transfer online',
     },
@@ -262,6 +265,7 @@ export const extra = {
     // data/areas.mjs'te; burada yalnızca butonlar durur.
     areaDetail: {
       callCta: 'Hemen ara',
+      otherLines: 'Diğer hatlar',
       whatsappCta: 'WhatsApp’tan yaz',
       bookCta: 'Ya da transferi online planlayın',
     },
@@ -438,6 +442,7 @@ export const extra = {
     // data/areas.mjs'te; burada yalnızca butonlar durur.
     areaDetail: {
       callCta: 'Позвонить',
+      otherLines: 'Другие линии',
       whatsappCta: 'Написать в WhatsApp',
       bookCta: 'Или оформить трансфер онлайн',
     },

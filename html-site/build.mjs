@@ -183,9 +183,9 @@ ${guideLines}
 
 ## Service areas
 Guzelyurt (Morphou) and Lefke in the north-west are worked on the ground by
-${config.regionalContact.name}, reachable directly on ${config.regionalContact.phoneDisplay}
-(phone and WhatsApp). Local rides, campus runs and airport transfers all go through
-that line; fares inside the region are quoted on the call.
+${config.regionalContact.name}, reachable directly on ${config.regionalContact.phones.map((p) => p.display).join(', ')}
+(the first number is also on WhatsApp). Local rides, campus runs and airport transfers
+all go through that line; fares inside the region are quoted on the call.
 ${areas.map((a) => `- [${a[config.defaultLang].title}](${u(`/areas/${a.slugs[config.defaultLang]}/`)}): ${a[config.defaultLang].metaDescription.replace('{name}', config.regionalContact.name).replace(/\{phone\}/g, config.regionalContact.phoneDisplay)}`).join('\n')}
 
 ## Key pages
