@@ -24,6 +24,7 @@ export const areas = [
     // İlgili rehberler (content/blog/<slug>) — sayfa sonundaki okuma bloğu.
     guides: [
       'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci',
+      'guzelyurt-airport-taxi-ercan-larnaca-paphos',
       'guzelyurt-morphou-transfer-guide',
       'metu-ncc-lefke-campus-transfer-guide',
     ],
