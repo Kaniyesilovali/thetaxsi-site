@@ -68,6 +68,7 @@ const pillarOf = {
   'paphos-airport-arrival-guide': 'airport',
   'ercan-vs-larnaca-for-kyrenia': 'airport',
   'north-cyprus-airport-transfer-prices': 'airport',
+  'guzelyurt-airport-taxi-ercan-larnaca-paphos': 'airport',
   // 2 — Sınır geçişi
   'larnaca-airport-to-kyrenia-border-crossing-guide': 'border',
   'north-cyprus-visa-passport-border-crossing': 'border',
@@ -79,6 +80,8 @@ const pillarOf = {
   'guzelyurt-morphou-transfer-guide': 'destinations',
   'guzelyurt-soli-vouni-west-cyprus-guide': 'destinations',
   'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci': 'destinations',
+  'guzelyurt-lefke-village-taxi': 'destinations',
+  'metu-ncc-lefke-campus-transfer-guide': 'destinations',
   'iskele-long-beach-hotels-transfer-guide': 'destinations',
   'karpaz-golden-beach-guide': 'destinations',
   'kyrenia-harbour-castle-old-town-guide': 'destinations',
