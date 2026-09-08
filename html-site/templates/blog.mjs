@@ -81,6 +81,7 @@ const pillarOf = {
   'guzelyurt-soli-vouni-west-cyprus-guide': 'destinations',
   'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci': 'destinations',
   'guzelyurt-lefke-village-taxi': 'destinations',
+  'lefke-taxi-guide': 'destinations',
   'metu-ncc-lefke-campus-transfer-guide': 'destinations',
   'iskele-long-beach-hotels-transfer-guide': 'destinations',
   'karpaz-golden-beach-guide': 'destinations',

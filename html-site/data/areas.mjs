@@ -296,6 +296,7 @@ export const areas = [
     slugs: { en: 'lefke-taxi', tr: 'lefke-taksi', ru: 'taksi-lefke' },
     value: 'Lefke Merkez',
     guides: [
+      'lefke-taxi-guide',
       'metu-ncc-lefke-campus-transfer-guide',
       'guzelyurt-lefke-village-taxi',
       'guzelyurt-soli-vouni-west-cyprus-guide',
