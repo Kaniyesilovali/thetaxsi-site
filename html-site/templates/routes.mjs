@@ -16,6 +16,8 @@ export function renderRoutesIndex(ctx) {
   // `quote: true` rotaların yayınlanmış tarifesi yok (fiyatı sahadaki operatör
   // verir); kartta iki fiyat sütunu yerine tek "fiyat için arayın" satırı çıkar.
   const quoteCard = xtra.routeDetail.quoteCard
+  // config.showPrices false iken fiyatlı rotalar da aynı kartı kullanır.
+  const hideFare = !config.showPrices
 
   // Kalkış havalimanına göre filtre grupları — data/routes.mjs sırasını korur.
   // Sadece locations.mjs'teki `airports` grubundaki kalkışlar pill alır; şehir
@@ -92,7 +94,7 @@ ${areaStrip}
         <div class="mt-auto flex items-end justify-between gap-4">
           <div class="flex gap-6">
             ${
-              r.quote
+              r.quote || hideFare
                 ? `<span class="block">
               <span class="block text-[11px] text-slate">${esc(r.contactName ?? xtra.routeDetail.fareLabel)}</span>
               <span class="text-[15px] font-semibold text-sea">${esc(quoteCard)}</span>
@@ -127,7 +129,7 @@ ${areaStrip}
             ${g.items
               .map(
                 (r) => `
-            <li><a href="${href(lang, `/routes/${r.slug}/`)}" class="text-[15px] text-ink transition-colors hover:text-sea">${esc(routeLabel(r, lang))} <span class="${r.quote ? '' : 'tabular-nums '}text-slate">${r.quote ? esc(quoteCard) : `${cur}${r.price}`}</span></a></li>`,
+            <li><a href="${href(lang, `/routes/${r.slug}/`)}" class="text-[15px] text-ink transition-colors hover:text-sea">${esc(routeLabel(r, lang))} <span class="${r.quote || hideFare ? '' : 'tabular-nums '}text-slate">${r.quote || hideFare ? esc(quoteCard) : `${cur}${r.price}`}</span></a></li>`,
               )
               .join('')}
           </ul>
@@ -160,19 +162,28 @@ export function renderRouteDetail(ctx, route) {
   // (route.contactName) yolculuğa göre verir. Bu sayfalarda başlık, künye satırı
   // ve yapısal veri fiyatsız kurulur; birincil eylem rezervasyon formu değil arama olur.
   const quote = Boolean(route.quote)
+  // Yayınlanmış tarifeyi gizleme anahtarı (site.config.mjs). quote hatlarından
+  // farkı: başlık metni ve sayfanın kurgusu aynı kalır, yalnız rakamlar düşer.
+  const hideFare = !config.showPrices
+  const noFare = quote || hideFare
   const contactName = route.contactName ?? config.brand
 
   const title = quote
     ? fmt(rd.quoteMetaTitle, { from, to, name: contactName })
-    : fmt(rd.metaTitle, { from, to, price: route.price })
+    : fmt(hideFare ? rd.metaTitleNoPrice : rd.metaTitle, { from, to, price: route.price })
   const description = quote
     ? fmt(rd.quoteMetaDescription, { from, to, name: contactName, duration: route.durationMin })
-    : fmt(rd.metaDescription, { from, to, price: route.price, duration: route.durationMin })
+    : fmt(hideFare ? rd.metaDescriptionNoPrice : rd.metaDescription, {
+        from,
+        to,
+        price: route.price,
+        duration: route.durationMin,
+      })
 
   const facts = [
     [rd.facts.duration, fmt(rd.facts.durationValue, { min: route.durationMin })],
     [rd.facts.distance, fmt(rd.facts.distanceValue, { km: route.distanceKm })],
-    ...(quote
+    ...(noFare
       ? [[rd.fareLabel, rd.quoteValue]]
       : [
           [rd.facts.oneWay, `${cur}${route.price}`],
@@ -203,7 +214,7 @@ export function renderRouteDetail(ctx, route) {
         </span>
       </div>`
 
-  const vehiclePricing = route.vitoPrice
+  const vehiclePricing = route.vitoPrice && !hideFare
     ? `
     <div class="mt-10 sm:max-w-lg">
       <p class="text-[13px] font-semibold text-ink">${esc(rd.vehiclesTitle)}</p>
@@ -374,9 +385,9 @@ ${aboutSection}
         <a href="${href(lang, `/routes/${r.slug}/`)}" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
           <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
           <span class="shrink-0 text-right">
-            <span class="block text-[11px] text-slate">${esc(r.quote ? (r.contactName ?? rd.fareLabel) : dict.homepage.routes.from)}</span>
+            <span class="block text-[11px] text-slate">${esc(r.quote || hideFare ? (r.contactName ?? rd.fareLabel) : dict.homepage.routes.from)}</span>
             ${
-              r.quote
+              r.quote || hideFare
                 ? `<span class="text-[15px] font-semibold text-sea">${esc(rd.quoteCard)}</span>`
                 : `<span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>`
             }
@@ -402,7 +413,7 @@ ${faqSectionHtml}`
       areaServed: [from, to],
       // Fiyatsız hatta `price` uydurmak yerine Offer hiç basılmaz; sahte fiyat
       // yapısal veride "fiyat uyuşmuyor" hatası doğurur.
-      offers: quote
+      offers: noFare
         ? undefined
         : {
             '@type': 'Offer',

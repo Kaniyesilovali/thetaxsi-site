@@ -49,4 +49,4 @@ description: "A complete guide to Cyprus's three airports — Ercan, Larnaca and
 <p>Yes — you stay in the same car the whole way. The crossing adds about 20–30 minutes and there's no passenger fee.</p>
 <h3>Do you only do airport transfers?</h3>
 <p>No. We also run local and inter-town trips at fixed prices, so you're covered for the whole stay, not just the airport.</p>
-<p>Ready to book your transfer? <a href="/en/book/">Book now</a> or see <a href="/en/routes/">fixed prices for every route</a>.</p>
+<p>Ready to book your transfer? <a href="/en/book/">Book now</a> or see <a href="/en/routes/">every route</a>.</p>

@@ -26,4 +26,4 @@ description: "Kuzey Kıbrıs sınır geçişi gerçekte nasıl işler — kontro
 <p>Genellikle hayır — görevliler varsayılan olarak ayrı bir kağıda mühür basar. Bunu tercih ederseniz istemenize bile gerek yok; olağan uygulama budur.</p>
 <h3>Geçiş fiyata ne kadar ekler?</h3>
 <p>Mesafe dışında hiçbir şey. Ücretlerimiz güzergaha göre sabittir; sınır ek ücreti ve taksimetre yoktur.</p>
-<p>Geçişinizi planlamaya hazır mısınız? <a href="/tr/routes/">Tüm güzergahların sabit fiyatlarına bakın</a> — Larnaka veya Baf'tan Girne, Gazimağusa, İskele, Bafra ve Güzelyurt'a — ya da iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>Geçişinizi planlamaya hazır mısınız? <a href="/tr/routes/">Tüm güzergahlara bakın</a> — Larnaka veya Baf'tan Girne, Gazimağusa, İskele, Bafra ve Güzelyurt'a — ya da iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

@@ -49,4 +49,4 @@ description: "Kıbrıs'ın üç havalimanı — Ercan, Larnaka ve Baf — ve Gir
 <p>Evet — yol boyunca aynı araçta kalırsınız. Geçiş yaklaşık 20–30 dakika ekler ve yolcu ücreti yoktur.</p>
 <h3>Sadece havalimanı transferi mi yapıyorsunuz?</h3>
 <p>Hayır. Yerel ve şehirler arası yolculukları da sabit fiyatlarla yaparız, böylece yalnızca havalimanı için değil tüm tatiliniz boyunca yanınızdayız.</p>
-<p>Transferinizi rezerve etmeye hazır mısınız? <a href="/tr/book/">Rezervasyon yap</a> veya <a href="/tr/routes/">tüm güzergahların sabit fiyatlarına</a> göz atın.</p>
+<p>Transferinizi rezerve etmeye hazır mısınız? <a href="/tr/book/">Rezervasyon yap</a> veya <a href="/tr/routes/">tüm güzergahlara</a> göz atın.</p>

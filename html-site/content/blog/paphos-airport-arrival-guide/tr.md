@@ -22,4 +22,4 @@ description: "Baf Havalimanında sizi neler bekliyor — pasaport kontrolü, bag
 <p>Evet. Yeşil Hat'tı her gün geçeriz; Güzelyurt ve Lefke için daha hızlı olan batıdaki Bostancı geçişini kullanırız. Araçta kalırsınız ve yolcu ücreti yoktur.</p>
 <h3>Uçuşum gecikse bile transferim sabit fiyatlı mı?</h3>
 <p>Evet. Uçuşu takip ederiz ve verilen ücret değişmez; dahil olan bekleme süreniz gecikmeyle kısalmaz.</p>
-<p>Baf'a mı iniyorsunuz? <a href="/tr/routes/">Tüm güzergahların sabit fiyatlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>Baf'a mı iniyorsunuz? <a href="/tr/routes/">Tüm güzergahlara bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

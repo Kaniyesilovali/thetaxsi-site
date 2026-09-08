@@ -18,7 +18,7 @@ description: "Private transfer, airport taxi, rental car or the kombi — the ho
 </table>
 
 <h2>How much does an airport transfer cost in North Cyprus?</h2>
-<p>A private transfer is priced per vehicle, not per person, and it is fixed when you book. As a guide, Ercan Airport to Kyrenia is around £45–£55, and Larnaca to Kyrenia — which crosses the border — is roughly £80–£95. Because tolls, parking and the first 45 minutes of airport waiting are included, the number you see when you book is the number you pay.</p>
+<p>A private transfer is priced per vehicle, not per person, and it is fixed when you book. Routes from Larnaca, which cross the border, cost noticeably more than the northern runs from Ercan; you see the figure when you book. Because tolls, parking and the first 45 minutes of airport waiting are included, the number you see when you book is the number you pay.</p>
 
 <h2>Is an airport taxi cheaper than a transfer?</h2>
 <p>Sometimes, on a very short trip — but the fare is not fixed. Airport taxis in North Cyprus rarely run a meter, so you agree a price at the rank, often late at night, with luggage, after a flight. A typical Ercan–Kyrenia taxi is quoted at roughly €50–€63, and a night or a busy arrival can push it higher. If you value knowing the cost in advance, that uncertainty is the real difference, not the headline number.</p>
@@ -47,4 +47,4 @@ description: "Private transfer, airport taxi, rental car or the kombi — the ho
 <p>A pre-booked transfer can and does daily — you stay in the same car through the Green Line checkpoint, with no passenger fee. Many south-based taxis do not cross, so book a driver who does.</p>
 <h3>What happens to my transfer if my flight is delayed?</h3>
 <p>Nothing changes and nothing extra is charged. We track the flight and move your pickup to match it, with the first 45 minutes of waiting included.</p>
-<p>See real fares on our <a href="/en/routes/">routes and prices</a> page, compare the two Kyrenia options — <a href="/en/routes/ercan-airport-to-kyrenia/">Ercan to Kyrenia</a> and <a href="/en/routes/larnaca-airport-to-kyrenia/">Larnaca to Kyrenia</a> — or <a href="/en/book/">book your transfer</a>.</p>
+<p>See real fares on our <a href="/en/routes/">routes</a> page, compare the two Kyrenia options — <a href="/en/routes/ercan-airport-to-kyrenia/">Ercan to Kyrenia</a> and <a href="/en/routes/larnaca-airport-to-kyrenia/">Larnaca to Kyrenia</a> — or <a href="/en/book/">book your transfer</a>.</p>

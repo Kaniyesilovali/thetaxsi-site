@@ -1,14 +1,14 @@
 ---
 title: "Lefkoşa Rehberi: Havalimanı Transferi ve Surlariçi"
-description: "Ercan'dan Lefkoşa'ya 20 dakika, sabit £45. Surlariçinde ne görülür, Ledra kapısından karşıya geçiş ve Lefkoşa şehir içi taksi — fiyat ve sürelerle."
+description: "Ercan'dan Lefkoşa'ya 20 dakika, 18 km. Surlariçinde ne görülür, Ledra kapısından karşıya geçiş ve Lefkoşa şehir içi taksi — süreler ve pratik notlarla."
 ---
-<p>Lefkoşa, dünyanın hâlâ bölünmüş tek başkentidir: bir Venedik sur çemberinin içinde kurulmuş eski şehir, ortasından geçen Yeşil Hat ile kuzey ve güney olarak ikiye ayrılır. Ziyaretçi için bu, birkaç yüz metre yürüyerek iki farklı şehir merkezi görebileceğiniz anlamına gelir. Lefkoşa aynı zamanda Ercan Havalimanı'na en yakın şehirdir — <strong>20 dakika, 18 km, sabit £45</strong> — yani adaya inip en hızlı yerleşeceğiniz nokta burasıdır. Aşağıda üç havalimanından Lefkoşa'ya nasıl gelineceğini, surlariçinde ne görüleceğini, Ledra kapısından karşıya geçişin nasıl işlediğini ve şehir içinde nasıl dolaşacağınızı bulacaksınız.</p>
+<p>Lefkoşa, dünyanın hâlâ bölünmüş tek başkentidir: bir Venedik sur çemberinin içinde kurulmuş eski şehir, ortasından geçen Yeşil Hat ile kuzey ve güney olarak ikiye ayrılır. Ziyaretçi için bu, birkaç yüz metre yürüyerek iki farklı şehir merkezi görebileceğiniz anlamına gelir. Lefkoşa aynı zamanda Ercan Havalimanı'na en yakın şehirdir — <strong>20 dakika, 18 km</strong> — yani adaya inip en hızlı yerleşeceğiniz nokta burasıdır. Aşağıda üç havalimanından Lefkoşa'ya nasıl gelineceğini, surlariçinde ne görüleceğini, Ledra kapısından karşıya geçişin nasıl işlediğini ve şehir içinde nasıl dolaşacağınızı bulacaksınız.</p>
 <h2>Havalimanlarından Lefkoşa'ya transfer</h2>
 <p>Üç havalimanı da Lefkoşa'ya bağlanır; aradaki fark sınır geçişi ve yol süresidir. Fiyatlar yola çıkmadan sabitlenir — taksimetre yok, sınır için ek ücret yok, gece tarifesi yok.</p>
 <ul>
-  <li><strong><a href="/tr/routes/ercan-airport-to-nicosia/">Ercan Havalimanı → Lefkoşa</a>:</strong> 18 km, yaklaşık 20 dakika, <strong>£45</strong> (gidiş-dönüş £80). Adanın kuzeyindeki tek havalimanı ve Lefkoşa'ya en yakın olanı.</li>
-  <li><strong><a href="/tr/routes/larnaca-airport-to-nicosia/">Larnaka Havalimanı → Lefkoşa</a>:</strong> 55 km, yaklaşık 50 dakika, <strong>£80</strong> (gidiş-dönüş £150). Yolculuk Yeşil Hat'tan araçla geçer.</li>
-  <li><strong><a href="/tr/routes/paphos-airport-to-nicosia/">Baf Havalimanı → Lefkoşa</a>:</strong> 145 km, yaklaşık 1 saat 45 dakika, <strong>£150</strong> (gidiş-dönüş £270). Adanın bir ucundan diğerine.</li>
+  <li><strong><a href="/tr/routes/ercan-airport-to-nicosia/">Ercan Havalimanı → Lefkoşa</a>:</strong> 18 km, yaklaşık 20 dakika. Adanın kuzeyindeki tek havalimanı ve Lefkoşa'ya en yakın olanı.</li>
+  <li><strong><a href="/tr/routes/larnaca-airport-to-nicosia/">Larnaka Havalimanı → Lefkoşa</a>:</strong> 55 km, yaklaşık 50 dakika. Yolculuk Yeşil Hat'tan araçla geçer.</li>
+  <li><strong><a href="/tr/routes/paphos-airport-to-nicosia/">Baf Havalimanı → Lefkoşa</a>:</strong> 145 km, yaklaşık 1 saat 45 dakika. Adanın bir ucundan diğerine.</li>
 </ul>
 <p>Dönüş için ters yön aynı fiyattadır: <a href="/tr/routes/nicosia-to-ercan-airport/">Lefkoşa → Ercan</a>. Rezervasyonda uçuş numaranızı verin; uçuşu takip ederiz, rötar aracınızı da fiyatınızı da değiştirmez. Tüm hatların karşılaştırmasını <a href="/tr/blog/north-cyprus-airport-transfer-prices/">havalimanı transfer fiyatları yazısında</a> bulabilirsiniz.</p>
 <h2>Surlariçi: Lefkoşa'da gezilecek yerler</h2>
@@ -50,11 +50,11 @@ description: "Ercan'dan Lefkoşa'ya 20 dakika, sabit £45. Surlariçinde ne gör
 <p>Bu çıkışların hepsi tam gün şoförlü araç olarak da ayarlanabilir: şoför her durakta bekler, park sorunu ortadan kalkar ve ücret yola çıkmadan kararlaştırılır.</p>
 <h2>Sıkça sorulan sorular</h2>
 <h3>Ercan'dan Lefkoşa'ya taksi ne kadar, ne kadar sürer?</h3>
-<p>18 km, yaklaşık 20 dakika ve sabit <strong>£45</strong> — gidiş-dönüş £80. Fiyat rezervasyonda sabitlenir; trafik ya da uçuş rötarı bunu değiştirmez.</p>
+<p>18 km ve yaklaşık 20 dakika. Ücret rezervasyonda sabitlenir; trafik ya da uçuş rötarı bunu değiştirmez.</p>
 <h3>Larnaka'dan gelirsem sınırda ne oluyor?</h3>
-<p>Transferiniz Yeşil Hat'tı araçla geçer. Araçta kalırsınız, pasaportunuzu kısa bir kontrol için hazır tutarsınız ve yolculardan geçiş ücreti alınmaz. Larnaka-Lefkoşa yaklaşık 50 dakika, £80'dir; sınır için ek ücret yoktur.</p>
+<p>Transferiniz Yeşil Hat'tı araçla geçer. Araçta kalırsınız, pasaportunuzu kısa bir kontrol için hazır tutarsınız ve yolculardan geçiş ücreti alınmaz. Larnaka-Lefkoşa yaklaşık 50 dakikadır; sınır için ek ücret yoktur.</p>
 <h3>Lefkoşa'da bir günde iki tarafı da görebilir miyim?</h3>
 <p>Evet, çoğu ziyaretçi tam olarak bunu yapar. Ledra/Lokmacı kapısı yaya geçişidir ve dakikalar sürer; sabahı kuzeyde, öğleden sonrayı güneyde geçirip aynı kapıdan dönmek rahat bir plandır. Yanınıza pasaportunuzu alın.</p>
 <h3>Şehir içi kısa yolculuklar için de araç ayarlıyor musunuz?</h3>
 <p>Evet. Havalimanı transferi dışında Lefkoşa içi yolculukları da sabit fiyatla yapıyoruz — hastane, üniversite, iş toplantısı, alışveriş merkezi ya da akşam yemeği. Beklemeli ve saatlik düzen de mümkün; rezervasyonda ya da konaklamanız sırasında yazmanız yeterli.</p>
-<p>Lefkoşa'ya geliyor ya da Lefkoşa'dan çıkıyorsanız — <a href="/tr/routes/">sabit transfer fiyatlarına bakın</a> veya iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>Lefkoşa'ya geliyor ya da Lefkoşa'dan çıkıyorsanız — <a href="/tr/routes/">transfer güzergahlarına bakın</a> veya iki dakikada <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

@@ -33,4 +33,4 @@ description: "Ercan, the Green Line, KITSAB, the kombi — a plain-English gloss
 <p>The north uses the Turkish lira day to day, but transfers are often priced and paid in pounds or euros. Your driver can usually take cash in several currencies — agree which when you book.</p>
 <h3>Is Ercan or Larnaca the better airport?</h3>
 <p>Ercan is closer and needs no border crossing; Larnaca has more direct flights from Europe. It depends on flight price and convenience — see our full comparison.</p>
-<p>Read more: <a href="/en/blog/ercan-vs-larnaca-for-kyrenia/">Ercan vs Larnaca for Kyrenia</a>, our <a href="/en/blog/north-cyprus-visa-passport-border-crossing/">visa and border guide</a>, or see <a href="/en/routes/">routes and prices</a>.</p>
+<p>Read more: <a href="/en/blog/ercan-vs-larnaca-for-kyrenia/">Ercan vs Larnaca for Kyrenia</a>, our <a href="/en/blog/north-cyprus-visa-passport-border-crossing/">visa and border guide</a>, or see <a href="/en/routes/">routes</a>.</p>

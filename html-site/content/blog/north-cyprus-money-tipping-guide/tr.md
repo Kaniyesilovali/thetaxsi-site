@@ -22,4 +22,4 @@ description: "Yanınıza hangi parayı almalı, kartlar geçer mi ve Kuzey Kıbr
 <p>Kartlar otelleri ve büyük mekânları karşılar, ama pazarlar, küçük kafeler ve bahşişler için biraz nakit taşıyın.</p>
 <h3>Transfer sürücüme bahşiş vermeli miyim?</h3>
 <p>Takdir edilir ama gerekli değildir. Sabit ücretiniz fiyattır; iyi hizmet için küçük bir yuvarlama nazik bir ekstradır.</p>
-<p>Yola çıkmaya hazır mısınız? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>Yola çıkmaya hazır mısınız? <a href="/tr/routes/">Güzergahlara bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

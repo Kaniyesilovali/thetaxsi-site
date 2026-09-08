@@ -35,7 +35,7 @@ export function businessNode(lang = config.defaultLang) {
     name: config.brand,
     url: `${config.siteUrl}/${lang}/`,
     email: config.email,
-    priceRange: '£45–£300',
+    ...(config.showPrices ? { priceRange: '£45–£300' } : {}),
     image: `${config.siteUrl}/assets/img/og.jpg`,
     logo: `${config.siteUrl}/assets/img/og.jpg`,
     // Konumlandırma: Kuzey ana hizmet alanı; Larnaka/Baf ise güneyden geliş

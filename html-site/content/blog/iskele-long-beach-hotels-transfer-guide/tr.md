@@ -25,4 +25,4 @@ description: "İskele'deki Long Beach tatil köylerine ulaşım — Ercan, Larna
 <p>Evet — otel adını (daire ise blok adını da) bize söyleyin, sizi en yakın kapıya değil doğru resepsiyona götürelim.</p>
 <h3>Oradayken de gezi yapıyor musunuz, yoksa sadece havalimanı transferi mi?</h3>
 <p>İkisi de. Konaklamanız boyunca yerel ve günübirlik yolculukları sabit fiyatlarla yaparız.</p>
-<p>Long Beach'e mi gidiyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>Long Beach'e mi gidiyorsunuz? <a href="/tr/routes/">Transfer güzergahlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

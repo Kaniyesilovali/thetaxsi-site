@@ -26,4 +26,4 @@ description: "How the North Cyprus border crossing really works — checkpoints,
 <p>Usually not — officers stamp a separate paper by default. If you would prefer that, you don't even need to ask; it is the norm.</p>
 <h3>How much does the crossing add to the price?</h3>
 <p>Nothing beyond the distance. Our fares are fixed by route, with no border surcharge and no meter.</p>
-<p>Ready to plan your crossing? <a href="/en/routes/">See fixed prices for every route</a> — from Larnaca or Paphos to Kyrenia, Famagusta, İskele, Bafra and Güzelyurt — or <a href="/en/book/">book your transfer</a> in two minutes.</p>
+<p>Ready to plan your crossing? <a href="/en/routes/">See every route</a> — from Larnaca or Paphos to Kyrenia, Famagusta, İskele, Bafra and Güzelyurt — or <a href="/en/book/">book your transfer</a> in two minutes.</p>

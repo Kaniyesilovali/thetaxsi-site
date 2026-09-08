@@ -24,4 +24,4 @@ description: "A clear, practical answer on passports, visas and stamps for North
 <p>Usually not, and insurance rarely covers it. A private transfer crosses freely with no paperwork on your side.</p>
 <h3>Do I need anything to cross back to the south?</h3>
 <p>Just your passport again for a brief check. You stay in the car and there's no passenger fee.</p>
-<p>Planning a crossing? <a href="/en/routes/">See fixed transfer prices</a> or <a href="/en/book/">book in two minutes</a>.</p>
+<p>Planning a crossing? <a href="/en/routes/">See the transfer routes</a> or <a href="/en/book/">book in two minutes</a>.</p>

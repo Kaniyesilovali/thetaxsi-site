@@ -7,11 +7,11 @@ description: "Student airport transfers in North Cyprus: fixed prices from Ercan
 <h2>Which airport for your campus?</h2>
 <p>North Cyprus has its own airport, <strong>Ercan</strong>, and because it sits in the middle of the island it is close to every campus city. <strong>Larnaca</strong> and <strong>Paphos</strong> in the south are the common alternatives for students flying direct from Europe. City by city:</p>
 <ul>
-  <li><strong>Famagusta</strong> — Eastern Mediterranean University (EMU) and the student district around it. About 40 minutes and 50 km from Ercan, a fixed <strong>£55</strong>: <a href="/en/routes/ercan-airport-to-famagusta/">Ercan to Famagusta transfer</a>. From Larnaca it's about an hour, <strong>£90</strong>: <a href="/en/routes/larnaca-airport-to-famagusta/">Larnaca to Famagusta</a>. From Paphos, around 2h 30m and <strong>£200</strong>.</li>
-  <li><strong>Nicosia</strong> — Near East University and the capital's other campuses. Only 20 minutes and 18 km from Ercan, <strong>£45</strong>: <a href="/en/routes/ercan-airport-to-nicosia/">Ercan to Nicosia transfer</a>. From Larnaca about 50 minutes, <strong>£80</strong>: <a href="/en/routes/larnaca-airport-to-nicosia/">Larnaca to Nicosia</a>.</li>
-  <li><strong>Kyrenia</strong> — Girne American University and the other campuses along the north coast. About 35 minutes and 40 km from Ercan, <strong>£55</strong>: <a href="/en/routes/ercan-airport-to-kyrenia/">Ercan to Kyrenia transfer</a>. From Larnaca about 1h 15m, <strong>£100</strong>: <a href="/en/routes/larnaca-airport-to-kyrenia/">Larnaca to Kyrenia</a>.</li>
-  <li><strong>Guzelyurt (Morphou)</strong> — the METU Northern Cyprus Campus at Kalkanlı and other campuses in the west. About 50 minutes from Ercan, <strong>£55</strong>: <a href="/en/routes/ercan-airport-to-guzelyurt/">Ercan to Guzelyurt transfer</a>. From Larnaca <strong>£80</strong>, from Paphos <strong>£120</strong> — being in the west, Guzelyurt is far closer to Paphos than any other campus city.</li>
-  <li><strong>İskele and the Long Beach area</strong> — campuses and student apartments on the east coast. About 45 minutes from Ercan, <strong>£55</strong>: <a href="/en/routes/ercan-airport-to-iskele-long-beach/">Ercan to İskele Long Beach transfer</a>. From Larnaca <strong>£110</strong>.</li>
+  <li><strong>Famagusta</strong> — Eastern Mediterranean University (EMU) and the student district around it. About 40 minutes and 50 km from Ercan: <a href="/en/routes/ercan-airport-to-famagusta/">Ercan to Famagusta transfer</a>. From Larnaca it's about an hour: <a href="/en/routes/larnaca-airport-to-famagusta/">Larnaca to Famagusta</a>. From Paphos, around 2h 30m.</li>
+  <li><strong>Nicosia</strong> — Near East University and the capital's other campuses. Only 20 minutes and 18 km from Ercan: <a href="/en/routes/ercan-airport-to-nicosia/">Ercan to Nicosia transfer</a>. From Larnaca about 50 minutes: <a href="/en/routes/larnaca-airport-to-nicosia/">Larnaca to Nicosia</a>.</li>
+  <li><strong>Kyrenia</strong> — Girne American University and the other campuses along the north coast. About 35 minutes and 40 km from Ercan: <a href="/en/routes/ercan-airport-to-kyrenia/">Ercan to Kyrenia transfer</a>. From Larnaca about 1h 15m: <a href="/en/routes/larnaca-airport-to-kyrenia/">Larnaca to Kyrenia</a>.</li>
+  <li><strong>Guzelyurt (Morphou)</strong> — the METU Northern Cyprus Campus at Kalkanlı and other campuses in the west. About 50 minutes from Ercan: <a href="/en/routes/ercan-airport-to-guzelyurt/">Ercan to Guzelyurt transfer</a>. Being in the west, Guzelyurt is far closer to Paphos than any other campus city.</li>
+  <li><strong>İskele and the Long Beach area</strong> — campuses and student apartments on the east coast. About 45 minutes from Ercan: <a href="/en/routes/ercan-airport-to-iskele-long-beach/">Ercan to İskele Long Beach transfer</a>.</li>
 </ul>
 <p>For every route side by side, see our guide to <a href="/en/blog/north-cyprus-airport-transfer-prices/">North Cyprus airport transfer prices</a>. Fares are per vehicle, not per person — three friends in the same car split one price.</p>
 
@@ -27,13 +27,13 @@ description: "Student airport transfers in North Cyprus: fixed prices from Ercan
 
 <h2>The luggage reality: you're carrying a year of your life</h2>
 <p>A holidaymaker arrives with one case. A student arrives with a year of belongings. A typical first arrival is two large suitcases, a cabin bag and usually a rucksack as well — and if your family travels with you, that quickly becomes four cases.</p>
-<p>So <strong>always state the number of bags when you book</strong>. A standard saloon car takes two large suitcases and hand luggage comfortably; anything beyond that, or a full family, calls for the 7-seat Vito minibus. On the Guzelyurt line the Vito prices are fixed too: <strong>Larnaca to Guzelyurt £100</strong> and <strong>Paphos to Guzelyurt £140</strong>. On other routes, if you need the larger vehicle we quote it before you travel, in writing — never on arrival.</p>
+<p>So <strong>always state the number of bags when you book</strong>. A standard saloon car takes two large suitcases and hand luggage comfortably; anything beyond that, or a full family, calls for the 7-seat Vito minibus. If you need the larger vehicle we quote it before you travel, in writing — never on arrival.</p>
 
 <h2>When the family comes to visit</h2>
 <p>A student transfer is rarely a one-off. Graduation, a mid-term visit, dropping a first-year off at registration — the same roads get used several times a year. What families usually need is this:</p>
 <ul>
   <li><strong>Airport to hotel</strong>, then short <strong>hotel to campus</strong> runs while they're here; both at fixed prices.</li>
-  <li><strong>Return bookings</strong>, arranged once and cheaper than two singles. Ercan to Famagusta return is <strong>£100</strong>, Ercan to Nicosia <strong>£80</strong>, Ercan to Kyrenia <strong>£100</strong>.</li>
+  <li><strong>Return bookings</strong>, arranged once and cheaper than two singles.</li>
   <li><strong>A day out</strong> — graduation week is usually the one time the family sees the island. We quote a fixed full-day price for <a href="/en/blog/kyrenia-harbour-castle-old-town-guide/">Kyrenia harbour and castle</a> or <a href="/en/blog/karpaz-golden-beach-guide/">the Karpaz peninsula and Golden Beach</a>; the driver waits, and nobody watches the clock.</li>
 </ul>
 
@@ -62,8 +62,8 @@ description: "Student airport transfers in North Cyprus: fixed prices from Ercan
 <h3>I have two large suitcases — will they fit?</h3>
 <p>A standard saloon takes two large cases plus hand luggage comfortably. If you have more, or you're travelling with family, put the bag count in your booking and we'll send the 7-seat Vito minibus and confirm the price before you travel.</p>
 <h3>I'm landing at Larnaca — is crossing the border a problem?</h3>
-<p>No. The crossing is done from the car, takes a few minutes, and beyond a passport check nothing is asked of you. You don't change vehicles and you pay nothing extra for it — Larnaca to Famagusta is a fixed £90, Larnaca to Nicosia £80.</p>
+<p>No. The crossing is done from the car, takes a few minutes, and beyond a passport check nothing is asked of you. You don't change vehicles and you pay nothing extra for it; the figure from your booking does not change.</p>
 <h3>Does the same price apply to the return?</h3>
-<p>Yes. Reverse routes cost the same, and booking both directions together is cheaper still — Ercan to Famagusta return is £100, for example. For an early end-of-term flight, just tell us the pick-up time.</p>
+<p>Yes. Reverse routes cost the same, and booking both directions together is cheaper still. For an early end-of-term flight, just tell us the pick-up time.</p>
 
-<p>If a new term is coming up, plan it now: <a href="/en/routes/">see the fixed prices to your campus city</a> or <a href="/en/book/">book your transfer in two minutes</a>. For extra luggage, a group booking or a regular campus run, <a href="/en/contact/">get in touch</a>.</p>
+<p>If a new term is coming up, plan it now: <a href="/en/routes/">see the routes to your campus city</a> or <a href="/en/book/">book your transfer in two minutes</a>. For extra luggage, a group booking or a regular campus run, <a href="/en/contact/">get in touch</a>.</p>

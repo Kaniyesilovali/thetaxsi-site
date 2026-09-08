@@ -38,4 +38,4 @@ description: "What to do at Long Beach and İskele — the sand, beach clubs, Ba
 <p>Not necessarily. If you leave the resort most days a car helps; if you go out a few times a week, fixed-price rides with an arranged pickup are simpler.</p>
 <h3>When is the best time to visit?</h3>
 <p>May, June, September and October give warm sea and manageable heat. July and August are hot and the beach is exposed, so mornings and late afternoons are the comfortable hours.</p>
-<p>Planning your days on the east coast? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car</a>.</p>
+<p>Planning your days on the east coast? <a href="/en/routes/">See the routes</a> or <a href="/en/book/">book a car</a>.</p>

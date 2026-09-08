@@ -44,4 +44,4 @@ description: "A slow village day in North Cyprus: Bellapais abbey, Karmi, Ozank√
 <p>At weekends it helps, as village restaurants fill with local families. On weekdays you can usually arrive and sit down.</p>
 <h3>Is it acceptable to walk into a village coffee house as a visitor?</h3>
 <p>Yes. Greet people, sit outside if the inside looks like a regulars' room, order coffee and pay in cash at the end.</p>
-<p>Want the villages without the reversing? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car in two minutes</a>.</p>
+<p>Want the villages without the reversing? <a href="/en/routes/">See the routes</a> or <a href="/en/book/">book a car in two minutes</a>.</p>

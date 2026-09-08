@@ -2,7 +2,7 @@
   "nav": {
     "book": "Book Transfer",
     "reserve": "Reserve",
-    "routes": "Routes & Prices",
+    "routes": "Routes",
     "track": "Track Booking",
     "blog": "Blog",
     "about": "About",
@@ -65,12 +65,30 @@
       "prev": "Previous",
       "next": "Next",
       "items": [
-        { "place": "Kyrenia Harbour", "note": "Girne · old town & castle" },
-        { "place": "Golden Beach", "note": "Karpaz · dunes & wild coast" },
-        { "place": "Famagusta Bay", "note": "Mağusa · turquoise beaches" },
-        { "place": "Long Beach", "note": "İskele · east-coast resorts" },
-        { "place": "Güzelyurt plains", "note": "Mesarya · groves & villages" },
-        { "place": "Village heritage", "note": "Stone churches & shaded squares" }
+        {
+          "place": "Kyrenia Harbour",
+          "note": "Girne · old town & castle"
+        },
+        {
+          "place": "Golden Beach",
+          "note": "Karpaz · dunes & wild coast"
+        },
+        {
+          "place": "Famagusta Bay",
+          "note": "Mağusa · turquoise beaches"
+        },
+        {
+          "place": "Long Beach",
+          "note": "İskele · east-coast resorts"
+        },
+        {
+          "place": "Güzelyurt plains",
+          "note": "Mesarya · groves & villages"
+        },
+        {
+          "place": "Village heritage",
+          "note": "Stone churches & shaded squares"
+        }
       ]
     },
     "why": {
@@ -303,12 +321,12 @@
   },
   "routes": {
     "meta": {
-      "title": "Cyprus Transfer Routes & Fixed Prices | TheTaxsi",
+      "title": "Cyprus Transfer Routes | TheTaxsi",
       "description": "Fixed-price chauffeur transfers on every route across Cyprus — from Ercan, Larnaca and Paphos airports to hotels and town centres, point to point."
     },
     "eyebrow": "Cyprus, point to point",
-    "title": "Routes & Prices",
-    "subtitle": "Fixed prices on every transfer route across the island.",
+    "title": "Routes",
+    "subtitle": "Every transfer route across the island. The fare is fixed when you book.",
     "oneWay": "One Way",
     "roundTrip": "Round Trip",
     "bookRoute": "Reserve this route",

@@ -22,4 +22,4 @@ description: "What to expect at Paphos Airport — passport control, luggage, an
 <p>Yes. We cross the Green Line daily; for Güzelyurt and Lefke we use the quicker western Bostancı crossing. You stay in the car and there's no passenger fee.</p>
 <h3>Is my transfer fixed-price even if my flight is late?</h3>
 <p>Yes. We track the flight and the quoted fare doesn't change; your included waiting time isn't shortened by a delay.</p>
-<p>Arriving at Paphos? <a href="/en/routes/">See fixed prices for every route</a> or <a href="/en/book/">book your transfer</a>.</p>
+<p>Arriving at Paphos? <a href="/en/routes/">See every route</a> or <a href="/en/book/">book your transfer</a>.</p>

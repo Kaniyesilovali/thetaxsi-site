@@ -31,6 +31,10 @@ export const extra = {
       metaTitle: '{from} to {to} Transfer — £{price}',
       metaDescription:
         'Private chauffeur transfer from {from} to {to}. Fixed price £{price}, approx. {duration} min, meet & greet included. Book in two minutes.',
+      // config.showPrices false iken kullanılır — başlık metni aynı, yalnız fiyat eki düşer.
+      metaTitleNoPrice: '{from} to {to} Transfer',
+      metaDescriptionNoPrice:
+        'Private chauffeur transfer from {from} to {to}. The fare is agreed before you travel, approx. {duration} min, meet & greet included. Book in two minutes.',
       breadcrumbRoutes: 'Routes',
       heroEyebrow: 'Point to point',
       facts: {
@@ -212,6 +216,9 @@ export const extra = {
       metaTitle: '{from} – {to} Transfer — £{price}',
       metaDescription:
         '{from} – {to} özel şoförlü transfer. Sabit fiyat £{price}, yaklaşık {duration} dk, karşılama dahil. İki dakikada rezervasyon.',
+      metaTitleNoPrice: '{from} – {to} Transfer',
+      metaDescriptionNoPrice:
+        '{from} – {to} özel şoförlü transfer. Ücret yola çıkmadan konuşulur, yaklaşık {duration} dk, karşılama dahil. İki dakikada rezervasyon.',
       breadcrumbRoutes: 'Güzergahlar',
       heroEyebrow: 'Noktadan noktaya',
       facts: {
@@ -389,6 +396,9 @@ export const extra = {
       metaTitle: 'Трансфер {from} – {to} — £{price}',
       metaDescription:
         'Трансфер {from} – {to} с водителем. Фиксированная цена £{price}, около {duration} мин, встреча с табличкой. Бронь за 2 минуты.',
+      metaTitleNoPrice: 'Трансфер {from} – {to}',
+      metaDescriptionNoPrice:
+        'Трансфер {from} – {to} с водителем. Цена оговаривается до поездки, около {duration} мин, встреча с табличкой. Бронь за 2 минуты.',
       breadcrumbRoutes: 'Маршруты',
       heroEyebrow: 'Из точки в точку',
       facts: {

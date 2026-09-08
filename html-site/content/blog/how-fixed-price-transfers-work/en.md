@@ -37,4 +37,4 @@ description: "What a fixed fare really includes, how flight tracking and waiting
 <p>No. The fare on your confirmation is fixed. It only differs if you change the booking itself — a different vehicle, an added stop, or extra waiting you request.</p>
 <h3>Which currencies can I pay in?</h3>
 <p>Cash is usually accepted in pounds, euros or Turkish lira. Agree the currency when you book so the driver is ready.</p>
-<p>See fixed fares on our <a href="/en/routes/">routes and prices</a> page, compare the ways to travel in <a href="/en/blog/north-cyprus-transfer-vs-taxi-vs-car-hire/">transfer vs taxi vs car hire</a>, or <a href="/en/book/">book your transfer</a>.</p>
+<p>See fixed fares on our <a href="/en/routes/">routes</a> page, compare the ways to travel in <a href="/en/blog/north-cyprus-transfer-vs-taxi-vs-car-hire/">transfer vs taxi vs car hire</a>, or <a href="/en/book/">book your transfer</a>.</p>

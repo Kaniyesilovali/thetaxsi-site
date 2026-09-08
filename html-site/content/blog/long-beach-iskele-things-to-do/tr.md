@@ -40,4 +40,4 @@ description: "Long Beach ve İskele'de yapılacaklar: kumsal, beach club'lar, Ba
 <p>Şart değil. Neredeyse her gün tesisten çıkacaksanız araba işinizi kolaylaştırır. Haftada birkaç kez çıkıyorsanız, alım saati ayarlanmış sabit fiyatlı yolculuklar genelde gece yabancı yollarda sürmekten ve park yeri aramaktan daha pratiktir.</p>
 <h3>En iyi ziyaret zamanı ne zaman?</h3>
 <p>Mayıs, haziran, eylül ve ekim ılık deniz ve dayanılabilir sıcak sunar. Temmuz ve ağustos sıcaktır ve kumsal açıktır; rahat saatler sabah ve ikindidir. Kış ılıman ve çok sakindir, uzun konaklamalara uyar.</p>
-<p>Doğu kıyısındaki günlerinizi mi planlıyorsunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">araç ayarlayın</a>.</p>
+<p>Doğu kıyısındaki günlerinizi mi planlıyorsunuz? <a href="/tr/routes/">Güzergahlara bakın</a> ya da <a href="/tr/book/">araç ayarlayın</a>.</p>

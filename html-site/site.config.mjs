@@ -50,6 +50,15 @@ export const config = {
   sheetsEndpoint: 'https://script.google.com/macros/s/AKfycbyi1pR50kZvzAXW0D6yzZwiGal4OBAMWvYUhYjAtDIkzzG7ENIAaFiz3f7X_IdKN4OVPQ/exec',
 
   // Fiyat para birimi — data/routes.mjs'teki tüm rakamlar bu birimdedir.
+  // Yayınlanmış sabit fiyatları gizle (kullanıcı kararı 2026-09-08, "şimdilik").
+  // false iken: rota kartlarında/fact satırında rakam yerine "fiyat için arayın",
+  // rota başlık/açıklamasında fiyat eki düşer (başlık metni aynı kalır), Offer /
+  // AggregateOffer / priceRange yapısal veriden çıkar.
+  // DİKKAT: bunu true yapmak tek başına eski hali geri getirmez — aynı commit'te
+  // blog yazılarındaki rakamlar, "fiyatlara bakın" CTA'ları ve sözlükteki
+  // "Güzergahlar & Fiyatlar" başlıkları da metin olarak değiştirildi. Fiyatlar
+  // geri gelecekse o commit'i revert et.
+  showPrices: false,
   currencySymbol: '£',
   currencyCode: 'GBP',
 

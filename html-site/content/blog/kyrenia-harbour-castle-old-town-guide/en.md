@@ -36,4 +36,4 @@ description: "What to see in Kyrenia: the old harbour, the castle and Shipwreck 
 <p>About 40 to 45 minutes by road. Transfers run at a fixed price agreed in advance, with the flight tracked so a late landing does not cost you the car.</p>
 <h3>Is Kyrenia Castle worth it if you only see one thing?</h3>
 <p>Yes. The Shipwreck Museum inside it is the most significant single exhibit in North Cyprus, and the ramparts give you the best view of the harbour you will get.</p>
-<p>Planning your days around Kyrenia? <a href="/en/routes/">See fixed transfer prices</a> or <a href="/en/book/">book a car and driver</a>.</p>
+<p>Planning your days around Kyrenia? <a href="/en/routes/">See the transfer routes</a> or <a href="/en/book/">book a car and driver</a>.</p>

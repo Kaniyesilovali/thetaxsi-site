@@ -36,4 +36,4 @@ description: "Girne'de ne görülür: eski liman, kale ve Batık Gemi Müzesi, B
 <p>Karayoluyla yaklaşık 40-45 dakika. Transferler önceden kararlaştırılan sabit fiyatla yapılır ve uçuş takip edilir; geç iniş aracınıza mal olmaz.</p>
 <h3>Tek bir yer görecek olsam Girne Kalesi değer mi?</h3>
 <p>Evet. İçindeki Batık Gemi Müzesi Kuzey Kıbrıs'ın en önemli tek sergisidir ve surlar limanın görebileceğiniz en iyi manzarasını verir.</p>
-<p>Günlerinizi Girne çevresinde mi kuruyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına bakın</a> ya da <a href="/tr/book/">şoförlü araç ayırtın</a>.</p>
+<p>Günlerinizi Girne çevresinde mi kuruyorsunuz? <a href="/tr/routes/">Transfer güzergahlarına bakın</a> ya da <a href="/tr/book/">şoförlü araç ayırtın</a>.</p>

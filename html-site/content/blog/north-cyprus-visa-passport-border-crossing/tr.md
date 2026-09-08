@@ -24,4 +24,4 @@ description: "Kuzey Kıbrıs için pasaport, vize ve mühür konusunda net ve pr
 <p>Genellikle hayır ve sigorta nadiren kapsar. Özel transfer size hiç evrak olmadan serbestçe geçer.</p>
 <h3>Güneye geri geçmek için bir şey gerekir mi?</h3>
 <p>Kısa bir kontrol için yine yalnızca pasaportunuz. Araçta kalırsınız ve yolcu ücreti yoktur.</p>
-<p>Geçiş mi planlıyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına bakın</a> ya da <a href="/tr/book/">iki dakikada rezerve edin</a>.</p>
+<p>Geçiş mi planlıyorsunuz? <a href="/tr/routes/">Transfer güzergahlarına bakın</a> ya da <a href="/tr/book/">iki dakikada rezerve edin</a>.</p>

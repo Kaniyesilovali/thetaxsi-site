@@ -174,7 +174,7 @@ export function renderAreaDetail(ctx, area) {
           <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
           <span class="shrink-0 text-right">
             ${
-              r.quote
+              r.quote || !config.showPrices
                 ? `<span class="text-[14px] font-semibold text-sea">${esc(xtra.routeDetail.quoteCard)}</span>`
                 : `<span class="text-2xl font-semibold tabular-nums text-sea">${config.currencySymbol}${r.price}</span>`
             }

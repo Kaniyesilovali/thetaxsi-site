@@ -1,14 +1,14 @@
 ---
 title: "Nicosia Guide: Airport Transfer and the Walled City"
-description: "Nicosia airport transfer from £45 and 20 minutes from Ercan. What to see inside the walls, the Ledra Street crossing, and fixed-price rides around town."
+description: "Nicosia airport transfer: 20 minutes and 18 km from Ercan. What to see inside the walls, the Ledra Street crossing, and getting around town by car."
 ---
-<p>Nicosia is the world's last divided capital: an old city inside a ring of Venetian walls, cut in two by the Green Line that runs through its middle. For a visitor that means something unusual — two city centres a few hundred metres apart, both walkable in an afternoon. Nicosia is also the closest city to Ercan Airport: <strong>20 minutes, 18 km, a fixed £45</strong>, which makes it the quickest place on the island to land and settle into. Here's how to reach it from all three airports, what to see inside the walls, how the Ledra Street crossing works, and how to get around a city that isn't built for hailing taxis.</p>
+<p>Nicosia is the world's last divided capital: an old city inside a ring of Venetian walls, cut in two by the Green Line that runs through its middle. For a visitor that means something unusual — two city centres a few hundred metres apart, both walkable in an afternoon. Nicosia is also the closest city to Ercan Airport: <strong>20 minutes, 18 km</strong>, which makes it the quickest place on the island to land and settle into. Here's how to reach it from all three airports, what to see inside the walls, how the Ledra Street crossing works, and how to get around a city that isn't built for hailing taxis.</p>
 <h2>Airport transfers to Nicosia</h2>
 <p>All three airports connect to Nicosia; the difference is the border and the driving time. Every fare is fixed before you travel — no meter, no surcharge for the crossing, no night tariff.</p>
 <ul>
-  <li><strong><a href="/en/routes/ercan-airport-to-nicosia/">Ercan Airport to Nicosia</a>:</strong> 18 km, about 20 minutes, <strong>£45</strong> (£80 return). The only airport in the north and the closest to the capital.</li>
-  <li><strong><a href="/en/routes/larnaca-airport-to-nicosia/">Larnaca Airport to Nicosia</a>:</strong> 55 km, about 50 minutes, <strong>£80</strong> (£150 return). The drive crosses the Green Line by car.</li>
-  <li><strong><a href="/en/routes/paphos-airport-to-nicosia/">Paphos Airport to Nicosia</a>:</strong> 145 km, about 1 hour 45 minutes, <strong>£150</strong> (£270 return). One end of the island to the other.</li>
+  <li><strong><a href="/en/routes/ercan-airport-to-nicosia/">Ercan Airport to Nicosia</a>:</strong> 18 km, about 20 minutes. The only airport in the north and the closest to the capital.</li>
+  <li><strong><a href="/en/routes/larnaca-airport-to-nicosia/">Larnaca Airport to Nicosia</a>:</strong> 55 km, about 50 minutes. The drive crosses the Green Line by car.</li>
+  <li><strong><a href="/en/routes/paphos-airport-to-nicosia/">Paphos Airport to Nicosia</a>:</strong> 145 km, about 1 hour 45 minutes. One end of the island to the other.</li>
 </ul>
 <p>The return direction costs the same: <a href="/en/routes/nicosia-to-ercan-airport/">Nicosia to Ercan Airport</a>. Give us your flight number when you book and we'll track it — a delayed landing changes neither your car nor your price. For a side-by-side comparison of every route, see our <a href="/en/blog/north-cyprus-airport-transfer-prices/">airport transfer prices guide</a>.</p>
 <h2>Inside the walls: things to do in Nicosia</h2>
@@ -50,11 +50,11 @@ description: "Nicosia airport transfer from £45 and 20 minutes from Ercan. What
 <p>Any of these can be arranged as a full day with a driver: he waits at every stop, parking stops being your problem, and the fare is agreed before you leave.</p>
 <h2>Frequently asked questions</h2>
 <h3>How much is a taxi from Ercan Airport to Nicosia, and how long does it take?</h3>
-<p>18 km, about 20 minutes, and a fixed <strong>£45</strong> — £80 return. The price is locked in when you book; traffic and flight delays don't change it.</p>
+<p>18 km and about 20 minutes. The fare is locked in when you book; traffic and flight delays don't change it.</p>
 <h3>What happens at the border if I fly into Larnaca?</h3>
-<p>Your transfer crosses the Green Line by car. You stay in the vehicle, have your passport ready for a brief check, and passengers pay no crossing fee. Larnaca to Nicosia is about 50 minutes at £80, with no surcharge for the border.</p>
+<p>Your transfer crosses the Green Line by car. You stay in the vehicle, have your passport ready for a brief check, and passengers pay no crossing fee. Larnaca to Nicosia is about 50 minutes, with no surcharge for the border.</p>
 <h3>Can I see both sides of Nicosia in one day?</h3>
 <p>Yes — most visitors do exactly that. The Ledra Street crossing is on foot and takes minutes, so a morning in the north, an afternoon in the south and a return through the same gate is a comfortable plan. Carry your passport.</p>
 <h3>Do you also arrange short rides around the city?</h3>
 <p>Yes. Beyond airport transfers we run journeys within Nicosia at fixed prices — hospital, university, business meeting, shopping centre or dinner. Waiting time and hourly hire are both possible; just ask when you book or message us during your stay.</p>
-<p>Arriving in Nicosia or leaving from it — <a href="/en/routes/">see fixed transfer prices</a> or <a href="/en/book/">book your transfer</a> in two minutes.</p>
+<p>Arriving in Nicosia or leaving from it — <a href="/en/routes/">see the transfer routes</a> or <a href="/en/book/">book your transfer</a> in two minutes.</p>

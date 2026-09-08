@@ -33,4 +33,4 @@ description: "Ercan, Yeşil Hat, KITSAB, kombi — Kuzey Kıbrıs'ta seyahat ve 
 <p>Kuzeyde günlük hayatta Türk lirası kullanılır, ama transferler çoğu zaman sterlin veya euro üzerinden fiyatlanıp ödenir. Şoför genelde birkaç para biriminde nakit alabilir — hangisini ödeyeceğinizi rezervasyonda konuşun.</p>
 <h3>Ercan mı, Larnaka mı daha iyi?</h3>
 <p>Ercan daha yakındır ve sınır geçişi gerektirmez; Larnaka'nın Avrupa'dan daha çok doğrudan uçuşu vardır. Uçuş fiyatına ve kolaylığa göre değişir — tam karşılaştırmamıza bakın.</p>
-<p>Devamı: <a href="/tr/blog/ercan-vs-larnaca-for-kyrenia/">Girne için Ercan mı Larnaka mı</a>, <a href="/tr/blog/north-cyprus-visa-passport-border-crossing/">vize ve sınır rehberimiz</a> ya da <a href="/tr/routes/">güzergâhlar ve fiyatlar</a>.</p>
+<p>Devamı: <a href="/tr/blog/ercan-vs-larnaca-for-kyrenia/">Girne için Ercan mı Larnaka mı</a>, <a href="/tr/blog/north-cyprus-visa-passport-border-crossing/">vize ve sınır rehberimiz</a> ya da <a href="/tr/routes/">güzergâhlar sayfası</a>.</p>

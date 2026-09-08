@@ -1,15 +1,15 @@
 ---
 title: "Bafra Otelleri Transfer Rehberi: Ercan, Larnaka, Baf"
-description: "Bafra otelleri transfer rehberi — Kaya Artemis, Noah's Ark, Concorde ve Limak'a Ercan'dan £80 / 60 dakika, Larnaka'dan £120, Baf'tan £240 sabit fiyat."
+description: "Bafra otelleri transfer rehberi — Kaya Artemis, Noah's Ark, Concorde ve Limak'a Ercan'dan 60 dakika, Larnaka'dan 90 dakika, Baf'tan 2 saat 55 dakika."
 ---
 <p>Bafra, Kuzey Kıbrıs'ın kendi içine kapalı tek büyük otel şeridi. Gazimağusa'nın kuzeydoğusunda, Karpaz yolunun tam başında, kilometrelerce boş kıyının kenarına kurulmuş dört büyük tesisten oluşur: Kaya Artemis, Noah's Ark, Concorde ve Limak. Etrafında kasaba yok, cadde yok, kapının önünde bekleyen taksi kuyruğu yok. Bu yüzden Bafra'ya gidenlerin transferi önceden ayarlaması, buradaki en pratik alışkanlıktır — <strong>Ercan havalimanından Bafra taksi</strong> yaklaşık bir saatlik bir yolculuk ve sonunda sizi karşılayacak birinin olması gerekiyor. Aşağıda üç havalimanından da süreler, mesafeler ve sabit fiyatlar var.</p>
 
 <h2>Bafra nerede ve her havalimanından ne kadar sürer</h2>
 <p>Bafra, adanın kuzeydoğu kıyısında, İskele ve Boğaz'ı geçtikten sonra Karpaz yarımadasına açılan yolun üzerindedir. Son 20 kilometre neredeyse tamamen boştur: gündüz güzel bir manzara, gece ıssız bir hat. Fiyatlarımız yola çıkmadan sabitlenir — taksimetre yok, saat ya da trafik rakamı değiştirmez.</p>
 <ul>
-  <li><strong>Ercan Havalimanı → Bafra:</strong> yaklaşık 60 dakika, 80 km, <strong>£80</strong> tek yön (gidiş-dönüş £145) — <a href="/tr/routes/ercan-airport-to-bafra-hotels/">rota ve fiyat detayı</a></li>
-  <li><strong>Larnaka Havalimanı → Bafra:</strong> yaklaşık 90 dakika, 110 km, <strong>£120</strong> tek yön (gidiş-dönüş £220) — <a href="/tr/routes/larnaca-airport-to-bafra-hotels/">rota ve fiyat detayı</a></li>
-  <li><strong>Baf Havalimanı → Bafra:</strong> yaklaşık 2 saat 55 dakika, 230 km, <strong>£240</strong> tek yön (gidiş-dönüş £430) — <a href="/tr/routes/paphos-airport-to-bafra-hotels/">rota ve fiyat detayı</a></li>
+  <li><strong>Ercan Havalimanı → Bafra:</strong> yaklaşık 60 dakika, 80 km — <a href="/tr/routes/ercan-airport-to-bafra-hotels/">rota detayı ve ücret</a></li>
+  <li><strong>Larnaka Havalimanı → Bafra:</strong> yaklaşık 90 dakika, 110 km — <a href="/tr/routes/larnaca-airport-to-bafra-hotels/">rota detayı ve ücret</a></li>
+  <li><strong>Baf Havalimanı → Bafra:</strong> yaklaşık 2 saat 55 dakika, 230 km — <a href="/tr/routes/paphos-airport-to-bafra-hotels/">rota detayı ve ücret</a></li>
 </ul>
 <p><strong>Bafra Ercan kaç km</strong> diye arayanlar için net cevap: 80 kilometre, normal koşullarda bir saat. Türkiye'den gelen uçuşların hepsi Ercan'a iner ve Bafra için en mantıklı seçenek budur. Avrupa'dan direkt uçuyorsanız Larnaka çoğu zaman daha uygun bağlantı verir; Baf ise adanın tam öbür ucundadır, uzun ama tek araçla kesintisiz yapılan bir yolculuktur. Üç havalimanının rakamlarını yan yana görmek isterseniz <a href="/tr/blog/north-cyprus-airport-transfer-prices/">Kuzey Kıbrıs transfer fiyatları yazımıza</a> bakabilirsiniz.</p>
 
@@ -44,12 +44,12 @@ description: "Bafra otelleri transfer rehberi — Kaya Artemis, Noah's Ark, Conc
 
 <h2>Sıkça sorulan sorular</h2>
 <h3>Ercan'dan Bafra'ya ne kadar sürer, ne kadar tutar?</h3>
-<p>Yaklaşık 60 dakika ve 80 kilometre. Tek yön sabit fiyat £80, gidiş-dönüş £145. Rakam yola çıkmadan önce bellidir; trafik veya gece saati fiyatı değiştirmez.</p>
+<p>Yaklaşık 60 dakika ve 80 kilometre. Ücret rezervasyon sırasında konuşulur ve yola çıkmadan sabitlenir; trafik ya da gece saati onu değiştirmez.</p>
 <h3>Otel kendi transferini sunuyor, farkı ne?</h3>
 <p>Otel transferleri genelde birkaç uçuşu birleştirir; kendi uçuşunuz erken inse bile diğer misafirler beklenir ve araç şeritteki bütün otellere sırayla uğrar. Bizde araç yalnızca size aittir, iner inmez yola çıkarsınız ve doğrudan kendi otelinizin resepsiyonunda durursunuz.</p>
 <h3>Gece 02:00'de inen uçak için transfer var mı?</h3>
 <p>Evet. Gece transferleri Bafra hattında rutindir ve gece olduğu için fiyat artmaz. Uçuş numaranızı verin, iniş saatini takip eder, gerçek iniş saatinize göre karşılarız.</p>
 <h3>Dönüş transferini de şimdi ayarlayabilir miyim?</h3>
-<p>Evet, ve tavsiyemiz budur — tatilin son sabahı Bafra'dan araç bulmak en zor iştir. Gidiş-dönüş birlikte alındığında toplam daha uygun olur (Ercan için £145). Dönüş yönü ayrı bir rota olarak da listelenir: <a href="/tr/routes/bafra-hotels-to-ercan-airport/">Bafra otellerinden Ercan Havalimanı'na</a>.</p>
+<p>Evet, ve tavsiyemiz budur — tatilin son sabahı Bafra'dan araç bulmak en zor iştir. Gidiş-dönüş birlikte alındığında toplam daha uygun olur. Dönüş yönü ayrı bir rota olarak da listelenir: <a href="/tr/routes/bafra-hotels-to-ercan-airport/">Bafra otellerinden Ercan Havalimanı'na</a>.</p>
 
-<p>Bafra'ya mı gidiyorsunuz? <a href="/tr/routes/">Sabit transfer fiyatlarına göz atın</a> ya da otel adınız ve uçuş numaranızla <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>Bafra'ya mı gidiyorsunuz? <a href="/tr/routes/">Transfer güzergahlarına göz atın</a> ya da otel adınız ve uçuş numaranızla <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

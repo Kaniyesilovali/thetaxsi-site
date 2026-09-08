@@ -453,8 +453,12 @@ export function renderHome(ctx) {
       <a href="${href(lang, `/routes/${r.slug}/`)}" class="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-card">
         <span class="text-[15px] font-medium leading-snug text-ink">${esc(routeLabel(r, lang))}</span>
         <span class="shrink-0 text-right">
-          <span class="block text-[11px] text-slate">${esc(t.routes.from)}</span>
-          <span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>
+          <span class="block text-[11px] text-slate">${esc(config.showPrices ? t.routes.from : xtra.routeDetail.fareLabel)}</span>
+          ${
+            config.showPrices
+              ? `<span class="text-2xl font-semibold tabular-nums text-sea">${cur}${r.price}</span>`
+              : `<span class="text-[15px] font-semibold text-sea">${esc(xtra.routeDetail.quoteCard)}</span>`
+          }
         </span>
       </a>`,
         )
@@ -567,15 +571,18 @@ export function renderHome(ctx) {
       url: `${config.siteUrl}/${lang}/`,
       areaServed: { '@type': 'AdministrativeArea', name: 'Northern Cyprus' },
       provider: businessRef,
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: config.currencyCode,
-        lowPrice,
-        highPrice,
-        offerCount: routePrices.length,
-        availability: 'https://schema.org/InStock',
-        url: `${config.siteUrl}${href(lang, '/routes/')}`,
-      },
+      // config.showPrices false iken fiyat aralığı bildirilmez.
+      offers: config.showPrices
+        ? {
+            '@type': 'AggregateOffer',
+            priceCurrency: config.currencyCode,
+            lowPrice,
+            highPrice,
+            offerCount: routePrices.length,
+            availability: 'https://schema.org/InStock',
+            url: `${config.siteUrl}${href(lang, '/routes/')}`,
+          }
+        : undefined,
     },
   ]
 

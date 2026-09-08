@@ -44,4 +44,4 @@ description: "Karpaz yarımadası için tam gün rehberi: Altınkum Plajı, yaba
 <p>Dipkarpaz, benzin istasyonu, dükkânı ve güvenilir yemeği olan son köydür. Altınkum yakınında yazın birkaç basit lokanta çalışır ama günü onların açık olacağına göre kurmayın.</p>
 <h3>Dört çeker araç gerekir mi?</h3>
 <p>Ana yol ve işaretli giriş noktaları için gerekmez; bunlar asfalt ya da sıkı zeminlidir. Kumullara inen bazı patikalar gevşek kumdur; sıradan bir aracı yukarıda bırakıp yürüyerek inmek daha doğrudur.</p>
-<p>Yarımadada bir gün mü planlıyorsunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">tam gün şoförlü araç ayırtın</a>.</p>
+<p>Yarımadada bir gün mü planlıyorsunuz? <a href="/tr/routes/">Güzergahlara bakın</a> ya da <a href="/tr/book/">tam gün şoförlü araç ayırtın</a>.</p>

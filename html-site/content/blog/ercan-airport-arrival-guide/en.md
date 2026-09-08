@@ -29,4 +29,4 @@ description: "What to expect at Ercan Airport — passport control, luggage, SIM
 <p>Yes. Euros and sterling are widely accepted alongside the Lira, and your transfer fare is fixed in advance either way.</p>
 <h3>Do you do local trips too, or only airport transfers?</h3>
 <p>Both. We run in-town and cross-island rides at fixed local prices throughout your stay.</p>
-<p>Ready for when you land? <a href="/en/routes/">See fixed prices for every route</a> or <a href="/en/book/">book your transfer</a>.</p>
+<p>Ready for when you land? <a href="/en/routes/">See every route</a> or <a href="/en/book/">book your transfer</a>.</p>

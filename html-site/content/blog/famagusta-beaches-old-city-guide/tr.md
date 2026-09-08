@@ -36,4 +36,4 @@ description: "Gazimağusa gezi rehberi: surlariçi, Othello Kalesi, Salamis Hara
 <p>Neredeyse yok. Alan açık arazidir, çamlar yalnızca kenarlardadır; erken ya da geç gidin, su taşıyın, şapka kullanın. Aynısı surlar için de geçerli.</p>
 <h3>Gazimağusa'ya en kolay nasıl gidilir?</h3>
 <p>Karayoluyla. Ercan Havalimanı'ndan yaklaşık 45 dakika, Girne'den yaklaşık bir saat, Long Beach'ten yaklaşık 20 dakikadır. Sabit fiyatlı transfer sizi kapıdan kapıya götürür; günlük kiralamada ise aynı şoför sizi surlariçi, Salamis ve plaj arasında gezdirir.</p>
-<p>Gazimağusa'da bir gün mü planlıyorsunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">günlük araç ayarlayın</a>.</p>
+<p>Gazimağusa'da bir gün mü planlıyorsunuz? <a href="/tr/routes/">Güzergahlara bakın</a> ya da <a href="/tr/book/">günlük araç ayarlayın</a>.</p>

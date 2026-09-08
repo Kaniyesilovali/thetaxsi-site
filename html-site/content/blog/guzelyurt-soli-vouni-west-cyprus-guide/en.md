@@ -42,4 +42,4 @@ description: "A day guide to west North Cyprus: Güzelyurt museum and St Mammas,
 <p>Spring, when the citrus is in blossom, and autumn. Midsummer works if you start early — Soli and Vouni offer very little shade.</p>
 <h3>Are the beaches at Güzelyurt Bay worth stopping for?</h3>
 <p>If you want quiet, yes. They are long, open and largely undeveloped. For sunbeds and beach clubs, the Kyrenia coast instead.</p>
-<p>Planning the loop? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car in two minutes</a>.</p>
+<p>Planning the loop? <a href="/en/routes/">See the routes</a> or <a href="/en/book/">book a car in two minutes</a>.</p>

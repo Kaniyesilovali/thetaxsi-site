@@ -45,4 +45,4 @@ description: "Kuzey Kıbrıs havalimanı transferini içiniz rahat ayırtmak —
 <p>Kapora olmadığı için yola çıkmadan iptal size bir şeye mal olmaz. Şoför yeniden görevlendirilebilsin diye mümkün olduğunca erken haber verin.</p>
 <h3>Şoförümü havalimanında nasıl tanırım?</h3>
 <p>Şoförünüz varış salonunda adınızın yazılı olduğu bir tabelayla bekler; adını, telefonunu ve aracını zaten teyidinizden bilirsiniz.</p>
-<p>Ücretlerin işleyişini <a href="/tr/blog/how-fixed-price-transfers-work/">sabit fiyatlı transfer nasıl çalışır</a> yazısında görün, <a href="/tr/routes/">güzergâhlar ve fiyatlar</a>a göz atın ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>
+<p>Ücretlerin işleyişini <a href="/tr/blog/how-fixed-price-transfers-work/">sabit fiyatlı transfer nasıl çalışır</a> yazısında görün, <a href="/tr/routes/">güzergâhlar sayfası</a>a göz atın ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>

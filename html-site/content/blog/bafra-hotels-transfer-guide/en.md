@@ -1,15 +1,15 @@
 ---
 title: "Bafra Hotels Transfer: Ercan, Larnaca and Paphos"
-description: "Bafra hotels transfer guide — Kaya Artemis, Noah's Ark, Concorde and Limak, with fixed fares of £80 from Ercan, £120 from Larnaca and £240 from Paphos."
+description: "Bafra hotels transfer guide — Kaya Artemis, Noah's Ark, Concorde and Limak: 60 minutes from Ercan, 90 from Larnaca and just under three hours from Paphos."
 ---
 <p>Bafra is North Cyprus's one genuinely self-contained resort strip. It sits north-east of Famagusta, right where the road opens onto the Karpaz peninsula, and it consists of four large properties strung along kilometres of empty coast: Kaya Artemis, Noah's Ark, Concorde and Limak. There is no town around them, no high street, no rank of taxis outside the gate. That is why guests heading here book transport in advance — an <strong>Ercan airport to Bafra taxi</strong> is a solid hour on the road, and someone needs to be waiting at the end of it. Below are the times, distances and fixed fares from all three airports.</p>
 
 <h2>Where Bafra is and how long it takes from each airport</h2>
 <p>Bafra lies on the north-east coast, past İskele and Boğaz, on the road that continues into the Karpaz. The last 20 kilometres are almost empty — a beautiful drive in daylight, a very dark one at night. Every fare is fixed before you travel: no meter, and the number does not move for traffic or the hour.</p>
 <ul>
-  <li><strong>Ercan Airport → Bafra:</strong> about 60 minutes, 80 km, <strong>£80</strong> one way (£145 return) — <a href="/en/routes/ercan-airport-to-bafra-hotels/">route and price detail</a></li>
-  <li><strong>Larnaca Airport → Bafra:</strong> about 90 minutes, 110 km, <strong>£120</strong> one way (£220 return) — <a href="/en/routes/larnaca-airport-to-bafra-hotels/">route and price detail</a></li>
-  <li><strong>Paphos Airport → Bafra:</strong> about 2 hours 55 minutes, 230 km, <strong>£240</strong> one way (£430 return) — <a href="/en/routes/paphos-airport-to-bafra-hotels/">route and price detail</a></li>
+  <li><strong>Ercan Airport → Bafra:</strong> about 60 minutes, 80 km — <a href="/en/routes/ercan-airport-to-bafra-hotels/">route detail and fare</a></li>
+  <li><strong>Larnaca Airport → Bafra:</strong> about 90 minutes, 110 km — <a href="/en/routes/larnaca-airport-to-bafra-hotels/">route detail and fare</a></li>
+  <li><strong>Paphos Airport → Bafra:</strong> about 2 hours 55 minutes, 230 km — <a href="/en/routes/paphos-airport-to-bafra-hotels/">route detail and fare</a></li>
 </ul>
 <p>Ercan is the closest airport and the obvious choice if you are flying via Turkey. If you have a direct European flight, Larnaca usually gives the better connection and the drive north is straightforward. Paphos sits at the far western end of the island — a long run, but done in one vehicle without changes. To compare all our <strong>north cyprus resort transfer</strong> fares side by side, see our <a href="/en/blog/north-cyprus-airport-transfer-prices/">airport transfer prices guide</a>.</p>
 
@@ -44,12 +44,12 @@ description: "Bafra hotels transfer guide — Kaya Artemis, Noah's Ark, Concorde
 
 <h2>Frequently asked questions</h2>
 <h3>How long is Ercan to Bafra, and what does it cost?</h3>
-<p>Around 60 minutes and 80 kilometres. The fixed one-way fare is £80, or £145 return. The figure is agreed before you travel and does not change for traffic or a night-time landing.</p>
+<p>Around 60 minutes and 80 kilometres. The fare is agreed when you book and fixed before you travel; it does not change for traffic or a night-time landing.</p>
 <h3>The hotel offers its own transfer — what's the difference?</h3>
 <p>Hotel shuttles usually combine several flights: even if you land early, the vehicle waits for other guests and then calls at each hotel on the strip in turn. With us the car is yours alone, you leave as soon as you are through, and you stop at your own reception.</p>
 <h3>Do you cover a flight landing at 02:00?</h3>
 <p>Yes. Night transfers are routine on the Bafra run and there is no night surcharge. Give us the flight number, we track the landing and meet you at the actual arrival time.</p>
 <h3>Can I book the return transfer now as well?</h3>
-<p>Yes, and we recommend it — finding a car out of Bafra on your last morning is the hard part. Booked together the total is lower (£145 for Ercan). The return direction is listed as its own route too: <a href="/en/routes/bafra-hotels-to-ercan-airport/">Bafra hotels to Ercan Airport</a>.</p>
+<p>Yes, and we recommend it — finding a car out of Bafra on your last morning is the hard part. Booked together the total is lower. The return direction is listed as its own route too: <a href="/en/routes/bafra-hotels-to-ercan-airport/">Bafra hotels to Ercan Airport</a>.</p>
 
-<p>Heading to Bafra? <a href="/en/routes/">See our fixed transfer prices</a> or <a href="/en/book/">book your transfer</a> with your hotel name and flight number.</p>
+<p>Heading to Bafra? <a href="/en/routes/">See our transfer routes</a> or <a href="/en/book/">book your transfer</a> with your hotel name and flight number.</p>

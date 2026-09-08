@@ -37,4 +37,4 @@ description: "Sabit ücret gerçekte neyi kapsar, uçuş takibi ve bekleme nası
 <p>Hayır. Teyidinizdeki ücret sabittir. Yalnızca rezervasyonun kendisini değiştirirseniz farklılaşır — başka bir araç, eklenen durak ya da talep ettiğiniz ek bekleme.</p>
 <h3>Hangi para birimleriyle ödeyebilirim?</h3>
 <p>Nakit genelde sterlin, euro veya Türk lirası olarak kabul edilir. Şoför hazır olsun diye para birimini rezervasyonda konuşun.</p>
-<p>Sabit ücretleri <a href="/tr/routes/">güzergâhlar ve fiyatlar</a> sayfasında görün, seçenekleri <a href="/tr/blog/north-cyprus-transfer-vs-taxi-vs-car-hire/">transfer, taksi ve kiralık araç</a> yazısında karşılaştırın ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>
+<p>Sabit ücretleri <a href="/tr/routes/">güzergâhlar sayfası</a> sayfasında görün, seçenekleri <a href="/tr/blog/north-cyprus-transfer-vs-taxi-vs-car-hire/">transfer, taksi ve kiralık araç</a> yazısında karşılaştırın ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>

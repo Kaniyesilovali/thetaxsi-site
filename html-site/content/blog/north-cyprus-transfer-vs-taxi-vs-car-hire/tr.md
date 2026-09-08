@@ -18,7 +18,7 @@ description: "Özel transfer, havalimanı taksisi, kiralık araç ya da kombi �
 </table>
 
 <h2>Kuzey Kıbrıs'ta havalimanı transferi ne kadar?</h2>
-<p>Özel transfer kişi başı değil araç başına fiyatlanır ve rezervasyonda sabitlenir. Yol gösterici olarak Ercan Havalimanı'ndan Girne'ye 45–55 £ civarı, sınır geçen Larnaka'dan Girne'ye ise yaklaşık 80–95 £'dur. Otoyol, otopark ve havalimanında ilk 45 dakikalık bekleme dahil olduğu için rezervasyonda gördüğünüz rakam, ödeyeceğiniz rakamdır.</p>
+<p>Özel transfer kişi başı değil araç başına fiyatlanır ve rezervasyonda sabitlenir. Sınır geçen Larnaka hatları, kuzeydeki Ercan hatlarından belirgin biçimde yüksektir; rakamı rezervasyonda görürsünüz. Otoyol, otopark ve havalimanında ilk 45 dakikalık bekleme dahil olduğu için rezervasyonda gördüğünüz rakam, ödeyeceğiniz rakamdır.</p>
 
 <h2>Havalimanı taksisi transferden ucuz mu?</h2>
 <p>Çok kısa yolda bazen öyledir — ama ücret sabit değildir. Kuzey Kıbrıs'ta havalimanı taksileri nadiren taksimetre çalıştırır; fiyatı durakta, çoğu zaman gece geç saatte, bagajla ve uçuş sonrası yorgunken konuşursunuz. Tipik bir Ercan–Girne taksisi 50–63 € aralığında telaffuz edilir, gece veya yoğun bir varış bunu yükseltebilir. Maliyeti önceden bilmeye değer veriyorsanız, asıl fark rakamın kendisi değil bu belirsizliktir.</p>
@@ -47,4 +47,4 @@ description: "Özel transfer, havalimanı taksisi, kiralık araç ya da kombi �
 <p>Önceden ayarlanmış transfer her gün geçer — Yeşil Hat kapısında aynı araçta kalırsınız, yolcu ücreti yoktur. Güney merkezli birçok taksi geçmez, o yüzden geçen bir şoför ayarlayın.</p>
 <h3>Uçağım gecikirse transferime ne olur?</h3>
 <p>Hiçbir şey değişmez ve ek ücret çıkmaz. Uçuşu takip edip alış saatinizi ona göre kaydırırız; ilk 45 dakikalık bekleme dahildir.</p>
-<p>Gerçek ücretleri <a href="/tr/routes/">güzergâhlar ve fiyatlar</a> sayfasında görün, iki Girne seçeneğini karşılaştırın — <a href="/tr/routes/ercan-airport-to-kyrenia/">Ercan'dan Girne'ye</a> ve <a href="/tr/routes/larnaca-airport-to-kyrenia/">Larnaka'dan Girne'ye</a> — ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>
+<p>Gerçek ücretleri <a href="/tr/routes/">güzergâhlar sayfası</a> sayfasında görün, iki Girne seçeneğini karşılaştırın — <a href="/tr/routes/ercan-airport-to-kyrenia/">Ercan'dan Girne'ye</a> ve <a href="/tr/routes/larnaca-airport-to-kyrenia/">Larnaka'dan Girne'ye</a> — ya da <a href="/tr/book/">transferinizi ayırtın</a>.</p>

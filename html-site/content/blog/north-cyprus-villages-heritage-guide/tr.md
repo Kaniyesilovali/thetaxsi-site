@@ -44,4 +44,4 @@ description: "Kuzey Kıbrıs köylerinde yavaş bir gün: Beylerbeyi Manastırı
 <p>Hafta sonu işe yarar; köy lokantaları yerli ailelerle dolar. Hafta içi genelde gidip oturabilirsiniz.</p>
 <h3>Ziyaretçi olarak köy kahvesine girmek uygun mu?</h3>
 <p>Evet. Selam verin, içerisi müdavim odası gibi duruyorsa dışarı oturun, kahve söyleyin ve sonunda nakit ödeyin. Orası kamusal bir yerdir, ziyaretçi olağandır.</p>
-<p>Köyleri geri manevra derdi olmadan gezmek ister misiniz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada araç ayırtın</a>.</p>
+<p>Köyleri geri manevra derdi olmadan gezmek ister misiniz? <a href="/tr/routes/">Güzergahlara bakın</a> ya da <a href="/tr/book/">iki dakikada araç ayırtın</a>.</p>

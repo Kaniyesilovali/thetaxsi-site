@@ -45,4 +45,4 @@ description: "How to book a North Cyprus airport transfer with confidence — no
 <p>Because there is no deposit, cancelling before the trip costs you nothing. Let the company know as early as you can so the driver can be reassigned.</p>
 <h3>How do I recognise my driver at the airport?</h3>
 <p>Your driver waits in the arrivals hall with a sign showing your name, and you already have their name, phone and vehicle from your confirmation.</p>
-<p>See how our fares work in <a href="/en/blog/how-fixed-price-transfers-work/">how fixed-price transfers work</a>, browse <a href="/en/routes/">routes and prices</a>, or <a href="/en/book/">book your transfer</a>.</p>
+<p>See how our fares work in <a href="/en/blog/how-fixed-price-transfers-work/">how fixed-price transfers work</a>, browse <a href="/en/routes/">routes</a>, or <a href="/en/book/">book your transfer</a>.</p>

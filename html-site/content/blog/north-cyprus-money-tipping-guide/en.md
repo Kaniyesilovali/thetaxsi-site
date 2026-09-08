@@ -22,4 +22,4 @@ description: "Which currency to bring, whether cards work, and how tipping works
 <p>Cards cover hotels and larger venues, but carry some cash for markets, small cafés and tips.</p>
 <h3>Should I tip my transfer driver?</h3>
 <p>It's appreciated but not required. Your fixed fare is the price; a small round-up for good service is a kind extra.</p>
-<p>Ready to travel? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book your transfer</a>.</p>
+<p>Ready to travel? <a href="/en/routes/">See the routes</a> or <a href="/en/book/">book your transfer</a>.</p>

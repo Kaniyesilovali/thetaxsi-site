@@ -36,4 +36,4 @@ description: "A walking guide to Famagusta: the walled old city, Othello Castle,
 <p>Very little — open ground with pines only at the edges. Go early or late, carry water and use a hat.</p>
 <h3>What is the easiest way to reach Famagusta?</h3>
 <p>By road — roughly 45 minutes from Ercan Airport, about an hour from Kyrenia and around 20 minutes from Long Beach. A full-day hire keeps the same chauffeur with you between the sites.</p>
-<p>Planning a day in Famagusta? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a car for the day</a>.</p>
+<p>Planning a day in Famagusta? <a href="/en/routes/">See the routes</a> or <a href="/en/book/">book a car for the day</a>.</p>

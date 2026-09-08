@@ -44,4 +44,4 @@ description: "A full-day guide to the Karpaz peninsula: Golden Beach, the wild d
 <p>Dipkarpaz is the last village with a petrol station, a shop and reliable food. A few simple restaurants open near Golden Beach in summer, but do not plan around them.</p>
 <h3>Do you need a four-wheel drive?</h3>
 <p>Not for the main road or the marked access points. Some tracks down to the dunes are soft sand; an ordinary car is better left at the top.</p>
-<p>Planning a day on the peninsula? <a href="/en/routes/">See fixed prices</a> or <a href="/en/book/">book a full-day car and driver</a>.</p>
+<p>Planning a day on the peninsula? <a href="/en/routes/">See the routes</a> or <a href="/en/book/">book a full-day car and driver</a>.</p>

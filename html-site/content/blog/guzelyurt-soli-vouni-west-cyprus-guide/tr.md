@@ -43,4 +43,4 @@ description: "Batı Kıbrıs için bir günlük gezi rehberi: Güzelyurt Müzesi
 <p>Narenciyenin çiçek açtığı ve ovanın yeşerdiği ilkbahar ile sonbahar. Yaz ortasında da olur, yeter ki erken çıkın — Soli ve Vouni'de gölge çok azdır.</p>
 <h3>Güzelyurt Körfezi plajları uğramaya değer mi?</h3>
 <p>Sessizlik istiyorsanız evet. Uzun, açık ve büyük ölçüde doğaldırlar, tesis azdır. Şezlong ve beach club için Girne sahili daha uygundur.</p>
-<p>Turu planlıyor musunuz? <a href="/tr/routes/">Sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada araç ayırtın</a>.</p>
+<p>Turu planlıyor musunuz? <a href="/tr/routes/">Güzergahlara bakın</a> ya da <a href="/tr/book/">iki dakikada araç ayırtın</a>.</p>

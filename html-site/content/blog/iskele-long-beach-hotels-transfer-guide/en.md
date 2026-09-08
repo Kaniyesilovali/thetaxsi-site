@@ -25,4 +25,4 @@ description: "Reaching the Long Beach resorts at İskele — transfer times and 
 <p>Yes — tell us the hotel name (and block, if it's an apartment) and we take you to the correct reception, not the nearest gate.</p>
 <h3>Do you do trips once we're there, or only the airport transfer?</h3>
 <p>Both. We run local and day-trip journeys at fixed prices throughout your stay.</p>
-<p>Heading to Long Beach? <a href="/en/routes/">See fixed transfer prices</a> or <a href="/en/book/">book your transfer</a>.</p>
+<p>Heading to Long Beach? <a href="/en/routes/">See the transfer routes</a> or <a href="/en/book/">book your transfer</a>.</p>

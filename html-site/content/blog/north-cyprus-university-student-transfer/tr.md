@@ -7,11 +7,11 @@ description: "KKTC üniversite öğrenci transferi: Ercan, Larnaka ve Baf'tan Ga
 <h2>Kampüsünüz hangi şehirde, hangi havalimanı mantıklı?</h2>
 <p>Kuzey Kıbrıs'ın kendi havalimanı <strong>Ercan</strong>'dır ve adanın tam ortasında olduğu için her kampüs bölgesine yakındır. Güneydeki <strong>Larnaka</strong> ve <strong>Baf</strong> ise Avrupa'dan direkt uçuşlarla gelen öğrenciler için sık kullanılan alternatiflerdir. Şehir şehir tablo şöyle:</p>
 <ul>
-  <li><strong>Gazimağusa</strong> — Doğu Akdeniz Üniversitesi (DAÜ / EMU) ve çevresindeki yurt bölgesi. Ercan'dan yaklaşık 40 dakika, 50 km, sabit <strong>£55</strong>: <a href="/tr/routes/ercan-airport-to-famagusta/">Ercan – Gazimağusa transferi</a>. Larnaka'dan yaklaşık 1 saat, <strong>£90</strong>: <a href="/tr/routes/larnaca-airport-to-famagusta/">Larnaka – Gazimağusa</a>. Baf'tan yaklaşık 2 saat 30 dakika, <strong>£200</strong>.</li>
-  <li><strong>Lefkoşa</strong> — Yakın Doğu Üniversitesi ve başkentteki diğer kampüsler. Ercan'dan sadece 20 dakika, 18 km, <strong>£45</strong>: <a href="/tr/routes/ercan-airport-to-nicosia/">Ercan – Lefkoşa transferi</a>. Larnaka'dan yaklaşık 50 dakika, <strong>£80</strong>: <a href="/tr/routes/larnaca-airport-to-nicosia/">Larnaka – Lefkoşa</a>.</li>
-  <li><strong>Girne</strong> — Girne Amerikan Üniversitesi ve sahil şeridindeki diğer kampüsler. Ercan'dan yaklaşık 35 dakika, 40 km, <strong>£55</strong>: <a href="/tr/routes/ercan-airport-to-kyrenia/">Ercan – Girne transferi</a>. Larnaka'dan yaklaşık 1 saat 15 dakika, <strong>£100</strong>: <a href="/tr/routes/larnaca-airport-to-kyrenia/">Larnaka – Girne</a>.</li>
-  <li><strong>Güzelyurt</strong> — Kalkanlı'daki ODTÜ Kuzey Kıbrıs Kampüsü ve batıdaki diğer kampüsler. Ercan'dan yaklaşık 50 dakika, <strong>£55</strong>: <a href="/tr/routes/ercan-airport-to-guzelyurt/">Ercan – Güzelyurt transferi</a>. Larnaka'dan <strong>£80</strong>, Baf'tan <strong>£120</strong> — batıda olduğu için Baf, Güzelyurt'a diğer şehirlere olduğundan çok daha yakındır.</li>
-  <li><strong>İskele ve Long Beach çevresi</strong> — doğu kıyısındaki kampüsler ve öğrenci dairelerinin yoğunlaştığı bölge. Ercan'dan yaklaşık 45 dakika, <strong>£55</strong>: <a href="/tr/routes/ercan-airport-to-iskele-long-beach/">Ercan – İskele Long Beach transferi</a>. Larnaka'dan <strong>£110</strong>.</li>
+  <li><strong>Gazimağusa</strong> — Doğu Akdeniz Üniversitesi (DAÜ / EMU) ve çevresindeki yurt bölgesi. Ercan'dan yaklaşık 40 dakika, 50 km: <a href="/tr/routes/ercan-airport-to-famagusta/">Ercan – Gazimağusa transferi</a>. Larnaka'dan yaklaşık 1 saat: <a href="/tr/routes/larnaca-airport-to-famagusta/">Larnaka – Gazimağusa</a>. Baf'tan yaklaşık 2 saat 30 dakika.</li>
+  <li><strong>Lefkoşa</strong> — Yakın Doğu Üniversitesi ve başkentteki diğer kampüsler. Ercan'dan sadece 20 dakika, 18 km: <a href="/tr/routes/ercan-airport-to-nicosia/">Ercan – Lefkoşa transferi</a>. Larnaka'dan yaklaşık 50 dakika: <a href="/tr/routes/larnaca-airport-to-nicosia/">Larnaka – Lefkoşa</a>.</li>
+  <li><strong>Girne</strong> — Girne Amerikan Üniversitesi ve sahil şeridindeki diğer kampüsler. Ercan'dan yaklaşık 35 dakika, 40 km: <a href="/tr/routes/ercan-airport-to-kyrenia/">Ercan – Girne transferi</a>. Larnaka'dan yaklaşık 1 saat 15 dakika: <a href="/tr/routes/larnaca-airport-to-kyrenia/">Larnaka – Girne</a>.</li>
+  <li><strong>Güzelyurt</strong> — Kalkanlı'daki ODTÜ Kuzey Kıbrıs Kampüsü ve batıdaki diğer kampüsler. Ercan'dan yaklaşık 50 dakika: <a href="/tr/routes/ercan-airport-to-guzelyurt/">Ercan – Güzelyurt transferi</a>. Batıda olduğu için Baf, Güzelyurt'a diğer şehirlere olduğundan çok daha yakındır.</li>
+  <li><strong>İskele ve Long Beach çevresi</strong> — doğu kıyısındaki kampüsler ve öğrenci dairelerinin yoğunlaştığı bölge. Ercan'dan yaklaşık 45 dakika: <a href="/tr/routes/ercan-airport-to-iskele-long-beach/">Ercan – İskele Long Beach transferi</a>.</li>
 </ul>
 <p>Tüm güzergahların yan yana listesi için <a href="/tr/blog/north-cyprus-airport-transfer-prices/">Kuzey Kıbrıs havalimanı transfer fiyatları</a> yazısına bakabilirsiniz. Fiyatlar araç başınadır, kişi başı değil — üç arkadaş aynı araca binerse ücret bölünür.</p>
 
@@ -27,13 +27,13 @@ description: "KKTC üniversite öğrenci transferi: Ercan, Larnaka ve Baf'tan Ga
 
 <h2>Bagaj gerçeği: bir yıllık eşya taşıyorsunuz</h2>
 <p>Tatilci bir valizle gelir; öğrenci bir yıllık hayatla gelir. Tipik ilk geliş iki büyük valiz, bir el bagajı ve çoğu zaman bir de sırt çantasıdır. Ailenizle geliyorsanız bu sayı hızla dört valize çıkar.</p>
-<p>Bu yüzden rezervasyon formunda <strong>bagaj sayısını mutlaka belirtin</strong>. Standart salon araç iki büyük valiz ve el bagajını rahat alır; daha fazlası ya da kalabalık bir aile için 7 kişilik Vito minibüs devreye girer. Örneğin Güzelyurt hattında Vito fiyatları da sabittir: <strong>Larnaka – Güzelyurt £100</strong>, <strong>Baf – Güzelyurt £140</strong>. Diğer güzergahlarda büyük araç gerekiyorsa fiyatı yola çıkmadan, yazılı olarak veririz — sürpriz yoktur.</p>
+<p>Bu yüzden rezervasyon formunda <strong>bagaj sayısını mutlaka belirtin</strong>. Standart salon araç iki büyük valiz ve el bagajını rahat alır; daha fazlası ya da kalabalık bir aile için 7 kişilik Vito minibüs devreye girer. Büyük araç gerekiyorsa ücreti yola çıkmadan, yazılı olarak veririz — sürpriz yoktur.</p>
 
 <h2>Aileler ziyarete geldiğinde</h2>
 <p>Öğrenci transferi tek seferlik bir iş değildir. Mezuniyet töreni, dönem arası ziyaret, ilk kayıtta ailenin çocuğunu bırakmaya gelmesi — yılda birkaç kez aynı yollar kullanılır. Ailelerin genelde ihtiyacı olan şudur:</p>
 <ul>
   <li><strong>Havalimanı – otel transferi</strong>, ardından <strong>otel – kampüs</strong> arası kısa yolculuklar; ikisi de sabit fiyatlıdır.</li>
-  <li><strong>Gidiş-dönüş rezervasyonu</strong> — tek seferde ayarlanır ve daha ucuza gelir. Ercan – Gazimağusa gidiş-dönüş <strong>£100</strong>, Ercan – Lefkoşa <strong>£80</strong>, Ercan – Girne <strong>£100</strong>.</li>
+  <li><strong>Gidiş-dönüş rezervasyonu</strong> — tek seferde ayarlanır ve iki ayrı yolculuktan daha ucuza gelir.</li>
   <li><strong>Günübirlik gezi</strong> — mezuniyet haftasında ailenin adayı görmek istemesi normaldir. <a href="/tr/blog/kyrenia-harbour-castle-old-town-guide/">Girne limanı ve kalesi</a> ya da <a href="/tr/blog/karpaz-golden-beach-guide/">Karpaz ve Altınkum</a> için tam günlük sabit fiyat veririz; şoför bekler, siz saate bakmazsınız.</li>
 </ul>
 
@@ -62,8 +62,8 @@ description: "KKTC üniversite öğrenci transferi: Ercan, Larnaka ve Baf'tan Ga
 <h3>İki büyük valizim var, araca sığar mı?</h3>
 <p>Standart salon araç iki büyük valiz ve el bagajını rahatlıkla alır. Daha fazlası varsa ya da ailenizle geliyorsanız rezervasyonda bagaj sayısını yazın; 7 kişilik Vito minibüs ayarlarız ve fiyatını yola çıkmadan bildiririz.</p>
 <h3>Larnaka'ya iniyorum, sınırdan geçmek sorun olur mu?</h3>
-<p>Hayır. Geçiş araçta yapılır, birkaç dakika sürer ve pasaport kontrolü dışında sizden bir şey istenmez. Araç değiştirmezsiniz ve geçiş için ek ücret ödemezsiniz — Larnaka'dan Gazimağusa'ya £90, Lefkoşa'ya £80 sabit fiyattır.</p>
+<p>Hayır. Geçiş araçta yapılır, birkaç dakika sürer ve pasaport kontrolü dışında sizden bir şey istenmez. Araç değiştirmezsiniz ve geçiş için ek ücret ödemezsiniz; rezervasyondaki rakam değişmez.</p>
 <h3>Aynı fiyat dönüş için de geçerli mi?</h3>
-<p>Evet. Ters yön rotalar aynı fiyattadır ve gidiş-dönüşü birlikte rezerve ederseniz daha da uygun olur — örneğin Ercan – Gazimağusa gidiş-dönüş £100. Dönem sonu sabah erken uçuşları için alım saatini bize söylemeniz yeterli.</p>
+<p>Evet. Ters yön rotalar aynı fiyattadır ve gidiş-dönüşü birlikte rezerve ederseniz daha da uygun olur. Dönem sonu sabah erken uçuşları için alım saatini bize söylemeniz yeterli.</p>
 
-<p>Yeni dönem yaklaşıyorsa şimdi planlayın: <a href="/tr/routes/">kampüsünüze giden sabit fiyatlara bakın</a> ya da <a href="/tr/book/">iki dakikada transferinizi rezerve edin</a>. Bagaj, kalabalık grup ya da düzenli kampüs yolculuğu için <a href="/tr/contact/">bize yazabilirsiniz</a>.</p>
+<p>Yeni dönem yaklaşıyorsa şimdi planlayın: <a href="/tr/routes/">kampüsünüze giden güzergahlara bakın</a> ya da <a href="/tr/book/">iki dakikada transferinizi rezerve edin</a>. Bagaj, kalabalık grup ya da düzenli kampüs yolculuğu için <a href="/tr/contact/">bize yazabilirsiniz</a>.</p>

@@ -29,4 +29,4 @@ description: "Ercan Havalimanında sizi neler bekliyor — pasaport kontrolü, b
 <p>Evet. Lira'nın yanı sıra euro ve sterlin yaygın olarak kabul edilir ve transfer ücretiniz her hâlükârda önceden sabittir.</p>
 <h3>Sadece havalimanı transferi mi, yoksa yerel yolculuklar da mı yapıyorsunuz?</h3>
 <p>İkisi de. Konaklamanız boyunca şehir içi ve ada geneli yolculukları sabit yerel fiyatlarla yaparız.</p>
-<p>İndiğiniz an için hazır mıyız? <a href="/tr/routes/">Tüm güzergahların sabit fiyatlarına bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>
+<p>İndiğiniz an için hazır mıyız? <a href="/tr/routes/">Tüm güzergahlara bakın</a> ya da <a href="/tr/book/">transferinizi rezerve edin</a>.</p>

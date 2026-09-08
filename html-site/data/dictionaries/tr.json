@@ -2,7 +2,7 @@
   "nav": {
     "book": "Transfer Rezervasyonu",
     "reserve": "Rezerve Et",
-    "routes": "Güzergahlar & Fiyatlar",
+    "routes": "Güzergahlar",
     "track": "Rezervasyonu Takip Et",
     "blog": "Blog",
     "about": "Hakkımızda",
@@ -65,12 +65,30 @@
       "prev": "Önceki",
       "next": "Sonraki",
       "items": [
-        { "place": "Girne Limanı", "note": "Girne · tarihi liman & kale" },
-        { "place": "Altın Kumsal", "note": "Karpaz · kumullar & el değmemiş kıyı" },
-        { "place": "Gazimağusa Körfezi", "note": "Mağusa · turkuaz plajlar" },
-        { "place": "Long Beach", "note": "İskele · doğu kıyısı tatil beldeleri" },
-        { "place": "Güzelyurt Ovası", "note": "Mesarya · narenciye & köyler" },
-        { "place": "Köy dokusu", "note": "Taş kiliseler & gölgeli meydanlar" }
+        {
+          "place": "Girne Limanı",
+          "note": "Girne · tarihi liman & kale"
+        },
+        {
+          "place": "Altın Kumsal",
+          "note": "Karpaz · kumullar & el değmemiş kıyı"
+        },
+        {
+          "place": "Gazimağusa Körfezi",
+          "note": "Mağusa · turkuaz plajlar"
+        },
+        {
+          "place": "Long Beach",
+          "note": "İskele · doğu kıyısı tatil beldeleri"
+        },
+        {
+          "place": "Güzelyurt Ovası",
+          "note": "Mesarya · narenciye & köyler"
+        },
+        {
+          "place": "Köy dokusu",
+          "note": "Taş kiliseler & gölgeli meydanlar"
+        }
       ]
     },
     "why": {
@@ -303,12 +321,12 @@
   },
   "routes": {
     "meta": {
-      "title": "Kıbrıs Transfer Güzergahları & Sabit Fiyatları | TheTaxsi",
+      "title": "Kıbrıs Transfer Güzergahları | TheTaxsi",
       "description": "Ercan, Larnaca ve Baf havalimanlarından tüm Kıbrıs güzergahlarında sabit fiyatlı şoförlü transfer. Otel ve şehir merkezleri dahil, noktadan noktaya."
     },
     "eyebrow": "Kıbrıs, noktadan noktaya",
-    "title": "Güzergahlar & Fiyatlar",
-    "subtitle": "Adada her transfer güzergahında sabit fiyatlar.",
+    "title": "Güzergahlar",
+    "subtitle": "Adadaki tüm transfer güzergahları. Ücret rezervasyonda sabitlenir.",
     "oneWay": "Tek Yön",
     "roundTrip": "Gidiş-Dönüş",
     "bookRoute": "Bu güzergahı rezerve et",
