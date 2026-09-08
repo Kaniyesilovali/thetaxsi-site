@@ -70,7 +70,8 @@ export const areas = [
         'METU Northern Cyprus campus and dorms, Kalkanlı',
         'Gemikonağı beach and the Lefke coast road',
         'Soli mosaics and Vouni Palace',
-        'Surrounding villages and the citrus groves',
+        'Zümrütköy, Aydınköy, Serhatköy, Akçay and the district villages',
+        'The citrus groves and short runs between villages',
         'Bostancı (Astromeritis) crossing to the south',
         'Evening runs home when nothing is on the street',
       ],
@@ -98,6 +99,18 @@ export const areas = [
         {
           q: 'Do you cover the METU Northern Cyprus campus?',
           a: 'Yes — the Kalkanlı campus is about ten kilometres out of Guzelyurt on the Lefke road, so it sits on the busiest line here. Name the dorm block or faculty building rather than just the campus and the driver comes to the right gate.',
+        },
+        {
+          q: 'How much does a taxi in Guzelyurt cost?',
+          a: 'The fare depends on the pickup point, the hour and any waiting, so the figure is agreed on the phone before the car sets off. Call {name} or message on WhatsApp: {phone}.',
+        },
+        {
+          q: 'How do I find the nearest taxi in Guzelyurt?',
+          a: 'There is no separate rank to look for. The same number covers Guzelyurt centre, Kalkanlı, Gemikonağı and the villages around them — give the address you are standing at and the car comes door to door.',
+        },
+        {
+          q: 'Can I get a taxi to the airport in the middle of the night?',
+          a: 'Yes, by arrangement rather than on the spot. Pre-dawn departures are agreed the day before; for a late landing the flight is tracked, so the driver waits on the real arrival time rather than the printed one.',
         },
       ],
       guidesTitle: 'Guides for this region',
@@ -144,7 +157,8 @@ export const areas = [
         'ODTÜ Kuzey Kıbrıs kampüsü ve yurtları, Kalkanlı',
         'Gemikonağı sahili ve Lefke sahil yolu',
         'Soli mozaikleri ve Vouni Sarayı',
-        'Çevre köyler ve narenciye bahçeleri',
+        'Zümrütköy, Aydınköy, Serhatköy, Akçay ve çevre köyler',
+        'Narenciye bahçeleri ve köyler arası kısa yollar',
         'Bostancı (Astromeritis) sınır kapısı',
         'Sokakta araç kalmadığında akşam eve dönüş',
       ],
@@ -172,6 +186,18 @@ export const areas = [
         {
           q: 'ODTÜ Kuzey Kıbrıs kampüsüne gidiyor musunuz?',
           a: 'Evet. Kalkanlı kampüsü Güzelyurt’tan Lefke yolu üzerinde yaklaşık on kilometre uzaktadır, yani buranın en yoğun hattının üstündedir. “Kampüs” demek yerine yurt bloğunu ya da fakülte binasını söyleyin, şoför doğru kapıya gelsin.',
+        },
+        {
+          q: 'Güzelyurt taksi ücretleri ne kadar?',
+          a: 'Ücret alım noktasına, saate ve bekleme süresine göre değişir; bu yüzden rakam telefonda, araç yola çıkmadan konuşulur. {name}’i arayın ya da WhatsApp’tan yazın: {phone}.',
+        },
+        {
+          q: 'Güzelyurt’ta en yakın taksi nasıl bulunur?',
+          a: 'Aranacak ayrı bir durak yok. Aynı numara Güzelyurt merkezini, Kalkanlı’yı, Gemikonağı’nı ve çevre köyleri kapsar — bulunduğunuz adresi söylersiniz, araç kapıdan kapıya gelir.',
+        },
+        {
+          q: 'Gece yarısı ya da sabaha karşı havaalanına taksi bulunur mu?',
+          a: 'Bulunur, ama dışarı çıkıp araç aramakla değil, önceden ayarlayarak. Sabaha karşı kalkan uçuşlar için araç bir gün önceden konuşulur; gece inen uçuşlarda uçuş takip edilir, şoför yazan saati değil gerçek iniş saatini bekler.',
         },
       ],
       guidesTitle: 'Bu bölge için rehberler',
@@ -218,7 +244,8 @@ export const areas = [
         'Кампус и общежития METU Северного Кипра, Калканлы',
         'Пляж Гемиконагы и прибрежная дорога на Лефке',
         'Мозаики Соли и дворец Вуни',
-        'Окрестные деревни и цитрусовые сады',
+        'Зюмрюткёй, Айдынкёй, Серхаткёй, Акчай и окрестные деревни',
+        'Цитрусовые сады и короткие поездки между деревнями',
         'Переход Бостанджи (Астромеритис) на юг',
         'Вечерняя дорога домой, когда на улице пусто',
       ],
@@ -246,6 +273,18 @@ export const areas = [
         {
           q: 'Возите ли вы в кампус METU Северного Кипра?',
           a: 'Да. Кампус в Калканлы — примерно десять километров от Гюзельюрта по дороге на Лефке, то есть на самой загруженной здесь линии. Назовите корпус общежития или факультет, а не просто «кампус», — водитель подъедет к нужным воротам.',
+        },
+        {
+          q: 'Сколько стоит такси в Гюзельюрте?',
+          a: 'Цена зависит от точки подачи, времени суток и ожидания, поэтому сумма оговаривается по телефону до подачи машины. Позвоните {name} или напишите в WhatsApp: {phone}.',
+        },
+        {
+          q: 'Как найти ближайшее такси в Гюзельюрте?',
+          a: 'Отдельную стоянку искать не нужно. Один номер закрывает центр Гюзельюрта, Калканлы, Гемиконагы и окрестные деревни — назовите адрес, где вы стоите, и машина подъедет от двери до двери.',
+        },
+        {
+          q: 'Можно ли уехать в аэропорт среди ночи?',
+          a: 'Да, но по договорённости, а не на месте. Вылет под утро оговаривается накануне; при позднем прилёте рейс отслеживается, и водитель ждёт по фактическому времени посадки, а не по расписанию.',
         },
       ],
       guidesTitle: 'Гиды по этому региону',
@@ -302,7 +341,7 @@ export const areas = [
         'Health sciences campus and METU at Kalkanlı',
         'Gemikonağı seafront and harbour',
         'Soli mosaics and Vouni Palace',
-        'Yeşilırmak and the villages at the western tip',
+        'Denizli, Gaziveren, Yedidalga and Yeşilırmak at the western tip',
         'Güzelyurt hospital and the town centre',
         'Late finishes and evening runs home',
       ],
@@ -330,6 +369,18 @@ export const areas = [
         {
           q: 'Can I get to Paphos or Larnaca from Lefke?',
           a: 'Yes. Both go through the Bostancı crossing rather than the Nicosia gates, which keeps the journey direct from this side. Paphos is the shorter of the two from Lefke, straight down the west coast, and both fares are published.',
+        },
+        {
+          q: 'How much does a taxi in Lefke cost?',
+          a: 'The fare depends on the pickup point, the hour and any waiting, so the figure is agreed on the phone before the car sets off. Call {name} or message on WhatsApp: {phone}.',
+        },
+        {
+          q: 'How do I find the nearest taxi in the Lefke villages?',
+          a: 'There is no rank in each village. The same number covers Lefke centre, Gemikonağı, Denizli, Gaziveren, Yedidalga and Yeşilırmak — name the village and the street and the car comes door to door.',
+        },
+        {
+          q: 'Do you run to the Yeşilırmak (Limnitis) crossing?',
+          a: 'Yes. It sits at the western tip and is the closest crossing to Lefke, much nearer than Bostancı. Two things to plan around: it opens in daylight hours only, and it takes cars rather than foot traffic — so a late return is worth checking on the phone first.',
         },
       ],
       guidesTitle: 'Guides for this region',
@@ -376,7 +427,7 @@ export const areas = [
         'Sağlık bilimleri kampüsü ve Kalkanlı’daki ODTÜ',
         'Gemikonağı sahili ve limanı',
         'Soli mozaikleri ve Vouni Sarayı',
-        'Yeşilırmak ve batı ucundaki köyler',
+        'Denizli, Gaziveren, Yedidalga ve Yeşilırmak — batı ucundaki köyler',
         'Güzelyurt hastanesi ve şehir merkezi',
         'Geç biten dersler ve akşam eve dönüş',
       ],
@@ -404,6 +455,18 @@ export const areas = [
         {
           q: 'Lefke’den Baf ya da Larnaka’ya gidilir mi?',
           a: 'Evet. İkisi de Lefkoşa kapılarından değil, Bostancı kapısından geçer; bu yakadan yolculuğu doğrudan tutan da budur. Lefke’den bakınca Baf ikisinin kısası, batı sahilinden dümdüz iner; her iki hattın ücreti de yayınlanmıştır.',
+        },
+        {
+          q: 'Lefke taksi ücretleri ne kadar?',
+          a: 'Ücret alım noktasına, saate ve bekleme süresine göre değişir; bu yüzden rakam telefonda, araç yola çıkmadan konuşulur. {name}’i arayın ya da WhatsApp’tan yazın: {phone}.',
+        },
+        {
+          q: 'Lefke köylerinden en yakın taksi nasıl bulunur?',
+          a: 'Her köyün ayrı durağı yok. Aynı numara Lefke merkezini, Gemikonağı’nı, Denizli’yi, Gaziveren’i, Yedidalga’yı ve Yeşilırmak’ı kapsar — köyü ve sokağı söylersiniz, araç kapıdan kapıya gelir.',
+        },
+        {
+          q: 'Yeşilırmak (Limnitis) sınır kapısına gidiyor musunuz?',
+          a: 'Evet. Kapı batı ucundadır ve Lefke’ye en yakın geçiştir; Bostancı’dan çok daha yakın. Planlarken iki şeyi hesaba katın: kapı yalnız gündüz açıktır ve yaya değil araç geçişidir — geç bir dönüş düşünüyorsanız saati önceden telefonda sormak işe yarar.',
         },
       ],
       guidesTitle: 'Bu bölge için rehberler',
@@ -450,7 +513,7 @@ export const areas = [
         'Кампус медицинских наук и METU в Калканлы',
         'Набережная и порт Гемиконагы',
         'Мозаики Соли и дворец Вуни',
-        'Ешилырмак и деревни западной оконечности',
+        'Денизли, Газиверен, Йедидалга и Ешилырмак на западной оконечности',
         'Больница и центр Гюзельюрта',
         'Поздние возвращения и вечерняя дорога домой',
       ],
@@ -478,6 +541,18 @@ export const areas = [
         {
           q: 'Можно ли доехать из Лефке в Пафос или Ларнаку?',
           a: 'Да. Обе поездки идут через переход Бостанджи, а не через никосийские ворота, — так дорога с этой стороны остаётся прямой. Из Лефке Пафос ближе, прямо вниз по западному побережью; тарифы на оба маршрута опубликованы.',
+        },
+        {
+          q: 'Сколько стоит такси в Лефке?',
+          a: 'Цена зависит от точки подачи, времени суток и ожидания, поэтому сумма оговаривается по телефону до подачи машины. Позвоните {name} или напишите в WhatsApp: {phone}.',
+        },
+        {
+          q: 'Как вызвать такси в деревнях вокруг Лефке?',
+          a: 'Отдельной стоянки в каждой деревне нет. Один номер закрывает центр Лефке, Гемиконагы, Денизли, Газиверен, Йедидалгу и Ешилырмак — назовите деревню и улицу, и машина подъедет от двери до двери.',
+        },
+        {
+          q: 'Возите ли вы к переходу Ешилырмак (Лимнитис)?',
+          a: 'Да. Он находится на западной оконечности и это ближайший к Лефке переход — намного ближе Бостанджи. Учтите две вещи: он работает только в светлое время суток и пропускает машины, а не пешеходов, поэтому позднее возвращение стоит заранее уточнить по телефону.',
         },
       ],
       guidesTitle: 'Гиды по этому региону',

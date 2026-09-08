@@ -1,6 +1,6 @@
 ---
 title: "Güzelyurt Taksi: Şehir İçi, Şehir Dışı ve Öğrenci Rehberi"
-description: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, Lefkoşa, Girne ve Ercan Havalimanı'na şehir dışı transferler ve öğrenci ulaşımı."
+description: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, Lefkoşa, Girne ve Ercan Havalimanı'na şehir dışı transferler ve ODTÜ ile Lefke için öğrenci taksi."
 ---
 <p>Güzelyurt geniş yayılan, telaşsız bir kasabadır ve bu, taksinin burada nasıl çalıştığını doğrudan belirler. Araçlar sokakta pek beklemez, akşamlar sessiz olabilir ve insanların gerçekten gitmesi gereken yerler — şehir merkezi, kampüsler, Lefke sahili, adanın öbür ucundaki havalimanı — hep birbirinden biraz uzaktır. Sabit fiyatlı bir <strong>Güzelyurt taksi</strong> hizmeti bunu tek aramayla çözer: ücreti yola çıkmadan bilirsiniz, araç kapınıza gelir ve aynı hizmet hem beş dakikalık kısa bir yolu hem de ada boyu bir yolculuğu kapsar. İşte şehir içi, şehir dışı ve öğrenciye özel yolculukların nasıl işlediği.</p>
 <h2>Güzelyurt'ta taksi neden farklı çalışır?</h2>
@@ -24,7 +24,7 @@ description: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, 
   <li><strong>Gazimağusa:</strong> yaklaşık 1 saat 15 dakika</li>
 </ul>
 <p>Her şehir dışı ücret yola çıkmadan kararlaştırılır ve havalimanı yolculukları uçuş takibi içerir; böylece rötarlı bir iniş asla ne aracınıza ne de fiyatınıza mal olur.</p>
-<h2>Öğrenciye özel ulaşım</h2>
+<h2>Öğrenci taksi: yurttan kampüse</h2>
 <p>Güzelyurt ve çevresi bir üniversite bölgesidir — <strong>Kalkanlı'daki ODTÜ Kuzey Kıbrıs Kampüsü</strong>, <strong>Lefke Avrupa Üniversitesi</strong> ve <strong>Kıbrıs Sağlık ve Toplum Bilimleri Üniversitesi (KSTÜ)</strong> — ve yaptığımız işin büyük kısmı öğrenciye göre kurgulanır:</p>
 <ul>
   <li><strong>Dönem başı ve dönem sonu havalimanı yolculukları</strong> — Ercan ya da sınır ötesinde Larnaka/Baf — bagajla ve önceden planlayabileceğiniz sabit fiyatla</li>
@@ -46,6 +46,8 @@ description: "Güzelyurt taksi rehberi: sabit fiyatlı şehir içi yolculuklar, 
 <p>Evet — önceden rezervasyon yapın, araç kararlaştırılan saatte kapınıza gelsin. Geç saatte sokakta çok az taksi beklediğinden, akşam ya da gece yolculuğu tam olarak sabit fiyatlı bir aracın işe yaradığı yerdir.</p>
 <h3>Güzelyurt'tan Ercan Havalimanı'na taksi ne kadar sürer?</h3>
 <p>Yaklaşık 50 dakika; adanın tam ortasından, sınır olmadan. Ücret önceden sabittir ve dönüş için uçuşunuzu takip ederiz.</p>
+<h3>Gece yarısı havaalanına taksi bulunur mu?</h3>
+<p>Bulunur, ama dışarı çıkıp araç aramakla değil, önceden ayarlayarak. Sabaha karşı kalkan uçuşlarda araç bir gün önceden konuşulur; gece inen uçuşlarda uçuşunuzu takip eder, şoför yazan saati değil gerçek iniş saatini bekler.</p>
 <h3>Öğrenciler için daha uygun bir seçenek var mı?</h3>
 <p>Ücreti paylaşın. Aynı yöne giden arkadaşlarla tek aracı bölüşün — dönem başında havalimanına ya da düzenli bir kampüs güzergahında — kişi başı maliyet düşer. Aylık ya da tekrar eden yolculukları da önceden fiyatlarız.</p>
 <h3>Sadece uzun yol değil, kısa şehir içi yolculuk da yapıyor musunuz?</h3>

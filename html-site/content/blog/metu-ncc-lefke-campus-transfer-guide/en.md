@@ -1,6 +1,6 @@
 ---
-title: "METU NCC and Lefke Campus Transfer Guide"
-description: "Transfers to METU Northern Cyprus Campus and the European University of Lefke: Guzelyurt, Ercan Airport and Lefke routes with journey times and fixed fares."
+title: "METU and Lefke Student Taxi: Campus Guide"
+description: "Student taxi for METU Northern Cyprus and the European University of Lefke: dorm to campus, late-night runs, and the Guzelyurt and Ercan Airport lines."
 ---
 <p>A <strong>METU Northern Cyprus Campus taxi and transfer</strong> connects the Kalkanlı campus to Guzelyurt town centre, Ercan Airport and the Lefke coast at a fixed price. The campus sits about 10 km from central Guzelyurt, about 20 km from the European University of Lefke and about 60 km from Ercan Airport. This guide gathers every route variation students and visitors ask about, with times and fares side by side.</p>
 
@@ -58,6 +58,16 @@ description: "Transfers to METU Northern Cyprus Campus and the European Universi
 </table>
 <p>For the return direction, use the <a href="/en/routes/lefke-to-ercan-airport/">Lefke to Ercan Airport transfer</a> page. Paphos being both shorter and cheaper than Larnaca is the practical advantage of studying at the western end of the island.</p>
 
+<h2>Student taxi: dorm to campus and the run home at night</h2>
+<p>Airport runs happen twice a term; the real traffic is daily. No taxi waits at the campus and none at all in Kalkanlı, so the <strong>nearest taxi</strong> is the one you call. The same number covers the METU campus, Kalkanlı village, Guzelyurt centre, the KSTÜ area and the student housing in Lefke.</p>
+<ul>
+  <li><strong>The run home at night</strong> — when the library or the lab finishes late, back to the dorm or to a flat in Guzelyurt</li>
+  <li><strong>Exam weeks</strong> — an early car booked ahead for a morning paper; demand piles up that week</li>
+  <li><strong>The dorm-campus-town triangle</strong> — supermarket, bank, pharmacy and Guzelyurt centre at the weekend</li>
+  <li><strong>The Lefke side</strong> — European University of Lefke, the health sciences campus and the Gemikonağı seafront</li>
+  <li><strong>A standing route</strong> — a fixed arrangement for a trip that repeats every week</li>
+</ul>
+<p>The car comes door to door, and naming the dorm block or the faculty building rather than just "the campus" puts the driver at the right gate.</p>
 <h2>Practical notes for students</h2>
 <ul>
   <li><strong>Book with your flight number</strong> — the car is adjusted to the actual landing time</li>

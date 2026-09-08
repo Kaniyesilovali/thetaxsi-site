@@ -1,6 +1,6 @@
 ---
 title: "Güzelyurt Taxi: In-Town, Out-of-Town and Student Rides"
-description: "A practical Güzelyurt taxi guide: fixed-price in-town rides, out-of-town trips to Nicosia, Kyrenia and Ercan Airport, and student rides."
+description: "A practical Güzelyurt taxi guide: fixed-price in-town rides, out-of-town trips to Nicosia, Kyrenia and Ercan Airport, and student taxi runs."
 ---
 <p>Güzelyurt is a spread-out, unhurried town, and that shapes how a taxi works here. Cars rarely wait on the street, evenings can be quiet, and the places people actually need — the town centre, the campuses, the coast at Lefke, the airport across the island — are all a little apart. A fixed-price Güzelyurt taxi solves that in one call: you know the fare before you leave, the car comes to your door, and the same service covers a five-minute hop and a cross-island run alike. Here's how in-town, out-of-town and student rides work.</p>
 <h2>Why a taxi in Güzelyurt works differently</h2>
@@ -24,7 +24,7 @@ description: "A practical Güzelyurt taxi guide: fixed-price in-town rides, out-
   <li><strong>Famagusta (Gazimağusa):</strong> about 1 hour 15 minutes</li>
 </ul>
 <p>Every out-of-town fare is agreed before you travel, and airport runs include flight tracking, so a delayed landing never costs you the car or the price.</p>
-<h2>Rides built around student life</h2>
+<h2>Student taxi: dorm to campus</h2>
 <p>Güzelyurt and the area around it are university country — the <strong>METU Northern Cyprus Campus</strong> at Kalkanlı, the <strong>European University of Lefke</strong>, and the <strong>Cyprus University of Health and Social Sciences (KSTÜ)</strong> — and a lot of what we do is student-shaped:</p>
 <ul>
   <li><strong>Term-start and term-end airport runs</strong> — Ercan, or Larnaca/Paphos across the border — with luggage and a fixed price you can plan for</li>

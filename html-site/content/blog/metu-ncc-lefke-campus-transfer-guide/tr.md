@@ -1,6 +1,6 @@
 ---
-title: "ODTÜ Kuzey Kıbrıs ve Lefke Kampüs Transfer Rehberi"
-description: "ODTÜ Kuzey Kıbrıs Kampüsü ve Lefke Avrupa Üniversitesi transferleri: Güzelyurt, Ercan Havalimanı ve Lefke hatları, süreler ve sabit fiyatlarla."
+title: "ODTÜ ve Lefke Öğrenci Taksi: Kampüs Rehberi"
+description: "ODTÜ Kuzey Kıbrıs ve Lefke Avrupa Üniversitesi için öğrenci taksi: yurttan kampüse, gece dönüşü, Güzelyurt ve Ercan Havalimanı hatları."
 ---
 <p><strong>ODTÜ Kuzey Kıbrıs Kampüsü taksi ve transfer</strong> hizmeti, Kalkanlı'daki kampüsü Güzelyurt merkeze, Ercan Havalimanı'na ve Lefke hattına sabit fiyatla bağlar. Kampüs Güzelyurt merkeze yaklaşık 10 km, Lefke Avrupa Üniversitesi'ne yaklaşık 20 km, Ercan Havalimanı'na ise yaklaşık 60 km uzaklıktadır. Bu rehber, öğrencilerin ve ziyaretçilerin en çok sorduğu tüm lokasyon varyasyonlarını süre ve fiyatlarıyla bir arada topluyor.</p>
 
@@ -58,6 +58,16 @@ description: "ODTÜ Kuzey Kıbrıs Kampüsü ve Lefke Avrupa Üniversitesi trans
 </table>
 <p>Dönüş yönü için <a href="/tr/routes/lefke-to-ercan-airport/">Lefke – Ercan Havalimanı transferi</a> sayfası kullanılır. Baf hattının Larnaka'dan hem daha kısa hem daha ucuz olması, LAÜ öğrencileri için adanın batısında olmanın pratik avantajıdır.</p>
 
+<h2>Öğrenci taksi: yurttan kampüse ve gece dönüşü</h2>
+<p>Havalimanı yolculukları dönemde iki kez olur; asıl trafik günlüktür. Kampüste bekleyen bir taksi durağı yoktur, Kalkanlı'da hiç yoktur — yani <strong>en yakın taksi</strong> aramayla gelir. Aynı numara ODTÜ kampüsünü, Kalkanlı köyünü, Güzelyurt merkezini, KSTÜ bölgesini ve Lefke'deki öğrenci evlerini kapsar.</p>
+<ul>
+  <li><strong>Gece dönüşü</strong> — kütüphane ya da laboratuvar geç bittiğinde, yurda ya da Güzelyurt'taki eve</li>
+  <li><strong>Sınav haftası</strong> — sabah erken sınav için önceden ayarlanan araç; o hafta talep yoğun olur</li>
+  <li><strong>Yurt–kampüs–merkez üçgeni</strong> — market, banka, eczane ve hafta sonu Güzelyurt merkez</li>
+  <li><strong>Lefke tarafı</strong> — Lefke Avrupa Üniversitesi, sağlık bilimleri kampüsü ve Gemikonağı sahili</li>
+  <li><strong>Düzenli güzergah</strong> — her hafta tekrar eden bir yol için önceden anlaşma</li>
+</ul>
+<p>Araç kapıdan kapıya gelir; "kampüs" demek yerine yurt bloğunu ya da fakülte binasını söylemek şoförü doğru kapıya getirir.</p>
 <h2>Öğrenciler için pratik notlar</h2>
 <ul>
   <li><strong>Uçuş numarasıyla rezervasyon yapın</strong> — rötar durumunda araç saate göre ayarlanır</li>
