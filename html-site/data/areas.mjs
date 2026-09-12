@@ -25,6 +25,7 @@ export const areas = [
     guides: [
       'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci',
       'guzelyurt-airport-taxi-ercan-larnaca-paphos',
+      'guzelyurt-bostanci-crossing-guide',
       'guzelyurt-lefke-village-taxi',
       'guzelyurt-morphou-transfer-guide',
       'metu-ncc-lefke-campus-transfer-guide',
@@ -299,6 +300,7 @@ export const areas = [
       'lefke-taxi-guide',
       'metu-ncc-lefke-campus-transfer-guide',
       'guzelyurt-lefke-village-taxi',
+      'guzelyurt-bostanci-crossing-guide',
       'guzelyurt-soli-vouni-west-cyprus-guide',
       'guzelyurt-taksi-sehir-ici-sehir-disi-ogrenci',
     ],
