@@ -120,6 +120,21 @@ for (const post of posts) {
     // İçerikte h1 olmamalı — h1'i şablon basıyor.
     if (/<h1[\s>]/.test(body)) err(file, 'gövdede <h1> var; başlık şablondan gelir, ## (h2) kullan')
     if (!/<h2[\s>]/.test(body)) warn(file, 'hiç ## (h2) başlığı yok — uzun metin taranabilir olmalı')
+
+    // FAQPage şeması (templates/blog.mjs) SSS'i gövdenin SON ## bölümünde arar:
+    // soru ###, cevap hemen ardından gelen paragraf. Bölüm başka yerdeyse şema
+    // sessizce boş çıkar — o yüzden varsayımı burada doğruluyoruz.
+    const qa = /<h3[^>]*>[\s\S]*?<\/h3>\s*<p[^>]*>/g
+    const faqStart = body.lastIndexOf('<h2')
+    const faqSection = faqStart === -1 ? body : body.slice(faqStart)
+    if (!/<h3[\s>]/.test(body)) {
+      warn(file, 'SSS bölümü yok — sonda "## Sıkça sorulan sorular" + ### sorular FAQPage şeması üretir')
+    } else if (!qa.test(faqSection)) {
+      err(
+        file,
+        'SSS son ## bölümünde değil — FAQPage şeması boş çıkar; soruları gövdenin sonundaki SSS başlığı altına ### olarak yaz',
+      )
+    }
   }
 
   // Diller arası gövde uzunluğu sapması — genelde yarım kalmış çeviri işareti.

@@ -7,8 +7,10 @@ import { businessRef } from '../data/schema.mjs'
 const localeOf = { en: 'en-GB', tr: 'tr-TR', ru: 'ru-RU' }
 
 // Blog gövdesindeki SSS bölümünden FAQPage JSON-LD üret.
-// Tüm yazılarda <h3> YALNIZCA SSS sorusudur (içerik kontrolüyle doğrulandı) ve
-// hemen ardından cevabın <p>'si gelir — bu yüzden dile bağımsız, güvenli çıkarım.
+// SSS bölümü her yazıda gövdenin SON <h2>'sidir (içerik kontrolü doğruluyor),
+// soru <h3>, cevap hemen ardından gelen <p> — bu yüzden dile bağımsız çıkarım.
+// Yalnızca son h2'den sonrası taranır: gövde ortasındaki h3 alt başlıkları
+// (ör. bir bölümün içindeki varış noktaları) soru değildir ve şemaya girmemeli.
 // FAQPage AEO'da en ağır schema türlerinden; rota sayfaları zaten üretiyordu,
 // blog yazıları üretmiyordu (bkz. content-strategy.md Faz 6 açığı).
 const stripTags = (s) => s.replace(/<[^>]+>/g, '')
@@ -24,10 +26,13 @@ const cleanText = (s) => decodeEntities(stripTags(s)).replace(/\s+/g, ' ').trim(
 
 function faqFromBody(html) {
   const pairs = []
+  // Yalnızca SSS bölümü: son <h2>'den gövde sonuna kadar.
+  const faqStart = html.lastIndexOf('<h2')
+  const section = faqStart === -1 ? html : html.slice(faqStart)
   // <h3>soru</h3> sonrasında ilk <p>cevap</p> — arada boşluk olabilir.
   const re = /<h3[^>]*>([\s\S]*?)<\/h3>\s*<p[^>]*>([\s\S]*?)<\/p>/g
   let m
-  while ((m = re.exec(html))) {
+  while ((m = re.exec(section))) {
     const q = cleanText(m[1])
     const a = cleanText(m[2])
     if (q && a) pairs.push({ q, a })
