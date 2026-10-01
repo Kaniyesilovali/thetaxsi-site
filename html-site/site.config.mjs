@@ -41,6 +41,20 @@ export const config = {
     areas: ['Güzelyurt Merkez', 'Lefke Merkez'],
   },
 
+  // Kasaba içi iletişim — bölge sayfası id'sine (data/areas.mjs) göre. Bölge
+  // hattının (regionalContact) yerine geçmez; yalnızca o kasabanın içindeki kısa
+  // yolculuklar için ikinci numara olarak bölge sayfasında ve rehberinde görünür.
+  // Rota sayfalarına girmez. WhatsApp'ı doğrulanmadığı için yalnızca arama linki.
+  townContacts: {
+    lefke: {
+      name: 'Kambilli Taksi',
+      phones: [
+        { display: '+90 533 885 18 83', href: '+905338851883' },
+        { display: '+90 542 851 15 97', href: '+905428511597' },
+      ],
+    },
+  },
+
   // Sosyal medya — TODO: gerçek hesaplarla değiştir. Boş bırakılırsa footer'da gizlenir.
   instagram: 'https://instagram.com/',
   facebook: 'https://facebook.com/',

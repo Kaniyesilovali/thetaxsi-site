@@ -186,7 +186,7 @@ Guzelyurt (Morphou) and Lefke in the north-west are worked on the ground by
 ${config.regionalContact.name}, reachable directly on ${config.regionalContact.phones.map((p) => p.display).join(', ')}
 (the first number is also on WhatsApp). Local rides, campus runs and airport transfers
 all go through that line; fares inside the region are quoted on the call.
-${areas.map((a) => `- [${a[config.defaultLang].title}](${u(`/areas/${a.slugs[config.defaultLang]}/`)}): ${a[config.defaultLang].metaDescription.replace('{name}', config.regionalContact.name).replace(/\{phone\}/g, config.regionalContact.phoneDisplay)}`).join('\n')}
+${Object.entries(config.townContacts ?? {}).map(([id, c]) => `Short rides inside ${id[0].toUpperCase() + id.slice(1)} town are also covered by ${c.name}: ${c.phones.map((p) => p.display).join(', ')}.\n`).join('')}${areas.map((a) => `- [${a[config.defaultLang].title}](${u(`/areas/${a.slugs[config.defaultLang]}/`)}): ${a[config.defaultLang].metaDescription.replace('{name}', config.regionalContact.name).replace(/\{phone\}/g, config.regionalContact.phoneDisplay)}`).join('\n')}
 
 ## Key pages
 - [Book a transfer](${u('/book/')})

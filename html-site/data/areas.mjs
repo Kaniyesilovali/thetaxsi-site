@@ -316,6 +316,10 @@ export const areas = [
       sectionsTitle: 'What the Lefke taxi line covers',
       callNote:
         'The Lefke and Güzelyurt line is run on the ground by {name}. Call or message on WhatsApp for a car and the fare — both are answered day and night.',
+      town: {
+        heading: 'Rides inside Lefke',
+        note: 'For short trips within the town — the market, the pharmacy, the university, a run home — {townName} is also on call: {townPhones}.',
+      },
       sections: [
         {
           title: 'Calling a taxi in Lefke',
@@ -360,6 +364,10 @@ export const areas = [
           a: 'The line is worked by {name} on {phone}, by call or on WhatsApp. The same number covers Lefke, Gemikonağı, Kalkanlı and Güzelyurt, so one call reaches the whole western corner.',
         },
         {
+          q: 'Which number do I call for a short ride inside Lefke?',
+          a: 'For trips within the town itself — the centre, the university, student housing — call {townName} on {townPhones}. Airport transfers, the crossings and longer runs go through {name} on {phone}.',
+        },
+        {
           q: 'Is there a taxi rank in Lefke?',
           a: 'Not a reliable one. Lefke is the western end of the road rather than somewhere traffic passes through, so cars are booked rather than waiting. Calling ahead is normal here even for a short trip.',
         },
@@ -402,6 +410,10 @@ export const areas = [
       sectionsTitle: 'Lefke taksi hizmeti neleri kapsar',
       callNote:
         'Lefke ve Güzelyurt hattını sahada {name} yürütür. Araç ve ücret için arayın ya da WhatsApp’tan yazın — ikisi de gece gündüz açıktır.',
+      town: {
+        heading: 'Lefke içi ulaşım',
+        note: 'Kasaba içindeki kısa yolculuklar için — pazar, eczane, üniversite, eve dönüş — {townName} de hizmet veriyor: {townPhones}.',
+      },
       sections: [
         {
           title: 'Lefke’de taksi çağırmak',
@@ -446,6 +458,10 @@ export const areas = [
           a: 'Hattı {name} yürütür: {phone} — arayarak ya da WhatsApp’tan. Aynı numara Lefke, Gemikonağı, Kalkanlı ve Güzelyurt’u kapsar; tek arama batı köşesinin tamamına ulaşır.',
         },
         {
+          q: 'Lefke içi kısa yolculuk için hangi numarayı aramalıyım?',
+          a: 'Kasabanın kendi içindeki yolculuklar için — merkez, üniversite, öğrenci evleri — {townName}’yi arayın: {townPhones}. Havalimanı transferleri, sınır kapıları ve uzun yollar için {name}: {phone}.',
+        },
+        {
           q: 'Lefke’de taksi durağı var mı?',
           a: 'Güvenip başında bekleyebileceğiniz bir durak yok. Lefke, trafiğin içinden geçtiği bir yer değil, yolun batı ucudur; araçlar bekler değil, çağrılır. Kısa bir yol için bile önceden aramak buranın olağan düzenidir.',
         },
@@ -488,6 +504,10 @@ export const areas = [
       sectionsTitle: 'Что покрывает линия такси Лефке',
       callNote:
         'Линию Лефке — Гюзельюрт ведёт на месте {name}. Позвоните или напишите в WhatsApp, чтобы вызвать машину и узнать цену: оба канала работают днём и ночью.',
+      town: {
+        heading: 'Поездки по Лефке',
+        note: 'Для коротких поездок по городу — рынок, аптека, университет, дорога домой — работает также {townName}: {townPhones}.',
+      },
       sections: [
         {
           title: 'Как вызвать такси в Лефке',
@@ -530,6 +550,10 @@ export const areas = [
         {
           q: 'Какой номер такси в Лефке?',
           a: 'Линию ведёт {name}: {phone} — звонком или в WhatsApp. Тот же номер закрывает Лефке, Гемиконагы, Калканлы и Гюзельюрт, так что один звонок достаёт до всего западного угла.',
+        },
+        {
+          q: 'Какой номер набрать для короткой поездки по Лефке?',
+          a: 'Для поездок внутри города — центр, университет, студенческое жильё — звоните {townName}: {townPhones}. Трансферы в аэропорты, переходы и дальние поездки — через {name}: {phone}.',
         },
         {
           q: 'Есть ли в Лефке стоянка такси?',

@@ -26,6 +26,9 @@ description: "Lefke taksi nasıl bulunur: kampüs ve yurt yolculukları, Gemikon
 <h2>Yeşilırmak (Limnitis) sınır kapısı</h2>
 <p>Yeşilırmak, batı ucundaki geçiştir ve Lefke'ye en yakın kapıdır — Bostancı'dan belirgin biçimde yakın. Planlarken iki şeyi hesaba katın: kapı yalnız gündüz açıktır ve yaya değil araç geçişidir. Geç bir dönüş düşünüyorsanız saati önceden telefonda sormak, kapalı kapıya gitmekten iyidir.</p>
 
+<h2>Lefke içi ulaşım: Kambilli Taksi</h2>
+<p>Kasabanın kendi içindeki kısa yolculuklar için — merkez, pazar, eczane, Lefke Avrupa Üniversitesi, öğrenci evleri ya da akşam eve dönüş — <strong>Kambilli Taksi</strong> de hizmet veriyor: <a href="tel:+905338851883">+90 533 885 18 83</a> ve <a href="tel:+905428511597">+90 542 851 15 97</a>. Havalimanı, sınır kapısı ve şehirler arası yolculuklar için aşağıdaki Denizli Taksi hattı geçerlidir.</p>
+
 <h2>Taksi çağırırken ne söylemeli</h2>
 <p>Telefondaki konuşmayı kısaltan üç şey vardır:</p>
 <ul>
@@ -38,6 +41,8 @@ description: "Lefke taksi nasıl bulunur: kampüs ve yurt yolculukları, Gemikon
 <h2>Sıkça Sorulan Sorular</h2>
 <h3>Lefke taksi numarası nedir?</h3>
 <p>Hattı Denizli Taksi yürütür: <a href="tel:+905488616939">+90 548 861 69 39</a> — arayarak ya da WhatsApp'tan. Aynı numara Lefke, Gemikonağı, Kalkanlı ve Güzelyurt'u kapsar; her köy için ayrı bir durak aramanız gerekmez.</p>
+<h3>Lefke içinde kısa bir yol için hangi numarayı aramalıyım?</h3>
+<p>Kasaba içi yolculuklar için Kambilli Taksi'yi arayın: <a href="tel:+905338851883">+90 533 885 18 83</a> ya da <a href="tel:+905428511597">+90 542 851 15 97</a>. Havalimanı transferleri ve uzun yollar için Denizli Taksi: <a href="tel:+905488616939">+90 548 861 69 39</a>.</p>
 <h3>Lefke'de taksi durağı var mı?</h3>
 <p>Güvenip başında bekleyebileceğiniz türden bir durak yok. Lefke yolun batı ucudur, araçlar bekler değil çağrılır. Kısa bir yol için bile önceden aramak buranın olağan düzenidir.</p>
 <h3>Gece Lefke'de taksi bulunur mu?</h3>

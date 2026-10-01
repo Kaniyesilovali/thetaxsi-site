@@ -26,6 +26,9 @@ description: "How a Lefke taxi works: campus and dorm runs, the Gemikonağı coa
 <h2>The Yeşilırmak (Limnitis) crossing</h2>
 <p>Yeşilırmak is the gate at the western tip and the closest crossing to Lefke — noticeably nearer than Bostancı. Two things to plan around: it opens in daylight hours only, and it takes cars rather than foot traffic. For a late return, checking the hours on the phone beats arriving at a closed gate.</p>
 
+<h2>Getting around inside Lefke: Kambilli Taksi</h2>
+<p>For short trips within the town itself — the centre, the market, the pharmacy, European University of Lefke, student housing or the run home in the evening — <strong>Kambilli Taksi</strong> is also on call: <a href="tel:+905338851883">+90 533 885 18 83</a> and <a href="tel:+905428511597">+90 542 851 15 97</a>. Airport runs, the crossings and town-to-town journeys go through the Denizli Taksi line below.</p>
+
 <h2>What to say when you call</h2>
 <p>Three things shorten the conversation:</p>
 <ul>
@@ -38,6 +41,8 @@ description: "How a Lefke taxi works: campus and dorm runs, the Gemikonağı coa
 <h2>Common questions</h2>
 <h3>What is the taxi number for Lefke?</h3>
 <p>Denizli Taksi works the line on <a href="tel:+905488616939">+90 548 861 69 39</a>, by call or on WhatsApp. The same number covers Lefke, Gemikonağı, Kalkanlı and Güzelyurt.</p>
+<h3>Which number do I call for a short ride inside Lefke?</h3>
+<p>For trips within the town, call Kambilli Taksi on <a href="tel:+905338851883">+90 533 885 18 83</a> or <a href="tel:+905428511597">+90 542 851 15 97</a>. For airport transfers and longer runs, Denizli Taksi on <a href="tel:+905488616939">+90 548 861 69 39</a>.</p>
 <h3>Is there a taxi rank in Lefke?</h3>
 <p>Not one you can rely on standing at. Lefke is the western end of the road, so cars are booked rather than waiting. Calling ahead is normal here even for a short trip.</p>
 <h3>Can I get a taxi in Lefke at night?</h3>

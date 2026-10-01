@@ -84,7 +84,15 @@ export function renderAreaDetail(ctx, area) {
   // Birincil numara büyük punto ile basılır; kalanlar altında yedek hat olarak.
   const otherPhones = (contact.phones ?? []).slice(1)
   const path = `/areas/${area.slugs[config.defaultLang]}/`
-  const vars = { name: contact.name, phone: contact.phoneDisplay }
+  // Kasaba içi ikinci numara (site.config.mjs townContacts) — yalnızca tanımlı
+  // bölgede ve sayfa metni `t.town` başlığını taşıyorsa basılır.
+  const town = t.town ? config.townContacts?.[area.id] : null
+  const vars = {
+    name: contact.name,
+    phone: contact.phoneDisplay,
+    townName: town?.name ?? '',
+    townPhones: (town?.phones ?? []).map((p) => p.display).join(', '),
+  }
 
   // Bu bölgeye ucu değen tüm güzergahlar (gidiş + dönüş). Fiyatı yayınlanmış
   // olanlar rakamla, `quote: true` olanlar "fiyat için arayın" ile listelenir.
@@ -109,6 +117,22 @@ export function renderAreaDetail(ctx, area) {
       </div>
     </div>`
 
+  const townBlock = town
+    ? `
+    <div class="mt-4 flex flex-col gap-3 rounded-3xl border border-line bg-cloud p-6 sm:max-w-xl sm:p-7">
+      <p class="text-[13px] font-semibold text-ink">${esc(t.town.heading)}</p>
+      <p class="text-[15px] leading-relaxed text-slate">${esc(fmt(t.town.note, vars))}</p>
+      <div class="flex flex-wrap gap-2">
+        ${town.phones
+          .map(
+            (p) =>
+              `<a href="tel:${p.href}" class="inline-flex h-11 items-center gap-2 rounded-full border border-line bg-paper px-6 text-[14px] font-semibold tabular-nums text-ink transition-colors hover:border-sea hover:text-sea"><span class="[&>svg]:size-4">${icons.phone}</span>${esc(p.display)}</a>`,
+          )
+          .join('')}
+      </div>
+    </div>`
+    : ''
+
   const body = `
 <section class="relative overflow-hidden border-b border-line bg-paper">
   <div aria-hidden="true" class="pointer-events-none absolute inset-0">
@@ -126,6 +150,7 @@ export function renderAreaDetail(ctx, area) {
     <h1 class="mt-3 max-w-4xl text-[clamp(2.2rem,6vw,3.75rem)] font-semibold leading-[1.04] tracking-[-0.025em] text-ink">${esc(t.title)}</h1>
     <p class="mt-6 max-w-2xl text-[17px] leading-relaxed text-slate">${esc(t.lead)}</p>
     ${callBlock}
+    ${townBlock}
     <a href="${href(lang, '/book/')}?from=${encodeURIComponent(area.value)}" class="mt-8 inline-flex h-12 items-center rounded-full border border-line bg-paper px-8 text-[14px] font-semibold text-ink transition-colors hover:border-sea hover:text-sea">${esc(ad.bookCta)}</a>
   </div>
 </section>
@@ -247,6 +272,22 @@ ${
         serviceUrl: `${config.siteUrl}${href(lang, path)}`,
       })),
     },
+    ...(town
+      ? [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'TaxiService',
+            name: `${town.name} — ${t.town.heading}`,
+            serviceType: t.town.heading,
+            areaServed: { '@type': 'City', name: area.id === 'lefke' ? 'Lefke' : 'Güzelyurt' },
+            availableChannel: town.phones.map((p) => ({
+              '@type': 'ServiceChannel',
+              servicePhone: { '@type': 'ContactPoint', telephone: p.href, contactType: 'reservations' },
+              serviceUrl: `${config.siteUrl}${href(lang, path)}`,
+            })),
+          },
+        ]
+      : []),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
