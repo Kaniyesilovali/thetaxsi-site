@@ -32,7 +32,7 @@ description: "Booking a Güzelyurt taxi: what to tell us, how far ahead to call,
 <p>Waiting is agreed up front too: while you finish at the hospital, a short queue at a crossing, or a same-day return from the south. Nothing about waiting is left as a surprise at the end.</p>
 
 <h2>Night taxis and early departures</h2>
-<p>The way to get a taxi at night in Güzelyurt isn't to go outside and look for one — it's to give us the time in advance. After evening, almost nothing waits on the street, but a time agreed beforehand works without trouble. Pre-dawn flights are the same: the car is at your door for an hour settled the night before.</p>
+<p>The way to get a taxi at night in Güzelyurt isn't to go outside and look for one — it's to give us the time in advance. After evening, almost nothing waits on the street, but a time agreed beforehand works without trouble. Pre-dawn flights are the same: the car is at your door for an hour settled the night before. For every kind of night trip, see the <a href="/en/blog/guzelyurt-night-taxi/">Güzelyurt night taxi guide</a>.</p>
 
 <h2>How do you pay?</h2>
 <p>You pay cash to the driver on arrival. No prepayment, no deposit, no card details. The fare is agreed before the car sets off and stays fixed — there is no meter running, and a longer route doesn't change the number. Mention the currency when you book; cash is usually accepted in Turkish lira, sterling or euros.</p>

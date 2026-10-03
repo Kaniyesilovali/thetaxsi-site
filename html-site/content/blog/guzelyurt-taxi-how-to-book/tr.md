@@ -32,7 +32,7 @@ description: "Güzelyurt taksi nasıl çağrılır: rezervasyonda ne söylenir, 
 <p>Bir yerde bekleneceği durumlar da baştan konuşulur: hastanede işinizin bitmesi, sınır kapısında kısa bir kuyruk ya da güneye inip aynı gün dönmek. Bekleme sürprize bırakılmaz, yola çıkmadan karara bağlanır.</p>
 
 <h2>Gece taksi ve erken kalkışlar</h2>
-<p>Güzelyurt'ta gece taksi bulmanın yolu dışarı çıkıp araç aramak değil, saati önceden vermektir. Akşam saatlerinden sonra sokakta bekleyen araç neredeyse yoktur; buna karşılık önceden konuşulmuş bir kalkış saati sorunsuz işler. Sabaha karşı kalkan uçuşlarda da durum aynı: bir akşam önceden söylenen saat için araç kapıda olur.</p>
+<p>Güzelyurt'ta gece taksi bulmanın yolu dışarı çıkıp araç aramak değil, saati önceden vermektir. Akşam saatlerinden sonra sokakta bekleyen araç neredeyse yoktur; buna karşılık önceden konuşulmuş bir kalkış saati sorunsuz işler. Sabaha karşı kalkan uçuşlarda da durum aynı: bir akşam önceden söylenen saat için araç kapıda olur. Gece yolculuklarının tamamı için <a href="/tr/blog/guzelyurt-night-taxi/">Güzelyurt gece taksi rehberine</a> bakın.</p>
 
 <h2>Ödeme nasıl yapılır?</h2>
 <p>Ödeme varışta, doğrudan şoföre nakit yapılır. Peşin ödeme, kapora ya da kart bilgisi istenmez. Ücret yola çıkmadan konuşulur ve sabittir — taksimetre çalışmaz, yol uzadı diye rakam değişmez. Para birimini rezervasyon sırasında konuşun; nakit çoğu zaman Türk lirası, sterlin ya da euro olarak kabul edilir.</p>
