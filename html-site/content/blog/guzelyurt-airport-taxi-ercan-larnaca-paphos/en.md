@@ -20,7 +20,7 @@ description: "Airport taxi to Güzelyurt: one-way fares, drive times and border 
 
 <h2>Larnaca Airport — where most direct flights land</h2>
 <p>Larnaca is in the south and carries most of the direct flights from Europe. The drive to Güzelyurt is roughly <strong>100 km and 105 minutes</strong>, crossing the Green Line at a checkpoint. It is routine: you stay in the car, keep your passport to hand, and there is no charge for passengers. For Güzelyurt we use the <strong>Bostancı (Astromeritis) crossing</strong> rather than routing through Nicosia — it is the faster way west.</p>
-<p>Larnaca's advantage is the choice of flights, and often a direct one; the cost is an extra hour on the road and one checkpoint.</p>
+<p>Larnaca's advantage is the choice of flights, and often a direct one; the cost is an extra hour on the road and one checkpoint. The details of this run — when to leave, the meet and delays — are in the <a href="/en/blog/guzelyurt-larnaca-airport-taxi/">Güzelyurt Larnaca Airport taxi</a> guide.</p>
 
 <h2>Paphos Airport — the western gateway</h2>
 <p>Paphos looks close to Güzelyurt on a map, but the road loops around the west of the island: about <strong>115 km and 110 minutes</strong>. That is why it is both longer and dearer than Larnaca. Still, if you have found a cheap or well-timed direct flight into Paphos, the run works, and it crosses at Bostancı as well.</p>

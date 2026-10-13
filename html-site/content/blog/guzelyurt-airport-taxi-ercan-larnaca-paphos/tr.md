@@ -20,7 +20,7 @@ description: "Güzelyurt'a havalimanı taksi: Ercan, Larnaka ve Baf hatlarının
 
 <h2>Larnaka Havalimanı — direkt uçuşların çoğu</h2>
 <p>Larnaka güneydedir ve Avrupa'dan gelen direkt uçuşların büyük kısmını taşır. Güzelyurt'a mesafe yaklaşık <strong>100 km ve 105 dakikadır</strong>; yolculuk Yeşil Hat'tı bir kontrol noktasında geçer. Bu rutin bir işlemdir: araçta kalırsınız, pasaportunuz yanınızda olur, yolculardan ücret alınmaz. Güzelyurt yönü için Lefkoşa üzerinden gitmek yerine <strong>Bostancı (Astromeritis) geçişini</strong> kullanırız — batıya çıkan daha hızlı yol budur.</p>
-<p>Larnaka'nın avantajı uçuş seçeneğinin genişliği ve çoğu zaman aktarmasız olmasıdır; bedeli ise yerde fazladan bir saat ve bir kontrol noktasıdır.</p>
+<p>Larnaka'nın avantajı uçuş seçeneğinin genişliği ve çoğu zaman aktarmasız olmasıdır; bedeli ise yerde fazladan bir saat ve bir kontrol noktasıdır. Bu hattın ayrıntısı — çıkış saati, karşılama ve rötar — <a href="/tr/blog/guzelyurt-larnaca-airport-taxi/">Güzelyurt Larnaka Havalimanı taksi</a> yazısında.</p>
 
 <h2>Baf Havalimanı — batı kapısı</h2>
 <p>Baf haritada Güzelyurt'a yakın görünür, ama yol adanın batı kıyısını dolaşır: yaklaşık <strong>115 km ve 110 dakika</strong>. Larnaka'dan hem daha uzun hem daha pahalı olmasının nedeni budur. Yine de Baf'a ucuz ya da uygun saatli bir direkt uçuş bulduysanız hat çalışır ve geçiş yine Bostancı'dan yapılır.</p>
